@@ -1,26 +1,114 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" role="img" aria-labelledby="title desc">
-  <title id="title">South Asia archive map</title>
-  <desc id="desc">A stylized archival map marking Afghanistan, Pakistan, India, and regional South Asia files.</desc>
-  <rect width="760" height="520" fill="#efe7d8"/>
-  <path d="M43 72h674v376H43z" fill="#f8f3e9" stroke="#cfc2ad" stroke-width="3"/>
-  <path d="M92 117h573M92 181h573M92 245h573M92 309h573M92 373h573" stroke="#ded2be" stroke-width="1"/>
-  <path d="M143 95v330M249 95v330M355 95v330M461 95v330M567 95v330" stroke="#ded2be" stroke-width="1"/>
-  <path d="M252 175l39-39 66 11 42 35-13 52-53 22-63-12-34-32z" fill="#d9c28c" stroke="#7b6642" stroke-width="3"/>
-  <path d="M315 238l61-31 62 24 23 74-39 75-78 2-44-55z" fill="#9ab19a" stroke="#446047" stroke-width="3"/>
-  <path d="M424 210l96 12 63 65-11 79-66 56-88-32-32-86z" fill="#c98f77" stroke="#744638" stroke-width="3"/>
-  <path d="M536 402l21 42 32-18-26-42z" fill="#c98f77" stroke="#744638" stroke-width="3"/>
-  <circle cx="290" cy="188" r="8" fill="#143d4a"/>
-  <circle cx="368" cy="291" r="8" fill="#143d4a"/>
-  <circle cx="493" cy="306" r="8" fill="#143d4a"/>
-  <path d="M607 119h74v112h-74z" fill="#fffaf1" stroke="#cfc2ad" stroke-width="2"/>
-  <path d="M621 143h45M621 166h45M621 189h34" stroke="#9b3d32" stroke-width="5" stroke-linecap="round"/>
-  <g font-family="Georgia, 'Times New Roman', serif" fill="#17202a" font-weight="700">
-    <text x="210" y="133" font-size="28">Afghanistan</text>
-    <text x="288" y="420" font-size="28">Pakistan</text>
-    <text x="497" y="271" font-size="28">India</text>
-    <text x="87" y="456" font-size="22">Regional source files</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" role="img" aria-labelledby="title desc">
+  <title id="title">Ruby buckram map of South Asia, 1989</title>
+  <desc id="desc">A ruby buckram themed political map of South Asia in 1989, marking Afghanistan, Pakistan, India, Bangladesh, Nepal, Bhutan, Sri Lanka, and the Maldives for a Bush 41 South Asia volume.</desc>
+  <defs>
+    <linearGradient id="ruby" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#7f1727"/>
+      <stop offset="0.52" stop-color="#a5283c"/>
+      <stop offset="1" stop-color="#5e1020"/>
+    </linearGradient>
+    <radialGradient id="paperGlow" cx="52%" cy="48%" r="72%">
+      <stop offset="0" stop-color="#fff3cf"/>
+      <stop offset="0.72" stop-color="#e7c978"/>
+      <stop offset="1" stop-color="#a9702d"/>
+    </radialGradient>
+    <pattern id="buckram" width="18" height="18" patternUnits="userSpaceOnUse">
+      <rect width="18" height="18" fill="#8c1c2e"/>
+      <path d="M0 4h18M0 13h18M5 0v18M14 0v18" stroke="#bc5360" stroke-opacity=".18" stroke-width="1"/>
+      <path d="M0 0l18 18M18 0L0 18" stroke="#4b0d18" stroke-opacity=".18" stroke-width=".8"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="9" stdDeviation="8" flood-color="#3b0a13" flood-opacity=".45"/>
+    </filter>
+    <filter id="softInset">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#fff3cf" flood-opacity=".45"/>
+      <feDropShadow dx="0" dy="-2" stdDeviation="2" flood-color="#4b0d18" flood-opacity=".28"/>
+    </filter>
+    <style>
+      .frame { fill: url(#ruby); }
+      .cloth { fill: url(#buckram); opacity: .48; }
+      .gold-line { stroke: #f0cc73; stroke-opacity: .52; stroke-width: 1.4; }
+      .coast { fill: #d9aa4f; stroke: #fff0bd; stroke-width: 2.4; filter: url(#softInset); }
+      .land-a { fill: #d55442; }
+      .land-b { fill: #c43c4e; }
+      .land-c { fill: #edb64b; }
+      .land-d { fill: #f1d184; }
+      .label { font: 700 20px Georgia, 'Times New Roman', serif; fill: #fff7d8; letter-spacing: 0; paint-order: stroke; stroke: #4a0b16; stroke-width: 4px; }
+      .small-label { font: 700 14px Inter, Arial, sans-serif; fill: #3d1720; letter-spacing: 0; }
+      .caption { font: 700 15px Inter, Arial, sans-serif; fill: #ffe9ad; letter-spacing: 0; }
+      .title { font: 700 36px Georgia, 'Times New Roman', serif; fill: #fff0bd; letter-spacing: 0; }
+      .note { font: 700 14px Inter, Arial, sans-serif; fill: #8c2a26; }
+      .pin { fill: #fff0bd; stroke: #6d1323; stroke-width: 3; }
+      .pin-core { fill: #9e1f35; }
+    </style>
+  </defs>
+
+  <rect width="960" height="640" class="frame"/>
+  <rect width="960" height="640" class="cloth"/>
+  <path d="M42 42h876v556H42z" fill="none" stroke="#f0cc73" stroke-width="5"/>
+  <path d="M62 62h836v516H62z" fill="none" stroke="#5a1020" stroke-width="3" opacity=".75"/>
+  <path d="M86 92h788v418H86z" fill="#7d1a29" stroke="#f0cc73" stroke-width="2" opacity=".78"/>
+
+  <g opacity=".75">
+    <path class="gold-line" d="M118 138h720M118 196h720M118 254h720M118 312h720M118 370h720M118 428h720"/>
+    <path class="gold-line" d="M166 116v342M246 116v342M326 116v342M406 116v342M486 116v342M566 116v342M646 116v342M726 116v342M806 116v342"/>
   </g>
-  <g font-family="Inter, Arial, sans-serif" fill="#5c6670" font-size="16" font-weight="700">
-    <text x="87" y="491">Richard N. Haass files / National Security Council records</text>
+
+  <g filter="url(#shadow)">
+    <path class="coast land-b" d="M196 207l38-45 65-19 70 17 47 47-16 58-55 33-74-8-58-32z"/>
+    <path class="coast land-c" d="M352 246l49-36 65 14 43 58-13 74-48 62-67-9-38-59z"/>
+    <path class="coast land-a" d="M478 238l85 21 60 68-10 80-62 81-71-26-36-87 16-78z"/>
+    <path class="coast land-d" d="M585 303l51 8 37 38-8 44-40 15-39-30z"/>
+    <path class="coast land-d" d="M557 255l47 5 30 25-15 26-50-9z"/>
+    <path class="coast land-c" d="M548 505l27 54 38-24-31-58z"/>
+    <path class="coast land-d" d="M650 506l10 18-18 10-11-17z"/>
+    <path class="coast land-d" d="M692 496l9 16-16 9-9-15z"/>
+    <path class="coast land-d" d="M724 485l8 14-14 8-8-14z"/>
   </g>
+
+  <g>
+    <path d="M186 509h620" stroke="#f0cc73" stroke-width="2" stroke-linecap="round"/>
+    <path d="M201 527h167" stroke="#f0cc73" stroke-width="2" stroke-linecap="round"/>
+    <path d="M640 527h149" stroke="#f0cc73" stroke-width="2" stroke-linecap="round"/>
+    <text x="392" y="533" class="caption">SOUTH ASIA - 1989</text>
+  </g>
+
+  <g>
+    <text x="165" y="186" class="label">AFGHANISTAN</text>
+    <text x="306" y="432" class="label">PAKISTAN</text>
+    <text x="523" y="338" class="label">INDIA</text>
+    <text x="610" y="300" class="small-label">NEPAL</text>
+    <text x="638" y="355" class="small-label">BHUTAN</text>
+    <text x="620" y="428" class="small-label">BANGLADESH</text>
+    <text x="538" y="585" class="small-label">SRI LANKA</text>
+    <text x="690" y="538" class="small-label">MALDIVES</text>
+  </g>
+
+  <g>
+    <circle class="pin" cx="307" cy="216" r="13"/>
+    <circle class="pin-core" cx="307" cy="216" r="5"/>
+    <circle class="pin" cx="403" cy="328" r="13"/>
+    <circle class="pin-core" cx="403" cy="328" r="5"/>
+    <circle class="pin" cx="543" cy="350" r="13"/>
+    <circle class="pin-core" cx="543" cy="350" r="5"/>
+    <circle class="pin" cx="635" cy="412" r="11"/>
+    <circle class="pin-core" cx="635" cy="412" r="4"/>
+  </g>
+
+  <g transform="translate(96 112)">
+    <rect width="188" height="86" rx="3" fill="url(#paperGlow)" stroke="#fff0bd" stroke-width="2"/>
+    <text x="16" y="29" class="note">FRUS-style volume</text>
+    <text x="16" y="53" class="note">NSC - DC - Memcons</text>
+    <text x="16" y="74" class="note">Source map, 1989</text>
+  </g>
+
+  <g transform="translate(668 132)">
+    <rect width="160" height="124" rx="3" fill="#fff2c5" stroke="#f0cc73" stroke-width="2"/>
+    <text x="17" y="29" class="small-label">Ruby buckram</text>
+    <path d="M20 48h118M20 68h95M20 88h112" stroke="#9e1f35" stroke-width="6" stroke-linecap="round"/>
+    <path d="M20 107h68" stroke="#d9aa4f" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <text x="83" y="568" class="title">Bush 41 South Asia</text>
+  <text x="84" y="594" class="caption">AFGHANISTAN - PAKISTAN - INDIA - REGIONAL FILES</text>
 </svg>

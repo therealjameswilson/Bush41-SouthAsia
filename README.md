@@ -16,6 +16,12 @@ The current data is harvested from three National Archives Catalog source-series
 - Bush Library Digital Research Room: Memcons and Telcons
 - NAID 321498039: Presidential Memcon Files
 - NAID 321498139: Presidential Telcon Files
+- NAID 312293887: H-Files - National Security Council (NSC) Meeting Files
+- NAID 312294079: H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files
+- NAID 312294094: H-Files - NSC/DC Meetings Follow-Up Files
+- NAID 313189297: H-Files - National Security Review (NSR) Files
+- NAID 313189290: H-Files - National Security Directive (NSD) Files
+- NAID 348937136: Institutional Files - Transition Files
 
 Open `index.html` directly, or serve the directory locally:
 
@@ -29,4 +35,5 @@ Refresh the catalog-derived data with:
 node scripts/harvest-haass-catalog.js
 node scripts/harvest-scowcroft-heads.js
 node scripts/harvest-bush-library-memcons.js
+node scripts/harvest-nsc-dc-minutes.js
 ```

@@ -1,13 +1,13 @@
 window.MEMCONS = [
   {
-    "id": "470426212-nsc-meeting-february-10-1989-re-afghanistan",
-    "date": "1989-02-10",
-    "sortDate": "1989-02-10",
-    "type": "Meeting file",
-    "title": "NSC Meeting - February 10, 1989 re: Afghanistan",
-    "sourceTitle": "Richard N. Haass' Meeting Files; CF01625-001",
+    "id": "nsc-source-446394923",
+    "date": "1989-02-07",
+    "sortDate": "1989-02-07",
+    "type": "National Security Review source file",
+    "title": "NSR-1 - February 07, 1989 - Afghanistan",
+    "sourceTitle": "H-Files - National Security Review (NSR) Files; 90006-001",
     "participants": [
-      "Richard N. Haass"
+      "National Security Council"
     ],
     "countries": [
       "United States",
@@ -18,45 +18,231 @@ window.MEMCONS = [
       "name": "Afghanistan"
     },
     "releaseStatus": "Restricted - Possibly",
-    "naid": "470426212",
-    "localIdentifier": "CF01625-001",
-    "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-001.pdf",
-    "catalogUrl": "https://catalog.archives.gov/id/470426212",
+    "naid": "446394923",
+    "localIdentifier": "90006-001",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSRs_313189297/41-bpr-nsc-hfiles-nsr-1-90006-001.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/446394923",
     "source": {
       "name": "Records of the National Security Council (George H. W. Bush Administration)",
       "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
       "referenceUnit": "George Bush Library",
-      "series": "Richard N. Haass' Meeting Files",
-      "seriesNaid": "2554866",
-      "objectFilename": "41-bpr-nsc-haass_meeting-cf01625-001.pdf",
-      "containerId": "CF01625"
+      "series": "H-Files - National Security Review (NSR) Files",
+      "seriesNaid": "313189297",
+      "seriesUrl": "https://catalog.archives.gov/id/313189297",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSRs_313189297/41-bpr-nsc-hfiles-nsr-1-90006-001.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-nsr-1-90006-001.pdf",
+      "objectId": "483296573",
+      "containerId": "90006",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
     },
     "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
     "frusTopics": [
       "South Asia",
-      "Meeting Files",
-      "South Asia",
-      "Afghanistan"
+      "Afghanistan",
+      "NSR Files",
+      "Measured pages"
     ],
     "topics": [
       "South Asia",
+      "Afghanistan",
+      "National Security Review source file",
+      "Measured page count"
+    ],
+    "pageCount": 30,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSR-1 - February 07, 1989 - Afghanistan",
+    "subjectLine": "NSR-1 - February 07, 1989 - Afghanistan",
+    "dateLine": "February 7, 1989",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Review (NSR) Files, 90006-001, NAID 446394923. Catalog URL: https://catalog.archives.gov/id/446394923. Series URL: https://catalog.archives.gov/id/313189297. Digital object: 41-bpr-nsc-hfiles-nsr-1-90006-001.pdf, object ID 483296573, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSRs_313189297/41-bpr-nsc-hfiles-nsr-1-90006-001.pdf. Page count: 30 (measured from available PDF). FOIA tracking: 2005-0052-F. Other finding aid identifier: Pres-Bush. Container: 90006. Access restriction: Restricted - Possibly."
+  },
+  {
+    "id": "nsc-source-470760975",
+    "date": "1989-02-08",
+    "sortDate": "1989-02-08",
+    "type": "Deputies Committee meeting minutes",
+    "title": "NSC/DC 001 - February 08, 1989 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan",
+    "sourceTitle": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files; 90009-001",
+    "participants": [
+      "Deputies Committee"
+    ],
+    "countries": [
+      "United States",
       "Afghanistan"
     ],
-    "pageCount": 0,
+    "chapter": {
+      "number": 1,
+      "name": "Afghanistan"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "470760975",
+    "localIdentifier": "90009-001",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-1-90009-001.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470760975",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "seriesNaid": "312294079",
+      "seriesUrl": "https://catalog.archives.gov/id/312294079",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-1-90009-001.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-dc_mtgs-1-90009-001.pdf",
+      "objectId": "483295786",
+      "containerId": "90009",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Afghanistan",
+      "NSC/DC Meetings",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Afghanistan",
+      "Deputies Committee meeting minutes",
+      "Measured page count"
+    ],
+    "pageCount": 52,
     "fileUnitCount": 1,
-    "foiaNumbers": [
-      "2008-0431-F",
-      "2005-0052-F"
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC/DC 001 - February 08, 1989 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan",
+    "subjectLine": "NSC/DC 001 - February 08, 1989 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan",
+    "dateLine": "February 8, 1989",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files, 90009-001, NAID 470760975. Catalog URL: https://catalog.archives.gov/id/470760975. Series URL: https://catalog.archives.gov/id/312294079. Digital object: 41-bpr-nsc-hfiles-dc_mtgs-1-90009-001.pdf, object ID 483295786, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-1-90009-001.pdf. Page count: 52 (measured from available PDF). FOIA tracking: 2005-0052-F, 2005-1002-F, 2008-1289-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90009. Access restriction: Restricted - Possibly."
+  },
+  {
+    "id": "nsc-source-470760885",
+    "date": "1989-02-10",
+    "sortDate": "1989-02-10",
+    "type": "NSC meeting minutes",
+    "title": "NSC0001 - February 10, 1989 - Afghanistan",
+    "sourceTitle": "H-Files - National Security Council (NSC) Meeting Files; 90000-001",
+    "participants": [
+      "National Security Council"
     ],
-    "otherFindingAids": [
-      "2012-3135-S",
-      "Pres-Bush"
+    "countries": [
+      "United States",
+      "Afghanistan"
     ],
-    "notes": "Extracted from National Archives Catalog metadata for the Haass files. PDF is a scanned folder-level release; item-level memcon/telcon boundaries require OCR review.",
-    "documentTitle": "NSC Meeting - February 10, 1989 re: Afghanistan",
-    "subjectLine": "NSC Meeting - February 10, 1989 re: Afghanistan",
+    "chapter": {
+      "number": 1,
+      "name": "Afghanistan"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "470760885",
+    "localIdentifier": "90000-001",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-1-90000-001.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470760885",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Council (NSC) Meeting Files",
+      "seriesNaid": "312293887",
+      "seriesUrl": "https://catalog.archives.gov/id/312293887",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-1-90000-001.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-nsc_mtgs-1-90000-001.pdf",
+      "objectId": "483296377",
+      "containerId": "90000",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": [
+        {
+          "id": "470426212-nsc-meeting-february-10-1989-re-afghanistan",
+          "sourceName": "Records of the National Security Council (George H. W. Bush Administration)",
+          "series": "Richard N. Haass' Meeting Files",
+          "naid": "470426212",
+          "localIdentifier": "CF01625-001",
+          "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-001, NAID 470426212. FOIA tracking: 2008-0431-F, 2005-0052-F. Access restriction: Restricted - Possibly."
+        }
+      ]
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Afghanistan",
+      "NSC Meeting Files",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Afghanistan",
+      "NSC meeting minutes",
+      "Measured page count"
+    ],
+    "pageCount": 20,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC0001 - February 10, 1989 - Afghanistan",
+    "subjectLine": "NSC0001 - February 10, 1989 - Afghanistan",
     "dateLine": "February 10, 1989",
-    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-001, NAID 470426212. FOIA tracking: 2008-0431-F, 2005-0052-F. Access restriction: Restricted - Possibly."
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC) Meeting Files, 90000-001, NAID 470760885. Catalog URL: https://catalog.archives.gov/id/470760885. Series URL: https://catalog.archives.gov/id/312293887. Digital object: 41-bpr-nsc-hfiles-nsc_mtgs-1-90000-001.pdf, object ID 483296377, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-1-90000-001.pdf. Page count: 20 (measured from available PDF). FOIA tracking: 2005-1003-F, 2005-0052-F, 2009-0857-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90000. Access restriction: Restricted - Possibly. Deduped local provenance: Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, NAID 470426212, CF01625-001."
+  },
+  {
+    "id": "nsc-source-446396813",
+    "date": "1989-02-13",
+    "sortDate": "1989-02-13",
+    "type": "National Security Directive source file",
+    "title": "NSD-3 - February 13, 1989 - U.S. Policy toward Afghanistan (File located @ LM)",
+    "sourceTitle": "H-Files - National Security Directive (NSD) Files; 90003-004",
+    "participants": [
+      "National Security Council"
+    ],
+    "countries": [
+      "United States",
+      "Afghanistan"
+    ],
+    "chapter": {
+      "number": 1,
+      "name": "Afghanistan"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "446396813",
+    "localIdentifier": "90003-004",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-3-90003-004.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/446396813",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Directive (NSD) Files",
+      "seriesNaid": "313189290",
+      "seriesUrl": "https://catalog.archives.gov/id/313189290",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-3-90003-004.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-nsd-3-90003-004.pdf",
+      "objectId": "483296494",
+      "containerId": "90003",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Afghanistan",
+      "NSD Files",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Afghanistan",
+      "National Security Directive source file",
+      "Measured page count"
+    ],
+    "pageCount": 52,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSD-3 - February 13, 1989 - U.S. Policy toward Afghanistan (File located @ LM)",
+    "subjectLine": "NSD-3 - February 13, 1989 - U.S. Policy toward Afghanistan (File located @ LM)",
+    "dateLine": "February 13, 1989",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Directive (NSD) Files, 90003-004, NAID 446396813. Catalog URL: https://catalog.archives.gov/id/446396813. Series URL: https://catalog.archives.gov/id/313189290. Digital object: 41-bpr-nsc-hfiles-nsd-3-90003-004.pdf, object ID 483296494, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-3-90003-004.pdf. Page count: 52 (measured from available PDF). FOIA tracking: 2005-0052-F. Other finding aid identifier: Pres-Bush. Container: 90003. Access restriction: Restricted - Possibly."
   },
   {
     "id": "scowcroft-366551660-75-turgut-ozal-memcon",
@@ -112,6 +298,183 @@ window.MEMCONS = [
     "subjectLine": "President’s Meeting with Prime Minister Turgut Ozal of Turkey (J)",
     "dateLine": "February 24, 1989",
     "sourceNote": "Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 1/24/89-2/25/89, 91107-001, NAID 366551660, source pages 75-78."
+  },
+  {
+    "id": "nsc-source-470760979",
+    "date": "1989-03-08",
+    "sortDate": "1989-03-08",
+    "type": "Deputies Committee meeting minutes",
+    "title": "NSC/DC 005 - March 08, 1989 - NSC/DC Meeting on Non-Lethal Finding and Transfer of Funds re: Afghanistan, Keywords: Afghanistan",
+    "sourceTitle": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files; 90009-005",
+    "participants": [
+      "Deputies Committee"
+    ],
+    "countries": [
+      "United States",
+      "Afghanistan"
+    ],
+    "chapter": {
+      "number": 1,
+      "name": "Afghanistan"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "470760979",
+    "localIdentifier": "90009-005",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-5-90009-005.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470760979",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "seriesNaid": "312294079",
+      "seriesUrl": "https://catalog.archives.gov/id/312294079",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-5-90009-005.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-dc_mtgs-5-90009-005.pdf",
+      "objectId": "483296203",
+      "containerId": "90009",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Afghanistan",
+      "NSC/DC Meetings",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Afghanistan",
+      "Deputies Committee meeting minutes",
+      "Measured page count"
+    ],
+    "pageCount": 6,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC/DC 005 - March 08, 1989 - NSC/DC Meeting on Non-Lethal Finding and Transfer of Funds re: Afghanistan, Keywords: Afghanistan",
+    "subjectLine": "NSC/DC 005 - March 08, 1989 - NSC/DC Meeting on Non-Lethal Finding and Transfer of Funds re: Afghanistan, Keywords: Afghanistan",
+    "dateLine": "March 8, 1989",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files, 90009-005, NAID 470760979. Catalog URL: https://catalog.archives.gov/id/470760979. Series URL: https://catalog.archives.gov/id/312294079. Digital object: 41-bpr-nsc-hfiles-dc_mtgs-5-90009-005.pdf, object ID 483296203, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-5-90009-005.pdf. Page count: 6 (measured from available PDF). FOIA tracking: 2008-1289-F, 2005-0052-F, 2005-1002-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90009. Access restriction: Restricted - Possibly."
+  },
+  {
+    "id": "nsc-source-470760888",
+    "date": "1989-03-14",
+    "sortDate": "1989-03-14",
+    "type": "NSC meeting minutes",
+    "title": "NSC0004 - March 14, 1989 - Panama, Nicaragua, Afghanistan (File located @ LM)",
+    "sourceTitle": "H-Files - National Security Council (NSC) Meeting Files; 90000-004",
+    "participants": [
+      "National Security Council"
+    ],
+    "countries": [
+      "United States",
+      "Afghanistan"
+    ],
+    "chapter": {
+      "number": 1,
+      "name": "Afghanistan"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "470760888",
+    "localIdentifier": "90000-004",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-4-90000-004.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470760888",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Council (NSC) Meeting Files",
+      "seriesNaid": "312293887",
+      "seriesUrl": "https://catalog.archives.gov/id/312293887",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-4-90000-004.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-nsc_mtgs-4-90000-004.pdf",
+      "objectId": "483296427",
+      "containerId": "90000",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Afghanistan",
+      "NSC Meeting Files",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Afghanistan",
+      "NSC meeting minutes",
+      "Measured page count"
+    ],
+    "pageCount": 1,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC0004 - March 14, 1989 - Panama, Nicaragua, Afghanistan (File located @ LM)",
+    "subjectLine": "NSC0004 - March 14, 1989 - Panama, Nicaragua, Afghanistan (File located @ LM)",
+    "dateLine": "March 14, 1989",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC) Meeting Files, 90000-004, NAID 470760888. Catalog URL: https://catalog.archives.gov/id/470760888. Series URL: https://catalog.archives.gov/id/312293887. Digital object: 41-bpr-nsc-hfiles-nsc_mtgs-4-90000-004.pdf, object ID 483296427, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-4-90000-004.pdf. Page count: 1 (measured from available PDF). FOIA tracking: 2004-0722-F, 2009-0857-F, 2004-0728-F, 2005-0989-F, 2005-0052-F, 2005-0992-F, 2005-1003-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90000. Access restriction: Restricted - Possibly."
+  },
+  {
+    "id": "nsc-source-446396815",
+    "date": "1989-03-18",
+    "sortDate": "1989-03-18",
+    "type": "National Security Directive source file",
+    "title": "NSD-5 - March 18, 1989 - Legislation to Authorize the Transfer of Funds to the Agency for International Development (AID) for Humanitarian Assistance to Afghanistan (File located @ LM)",
+    "sourceTitle": "H-Files - National Security Directive (NSD) Files; 90003-006",
+    "participants": [
+      "National Security Council"
+    ],
+    "countries": [
+      "United States",
+      "Afghanistan"
+    ],
+    "chapter": {
+      "number": 1,
+      "name": "Afghanistan"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "446396815",
+    "localIdentifier": "90003-006",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-5-90003-006.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/446396815",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Directive (NSD) Files",
+      "seriesNaid": "313189290",
+      "seriesUrl": "https://catalog.archives.gov/id/313189290",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-5-90003-006.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-nsd-5-90003-006.pdf",
+      "objectId": "483296520",
+      "containerId": "90003",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Afghanistan",
+      "NSD Files",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Afghanistan",
+      "National Security Directive source file",
+      "Measured page count"
+    ],
+    "pageCount": 43,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSD-5 - March 18, 1989 - Legislation to Authorize the Transfer of Funds to the Agency for International Development (AID) for Humanitarian Assistance to Afghanistan (File located @ LM)",
+    "subjectLine": "NSD-5 - March 18, 1989 - Legislation to Authorize the Transfer of Funds to the Agency for International Development (AID) for Humanitarian Assistance to Afghanistan (File located @ LM)",
+    "dateLine": "March 18, 1989",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Directive (NSD) Files, 90003-006, NAID 446396815. Catalog URL: https://catalog.archives.gov/id/446396815. Series URL: https://catalog.archives.gov/id/313189290. Digital object: 41-bpr-nsc-hfiles-nsd-5-90003-006.pdf, object ID 483296520, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-5-90003-006.pdf. Page count: 43 (measured from available PDF). FOIA tracking: 2005-0052-F. Other finding aid identifier: Pres-Bush. Container: 90003. Access restriction: Restricted - Possibly."
   },
   {
     "id": "scowcroft-366551686-65-king-fahd-telcon",
@@ -228,6 +591,65 @@ window.MEMCONS = [
     "subjectLine": "NSC/DC [Deputies Committee] Meeting - October 16, 1989 re: Afghanistan",
     "dateLine": "October 16, 1989",
     "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-007, NAID 470426218. FOIA tracking: 2005-0052-F, 2008-0431-F. Access restriction: Restricted - Possibly."
+  },
+  {
+    "id": "nsc-source-470761041",
+    "date": "1989-10-18",
+    "sortDate": "1989-10-18",
+    "type": "Deputies Committee meeting minutes",
+    "title": "NSC/DC 065A - October 18, 1989 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan (File located @ LM)",
+    "sourceTitle": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files; 90011-020",
+    "participants": [
+      "Deputies Committee"
+    ],
+    "countries": [
+      "United States",
+      "Afghanistan"
+    ],
+    "chapter": {
+      "number": 1,
+      "name": "Afghanistan"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "470761041",
+    "localIdentifier": "90011-020",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-65a-90011-020.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470761041",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "seriesNaid": "312294079",
+      "seriesUrl": "https://catalog.archives.gov/id/312294079",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-65a-90011-020.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-dc_mtgs-65a-90011-020.pdf",
+      "objectId": "483296221",
+      "containerId": "90011",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Afghanistan",
+      "NSC/DC Meetings",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Afghanistan",
+      "Deputies Committee meeting minutes",
+      "Measured page count"
+    ],
+    "pageCount": 8,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC/DC 065A - October 18, 1989 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan (File located @ LM)",
+    "subjectLine": "NSC/DC 065A - October 18, 1989 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan (File located @ LM)",
+    "dateLine": "October 18, 1989",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files, 90011-020, NAID 470761041. Catalog URL: https://catalog.archives.gov/id/470761041. Series URL: https://catalog.archives.gov/id/312294079. Digital object: 41-bpr-nsc-hfiles-dc_mtgs-65a-90011-020.pdf, object ID 483296221, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-65a-90011-020.pdf. Page count: 8 (measured from available PDF). FOIA tracking: 2005-0052-F, 2005-1002-F, 2008-1289-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90011. Access restriction: Restricted - Possibly."
   },
   {
     "id": "470426219-nsc-meeting-october-23-1989-re-afghanistan",
@@ -522,14 +944,14 @@ window.MEMCONS = [
     "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-024, NAID 470426235. FOIA tracking: 2005-0052-F, 2008-0431-F. Access restriction: Restricted - Possibly."
   },
   {
-    "id": "470426239-nsc-dc-deputies-committee-meeting-october-5-1990-re-afghanistan",
+    "id": "nsc-source-470761206",
     "date": "1990-10-05",
     "sortDate": "1990-10-05",
-    "type": "Meeting file",
-    "title": "NSC/DC [Deputies Committee] Meeting - October 5, 1990 re: Afghanistan",
-    "sourceTitle": "Richard N. Haass' Meeting Files; CF01625-028",
+    "type": "Deputies Committee meeting minutes",
+    "title": "NSC/DC 207 - October 05, 1990 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan",
+    "sourceTitle": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files; 90016-040",
     "participants": [
-      "Richard N. Haass"
+      "Deputies Committee"
     ],
     "countries": [
       "United States",
@@ -540,56 +962,64 @@ window.MEMCONS = [
       "name": "Afghanistan"
     },
     "releaseStatus": "Restricted - Possibly",
-    "naid": "470426239",
-    "localIdentifier": "CF01625-028",
-    "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-028.pdf",
-    "catalogUrl": "https://catalog.archives.gov/id/470426239",
+    "naid": "470761206",
+    "localIdentifier": "90016-040",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-207-90016-040.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470761206",
     "source": {
       "name": "Records of the National Security Council (George H. W. Bush Administration)",
       "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
       "referenceUnit": "George Bush Library",
-      "series": "Richard N. Haass' Meeting Files",
-      "seriesNaid": "2554866",
-      "objectFilename": "41-bpr-nsc-haass_meeting-cf01625-028.pdf",
-      "containerId": "CF01625"
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "seriesNaid": "312294079",
+      "seriesUrl": "https://catalog.archives.gov/id/312294079",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-207-90016-040.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-dc_mtgs-207-90016-040.pdf",
+      "objectId": "483295919",
+      "containerId": "90016",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": [
+        {
+          "id": "470426239-nsc-dc-deputies-committee-meeting-october-5-1990-re-afghanistan",
+          "sourceName": "Records of the National Security Council (George H. W. Bush Administration)",
+          "series": "Richard N. Haass' Meeting Files",
+          "naid": "470426239",
+          "localIdentifier": "CF01625-028",
+          "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-028, NAID 470426239. FOIA tracking: 2008-0431-F, 2008-0430-F. Access restriction: Restricted - Possibly."
+        }
+      ]
     },
     "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
     "frusTopics": [
       "South Asia",
-      "Meeting Files",
-      "South Asia",
       "Afghanistan",
-      "Deputies Committee"
+      "NSC/DC Meetings",
+      "Measured pages"
     ],
     "topics": [
       "South Asia",
       "Afghanistan",
-      "Deputies Committee"
+      "Deputies Committee meeting minutes",
+      "Measured page count"
     ],
-    "pageCount": 0,
+    "pageCount": 26,
     "fileUnitCount": 1,
-    "foiaNumbers": [
-      "2008-0431-F",
-      "2008-0430-F"
-    ],
-    "otherFindingAids": [
-      "Pres-Bush"
-    ],
-    "notes": "Extracted from National Archives Catalog metadata for the Haass files. PDF is a scanned folder-level release; item-level memcon/telcon boundaries require OCR review.",
-    "documentTitle": "NSC/DC [Deputies Committee] Meeting - October 5, 1990 re: Afghanistan",
-    "subjectLine": "NSC/DC [Deputies Committee] Meeting - October 5, 1990 re: Afghanistan",
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC/DC 207 - October 05, 1990 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan",
+    "subjectLine": "NSC/DC 207 - October 05, 1990 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan",
     "dateLine": "October 5, 1990",
-    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-028, NAID 470426239. FOIA tracking: 2008-0431-F, 2008-0430-F. Access restriction: Restricted - Possibly."
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files, 90016-040, NAID 470761206. Catalog URL: https://catalog.archives.gov/id/470761206. Series URL: https://catalog.archives.gov/id/312294079. Digital object: 41-bpr-nsc-hfiles-dc_mtgs-207-90016-040.pdf, object ID 483295919, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-207-90016-040.pdf. Page count: 26 (measured from available PDF). FOIA tracking: 2005-1002-F, 2008-1289-F, 2005-0052-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90016. Access restriction: Restricted - Possibly. Deduped local provenance: Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, NAID 470426239, CF01625-028."
   },
   {
-    "id": "470426179-dc-deputies-committee-meeting-january-3-1992-re-afghanistan",
-    "date": "1992-01-03",
-    "sortDate": "1992-01-03",
-    "type": "Meeting file",
-    "title": "DC [Deputies Committee] Meeting - January 3, 1992 re: Afghanistan",
-    "sourceTitle": "Richard N. Haass' Meeting Files; CF01618-005",
+    "id": "nsc-source-470761272",
+    "date": "1991-03-05",
+    "sortDate": "1991-03-05",
+    "type": "Deputies Committee meeting minutes",
+    "title": "NSC/DC 260 - March 05, 1991 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan (File located @ LM)",
+    "sourceTitle": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files; 90019-003",
     "participants": [
-      "Richard N. Haass"
+      "Deputies Committee"
     ],
     "countries": [
       "United States",
@@ -600,47 +1030,231 @@ window.MEMCONS = [
       "name": "Afghanistan"
     },
     "releaseStatus": "Restricted - Possibly",
-    "naid": "470426179",
-    "localIdentifier": "CF01618-005",
-    "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01618-005.pdf",
-    "catalogUrl": "https://catalog.archives.gov/id/470426179",
+    "naid": "470761272",
+    "localIdentifier": "90019-003",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-260-90019-003.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470761272",
     "source": {
       "name": "Records of the National Security Council (George H. W. Bush Administration)",
       "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
       "referenceUnit": "George Bush Library",
-      "series": "Richard N. Haass' Meeting Files",
-      "seriesNaid": "2554866",
-      "objectFilename": "41-bpr-nsc-haass_meeting-cf01618-005.pdf",
-      "containerId": "CF01618"
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "seriesNaid": "312294079",
+      "seriesUrl": "https://catalog.archives.gov/id/312294079",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-260-90019-003.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-dc_mtgs-260-90019-003.pdf",
+      "objectId": "483295989",
+      "containerId": "90019",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
     },
     "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
     "frusTopics": [
       "South Asia",
-      "Meeting Files",
-      "South Asia",
       "Afghanistan",
-      "Deputies Committee"
+      "NSC/DC Meetings",
+      "Measured pages"
     ],
     "topics": [
       "South Asia",
       "Afghanistan",
+      "Deputies Committee meeting minutes",
+      "Measured page count"
+    ],
+    "pageCount": 9,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC/DC 260 - March 05, 1991 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan (File located @ LM)",
+    "subjectLine": "NSC/DC 260 - March 05, 1991 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan (File located @ LM)",
+    "dateLine": "March 5, 1991",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files, 90019-003, NAID 470761272. Catalog URL: https://catalog.archives.gov/id/470761272. Series URL: https://catalog.archives.gov/id/312294079. Digital object: 41-bpr-nsc-hfiles-dc_mtgs-260-90019-003.pdf, object ID 483295989, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-260-90019-003.pdf. Page count: 9 (measured from available PDF). FOIA tracking: 2008-1289-F, 2005-0052-F, 2005-1002-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90019. Access restriction: Restricted - Possibly."
+  },
+  {
+    "id": "nsc-source-470761289",
+    "date": "1991-04-12",
+    "sortDate": "1991-04-12",
+    "type": "Deputies Committee meeting minutes",
+    "title": "NSC/DC 271 - April 12, 1991 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan (File located @ LM)",
+    "sourceTitle": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files; 90019-020",
+    "participants": [
       "Deputies Committee"
     ],
-    "pageCount": 0,
+    "countries": [
+      "United States",
+      "Afghanistan"
+    ],
+    "chapter": {
+      "number": 1,
+      "name": "Afghanistan"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "470761289",
+    "localIdentifier": "90019-020",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-271-90019-020.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470761289",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "seriesNaid": "312294079",
+      "seriesUrl": "https://catalog.archives.gov/id/312294079",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-271-90019-020.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-dc_mtgs-271-90019-020.pdf",
+      "objectId": "483296007",
+      "containerId": "90019",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Afghanistan",
+      "NSC/DC Meetings",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Afghanistan",
+      "Deputies Committee meeting minutes",
+      "Measured page count"
+    ],
+    "pageCount": 7,
     "fileUnitCount": 1,
-    "foiaNumbers": [
-      "2008-0431-F",
-      "2005-0052-F"
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC/DC 271 - April 12, 1991 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan (File located @ LM)",
+    "subjectLine": "NSC/DC 271 - April 12, 1991 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan (File located @ LM)",
+    "dateLine": "April 12, 1991",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files, 90019-020, NAID 470761289. Catalog URL: https://catalog.archives.gov/id/470761289. Series URL: https://catalog.archives.gov/id/312294079. Digital object: 41-bpr-nsc-hfiles-dc_mtgs-271-90019-020.pdf, object ID 483296007, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-271-90019-020.pdf. Page count: 7 (measured from available PDF). FOIA tracking: 2005-0052-F, 2005-1002-F, 2008-1289-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90019. Access restriction: Restricted - Possibly."
+  },
+  {
+    "id": "nsc-source-470761301",
+    "date": "1991-05-17",
+    "sortDate": "1991-05-17",
+    "type": "Deputies Committee meeting minutes",
+    "title": "NSC/DC 282 - May 17, 1991 - NSC/DC Meeting on Angola and Afghanistan, Keywords: Angola, Afghanistan (File located @ NLMS)",
+    "sourceTitle": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files; 90020-001",
+    "participants": [
+      "Deputies Committee"
     ],
-    "otherFindingAids": [
-      "Pres-Bush",
-      "2012-3135-S"
+    "countries": [
+      "United States",
+      "Afghanistan"
     ],
-    "notes": "Extracted from National Archives Catalog metadata for the Haass files. PDF is a scanned folder-level release; item-level memcon/telcon boundaries require OCR review.",
-    "documentTitle": "DC [Deputies Committee] Meeting - January 3, 1992 re: Afghanistan",
-    "subjectLine": "DC [Deputies Committee] Meeting - January 3, 1992 re: Afghanistan",
+    "chapter": {
+      "number": 1,
+      "name": "Afghanistan"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "470761301",
+    "localIdentifier": "90020-001",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-282-90020-001.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470761301",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "seriesNaid": "312294079",
+      "seriesUrl": "https://catalog.archives.gov/id/312294079",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-282-90020-001.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-dc_mtgs-282-90020-001.pdf",
+      "objectId": "483296021",
+      "containerId": "90020",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Afghanistan",
+      "NSC/DC Meetings",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Afghanistan",
+      "Deputies Committee meeting minutes",
+      "Measured page count"
+    ],
+    "pageCount": 1,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC/DC 282 - May 17, 1991 - NSC/DC Meeting on Angola and Afghanistan, Keywords: Angola, Afghanistan (File located @ NLMS)",
+    "subjectLine": "NSC/DC 282 - May 17, 1991 - NSC/DC Meeting on Angola and Afghanistan, Keywords: Angola, Afghanistan (File located @ NLMS)",
+    "dateLine": "May 17, 1991",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files, 90020-001, NAID 470761301. Catalog URL: https://catalog.archives.gov/id/470761301. Series URL: https://catalog.archives.gov/id/312294079. Digital object: 41-bpr-nsc-hfiles-dc_mtgs-282-90020-001.pdf, object ID 483296021, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-282-90020-001.pdf. Page count: 1 (measured from available PDF). FOIA tracking: 2008-1289-F, 2005-0052-F, 2005-1002-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90020. Access restriction: Restricted - Possibly."
+  },
+  {
+    "id": "nsc-source-470761354",
+    "date": "1992-01-03",
+    "sortDate": "1992-01-03",
+    "type": "Deputies Committee meeting minutes",
+    "title": "NSC/DC 331 - January 03, 1992 - NSC/DC Meeting re: Afghanistan, Keywords: Afghanistan",
+    "sourceTitle": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files; 90021-019",
+    "participants": [
+      "Deputies Committee"
+    ],
+    "countries": [
+      "United States",
+      "Afghanistan"
+    ],
+    "chapter": {
+      "number": 1,
+      "name": "Afghanistan"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "470761354",
+    "localIdentifier": "90021-019",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-331-90021-019.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470761354",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "seriesNaid": "312294079",
+      "seriesUrl": "https://catalog.archives.gov/id/312294079",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-331-90021-019.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-dc_mtgs-331-90021-019.pdf",
+      "objectId": "483296079",
+      "containerId": "90021",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": [
+        {
+          "id": "470426179-dc-deputies-committee-meeting-january-3-1992-re-afghanistan",
+          "sourceName": "Records of the National Security Council (George H. W. Bush Administration)",
+          "series": "Richard N. Haass' Meeting Files",
+          "naid": "470426179",
+          "localIdentifier": "CF01618-005",
+          "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01618-005, NAID 470426179. FOIA tracking: 2008-0431-F, 2005-0052-F. Access restriction: Restricted - Possibly."
+        }
+      ]
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Afghanistan",
+      "NSC/DC Meetings",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Afghanistan",
+      "Deputies Committee meeting minutes",
+      "Measured page count"
+    ],
+    "pageCount": 58,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC/DC 331 - January 03, 1992 - NSC/DC Meeting re: Afghanistan, Keywords: Afghanistan",
+    "subjectLine": "NSC/DC 331 - January 03, 1992 - NSC/DC Meeting re: Afghanistan, Keywords: Afghanistan",
     "dateLine": "January 3, 1992",
-    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01618-005, NAID 470426179. FOIA tracking: 2008-0431-F, 2005-0052-F. Access restriction: Restricted - Possibly."
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files, 90021-019, NAID 470761354. Catalog URL: https://catalog.archives.gov/id/470761354. Series URL: https://catalog.archives.gov/id/312294079. Digital object: 41-bpr-nsc-hfiles-dc_mtgs-331-90021-019.pdf, object ID 483296079, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-331-90021-019.pdf. Page count: 58 (measured from available PDF). FOIA tracking: 2005-0052-F, 2008-1289-F, 2005-1002-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90021. Access restriction: Restricted - Possibly. Deduped local provenance: Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, NAID 470426179, CF01618-005."
   },
   {
     "id": "bush-library-428079777",
@@ -1425,6 +2039,193 @@ window.MEMCONS = [
     "sourceNote": "Source: George H.W. Bush Presidential Library and Museum, Digital Research Room, \"Memcons and Telcons\" table (https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons), row: Date 11/1/1989; Type Telcon; Participants Bhutto, Benazir; Country Pakistan; Release Status Full; NAID 428080317. National Archives Catalog item: Telephone Conversation with Prime Minister Bhutto of Pakistan, November 1, 1989, NAID 428080317. Collection: Records of the National Security Council (George H. W. Bush Administration), NAID 2163580. Series: Presidential Telcon Files, NAID 321498139. File unit: [Memorandum of Telephone Conversations (Telcons) - August 1989-December 1989]: November 1989, NAID 325592638. Digital object: 1989-11-01--Bhutto.pdf, object ID 428080318, URL https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-11-01--Bhutto.pdf. Access restriction: Unrestricted."
   },
   {
+    "id": "nsc-source-470761101",
+    "date": "1990-03-26",
+    "sortDate": "1990-03-26",
+    "type": "Deputies Committee meeting minutes",
+    "title": "NSC/DC 112 - March 26, 1990 - NSC/DC Meeting on Kashmir, Keywords: Pakistan",
+    "sourceTitle": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files; 90013-024",
+    "participants": [
+      "Deputies Committee"
+    ],
+    "countries": [
+      "United States",
+      "Pakistan",
+      "India"
+    ],
+    "chapter": {
+      "number": 2,
+      "name": "Pakistan"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "470761101",
+    "localIdentifier": "90013-024",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-112-90013-024.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470761101",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "seriesNaid": "312294079",
+      "seriesUrl": "https://catalog.archives.gov/id/312294079",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-112-90013-024.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-dc_mtgs-112-90013-024.pdf",
+      "objectId": "483295804",
+      "containerId": "90013",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": [
+        {
+          "id": "470426225-nsc-dc-deputies-committee-teleconference-march-26-1990-re-kashmir",
+          "sourceName": "Records of the National Security Council (George H. W. Bush Administration)",
+          "series": "Richard N. Haass' Meeting Files",
+          "naid": "470426225",
+          "localIdentifier": "CF01625-014",
+          "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-014, NAID 470426225. FOIA tracking: 1998-0387-F. Access restriction: Restricted - Possibly."
+        }
+      ]
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Pakistan",
+      "NSC/DC Meetings",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Pakistan",
+      "Deputies Committee meeting minutes",
+      "Measured page count"
+    ],
+    "pageCount": 13,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC/DC 112 - March 26, 1990 - NSC/DC Meeting on Kashmir, Keywords: Pakistan",
+    "subjectLine": "NSC/DC 112 - March 26, 1990 - NSC/DC Meeting on Kashmir, Keywords: Pakistan",
+    "dateLine": "March 26, 1990",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files, 90013-024, NAID 470761101. Catalog URL: https://catalog.archives.gov/id/470761101. Series URL: https://catalog.archives.gov/id/312294079. Digital object: 41-bpr-nsc-hfiles-dc_mtgs-112-90013-024.pdf, object ID 483295804, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-112-90013-024.pdf. Page count: 13 (measured from available PDF). FOIA tracking: 2008-1289-F, 2005-1002-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90013. Access restriction: Restricted - Possibly. Deduped local provenance: Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, NAID 470426225, CF01625-014."
+  },
+  {
+    "id": "nsc-source-470761116",
+    "date": "1990-05-07",
+    "sortDate": "1990-05-07",
+    "type": "Deputies Committee meeting minutes",
+    "title": "NSC/DC 124 - May 07, 1990 - NSC/DC Meeting re: Pakistan Stingers, Keywords: Pakistan (File located @ LM)",
+    "sourceTitle": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files; 90014-013",
+    "participants": [
+      "Deputies Committee"
+    ],
+    "countries": [
+      "United States",
+      "Pakistan"
+    ],
+    "chapter": {
+      "number": 2,
+      "name": "Pakistan"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "470761116",
+    "localIdentifier": "90014-013",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-124-90014-013.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470761116",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "seriesNaid": "312294079",
+      "seriesUrl": "https://catalog.archives.gov/id/312294079",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-124-90014-013.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-dc_mtgs-124-90014-013.pdf",
+      "objectId": "483295819",
+      "containerId": "90014",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Pakistan",
+      "NSC/DC Meetings",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Pakistan",
+      "Deputies Committee meeting minutes",
+      "Measured page count"
+    ],
+    "pageCount": 42,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC/DC 124 - May 07, 1990 - NSC/DC Meeting re: Pakistan Stingers, Keywords: Pakistan (File located @ LM)",
+    "subjectLine": "NSC/DC 124 - May 07, 1990 - NSC/DC Meeting re: Pakistan Stingers, Keywords: Pakistan (File located @ LM)",
+    "dateLine": "May 7, 1990",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files, 90014-013, NAID 470761116. Catalog URL: https://catalog.archives.gov/id/470761116. Series URL: https://catalog.archives.gov/id/312294079. Digital object: 41-bpr-nsc-hfiles-dc_mtgs-124-90014-013.pdf, object ID 483295819, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-124-90014-013.pdf. Page count: 42 (measured from available PDF). FOIA tracking: 2008-1289-F, 2005-1002-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90014. Access restriction: Restricted - Possibly."
+  },
+  {
+    "id": "nsc-source-470761140",
+    "date": "1990-06-28",
+    "sortDate": "1990-06-28",
+    "type": "Deputies Committee meeting minutes",
+    "title": "NSC/DC 147 - June 28, 1990 - NSC/DC Meeting on Pakistan's Nuclear Program, Keywords: Pakistan, Nuclear Matters",
+    "sourceTitle": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files; 90015-005",
+    "participants": [
+      "Deputies Committee"
+    ],
+    "countries": [
+      "United States",
+      "Pakistan"
+    ],
+    "chapter": {
+      "number": 2,
+      "name": "Pakistan"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "470761140",
+    "localIdentifier": "90015-005",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-147-90015-005.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470761140",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "seriesNaid": "312294079",
+      "seriesUrl": "https://catalog.archives.gov/id/312294079",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-147-90015-005.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-dc_mtgs-147-90015-005.pdf",
+      "objectId": "483295845",
+      "containerId": "90015",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Pakistan",
+      "NSC/DC Meetings",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Pakistan",
+      "Deputies Committee meeting minutes",
+      "Measured page count"
+    ],
+    "pageCount": 24,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC/DC 147 - June 28, 1990 - NSC/DC Meeting on Pakistan's Nuclear Program, Keywords: Pakistan, Nuclear Matters",
+    "subjectLine": "NSC/DC 147 - June 28, 1990 - NSC/DC Meeting on Pakistan's Nuclear Program, Keywords: Pakistan, Nuclear Matters",
+    "dateLine": "June 28, 1990",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files, 90015-005, NAID 470761140. Catalog URL: https://catalog.archives.gov/id/470761140. Series URL: https://catalog.archives.gov/id/312294079. Digital object: 41-bpr-nsc-hfiles-dc_mtgs-147-90015-005.pdf, object ID 483295845, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-147-90015-005.pdf. Page count: 24 (measured from available PDF). FOIA tracking: 2008-1289-F, 2005-1002-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90015. Access restriction: Restricted - Possibly."
+  },
+  {
     "id": "470426229-nsc-dc-deputies-committee-meeting-june-30-1990-re-pakistan",
     "date": "1990-06-30",
     "sortDate": "1990-06-30",
@@ -1485,14 +2286,14 @@ window.MEMCONS = [
     "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-018, NAID 470426229. FOIA tracking: 1998-0387-F. Access restriction: Restricted - Possibly."
   },
   {
-    "id": "470426230-nsc-dc-deputies-committee-meeting-july-9-1990-re-pakistan",
+    "id": "nsc-source-470761146",
     "date": "1990-07-09",
     "sortDate": "1990-07-09",
-    "type": "Meeting file",
-    "title": "NSC/DC [Deputies Committee] Meeting - July 9, 1990 Re: Pakistan",
-    "sourceTitle": "Richard N. Haass' Meeting Files; CF01625-019",
+    "type": "Deputies Committee meeting minutes",
+    "title": "NSC/DC 154 - July 09, 1990 - NSC/DC Meeting on Pakistan Nuclear Program, Keywords: Pakistan, Nuclear Matters",
+    "sourceTitle": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files; 90015-012",
     "participants": [
-      "Richard N. Haass"
+      "Deputies Committee"
     ],
     "countries": [
       "United States",
@@ -1503,46 +2304,54 @@ window.MEMCONS = [
       "name": "Pakistan"
     },
     "releaseStatus": "Restricted - Possibly",
-    "naid": "470426230",
-    "localIdentifier": "CF01625-019",
-    "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-019.pdf",
-    "catalogUrl": "https://catalog.archives.gov/id/470426230",
+    "naid": "470761146",
+    "localIdentifier": "90015-012",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-154-90015-012.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470761146",
     "source": {
       "name": "Records of the National Security Council (George H. W. Bush Administration)",
       "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
       "referenceUnit": "George Bush Library",
-      "series": "Richard N. Haass' Meeting Files",
-      "seriesNaid": "2554866",
-      "objectFilename": "41-bpr-nsc-haass_meeting-cf01625-019.pdf",
-      "containerId": "CF01625"
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "seriesNaid": "312294079",
+      "seriesUrl": "https://catalog.archives.gov/id/312294079",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-154-90015-012.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-dc_mtgs-154-90015-012.pdf",
+      "objectId": "483295853",
+      "containerId": "90015",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": [
+        {
+          "id": "470426230-nsc-dc-deputies-committee-meeting-july-9-1990-re-pakistan",
+          "sourceName": "Records of the National Security Council (George H. W. Bush Administration)",
+          "series": "Richard N. Haass' Meeting Files",
+          "naid": "470426230",
+          "localIdentifier": "CF01625-019",
+          "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-019, NAID 470426230. FOIA tracking: 1998-0387-F. Access restriction: Restricted - Possibly."
+        }
+      ]
     },
     "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
     "frusTopics": [
       "South Asia",
-      "Meeting Files",
-      "South Asia",
       "Pakistan",
-      "Deputies Committee"
+      "NSC/DC Meetings",
+      "Measured pages"
     ],
     "topics": [
       "South Asia",
       "Pakistan",
-      "Deputies Committee"
+      "Deputies Committee meeting minutes",
+      "Measured page count"
     ],
-    "pageCount": 0,
+    "pageCount": 10,
     "fileUnitCount": 1,
-    "foiaNumbers": [
-      "1998-0387-F"
-    ],
-    "otherFindingAids": [
-      "Pres-Bush",
-      "2012-3135-S"
-    ],
-    "notes": "Extracted from National Archives Catalog metadata for the Haass files. PDF is a scanned folder-level release; item-level memcon/telcon boundaries require OCR review.",
-    "documentTitle": "NSC/DC [Deputies Committee] Meeting - July 9, 1990 Re: Pakistan",
-    "subjectLine": "NSC/DC [Deputies Committee] Meeting - July 9, 1990 Re: Pakistan",
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC/DC 154 - July 09, 1990 - NSC/DC Meeting on Pakistan Nuclear Program, Keywords: Pakistan, Nuclear Matters",
+    "subjectLine": "NSC/DC 154 - July 09, 1990 - NSC/DC Meeting on Pakistan Nuclear Program, Keywords: Pakistan, Nuclear Matters",
     "dateLine": "July 9, 1990",
-    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-019, NAID 470426230. FOIA tracking: 1998-0387-F. Access restriction: Restricted - Possibly."
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files, 90015-012, NAID 470761146. Catalog URL: https://catalog.archives.gov/id/470761146. Series URL: https://catalog.archives.gov/id/312294079. Digital object: 41-bpr-nsc-hfiles-dc_mtgs-154-90015-012.pdf, object ID 483295853, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-154-90015-012.pdf. Page count: 10 (measured from available PDF). FOIA tracking: 2005-1002-F, 2008-1289-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90015. Access restriction: Restricted - Possibly. Deduped local provenance: Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, NAID 470426230, CF01625-019."
   },
   {
     "id": "470426231-nsc-dc-meeting-july-16-1990-re-pakistan-nuclear-program",
@@ -1607,14 +2416,14 @@ window.MEMCONS = [
     "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-020, NAID 470426231. FOIA tracking: 1998-0387-F. Access restriction: Restricted - Possibly."
   },
   {
-    "id": "470426237-nsc-dc-deputies-committee-meeting-october-2-1990-re-pakistan",
-    "date": "1990-10-02",
-    "sortDate": "1990-10-02",
-    "type": "Meeting file",
-    "title": "NSC/DC [Deputies Committee] Meeting - October 2, 1990 Re: Pakistan",
-    "sourceTitle": "Richard N. Haass' Meeting Files; CF01625-026",
+    "id": "nsc-source-470761184",
+    "date": "1990-08-31",
+    "sortDate": "1990-08-31",
+    "type": "Deputies Committee meeting minutes",
+    "title": "NSC/DC 190 - August 31, 1990 - NSC/DC Meeting on Pakistan Nuclear Program, Keywords: Pakistan, Nuclear Matters",
+    "sourceTitle": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files; 90016-018",
     "participants": [
-      "Richard N. Haass"
+      "Deputies Committee"
     ],
     "countries": [
       "United States",
@@ -1625,46 +2434,172 @@ window.MEMCONS = [
       "name": "Pakistan"
     },
     "releaseStatus": "Restricted - Possibly",
-    "naid": "470426237",
-    "localIdentifier": "CF01625-026",
-    "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-026.pdf",
-    "catalogUrl": "https://catalog.archives.gov/id/470426237",
+    "naid": "470761184",
+    "localIdentifier": "90016-018",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-190-90016-018.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470761184",
     "source": {
       "name": "Records of the National Security Council (George H. W. Bush Administration)",
       "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
       "referenceUnit": "George Bush Library",
-      "series": "Richard N. Haass' Meeting Files",
-      "seriesNaid": "2554866",
-      "objectFilename": "41-bpr-nsc-haass_meeting-cf01625-026.pdf",
-      "containerId": "CF01625"
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "seriesNaid": "312294079",
+      "seriesUrl": "https://catalog.archives.gov/id/312294079",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-190-90016-018.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-dc_mtgs-190-90016-018.pdf",
+      "objectId": "483295895",
+      "containerId": "90016",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
     },
     "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
     "frusTopics": [
       "South Asia",
-      "Meeting Files",
-      "South Asia",
       "Pakistan",
-      "Deputies Committee"
+      "NSC/DC Meetings",
+      "Measured pages"
     ],
     "topics": [
       "South Asia",
       "Pakistan",
+      "Deputies Committee meeting minutes",
+      "Measured page count"
+    ],
+    "pageCount": 37,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC/DC 190 - August 31, 1990 - NSC/DC Meeting on Pakistan Nuclear Program, Keywords: Pakistan, Nuclear Matters",
+    "subjectLine": "NSC/DC 190 - August 31, 1990 - NSC/DC Meeting on Pakistan Nuclear Program, Keywords: Pakistan, Nuclear Matters",
+    "dateLine": "August 31, 1990",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files, 90016-018, NAID 470761184. Catalog URL: https://catalog.archives.gov/id/470761184. Series URL: https://catalog.archives.gov/id/312294079. Digital object: 41-bpr-nsc-hfiles-dc_mtgs-190-90016-018.pdf, object ID 483295895, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-190-90016-018.pdf. Page count: 37 (measured from available PDF). FOIA tracking: 2005-1002-F, 2008-1289-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90016. Access restriction: Restricted - Possibly."
+  },
+  {
+    "id": "nsc-source-470761189",
+    "date": "1990-09-05",
+    "sortDate": "1990-09-05",
+    "type": "Deputies Committee meeting minutes",
+    "title": "NSC/DC 193A - September 05, 1990 - NSC/DC Meeting on Pakistan, Keywords: Pakistan, Nuclear Matters",
+    "sourceTitle": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files; 90016-023",
+    "participants": [
       "Deputies Committee"
     ],
-    "pageCount": 0,
+    "countries": [
+      "United States",
+      "Pakistan"
+    ],
+    "chapter": {
+      "number": 2,
+      "name": "Pakistan"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "470761189",
+    "localIdentifier": "90016-023",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-193a-90016-023.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470761189",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "seriesNaid": "312294079",
+      "seriesUrl": "https://catalog.archives.gov/id/312294079",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-193a-90016-023.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-dc_mtgs-193a-90016-023.pdf",
+      "objectId": "483295900",
+      "containerId": "90016",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Pakistan",
+      "NSC/DC Meetings",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Pakistan",
+      "Deputies Committee meeting minutes",
+      "Measured page count"
+    ],
+    "pageCount": 11,
     "fileUnitCount": 1,
-    "foiaNumbers": [
-      "1998-0387-F"
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC/DC 193A - September 05, 1990 - NSC/DC Meeting on Pakistan, Keywords: Pakistan, Nuclear Matters",
+    "subjectLine": "NSC/DC 193A - September 05, 1990 - NSC/DC Meeting on Pakistan, Keywords: Pakistan, Nuclear Matters",
+    "dateLine": "September 5, 1990",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files, 90016-023, NAID 470761189. Catalog URL: https://catalog.archives.gov/id/470761189. Series URL: https://catalog.archives.gov/id/312294079. Digital object: 41-bpr-nsc-hfiles-dc_mtgs-193a-90016-023.pdf, object ID 483295900, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-193a-90016-023.pdf. Page count: 11 (measured from available PDF). FOIA tracking: 2008-1289-F, 2005-1002-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90016. Access restriction: Restricted - Possibly."
+  },
+  {
+    "id": "nsc-source-470761204",
+    "date": "1990-10-02",
+    "sortDate": "1990-10-02",
+    "type": "Deputies Committee meeting minutes",
+    "title": "NSC/DC 205 - October 02, 1990 - NSC/DC Meeting on Pakistan Nuclear Program via SVTS, Keywords: Pakistan, Nuclear Matters",
+    "sourceTitle": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files; 90016-038",
+    "participants": [
+      "Deputies Committee"
     ],
-    "otherFindingAids": [
-      "2012-3135-S",
-      "Pres-Bush"
+    "countries": [
+      "United States",
+      "Pakistan"
     ],
-    "notes": "Extracted from National Archives Catalog metadata for the Haass files. PDF is a scanned folder-level release; item-level memcon/telcon boundaries require OCR review.",
-    "documentTitle": "NSC/DC [Deputies Committee] Meeting - October 2, 1990 Re: Pakistan",
-    "subjectLine": "NSC/DC [Deputies Committee] Meeting - October 2, 1990 Re: Pakistan",
+    "chapter": {
+      "number": 2,
+      "name": "Pakistan"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "470761204",
+    "localIdentifier": "90016-038",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-205-90016-038.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470761204",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "seriesNaid": "312294079",
+      "seriesUrl": "https://catalog.archives.gov/id/312294079",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-205-90016-038.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-dc_mtgs-205-90016-038.pdf",
+      "objectId": "483295917",
+      "containerId": "90016",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": [
+        {
+          "id": "470426237-nsc-dc-deputies-committee-meeting-october-2-1990-re-pakistan",
+          "sourceName": "Records of the National Security Council (George H. W. Bush Administration)",
+          "series": "Richard N. Haass' Meeting Files",
+          "naid": "470426237",
+          "localIdentifier": "CF01625-026",
+          "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-026, NAID 470426237. FOIA tracking: 1998-0387-F. Access restriction: Restricted - Possibly."
+        }
+      ]
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Pakistan",
+      "NSC/DC Meetings",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Pakistan",
+      "Deputies Committee meeting minutes",
+      "Measured page count"
+    ],
+    "pageCount": 24,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC/DC 205 - October 02, 1990 - NSC/DC Meeting on Pakistan Nuclear Program via SVTS, Keywords: Pakistan, Nuclear Matters",
+    "subjectLine": "NSC/DC 205 - October 02, 1990 - NSC/DC Meeting on Pakistan Nuclear Program via SVTS, Keywords: Pakistan, Nuclear Matters",
     "dateLine": "October 2, 1990",
-    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-026, NAID 470426237. FOIA tracking: 1998-0387-F. Access restriction: Restricted - Possibly."
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files, 90016-038, NAID 470761204. Catalog URL: https://catalog.archives.gov/id/470761204. Series URL: https://catalog.archives.gov/id/312294079. Digital object: 41-bpr-nsc-hfiles-dc_mtgs-205-90016-038.pdf, object ID 483295917, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-205-90016-038.pdf. Page count: 24 (measured from available PDF). FOIA tracking: 2008-1289-F, 2005-1002-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90016. Access restriction: Restricted - Possibly. Deduped local provenance: Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, NAID 470426237, CF01625-026."
   },
   {
     "id": "470426238-nsc-dc-deputies-committee-meeting-october-4-1990-re-pakistan",
@@ -1727,6 +2662,65 @@ window.MEMCONS = [
     "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-027, NAID 470426238. FOIA tracking: 1998-0387-F. Access restriction: Restricted - Possibly."
   },
   {
+    "id": "nsc-source-470761207",
+    "date": "1990-10-05",
+    "sortDate": "1990-10-05",
+    "type": "Deputies Committee meeting minutes",
+    "title": "NSC/DC 208 - October 05, 1990 - NSC/DC Meeting on Pakistan via SVTS, Keywords: Pakistan",
+    "sourceTitle": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files; 90017-001",
+    "participants": [
+      "Deputies Committee"
+    ],
+    "countries": [
+      "United States",
+      "Pakistan"
+    ],
+    "chapter": {
+      "number": 2,
+      "name": "Pakistan"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "470761207",
+    "localIdentifier": "90017-001",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-208-90017-001.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470761207",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "seriesNaid": "312294079",
+      "seriesUrl": "https://catalog.archives.gov/id/312294079",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-208-90017-001.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-dc_mtgs-208-90017-001.pdf",
+      "objectId": "483295920",
+      "containerId": "90017",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Pakistan",
+      "NSC/DC Meetings",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Pakistan",
+      "Deputies Committee meeting minutes",
+      "Measured page count"
+    ],
+    "pageCount": 11,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC/DC 208 - October 05, 1990 - NSC/DC Meeting on Pakistan via SVTS, Keywords: Pakistan",
+    "subjectLine": "NSC/DC 208 - October 05, 1990 - NSC/DC Meeting on Pakistan via SVTS, Keywords: Pakistan",
+    "dateLine": "October 5, 1990",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files, 90017-001, NAID 470761207. Catalog URL: https://catalog.archives.gov/id/470761207. Series URL: https://catalog.archives.gov/id/312294079. Digital object: 41-bpr-nsc-hfiles-dc_mtgs-208-90017-001.pdf, object ID 483295920, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-208-90017-001.pdf. Page count: 11 (measured from available PDF). FOIA tracking: 2005-1002-F, 2008-1289-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90017. Access restriction: Restricted - Possibly."
+  },
+  {
     "id": "470426240-nsc-dc-meeting-october-9-1990-re-pakistan",
     "date": "1990-10-09",
     "sortDate": "1990-10-09",
@@ -1785,6 +2779,124 @@ window.MEMCONS = [
     "subjectLine": "NSC/DC Meeting - October 9, 1990 Re: Pakistan",
     "dateLine": "October 9, 1990",
     "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-029, NAID 470426240. FOIA tracking: 1998-0387-F. Access restriction: Restricted - Possibly."
+  },
+  {
+    "id": "nsc-source-470760963",
+    "date": "1990-10-09",
+    "sortDate": "1990-10-09",
+    "type": "NSC meeting minutes",
+    "title": "NSC0056 - October 09, 1990 - Nuclear Matters, Middle East and Gulf, Proliferation [1]",
+    "sourceTitle": "H-Files - National Security Council (NSC) Meeting Files; 90002-025",
+    "participants": [
+      "National Security Council"
+    ],
+    "countries": [
+      "United States",
+      "Pakistan"
+    ],
+    "chapter": {
+      "number": 2,
+      "name": "Pakistan"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "470760963",
+    "localIdentifier": "90002-025",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-56_1-90002-025.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470760963",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Council (NSC) Meeting Files",
+      "seriesNaid": "312293887",
+      "seriesUrl": "https://catalog.archives.gov/id/312293887",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-56_1-90002-025.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-nsc_mtgs-56_1-90002-025.pdf",
+      "objectId": "483296450",
+      "containerId": "90002",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Pakistan",
+      "NSC Meeting Files",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Pakistan",
+      "NSC meeting minutes",
+      "Measured page count"
+    ],
+    "pageCount": 42,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC0056 - October 09, 1990 - Nuclear Matters, Middle East and Gulf, Proliferation [1]",
+    "subjectLine": "NSC0056 - October 09, 1990 - Nuclear Matters, Middle East and Gulf, Proliferation [1]",
+    "dateLine": "October 9, 1990",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC) Meeting Files, 90002-025, NAID 470760963. Catalog URL: https://catalog.archives.gov/id/470760963. Series URL: https://catalog.archives.gov/id/312293887. Digital object: 41-bpr-nsc-hfiles-nsc_mtgs-56_1-90002-025.pdf, object ID 483296450, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-56_1-90002-025.pdf. Page count: 42 (measured from available PDF). FOIA tracking: 2009-0857-F, 2005-1003-F, 2003-0261-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90002. Access restriction: Restricted - Possibly."
+  },
+  {
+    "id": "nsc-source-470760964",
+    "date": "1990-10-09",
+    "sortDate": "1990-10-09",
+    "type": "NSC meeting minutes",
+    "title": "NSC0056 - October 09, 1990 - Nuclear Matters, Middle East and Gulf, Proliferation [2]",
+    "sourceTitle": "H-Files - National Security Council (NSC) Meeting Files; 90002-026",
+    "participants": [
+      "National Security Council"
+    ],
+    "countries": [
+      "United States",
+      "Pakistan"
+    ],
+    "chapter": {
+      "number": 2,
+      "name": "Pakistan"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "470760964",
+    "localIdentifier": "90002-026",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-56_2-90002-026.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470760964",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Council (NSC) Meeting Files",
+      "seriesNaid": "312293887",
+      "seriesUrl": "https://catalog.archives.gov/id/312293887",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-56_2-90002-026.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-nsc_mtgs-56_2-90002-026.pdf",
+      "objectId": "483296451",
+      "containerId": "90002",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Pakistan",
+      "NSC Meeting Files",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Pakistan",
+      "NSC meeting minutes",
+      "Measured page count"
+    ],
+    "pageCount": 42,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC0056 - October 09, 1990 - Nuclear Matters, Middle East and Gulf, Proliferation [2]",
+    "subjectLine": "NSC0056 - October 09, 1990 - Nuclear Matters, Middle East and Gulf, Proliferation [2]",
+    "dateLine": "October 9, 1990",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC) Meeting Files, 90002-026, NAID 470760964. Catalog URL: https://catalog.archives.gov/id/470760964. Series URL: https://catalog.archives.gov/id/312293887. Digital object: 41-bpr-nsc-hfiles-nsc_mtgs-56_2-90002-026.pdf, object ID 483296451, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-56_2-90002-026.pdf. Page count: 42 (measured from available PDF). FOIA tracking: 2005-1003-F, 2009-0857-F, 2003-0261-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90002. Access restriction: Restricted - Possibly."
   },
   {
     "id": "scowcroft-366551673-7-lee-kuan-yew-memcon",
@@ -1894,6 +3006,65 @@ window.MEMCONS = [
     "subjectLine": "Presidential Call to Prime Minister Nawaz of Pakistan on February 2, 1991 (U)",
     "dateLine": "February 2, 1991",
     "sourceNote": "Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 1/30/91-2/22/91, 91112-005, NAID 366551697, source pages 12-15."
+  },
+  {
+    "id": "nsc-source-446396904",
+    "date": "1992-07-10",
+    "sortDate": "1992-07-10",
+    "type": "National Security Directive source file",
+    "title": "NSD-70 - July 10, 1992 - U.S. Nonproliferation Policy",
+    "sourceTitle": "H-Files - National Security Directive (NSD) Files; 90005-020",
+    "participants": [
+      "National Security Council"
+    ],
+    "countries": [
+      "United States",
+      "Pakistan"
+    ],
+    "chapter": {
+      "number": 2,
+      "name": "Pakistan"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "446396904",
+    "localIdentifier": "90005-020",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-70-90005-020.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/446396904",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Directive (NSD) Files",
+      "seriesNaid": "313189290",
+      "seriesUrl": "https://catalog.archives.gov/id/313189290",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-70-90005-020.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-nsd-70-90005-020.pdf",
+      "objectId": "483296555",
+      "containerId": "90005",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Pakistan",
+      "NSD Files",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Pakistan",
+      "National Security Directive source file",
+      "Measured page count"
+    ],
+    "pageCount": 101,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSD-70 - July 10, 1992 - U.S. Nonproliferation Policy",
+    "subjectLine": "NSD-70 - July 10, 1992 - U.S. Nonproliferation Policy",
+    "dateLine": "July 10, 1992",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Directive (NSD) Files, 90005-020, NAID 446396904. Catalog URL: https://catalog.archives.gov/id/446396904. Series URL: https://catalog.archives.gov/id/313189290. Digital object: 41-bpr-nsc-hfiles-nsd-70-90005-020.pdf, object ID 483296555, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-70-90005-020.pdf. Page count: 101 (measured from available PDF). Other finding aid identifier: Pres-Bush. Container: 90005. Access restriction: Restricted - Possibly."
   },
   {
     "id": "bush-library-428082401",
@@ -2111,6 +3282,65 @@ window.MEMCONS = [
     "subjectLine": "President Bush’s Meeting with General Secretary of the Central Committee of the Communist Party Zhao Ziyang of the People’s Republic of China",
     "dateLine": "February 26, 1989",
     "sourceNote": "Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 2/26/89-4/19/89, 91107-002, NAID 366551661, source pages 21-32."
+  },
+  {
+    "id": "nsc-source-470760996",
+    "date": "1989-05-04",
+    "sortDate": "1989-05-04",
+    "type": "Deputies Committee meeting minutes",
+    "title": "NSC/DC 022 - May 04, 1989 - NSC/DC Meeting on South Asia, Keywords: South Asia, India (File located @ LM)",
+    "sourceTitle": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files; 90010-001",
+    "participants": [
+      "Deputies Committee"
+    ],
+    "countries": [
+      "United States",
+      "India"
+    ],
+    "chapter": {
+      "number": 3,
+      "name": "India"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "470760996",
+    "localIdentifier": "90010-001",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-22-90010-001.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470760996",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "seriesNaid": "312294079",
+      "seriesUrl": "https://catalog.archives.gov/id/312294079",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-22-90010-001.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-dc_mtgs-22-90010-001.pdf",
+      "objectId": "483295936",
+      "containerId": "90010",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "India",
+      "NSC/DC Meetings",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "India",
+      "Deputies Committee meeting minutes",
+      "Measured page count"
+    ],
+    "pageCount": 45,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC/DC 022 - May 04, 1989 - NSC/DC Meeting on South Asia, Keywords: South Asia, India (File located @ LM)",
+    "subjectLine": "NSC/DC 022 - May 04, 1989 - NSC/DC Meeting on South Asia, Keywords: South Asia, India (File located @ LM)",
+    "dateLine": "May 4, 1989",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files, 90010-001, NAID 470760996. Catalog URL: https://catalog.archives.gov/id/470760996. Series URL: https://catalog.archives.gov/id/312294079. Digital object: 41-bpr-nsc-hfiles-dc_mtgs-22-90010-001.pdf, object ID 483295936, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-22-90010-001.pdf. Page count: 45 (measured from available PDF). FOIA tracking: 2005-1002-F, 2008-1289-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90010. Access restriction: Restricted - Possibly."
   },
   {
     "id": "bush-library-428080057",
@@ -2343,76 +3573,14 @@ window.MEMCONS = [
     "sourceNote": "Source: George H.W. Bush Presidential Library and Museum, Digital Research Room, \"Memcons and Telcons\" table (https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons), row: Date 10/18/1989; Type Telcon; Participants Gandhi, Rajiv; Country India; Release Status Full; NAID 428080301. National Archives Catalog item: Telephone Conversation with Prime Minister Gandhi of India, October 18, 1989, NAID 428080301. Collection: Records of the National Security Council (George H. W. Bush Administration), NAID 2163580. Series: Presidential Telcon Files, NAID 321498139. File unit: [Memorandum of Telephone Conversations (Telcons) - August 1989-December 1989]: October 1989, NAID 325592637. Digital object: 1989-10-18--Gandhi.pdf, object ID 428080302, URL https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-10-18--Gandhi.pdf. Access restriction: Unrestricted. Deduped local provenance: Brent Scowcroft Papers, Presidential Correspondence Files, NAID 366551688, 91111-003, source pages 86-86."
   },
   {
-    "id": "470426225-nsc-dc-deputies-committee-teleconference-march-26-1990-re-kashmir",
-    "date": "1990-03-26",
-    "sortDate": "1990-03-26",
-    "type": "Telcon",
-    "title": "NSC/DC [Deputies Committee] Teleconference - March 26, 1990 Re: Kashmir",
-    "sourceTitle": "Richard N. Haass' Meeting Files; CF01625-014",
-    "participants": [
-      "Richard N. Haass"
-    ],
-    "countries": [
-      "United States",
-      "India"
-    ],
-    "chapter": {
-      "number": 3,
-      "name": "India"
-    },
-    "releaseStatus": "Restricted - Possibly",
-    "naid": "470426225",
-    "localIdentifier": "CF01625-014",
-    "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-014.pdf",
-    "catalogUrl": "https://catalog.archives.gov/id/470426225",
-    "source": {
-      "name": "Records of the National Security Council (George H. W. Bush Administration)",
-      "url": "https://catalog.archives.gov/id/2163580",
-      "referenceUnit": "George Bush Library",
-      "series": "Richard N. Haass' Meeting Files",
-      "seriesNaid": "2554866",
-      "objectFilename": "41-bpr-nsc-haass_meeting-cf01625-014.pdf",
-      "containerId": "CF01625"
-    },
-    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
-    "frusTopics": [
-      "South Asia",
-      "Meeting Files",
-      "South Asia",
-      "India",
-      "Kashmir",
-      "Deputies Committee"
-    ],
-    "topics": [
-      "South Asia",
-      "India",
-      "Kashmir",
-      "Deputies Committee"
-    ],
-    "pageCount": 0,
-    "fileUnitCount": 1,
-    "foiaNumbers": [
-      "1998-0387-F"
-    ],
-    "otherFindingAids": [
-      "2012-3135-S",
-      "Pres-Bush"
-    ],
-    "notes": "Extracted from National Archives Catalog metadata for the Haass files. PDF is a scanned folder-level release; item-level memcon/telcon boundaries require OCR review.",
-    "documentTitle": "NSC/DC [Deputies Committee] Teleconference - March 26, 1990 Re: Kashmir",
-    "subjectLine": "NSC/DC [Deputies Committee] Teleconference - March 26, 1990 Re: Kashmir",
-    "dateLine": "March 26, 1990",
-    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-014, NAID 470426225. FOIA tracking: 1998-0387-F. Access restriction: Restricted - Possibly."
-  },
-  {
-    "id": "470426226-nsc-dc-deputies-committee-teleconference-april-4-1990-re-kashmir",
+    "id": "nsc-source-470761103",
     "date": "1990-04-04",
     "sortDate": "1990-04-04",
-    "type": "Telcon",
-    "title": "NSC/DC [Deputies Committee] Teleconference - April 4, 1990 Re: Kashmir",
-    "sourceTitle": "Richard N. Haass' Meeting Files; CF01625-015",
+    "type": "Deputies Committee meeting minutes",
+    "title": "NSC/DC 113 - April 04, 1990 - NSC/DC Meeting on Kashmir via SVTS, Keywords: India",
+    "sourceTitle": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files; 90013-026",
     "participants": [
-      "Richard N. Haass"
+      "Deputies Committee"
     ],
     "countries": [
       "United States",
@@ -2423,48 +3591,54 @@ window.MEMCONS = [
       "name": "India"
     },
     "releaseStatus": "Restricted - Possibly",
-    "naid": "470426226",
-    "localIdentifier": "CF01625-015",
-    "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-015.pdf",
-    "catalogUrl": "https://catalog.archives.gov/id/470426226",
+    "naid": "470761103",
+    "localIdentifier": "90013-026",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-113-90013-026.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470761103",
     "source": {
       "name": "Records of the National Security Council (George H. W. Bush Administration)",
       "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
       "referenceUnit": "George Bush Library",
-      "series": "Richard N. Haass' Meeting Files",
-      "seriesNaid": "2554866",
-      "objectFilename": "41-bpr-nsc-haass_meeting-cf01625-015.pdf",
-      "containerId": "CF01625"
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "seriesNaid": "312294079",
+      "seriesUrl": "https://catalog.archives.gov/id/312294079",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-113-90013-026.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-dc_mtgs-113-90013-026.pdf",
+      "objectId": "483295806",
+      "containerId": "90013",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": [
+        {
+          "id": "470426226-nsc-dc-deputies-committee-teleconference-april-4-1990-re-kashmir",
+          "sourceName": "Records of the National Security Council (George H. W. Bush Administration)",
+          "series": "Richard N. Haass' Meeting Files",
+          "naid": "470426226",
+          "localIdentifier": "CF01625-015",
+          "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-015, NAID 470426226. FOIA tracking: 1998-0387-F. Access restriction: Restricted - Possibly."
+        }
+      ]
     },
     "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
     "frusTopics": [
       "South Asia",
-      "Meeting Files",
-      "South Asia",
       "India",
-      "Kashmir",
-      "Deputies Committee"
+      "NSC/DC Meetings",
+      "Measured pages"
     ],
     "topics": [
       "South Asia",
       "India",
-      "Kashmir",
-      "Deputies Committee"
+      "Deputies Committee meeting minutes",
+      "Measured page count"
     ],
-    "pageCount": 0,
+    "pageCount": 41,
     "fileUnitCount": 1,
-    "foiaNumbers": [
-      "1998-0387-F"
-    ],
-    "otherFindingAids": [
-      "2012-3135-S",
-      "Pres-Bush"
-    ],
-    "notes": "Extracted from National Archives Catalog metadata for the Haass files. PDF is a scanned folder-level release; item-level memcon/telcon boundaries require OCR review.",
-    "documentTitle": "NSC/DC [Deputies Committee] Teleconference - April 4, 1990 Re: Kashmir",
-    "subjectLine": "NSC/DC [Deputies Committee] Teleconference - April 4, 1990 Re: Kashmir",
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC/DC 113 - April 04, 1990 - NSC/DC Meeting on Kashmir via SVTS, Keywords: India",
+    "subjectLine": "NSC/DC 113 - April 04, 1990 - NSC/DC Meeting on Kashmir via SVTS, Keywords: India",
     "dateLine": "April 4, 1990",
-    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-015, NAID 470426226. FOIA tracking: 1998-0387-F. Access restriction: Restricted - Possibly."
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files, 90013-026, NAID 470761103. Catalog URL: https://catalog.archives.gov/id/470761103. Series URL: https://catalog.archives.gov/id/312294079. Digital object: 41-bpr-nsc-hfiles-dc_mtgs-113-90013-026.pdf, object ID 483295806, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-113-90013-026.pdf. Page count: 41 (measured from available PDF). FOIA tracking: 2008-1289-F, 2005-1002-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90013. Access restriction: Restricted - Possibly. Deduped local provenance: Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, NAID 470426226, CF01625-015."
   },
   {
     "id": "bush-library-428081443",
@@ -2697,65 +3871,190 @@ window.MEMCONS = [
     "sourceNote": "Source: George H.W. Bush Presidential Library and Museum, Digital Research Room, \"Memcons and Telcons\" table (https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons), row: Date 1/31/1992; Type Memcon; Participants Rao, Narashima; Country India; Release Status Partial; NAID 428082131. National Archives Catalog item: Meeting with Prime Minister Rao of India, January 31, 1992, NAID 428082131. Collection: Records of the National Security Council (George H. W. Bush Administration), NAID 2163580. Series: Presidential Memcon Files, NAID 321498039. File unit: [Memorandum of Conversations (Memcons)-January 1992-June 1992]: January 1992, NAID 325568085. Digital object: 1992-01-31--Rao.pdf, object ID 428082132, URL https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498039/1992-01-31--Rao.pdf. Access restriction: Restricted - Partly. Deduped local provenance: Brent Scowcroft Papers, Presidential Correspondence Files, NAID 366551680, 91109-005, source pages 50-52."
   },
   {
-    "id": "470426183-nsc-dc-deputies-committee-meeting-april-7-1989-re-south-asia",
-    "date": "1989-04-07",
-    "sortDate": "1989-04-07",
-    "type": "Meeting file",
-    "title": "NSC/DC [Deputies Committee] Meeting - April 7, 1989 re: South Asia",
-    "sourceTitle": "Richard N. Haass' Meeting Files; CF01618-009",
+    "id": "nsc-source-446394933",
+    "date": "1989-02-22",
+    "sortDate": "1989-02-22",
+    "type": "National Security Review source file",
+    "title": "NSR-8 - February 22, 1989 - U.S. Policy Toward South Asia",
+    "sourceTitle": "H-Files - National Security Review (NSR) Files; 90006-011",
     "participants": [
-      "Richard N. Haass"
+      "National Security Council"
     ],
     "countries": [
       "United States",
-      "Regional"
+      "South Asia"
     ],
     "chapter": {
       "number": 4,
       "name": "Regional"
     },
     "releaseStatus": "Restricted - Possibly",
-    "naid": "470426183",
-    "localIdentifier": "CF01618-009",
-    "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01618-009.pdf",
-    "catalogUrl": "https://catalog.archives.gov/id/470426183",
+    "naid": "446394933",
+    "localIdentifier": "90006-011",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSRs_313189297/41-bpr-nsc-hfiles-nsr-8-90006-011.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/446394933",
     "source": {
       "name": "Records of the National Security Council (George H. W. Bush Administration)",
       "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
       "referenceUnit": "George Bush Library",
-      "series": "Richard N. Haass' Meeting Files",
-      "seriesNaid": "2554866",
-      "objectFilename": "41-bpr-nsc-haass_meeting-cf01618-009.pdf",
-      "containerId": "CF01618"
+      "series": "H-Files - National Security Review (NSR) Files",
+      "seriesNaid": "313189297",
+      "seriesUrl": "https://catalog.archives.gov/id/313189297",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSRs_313189297/41-bpr-nsc-hfiles-nsr-8-90006-011.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-nsr-8-90006-011.pdf",
+      "objectId": "483296636",
+      "containerId": "90006",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
     },
     "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
     "frusTopics": [
       "South Asia",
-      "Meeting Files",
-      "South Asia",
       "Regional",
-      "Deputies Committee"
+      "NSR Files",
+      "Measured pages"
     ],
     "topics": [
       "South Asia",
       "Regional",
+      "National Security Review source file",
+      "Measured page count"
+    ],
+    "pageCount": 95,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSR-8 - February 22, 1989 - U.S. Policy Toward South Asia",
+    "subjectLine": "NSR-8 - February 22, 1989 - U.S. Policy Toward South Asia",
+    "dateLine": "February 22, 1989",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Review (NSR) Files, 90006-011, NAID 446394933. Catalog URL: https://catalog.archives.gov/id/446394933. Series URL: https://catalog.archives.gov/id/313189297. Digital object: 41-bpr-nsc-hfiles-nsr-8-90006-011.pdf, object ID 483296636, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSRs_313189297/41-bpr-nsc-hfiles-nsr-8-90006-011.pdf. Page count: 95 (measured from available PDF). Other finding aid identifier: Pres-Bush. Container: 90006. Access restriction: Restricted - Possibly."
+  },
+  {
+    "id": "nsc-source-470760991",
+    "date": "1989-04-07",
+    "sortDate": "1989-04-07",
+    "type": "Deputies Committee meeting minutes",
+    "title": "NSC/DC 017 - April 07, 1989 - NSC/DC Meeting on South Asia, Keywords: South Asia",
+    "sourceTitle": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files; 90009-017",
+    "participants": [
       "Deputies Committee"
     ],
-    "pageCount": 0,
+    "countries": [
+      "United States",
+      "South Asia"
+    ],
+    "chapter": {
+      "number": 4,
+      "name": "Regional"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "470760991",
+    "localIdentifier": "90009-017",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-17-90009-017.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/470760991",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "seriesNaid": "312294079",
+      "seriesUrl": "https://catalog.archives.gov/id/312294079",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-17-90009-017.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-dc_mtgs-17-90009-017.pdf",
+      "objectId": "483295871",
+      "containerId": "90009",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": [
+        {
+          "id": "470426183-nsc-dc-deputies-committee-meeting-april-7-1989-re-south-asia",
+          "sourceName": "Records of the National Security Council (George H. W. Bush Administration)",
+          "series": "Richard N. Haass' Meeting Files",
+          "naid": "470426183",
+          "localIdentifier": "CF01618-009",
+          "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01618-009, NAID 470426183. FOIA tracking: 2012-2230-F. Access restriction: Restricted - Possibly."
+        }
+      ]
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Regional",
+      "NSC/DC Meetings",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Regional",
+      "Deputies Committee meeting minutes",
+      "Measured page count"
+    ],
+    "pageCount": 102,
     "fileUnitCount": 1,
-    "foiaNumbers": [
-      "2012-2230-F"
-    ],
-    "otherFindingAids": [
-      "2012-3135-S",
-      "2012-3135-S",
-      "Pres-Bush"
-    ],
-    "notes": "Extracted from National Archives Catalog metadata for the Haass files. PDF is a scanned folder-level release; item-level memcon/telcon boundaries require OCR review.",
-    "documentTitle": "NSC/DC [Deputies Committee] Meeting - April 7, 1989 re: South Asia",
-    "subjectLine": "NSC/DC [Deputies Committee] Meeting - April 7, 1989 re: South Asia",
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSC/DC 017 - April 07, 1989 - NSC/DC Meeting on South Asia, Keywords: South Asia",
+    "subjectLine": "NSC/DC 017 - April 07, 1989 - NSC/DC Meeting on South Asia, Keywords: South Asia",
     "dateLine": "April 7, 1989",
-    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01618-009, NAID 470426183. FOIA tracking: 2012-2230-F. Access restriction: Restricted - Possibly."
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files, 90009-017, NAID 470760991. Catalog URL: https://catalog.archives.gov/id/470760991. Series URL: https://catalog.archives.gov/id/312294079. Digital object: 41-bpr-nsc-hfiles-dc_mtgs-17-90009-017.pdf, object ID 483295871, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-17-90009-017.pdf. Page count: 102 (measured from available PDF). FOIA tracking: 2005-1002-F, 2008-1289-F. Other finding aid identifier: Pres-Bush, Pres-Bush. Container: 90009. Access restriction: Restricted - Possibly. Deduped local provenance: Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, NAID 470426183, CF01618-009."
+  },
+  {
+    "id": "nsc-source-446396836",
+    "date": "1989-08-29",
+    "sortDate": "1989-08-29",
+    "type": "National Security Directive source file",
+    "title": "NSD-20 - August 29, 1989 - U.S. Policy toward South Asia",
+    "sourceTitle": "H-Files - National Security Directive (NSD) Files; 90003-027",
+    "participants": [
+      "National Security Council"
+    ],
+    "countries": [
+      "United States",
+      "South Asia"
+    ],
+    "chapter": {
+      "number": 4,
+      "name": "Regional"
+    },
+    "releaseStatus": "Restricted - Possibly",
+    "naid": "446396836",
+    "localIdentifier": "90003-027",
+    "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-20-90003-027.pdf",
+    "catalogUrl": "https://catalog.archives.gov/id/446396836",
+    "source": {
+      "name": "Records of the National Security Council (George H. W. Bush Administration)",
+      "url": "https://catalog.archives.gov/id/2163580",
+      "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+      "referenceUnit": "George Bush Library",
+      "series": "H-Files - National Security Directive (NSD) Files",
+      "seriesNaid": "313189290",
+      "seriesUrl": "https://catalog.archives.gov/id/313189290",
+      "objectUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-20-90003-027.pdf",
+      "objectFilename": "41-bpr-nsc-hfiles-nsd-20-90003-027.pdf",
+      "objectId": "483296483",
+      "containerId": "90003",
+      "pageCountBasis": "measured from available PDF",
+      "duplicateSources": []
+    },
+    "frusVolume": "Foreign Relations of the United States, 1989-1992, South Asia",
+    "frusTopics": [
+      "South Asia",
+      "Regional",
+      "NSD Files",
+      "Measured pages"
+    ],
+    "topics": [
+      "South Asia",
+      "Regional",
+      "National Security Directive source file",
+      "Measured page count"
+    ],
+    "pageCount": 45,
+    "fileUnitCount": 1,
+    "notes": "Listed from Catalog metadata with page count measured from the available online PDF.",
+    "documentTitle": "NSD-20 - August 29, 1989 - U.S. Policy toward South Asia",
+    "subjectLine": "NSD-20 - August 29, 1989 - U.S. Policy toward South Asia",
+    "dateLine": "August 29, 1989",
+    "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), H-Files - National Security Directive (NSD) Files, 90003-027, NAID 446396836. Catalog URL: https://catalog.archives.gov/id/446396836. Series URL: https://catalog.archives.gov/id/313189290. Digital object: 41-bpr-nsc-hfiles-nsd-20-90003-027.pdf, object ID 483296483, URL https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-20-90003-027.pdf. Page count: 45 (measured from available PDF). Other finding aid identifier: Pres-Bush. Container: 90003. Access restriction: Restricted - Possibly."
   },
   {
     "id": "scowcroft-366551664-118-hosni-mubarak-memcon",

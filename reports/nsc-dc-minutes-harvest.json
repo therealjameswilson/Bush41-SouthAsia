@@ -1,0 +1,841 @@
+{
+  "generatedAt": "2026-05-18T15:31:35.778Z",
+  "sourceSeries": [
+    {
+      "naid": "312293887",
+      "title": "H-Files - National Security Council (NSC) Meeting Files",
+      "shortName": "NSC Meeting Files",
+      "type": "NSC meeting minutes",
+      "estimatedPages": 14,
+      "catalogUrl": "https://catalog.archives.gov/id/312293887"
+    },
+    {
+      "naid": "312294079",
+      "title": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "shortName": "NSC/DC Meetings",
+      "type": "Deputies Committee meeting minutes",
+      "estimatedPages": 12,
+      "catalogUrl": "https://catalog.archives.gov/id/312294079"
+    },
+    {
+      "naid": "312294094",
+      "title": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Follow-Up Files",
+      "shortName": "NSC/DC Meetings Follow-Up",
+      "type": "Deputies Committee follow-up file",
+      "estimatedPages": 8,
+      "catalogUrl": "https://catalog.archives.gov/id/312294094"
+    },
+    {
+      "naid": "313189297",
+      "title": "H-Files - National Security Review (NSR) Files",
+      "shortName": "NSR Files",
+      "type": "National Security Review source file",
+      "estimatedPages": 8,
+      "catalogUrl": "https://catalog.archives.gov/id/313189297"
+    },
+    {
+      "naid": "313189290",
+      "title": "H-Files - National Security Directive (NSD) Files",
+      "shortName": "NSD Files",
+      "type": "National Security Directive source file",
+      "estimatedPages": 6,
+      "catalogUrl": "https://catalog.archives.gov/id/313189290"
+    },
+    {
+      "naid": "348937136",
+      "title": "Institutional Files - Transition Files",
+      "shortName": "Institutional Files Transition",
+      "type": "Transition background source file",
+      "estimatedPages": 25,
+      "catalogUrl": "https://catalog.archives.gov/id/348937136"
+    }
+  ],
+  "searchTerms": [
+    "Afghanistan",
+    "Afghan",
+    "Pakistan",
+    "Pakistani",
+    "India",
+    "Indian",
+    "Kashmir",
+    "South Asia",
+    "Bangladesh",
+    "Sri Lanka",
+    "Nepal",
+    "Nonproliferation",
+    "Nuclear Matters"
+  ],
+  "searchLog": [
+    {
+      "series": "H-Files - National Security Council (NSC) Meeting Files",
+      "term": "Afghanistan",
+      "hits": 9
+    },
+    {
+      "series": "H-Files - National Security Council (NSC) Meeting Files",
+      "term": "Afghan",
+      "hits": 0
+    },
+    {
+      "series": "H-Files - National Security Council (NSC) Meeting Files",
+      "term": "Pakistan",
+      "hits": 5
+    },
+    {
+      "series": "H-Files - National Security Council (NSC) Meeting Files",
+      "term": "Pakistani",
+      "hits": 3
+    },
+    {
+      "series": "H-Files - National Security Council (NSC) Meeting Files",
+      "term": "India",
+      "hits": 4
+    },
+    {
+      "series": "H-Files - National Security Council (NSC) Meeting Files",
+      "term": "Indian",
+      "hits": 4
+    },
+    {
+      "series": "H-Files - National Security Council (NSC) Meeting Files",
+      "term": "Kashmir",
+      "hits": 1
+    },
+    {
+      "series": "H-Files - National Security Council (NSC) Meeting Files",
+      "term": "South Asia",
+      "hits": 1
+    },
+    {
+      "series": "H-Files - National Security Council (NSC) Meeting Files",
+      "term": "Bangladesh",
+      "hits": 0
+    },
+    {
+      "series": "H-Files - National Security Council (NSC) Meeting Files",
+      "term": "Sri Lanka",
+      "hits": 0
+    },
+    {
+      "series": "H-Files - National Security Council (NSC) Meeting Files",
+      "term": "Nepal",
+      "hits": 0
+    },
+    {
+      "series": "H-Files - National Security Council (NSC) Meeting Files",
+      "term": "Nonproliferation",
+      "hits": 2
+    },
+    {
+      "series": "H-Files - National Security Council (NSC) Meeting Files",
+      "term": "Nuclear Matters",
+      "hits": 8
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "term": "Afghanistan",
+      "hits": 20
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "term": "Afghan",
+      "hits": 8
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "term": "Pakistan",
+      "hits": 20
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "term": "Pakistani",
+      "hits": 18
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "term": "India",
+      "hits": 20
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "term": "Indian",
+      "hits": 20
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "term": "Kashmir",
+      "hits": 5
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "term": "South Asia",
+      "hits": 20
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "term": "Bangladesh",
+      "hits": 6
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "term": "Sri Lanka",
+      "hits": 6
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "term": "Nepal",
+      "hits": 3
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "term": "Nonproliferation",
+      "hits": 20
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files",
+      "term": "Nuclear Matters",
+      "hits": 20
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Follow-Up Files",
+      "term": "Afghanistan",
+      "hits": 0
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Follow-Up Files",
+      "term": "Afghan",
+      "hits": 0
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Follow-Up Files",
+      "term": "Pakistan",
+      "hits": 0
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Follow-Up Files",
+      "term": "Pakistani",
+      "hits": 0
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Follow-Up Files",
+      "term": "India",
+      "hits": 1
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Follow-Up Files",
+      "term": "Indian",
+      "hits": 1
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Follow-Up Files",
+      "term": "Kashmir",
+      "hits": 0
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Follow-Up Files",
+      "term": "South Asia",
+      "hits": 1
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Follow-Up Files",
+      "term": "Bangladesh",
+      "hits": 0
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Follow-Up Files",
+      "term": "Sri Lanka",
+      "hits": 0
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Follow-Up Files",
+      "term": "Nepal",
+      "hits": 0
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Follow-Up Files",
+      "term": "Nonproliferation",
+      "hits": 4
+    },
+    {
+      "series": "H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Follow-Up Files",
+      "term": "Nuclear Matters",
+      "hits": 2
+    },
+    {
+      "series": "H-Files - National Security Review (NSR) Files",
+      "term": "Afghanistan",
+      "hits": 4
+    },
+    {
+      "series": "H-Files - National Security Review (NSR) Files",
+      "term": "Afghan",
+      "hits": 2
+    },
+    {
+      "series": "H-Files - National Security Review (NSR) Files",
+      "term": "Pakistan",
+      "hits": 3
+    },
+    {
+      "series": "H-Files - National Security Review (NSR) Files",
+      "term": "Pakistani",
+      "hits": 1
+    },
+    {
+      "series": "H-Files - National Security Review (NSR) Files",
+      "term": "India",
+      "hits": 2
+    },
+    {
+      "series": "H-Files - National Security Review (NSR) Files",
+      "term": "Indian",
+      "hits": 1
+    },
+    {
+      "series": "H-Files - National Security Review (NSR) Files",
+      "term": "Kashmir",
+      "hits": 0
+    },
+    {
+      "series": "H-Files - National Security Review (NSR) Files",
+      "term": "South Asia",
+      "hits": 8
+    },
+    {
+      "series": "H-Files - National Security Review (NSR) Files",
+      "term": "Bangladesh",
+      "hits": 1
+    },
+    {
+      "series": "H-Files - National Security Review (NSR) Files",
+      "term": "Sri Lanka",
+      "hits": 1
+    },
+    {
+      "series": "H-Files - National Security Review (NSR) Files",
+      "term": "Nepal",
+      "hits": 1
+    },
+    {
+      "series": "H-Files - National Security Review (NSR) Files",
+      "term": "Nonproliferation",
+      "hits": 5
+    },
+    {
+      "series": "H-Files - National Security Review (NSR) Files",
+      "term": "Nuclear Matters",
+      "hits": 8
+    },
+    {
+      "series": "H-Files - National Security Directive (NSD) Files",
+      "term": "Afghanistan",
+      "hits": 6
+    },
+    {
+      "series": "H-Files - National Security Directive (NSD) Files",
+      "term": "Afghan",
+      "hits": 2
+    },
+    {
+      "series": "H-Files - National Security Directive (NSD) Files",
+      "term": "Pakistan",
+      "hits": 3
+    },
+    {
+      "series": "H-Files - National Security Directive (NSD) Files",
+      "term": "Pakistani",
+      "hits": 0
+    },
+    {
+      "series": "H-Files - National Security Directive (NSD) Files",
+      "term": "India",
+      "hits": 4
+    },
+    {
+      "series": "H-Files - National Security Directive (NSD) Files",
+      "term": "Indian",
+      "hits": 3
+    },
+    {
+      "series": "H-Files - National Security Directive (NSD) Files",
+      "term": "Kashmir",
+      "hits": 0
+    },
+    {
+      "series": "H-Files - National Security Directive (NSD) Files",
+      "term": "South Asia",
+      "hits": 6
+    },
+    {
+      "series": "H-Files - National Security Directive (NSD) Files",
+      "term": "Bangladesh",
+      "hits": 0
+    },
+    {
+      "series": "H-Files - National Security Directive (NSD) Files",
+      "term": "Sri Lanka",
+      "hits": 0
+    },
+    {
+      "series": "H-Files - National Security Directive (NSD) Files",
+      "term": "Nepal",
+      "hits": 0
+    },
+    {
+      "series": "H-Files - National Security Directive (NSD) Files",
+      "term": "Nonproliferation",
+      "hits": 4
+    },
+    {
+      "series": "H-Files - National Security Directive (NSD) Files",
+      "term": "Nuclear Matters",
+      "hits": 4
+    },
+    {
+      "series": "Institutional Files - Transition Files",
+      "term": "Afghanistan",
+      "hits": 7
+    },
+    {
+      "series": "Institutional Files - Transition Files",
+      "term": "Afghan",
+      "hits": 1
+    },
+    {
+      "series": "Institutional Files - Transition Files",
+      "term": "Pakistan",
+      "hits": 13
+    },
+    {
+      "series": "Institutional Files - Transition Files",
+      "term": "Pakistani",
+      "hits": 0
+    },
+    {
+      "series": "Institutional Files - Transition Files",
+      "term": "India",
+      "hits": 8
+    },
+    {
+      "series": "Institutional Files - Transition Files",
+      "term": "Indian",
+      "hits": 5
+    },
+    {
+      "series": "Institutional Files - Transition Files",
+      "term": "Kashmir",
+      "hits": 0
+    },
+    {
+      "series": "Institutional Files - Transition Files",
+      "term": "South Asia",
+      "hits": 11
+    },
+    {
+      "series": "Institutional Files - Transition Files",
+      "term": "Bangladesh",
+      "hits": 1
+    },
+    {
+      "series": "Institutional Files - Transition Files",
+      "term": "Sri Lanka",
+      "hits": 0
+    },
+    {
+      "series": "Institutional Files - Transition Files",
+      "term": "Nepal",
+      "hits": 0
+    },
+    {
+      "series": "Institutional Files - Transition Files",
+      "term": "Nonproliferation",
+      "hits": 5
+    },
+    {
+      "series": "Institutional Files - Transition Files",
+      "term": "Nuclear Matters",
+      "hits": 20
+    }
+  ],
+  "selectedRecords": 29,
+  "measuredRecords": 29,
+  "estimatedRecords": 0,
+  "dedupedRecords": 8,
+  "dedupeLog": [
+    {
+      "naid": "470760885",
+      "title": "NSC0001 - February 10, 1989 - Afghanistan",
+      "replaced": [
+        {
+          "id": "470426212-nsc-meeting-february-10-1989-re-afghanistan",
+          "sourceName": "Records of the National Security Council (George H. W. Bush Administration)",
+          "series": "Richard N. Haass' Meeting Files",
+          "naid": "470426212",
+          "localIdentifier": "CF01625-001",
+          "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-001, NAID 470426212. FOIA tracking: 2008-0431-F, 2005-0052-F. Access restriction: Restricted - Possibly."
+        }
+      ]
+    },
+    {
+      "naid": "470761354",
+      "title": "NSC/DC 331 - January 03, 1992 - NSC/DC Meeting re: Afghanistan, Keywords: Afghanistan",
+      "replaced": [
+        {
+          "id": "470426179-dc-deputies-committee-meeting-january-3-1992-re-afghanistan",
+          "sourceName": "Records of the National Security Council (George H. W. Bush Administration)",
+          "series": "Richard N. Haass' Meeting Files",
+          "naid": "470426179",
+          "localIdentifier": "CF01618-005",
+          "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01618-005, NAID 470426179. FOIA tracking: 2008-0431-F, 2005-0052-F. Access restriction: Restricted - Possibly."
+        }
+      ]
+    },
+    {
+      "naid": "470761206",
+      "title": "NSC/DC 207 - October 05, 1990 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan",
+      "replaced": [
+        {
+          "id": "470426239-nsc-dc-deputies-committee-meeting-october-5-1990-re-afghanistan",
+          "sourceName": "Records of the National Security Council (George H. W. Bush Administration)",
+          "series": "Richard N. Haass' Meeting Files",
+          "naid": "470426239",
+          "localIdentifier": "CF01625-028",
+          "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-028, NAID 470426239. FOIA tracking: 2008-0431-F, 2008-0430-F. Access restriction: Restricted - Possibly."
+        }
+      ]
+    },
+    {
+      "naid": "470761204",
+      "title": "NSC/DC 205 - October 02, 1990 - NSC/DC Meeting on Pakistan Nuclear Program via SVTS, Keywords: Pakistan, Nuclear Matters",
+      "replaced": [
+        {
+          "id": "470426237-nsc-dc-deputies-committee-meeting-october-2-1990-re-pakistan",
+          "sourceName": "Records of the National Security Council (George H. W. Bush Administration)",
+          "series": "Richard N. Haass' Meeting Files",
+          "naid": "470426237",
+          "localIdentifier": "CF01625-026",
+          "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-026, NAID 470426237. FOIA tracking: 1998-0387-F. Access restriction: Restricted - Possibly."
+        }
+      ]
+    },
+    {
+      "naid": "470760991",
+      "title": "NSC/DC 017 - April 07, 1989 - NSC/DC Meeting on South Asia, Keywords: South Asia",
+      "replaced": [
+        {
+          "id": "470426183-nsc-dc-deputies-committee-meeting-april-7-1989-re-south-asia",
+          "sourceName": "Records of the National Security Council (George H. W. Bush Administration)",
+          "series": "Richard N. Haass' Meeting Files",
+          "naid": "470426183",
+          "localIdentifier": "CF01618-009",
+          "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01618-009, NAID 470426183. FOIA tracking: 2012-2230-F. Access restriction: Restricted - Possibly."
+        }
+      ]
+    },
+    {
+      "naid": "470761146",
+      "title": "NSC/DC 154 - July 09, 1990 - NSC/DC Meeting on Pakistan Nuclear Program, Keywords: Pakistan, Nuclear Matters",
+      "replaced": [
+        {
+          "id": "470426230-nsc-dc-deputies-committee-meeting-july-9-1990-re-pakistan",
+          "sourceName": "Records of the National Security Council (George H. W. Bush Administration)",
+          "series": "Richard N. Haass' Meeting Files",
+          "naid": "470426230",
+          "localIdentifier": "CF01625-019",
+          "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-019, NAID 470426230. FOIA tracking: 1998-0387-F. Access restriction: Restricted - Possibly."
+        }
+      ]
+    },
+    {
+      "naid": "470761101",
+      "title": "NSC/DC 112 - March 26, 1990 - NSC/DC Meeting on Kashmir, Keywords: Pakistan",
+      "replaced": [
+        {
+          "id": "470426225-nsc-dc-deputies-committee-teleconference-march-26-1990-re-kashmir",
+          "sourceName": "Records of the National Security Council (George H. W. Bush Administration)",
+          "series": "Richard N. Haass' Meeting Files",
+          "naid": "470426225",
+          "localIdentifier": "CF01625-014",
+          "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-014, NAID 470426225. FOIA tracking: 1998-0387-F. Access restriction: Restricted - Possibly."
+        }
+      ]
+    },
+    {
+      "naid": "470761103",
+      "title": "NSC/DC 113 - April 04, 1990 - NSC/DC Meeting on Kashmir via SVTS, Keywords: India",
+      "replaced": [
+        {
+          "id": "470426226-nsc-dc-deputies-committee-teleconference-april-4-1990-re-kashmir",
+          "sourceName": "Records of the National Security Council (George H. W. Bush Administration)",
+          "series": "Richard N. Haass' Meeting Files",
+          "naid": "470426226",
+          "localIdentifier": "CF01625-015",
+          "sourceNote": "Source: National Archives Catalog, Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, CF01625-015, NAID 470426226. FOIA tracking: 1998-0387-F. Access restriction: Restricted - Possibly."
+        }
+      ]
+    }
+  ],
+  "records": [
+    {
+      "naid": "470760885",
+      "title": "NSC0001 - February 10, 1989 - Afghanistan",
+      "series": "NSC Meeting Files",
+      "date": "1989-02-10",
+      "pageCount": 20,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-1-90000-001.pdf"
+    },
+    {
+      "naid": "470760888",
+      "title": "NSC0004 - March 14, 1989 - Panama, Nicaragua, Afghanistan (File located @ LM)",
+      "series": "NSC Meeting Files",
+      "date": "1989-03-14",
+      "pageCount": 1,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-4-90000-004.pdf"
+    },
+    {
+      "naid": "470760964",
+      "title": "NSC0056 - October 09, 1990 - Nuclear Matters, Middle East and Gulf, Proliferation [2]",
+      "series": "NSC Meeting Files",
+      "date": "1990-10-09",
+      "pageCount": 42,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-56_2-90002-026.pdf"
+    },
+    {
+      "naid": "470760963",
+      "title": "NSC0056 - October 09, 1990 - Nuclear Matters, Middle East and Gulf, Proliferation [1]",
+      "series": "NSC Meeting Files",
+      "date": "1990-10-09",
+      "pageCount": 42,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-56_1-90002-025.pdf"
+    },
+    {
+      "naid": "470761354",
+      "title": "NSC/DC 331 - January 03, 1992 - NSC/DC Meeting re: Afghanistan, Keywords: Afghanistan",
+      "series": "NSC/DC Meetings",
+      "date": "1992-01-03",
+      "pageCount": 58,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-331-90021-019.pdf"
+    },
+    {
+      "naid": "470761206",
+      "title": "NSC/DC 207 - October 05, 1990 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan",
+      "series": "NSC/DC Meetings",
+      "date": "1990-10-05",
+      "pageCount": 26,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-207-90016-040.pdf"
+    },
+    {
+      "naid": "470760975",
+      "title": "NSC/DC 001 - February 08, 1989 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan",
+      "series": "NSC/DC Meetings",
+      "date": "1989-02-08",
+      "pageCount": 52,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-1-90009-001.pdf"
+    },
+    {
+      "naid": "470761272",
+      "title": "NSC/DC 260 - March 05, 1991 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan (File located @ LM)",
+      "series": "NSC/DC Meetings",
+      "date": "1991-03-05",
+      "pageCount": 9,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-260-90019-003.pdf"
+    },
+    {
+      "naid": "470761041",
+      "title": "NSC/DC 065A - October 18, 1989 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan (File located @ LM)",
+      "series": "NSC/DC Meetings",
+      "date": "1989-10-18",
+      "pageCount": 8,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-65a-90011-020.pdf"
+    },
+    {
+      "naid": "470761289",
+      "title": "NSC/DC 271 - April 12, 1991 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan (File located @ LM)",
+      "series": "NSC/DC Meetings",
+      "date": "1991-04-12",
+      "pageCount": 7,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-271-90019-020.pdf"
+    },
+    {
+      "naid": "470761301",
+      "title": "NSC/DC 282 - May 17, 1991 - NSC/DC Meeting on Angola and Afghanistan, Keywords: Angola, Afghanistan (File located @ NLMS)",
+      "series": "NSC/DC Meetings",
+      "date": "1991-05-17",
+      "pageCount": 1,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-282-90020-001.pdf"
+    },
+    {
+      "naid": "470760979",
+      "title": "NSC/DC 005 - March 08, 1989 - NSC/DC Meeting on Non-Lethal Finding and Transfer of Funds re: Afghanistan, Keywords: Afghanistan",
+      "series": "NSC/DC Meetings",
+      "date": "1989-03-08",
+      "pageCount": 6,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-5-90009-005.pdf"
+    },
+    {
+      "naid": "470761204",
+      "title": "NSC/DC 205 - October 02, 1990 - NSC/DC Meeting on Pakistan Nuclear Program via SVTS, Keywords: Pakistan, Nuclear Matters",
+      "series": "NSC/DC Meetings",
+      "date": "1990-10-02",
+      "pageCount": 24,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-205-90016-038.pdf"
+    },
+    {
+      "naid": "470760991",
+      "title": "NSC/DC 017 - April 07, 1989 - NSC/DC Meeting on South Asia, Keywords: South Asia",
+      "series": "NSC/DC Meetings",
+      "date": "1989-04-07",
+      "pageCount": 102,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-17-90009-017.pdf"
+    },
+    {
+      "naid": "470761184",
+      "title": "NSC/DC 190 - August 31, 1990 - NSC/DC Meeting on Pakistan Nuclear Program, Keywords: Pakistan, Nuclear Matters",
+      "series": "NSC/DC Meetings",
+      "date": "1990-08-31",
+      "pageCount": 37,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-190-90016-018.pdf"
+    },
+    {
+      "naid": "470761207",
+      "title": "NSC/DC 208 - October 05, 1990 - NSC/DC Meeting on Pakistan via SVTS, Keywords: Pakistan",
+      "series": "NSC/DC Meetings",
+      "date": "1990-10-05",
+      "pageCount": 11,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-208-90017-001.pdf"
+    },
+    {
+      "naid": "470761189",
+      "title": "NSC/DC 193A - September 05, 1990 - NSC/DC Meeting on Pakistan, Keywords: Pakistan, Nuclear Matters",
+      "series": "NSC/DC Meetings",
+      "date": "1990-09-05",
+      "pageCount": 11,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-193a-90016-023.pdf"
+    },
+    {
+      "naid": "470761116",
+      "title": "NSC/DC 124 - May 07, 1990 - NSC/DC Meeting re: Pakistan Stingers, Keywords: Pakistan (File located @ LM)",
+      "series": "NSC/DC Meetings",
+      "date": "1990-05-07",
+      "pageCount": 42,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-124-90014-013.pdf"
+    },
+    {
+      "naid": "470761146",
+      "title": "NSC/DC 154 - July 09, 1990 - NSC/DC Meeting on Pakistan Nuclear Program, Keywords: Pakistan, Nuclear Matters",
+      "series": "NSC/DC Meetings",
+      "date": "1990-07-09",
+      "pageCount": 10,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-154-90015-012.pdf"
+    },
+    {
+      "naid": "470761140",
+      "title": "NSC/DC 147 - June 28, 1990 - NSC/DC Meeting on Pakistan's Nuclear Program, Keywords: Pakistan, Nuclear Matters",
+      "series": "NSC/DC Meetings",
+      "date": "1990-06-28",
+      "pageCount": 24,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-147-90015-005.pdf"
+    },
+    {
+      "naid": "470761101",
+      "title": "NSC/DC 112 - March 26, 1990 - NSC/DC Meeting on Kashmir, Keywords: Pakistan",
+      "series": "NSC/DC Meetings",
+      "date": "1990-03-26",
+      "pageCount": 13,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-112-90013-024.pdf"
+    },
+    {
+      "naid": "470761103",
+      "title": "NSC/DC 113 - April 04, 1990 - NSC/DC Meeting on Kashmir via SVTS, Keywords: India",
+      "series": "NSC/DC Meetings",
+      "date": "1990-04-04",
+      "pageCount": 41,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-113-90013-026.pdf"
+    },
+    {
+      "naid": "470760996",
+      "title": "NSC/DC 022 - May 04, 1989 - NSC/DC Meeting on South Asia, Keywords: South Asia, India (File located @ LM)",
+      "series": "NSC/DC Meetings",
+      "date": "1989-05-04",
+      "pageCount": 45,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-22-90010-001.pdf"
+    },
+    {
+      "naid": "446394923",
+      "title": "NSR-1 - February 07, 1989 - Afghanistan",
+      "series": "NSR Files",
+      "date": "1989-02-07",
+      "pageCount": 30,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSRs_313189297/41-bpr-nsc-hfiles-nsr-1-90006-001.pdf"
+    },
+    {
+      "naid": "446394933",
+      "title": "NSR-8 - February 22, 1989 - U.S. Policy Toward South Asia",
+      "series": "NSR Files",
+      "date": "1989-02-22",
+      "pageCount": 95,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSRs_313189297/41-bpr-nsc-hfiles-nsr-8-90006-011.pdf"
+    },
+    {
+      "naid": "446396813",
+      "title": "NSD-3 - February 13, 1989 - U.S. Policy toward Afghanistan (File located @ LM)",
+      "series": "NSD Files",
+      "date": "1989-02-13",
+      "pageCount": 52,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-3-90003-004.pdf"
+    },
+    {
+      "naid": "446396815",
+      "title": "NSD-5 - March 18, 1989 - Legislation to Authorize the Transfer of Funds to the Agency for International Development (AID) for Humanitarian Assistance to Afghanistan (File located @ LM)",
+      "series": "NSD Files",
+      "date": "1989-03-18",
+      "pageCount": 43,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-5-90003-006.pdf"
+    },
+    {
+      "naid": "446396836",
+      "title": "NSD-20 - August 29, 1989 - U.S. Policy toward South Asia",
+      "series": "NSD Files",
+      "date": "1989-08-29",
+      "pageCount": 45,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-20-90003-027.pdf"
+    },
+    {
+      "naid": "446396904",
+      "title": "NSD-70 - July 10, 1992 - U.S. Nonproliferation Policy",
+      "series": "NSD Files",
+      "date": "1992-07-10",
+      "pageCount": 101,
+      "pageCountBasis": "measured from available PDF",
+      "digitalObject": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-70-90005-020.pdf"
+    }
+  ]
+}

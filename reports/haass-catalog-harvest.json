@@ -1,0 +1,454 @@
+{
+  "generatedAt": "2026-05-18T11:43:57.332Z",
+  "sourceSeries": [
+    {
+      "naid": "2554857",
+      "title": "Richard N. Haass' Chronological Files",
+      "localIdentifier": "GB-NSC-066",
+      "catalogUrl": "https://catalog.archives.gov/id/2554857"
+    },
+    {
+      "naid": "2554866",
+      "title": "Richard N. Haass' Meeting Files",
+      "localIdentifier": "GB-NSC-070",
+      "catalogUrl": "https://catalog.archives.gov/id/2554866"
+    },
+    {
+      "naid": "2554869",
+      "title": "Richard N. Haass' Presidential Meeting Files",
+      "localIdentifier": "GB-NSC-073",
+      "catalogUrl": "https://catalog.archives.gov/id/2554869"
+    }
+  ],
+  "searchTerms": [
+    "Afghanistan",
+    "Afghan",
+    "Mojaddedi",
+    "Pakistan",
+    "Pakistani",
+    "Bhutto",
+    "India",
+    "Indian",
+    "Kashmir",
+    "Gandhi",
+    "Rao",
+    "Singh",
+    "South Asia",
+    "Bangladesh",
+    "Sri Lanka",
+    "Nepal"
+  ],
+  "searchLog": [
+    {
+      "series": "Richard N. Haass' Chronological Files",
+      "term": "Afghanistan",
+      "hits": 20
+    },
+    {
+      "series": "Richard N. Haass' Chronological Files",
+      "term": "Afghan",
+      "hits": 20
+    },
+    {
+      "series": "Richard N. Haass' Chronological Files",
+      "term": "Mojaddedi",
+      "hits": 4
+    },
+    {
+      "series": "Richard N. Haass' Chronological Files",
+      "term": "Pakistan",
+      "hits": 20
+    },
+    {
+      "series": "Richard N. Haass' Chronological Files",
+      "term": "Pakistani",
+      "hits": 20
+    },
+    {
+      "series": "Richard N. Haass' Chronological Files",
+      "term": "Bhutto",
+      "hits": 20
+    },
+    {
+      "series": "Richard N. Haass' Chronological Files",
+      "term": "India",
+      "hits": 20
+    },
+    {
+      "series": "Richard N. Haass' Chronological Files",
+      "term": "Indian",
+      "hits": 20
+    },
+    {
+      "series": "Richard N. Haass' Chronological Files",
+      "term": "Kashmir",
+      "hits": 20
+    },
+    {
+      "series": "Richard N. Haass' Chronological Files",
+      "term": "Gandhi",
+      "hits": 20
+    },
+    {
+      "series": "Richard N. Haass' Chronological Files",
+      "term": "Rao",
+      "hits": 13
+    },
+    {
+      "series": "Richard N. Haass' Chronological Files",
+      "term": "Singh",
+      "hits": 20
+    },
+    {
+      "series": "Richard N. Haass' Chronological Files",
+      "term": "South Asia",
+      "hits": 20
+    },
+    {
+      "series": "Richard N. Haass' Chronological Files",
+      "term": "Bangladesh",
+      "hits": 20
+    },
+    {
+      "series": "Richard N. Haass' Chronological Files",
+      "term": "Sri Lanka",
+      "hits": 20
+    },
+    {
+      "series": "Richard N. Haass' Chronological Files",
+      "term": "Nepal",
+      "hits": 17
+    },
+    {
+      "series": "Richard N. Haass' Meeting Files",
+      "term": "Afghanistan",
+      "hits": 11
+    },
+    {
+      "series": "Richard N. Haass' Meeting Files",
+      "term": "Afghan",
+      "hits": 5
+    },
+    {
+      "series": "Richard N. Haass' Meeting Files",
+      "term": "Mojaddedi",
+      "hits": 0
+    },
+    {
+      "series": "Richard N. Haass' Meeting Files",
+      "term": "Pakistan",
+      "hits": 16
+    },
+    {
+      "series": "Richard N. Haass' Meeting Files",
+      "term": "Pakistani",
+      "hits": 8
+    },
+    {
+      "series": "Richard N. Haass' Meeting Files",
+      "term": "Bhutto",
+      "hits": 1
+    },
+    {
+      "series": "Richard N. Haass' Meeting Files",
+      "term": "India",
+      "hits": 13
+    },
+    {
+      "series": "Richard N. Haass' Meeting Files",
+      "term": "Indian",
+      "hits": 7
+    },
+    {
+      "series": "Richard N. Haass' Meeting Files",
+      "term": "Kashmir",
+      "hits": 5
+    },
+    {
+      "series": "Richard N. Haass' Meeting Files",
+      "term": "Gandhi",
+      "hits": 0
+    },
+    {
+      "series": "Richard N. Haass' Meeting Files",
+      "term": "Rao",
+      "hits": 2
+    },
+    {
+      "series": "Richard N. Haass' Meeting Files",
+      "term": "Singh",
+      "hits": 2
+    },
+    {
+      "series": "Richard N. Haass' Meeting Files",
+      "term": "South Asia",
+      "hits": 10
+    },
+    {
+      "series": "Richard N. Haass' Meeting Files",
+      "term": "Bangladesh",
+      "hits": 4
+    },
+    {
+      "series": "Richard N. Haass' Meeting Files",
+      "term": "Sri Lanka",
+      "hits": 2
+    },
+    {
+      "series": "Richard N. Haass' Meeting Files",
+      "term": "Nepal",
+      "hits": 1
+    },
+    {
+      "series": "Richard N. Haass' Presidential Meeting Files",
+      "term": "Afghanistan",
+      "hits": 7
+    },
+    {
+      "series": "Richard N. Haass' Presidential Meeting Files",
+      "term": "Afghan",
+      "hits": 7
+    },
+    {
+      "series": "Richard N. Haass' Presidential Meeting Files",
+      "term": "Mojaddedi",
+      "hits": 1
+    },
+    {
+      "series": "Richard N. Haass' Presidential Meeting Files",
+      "term": "Pakistan",
+      "hits": 4
+    },
+    {
+      "series": "Richard N. Haass' Presidential Meeting Files",
+      "term": "Pakistani",
+      "hits": 1
+    },
+    {
+      "series": "Richard N. Haass' Presidential Meeting Files",
+      "term": "Bhutto",
+      "hits": 3
+    },
+    {
+      "series": "Richard N. Haass' Presidential Meeting Files",
+      "term": "India",
+      "hits": 6
+    },
+    {
+      "series": "Richard N. Haass' Presidential Meeting Files",
+      "term": "Indian",
+      "hits": 2
+    },
+    {
+      "series": "Richard N. Haass' Presidential Meeting Files",
+      "term": "Kashmir",
+      "hits": 0
+    },
+    {
+      "series": "Richard N. Haass' Presidential Meeting Files",
+      "term": "Gandhi",
+      "hits": 1
+    },
+    {
+      "series": "Richard N. Haass' Presidential Meeting Files",
+      "term": "Rao",
+      "hits": 1
+    },
+    {
+      "series": "Richard N. Haass' Presidential Meeting Files",
+      "term": "Singh",
+      "hits": 0
+    },
+    {
+      "series": "Richard N. Haass' Presidential Meeting Files",
+      "term": "South Asia",
+      "hits": 12
+    },
+    {
+      "series": "Richard N. Haass' Presidential Meeting Files",
+      "term": "Bangladesh",
+      "hits": 1
+    },
+    {
+      "series": "Richard N. Haass' Presidential Meeting Files",
+      "term": "Sri Lanka",
+      "hits": 1
+    },
+    {
+      "series": "Richard N. Haass' Presidential Meeting Files",
+      "term": "Nepal",
+      "hits": 0
+    }
+  ],
+  "extractedFileUnits": 18,
+  "chapters": {
+    "Afghanistan": 7,
+    "Pakistan": 7,
+    "India": 2,
+    "Regional": 2
+  },
+  "extractedRecords": [
+    {
+      "naid": "470426212",
+      "title": "NSC Meeting - February 10, 1989 re: Afghanistan",
+      "type": "Meeting file",
+      "chapter": "Afghanistan",
+      "date": "1989-02-10",
+      "localIdentifier": "CF01625-001",
+      "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-001.pdf"
+    },
+    {
+      "naid": "470426218",
+      "title": "NSC/DC [Deputies Committee] Meeting - October 16, 1989 re: Afghanistan",
+      "type": "Meeting file",
+      "chapter": "Afghanistan",
+      "date": "1989-10-16",
+      "localIdentifier": "CF01625-007",
+      "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-007.pdf"
+    },
+    {
+      "naid": "470426219",
+      "title": "NSC Meeting - October 23, 1989 re: Afghanistan",
+      "type": "Meeting file",
+      "chapter": "Afghanistan",
+      "date": "1989-10-23",
+      "localIdentifier": "CF01625-008",
+      "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-008.pdf"
+    },
+    {
+      "naid": "470426381",
+      "title": "Presidential Visit of President [of Afghanistan Interim Government Sibgahtullah] Mojaddedi - November 27, 1989",
+      "type": "Memcon",
+      "chapter": "Afghanistan",
+      "date": "1989-11-27",
+      "localIdentifier": "CF01404-028",
+      "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/pres_mtg_2554869/41-bpr-nsc-haass_pres_mtg-cf01404-028.pdf"
+    },
+    {
+      "naid": "470426235",
+      "title": "DC [Deputies Committee] Meeting - October 4, 1990 re: Afghanistan",
+      "type": "Meeting file",
+      "chapter": "Afghanistan",
+      "date": "1990-10-04",
+      "localIdentifier": "CF01625-024",
+      "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-024.pdf"
+    },
+    {
+      "naid": "470426239",
+      "title": "NSC/DC [Deputies Committee] Meeting - October 5, 1990 re: Afghanistan",
+      "type": "Meeting file",
+      "chapter": "Afghanistan",
+      "date": "1990-10-05",
+      "localIdentifier": "CF01625-028",
+      "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-028.pdf"
+    },
+    {
+      "naid": "470426179",
+      "title": "DC [Deputies Committee] Meeting - January 3, 1992 re: Afghanistan",
+      "type": "Meeting file",
+      "chapter": "Afghanistan",
+      "date": "1992-01-03",
+      "localIdentifier": "CF01618-005",
+      "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01618-005.pdf"
+    },
+    {
+      "naid": "470426373",
+      "title": "Presidential Visit with [Pakistani] Prime Minister [Benazir] Bhutto - June 6-7, 1989",
+      "type": "Memcon",
+      "chapter": "Pakistan",
+      "date": "1989-06-06",
+      "localIdentifier": "CF01404-020",
+      "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/pres_mtg_2554869/41-bpr-nsc-haass_pres_mtg-cf01404-020.pdf"
+    },
+    {
+      "naid": "470426229",
+      "title": "NSC/DC [Deputies Committee] Meeting - June 30, 1990 Re: Pakistan",
+      "type": "Meeting file",
+      "chapter": "Pakistan",
+      "date": "1990-06-30",
+      "localIdentifier": "CF01625-018",
+      "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-018.pdf"
+    },
+    {
+      "naid": "470426230",
+      "title": "NSC/DC [Deputies Committee] Meeting - July 9, 1990 Re: Pakistan",
+      "type": "Meeting file",
+      "chapter": "Pakistan",
+      "date": "1990-07-09",
+      "localIdentifier": "CF01625-019",
+      "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-019.pdf"
+    },
+    {
+      "naid": "470426231",
+      "title": "NSC/DC Meeting - July 16, 1990 Re: Pakistan Nuclear Program",
+      "type": "Meeting file",
+      "chapter": "Pakistan",
+      "date": "1990-07-16",
+      "localIdentifier": "CF01625-020",
+      "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-020.pdf"
+    },
+    {
+      "naid": "470426237",
+      "title": "NSC/DC [Deputies Committee] Meeting - October 2, 1990 Re: Pakistan",
+      "type": "Meeting file",
+      "chapter": "Pakistan",
+      "date": "1990-10-02",
+      "localIdentifier": "CF01625-026",
+      "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-026.pdf"
+    },
+    {
+      "naid": "470426238",
+      "title": "NSC/DC [Deputies Committee] Meeting - October 4, 1990 Re: Pakistan",
+      "type": "Meeting file",
+      "chapter": "Pakistan",
+      "date": "1990-10-04",
+      "localIdentifier": "CF01625-027",
+      "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-027.pdf"
+    },
+    {
+      "naid": "470426240",
+      "title": "NSC/DC Meeting - October 9, 1990 Re: Pakistan",
+      "type": "Meeting file",
+      "chapter": "Pakistan",
+      "date": "1990-10-09",
+      "localIdentifier": "CF01625-029",
+      "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-029.pdf"
+    },
+    {
+      "naid": "470426225",
+      "title": "NSC/DC [Deputies Committee] Teleconference - March 26, 1990 Re: Kashmir",
+      "type": "Telcon",
+      "chapter": "India",
+      "date": "1990-03-26",
+      "localIdentifier": "CF01625-014",
+      "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-014.pdf"
+    },
+    {
+      "naid": "470426226",
+      "title": "NSC/DC [Deputies Committee] Teleconference - April 4, 1990 Re: Kashmir",
+      "type": "Telcon",
+      "chapter": "India",
+      "date": "1990-04-04",
+      "localIdentifier": "CF01625-015",
+      "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-015.pdf"
+    },
+    {
+      "naid": "470426183",
+      "title": "NSC/DC [Deputies Committee] Meeting - April 7, 1989 re: South Asia",
+      "type": "Meeting file",
+      "chapter": "Regional",
+      "date": "1989-04-07",
+      "localIdentifier": "CF01618-009",
+      "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01618-009.pdf"
+    },
+    {
+      "naid": "470426266",
+      "title": "President's Meeting with Prime Minister Zia of Bangladesh - March 19, 1992",
+      "type": "Memcon",
+      "chapter": "Regional",
+      "date": "1992-03-19",
+      "localIdentifier": "CF01447-024",
+      "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01447-024.pdf"
+    }
+  ]
+}

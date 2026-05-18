@@ -1,0 +1,313 @@
+{
+  "generatedAt": "2026-05-18T11:44:15.914Z",
+  "tableUrl": "https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons",
+  "sourceCollection": {
+    "name": "Records of the National Security Council (George H. W. Bush Administration)",
+    "url": "https://catalog.archives.gov/id/2163580",
+    "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/records-national-security-council-george-h-w-bush-administration",
+    "referenceUnit": "George Bush Library"
+  },
+  "rowsScanned": 1365,
+  "relevantRowCount": 17,
+  "addedOrReplacedRecords": 17,
+  "dedupedRecords": 14,
+  "dedupeLog": [
+    {
+      "naid": "428079777",
+      "title": "Telephone Conversation with Prime Minister Benazir Bhutto of Pakistan, January 23, 1989",
+      "replaced": [
+        {
+          "id": "scowcroft-366551686-14-benazir-bhutto-telcon",
+          "naid": "366551686",
+          "sourceName": "Brent Scowcroft Papers"
+        }
+      ]
+    },
+    {
+      "naid": "428079809",
+      "title": "Telephone Conversation with President Ghulam Ishaq Khan of Pakistan, January 25, 1989",
+      "replaced": [
+        {
+          "id": "scowcroft-366551686-34-ghulam-ishaq-khan-telcon",
+          "naid": "366551686",
+          "sourceName": "Brent Scowcroft Papers"
+        }
+      ]
+    },
+    {
+      "naid": "428079855",
+      "title": "President's Meeting with President Ramaswamy Iyer Venkataraman of India, February 23, 1989",
+      "replaced": [
+        {
+          "id": "scowcroft-366551660-55-r-venkataraman-memcon",
+          "naid": "366551660",
+          "sourceName": "Brent Scowcroft Papers"
+        }
+      ]
+    },
+    {
+      "naid": "428079859",
+      "title": "President's Meeting with Prime Minister Benazir Bhutto of Pakistan, February 24, 1989",
+      "replaced": [
+        {
+          "id": "scowcroft-366551660-79-benazir-bhutto-memcon",
+          "naid": "366551660",
+          "sourceName": "Brent Scowcroft Papers"
+        }
+      ]
+    },
+    {
+      "naid": "428080031",
+      "title": "Plenary Meeting with Prime Minister Bhutto of Pakistan, June 6, 1989",
+      "replaced": [
+        {
+          "id": "scowcroft-366551663-21-benazir-bhutto-memcon",
+          "naid": "366551663",
+          "sourceName": "Brent Scowcroft Papers"
+        },
+        {
+          "id": "470426373-presidential-visit-with-pakistani-prime-minister-benazir-bhutto-june-6-7-1989",
+          "naid": "470426373",
+          "sourceName": "Records of the National Security Council (George H. W. Bush Administration)"
+        }
+      ]
+    },
+    {
+      "naid": "428080061",
+      "title": "TELCON with Prime Minister Bhutto of Pakistan, June 10, 1989",
+      "replaced": [
+        {
+          "id": "scowcroft-366551687-58-benazir-bhutto-telcon",
+          "naid": "366551687",
+          "sourceName": "Brent Scowcroft Papers"
+        }
+      ]
+    },
+    {
+      "naid": "428080113",
+      "title": "Telephone Conversation with Prime Minister Gandhi of India, July 4, 1989",
+      "replaced": [
+        {
+          "id": "scowcroft-366551687-80-rajiv-gandhi-telcon",
+          "naid": "366551687",
+          "sourceName": "Brent Scowcroft Papers"
+        }
+      ]
+    },
+    {
+      "naid": "428080169",
+      "title": "Phone Call to the President from the Pakistani Prime Minister, August 5, 1989",
+      "replaced": [
+        {
+          "id": "scowcroft-366551688-33-benazir-bhutto-telcon",
+          "naid": "366551688",
+          "sourceName": "Brent Scowcroft Papers"
+        }
+      ]
+    },
+    {
+      "naid": "428080301",
+      "title": "Telephone Conversation with Prime Minister Gandhi of India, October 18, 1989",
+      "replaced": [
+        {
+          "id": "scowcroft-366551688-86-rajiv-gandhi-telcon",
+          "naid": "366551688",
+          "sourceName": "Brent Scowcroft Papers"
+        }
+      ]
+    },
+    {
+      "naid": "428081099",
+      "title": "Meeting with President Hussain Muhammad Ershad of Bangladesh, October 1, 1990",
+      "replaced": [
+        {
+          "id": "scowcroft-366551671-92-hussain-muhammad-ershad-memcon",
+          "naid": "366551671",
+          "sourceName": "Brent Scowcroft Papers"
+        }
+      ]
+    },
+    {
+      "naid": "428082103",
+      "title": "Telcon with Prime Minister Rao of India on December 15, 1991",
+      "replaced": [
+        {
+          "id": "scowcroft-366551702-125-p-v-narasimha-rao-telcon",
+          "naid": "366551702",
+          "sourceName": "Brent Scowcroft Papers"
+        }
+      ]
+    },
+    {
+      "naid": "428082145",
+      "title": "Meeting with Prime Minister Khaleda Begum Zia of Bangladesh, March 19, 1992",
+      "replaced": [
+        {
+          "id": "470426266-president-s-meeting-with-prime-minister-zia-of-bangladesh-march-19-1992",
+          "naid": "470426266",
+          "sourceName": "Records of the National Security Council (George H. W. Bush Administration)"
+        }
+      ]
+    },
+    {
+      "naid": "428082131",
+      "title": "Meeting with Prime Minister Rao of India, January 31, 1992",
+      "replaced": [
+        {
+          "id": "scowcroft-366551680-50-p-v-narasimha-rao-memcon",
+          "naid": "366551680",
+          "sourceName": "Brent Scowcroft Papers"
+        }
+      ]
+    },
+    {
+      "naid": "428082401",
+      "title": "Telcon with Prime Minister Nawaz Sharif of Pakistan on December 3, 1992",
+      "replaced": [
+        {
+          "id": "scowcroft-366551706-49-nawaz-sharif-telcon",
+          "naid": "366551706",
+          "sourceName": "Brent Scowcroft Papers"
+        }
+      ]
+    }
+  ],
+  "relevantRows": [
+    {
+      "date": "1/23/1989",
+      "type": "Telcon",
+      "participants": "Bhutto, Benazir",
+      "country": "Pakistan",
+      "status": "Full",
+      "naid": "428079777"
+    },
+    {
+      "date": "1/25/1989",
+      "type": "Telcon",
+      "participants": "Khan, Ghulam Ishaq",
+      "country": "Pakistan",
+      "status": "Full",
+      "naid": "428079809"
+    },
+    {
+      "date": "2/23/1989",
+      "type": "Memcon",
+      "participants": "Venkataraman, Ramaswamy Iyer",
+      "country": "India",
+      "status": "Full",
+      "naid": "428079855"
+    },
+    {
+      "date": "2/24/1989",
+      "type": "Memcon",
+      "participants": "Bhutto, Benazir",
+      "country": "Pakistan",
+      "status": "Full",
+      "naid": "428079859"
+    },
+    {
+      "date": "6/6/1989",
+      "type": "Memcon",
+      "participants": "Bhutto, Benazir",
+      "country": "Pakistan",
+      "status": "Full",
+      "naid": "428080031"
+    },
+    {
+      "date": "6/8/1989",
+      "type": "Telcon",
+      "participants": "Gandhi, Rajiv",
+      "country": "India",
+      "status": "Full",
+      "naid": "428080057"
+    },
+    {
+      "date": "6/10/1989",
+      "type": "Telcon",
+      "participants": "Bhutto, Benazir",
+      "country": "Pakistan",
+      "status": "Full",
+      "naid": "428080061"
+    },
+    {
+      "date": "7/4/1989",
+      "type": "Telcon",
+      "participants": "Gandhi, Rajiv",
+      "country": "India",
+      "status": "Full",
+      "naid": "428080113"
+    },
+    {
+      "date": "8/5/1989",
+      "type": "Telcon",
+      "participants": "Bhutto, Benazir",
+      "country": "Pakistan",
+      "status": "Full",
+      "naid": "428080169"
+    },
+    {
+      "date": "10/18/1989",
+      "type": "Telcon",
+      "participants": "Gandhi, Rajiv",
+      "country": "India",
+      "status": "Full",
+      "naid": "428080301"
+    },
+    {
+      "date": "11/1/1989",
+      "type": "Telcon",
+      "participants": "Bhutto, Benazir",
+      "country": "Pakistan",
+      "status": "Full",
+      "naid": "428080317"
+    },
+    {
+      "date": "10/1/1990",
+      "type": "Memcon",
+      "participants": "Ershad, Hussain Muhammad",
+      "country": "Bangladesh",
+      "status": "Full",
+      "naid": "428081099"
+    },
+    {
+      "date": "2/8/1991",
+      "type": "Telcon",
+      "participants": "Shankar Ray, Siddhartha",
+      "country": "India",
+      "status": "Full",
+      "naid": "428081443"
+    },
+    {
+      "date": "12/15/1991",
+      "type": "Telcon",
+      "participants": "Rao, Narashima",
+      "country": "India",
+      "status": "Full",
+      "naid": "428082103"
+    },
+    {
+      "date": "3/19/1992",
+      "type": "Memcon",
+      "participants": "Zia, Khaleda Begum",
+      "country": "Bangladesh",
+      "status": "Full",
+      "naid": "428082145"
+    },
+    {
+      "date": "1/31/1992",
+      "type": "Memcon",
+      "participants": "Rao, Narashima",
+      "country": "India",
+      "status": "Partial",
+      "naid": "428082131"
+    },
+    {
+      "date": "12/3/1992",
+      "type": "Telcon",
+      "participants": "Sharif, Nawaz",
+      "country": "Pakistan",
+      "status": "Partial",
+      "naid": "428082401"
+    }
+  ]
+}

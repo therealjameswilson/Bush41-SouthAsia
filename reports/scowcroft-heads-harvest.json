@@ -1,0 +1,750 @@
+{
+  "generatedAt": "2026-05-18T11:44:05.326Z",
+  "sourceCollection": {
+    "name": "Brent Scowcroft Papers",
+    "url": "https://catalog.archives.gov/id/4522156",
+    "series": "Presidential Correspondence Files",
+    "seriesNaid": "4545941",
+    "referenceUnit": "George Bush Library"
+  },
+  "sourceFolders": [
+    {
+      "naid": "366551660",
+      "title": "Presidential Meetings--Memorandum of Conversations 1/24/89-2/25/89",
+      "localIdentifier": "91107-001",
+      "type": "Memcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91107-001.pdf",
+      "fileName": "366551660-memcon-91107-001.pdf"
+    },
+    {
+      "naid": "366551661",
+      "title": "Presidential Meetings--Memorandum of Conversations 2/26/89-4/19/89",
+      "localIdentifier": "91107-002",
+      "type": "Memcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91107-002.pdf",
+      "fileName": "366551661-memcon-91107-002.pdf"
+    },
+    {
+      "naid": "366551662",
+      "title": "Presidential Meetings--Memorandum of Conversations 4/19/89-5/31/89",
+      "localIdentifier": "91107-003",
+      "type": "Memcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91107-003.pdf",
+      "fileName": "366551662-memcon-91107-003.pdf"
+    },
+    {
+      "naid": "366551663",
+      "title": "Presidential Meetings--Memorandum of Conversations 6/1/89-7/12/89",
+      "localIdentifier": "91107-004",
+      "type": "Memcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91107-004.pdf",
+      "fileName": "366551663-memcon-91107-004.pdf"
+    },
+    {
+      "naid": "366551664",
+      "title": "Presidential Meetings--Memorandum of Conversations 7/14/89-10/2/89",
+      "localIdentifier": "91107-005",
+      "type": "Memcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91107-005.pdf",
+      "fileName": "366551664-memcon-91107-005.pdf"
+    },
+    {
+      "naid": "366551665",
+      "title": "Presidential Meetings--Memorandum of Conversations 10/3/89-12/16/89",
+      "localIdentifier": "91107-006",
+      "type": "Memcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91107-006.pdf",
+      "fileName": "366551665-memcon-91107-006.pdf"
+    },
+    {
+      "naid": "366551666",
+      "title": "Presidential Meetings--Memorandum of Conversations 1/11/90-2/21/90",
+      "localIdentifier": "91107-007",
+      "type": "Memcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91107-007.pdf",
+      "fileName": "366551666-memcon-91107-007.pdf"
+    },
+    {
+      "naid": "366551667",
+      "title": "Presidential Meetings--Memorandum of Conversations 2/22/90-4/11/90",
+      "localIdentifier": "91107-008",
+      "type": "Memcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91107-008.pdf",
+      "fileName": "366551667-memcon-91107-008.pdf"
+    },
+    {
+      "naid": "366551670",
+      "title": "Presidential Meetings--Memorandum of Conversations 7/5/90-9/24/90",
+      "localIdentifier": "91108-001",
+      "type": "Memcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91108-001.pdf",
+      "fileName": "366551670-memcon-91108-001.pdf"
+    },
+    {
+      "naid": "366551671",
+      "title": "Presidential Meetings--Memorandum of Conversations 9/25/90-10/31/90",
+      "localIdentifier": "91108-002",
+      "type": "Memcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91108-002.pdf",
+      "fileName": "366551671-memcon-91108-002.pdf"
+    },
+    {
+      "naid": "366551672",
+      "title": "Presidential Meetings--Memorandum of Conversations 11/13/90-12/21/90",
+      "localIdentifier": "91108-003",
+      "type": "Memcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91108-003.pdf",
+      "fileName": "366551672-memcon-91108-003.pdf"
+    },
+    {
+      "naid": "366551673",
+      "title": "Presidential Meetings--Memorandum of Conversations 1/14/91-3/8/91",
+      "localIdentifier": "91108-004",
+      "type": "Memcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91108-004.pdf",
+      "fileName": "366551673-memcon-91108-004.pdf"
+    },
+    {
+      "naid": "366551674",
+      "title": "Presidential Meetings--Memorandum of Conversations 3/11/91-4/24/91",
+      "localIdentifier": "91108-005",
+      "type": "Memcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91108-005.pdf",
+      "fileName": "366551674-memcon-91108-005.pdf"
+    },
+    {
+      "naid": "366551675",
+      "title": "Presidential Meetings--Memorandum of Conversations 5/3/91-6/28/91",
+      "localIdentifier": "91108-006",
+      "type": "Memcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91108-006.pdf",
+      "fileName": "366551675-memcon-91108-006.pdf"
+    },
+    {
+      "naid": "366551676",
+      "title": "Presidential Meetings--Memorandum of Conversations 7/11/91-7/22/91",
+      "localIdentifier": "91109-001",
+      "type": "Memcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91109-001.pdf",
+      "fileName": "366551676-memcon-91109-001.pdf"
+    },
+    {
+      "naid": "366551677",
+      "title": "Presidential Meetings--Memorandum of Conversations 7/24/91-9/24/91",
+      "localIdentifier": "91109-002",
+      "type": "Memcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91109-002.pdf",
+      "fileName": "366551677-memcon-91109-002.pdf"
+    },
+    {
+      "naid": "366551680",
+      "title": "Presidential Meetings--Memorandum of Conversations 1/1/92-1/31/92",
+      "localIdentifier": "91109-005",
+      "type": "Memcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91109-005.pdf",
+      "fileName": "366551680-memcon-91109-005.pdf"
+    },
+    {
+      "naid": "366551683",
+      "title": "Presidential Meetings--Memorandum of Conversations 5/1/92-6/17/92",
+      "localIdentifier": "91109-008",
+      "type": "Memcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91109-008.pdf",
+      "fileName": "366551683-memcon-91109-008.pdf"
+    },
+    {
+      "naid": "366551684",
+      "title": "Presidential Meetings--Memorandum of Conversations 7/1/92-7/9/92",
+      "localIdentifier": "91110-001",
+      "type": "Memcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91110-001.pdf",
+      "fileName": "366551684-memcon-91110-001.pdf"
+    },
+    {
+      "naid": "366551685",
+      "title": "Presidential Meetings--Memorandum of Conversations 7/9/92-12/22/92",
+      "localIdentifier": "91110-002",
+      "type": "Memcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91110-002.pdf",
+      "fileName": "366551685-memcon-91110-002.pdf"
+    },
+    {
+      "naid": "366551686",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 1/23/89-5/10/89",
+      "localIdentifier": "91111-001",
+      "type": "Telcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91111-001.pdf",
+      "fileName": "366551686-telcon-91111-001.pdf"
+    },
+    {
+      "naid": "366551687",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 5/10/89-7/27/89",
+      "localIdentifier": "91111-002",
+      "type": "Telcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91111-002.pdf",
+      "fileName": "366551687-telcon-91111-002.pdf"
+    },
+    {
+      "naid": "366551688",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 8/1/89-10/23/89",
+      "localIdentifier": "91111-003",
+      "type": "Telcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91111-003.pdf",
+      "fileName": "366551688-telcon-91111-003.pdf"
+    },
+    {
+      "naid": "366551690",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 1/1/90-3/15/90",
+      "localIdentifier": "91111-005",
+      "type": "Telcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91111-005.pdf",
+      "fileName": "366551690-telcon-91111-005.pdf"
+    },
+    {
+      "naid": "366551691",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 3/15/90-6/22/90",
+      "localIdentifier": "91111-006",
+      "type": "Telcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91111-006.pdf",
+      "fileName": "366551691-telcon-91111-006.pdf"
+    },
+    {
+      "naid": "366551692",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 6/23/90-7/31/90",
+      "localIdentifier": "91111-007",
+      "type": "Telcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91111-007.pdf",
+      "fileName": "366551692-telcon-91111-007.pdf"
+    },
+    {
+      "naid": "366551693",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 8/2/90-8/20/90",
+      "localIdentifier": "91112-001",
+      "type": "Telcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91112-001.pdf",
+      "fileName": "366551693-telcon-91112-001.pdf"
+    },
+    {
+      "naid": "366551694",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 8/22/90-10/5/90",
+      "localIdentifier": "91112-002",
+      "type": "Telcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91112-002.pdf",
+      "fileName": "366551694-telcon-91112-002.pdf"
+    },
+    {
+      "naid": "366551695",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 10/11/90-12/31/90",
+      "localIdentifier": "91112-003",
+      "type": "Telcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91112-003.pdf",
+      "fileName": "366551695-telcon-91112-003.pdf"
+    },
+    {
+      "naid": "366551696",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 1/1/91-1/28/91",
+      "localIdentifier": "91112-004",
+      "type": "Telcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91112-004.pdf",
+      "fileName": "366551696-telcon-91112-004.pdf"
+    },
+    {
+      "naid": "366551697",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 1/30/91-2/22/91",
+      "localIdentifier": "91112-005",
+      "type": "Telcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91112-005.pdf",
+      "fileName": "366551697-telcon-91112-005.pdf"
+    },
+    {
+      "naid": "366551698",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 2/22/91-3/6/91",
+      "localIdentifier": "91112-006",
+      "type": "Telcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91112-006.pdf",
+      "fileName": "366551698-telcon-91112-006.pdf"
+    },
+    {
+      "naid": "366551699",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 3/7/91-4/25/91",
+      "localIdentifier": "91112-007",
+      "type": "Telcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91112-007.pdf",
+      "fileName": "366551699-telcon-91112-007.pdf"
+    },
+    {
+      "naid": "366551700",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 5/3/91-7/21/91",
+      "localIdentifier": "91112-008",
+      "type": "Telcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91112-008.pdf",
+      "fileName": "366551700-telcon-91112-008.pdf"
+    },
+    {
+      "naid": "366551701",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 8/5/91-9/25/91",
+      "localIdentifier": "91113-001",
+      "type": "Telcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91113-001.pdf",
+      "fileName": "366551701-telcon-91113-001.pdf"
+    },
+    {
+      "naid": "366551702",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 9/27/91-12/25/91",
+      "localIdentifier": "91113-002",
+      "type": "Telcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91113-002.pdf",
+      "fileName": "366551702-telcon-91113-002.pdf"
+    },
+    {
+      "naid": "366551703",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 1/2/92-4/9/92",
+      "localIdentifier": "91113-003",
+      "type": "Telcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91113-003.pdf",
+      "fileName": "366551703-telcon-91113-003.pdf"
+    },
+    {
+      "naid": "366551704",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 4/10/92-6/30/92",
+      "localIdentifier": "91113-004",
+      "type": "Telcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91113-004.pdf",
+      "fileName": "366551704-telcon-91113-004.pdf"
+    },
+    {
+      "naid": "366551705",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 7/10/92-11/5/92",
+      "localIdentifier": "91113-005",
+      "type": "Telcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91113-005.pdf",
+      "fileName": "366551705-telcon-91113-005.pdf"
+    },
+    {
+      "naid": "366551706",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 11/5/92-1/2/93",
+      "localIdentifier": "91113-006",
+      "type": "Telcon",
+      "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91113-006.pdf",
+      "fileName": "366551706-telcon-91113-006.pdf"
+    }
+  ],
+  "addedRecords": 25,
+  "folderReports": [
+    {
+      "naid": "366551660",
+      "title": "Presidential Meetings--Memorandum of Conversations 1/24/89-2/25/89",
+      "extractedRecords": [
+        {
+          "id": "scowcroft-366551660-55-r-venkataraman-memcon",
+          "date": "1989-02-23",
+          "type": "Memcon",
+          "title": "President’s Meeting with President Ramaswamy Iyer Venkataraman of India (Z)",
+          "chapter": "India",
+          "pdfUrl": "documents/india/1989-02-23-bush-r-venkataraman-memcon-scowcroft.pdf"
+        },
+        {
+          "id": "scowcroft-366551660-75-turgut-ozal-memcon",
+          "date": "1989-02-24",
+          "type": "Memcon",
+          "title": "President’s Meeting with Prime Minister Turgut Ozal of Turkey (J)",
+          "chapter": "Afghanistan",
+          "pdfUrl": "documents/afghanistan/1989-02-24-bush-turgut-ozal-memcon-scowcroft.pdf"
+        },
+        {
+          "id": "scowcroft-366551660-79-benazir-bhutto-memcon",
+          "date": "1989-02-24",
+          "type": "Memcon",
+          "title": "President’s Meeting with Prime Minister Benazir Bhutto of Pakistan (J)",
+          "chapter": "Pakistan",
+          "pdfUrl": "documents/pakistan/1989-02-24-bush-benazir-bhutto-memcon-scowcroft.pdf"
+        },
+        {
+          "id": "scowcroft-366551660-111-benazir-bhutto-memcon",
+          "date": "1989-02-25",
+          "type": "Memcon",
+          "title": "Welcoming Banquet in Beijing, China",
+          "chapter": "Pakistan",
+          "pdfUrl": "documents/pakistan/1989-02-25-bush-benazir-bhutto-memcon-scowcroft.pdf"
+        }
+      ]
+    },
+    {
+      "naid": "366551661",
+      "title": "Presidential Meetings--Memorandum of Conversations 2/26/89-4/19/89",
+      "extractedRecords": [
+        {
+          "id": "scowcroft-366551661-21-zhao-ziyang-memcon",
+          "date": "1989-02-26",
+          "type": "Memcon",
+          "title": "President Bush’s Meeting with General Secretary of the Central Committee of the Communist Party Zhao Ziyang of the People’s Republic of China",
+          "chapter": "India",
+          "pdfUrl": "documents/india/1989-02-26-bush-zhao-ziyang-memcon-scowcroft.pdf"
+        }
+      ]
+    },
+    {
+      "naid": "366551662",
+      "title": "Presidential Meetings--Memorandum of Conversations 4/19/89-5/31/89",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551663",
+      "title": "Presidential Meetings--Memorandum of Conversations 6/1/89-7/12/89",
+      "extractedRecords": [
+        {
+          "id": "scowcroft-366551663-21-benazir-bhutto-memcon",
+          "date": "1989-06-06",
+          "type": "Memcon",
+          "title": "Plenary Meeting with Prime Minister Bhutto of Pakistan ()",
+          "chapter": "Pakistan",
+          "pdfUrl": "documents/pakistan/1989-06-06-bush-benazir-bhutto-memcon-scowcroft.pdf"
+        }
+      ]
+    },
+    {
+      "naid": "366551664",
+      "title": "Presidential Meetings--Memorandum of Conversations 7/14/89-10/2/89",
+      "extractedRecords": [
+        {
+          "id": "scowcroft-366551664-118-hosni-mubarak-memcon",
+          "date": "1989-10-02",
+          "type": "Memcon",
+          "title": "Meeting with President Mubarak of Egypt (U)",
+          "chapter": "Regional",
+          "pdfUrl": "documents/regional/1989-10-02-bush-hosni-mubarak-memcon-scowcroft.pdf"
+        }
+      ]
+    },
+    {
+      "naid": "366551665",
+      "title": "Presidential Meetings--Memorandum of Conversations 10/3/89-12/16/89",
+      "extractedRecords": [
+        {
+          "id": "scowcroft-366551665-91-margaret-thatcher-memcon",
+          "date": "1989-11-24",
+          "type": "Memcon",
+          "title": "Meeting with Prime Minister Margaret Thatcher of Great Britain (§)",
+          "chapter": "Afghanistan",
+          "pdfUrl": "documents/afghanistan/1989-11-24-bush-margaret-thatcher-memcon-scowcroft.pdf"
+        }
+      ]
+    },
+    {
+      "naid": "366551666",
+      "title": "Presidential Meetings--Memorandum of Conversations 1/11/90-2/21/90",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551667",
+      "title": "Presidential Meetings--Memorandum of Conversations 2/22/90-4/11/90",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551670",
+      "title": "Presidential Meetings--Memorandum of Conversations 7/5/90-9/24/90",
+      "extractedRecords": [
+        {
+          "id": "scowcroft-366551670-130-mikhail-gorbachev-memcon",
+          "date": "1990-09-09",
+          "type": "Memcon",
+          "title": "Meeting with President Mikhail Gorbachev of the USSR (U)",
+          "chapter": "Afghanistan",
+          "pdfUrl": "documents/afghanistan/1990-09-09-bush-mikhail-gorbachev-memcon-scowcroft.pdf"
+        }
+      ]
+    },
+    {
+      "naid": "366551671",
+      "title": "Presidential Meetings--Memorandum of Conversations 9/25/90-10/31/90",
+      "extractedRecords": [
+        {
+          "id": "scowcroft-366551671-92-hussain-muhammad-ershad-memcon",
+          "date": "1990-10-01",
+          "type": "Memcon",
+          "title": "Meeting with President Hussain Muhammad Ershad of Bangladesh (5",
+          "chapter": "Regional",
+          "pdfUrl": "documents/regional/1990-10-01-bush-hussain-muhammad-ershad-memcon-scowcroft.pdf"
+        }
+      ]
+    },
+    {
+      "naid": "366551672",
+      "title": "Presidential Meetings--Memorandum of Conversations 11/13/90-12/21/90",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551673",
+      "title": "Presidential Meetings--Memorandum of Conversations 1/14/91-3/8/91",
+      "extractedRecords": [
+        {
+          "id": "scowcroft-366551673-7-lee-kuan-yew-memcon",
+          "date": "1991-01-21",
+          "type": "Memcon",
+          "title": "Meeting with Lee Kuan Yew, Senior Minister, Singapore (U)",
+          "chapter": "Pakistan",
+          "pdfUrl": "documents/pakistan/1991-01-21-bush-lee-kuan-yew-memcon-scowcroft.pdf"
+        }
+      ]
+    },
+    {
+      "naid": "366551674",
+      "title": "Presidential Meetings--Memorandum of Conversations 3/11/91-4/24/91",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551675",
+      "title": "Presidential Meetings--Memorandum of Conversations 5/3/91-6/28/91",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551676",
+      "title": "Presidential Meetings--Memorandum of Conversations 7/11/91-7/22/91",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551677",
+      "title": "Presidential Meetings--Memorandum of Conversations 7/24/91-9/24/91",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551680",
+      "title": "Presidential Meetings--Memorandum of Conversations 1/1/92-1/31/92",
+      "extractedRecords": [
+        {
+          "id": "scowcroft-366551680-50-p-v-narasimha-rao-memcon",
+          "date": "1992-01-31",
+          "type": "Memcon",
+          "title": "Meeting with Prime Minister Rao of India",
+          "chapter": "India",
+          "pdfUrl": "documents/india/1992-01-31-bush-p-v-narasimha-rao-memcon-scowcroft.pdf"
+        }
+      ]
+    },
+    {
+      "naid": "366551683",
+      "title": "Presidential Meetings--Memorandum of Conversations 5/1/92-6/17/92",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551684",
+      "title": "Presidential Meetings--Memorandum of Conversations 7/1/92-7/9/92",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551685",
+      "title": "Presidential Meetings--Memorandum of Conversations 7/9/92-12/22/92",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551686",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 1/23/89-5/10/89",
+      "extractedRecords": [
+        {
+          "id": "scowcroft-366551686-14-benazir-bhutto-telcon",
+          "date": "1989-01-23",
+          "type": "Telcon",
+          "title": "Telephone Conversation with Prime Minister Benazir Bhutto of Pakistan",
+          "chapter": "Pakistan",
+          "pdfUrl": "documents/pakistan/1989-01-23-bush-benazir-bhutto-telcon-scowcroft.pdf"
+        },
+        {
+          "id": "scowcroft-366551686-34-ghulam-ishaq-khan-telcon",
+          "date": "1989-01-25",
+          "type": "Telcon",
+          "title": "Telephone Conversation with President Ghulam Ishaq Khan of Pakistan",
+          "chapter": "Pakistan",
+          "pdfUrl": "documents/pakistan/1989-01-25-bush-ghulam-ishaq-khan-telcon-scowcroft.pdf"
+        },
+        {
+          "id": "scowcroft-366551686-65-king-fahd-telcon",
+          "date": "1989-04-11",
+          "type": "Telcon",
+          "title": "Telephone Conversation with King Fahd of Saudi Arabia",
+          "chapter": "Afghanistan",
+          "pdfUrl": "documents/afghanistan/1989-04-11-bush-king-fahd-telcon-scowcroft.pdf"
+        }
+      ]
+    },
+    {
+      "naid": "366551687",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 5/10/89-7/27/89",
+      "extractedRecords": [
+        {
+          "id": "scowcroft-366551687-49-helmut-kohl-telcon",
+          "date": "1989-06-07",
+          "type": "Telcon",
+          "title": "Telephone Conversation with West German Chancellor Helmut Kohl",
+          "chapter": "Pakistan",
+          "pdfUrl": "documents/pakistan/1989-06-07-bush-helmut-kohl-telcon-scowcroft.pdf"
+        },
+        {
+          "id": "scowcroft-366551687-51-benazir-bhutto-telcon",
+          "date": "1989-06-07",
+          "type": "Telcon",
+          "title": "Telephone Conversation with Guillermo Endara, President-elect of Panama _ (UV)",
+          "chapter": "Pakistan",
+          "pdfUrl": "documents/pakistan/1989-06-07-bush-benazir-bhutto-telcon-scowcroft.pdf"
+        },
+        {
+          "id": "scowcroft-366551687-56-benazir-bhutto-telcon",
+          "date": "1989-06-09",
+          "type": "Telcon",
+          "title": "Telephone Conversation with President Mohammad Hosni Mubarak of Egypt (4",
+          "chapter": "Pakistan",
+          "pdfUrl": "documents/pakistan/1989-06-09-bush-benazir-bhutto-telcon-scowcroft.pdf"
+        },
+        {
+          "id": "scowcroft-366551687-58-benazir-bhutto-telcon",
+          "date": "1989-06-12",
+          "type": "Telcon",
+          "title": "TELCON with Prime Minister Bhutto of Pakistan",
+          "chapter": "Pakistan",
+          "pdfUrl": "documents/pakistan/1989-06-12-bush-benazir-bhutto-telcon-scowcroft.pdf"
+        },
+        {
+          "id": "scowcroft-366551687-80-rajiv-gandhi-telcon",
+          "date": "1989-07-04",
+          "type": "Telcon",
+          "title": "Telephone Conversation with Prime Minister Gandhi of India",
+          "chapter": "India",
+          "pdfUrl": "documents/india/1989-07-04-bush-rajiv-gandhi-telcon-scowcroft.pdf"
+        }
+      ]
+    },
+    {
+      "naid": "366551688",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 8/1/89-10/23/89",
+      "extractedRecords": [
+        {
+          "id": "scowcroft-366551688-33-benazir-bhutto-telcon",
+          "date": "1989-08-05",
+          "type": "Telcon",
+          "title": "Phone Call to the President from the Pakistani Prime Minister",
+          "chapter": "Pakistan",
+          "pdfUrl": "documents/pakistan/1989-08-05-bush-benazir-bhutto-telcon-scowcroft.pdf"
+        },
+        {
+          "id": "scowcroft-366551688-86-rajiv-gandhi-telcon",
+          "date": "1989-10-18",
+          "type": "Telcon",
+          "title": "Telephone Conversation with Prime Minister Gandhi of India",
+          "chapter": "India",
+          "pdfUrl": "documents/india/1989-10-18-bush-rajiv-gandhi-telcon-scowcroft.pdf"
+        }
+      ]
+    },
+    {
+      "naid": "366551690",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 1/1/90-3/15/90",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551691",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 3/15/90-6/22/90",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551692",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 6/23/90-7/31/90",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551693",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 8/2/90-8/20/90",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551694",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 8/22/90-10/5/90",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551695",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 10/11/90-12/31/90",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551696",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 1/1/91-1/28/91",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551697",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 1/30/91-2/22/91",
+      "extractedRecords": [
+        {
+          "id": "scowcroft-366551697-12-nawaz-sharif-telcon",
+          "date": "1991-02-02",
+          "type": "Telcon",
+          "title": "Presidential Call to Prime Minister Nawaz of Pakistan on February 2, 1991 (U)",
+          "chapter": "Pakistan",
+          "pdfUrl": "documents/pakistan/1991-02-02-bush-nawaz-sharif-telcon-scowcroft.pdf"
+        }
+      ]
+    },
+    {
+      "naid": "366551698",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 2/22/91-3/6/91",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551699",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 3/7/91-4/25/91",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551700",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 5/3/91-7/21/91",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551701",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 8/5/91-9/25/91",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551702",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 9/27/91-12/25/91",
+      "extractedRecords": [
+        {
+          "id": "scowcroft-366551702-125-p-v-narasimha-rao-telcon",
+          "date": "1991-12-15",
+          "type": "Telcon",
+          "title": "Telcon with Prime Minister Rao of India on December 15, 1991",
+          "chapter": "India",
+          "pdfUrl": "documents/india/1991-12-15-bush-p-v-narasimha-rao-telcon-scowcroft.pdf"
+        }
+      ]
+    },
+    {
+      "naid": "366551703",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 1/2/92-4/9/92",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551704",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 4/10/92-6/30/92",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551705",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 7/10/92-11/5/92",
+      "extractedRecords": []
+    },
+    {
+      "naid": "366551706",
+      "title": "Presidential Telephone Calls--Memorandum of Conversations 11/5/92-1/2/93",
+      "extractedRecords": [
+        {
+          "id": "scowcroft-366551706-49-nawaz-sharif-telcon",
+          "date": "1992-12-03",
+          "type": "Telcon",
+          "title": "Telcon with Prime Minister Nawaz Sharif of Pakistan on December 3, 1992.",
+          "chapter": "Pakistan",
+          "pdfUrl": "documents/pakistan/1992-12-03-bush-nawaz-sharif-telcon-scowcroft.pdf"
+        }
+      ]
+    }
+  ]
+}

@@ -3,6 +3,14 @@ const CHAPTER_ORDER = ["Afghanistan", "Pakistan", "India", "Regional"];
 const recordsRoot = document.querySelector("#records-root");
 const totalRecords = document.querySelector("#total-records");
 const totalPages = document.querySelector("#total-pages");
+const searchInput = document.querySelector("#record-search");
+const chapterFilter = document.querySelector("#chapter-filter");
+const typeFilter = document.querySelector("#type-filter");
+const releaseFilter = document.querySelector("#release-filter");
+const recordsSummary = document.querySelector("#records-summary");
+const clearFilters = document.querySelector("#clear-filters");
+
+let allRecords = [];
 
 function chapterId(chapterName) {
   return `chapter-${chapterName.toLowerCase().replaceAll(" ", "-")}`;
@@ -36,6 +44,10 @@ function byChapterThenDate(a, b) {
   );
 }
 
+function uniqueSorted(values) {
+  return [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b));
+}
+
 function setChapterCounts(records) {
   totalRecords.textContent = records.length.toString();
   totalPages.textContent = records.reduce((sum, record) => sum + (record.pageCount || 0), 0).toString();
@@ -55,12 +67,25 @@ function setChapterCounts(records) {
   }
 }
 
+function addOptions(select, values, label) {
+  if (!select) return;
+  const options = [new Option(label, ""), ...values.map((value) => new Option(value, value))];
+  select.replaceChildren(...options);
+}
+
+function populateFilters(records) {
+  addOptions(chapterFilter, CHAPTER_ORDER, "All chapters");
+  addOptions(typeFilter, uniqueSorted(records.map((record) => record.type)), "All document types");
+  addOptions(releaseFilter, uniqueSorted(records.map((record) => record.releaseStatus)), "All release statuses");
+}
+
 function createMeta(record) {
   const meta = document.createElement("div");
   meta.className = "record-meta";
 
   for (const value of [
-    record.countries.filter((country) => country !== "United States").join(", "),
+    record.type,
+    record.countries?.filter((country) => country !== "United States").join(", "),
     record.pageCount ? `${record.pageCount} pages` : "Pages pending",
     record.localIdentifier,
     record.naid?.startsWith("local-") ? "Local PDF" : `NAID ${record.naid}`,
@@ -75,10 +100,32 @@ function createMeta(record) {
   return meta;
 }
 
+function createTopicList(record) {
+  const topics = uniqueSorted([...(record.frusTopics || []), ...(record.topics || [])])
+    .filter((topic) => !["Measured pages", "Measured page count"].includes(topic))
+    .slice(0, 6);
+
+  const list = document.createElement("div");
+  list.className = "record-topics";
+  for (const topic of topics) {
+    const item = document.createElement("span");
+    item.textContent = topic;
+    list.append(item);
+  }
+  return list;
+}
+
 function createSourceNote(record) {
-  const sourceNote = document.createElement("p");
+  const sourceNote = document.createElement("details");
   sourceNote.className = "record-source-note";
-  sourceNote.textContent = record.sourceNote || "Source: Provenance pending.";
+
+  const summary = document.createElement("summary");
+  summary.textContent = "Source note";
+
+  const note = document.createElement("p");
+  note.textContent = record.sourceNote || "Source: Provenance pending.";
+
+  sourceNote.append(summary, note);
   return sourceNote;
 }
 
@@ -111,7 +158,20 @@ function createRecordRow(record) {
   title.href = record.catalogUrl || record.pdfUrl;
   title.rel = "noreferrer";
   title.textContent = record.documentTitle || record.title;
-  body.append(title, createDateLine(record), createSubject(record), createMeta(record), createSourceNote(record));
+
+  const sourceLine = document.createElement("p");
+  sourceLine.className = "record-source-line";
+  sourceLine.textContent = record.source?.series || record.source?.name || "Source series pending";
+
+  body.append(
+    title,
+    createDateLine(record),
+    createSubject(record),
+    sourceLine,
+    createMeta(record),
+    createTopicList(record),
+    createSourceNote(record)
+  );
 
   const links = document.createElement("div");
   links.className = "record-links";
@@ -143,12 +203,68 @@ function createRecordRow(record) {
   return row;
 }
 
+function getSearchText(record) {
+  return [
+    record.title,
+    record.documentTitle,
+    record.subjectLine,
+    record.dateLine,
+    record.type,
+    record.releaseStatus,
+    record.localIdentifier,
+    record.naid,
+    record.sourceTitle,
+    record.sourceNote,
+    record.source?.series,
+    record.source?.name,
+    ...(record.participants || []),
+    ...(record.countries || []),
+    ...(record.frusTopics || []),
+    ...(record.topics || [])
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+}
+
+function filterRecords(records) {
+  const query = searchInput?.value.trim().toLowerCase() || "";
+  const chapter = chapterFilter?.value || "";
+  const type = typeFilter?.value || "";
+  const release = releaseFilter?.value || "";
+
+  return records.filter((record) => {
+    if (chapter && record.chapter.name !== chapter) return false;
+    if (type && record.type !== type) return false;
+    if (release && record.releaseStatus !== release) return false;
+    return !query || getSearchText(record).includes(query);
+  });
+}
+
+function updateSummary(records) {
+  if (!recordsSummary) return;
+  const pages = records.reduce((sum, record) => sum + (record.pageCount || 0), 0);
+  recordsSummary.textContent = `Showing ${records.length} of ${allRecords.length} records / ${pages} pages in view`;
+}
+
 function renderRecords(records) {
   const sorted = [...records].sort(byChapterThenDate);
+  const selectedChapter = chapterFilter?.value || "";
+  const chaptersToRender = selectedChapter ? [selectedChapter] : CHAPTER_ORDER;
   recordsRoot.replaceChildren();
 
-  for (const chapterName of CHAPTER_ORDER) {
+  if (!sorted.length) {
+    const empty = document.createElement("p");
+    empty.className = "empty-chapter";
+    empty.textContent = "No records match the current search or filters.";
+    recordsRoot.append(empty);
+    return;
+  }
+
+  for (const chapterName of chaptersToRender) {
     const chapterRecords = sorted.filter((record) => record.chapter.name === chapterName);
+    if (!chapterRecords.length && !selectedChapter) continue;
+
     const section = document.createElement("section");
     section.className = "record-chapter";
     section.id = chapterId(chapterName);
@@ -174,7 +290,7 @@ function renderRecords(records) {
     } else {
       const empty = document.createElement("p");
       empty.className = "empty-chapter";
-      empty.textContent = "No item-level records have been added to this chapter yet.";
+      empty.textContent = "No records match the current search or filters in this chapter.";
       list.append(empty);
     }
 
@@ -183,28 +299,53 @@ function renderRecords(records) {
   }
 }
 
+function updateRecordsView() {
+  const filtered = filterRecords(allRecords);
+  updateSummary(filtered);
+  renderRecords(filtered);
+}
+
+function enableFilters() {
+  for (const control of [searchInput, chapterFilter, typeFilter, releaseFilter]) {
+    control?.addEventListener("input", updateRecordsView);
+    control?.addEventListener("change", updateRecordsView);
+  }
+
+  clearFilters?.addEventListener("click", () => {
+    if (searchInput) searchInput.value = "";
+    if (chapterFilter) chapterFilter.value = "";
+    if (typeFilter) typeFilter.value = "";
+    if (releaseFilter) releaseFilter.value = "";
+    updateRecordsView();
+    searchInput?.focus();
+  });
+}
+
 function enableChapterCards() {
   for (const card of document.querySelectorAll(".chapter-card")) {
     card.addEventListener("click", (event) => {
       const targetId = card.getAttribute("href");
       if (!targetId?.startsWith("#")) return;
 
-      const target = document.querySelector(targetId);
-      if (!target) return;
-
+      if (chapterFilter) {
+        chapterFilter.value = card.querySelector("h3")?.textContent || "";
+      }
       event.preventDefault();
       history.pushState(null, "", targetId);
-      target.scrollIntoView({ block: "start" });
+      updateRecordsView();
+      document.querySelector(targetId)?.scrollIntoView({ block: "start" });
     });
   }
 }
 
 async function init() {
   try {
-    const records = window.MEMCONS || window.MEMCON_RECORDS || (await loadRecords());
-    setChapterCounts(records);
-    renderRecords(records);
+    allRecords = window.MEMCONS || window.MEMCON_RECORDS || (await loadRecords());
+    setChapterCounts(allRecords);
+    populateFilters(allRecords);
+    enableFilters();
     enableChapterCards();
+    updateRecordsView();
     if (window.location.hash) {
       document.querySelector(window.location.hash)?.scrollIntoView();
     }

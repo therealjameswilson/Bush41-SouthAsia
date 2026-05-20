@@ -763,6 +763,25 @@ footer {
   margin: 8px 0 0;
 }
 
+.record-frus-source-note {
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.94rem;
+  line-height: 1.58;
+}
+
+.record-provenance-label {
+  color: var(--red);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.record-provenance-text {
+  color: var(--muted);
+}
+
 .record-meta span,
 .record-links a {
   display: inline-flex;

@@ -60,6 +60,15 @@ function uniqueSorted(values) {
   return [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b));
 }
 
+function uniqueInOrder(values) {
+  const seen = new Set();
+  return values.filter((value) => {
+    if (!value || seen.has(value)) return false;
+    seen.add(value);
+    return true;
+  });
+}
+
 function setChapterCounts(records) {
   totalRecords.textContent = records.length.toString();
   totalPages.textContent = records.reduce((sum, record) => sum + (record.pageCount || 0), 0).toString();
@@ -163,6 +172,158 @@ function compilerFlags(record) {
   ].filter(Boolean);
 }
 
+function normalizeSeriesName(series = "") {
+  return series
+    .replace(/^H-Files\s+-\s+/i, "H-Files, ")
+    .replace(/National Security Council \(NSC\)\/Deputies Committee \(DC\)/i, "NSC/DC")
+    .replace(/National Security Council \(NSC\) Meeting Files/i, "NSC Meetings Files")
+    .replace(/National Security Review \(NSR\)/i, "NSR")
+    .replace(/National Security Directive \(NSD\)/i, "NSD")
+    .replace(/Intelligence File \(IF\)/i, "Intelligence File")
+    .replace(/\s+Files\s+Files$/i, " Files")
+    .trim();
+}
+
+function cleanFolderTitle(record) {
+  const rawTitle = record.sourceTitle || record.documentTitle || record.title || "";
+  const pieces = rawTitle
+    .split(";")
+    .map((piece) => piece.trim())
+    .filter(Boolean)
+    .filter((piece) => !/\.pdf$/i.test(piece))
+    .filter((piece) => !/^source pages?\b/i.test(piece))
+    .filter((piece) => piece !== record.localIdentifier);
+
+  if (/^H-Files/i.test(rawTitle)) {
+    return record.documentTitle || record.title || pieces[0] || "";
+  }
+  return pieces.join(", ") || record.documentTitle || record.title || "";
+}
+
+function sourcePageRange(record) {
+  const source = record.source || {};
+  if (source.sourcePages) return source.sourcePages;
+
+  const sourceTitleMatch = (record.sourceTitle || "").match(/source pages?\s+([^;]+)/i);
+  if (sourceTitleMatch) return sourceTitleMatch[1].trim();
+
+  const sourceNoteMatch = (record.sourceNote || "").match(/source pages?\s+([0-9,\-\s]+)/i);
+  return sourceNoteMatch ? sourceNoteMatch[1].trim() : "";
+}
+
+function oaId(record) {
+  if (record.localIdentifier) return record.localIdentifier;
+  const noteMatch = (record.sourceNote || "").match(/OA\/ID\s+([A-Z0-9-]+)/i);
+  return noteMatch ? noteMatch[1] : "";
+}
+
+function frusRepository(record) {
+  const sourceText = `${record.source?.name || ""} ${record.source?.series || ""} ${record.sourceNote || ""}`;
+  if (/Brent Scowcroft|Scowcroft/i.test(sourceText)) {
+    return "George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection";
+  }
+  if (/National Security Council|H-Files|NSC/i.test(sourceText)) {
+    return "George H.W. Bush Library, Bush Presidential Records, National Security Council";
+  }
+  return record.source?.referenceUnit || record.source?.name || "Repository not yet identified";
+}
+
+function frusSeriesParts(record) {
+  const source = record.source || {};
+  const sourceText = `${source.name || ""} ${source.series || ""} ${record.sourceTitle || ""} ${record.type || ""}`;
+
+  if (/Brent Scowcroft|Scowcroft/i.test(sourceText)) {
+    const typeText = `${record.type || ""} ${record.title || ""}`;
+    const isTelcon = /telcon|telephone/i.test(typeText);
+    const isMemcon = !isTelcon && /memcon|meeting/i.test(typeText);
+    return uniqueInOrder([
+      "Presidential Correspondence Files",
+      isTelcon ? "Presidential Telcon Files" : "",
+      isMemcon ? "Presidential Memcon Files" : ""
+    ]);
+  }
+
+  return uniqueInOrder([normalizeSeriesName(source.series)]);
+}
+
+function frusLocatorParts(record) {
+  const source = record.source || {};
+  const locator = [];
+  const identifier = oaId(record);
+  const folderTitle = cleanFolderTitle(record);
+  const pages = sourcePageRange(record);
+
+  if (identifier) locator.push(`OA/ID ${identifier}`);
+  if (folderTitle) locator.push(folderTitle);
+  if (pages) locator.push(`source pages ${pages}`);
+  return locator;
+}
+
+function frusReleaseSentence(record) {
+  const status = record.releaseStatus || "Release status not yet recorded";
+  if (/declassified/i.test(status)) return "Declassified.";
+  if (/full/i.test(status)) return "Full release.";
+  if (/partial/i.test(status)) return `Partial release: ${status}.`;
+  if (/restricted|withheld|denied|possibly|excised/i.test(status)) return `Access restriction: ${status}.`;
+  if (/unknown/i.test(status)) return "Release status not determined.";
+  return `${status}.`;
+}
+
+function frusExtentSentence(record) {
+  if (!record.pageCount) return "";
+  const extent = `${record.pageCount} ${record.pageCount === 1 ? "page" : "pages"}`;
+  if (isDeclassificationQueue(record)) return `Approximate extent: ${extent}.`;
+  return `Project PDF extent: ${extent}.`;
+}
+
+function foiaSentence(record) {
+  const foias = uniqueInOrder([...(record.foiaNumbers || []), record.source?.foiaNumber]);
+  return foias.length ? `FOIA: ${foias.join(", ")}.` : "";
+}
+
+function duplicateProvenanceSentence(record) {
+  const duplicates = record.source?.duplicateSources || [];
+  if (!duplicates.length) return "";
+
+  const provenance = duplicates
+    .map((duplicate) =>
+      uniqueInOrder([
+        duplicate.sourceName,
+        duplicate.series,
+        duplicate.localIdentifier ? `OA/ID ${duplicate.localIdentifier}` : "",
+        duplicate.naid ? `NAID ${duplicate.naid}` : ""
+      ]).join(", ")
+    )
+    .filter(Boolean)
+    .join("; ");
+
+  return provenance ? `Deduped related provenance: ${provenance}.` : "";
+}
+
+function generateFrusSourceNote(record) {
+  const source = record.source || {};
+  const sourcePath = uniqueInOrder([
+    frusRepository(record),
+    ...frusSeriesParts(record),
+    ...frusLocatorParts(record)
+  ]).join(", ");
+
+  return [
+    `Source: ${sourcePath || "Provenance pending"}.`,
+    frusReleaseSentence(record),
+    foiaSentence(record),
+    frusExtentSentence(record),
+    record.naid && !record.naid.startsWith("local-") ? `NAID ${record.naid}.` : "",
+    record.catalogUrl && !record.naid?.startsWith("local-") ? `Catalog: ${record.catalogUrl}.` : "",
+    source.objectFilename ? `Digital object: ${source.objectFilename}.` : "",
+    record.pdfUrl ? `Digital copy: ${record.pdfUrl}.` : "",
+    source.seriesUrl ? `Series: ${source.seriesUrl}.` : "",
+    duplicateProvenanceSentence(record)
+  ]
+    .filter(Boolean)
+    .join(" ");
+}
+
 function createMeta(record) {
   const meta = document.createElement("div");
   meta.className = "record-meta";
@@ -206,10 +367,19 @@ function createSourceNote(record) {
   const summary = document.createElement("summary");
   summary.textContent = "Source note";
 
+  const frusNote = document.createElement("p");
+  frusNote.className = "record-frus-source-note";
+  frusNote.textContent = generateFrusSourceNote(record);
+
+  const provenanceLabel = document.createElement("p");
+  provenanceLabel.className = "record-provenance-label";
+  provenanceLabel.textContent = "Full provenance trail";
+
   const note = document.createElement("p");
+  note.className = "record-provenance-text";
   note.textContent = record.sourceNote || "Source: Provenance pending.";
 
-  sourceNote.append(summary, note);
+  sourceNote.append(summary, frusNote, provenanceLabel, note);
   return sourceNote;
 }
 
@@ -317,6 +487,7 @@ function getSearchText(record) {
     record.naid,
     record.sourceTitle,
     record.sourceNote,
+    generateFrusSourceNote(record),
     record.source?.series,
     record.source?.name,
     ...(record.participants || []),

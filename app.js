@@ -7,10 +7,22 @@ const searchInput = document.querySelector("#record-search");
 const chapterFilter = document.querySelector("#chapter-filter");
 const typeFilter = document.querySelector("#type-filter");
 const releaseFilter = document.querySelector("#release-filter");
+const compilerFilter = document.querySelector("#compiler-filter");
 const recordsSummary = document.querySelector("#records-summary");
 const clearFilters = document.querySelector("#clear-filters");
+const compilerRoot = document.querySelector("#compiler-root");
 
 let allRecords = [];
+
+const COMPILER_QUEUE_OPTIONS = [
+  ["", "All compiler queues"],
+  ["declassification", "Declassification ledger"],
+  ["presidential", "Presidential conversations"],
+  ["source-note", "Source note gaps"],
+  ["unpaged", "Page count gaps"],
+  ["no-pdf", "PDF gaps"],
+  ["local", "Project-only records"]
+];
 
 function chapterId(chapterName) {
   return `chapter-${chapterName.toLowerCase().replaceAll(" ", "-")}`;
@@ -77,6 +89,78 @@ function populateFilters(records) {
   addOptions(chapterFilter, CHAPTER_ORDER, "All chapters");
   addOptions(typeFilter, uniqueSorted(records.map((record) => record.type)), "All document types");
   addOptions(releaseFilter, uniqueSorted(records.map((record) => record.releaseStatus)), "All release statuses");
+  if (compilerFilter) {
+    compilerFilter.replaceChildren(
+      ...COMPILER_QUEUE_OPTIONS.map(([value, label]) => new Option(label, value))
+    );
+  }
+}
+
+function assignCompilerNumbers(records) {
+  const chapterCounts = new Map();
+  for (const record of [...records].sort(byChapterThenDate)) {
+    const chapterNumber = record.chapter.number;
+    const chapterCount = (chapterCounts.get(record.chapter.name) || 0) + 1;
+    chapterCounts.set(record.chapter.name, chapterCount);
+    record.compilerNumber = `${chapterNumber}.${String(chapterCount).padStart(3, "0")}`;
+  }
+  return records;
+}
+
+function releaseText(record) {
+  return (record.releaseStatus || "").toLowerCase();
+}
+
+function hasSourceNote(record) {
+  return Boolean(record.sourceNote && record.sourceNote.length > 40);
+}
+
+function needsPageCount(record) {
+  return !record.pageCount;
+}
+
+function needsPdf(record) {
+  return !record.pdfUrl;
+}
+
+function isProjectOnly(record) {
+  return (
+    record.naid?.startsWith("local-") ||
+    /local/i.test(record.source?.name || "") ||
+    (!record.catalogUrl && Boolean(record.pdfUrl))
+  );
+}
+
+function isDeclassificationQueue(record) {
+  return /restricted|withheld|unknown|partial|denied|possibly|excised/.test(releaseText(record));
+}
+
+function isPresidentialConversation(record) {
+  return (
+    (record.participants || []).some((participant) => /George H\.? W\.? Bush|President Bush/i.test(participant)) ||
+    /President Bush|George H\.? W\.? Bush/i.test(`${record.title || ""} ${record.subjectLine || ""}`)
+  );
+}
+
+function matchesCompilerQueue(record, queue) {
+  if (!queue) return true;
+  if (queue === "declassification") return isDeclassificationQueue(record);
+  if (queue === "presidential") return isPresidentialConversation(record);
+  if (queue === "source-note") return !hasSourceNote(record);
+  if (queue === "unpaged") return needsPageCount(record);
+  if (queue === "no-pdf") return needsPdf(record);
+  if (queue === "local") return isProjectOnly(record);
+  return true;
+}
+
+function compilerFlags(record) {
+  return [
+    isDeclassificationQueue(record) ? "Declassification review" : "",
+    !hasSourceNote(record) ? "Source note gap" : "",
+    needsPageCount(record) ? "Page count gap" : "",
+    needsPdf(record) ? "PDF gap" : "",
+    isProjectOnly(record) ? "Project-only provenance" : ""
+  ].filter(Boolean);
 }
 
 function createMeta(record) {
@@ -147,10 +231,18 @@ function createRecordRow(record) {
   const row = document.createElement("article");
   row.className = "record-row";
 
+  const dateStack = document.createElement("div");
+  dateStack.className = "record-date-stack";
+
+  const compilerNumber = document.createElement("span");
+  compilerNumber.className = "record-doc-number";
+  compilerNumber.textContent = `Doc ${record.compilerNumber || "TBD"}`;
+
   const date = document.createElement("time");
   date.className = "record-date";
   date.dateTime = record.date;
   date.textContent = shortDate(record.date);
+  dateStack.append(compilerNumber, date);
 
   const body = document.createElement("div");
   const title = document.createElement("a");
@@ -163,6 +255,14 @@ function createRecordRow(record) {
   sourceLine.className = "record-source-line";
   sourceLine.textContent = record.source?.series || record.source?.name || "Source series pending";
 
+  const flags = document.createElement("div");
+  flags.className = "record-flags";
+  for (const flag of compilerFlags(record)) {
+    const item = document.createElement("span");
+    item.textContent = flag;
+    flags.append(item);
+  }
+
   body.append(
     title,
     createDateLine(record),
@@ -170,6 +270,7 @@ function createRecordRow(record) {
     sourceLine,
     createMeta(record),
     createTopicList(record),
+    flags,
     createSourceNote(record)
   );
 
@@ -199,7 +300,7 @@ function createRecordRow(record) {
     links.append(print);
   }
 
-  row.append(date, body, links);
+  row.append(dateStack, body, links);
   return row;
 }
 
@@ -211,6 +312,7 @@ function getSearchText(record) {
     record.dateLine,
     record.type,
     record.releaseStatus,
+    record.compilerNumber,
     record.localIdentifier,
     record.naid,
     record.sourceTitle,
@@ -232,11 +334,13 @@ function filterRecords(records) {
   const chapter = chapterFilter?.value || "";
   const type = typeFilter?.value || "";
   const release = releaseFilter?.value || "";
+  const compilerQueue = compilerFilter?.value || "";
 
   return records.filter((record) => {
     if (chapter && record.chapter.name !== chapter) return false;
     if (type && record.type !== type) return false;
     if (release && record.releaseStatus !== release) return false;
+    if (!matchesCompilerQueue(record, compilerQueue)) return false;
     return !query || getSearchText(record).includes(query);
   });
 }
@@ -244,7 +348,121 @@ function filterRecords(records) {
 function updateSummary(records) {
   if (!recordsSummary) return;
   const pages = records.reduce((sum, record) => sum + (record.pageCount || 0), 0);
-  recordsSummary.textContent = `Showing ${records.length} of ${allRecords.length} records / ${pages} pages in view`;
+  const queue = compilerFilter?.selectedOptions?.[0]?.textContent || "All compiler queues";
+  recordsSummary.textContent = `Showing ${records.length} of ${allRecords.length} records / ${pages} pages in view / ${queue}`;
+}
+
+function createMetric(label, value, detail) {
+  const card = document.createElement("article");
+  card.className = "compiler-card";
+  const valueNode = document.createElement("strong");
+  valueNode.textContent = value;
+  const labelNode = document.createElement("span");
+  labelNode.textContent = label;
+  const detailNode = document.createElement("p");
+  detailNode.textContent = detail;
+  card.append(valueNode, labelNode, detailNode);
+  return card;
+}
+
+function countBy(records, getter) {
+  const counts = new Map();
+  for (const record of records) {
+    const key = getter(record) || "Unspecified";
+    counts.set(key, (counts.get(key) || 0) + 1);
+  }
+  return [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+}
+
+function queueButton(queue, label, count) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "compiler-queue";
+  button.textContent = `${label} (${count})`;
+  button.addEventListener("click", () => {
+    if (compilerFilter) compilerFilter.value = queue;
+    updateRecordsView();
+    document.querySelector("#records")?.scrollIntoView({ block: "start" });
+  });
+  return button;
+}
+
+function createLedgerList(records) {
+  const list = document.createElement("ol");
+  list.className = "compiler-ledger-list";
+  for (const record of records.slice(0, 8)) {
+    const item = document.createElement("li");
+    item.textContent = `Doc ${record.compilerNumber}: ${record.dateLine || formatDate(record.date)} - ${record.documentTitle || record.title} (${record.releaseStatus}; ${record.pageCount || "?"} pages)`;
+    list.append(item);
+  }
+  if (!records.length) {
+    const item = document.createElement("li");
+    item.textContent = "No records currently require declassification queue attention.";
+    list.append(item);
+  }
+  return list;
+}
+
+function renderCompilerDesk(records) {
+  if (!compilerRoot) return;
+  const pages = records.reduce((sum, record) => sum + (record.pageCount || 0), 0);
+  const sourceReady = records.filter(hasSourceNote).length;
+  const declassification = records.filter(isDeclassificationQueue);
+  const presidential = records.filter(isPresidentialConversation);
+  const sourceGaps = records.filter((record) => !hasSourceNote(record));
+  const pageGaps = records.filter(needsPageCount);
+  const pdfGaps = records.filter(needsPdf);
+  const projectOnly = records.filter(isProjectOnly);
+  const sorted = [...records].sort(byChapterThenDate);
+  const dateSpan = sorted.length
+    ? `${formatDate(sorted[0].date)} to ${formatDate(sorted[sorted.length - 1].date)}`
+    : "No dated records";
+
+  const metrics = document.createElement("div");
+  metrics.className = "compiler-metrics";
+  metrics.append(
+    createMetric("Candidate documents", records.length.toString(), "Numbered for compiler citation by chapter sequence."),
+    createMetric("Document pages", pages.toString(), "Measured or estimated pages visible in the working set."),
+    createMetric("Source notes", `${sourceReady}/${records.length}`, "Records with source provenance ready for review."),
+    createMetric("Date span", dateSpan, "Chronological control uses meeting or document date.")
+  );
+
+  const queues = document.createElement("div");
+  queues.className = "compiler-panel";
+  const queuesTitle = document.createElement("h3");
+  queuesTitle.textContent = "Compiler Queues";
+  const queueList = document.createElement("div");
+  queueList.className = "compiler-queues";
+  queueList.append(
+    queueButton("declassification", "Declassification ledger", declassification.length),
+    queueButton("presidential", "Presidential conversations", presidential.length),
+    queueButton("source-note", "Source note gaps", sourceGaps.length),
+    queueButton("unpaged", "Page count gaps", pageGaps.length),
+    queueButton("no-pdf", "PDF gaps", pdfGaps.length),
+    queueButton("local", "Project-only records", projectOnly.length)
+  );
+  queues.append(queuesTitle, queueList);
+
+  const sourcePanel = document.createElement("div");
+  sourcePanel.className = "compiler-panel";
+  const sourceTitle = document.createElement("h3");
+  sourceTitle.textContent = "Source Mix";
+  const sourceList = document.createElement("ol");
+  sourceList.className = "compiler-ledger-list";
+  for (const [source, count] of countBy(records, (record) => record.source?.series || record.source?.name).slice(0, 6)) {
+    const item = document.createElement("li");
+    item.textContent = `${source}: ${count}`;
+    sourceList.append(item);
+  }
+  sourcePanel.append(sourceTitle, sourceList);
+
+  const ledger = document.createElement("div");
+  ledger.className = "compiler-panel compiler-panel-wide";
+  const ledgerTitle = document.createElement("h3");
+  ledgerTitle.textContent = "Withheld, Partial, and Restricted Ledger";
+  ledger.append(ledgerTitle, createLedgerList(declassification.sort(byChapterThenDate)));
+
+  compilerRoot.replaceChildren(metrics, queues, sourcePanel, ledger);
 }
 
 function renderRecords(records) {
@@ -303,10 +521,11 @@ function updateRecordsView() {
   const filtered = filterRecords(allRecords);
   updateSummary(filtered);
   renderRecords(filtered);
+  renderCompilerDesk(allRecords);
 }
 
 function enableFilters() {
-  for (const control of [searchInput, chapterFilter, typeFilter, releaseFilter]) {
+  for (const control of [searchInput, chapterFilter, typeFilter, releaseFilter, compilerFilter]) {
     control?.addEventListener("input", updateRecordsView);
     control?.addEventListener("change", updateRecordsView);
   }
@@ -316,6 +535,7 @@ function enableFilters() {
     if (chapterFilter) chapterFilter.value = "";
     if (typeFilter) typeFilter.value = "";
     if (releaseFilter) releaseFilter.value = "";
+    if (compilerFilter) compilerFilter.value = "";
     updateRecordsView();
     searchInput?.focus();
   });
@@ -340,7 +560,7 @@ function enableChapterCards() {
 
 async function init() {
   try {
-    allRecords = window.MEMCONS || window.MEMCON_RECORDS || (await loadRecords());
+    allRecords = assignCompilerNumbers(window.MEMCONS || window.MEMCON_RECORDS || (await loadRecords()));
     setChapterCounts(allRecords);
     populateFilters(allRecords);
     enableFilters();

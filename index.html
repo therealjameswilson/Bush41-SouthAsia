@@ -20,6 +20,7 @@
         <a href="#chapters">Chapters</a>
         <a href="#collection">Collection</a>
         <a href="#browse">Browse</a>
+        <a href="#compiler">Compiler</a>
         <a href="#sources">Sources</a>
         <a href="#ingest">Ingest</a>
       </nav>
@@ -218,6 +219,21 @@
         </div>
       </section>
 
+      <section class="section compiler-section" id="compiler" aria-labelledby="compiler-title">
+        <div class="section-heading">
+          <p class="kicker">FRUS Compiler Desk</p>
+          <h2 id="compiler-title">Selection and Declassification Audit</h2>
+        </div>
+        <p class="records-intro">
+          Built around FRUS production standards: document-number control, chronological
+          placement by meeting or document date, visible source-note coverage, and
+          explicit accounting for withheld, restricted, partial, or still-unreleased material.
+        </p>
+        <div id="compiler-root" class="compiler-root" aria-live="polite">
+          <p class="loading">Loading compiler audit...</p>
+        </div>
+      </section>
+
       <section class="section records-section" id="records" aria-labelledby="records-title">
         <div class="section-heading">
           <p class="kicker">Chronological Files</p>
@@ -250,6 +266,10 @@
             <span>Release</span>
             <select id="release-filter"></select>
           </label>
+          <label>
+            <span>Compiler queue</span>
+            <select id="compiler-filter"></select>
+          </label>
           <button id="clear-filters" type="button">Reset</button>
           <p id="records-summary" class="records-summary">Loading record index...</p>
         </div>
@@ -275,6 +295,12 @@
           </a>
           <a href="https://catalog.archives.gov/id/4522156" rel="noreferrer">
             Brent Scowcroft Papers
+          </a>
+          <a
+            href="https://history.state.gov/historicaldocuments/frus1989-92v31/abouttheseries"
+            rel="noreferrer"
+          >
+            FRUS About the Series
           </a>
           <a
             href="https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons"

@@ -1,0 +1,129 @@
+{
+  "generatedAt": "2026-05-23T13:38:36.365Z",
+  "pageFixes": [
+    {
+      "id": "470426218-nsc-dc-deputies-committee-meeting-october-16-1989-re-afghanistan",
+      "naid": "470426218",
+      "title": "NSC/DC [Deputies Committee] Meeting - October 16, 1989 re: Afghanistan",
+      "pageCount": 18
+    },
+    {
+      "id": "470426219-nsc-meeting-october-23-1989-re-afghanistan",
+      "naid": "470426219",
+      "title": "NSC Meeting - October 23, 1989 re: Afghanistan",
+      "pageCount": 24
+    },
+    {
+      "id": "470426381-presidential-visit-of-president-of-afghanistan-interim-government-sibgahtullah-mojaddedi-november-27-1989",
+      "naid": "470426381",
+      "title": "Presidential Visit of President [of Afghanistan Interim Government Sibgahtullah] Mojaddedi - November 27, 1989",
+      "pageCount": 35
+    },
+    {
+      "id": "470426235-dc-deputies-committee-meeting-october-4-1990-re-afghanistan",
+      "naid": "470426235",
+      "title": "DC [Deputies Committee] Meeting - October 4, 1990 re: Afghanistan",
+      "pageCount": 10
+    },
+    {
+      "id": "bush-library-428080317",
+      "naid": "428080317",
+      "title": "Telephone Conversation with Prime Minister Bhutto of Pakistan, November 1, 1989",
+      "pageCount": 3
+    },
+    {
+      "id": "470426229-nsc-dc-deputies-committee-meeting-june-30-1990-re-pakistan",
+      "naid": "470426229",
+      "title": "NSC/DC [Deputies Committee] Meeting - June 30, 1990 Re: Pakistan",
+      "pageCount": 14
+    },
+    {
+      "id": "470426231-nsc-dc-meeting-july-16-1990-re-pakistan-nuclear-program",
+      "naid": "470426231",
+      "title": "NSC/DC Meeting - July 16, 1990 Re: Pakistan Nuclear Program",
+      "pageCount": 29
+    },
+    {
+      "id": "470426238-nsc-dc-deputies-committee-meeting-october-4-1990-re-pakistan",
+      "naid": "470426238",
+      "title": "NSC/DC [Deputies Committee] Meeting - October 4, 1990 Re: Pakistan",
+      "pageCount": 8
+    },
+    {
+      "id": "470426240-nsc-dc-meeting-october-9-1990-re-pakistan",
+      "naid": "470426240",
+      "title": "NSC/DC Meeting - October 9, 1990 Re: Pakistan",
+      "pageCount": 81
+    },
+    {
+      "id": "bush-library-428080057",
+      "naid": "428080057",
+      "title": "Presidential Phone Call to Prime Minister Gandhi, June 8, 1989",
+      "pageCount": 4
+    },
+    {
+      "id": "bush-library-428081443",
+      "naid": "428081443",
+      "title": "Telcon with Prime Minister Shankar of India on February 8, 1991",
+      "pageCount": 4
+    },
+    {
+      "id": "bush-library-428082145",
+      "naid": "428082145",
+      "title": "Meeting with Prime Minister Khaleda Begum Zia of Bangladesh, March 19, 1992",
+      "pageCount": 6
+    }
+  ],
+  "remainingZeroPageRecords": [],
+  "potentialDispositionCounts": {
+    "High-priority source review lead": 22,
+    "Locator for internal decision file": 5,
+    "Chronology-only public context": 8,
+    "Locator/context lead": 3,
+    "Review lead": 2
+  },
+  "gapStatuses": [
+    {
+      "id": "gap-haass-page-level-extraction",
+      "priority": "Critical",
+      "status": "Partly remediated",
+      "title": "Recover page-level boundaries in Haass and meeting-file PDFs"
+    },
+    {
+      "id": "gap-cheney-country-files",
+      "priority": "High",
+      "status": "Triaged",
+      "title": "Screen Cheney Country Files before closing the source search"
+    },
+    {
+      "id": "gap-india-policy-lane",
+      "priority": "High",
+      "status": "Open",
+      "title": "Build an India policy lane beyond leader conversations"
+    },
+    {
+      "id": "gap-pakistan-nuclear-companion-sources",
+      "priority": "High",
+      "status": "Open",
+      "title": "Pair the Pakistan nuclear sequence with non-H-Files sources"
+    },
+    {
+      "id": "gap-regional-kashmir-bangladesh-split",
+      "priority": "High",
+      "status": "Triaged",
+      "title": "Split the Regional lane into Kashmir, Bangladesh, and other South Asia tracks"
+    },
+    {
+      "id": "gap-public-papers-curation",
+      "priority": "Medium",
+      "status": "Triaged",
+      "title": "Curate Public Papers as locators, not automatic document candidates"
+    },
+    {
+      "id": "gap-source-note-quality",
+      "priority": "Medium",
+      "status": "Open",
+      "title": "Audit source notes, titles, and provenance before final numbering"
+    }
+  ]
+}

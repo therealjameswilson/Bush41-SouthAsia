@@ -22,6 +22,8 @@ The current data is harvested from three National Archives Catalog source-series
 - NAID 313189297: H-Files - National Security Review (NSR) Files
 - NAID 313189290: H-Files - National Security Directive (NSD) Files
 - NAID 348937136: Institutional Files - Transition Files
+- Candidate sweeps: broader National Archives Catalog searches across Bush 41-era collections, Richard Cheney Country Files, Haass Working Files, and GovInfo Public Papers references.
+- Compiler gap tracker: `data/compiler-gaps.json` and `reports/compiler-gap-analysis.md`.
 
 Open `index.html` directly, or serve the directory locally:
 
@@ -36,4 +38,13 @@ node scripts/harvest-haass-catalog.js
 node scripts/harvest-scowcroft-heads.js
 node scripts/harvest-bush-library-memcons.js
 node scripts/harvest-nsc-dc-minutes.js
+node scripts/harvest-potential-documents.js
+node scripts/remediate-compiler-gaps.js
+node scripts/normalize-source-notes.js
 ```
+
+`remediate-compiler-gaps.js` measures any confirmed zero-page records that have
+online PDFs, refreshes the compiler gap report, and classifies potential leads as
+promotion candidates, internal-file locators, or chronology-only context.
+`normalize-source-notes.js` keeps clean FRUS-style Source Notes separate from
+full catalog URLs and working provenance.

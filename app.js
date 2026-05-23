@@ -3,6 +3,7 @@ const CHAPTER_ORDER = ["Afghanistan", "Pakistan", "India", "Regional"];
 const recordsRoot = document.querySelector("#records-root");
 const totalRecords = document.querySelector("#total-records");
 const totalPages = document.querySelector("#total-pages");
+const availablePdfs = document.querySelector("#available-pdfs");
 const searchInput = document.querySelector("#record-search");
 const chapterFilter = document.querySelector("#chapter-filter");
 const typeFilter = document.querySelector("#type-filter");
@@ -11,8 +12,21 @@ const compilerFilter = document.querySelector("#compiler-filter");
 const recordsSummary = document.querySelector("#records-summary");
 const clearFilters = document.querySelector("#clear-filters");
 const compilerRoot = document.querySelector("#compiler-root");
+const browseRoot = document.querySelector("#browse-root");
+const potentialRoot = document.querySelector("#potential-root");
+const gapsRoot = document.querySelector("#gaps-root");
+const chapterDocket = document.querySelector("#chapter-docket");
+const priorityLeads = document.querySelector("#priority-leads");
+const researchLanes = document.querySelector("#research-lanes");
+const workbenchDateSpan = document.querySelector("#workbench-date-span");
+const workbenchReleasedCount = document.querySelector("#workbench-released-count");
+const workbenchReviewCount = document.querySelector("#workbench-review-count");
+const workbenchSourceCount = document.querySelector("#workbench-source-count");
+const workbenchSummary = document.querySelector("#workbench-summary");
 
 let allRecords = [];
+let allPotentialDocuments = [];
+let allCompilerGaps = [];
 
 const COMPILER_QUEUE_OPTIONS = [
   ["", "All compiler queues"],
@@ -69,15 +83,69 @@ function uniqueInOrder(values) {
   });
 }
 
+function setText(node, value) {
+  if (node) node.textContent = String(value);
+}
+
+function pageSum(records) {
+  return records.reduce((sum, record) => sum + (record.pageCount || 0), 0);
+}
+
+function yearOf(record) {
+  return record.date?.slice(0, 4) || "";
+}
+
+function recordUrl(record) {
+  return record.catalogUrl || record.pdfUrl || record.source?.url || "";
+}
+
+function releasedRecordCount(records) {
+  return records.filter((record) => /full|declassified|partial/i.test(record.releaseStatus || "")).length;
+}
+
+function sourceLabel(record) {
+  return normalizeSeriesName(record.source?.series || record.source?.name || "Source pending");
+}
+
+function nonUsCountries(record) {
+  return (record.countries || []).filter((country) => country && country !== "United States");
+}
+
+function dateSpan(records) {
+  const sorted = [...records].sort((a, b) => a.sortDate.localeCompare(b.sortDate));
+  if (!sorted.length) return "No dated records";
+  return `${formatDate(sorted[0].date)} to ${formatDate(sorted[sorted.length - 1].date)}`;
+}
+
+function countBy(records, getter) {
+  const counts = new Map();
+  for (const record of records) {
+    const key = getter(record) || "Unspecified";
+    counts.set(key, (counts.get(key) || 0) + 1);
+  }
+  return [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+}
+
+function countMany(records, getter) {
+  const counts = new Map();
+  for (const record of records) {
+    for (const value of uniqueInOrder(getter(record))) {
+      counts.set(value, (counts.get(value) || 0) + 1);
+    }
+  }
+  return [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+}
+
 function setChapterCounts(records) {
-  totalRecords.textContent = records.length.toString();
-  totalPages.textContent = records.reduce((sum, record) => sum + (record.pageCount || 0), 0).toString();
+  setText(totalRecords, records.length);
+  setText(totalPages, pageSum(records));
+  setText(availablePdfs, records.filter((record) => record.pdfUrl).length);
 
   for (const chapterName of CHAPTER_ORDER) {
     const chapterRecords = records.filter((record) => record.chapter.name === chapterName);
     const countNode = document.querySelector(`[data-chapter-count="${chapterName}"]`);
     const pagesNode = document.querySelector(`[data-chapter-pages="${chapterName}"]`);
-    const pageTotal = chapterRecords.reduce((sum, record) => sum + (record.pageCount || 0), 0);
+    const pageTotal = pageSum(chapterRecords);
 
     if (countNode) {
       countNode.textContent = chapterRecords.length.toString();
@@ -103,6 +171,457 @@ function populateFilters(records) {
       ...COMPILER_QUEUE_OPTIONS.map(([value, label]) => new Option(label, value))
     );
   }
+}
+
+function scrollToRecords() {
+  document.querySelector("#records")?.scrollIntoView({ block: "start" });
+}
+
+function applyRecordFilters({ query = "", chapter = "", type = "", release = "", compilerQueue = "" }) {
+  if (searchInput) searchInput.value = query;
+  if (chapterFilter) chapterFilter.value = chapter;
+  if (typeFilter) typeFilter.value = type;
+  if (releaseFilter) releaseFilter.value = release;
+  if (compilerFilter) compilerFilter.value = compilerQueue;
+  updateRecordsView();
+  scrollToRecords();
+}
+
+function createDataChip(label, count, action) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "data-chip";
+  button.append(document.createTextNode(`${label} `));
+  const countNode = document.createElement("span");
+  countNode.className = "chip-count";
+  countNode.textContent = count;
+  button.append(countNode);
+  button.addEventListener("click", action);
+  return button;
+}
+
+function createBrowsePanel(title, detail, entries, actionForEntry) {
+  const panel = document.createElement("article");
+  panel.className = "browse-panel";
+
+  const heading = document.createElement("h3");
+  heading.textContent = title;
+
+  const copy = document.createElement("p");
+  copy.textContent = detail;
+
+  const chips = document.createElement("div");
+  chips.className = "chip-list";
+  for (const [label, count] of entries) {
+    chips.append(createDataChip(label, count, () => actionForEntry(label)));
+  }
+
+  panel.append(heading, copy, chips);
+  return panel;
+}
+
+function scrollToPotential() {
+  document.querySelector("#potential")?.scrollIntoView({ block: "start" });
+}
+
+function scrollToGaps() {
+  document.querySelector("#gaps")?.scrollIntoView({ block: "start" });
+}
+
+function renderBrowseIndex(records) {
+  if (!browseRoot) return;
+
+  const genericParticipants = new Set(["National Security Council", "Deputies Committee"]);
+  const countries = countMany(records, nonUsCountries).slice(0, 10);
+  const years = countBy(records, yearOf).filter(([year]) => year !== "Unspecified");
+  const leaders = countMany(records, (record) =>
+    (record.participants || []).filter((participant) => !genericParticipants.has(participant))
+  ).slice(0, 10);
+  const sources = countBy(records, sourceLabel).slice(0, 8);
+  const topics = countMany(records, (record) =>
+    [...(record.frusTopics || []), ...(record.topics || [])].filter(
+      (topic) => !["Measured pages", "Measured page count", "South Asia"].includes(topic)
+    )
+  ).slice(0, 10);
+  const releases = countBy(records, (record) => record.releaseStatus).slice(0, 8);
+
+  browseRoot.replaceChildren(
+    createBrowsePanel("Countries", "Jump into national and regional files.", countries, (country) =>
+      applyRecordFilters({ query: country })
+    ),
+    createBrowsePanel("Years", "Rebuild the chronology by calendar year.", years, (year) =>
+      applyRecordFilters({ query: year })
+    ),
+    createBrowsePanel("Leaders", "Find named principals and meeting participants.", leaders, (leader) =>
+      applyRecordFilters({ query: leader })
+    ),
+    createBrowsePanel("Source Series", "Move by archival series and file family.", sources, (source) =>
+      applyRecordFilters({ query: source })
+    ),
+    createBrowsePanel("Topics", "Open thematic working sets.", topics, (topic) =>
+      applyRecordFilters({ query: topic })
+    ),
+    createBrowsePanel("Release Status", "Separate released, partial, and restricted material.", releases, (release) =>
+      applyRecordFilters({ release })
+    )
+  );
+}
+
+function createDocketButton(chapterName, count, pages, total) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "docket-button";
+
+  const label = document.createElement("strong");
+  label.textContent = chapterName;
+
+  const detail = document.createElement("span");
+  detail.textContent = `${count} records / ${pages} pages`;
+
+  const meter = document.createElement("div");
+  meter.className = "docket-meter";
+  const fill = document.createElement("i");
+  fill.style.width = `${Math.max(8, Math.round((count / total) * 100))}%`;
+  meter.append(fill);
+
+  button.append(label, detail, meter);
+  button.addEventListener("click", () => applyRecordFilters({ chapter: chapterName }));
+  return button;
+}
+
+function renderWorkbench(records, potentialDocuments = allPotentialDocuments, compilerGaps = allCompilerGaps) {
+  const review = records.filter(isDeclassificationQueue);
+  const pdfs = records.filter((record) => record.pdfUrl).length;
+  const sources = countBy(records, sourceLabel).length;
+
+  setText(workbenchDateSpan, dateSpan(records));
+  setText(workbenchReleasedCount, `${releasedRecordCount(records)} released or partial`);
+  setText(workbenchReviewCount, `${review.length} restricted or unknown`);
+  setText(workbenchSourceCount, sources);
+
+  if (workbenchSummary) {
+    workbenchSummary.textContent = `${records.length} South Asia records are staged across ${CHAPTER_ORDER.length} chapters, with ${pdfs} direct PDFs, ${pageSum(records)} pages, ${potentialDocuments.length} additional source-sweep candidates, and ${compilerGaps.length} open compiler gaps held for review.`;
+  }
+
+  if (chapterDocket) {
+    chapterDocket.replaceChildren(
+      ...CHAPTER_ORDER.map((chapterName) => {
+        const chapterRecords = records.filter((record) => record.chapter.name === chapterName);
+        return createDocketButton(chapterName, chapterRecords.length, pageSum(chapterRecords), records.length);
+      })
+    );
+  }
+
+  if (priorityLeads) {
+    const priorityRecords = review.sort(byChapterThenDate).slice(0, 6);
+    priorityLeads.replaceChildren(
+      ...priorityRecords.map((record) => {
+        const item = document.createElement("li");
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = `Doc ${record.compilerNumber}: ${record.documentTitle || record.title}`;
+        button.addEventListener("click", () =>
+          applyRecordFilters({ query: record.compilerNumber, compilerQueue: "declassification" })
+        );
+        item.append(button);
+        return item;
+      })
+    );
+  }
+
+  if (researchLanes) {
+    const presidential = records.filter(isPresidentialConversation);
+    const noPdf = records.filter(needsPdf);
+    const pageGaps = records.filter(needsPageCount);
+    researchLanes.replaceChildren(
+      createDataChip("Presidential conversations", presidential.length, () =>
+        applyRecordFilters({ compilerQueue: "presidential" })
+      ),
+      createDataChip("Declassification ledger", review.length, () =>
+        applyRecordFilters({ compilerQueue: "declassification" })
+      ),
+      createDataChip("Source note gaps", records.filter((record) => !hasSourceNote(record)).length, () =>
+        applyRecordFilters({ compilerQueue: "source-note" })
+      ),
+      createDataChip("PDF gaps", noPdf.length, () => applyRecordFilters({ compilerQueue: "no-pdf" })),
+      createDataChip("Page count gaps", pageGaps.length, () => applyRecordFilters({ compilerQueue: "unpaged" })),
+      createDataChip("Compiler gaps", compilerGaps.length, scrollToGaps),
+      createDataChip("Potential documents", potentialDocuments.length, scrollToPotential),
+      createDataChip("Pakistan nuclear", records.filter((record) => getSearchText(record).includes("nuclear")).length, () =>
+        applyRecordFilters({ query: "nuclear" })
+      ),
+      createDataChip("Afghanistan", records.filter((record) => record.chapter.name === "Afghanistan").length, () =>
+        applyRecordFilters({ chapter: "Afghanistan" })
+      ),
+      createDataChip("India", records.filter((record) => record.chapter.name === "India").length, () =>
+        applyRecordFilters({ chapter: "India" })
+      )
+    );
+  }
+}
+
+function potentialLink(href, label) {
+  if (!href) return null;
+  const link = document.createElement("a");
+  link.href = href;
+  link.rel = "noreferrer";
+  link.target = "_blank";
+  link.textContent = label;
+  return link;
+}
+
+function createPotentialCard(candidate) {
+  const card = document.createElement("article");
+  card.className = "potential-card";
+
+  const header = document.createElement("div");
+  header.className = "potential-card-header";
+
+  const title = document.createElement("h4");
+  title.textContent = candidate.title;
+
+  const date = document.createElement("time");
+  date.dateTime = candidate.date;
+  date.textContent = candidate.date ? formatDate(candidate.date) : "Date pending";
+
+  header.append(title, date);
+
+  const meta = document.createElement("div");
+  meta.className = "record-meta";
+  for (const value of [
+    candidate.sourceFamily,
+    candidate.compilerDisposition,
+    candidate.priorityTier ? `${candidate.priorityTier} review` : "",
+    candidate.reviewLane,
+    candidate.candidateStatus,
+    candidate.chapter?.name,
+    candidate.countries?.filter((country) => country !== "United States").join(", "),
+    candidate.naid ? `NAID ${candidate.naid}` : candidate.packageId,
+    `Score ${candidate.priorityScore}`
+  ]) {
+    if (!value) continue;
+    const item = document.createElement("span");
+    item.textContent = value;
+    meta.append(item);
+  }
+
+  const rationale = document.createElement("p");
+  rationale.className = "potential-rationale";
+  rationale.textContent = candidate.rationale || candidate.sourceNote || "Candidate requires compiler review.";
+
+  const action = document.createElement("p");
+  action.className = "potential-action";
+  action.textContent = candidate.selectionAction || candidate.selectionRationale || "Review before promotion.";
+
+  const source = document.createElement("p");
+  source.className = "record-source-line";
+  source.textContent =
+    candidate.source?.series || candidate.source?.collection || candidate.source?.name || candidate.sourceSet;
+
+  const links = document.createElement("div");
+  links.className = "record-links";
+  for (const link of [
+    potentialLink(candidate.catalogUrl, "Catalog"),
+    potentialLink(candidate.detailsUrl, "GovInfo"),
+    potentialLink(candidate.htmlUrl, "HTML"),
+    potentialLink(candidate.pdfUrl, "PDF")
+  ]) {
+    if (link) links.append(link);
+  }
+
+  const search = document.createElement("button");
+  search.type = "button";
+  search.textContent = "Search Records";
+  search.addEventListener("click", () =>
+    applyRecordFilters({
+      query:
+        candidate.countries?.find((country) => country !== "United States" && country !== "South Asia") ||
+        candidate.matchedQueries?.[0] ||
+        candidate.chapter?.name ||
+        ""
+    })
+  );
+  links.append(search);
+
+  card.append(header, meta, source, rationale, action, links);
+  return card;
+}
+
+function renderPotentialDocuments(candidates) {
+  if (!potentialRoot) return;
+  potentialRoot.replaceChildren();
+
+  if (!candidates.length) {
+    const empty = document.createElement("p");
+    empty.className = "empty-chapter";
+    empty.textContent = "No potential documents are currently staged.";
+    potentialRoot.append(empty);
+    return;
+  }
+
+  const metrics = document.createElement("div");
+  metrics.className = "potential-metrics";
+  const familyCounts = countBy(candidates, (candidate) => candidate.sourceFamily);
+  const dispositionCounts = countBy(candidates, (candidate) => candidate.compilerDisposition);
+  metrics.append(
+    createMetric("Potential leads", candidates.length.toString(), "Not yet promoted into the confirmed record set."),
+    createMetric(
+      "Online objects",
+      candidates.filter((candidate) => candidate.pdfUrl).length.toString(),
+      "Candidates with direct PDF or GovInfo links."
+    ),
+    createMetric("Source families", familyCounts.length.toString(), "Catalog, Cheney, Haass/NSC, and Public Papers sweeps."),
+    createMetric("Disposition types", dispositionCounts.length.toString(), "Compiler triage: review, locator, context, or chronology-only."),
+    createMetric(
+      "Public Papers",
+      candidates.filter((candidate) => candidate.sourceFamily === "Public Papers").length.toString(),
+      "Presidential statements and public references."
+    )
+  );
+  potentialRoot.append(metrics);
+
+  for (const chapterName of CHAPTER_ORDER) {
+    const chapterCandidates = candidates
+      .filter((candidate) => candidate.chapter?.name === chapterName)
+      .sort(
+        (a, b) =>
+          (a.sortDate || "").localeCompare(b.sortDate || "") ||
+          b.priorityScore - a.priorityScore ||
+          a.title.localeCompare(b.title)
+      );
+    if (!chapterCandidates.length) continue;
+
+    const section = document.createElement("section");
+    section.className = "potential-chapter";
+
+    const header = document.createElement("div");
+    header.className = "record-chapter-header";
+    const heading = document.createElement("h3");
+    heading.textContent = `${chapterName} candidates`;
+    const count = document.createElement("p");
+    count.className = "record-count";
+    count.textContent = `${chapterCandidates.length} leads`;
+    header.append(heading, count);
+
+    const list = document.createElement("div");
+    list.className = "potential-list";
+    for (const candidate of chapterCandidates) {
+      list.append(createPotentialCard(candidate));
+    }
+
+    section.append(header, list);
+    potentialRoot.append(section);
+  }
+}
+
+function gapPriorityRank(priority) {
+  return { Critical: 0, High: 1, Medium: 2, Low: 3 }[priority] ?? 4;
+}
+
+function createGapCard(gap) {
+  const card = document.createElement("article");
+  card.className = `gap-card gap-priority-${String(gap.priority || "open").toLowerCase()}`;
+
+  const header = document.createElement("div");
+  header.className = "gap-card-header";
+
+  const title = document.createElement("h3");
+  title.textContent = gap.title;
+
+  const badge = document.createElement("span");
+  badge.className = "gap-badge";
+  badge.textContent = gap.priority;
+  header.append(title, badge);
+
+  const meta = document.createElement("div");
+  meta.className = "record-meta";
+  for (const value of [gap.lane, gap.status, `${gap.targetRecords?.length || 0} pull-list IDs`]) {
+    if (!value) continue;
+    const item = document.createElement("span");
+    item.textContent = value;
+    meta.append(item);
+  }
+
+  const evidence = document.createElement("p");
+  evidence.className = "gap-evidence";
+  evidence.textContent = gap.evidence;
+
+  const problem = document.createElement("p");
+  problem.className = "gap-problem";
+  problem.textContent = gap.problem;
+
+  const needed = document.createElement("p");
+  needed.className = "gap-needed";
+  needed.textContent = gap.needed;
+
+  const actions = document.createElement("ul");
+  actions.className = "gap-actions";
+  for (const action of gap.nextActions || []) {
+    const item = document.createElement("li");
+    item.textContent = action;
+    actions.append(item);
+  }
+
+  const links = document.createElement("div");
+  links.className = "record-links";
+  const search = document.createElement("button");
+  search.type = "button";
+  search.textContent = "Search Records";
+  search.addEventListener("click", () =>
+    applyRecordFilters({
+      query: gap.targetTerms?.[0] || gap.lane || gap.title || ""
+    })
+  );
+  links.append(search);
+
+  const content = [header, meta, evidence, problem, needed, actions];
+  if (gap.targetRecords?.length) {
+    const pullList = document.createElement("p");
+    pullList.className = "gap-pull-list";
+    pullList.textContent = `Pull list: ${gap.targetRecords.join(", ")}`;
+    content.push(pullList);
+  }
+  content.push(links);
+
+  card.append(...content);
+  return card;
+}
+
+function renderCompilerGaps(gaps, records, potentialDocuments) {
+  if (!gapsRoot) return;
+  gapsRoot.replaceChildren();
+
+  if (!gaps.length) {
+    const empty = document.createElement("p");
+    empty.className = "empty-chapter";
+    empty.textContent = "No compiler gaps are currently staged.";
+    gapsRoot.append(empty);
+    return;
+  }
+
+  const targetIds = new Set(gaps.flatMap((gap) => gap.targetRecords || []));
+  const metrics = document.createElement("div");
+  metrics.className = "gap-metrics";
+  metrics.append(
+    createMetric("Open gaps", gaps.length.toString(), "Compiler-risk issues that remain before final selection."),
+    createMetric(
+      "Critical or high",
+      gaps.filter((gap) => ["Critical", "High"].includes(gap.priority)).length.toString(),
+      "Gaps that can change source balance or inclusion decisions."
+    ),
+    createMetric("Pull-list IDs", targetIds.size.toString(), "Candidate NAIDs or local identifiers to check first."),
+    createMetric("Potential leads", potentialDocuments.length.toString(), "Source-sweep candidates not yet confirmed.")
+  );
+
+  const list = document.createElement("div");
+  list.className = "gap-list";
+  for (const gap of [...gaps].sort(
+    (a, b) => gapPriorityRank(a.priority) - gapPriorityRank(b.priority) || a.title.localeCompare(b.title)
+  )) {
+    list.append(createGapCard(gap));
+  }
+
+  gapsRoot.append(metrics, list);
 }
 
 function assignCompilerNumbers(records) {
@@ -301,6 +820,10 @@ function duplicateProvenanceSentence(record) {
 }
 
 function generateFrusSourceNote(record) {
+  if (record.provenanceNote && record.sourceNote && !/https?:\/\//.test(record.sourceNote)) {
+    return record.sourceNote;
+  }
+
   const source = record.source || {};
   const sourcePath = uniqueInOrder([
     frusRepository(record),
@@ -377,7 +900,7 @@ function createSourceNote(record) {
 
   const note = document.createElement("p");
   note.className = "record-provenance-text";
-  note.textContent = record.sourceNote || "Source: Provenance pending.";
+  note.textContent = record.provenanceNote || record.sourceNote || "Source: Provenance pending.";
 
   sourceNote.append(summary, frusNote, provenanceLabel, note);
   return sourceNote;
@@ -397,9 +920,68 @@ function createDateLine(record) {
   return line;
 }
 
+function recordAnchorId(record) {
+  return `record-${(record.id || record.naid || record.compilerNumber || record.title)
+    .toString()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "")}`;
+}
+
+async function copyText(text) {
+  if (navigator.clipboard?.writeText) {
+    try {
+      await navigator.clipboard.writeText(text);
+      return;
+    } catch (error) {
+      // Fall through to the textarea path when browser permissions block the async API.
+    }
+  }
+
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.setAttribute("readonly", "");
+  textArea.style.position = "fixed";
+  textArea.style.left = "-9999px";
+  document.body.append(textArea);
+  textArea.select();
+  const copied = document.execCommand("copy");
+  textArea.remove();
+  if (!copied) throw new Error("Copy command was rejected.");
+}
+
+function createCopyButton(record) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.textContent = "Copy Note";
+  button.addEventListener("click", async () => {
+    const original = button.textContent;
+    try {
+      await copyText(generateFrusSourceNote(record));
+      button.textContent = "Copied";
+      button.classList.add("is-copied");
+      if (recordsSummary) {
+        recordsSummary.textContent = `Copied source note for Doc ${record.compilerNumber}.`;
+      }
+      window.setTimeout(() => {
+        button.textContent = original;
+        button.classList.remove("is-copied");
+        updateSummary(filterRecords(allRecords));
+      }, 1800);
+    } catch (error) {
+      button.textContent = "Copy failed";
+      window.setTimeout(() => {
+        button.textContent = original;
+      }, 1800);
+    }
+  });
+  return button;
+}
+
 function createRecordRow(record) {
   const row = document.createElement("article");
   row.className = "record-row";
+  row.id = recordAnchorId(record);
 
   const dateStack = document.createElement("div");
   dateStack.className = "record-date-stack";
@@ -415,15 +997,17 @@ function createRecordRow(record) {
   dateStack.append(compilerNumber, date);
 
   const body = document.createElement("div");
-  const title = document.createElement("a");
+  const title = document.createElement(recordUrl(record) ? "a" : "span");
   title.className = "record-title";
-  title.href = record.catalogUrl || record.pdfUrl;
-  title.rel = "noreferrer";
+  if (recordUrl(record)) {
+    title.href = recordUrl(record);
+    title.rel = "noreferrer";
+  }
   title.textContent = record.documentTitle || record.title;
 
   const sourceLine = document.createElement("p");
   sourceLine.className = "record-source-line";
-  sourceLine.textContent = record.source?.series || record.source?.name || "Source series pending";
+  sourceLine.textContent = sourceLabel(record);
 
   const flags = document.createElement("div");
   flags.className = "record-flags";
@@ -470,6 +1054,13 @@ function createRecordRow(record) {
     links.append(print);
   }
 
+  const permalink = document.createElement("a");
+  permalink.href = `#${row.id}`;
+  permalink.textContent = "Link";
+  links.append(permalink);
+
+  links.append(createCopyButton(record));
+
   row.append(dateStack, body, links);
   return row;
 }
@@ -487,9 +1078,11 @@ function getSearchText(record) {
     record.naid,
     record.sourceTitle,
     record.sourceNote,
+    record.provenanceNote,
     generateFrusSourceNote(record),
     record.source?.series,
     record.source?.name,
+    ...(record.compilerRisks || []),
     ...(record.participants || []),
     ...(record.countries || []),
     ...(record.frusTopics || []),
@@ -518,7 +1111,7 @@ function filterRecords(records) {
 
 function updateSummary(records) {
   if (!recordsSummary) return;
-  const pages = records.reduce((sum, record) => sum + (record.pageCount || 0), 0);
+  const pages = pageSum(records);
   const queue = compilerFilter?.selectedOptions?.[0]?.textContent || "All compiler queues";
   recordsSummary.textContent = `Showing ${records.length} of ${allRecords.length} records / ${pages} pages in view / ${queue}`;
 }
@@ -536,25 +1129,12 @@ function createMetric(label, value, detail) {
   return card;
 }
 
-function countBy(records, getter) {
-  const counts = new Map();
-  for (const record of records) {
-    const key = getter(record) || "Unspecified";
-    counts.set(key, (counts.get(key) || 0) + 1);
-  }
-  return [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
-}
-
 function queueButton(queue, label, count) {
   const button = document.createElement("button");
   button.type = "button";
   button.className = "compiler-queue";
   button.textContent = `${label} (${count})`;
-  button.addEventListener("click", () => {
-    if (compilerFilter) compilerFilter.value = queue;
-    updateRecordsView();
-    document.querySelector("#records")?.scrollIntoView({ block: "start" });
-  });
+  button.addEventListener("click", () => applyRecordFilters({ compilerQueue: queue }));
   return button;
 }
 
@@ -732,8 +1312,14 @@ function enableChapterCards() {
 async function init() {
   try {
     allRecords = assignCompilerNumbers(window.MEMCONS || window.MEMCON_RECORDS || (await loadRecords()));
+    allPotentialDocuments = window.POTENTIAL_DOCUMENTS || (await loadPotentialDocuments());
+    allCompilerGaps = window.COMPILER_GAPS || (await loadCompilerGaps());
     setChapterCounts(allRecords);
     populateFilters(allRecords);
+    renderWorkbench(allRecords, allPotentialDocuments, allCompilerGaps);
+    renderBrowseIndex(allRecords);
+    renderPotentialDocuments(allPotentialDocuments);
+    renderCompilerGaps(allCompilerGaps, allRecords, allPotentialDocuments);
     enableFilters();
     enableChapterCards();
     updateRecordsView();
@@ -749,6 +1335,18 @@ async function init() {
 async function loadRecords() {
   const response = await fetch("data/memcons.json");
   if (!response.ok) throw new Error(`Could not load records: ${response.status}`);
+  return response.json();
+}
+
+async function loadPotentialDocuments() {
+  const response = await fetch("data/potential-documents.json");
+  if (!response.ok) return [];
+  return response.json();
+}
+
+async function loadCompilerGaps() {
+  const response = await fetch("data/compiler-gaps.json");
+  if (!response.ok) return [];
   return response.json();
 }
 

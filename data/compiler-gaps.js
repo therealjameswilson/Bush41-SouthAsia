@@ -1,0 +1,267 @@
+window.COMPILER_GAPS = [
+  {
+    "id": "gap-haass-page-level-extraction",
+    "priority": "Critical",
+    "status": "Partly remediated",
+    "lane": "Source Extraction",
+    "title": "Recover page-level boundaries in Haass and meeting-file PDFs",
+    "evidence": "12 zero-page confirmed records now have measured PDF extents. Item-level boundaries inside folder-level Haass PDFs still require OCR review before final selection.",
+    "problem": "The confirmed set is strong enough for provisional selection, but folder-level PDFs and zero-page records prevent final FRUS-style document boundaries, source notes, and inclusion decisions.",
+    "needed": "Item-level page ranges and titles still need review for folder-level Haass PDFs; page-count zeros have been removed where online PDFs are available.",
+    "nextActions": [
+      "Prioritize Haass Working Files 470426597, Haass Meeting File 470426255, Mojaddedi 470426381, Bangladesh Zia 428082145, and Pakistan nuclear meeting files 470426231, 470426238, and 470426240.",
+      "Add page ranges and item-level titles before promoting any folder-level lead into the confirmed record set.",
+      "Update source notes where catalog titles and OCR-derived item titles differ."
+    ],
+    "targetRecords": [
+      "470426597",
+      "470426255",
+      "470426381",
+      "428082145",
+      "470426231",
+      "470426238",
+      "470426240"
+    ],
+    "targetTerms": [
+      "Haass",
+      "page count",
+      "Afghanistan",
+      "Pakistan Nuclear Program",
+      "Bangladesh"
+    ],
+    "sourcePools": [
+      "Richard N. Haass' Working Files",
+      "Richard N. Haass' Meeting Files",
+      "Bush Library Memcons and Telcons",
+      "H-Files NSC/DC Meetings"
+    ]
+  },
+  {
+    "id": "gap-cheney-country-files",
+    "priority": "High",
+    "status": "Triaged",
+    "lane": "Source Expansion",
+    "title": "Screen Cheney Country Files before closing the source search",
+    "evidence": "Cheney Country File candidates now carry high-priority review dispositions; promotion still depends on page-level screening.",
+    "problem": "The current corpus emphasizes presidential conversations, Haass files, and H-Files. Cheney country files may contain defense-policy, aid, sanctions, arms-transfer, and crisis-management material that changes selection balance.",
+    "needed": "Screen the Cheney PDFs, score policy-bearing pages, and decide which should become confirmed candidate documents or source-note/context material.",
+    "nextActions": [
+      "Review Afghanistan files 645607685, 645607321, and 645607323.",
+      "Review Pakistan files 645608235, 645607905, 645607531, 645607533, and 645607907.",
+      "Review India files 645607415, 645608141, 645607135, 645608143, 645607137, 645607805, and 645607807; review Bangladesh file 645608041."
+    ],
+    "targetRecords": [
+      "645607685",
+      "645607321",
+      "645607323",
+      "645608235",
+      "645607905",
+      "645607531",
+      "645607533",
+      "645607907",
+      "645607415",
+      "645608141",
+      "645607135",
+      "645608143",
+      "645607137",
+      "645607805",
+      "645607807",
+      "645608041"
+    ],
+    "targetTerms": [
+      "Cheney",
+      "Country Files",
+      "Afghanistan",
+      "Pakistan",
+      "India",
+      "Bangladesh"
+    ],
+    "sourcePools": [
+      "Richard Cheney Collection",
+      "Country Files"
+    ]
+  },
+  {
+    "id": "gap-india-policy-lane",
+    "priority": "High",
+    "status": "Open",
+    "lane": "India",
+    "title": "Build an India policy lane beyond leader conversations",
+    "evidence": "India has 10 confirmed records and 8 staged potential records; the potential set is almost entirely Cheney Country Files plus one Public Papers nomination.",
+    "problem": "The India chapter is underdeveloped compared with Afghanistan and Pakistan. It lacks a robust staff-file lane for economic reform, nuclear policy, Kashmir, defense relations, and early Rao-era policy.",
+    "needed": "Run focused Haass, Gates, WHORM, State, and catalog searches for India policy themes instead of relying on leader calls and Cheney country folders.",
+    "nextActions": [
+      "Search India with Rao, Venkataraman, Gandhi, Shankar, Kashmir, nuclear, nonproliferation, economic reform, trade, and defense terms.",
+      "Check whether Gates Subject Files have India-only or India-Pakistan files beyond 470437053.",
+      "Treat the Pickering Public Papers nomination as context unless it locates internal embassy or policy files."
+    ],
+    "targetRecords": [
+      "645607415",
+      "645608141",
+      "645607135",
+      "645608143",
+      "645607137",
+      "645607805",
+      "645607807",
+      "470437053"
+    ],
+    "targetTerms": [
+      "India",
+      "Rao",
+      "Venkataraman",
+      "Kashmir",
+      "nuclear",
+      "economic reform"
+    ],
+    "sourcePools": [
+      "Richard Cheney Collection Country Files",
+      "Robert M. Gates Subject Files",
+      "Richard N. Haass files",
+      "WHORM",
+      "State Department central files"
+    ]
+  },
+  {
+    "id": "gap-pakistan-nuclear-companion-sources",
+    "priority": "High",
+    "status": "Open",
+    "lane": "Pakistan",
+    "title": "Pair the Pakistan nuclear sequence with non-H-Files sources",
+    "evidence": "Pakistan has 29 confirmed records, including the 1990 nuclear sequence, but several key meeting files have no extracted page count and the Gates Pakistan-India file 470437053 remains only a potential lead.",
+    "problem": "The Pakistan chapter has volume, but the source base is too dependent on restricted H-Files and presidential conversations. Pressler, sanctions, aid, and crisis-management decisions need companion staff and defense files.",
+    "needed": "Integrate Gates, Cheney, and Haass companion files before treating the Pakistan nuclear policy arc as complete.",
+    "nextActions": [
+      "Prioritize Gates Subject File 470437053 and Pakistan H-Files 470426231, 470426238, and 470426240.",
+      "Screen Cheney Pakistan files for sanctions, nuclear, F-16, aid, and crisis-management content.",
+      "Validate the June 6, 1989 Bhutto departure Catalog leads against the presidential conversation chronology."
+    ],
+    "targetRecords": [
+      "470437053",
+      "470426231",
+      "470426238",
+      "470426240",
+      "645608235",
+      "645607905",
+      "645607531",
+      "645607533",
+      "645607907",
+      "323150513",
+      "323152491"
+    ],
+    "targetTerms": [
+      "Pakistan",
+      "nuclear",
+      "Pressler",
+      "F-16",
+      "sanctions",
+      "Bhutto"
+    ],
+    "sourcePools": [
+      "Robert M. Gates Subject Files",
+      "Richard Cheney Collection Country Files",
+      "H-Files NSC/DC Meetings",
+      "Bush Library speech and event files"
+    ]
+  },
+  {
+    "id": "gap-regional-kashmir-bangladesh-split",
+    "priority": "High",
+    "status": "Triaged",
+    "lane": "Regional",
+    "title": "Split the Regional lane into Kashmir, Bangladesh, and other South Asia tracks",
+    "evidence": "Potential records now carry review lanes, including Regional: Kashmir and Regional: Bangladesh where applicable.",
+    "problem": "Regional currently mixes true regionwide policy with Kashmir, Bangladesh, Sri Lanka/Maldives, refugee, and public-event leads. That makes selection risk hard to see.",
+    "needed": "Separate sub-lanes so Kashmir and Bangladesh can be evaluated on their own document merits while lower-confidence public references remain contextual.",
+    "nextActions": [
+      "Promote Kashmir leads 470426145 and 470426225 into a focused review queue.",
+      "Resolve Bangladesh Zia files 428082145 and 470426266 against the Fitzwater public statement.",
+      "Keep Sri Lanka/Maldives and refugee public-paper leads in context until internal records are found."
+    ],
+    "targetRecords": [
+      "470426145",
+      "470426225",
+      "428082145",
+      "470426266",
+      "645608041",
+      "286185941",
+      "543965098"
+    ],
+    "targetTerms": [
+      "Kashmir",
+      "Bangladesh",
+      "Sri Lanka",
+      "Maldives",
+      "refugee"
+    ],
+    "sourcePools": [
+      "Richard N. Haass Correspondence Files",
+      "Richard N. Haass Meeting Files",
+      "Cheney Country Files",
+      "Public Papers",
+      "WHPO"
+    ]
+  },
+  {
+    "id": "gap-public-papers-curation",
+    "priority": "Medium",
+    "status": "Triaged",
+    "lane": "Public Record",
+    "title": "Curate Public Papers as locators, not automatic document candidates",
+    "evidence": "Public Papers candidates now carry compiler dispositions distinguishing internal-file locators, chronology-only context, and possible selected public texts.",
+    "problem": "Public Papers improve chronology and issue visibility, but many references are contextual rather than internal decision records. Promoting them too quickly would dilute the archival selection set.",
+    "needed": "Classify each public item as selected text, locator for internal files, chronology-only context, or out-of-scope mention.",
+    "nextActions": [
+      "Keep broad news conferences and speeches out of the confirmed record set unless they contain document-level South Asia policy decisions.",
+      "Use public determinations and letters to locate internal clearance, certification, sanctions, aid, or trade files.",
+      "Mark ambassadorial nominations as personnel/context unless linked internal policy memoranda are found."
+    ],
+    "targetRecords": [],
+    "targetTerms": [
+      "Public Papers",
+      "narcotics certification",
+      "trade",
+      "disaster assistance",
+      "nonproliferation",
+      "nomination"
+    ],
+    "sourcePools": [
+      "Public Papers of the Presidents",
+      "GovInfo",
+      "WHORM",
+      "Bush Library event files"
+    ]
+  },
+  {
+    "id": "gap-source-note-quality",
+    "priority": "Medium",
+    "status": "Open",
+    "lane": "Metadata Quality",
+    "title": "Audit source notes, titles, and provenance before final numbering",
+    "evidence": "The current confirmed set combines catalog file titles, OCR-derived item titles, Bush Library memcon/telcon metadata, and project-only source notes. Several records also have zero page counts.",
+    "problem": "Compiler numbers can be provisional, but final document selection requires stable titles, exact dates, archival locations, access status, and page-level citations.",
+    "needed": "Run a metadata audit after the page-level pass and before treating compiler numbering as final.",
+    "nextActions": [
+      "Spot-check Scowcroft-derived presidential conversation titles against PDF or catalog title pages.",
+      "Normalize source-note language across Haass, H-Files, Scowcroft Papers, Bush Library memcons, and Public Papers.",
+      "Keep potential documents outside confirmed numbering until source-note quality is equivalent to the main record set."
+    ],
+    "targetRecords": [
+      "428080057",
+      "428080317",
+      "428081443",
+      "428082145"
+    ],
+    "targetTerms": [
+      "source note",
+      "Scowcroft",
+      "title",
+      "provenance",
+      "page count"
+    ],
+    "sourcePools": [
+      "Brent Scowcroft Papers",
+      "Bush Library Memcons and Telcons",
+      "National Archives Catalog"
+    ]
+  }
+];

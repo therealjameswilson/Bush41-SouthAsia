@@ -18,11 +18,14 @@
       </a>
       <nav aria-label="Primary navigation">
         <a href="#chapters">Chapters</a>
+        <a href="#workbench">Workbench</a>
         <a href="#collection">Collection</a>
         <a href="#browse">Browse</a>
+        <a href="#potential">Potential</a>
+        <a href="#gaps">Gaps</a>
+        <a href="#records">Records</a>
         <a href="#compiler">Compiler</a>
         <a href="#sources">Sources</a>
-        <a href="#ingest">Ingest</a>
       </nav>
     </header>
 
@@ -34,13 +37,13 @@
           <p class="lede">
             A companion research archive for declassified memoranda, telephone
             conversations, and National Security Council source series relevant to a
-            South Asia volume. The working arrangement follows four chapters:
-            Afghanistan, Pakistan, India, and Regional. Records inside each chapter
-            are ordered chronologically as item-level files are added.
+            South Asia volume. The site now works as a compiler desk: chapter
+            placement, release status, source-note coverage, page counts, and
+            direct PDF paths are visible before the record list.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#records">Browse the Records</a>
-            <a class="button secondary" href="#ingest">Review the Ingest Plan</a>
+            <a class="button primary" href="#workbench">Open Workbench</a>
+            <a class="button secondary" href="#records">Browse Records</a>
           </div>
         </div>
         <aside class="brief visual-brief" aria-label="Archive scope">
@@ -61,7 +64,7 @@
             </div>
             <div>
               <dt>Source Base</dt>
-              <dd>Richard N. Haass files, NSC records</dd>
+              <dd>Haass, NSC, Scowcroft</dd>
             </div>
             <div>
               <dt>Arrangement</dt>
@@ -81,8 +84,66 @@
           <p>FRUS-style chapters</p>
         </div>
         <div>
-          <span id="total-pages">1102</span>
+          <span id="total-pages">1338</span>
           <p>document pages</p>
+        </div>
+        <div>
+          <span id="available-pdfs">66</span>
+          <p>direct PDFs</p>
+        </div>
+      </section>
+
+      <section class="section workbench-section" id="workbench" aria-labelledby="workbench-title">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Compiler Workbench</p>
+            <h2 id="workbench-title">Selection Readiness Console</h2>
+          </div>
+          <a
+            class="section-link"
+            href="https://history.state.gov/historicaldocuments/frus1989-92v31/abouttheseries"
+            rel="noreferrer"
+          >
+            FRUS series method
+          </a>
+        </div>
+        <div class="workbench-grid">
+          <article class="workbench-panel workbench-panel-wide">
+            <h3>Collection Pulse</h3>
+            <dl class="metric-list">
+              <div>
+                <dt>Date span</dt>
+                <dd id="workbench-date-span">Loading</dd>
+              </div>
+              <div>
+                <dt>Released set</dt>
+                <dd id="workbench-released-count">Loading</dd>
+              </div>
+              <div>
+                <dt>Review ledger</dt>
+                <dd id="workbench-review-count">Loading</dd>
+              </div>
+              <div>
+                <dt>Source series</dt>
+                <dd id="workbench-source-count">Loading</dd>
+              </div>
+            </dl>
+            <p id="workbench-summary">
+              Loading the current South Asia selection set.
+            </p>
+          </article>
+          <article class="workbench-panel">
+            <h3>Chapter Docket</h3>
+            <div id="chapter-docket" class="chapter-docket" aria-live="polite"></div>
+          </article>
+          <article class="workbench-panel">
+            <h3>Priority Leads</h3>
+            <ol id="priority-leads" class="priority-list" aria-live="polite"></ol>
+          </article>
+          <article class="workbench-panel workbench-panel-wide">
+            <h3>Research Lanes</h3>
+            <div id="research-lanes" class="lane-list" aria-label="Quick research lanes"></div>
+          </article>
         </div>
       </section>
 
@@ -97,7 +158,7 @@
             <h3>Afghanistan</h3>
             <p class="chapter-count">
               <span data-chapter-count="Afghanistan">21</span> records /
-              <span data-chapter-pages="Afghanistan">338</span> pages
+              <span data-chapter-pages="Afghanistan">425</span> pages
             </p>
             <p>
               Records centered on Afghanistan policy after the Soviet withdrawal,
@@ -111,7 +172,7 @@
             <h3>Pakistan</h3>
             <p class="chapter-count">
               <span data-chapter-count="Pakistan">29</span> records /
-              <span data-chapter-pages="Pakistan">398</span> pages
+              <span data-chapter-pages="Pakistan">533</span> pages
             </p>
             <p>
               Bilateral records on U.S.-Pakistan relations, Afghanistan spillover,
@@ -125,7 +186,7 @@
             <h3>India</h3>
             <p class="chapter-count">
               <span data-chapter-count="India">10</span> records /
-              <span data-chapter-pages="India">114</span> pages
+              <span data-chapter-pages="India">122</span> pages
             </p>
             <p>
               Meetings and calls involving India, including bilateral relations,
@@ -139,7 +200,7 @@
             <h3>Regional</h3>
             <p class="chapter-count">
               <span data-chapter-count="Regional">6</span> records /
-              <span data-chapter-pages="Regional">252</span> pages
+              <span data-chapter-pages="Regional">258</span> pages
             </p>
             <p>
               Region-wide source series, cross-border issues, South Asia policy
@@ -197,15 +258,8 @@
           <h2 id="browse-title">South Asia Browse Paths</h2>
         </div>
         <div class="browse-layout">
-          <div class="facet-list" aria-label="Browse facets">
-            <a href="#source-records">By country</a>
-            <a href="#source-records">By chapter</a>
-            <a href="#source-records">By leader</a>
-            <a href="#source-records">By year</a>
-            <a href="#source-records">By source series</a>
-            <a href="#source-records">By FRUS topic</a>
-            <a href="#source-records">By release status</a>
-            <a href="#source-records">By NAID</a>
+          <div id="browse-root" class="browse-root" aria-live="polite">
+            <p class="loading">Loading browse paths...</p>
           </div>
           <div class="browse-note" id="source-records">
             <h3>Chapter-first, source-aware</h3>
@@ -215,7 +269,50 @@
               related NSC meeting folders are assigned to Afghanistan, Pakistan,
               India, or Regional for OCR review.
             </p>
+            <p>
+              Browse buttons apply live filters to the chronological file list, so a
+              country, year, leader, source series, topic, or release status becomes
+              an immediate working set.
+            </p>
           </div>
+        </div>
+      </section>
+
+      <section class="section potential-section" id="potential" aria-labelledby="potential-title">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Source Expansion</p>
+            <h2 id="potential-title">Potential Documents</h2>
+          </div>
+          <a class="section-link" href="#records">Confirmed records</a>
+        </div>
+        <p class="records-intro">
+          Candidate leads from the same wider source families used in the companion
+          archive sites: NARA Catalog source sweeps across Bush 41 collections,
+          Cheney country files, Haass working files, presidential public papers,
+          and related Catalog items. These are not yet promoted into the confirmed
+          chronological record set.
+        </p>
+        <div id="potential-root" class="potential-root" aria-live="polite">
+          <p class="loading">Loading potential South Asia documents...</p>
+        </div>
+      </section>
+
+      <section class="section gaps-section" id="gaps" aria-labelledby="gaps-title">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Compiler Risk</p>
+            <h2 id="gaps-title">Open Source Gaps</h2>
+          </div>
+          <a class="section-link" href="reports/compiler-gap-analysis.md">Gap report</a>
+        </div>
+        <p class="records-intro">
+          A risk-assumed compiler view of the missing work: source pools that can
+          change selection balance, page-level extraction gaps, and candidates
+          that should not be promoted until their evidence is strong enough.
+        </p>
+        <div id="gaps-root" class="gaps-root" aria-live="polite">
+          <p class="loading">Loading compiler gaps...</p>
         </div>
       </section>
 
@@ -387,6 +484,8 @@
       <a href="https://github.com/therealjameswilson/Bush41-SouthAsia">Repository</a>
     </footer>
     <script src="data/memcons.js"></script>
+    <script src="data/potential-documents.js"></script>
+    <script src="data/compiler-gaps.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

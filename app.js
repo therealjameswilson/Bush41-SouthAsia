@@ -704,19 +704,32 @@ function normalizeSeriesName(series = "") {
 }
 
 function cleanFolderTitle(record) {
-  const rawTitle = record.sourceTitle || record.documentTitle || record.title || "";
-  const pieces = rawTitle
+  const source = record.source || {};
+  const identifier = oaId(record);
+  const compactIdentifier = isCompactLocator(identifier) ? identifier : "";
+  const seriesLabels = [source.series, source.fileTitle].map(normalizeSeriesName).filter(Boolean);
+  const sourceTitlePieces = (record.sourceTitle || "")
     .split(";")
     .map((piece) => piece.trim())
     .filter(Boolean)
     .filter((piece) => !/\.pdf$/i.test(piece))
-    .filter((piece) => !/^source pages?\b/i.test(piece))
-    .filter((piece) => piece !== record.localIdentifier);
+    .filter((piece) => !/^source pages?\b/i.test(piece));
 
-  if (/^H-Files/i.test(rawTitle)) {
-    return record.documentTitle || record.title || pieces[0] || "";
-  }
-  return pieces.join(", ") || record.documentTitle || record.title || "";
+  const candidates = uniqueInOrder([
+    source.fileUnitTitle,
+    ...sourceTitlePieces,
+    source.fileTitle,
+    record.documentTitle,
+    record.title
+  ]);
+
+  return (
+    candidates.find((candidate) => {
+      if (compactIdentifier && candidate === compactIdentifier) return false;
+      if (seriesLabels.some((series) => sameSourcePart(candidate, series))) return false;
+      return true;
+    }) || ""
+  );
 }
 
 function sourcePageRange(record) {
@@ -736,33 +749,37 @@ function oaId(record) {
   return noteMatch ? noteMatch[1] : "";
 }
 
+function comparableSourcePart(value = "") {
+  return normalizeSeriesName(value)
+    .replace(/\s*;\s*.*$/g, "")
+    .replace(/[.:,]+$/g, "")
+    .toLowerCase();
+}
+
+function sameSourcePart(first = "", second = "") {
+  const left = comparableSourcePart(first);
+  const right = comparableSourcePart(second);
+  return Boolean(left && right && left === right);
+}
+
+function isCompactLocator(value = "") {
+  return /^[A-Z]{0,4}\d[\w-]*$/i.test(String(value).trim());
+}
+
 function frusRepository(record) {
   const sourceText = `${record.source?.name || ""} ${record.source?.series || ""} ${record.sourceNote || ""}`;
   if (/Brent Scowcroft|Scowcroft/i.test(sourceText)) {
-    return "George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection";
+    return "George H.W. Bush Library, Brent Scowcroft Papers";
   }
   if (/National Security Council|H-Files|NSC/i.test(sourceText)) {
-    return "George H.W. Bush Library, Bush Presidential Records, National Security Council";
+    return "George H.W. Bush Library, National Security Council";
   }
   return record.source?.referenceUnit || record.source?.name || "Repository not yet identified";
 }
 
 function frusSeriesParts(record) {
   const source = record.source || {};
-  const sourceText = `${source.name || ""} ${source.series || ""} ${record.sourceTitle || ""} ${record.type || ""}`;
-
-  if (/Brent Scowcroft|Scowcroft/i.test(sourceText)) {
-    const typeText = `${record.type || ""} ${record.title || ""}`;
-    const isTelcon = /telcon|telephone/i.test(typeText);
-    const isMemcon = !isTelcon && /memcon|meeting/i.test(typeText);
-    return uniqueInOrder([
-      "Presidential Correspondence Files",
-      isTelcon ? "Presidential Telcon Files" : "",
-      isMemcon ? "Presidential Memcon Files" : ""
-    ]);
-  }
-
-  return uniqueInOrder([normalizeSeriesName(source.series)]);
+  return uniqueInOrder([normalizeSeriesName(source.series || source.fileTitle || "")]);
 }
 
 function frusLocatorParts(record) {
@@ -772,8 +789,8 @@ function frusLocatorParts(record) {
   const folderTitle = cleanFolderTitle(record);
   const pages = sourcePageRange(record);
 
-  if (identifier) locator.push(`OA/ID ${identifier}`);
   if (folderTitle) locator.push(folderTitle);
+  if (isCompactLocator(identifier)) locator.push(identifier);
   if (pages) locator.push(`source pages ${pages}`);
   return locator;
 }
@@ -781,8 +798,9 @@ function frusLocatorParts(record) {
 function frusReleaseSentence(record) {
   const status = record.releaseStatus || "Release status not yet recorded";
   if (/declassified/i.test(status)) return "Declassified.";
+  if (/unrestricted/i.test(status)) return "Unrestricted.";
   if (/full/i.test(status)) return "Full release.";
-  if (/partial/i.test(status)) return `Partial release: ${status}.`;
+  if (/partial/i.test(status)) return "Partial release.";
   if (/restricted|withheld|denied|possibly|excised/i.test(status)) return `Access restriction: ${status}.`;
   if (/unknown/i.test(status)) return "Release status not determined.";
   return `${status}.`;
@@ -820,11 +838,6 @@ function duplicateProvenanceSentence(record) {
 }
 
 function generateFrusSourceNote(record) {
-  if (record.provenanceNote && record.sourceNote && !/https?:\/\//.test(record.sourceNote)) {
-    return record.sourceNote;
-  }
-
-  const source = record.source || {};
   const sourcePath = uniqueInOrder([
     frusRepository(record),
     ...frusSeriesParts(record),
@@ -833,15 +846,7 @@ function generateFrusSourceNote(record) {
 
   return [
     `Source: ${sourcePath || "Provenance pending"}.`,
-    frusReleaseSentence(record),
-    foiaSentence(record),
-    frusExtentSentence(record),
-    record.naid && !record.naid.startsWith("local-") ? `NAID ${record.naid}.` : "",
-    record.catalogUrl && !record.naid?.startsWith("local-") ? `Catalog: ${record.catalogUrl}.` : "",
-    source.objectFilename ? `Digital object: ${source.objectFilename}.` : "",
-    record.pdfUrl ? `Digital copy: ${record.pdfUrl}.` : "",
-    source.seriesUrl ? `Series: ${source.seriesUrl}.` : "",
-    duplicateProvenanceSentence(record)
+    frusReleaseSentence(record)
   ]
     .filter(Boolean)
     .join(" ");

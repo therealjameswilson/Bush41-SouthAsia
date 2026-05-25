@@ -1,7 +1,10 @@
 {
-  "generatedAt": "2026-05-23T14:09:26.171Z",
-  "records": 66,
-  "sourceNotesWithUrls": 0,
-  "provenanceNotesWithUrls": 46,
-  "catalogDerivedSourceNotes": 54
+  "generatedAt": "2026-05-25T11:30:19.223Z",
+  "basis": "Visible Source Notes follow the published FRUS pattern: repository/collection/series/file or folder locator, followed by release/access facts when known. Catalog URLs, NAIDs, object filenames, page-count ledgers, and table-row research metadata remain in provenanceNote/provenanceLinks.",
+  "memconRecords": 66,
+  "potentialDocumentLeads": 40,
+  "visibleSourceNotesWithStyleIssues": 0,
+  "visibleStyleIssuesByType": {},
+  "provenanceNotesWithUrls": 72,
+  "recordsWithCatalogDerivedProvenance": 80
 }

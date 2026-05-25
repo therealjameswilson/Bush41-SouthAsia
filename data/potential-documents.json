@@ -44,12 +44,23 @@
       "fileNaid": "2554877"
     },
     "rationale": "Matched Afghan policy in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Possibly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Working Files, Richard N. Haass' Working Files. NAID 470426597. Restricted - Possibly. Digital object: 41-bpr-nsc-haass_working-cf01304-011.pdf. Catalog: https://catalog.archives.gov/id/470426597.",
+    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Working Files, Working Files - Afghanistan 1989-1992 [2]. Access restriction: Restricted - Possibly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Afghanistan",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Working Files, Richard N. Haass' Working Files. NAID 470426597. Restricted - Possibly. Digital object: 41-bpr-nsc-haass_working-cf01304-011.pdf. Catalog: https://catalog.archives.gov/id/470426597.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/470426597",
+      "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/working_2554877/41-bpr-nsc-haass_working-cf01304-011.pdf",
+      "https://catalog.archives.gov/id/2163580"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-645607685",
@@ -98,12 +109,22 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched Afghanistan, Afghan policy in a Bush 41-era Catalog search. Has an online digital object. Access status: Unrestricted.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607685. Unrestricted. Digital object: 41-bpr-dhm-cheney-country-31827-001.pdf. Catalog: https://catalog.archives.gov/id/645607685.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan. Unrestricted.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Afghanistan",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607685. Unrestricted. Digital object: 41-bpr-dhm-cheney-country-31827-001.pdf. Catalog: https://catalog.archives.gov/id/645607685.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/645607685",
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31827-001.pdf",
+      "https://catalog.archives.gov/id/284825748"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-470426255",
@@ -152,12 +173,23 @@
       "fileNaid": "2554866"
     },
     "rationale": "Matched Afghanistan, Afghan policy in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Possibly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, Richard N. Haass' Meeting Files. NAID 470426255. Restricted - Possibly. Digital object: 41-bpr-nsc-haass_meeting-cf01447-013.pdf. Catalog: https://catalog.archives.gov/id/470426255.",
+    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, Afghanistan - Charles. Access restriction: Restricted - Possibly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Afghanistan",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, Richard N. Haass' Meeting Files. NAID 470426255. Restricted - Possibly. Digital object: 41-bpr-nsc-haass_meeting-cf01447-013.pdf. Catalog: https://catalog.archives.gov/id/470426255.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/470426255",
+      "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01447-013.pdf",
+      "https://catalog.archives.gov/id/2163580"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-645607321",
@@ -206,12 +238,23 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched Afghanistan, Afghan policy in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607321. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31812-001.pdf. Catalog: https://catalog.archives.gov/id/645607321.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan [1]. Access restriction: Restricted - Partly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Afghanistan",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607321. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31812-001.pdf. Catalog: https://catalog.archives.gov/id/645607321.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/645607321",
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31812-001.pdf",
+      "https://catalog.archives.gov/id/284825748"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-645607323",
@@ -260,12 +303,23 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched Afghanistan, Afghan policy in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607323. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31812-002.pdf. Catalog: https://catalog.archives.gov/id/645607323.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan [2]. Access restriction: Restricted - Partly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Afghanistan",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607323. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31812-002.pdf. Catalog: https://catalog.archives.gov/id/645607323.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/645607323",
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31812-002.pdf",
+      "https://catalog.archives.gov/id/284825748"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "public-paper-lead-PPP-1992-book1-doc-pg351",
@@ -308,12 +362,20 @@
       "series": "PPP-1992-book1"
     },
     "rationale": "..., Belize, Bolivia, Brazil, China, Colombia, Ecuador, Guatemala, Hong Kong, India , Jamaica, Laos, Malaysia, Mexico, Morocco, Nigeria, Pakistan , Panama, Paraguay, Peru, Thailand, Venezuela. By virtue of the...)(2)(A): Afghanistan , Burma, Iran and Syria. In making these determinations, I have considered the...",
-    "sourceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, February 28, 1992, \"Presidential Determination No. 92-18--Memorandum on Certification for Major Narcotics Producing and Transit Countries\". GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg351.",
+    "sourceNote": "Source: Public Papers of the Presidents of the United States: George H.W. Bush, February 28, 1992, \"Presidential Determination No. 92-18--Memorandum on Certification for Major Narcotics Producing and Transit Countries\", GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg351.",
     "compilerDisposition": "Locator for internal decision file",
     "priorityTier": "Medium",
     "reviewLane": "Afghanistan",
     "selectionAction": "Use to find clearance, certification, sanctions, aid, trade, or congressional-reporting files; promote only if the public text itself is selected.",
-    "selectionRationale": "Public presidential act with likely internal clearance or decision paperwork."
+    "selectionRationale": "Public presidential act with likely internal clearance or decision paperwork.",
+    "provenanceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, February 28, 1992, \"Presidential Determination No. 92-18--Memorandum on Certification for Major Narcotics Producing and Transit Countries\". GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg351.",
+    "provenanceLinks": [
+      "https://www.govinfo.gov/app/details/PPP-1992-book1/PPP-1992-book1-doc-pg351",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book1/html/PPP-1992-book1-doc-pg351.htm",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book1/pdf/PPP-1992-book1-doc-pg351.pdf",
+      "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
+    ],
+    "compilerRisks": []
   },
   {
     "id": "public-paper-lead-PPP-1992-book1-doc-pg579",
@@ -354,12 +416,20 @@
       "series": "PPP-1992-book1"
     },
     "rationale": "... of progress in Afghanistan . The U.N. Secretary-General, Boutros-Ghali, has announced an impartial... Afghanistan , and we view this negotiating process as a result of our sustained support to end more than a...",
-    "sourceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, April 10, 1992, \"The President's News Conference\". GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg579.",
+    "sourceNote": "Source: Public Papers of the Presidents of the United States: George H.W. Bush, April 10, 1992, \"The President's News Conference\", GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg579.",
     "compilerDisposition": "Chronology-only public context",
     "priorityTier": "Low",
     "reviewLane": "Afghanistan",
     "selectionAction": "Keep as context; do not promote unless linked internal policy memoranda are found.",
-    "selectionRationale": "Public Papers item documents public posture or personnel context, not an internal policy decision by itself."
+    "selectionRationale": "Public Papers item documents public posture or personnel context, not an internal policy decision by itself.",
+    "provenanceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, April 10, 1992, \"The President's News Conference\". GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg579.",
+    "provenanceLinks": [
+      "https://www.govinfo.gov/app/details/PPP-1992-book1/PPP-1992-book1-doc-pg579",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book1/html/PPP-1992-book1-doc-pg579.htm",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book1/pdf/PPP-1992-book1-doc-pg579.pdf",
+      "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
+    ],
+    "compilerRisks": []
   },
   {
     "id": "public-paper-lead-PPP-1992-book1-doc-pg820-2",
@@ -400,12 +470,20 @@
       "series": "PPP-1992-book1"
     },
     "rationale": "... America to the Horn of Africa to Afghanistan and Southeast Asia, the U.S. faced Soviet expansionism. Today...",
-    "sourceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, May 27, 1992, \"Remarks at the United States Naval Academy Commencement Ceremony in Annapolis, Maryland\". GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg820-2.",
+    "sourceNote": "Source: Public Papers of the Presidents of the United States: George H.W. Bush, May 27, 1992, \"Remarks at the United States Naval Academy Commencement Ceremony in Annapolis, Maryland\", GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg820-2.",
     "compilerDisposition": "Chronology-only public context",
     "priorityTier": "Low",
     "reviewLane": "Afghanistan",
     "selectionAction": "Keep as context; do not promote unless linked internal policy memoranda are found.",
-    "selectionRationale": "Public Papers item documents public posture or personnel context, not an internal policy decision by itself."
+    "selectionRationale": "Public Papers item documents public posture or personnel context, not an internal policy decision by itself.",
+    "provenanceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, May 27, 1992, \"Remarks at the United States Naval Academy Commencement Ceremony in Annapolis, Maryland\". GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg820-2.",
+    "provenanceLinks": [
+      "https://www.govinfo.gov/app/details/PPP-1992-book1/PPP-1992-book1-doc-pg820-2",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book1/html/PPP-1992-book1-doc-pg820-2.htm",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book1/pdf/PPP-1992-book1-doc-pg820-2.pdf",
+      "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
+    ],
+    "compilerRisks": []
   },
   {
     "id": "public-paper-lead-PPP-1992-book1-doc-pg944",
@@ -446,12 +524,20 @@
       "series": "PPP-1992-book1"
     },
     "rationale": "... unearth information on American POW's and MIA's from 1945 on, and Russian POW's and MIA's from the Afghan ...",
-    "sourceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, June 16, 1992, \"Remarks With President Boris Yeltsin of Russia Announcing Strategic Arms Reductions and an Exchange With Reporters\". GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg944.",
+    "sourceNote": "Source: Public Papers of the Presidents of the United States: George H.W. Bush, June 16, 1992, \"Remarks With President Boris Yeltsin of Russia Announcing Strategic Arms Reductions and an Exchange With Reporters\", GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg944.",
     "compilerDisposition": "Chronology-only public context",
     "priorityTier": "Low",
     "reviewLane": "Afghanistan",
     "selectionAction": "Keep as context; do not promote unless linked internal policy memoranda are found.",
-    "selectionRationale": "Public Papers item documents public posture or personnel context, not an internal policy decision by itself."
+    "selectionRationale": "Public Papers item documents public posture or personnel context, not an internal policy decision by itself.",
+    "provenanceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, June 16, 1992, \"Remarks With President Boris Yeltsin of Russia Announcing Strategic Arms Reductions and an Exchange With Reporters\". GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg944.",
+    "provenanceLinks": [
+      "https://www.govinfo.gov/app/details/PPP-1992-book1/PPP-1992-book1-doc-pg944",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book1/html/PPP-1992-book1-doc-pg944.htm",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book1/pdf/PPP-1992-book1-doc-pg944.pdf",
+      "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
+    ],
+    "compilerRisks": []
   },
   {
     "id": "public-paper-lead-PPP-1992-book1-doc-pg953",
@@ -492,12 +578,20 @@
       "series": "PPP-1992-book1"
     },
     "rationale": "... happened to their loved ones in Afghanistan . While we were having these frank talks, I told President... who are held, allegedly held in Afghanistan are returned. So the heartbreak is on both sides. The...",
-    "sourceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, June 17, 1992, \"The President's News Conference With President Boris Yeltsin of Russia\". GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg953.",
+    "sourceNote": "Source: Public Papers of the Presidents of the United States: George H.W. Bush, June 17, 1992, \"The President's News Conference With President Boris Yeltsin of Russia\", GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg953.",
     "compilerDisposition": "Chronology-only public context",
     "priorityTier": "Low",
     "reviewLane": "Afghanistan",
     "selectionAction": "Keep as context; do not promote unless linked internal policy memoranda are found.",
-    "selectionRationale": "Public Papers item documents public posture or personnel context, not an internal policy decision by itself."
+    "selectionRationale": "Public Papers item documents public posture or personnel context, not an internal policy decision by itself.",
+    "provenanceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, June 17, 1992, \"The President's News Conference With President Boris Yeltsin of Russia\". GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg953.",
+    "provenanceLinks": [
+      "https://www.govinfo.gov/app/details/PPP-1992-book1/PPP-1992-book1-doc-pg953",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book1/html/PPP-1992-book1-doc-pg953.htm",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book1/pdf/PPP-1992-book1-doc-pg953.pdf",
+      "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
+    ],
+    "compilerRisks": []
   },
   {
     "id": "public-paper-lead-PPP-1992-book1-doc-pg1150",
@@ -538,12 +632,20 @@
       "series": "PPP-1992-book1"
     },
     "rationale": "... confined to Europe. The Afghan people have won back their homeland. In Angola and in other African...",
-    "sourceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, July 21, 1992, \"Remarks to Religious and Ethnic Groups in Garfield, New Jersey\". GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg1150.",
+    "sourceNote": "Source: Public Papers of the Presidents of the United States: George H.W. Bush, July 21, 1992, \"Remarks to Religious and Ethnic Groups in Garfield, New Jersey\", GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg1150.",
     "compilerDisposition": "Chronology-only public context",
     "priorityTier": "Low",
     "reviewLane": "Afghanistan",
     "selectionAction": "Keep as context; do not promote unless linked internal policy memoranda are found.",
-    "selectionRationale": "Public Papers item documents public posture or personnel context, not an internal policy decision by itself."
+    "selectionRationale": "Public Papers item documents public posture or personnel context, not an internal policy decision by itself.",
+    "provenanceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, July 21, 1992, \"Remarks to Religious and Ethnic Groups in Garfield, New Jersey\". GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg1150.",
+    "provenanceLinks": [
+      "https://www.govinfo.gov/app/details/PPP-1992-book1/PPP-1992-book1-doc-pg1150",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book1/html/PPP-1992-book1-doc-pg1150.htm",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book1/pdf/PPP-1992-book1-doc-pg1150.pdf",
+      "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
+    ],
+    "compilerRisks": []
   },
   {
     "id": "public-paper-lead-PPP-1992-book2-doc-pg1772",
@@ -584,12 +686,20 @@
       "series": "PPP-1992-book2"
     },
     "rationale": "... Presidential Determination No. 93-3--Memorandum on Trade With Afghanistan October 7, 1992 Memorandum for the Secretary of State Subject: Assistance to and Trade with Afghanistan By virtue of the...(b)), I hereby determine that furnishing assistance to Afghanistan with funds authorized to be...",
-    "sourceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, October 7, 1992, \"Presidential Determination No. 93-3--Memorandum on Trade With Afghanistan\". GovInfo package PPP-1992-book2, granule PPP-1992-book2-doc-pg1772.",
+    "sourceNote": "Source: Public Papers of the Presidents of the United States: George H.W. Bush, October 7, 1992, \"Presidential Determination No. 93-3--Memorandum on Trade With Afghanistan\", GovInfo package PPP-1992-book2, granule PPP-1992-book2-doc-pg1772.",
     "compilerDisposition": "Locator for internal decision file",
     "priorityTier": "Medium",
     "reviewLane": "Afghanistan",
     "selectionAction": "Use to find clearance, certification, sanctions, aid, trade, or congressional-reporting files; promote only if the public text itself is selected.",
-    "selectionRationale": "Public presidential act with likely internal clearance or decision paperwork."
+    "selectionRationale": "Public presidential act with likely internal clearance or decision paperwork.",
+    "provenanceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, October 7, 1992, \"Presidential Determination No. 93-3--Memorandum on Trade With Afghanistan\". GovInfo package PPP-1992-book2, granule PPP-1992-book2-doc-pg1772.",
+    "provenanceLinks": [
+      "https://www.govinfo.gov/app/details/PPP-1992-book2/PPP-1992-book2-doc-pg1772",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book2/html/PPP-1992-book2-doc-pg1772.htm",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book2/pdf/PPP-1992-book2-doc-pg1772.pdf",
+      "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
+    ],
+    "compilerRisks": []
   },
   {
     "id": "catalog-lead-470437053",
@@ -637,12 +747,23 @@
       "fileNaid": "2554843"
     },
     "rationale": "Matched India in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Possibly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Records of the National Security Council (George H. W. Bush Administration), Robert M. Gates' Subject Files, Robert M. Gates' Subject Files. NAID 470437053. Restricted - Possibly. Digital object: 41-bpr-nsc-gates-subj-cf00946-012.pdf. Catalog: https://catalog.archives.gov/id/470437053.",
+    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Robert M. Gates' Subject Files, Pakistan-India. Access restriction: Restricted - Possibly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Pakistan",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Records of the National Security Council (George H. W. Bush Administration), Robert M. Gates' Subject Files, Robert M. Gates' Subject Files. NAID 470437053. Restricted - Possibly. Digital object: 41-bpr-nsc-gates-subj-cf00946-012.pdf. Catalog: https://catalog.archives.gov/id/470437053.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/470437053",
+      "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/gates/subject_2554843/41-bpr-nsc-gates-subj-cf00946-012.pdf",
+      "https://catalog.archives.gov/id/2163580"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-645608235",
@@ -689,12 +810,23 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched Pakistan nuclear in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645608235. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31850-010.pdf. Catalog: https://catalog.archives.gov/id/645608235.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan. Access restriction: Restricted - Partly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Pakistan",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645608235. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31850-010.pdf. Catalog: https://catalog.archives.gov/id/645608235.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/645608235",
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31850-010.pdf",
+      "https://catalog.archives.gov/id/284825748"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-645607905",
@@ -747,12 +879,23 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched Pakistan, India, Kashmir, South Asia in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607905. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31836-005.pdf. Catalog: https://catalog.archives.gov/id/645607905.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [A]. Access restriction: Restricted - Partly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Pakistan",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607905. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31836-005.pdf. Catalog: https://catalog.archives.gov/id/645607905.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/645607905",
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31836-005.pdf",
+      "https://catalog.archives.gov/id/284825748"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-645607531",
@@ -803,12 +946,23 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched Pakistan, Pakistan nuclear, Kashmir in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607531. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31820-001.pdf. Catalog: https://catalog.archives.gov/id/645607531.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [A]. Access restriction: Restricted - Partly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Pakistan",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607531. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31820-001.pdf. Catalog: https://catalog.archives.gov/id/645607531.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/645607531",
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31820-001.pdf",
+      "https://catalog.archives.gov/id/284825748"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-645607533",
@@ -859,12 +1013,23 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched Afghanistan, Pakistan, Pakistan nuclear in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607533. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31820-002.pdf. Catalog: https://catalog.archives.gov/id/645607533.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [B]. Access restriction: Restricted - Partly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Pakistan",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607533. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31820-002.pdf. Catalog: https://catalog.archives.gov/id/645607533.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/645607533",
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31820-002.pdf",
+      "https://catalog.archives.gov/id/284825748"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-645607907",
@@ -919,12 +1084,23 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched Afghanistan, Pakistan, Pakistan nuclear, India, Kashmir in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607907. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31836-006.pdf. Catalog: https://catalog.archives.gov/id/645607907.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [B]. Access restriction: Restricted - Partly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Pakistan",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607907. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31836-006.pdf. Catalog: https://catalog.archives.gov/id/645607907.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/645607907",
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31836-006.pdf",
+      "https://catalog.archives.gov/id/284825748"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-323150513",
@@ -973,12 +1149,23 @@
       "fileNaid": "578973"
     },
     "rationale": "Matched Pakistan nuclear, South Asia in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Possibly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Records of the White House Office of Speechwriting (George H. W. Bush Administration), Speech Draft Files, Speech Draft Files. NAID 323150513. Restricted - Possibly. Digital object: 41-bpr-speech-draft-chron-13490-003_323150513.pdf. Catalog: https://catalog.archives.gov/id/323150513.",
+    "sourceNote": "Source: George H.W. Bush Library, White House Office of Speechwriting, Speech Draft Files, Bhutto Departure 6/6/89. Access restriction: Restricted - Possibly.",
     "compilerDisposition": "Locator/context lead",
     "priorityTier": "Low",
     "reviewLane": "Pakistan",
     "selectionAction": "Use only to locate event files or related internal memoranda.",
-    "selectionRationale": "Event, speech, personnel, or photograph records are not primary policy documents without companion internal files."
+    "selectionRationale": "Event, speech, personnel, or photograph records are not primary policy documents without companion internal files.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Records of the White House Office of Speechwriting (George H. W. Bush Administration), Speech Draft Files, Speech Draft Files. NAID 323150513. Restricted - Possibly. Digital object: 41-bpr-speech-draft-chron-13490-003_323150513.pdf. Catalog: https://catalog.archives.gov/id/323150513.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/323150513",
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-spe/speechwriting_draft_chron_578973/41-bpr-speech-draft-chron-13490-003_323150513.pdf",
+      "https://catalog.archives.gov/id/578954"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-323152491",
@@ -1027,12 +1214,23 @@
       "fileNaid": "579003"
     },
     "rationale": "Matched Pakistan nuclear, South Asia in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Possibly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Records of the White House Office of Speechwriting (George H. W. Bush Administration), Speech Backup Chronological Files, Speech Backup Chronological Files. NAID 323152491. Restricted - Possibly. Digital object: 41-bpr-speech-backup-chron-13671-005_323152491.pdf. Catalog: https://catalog.archives.gov/id/323152491.",
+    "sourceNote": "Source: George H.W. Bush Library, White House Office of Speechwriting, Speech Backup Chronological Files, Departure Statement for Prime Minister Bhutto 6/6/89 [OA 6264]. Access restriction: Restricted - Possibly.",
     "compilerDisposition": "Locator/context lead",
     "priorityTier": "Low",
     "reviewLane": "Pakistan",
     "selectionAction": "Use only to locate event files or related internal memoranda.",
-    "selectionRationale": "Event, speech, personnel, or photograph records are not primary policy documents without companion internal files."
+    "selectionRationale": "Event, speech, personnel, or photograph records are not primary policy documents without companion internal files.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Records of the White House Office of Speechwriting (George H. W. Bush Administration), Speech Backup Chronological Files, Speech Backup Chronological Files. NAID 323152491. Restricted - Possibly. Digital object: 41-bpr-speech-backup-chron-13671-005_323152491.pdf. Catalog: https://catalog.archives.gov/id/323152491.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/323152491",
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-spe/speechwriting_backup_chron_579003/41-bpr-speech-backup-chron-13671-005_323152491.pdf",
+      "https://catalog.archives.gov/id/578954"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "public-paper-lead-PPP-1992-book1-doc-pg1118",
@@ -1073,12 +1271,20 @@
       "series": "PPP-1992-book1"
     },
     "rationale": "... Nomination of John Cameron Monjo To Be United States Ambassador to Pakistan July 14, 1992 The President today announced his intention to nominate John Cameron Monjo, of Maryland, a career member of the... Islamic Republic of Pakistan . He would succeed Nicholas Platt. Since 1989 Ambassador Monjo has served as...",
-    "sourceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, July 14, 1992, \"Nomination of John Cameron Monjo To Be United States Ambassador to Pakistan\". GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg1118.",
+    "sourceNote": "Source: Public Papers of the Presidents of the United States: George H.W. Bush, July 14, 1992, \"Nomination of John Cameron Monjo To Be United States Ambassador to Pakistan\", GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg1118.",
     "compilerDisposition": "Chronology-only public context",
     "priorityTier": "Low",
     "reviewLane": "Pakistan",
     "selectionAction": "Keep as context; do not promote unless linked internal policy memoranda are found.",
-    "selectionRationale": "Public Papers item documents public posture or personnel context, not an internal policy decision by itself."
+    "selectionRationale": "Public Papers item documents public posture or personnel context, not an internal policy decision by itself.",
+    "provenanceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, July 14, 1992, \"Nomination of John Cameron Monjo To Be United States Ambassador to Pakistan\". GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg1118.",
+    "provenanceLinks": [
+      "https://www.govinfo.gov/app/details/PPP-1992-book1/PPP-1992-book1-doc-pg1118",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book1/html/PPP-1992-book1-doc-pg1118.htm",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book1/pdf/PPP-1992-book1-doc-pg1118.pdf",
+      "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
+    ],
+    "compilerRisks": []
   },
   {
     "id": "public-paper-lead-PPP-1992-book2-doc-pg1729",
@@ -1119,12 +1325,20 @@
       "series": "PPP-1992-book2"
     },
     "rationale": "... Presidential Determination No. 92-49--Memorandum on Disaster Assistance for Pakistan September 30... Determination to Drawdown DOD Stocks for Disaster Assistance for Pakistan Pursuant to the authority vested in me... Defense, and military education and training, for the purpose of providing disaster assistance in Pakistan ...",
-    "sourceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, September 30, 1992, \"Presidential Determination No. 92-49--Memorandum on Disaster Assistance for Pakistan\". GovInfo package PPP-1992-book2, granule PPP-1992-book2-doc-pg1729.",
+    "sourceNote": "Source: Public Papers of the Presidents of the United States: George H.W. Bush, September 30, 1992, \"Presidential Determination No. 92-49--Memorandum on Disaster Assistance for Pakistan\", GovInfo package PPP-1992-book2, granule PPP-1992-book2-doc-pg1729.",
     "compilerDisposition": "Locator for internal decision file",
     "priorityTier": "Medium",
     "reviewLane": "Pakistan",
     "selectionAction": "Use to find clearance, certification, sanctions, aid, trade, or congressional-reporting files; promote only if the public text itself is selected.",
-    "selectionRationale": "Public presidential act with likely internal clearance or decision paperwork."
+    "selectionRationale": "Public presidential act with likely internal clearance or decision paperwork.",
+    "provenanceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, September 30, 1992, \"Presidential Determination No. 92-49--Memorandum on Disaster Assistance for Pakistan\". GovInfo package PPP-1992-book2, granule PPP-1992-book2-doc-pg1729.",
+    "provenanceLinks": [
+      "https://www.govinfo.gov/app/details/PPP-1992-book2/PPP-1992-book2-doc-pg1729",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book2/html/PPP-1992-book2-doc-pg1729.htm",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book2/pdf/PPP-1992-book2-doc-pg1729.pdf",
+      "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
+    ],
+    "compilerRisks": []
   },
   {
     "id": "public-paper-lead-PPP-1992-book2-doc-pg2264",
@@ -1167,12 +1381,20 @@
       "series": "PPP-1992-book2"
     },
     "rationale": "... with India and Pakistan in the hope of stemming a nuclear [[Page 2265]] arms race in South Asia ...",
-    "sourceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, January 19, 1993, \"Letter to Congressional Leaders Reporting on Nuclear Nonproliferation\". GovInfo package PPP-1992-book2, granule PPP-1992-book2-doc-pg2264.",
+    "sourceNote": "Source: Public Papers of the Presidents of the United States: George H.W. Bush, January 19, 1993, \"Letter to Congressional Leaders Reporting on Nuclear Nonproliferation\", GovInfo package PPP-1992-book2, granule PPP-1992-book2-doc-pg2264.",
     "compilerDisposition": "Locator for internal decision file",
     "priorityTier": "Medium",
     "reviewLane": "Pakistan",
     "selectionAction": "Use to find clearance, certification, sanctions, aid, trade, or congressional-reporting files; promote only if the public text itself is selected.",
-    "selectionRationale": "Public presidential act with likely internal clearance or decision paperwork."
+    "selectionRationale": "Public presidential act with likely internal clearance or decision paperwork.",
+    "provenanceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, January 19, 1993, \"Letter to Congressional Leaders Reporting on Nuclear Nonproliferation\". GovInfo package PPP-1992-book2, granule PPP-1992-book2-doc-pg2264.",
+    "provenanceLinks": [
+      "https://www.govinfo.gov/app/details/PPP-1992-book2/PPP-1992-book2-doc-pg2264",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book2/html/PPP-1992-book2-doc-pg2264.htm",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book2/pdf/PPP-1992-book2-doc-pg2264.pdf",
+      "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
+    ],
+    "compilerRisks": []
   },
   {
     "id": "catalog-lead-645607415",
@@ -1221,12 +1443,23 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched India, Kashmir in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607415. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31815-004.pdf. Catalog: https://catalog.archives.gov/id/645607415.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India. Access restriction: Restricted - Partly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "India",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607415. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31815-004.pdf. Catalog: https://catalog.archives.gov/id/645607415.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/645607415",
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31815-004.pdf",
+      "https://catalog.archives.gov/id/284825748"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-645608141",
@@ -1273,12 +1506,23 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched South Asia in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645608141. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31847-001.pdf. Catalog: https://catalog.archives.gov/id/645608141.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [1]. Access restriction: Restricted - Partly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "India",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645608141. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31847-001.pdf. Catalog: https://catalog.archives.gov/id/645608141.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/645608141",
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31847-001.pdf",
+      "https://catalog.archives.gov/id/284825748"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-645607135",
@@ -1325,12 +1569,23 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched South Asia in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607135. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31802-007.pdf. Catalog: https://catalog.archives.gov/id/645607135.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [1]. Access restriction: Restricted - Partly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "India",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607135. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31802-007.pdf. Catalog: https://catalog.archives.gov/id/645607135.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/645607135",
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31802-007.pdf",
+      "https://catalog.archives.gov/id/284825748"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-645608143",
@@ -1379,12 +1634,23 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched India, South Asia in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645608143. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31847-002.pdf. Catalog: https://catalog.archives.gov/id/645608143.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [2]. Access restriction: Restricted - Partly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "India",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645608143. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31847-002.pdf. Catalog: https://catalog.archives.gov/id/645608143.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/645608143",
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31847-002.pdf",
+      "https://catalog.archives.gov/id/284825748"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-645607137",
@@ -1431,12 +1697,23 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched South Asia in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607137. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31802-008.pdf. Catalog: https://catalog.archives.gov/id/645607137.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [2]. Access restriction: Restricted - Partly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "India",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607137. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31802-008.pdf. Catalog: https://catalog.archives.gov/id/645607137.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/645607137",
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31802-008.pdf",
+      "https://catalog.archives.gov/id/284825748"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-645607805",
@@ -1483,12 +1760,23 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched India in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607805. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31832-001.pdf. Catalog: https://catalog.archives.gov/id/645607805.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [A]. Access restriction: Restricted - Partly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "India",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607805. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31832-001.pdf. Catalog: https://catalog.archives.gov/id/645607805.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/645607805",
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31832-001.pdf",
+      "https://catalog.archives.gov/id/284825748"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-645607807",
@@ -1535,12 +1823,23 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched India in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607807. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31832-002.pdf. Catalog: https://catalog.archives.gov/id/645607807.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [B]. Access restriction: Restricted - Partly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "India",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645607807. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31832-002.pdf. Catalog: https://catalog.archives.gov/id/645607807.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/645607807",
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31832-002.pdf",
+      "https://catalog.archives.gov/id/284825748"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "public-paper-lead-PPP-1992-book1-doc-pg302",
@@ -1581,12 +1880,20 @@
       "series": "PPP-1992-book1"
     },
     "rationale": "... Nomination of Thomas R. Pickering To Be United States Ambassador to India February 24, 1992 The President today announced his intention to nominate Thomas R. Pickering, of New Jersey, to be Ambassador Extraordinary and Plenipotentiary of the United States of America to India . He would succeed William Clark, Jr...",
-    "sourceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, February 24, 1992, \"Nomination of Thomas R. Pickering To Be United States Ambassador to India\". GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg302.",
+    "sourceNote": "Source: Public Papers of the Presidents of the United States: George H.W. Bush, February 24, 1992, \"Nomination of Thomas R. Pickering To Be United States Ambassador to India\", GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg302.",
     "compilerDisposition": "Chronology-only public context",
     "priorityTier": "Low",
     "reviewLane": "India",
     "selectionAction": "Keep as context; do not promote unless linked internal policy memoranda are found.",
-    "selectionRationale": "Public Papers item documents public posture or personnel context, not an internal policy decision by itself."
+    "selectionRationale": "Public Papers item documents public posture or personnel context, not an internal policy decision by itself.",
+    "provenanceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, February 24, 1992, \"Nomination of Thomas R. Pickering To Be United States Ambassador to India\". GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg302.",
+    "provenanceLinks": [
+      "https://www.govinfo.gov/app/details/PPP-1992-book1/PPP-1992-book1-doc-pg302",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book1/html/PPP-1992-book1-doc-pg302.htm",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book1/pdf/PPP-1992-book1-doc-pg302.pdf",
+      "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
+    ],
+    "compilerRisks": []
   },
   {
     "id": "catalog-lead-470426145",
@@ -1633,12 +1940,23 @@
       "fileNaid": "2554865"
     },
     "rationale": "Matched Kashmir in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Possibly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Correspondence Files, Richard N. Haass' Correspondence Files. NAID 470426145. Restricted - Possibly. Digital object: 41-bpr-nsc-haass_correspondence-cf01479-008.pdf. Catalog: https://catalog.archives.gov/id/470426145.",
+    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Correspondence Files, Letters on Kashmir. Access restriction: Restricted - Possibly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "Critical",
     "reviewLane": "Regional: Kashmir",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Correspondence Files, Richard N. Haass' Correspondence Files. NAID 470426145. Restricted - Possibly. Digital object: 41-bpr-nsc-haass_correspondence-cf01479-008.pdf. Catalog: https://catalog.archives.gov/id/470426145.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/470426145",
+      "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/correspondence_2554865/41-bpr-nsc-haass_correspondence-cf01479-008.pdf",
+      "https://catalog.archives.gov/id/2163580"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-645608041",
@@ -1685,12 +2003,23 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched Bangladesh in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645608041. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31842-009.pdf. Catalog: https://catalog.archives.gov/id/645608041.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Bangladesh. Access restriction: Restricted - Partly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "Critical",
     "reviewLane": "Regional: Bangladesh",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Richard Cheney Collection, Country Files, Country Files. NAID 645608041. Restricted - Partly. Digital object: 41-bpr-dhm-cheney-country-31842-009.pdf. Catalog: https://catalog.archives.gov/id/645608041.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/645608041",
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31842-009.pdf",
+      "https://catalog.archives.gov/id/284825748"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-286185941",
@@ -1737,12 +2066,23 @@
       "fileNaid": "2108210"
     },
     "rationale": "Matched Bangladesh in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Possibly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Records of the White House Office of Presidential Personnel (George H. W. Bush Administration), Katja Bullock Appointment Files, Katja Bullock Appointment Files. NAID 286185941. Restricted - Possibly. Digital object: 41-bpr-pers-bullock-appt-07091-008.pdf. Catalog: https://catalog.archives.gov/id/286185941.",
+    "sourceNote": "Source: George H.W. Bush Library, White House Office of Presidential Personnel, Katja Bullock Appointment Files, Milam, William - AMB to Bangladesh. Access restriction: Restricted - Possibly.",
     "compilerDisposition": "Review lead",
     "priorityTier": "Medium",
     "reviewLane": "Regional",
     "selectionAction": "Review before promotion.",
-    "selectionRationale": "Catalog match is potentially relevant but needs document-level confirmation."
+    "selectionRationale": "Catalog match is potentially relevant but needs document-level confirmation.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Records of the White House Office of Presidential Personnel (George H. W. Bush Administration), Katja Bullock Appointment Files, Katja Bullock Appointment Files. NAID 286185941. Restricted - Possibly. Digital object: 41-bpr-pers-bullock-appt-07091-008.pdf. Catalog: https://catalog.archives.gov/id/286185941.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/286185941",
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/foia/2000/Batch0001/41-bpr-pers-bullock-appt-07091-008.pdf",
+      "https://catalog.archives.gov/id/650839"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-470426225",
@@ -1789,12 +2129,23 @@
       "fileNaid": "2554866"
     },
     "rationale": "Matched Kashmir in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Possibly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, Richard N. Haass' Meeting Files. NAID 470426225. Restricted - Possibly. Digital object: 41-bpr-nsc-haass_meeting-cf01625-014.pdf. Catalog: https://catalog.archives.gov/id/470426225.",
+    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Teleconference - March 26, 1990 Re: Kashmir. Access restriction: Restricted - Possibly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "Critical",
     "reviewLane": "Regional: Kashmir",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, Richard N. Haass' Meeting Files. NAID 470426225. Restricted - Possibly. Digital object: 41-bpr-nsc-haass_meeting-cf01625-014.pdf. Catalog: https://catalog.archives.gov/id/470426225.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/470426225",
+      "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-014.pdf",
+      "https://catalog.archives.gov/id/2163580"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "catalog-lead-470426266",
@@ -1841,12 +2192,23 @@
       "fileNaid": "2554866"
     },
     "rationale": "Matched Bangladesh in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Possibly.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, Richard N. Haass' Meeting Files. NAID 470426266. Restricted - Possibly. Digital object: 41-bpr-nsc-haass_meeting-cf01447-024.pdf. Catalog: https://catalog.archives.gov/id/470426266.",
+    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, President's Meeting with Prime Minister Zia of Bangladesh - March 19, 1992. Access restriction: Restricted - Possibly.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "Critical",
     "reviewLane": "Regional: Bangladesh",
     "selectionAction": "Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.",
-    "selectionRationale": "Internal staff or defense source file can change the document-selection balance."
+    "selectionRationale": "Internal staff or defense source file can change the document-selection balance.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Records of the National Security Council (George H. W. Bush Administration), Richard N. Haass' Meeting Files, Richard N. Haass' Meeting Files. NAID 470426266. Restricted - Possibly. Digital object: 41-bpr-nsc-haass_meeting-cf01447-024.pdf. Catalog: https://catalog.archives.gov/id/470426266.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/470426266",
+      "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01447-024.pdf",
+      "https://catalog.archives.gov/id/2163580"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "declassification-review",
+      "page-count-gap"
+    ]
   },
   {
     "id": "public-paper-lead-PPP-1992-book1-doc-pg473",
@@ -1887,12 +2249,20 @@
       "series": "PPP-1992-book1"
     },
     "rationale": "... Khaleda Zia of Bangladesh March 19, 1992 The President and Prime Minister Zia of Bangladesh met for... to strengthening democracy and promoting economic development in Bangladesh . The two leaders recalled Bangladesh 's contribution to the successful fight against Iraqi aggression. The President said we will...",
-    "sourceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, March 19, 1992, \"Statement by Press Secretary Fitzwater on the President's Meeting With Prime Minister Begum Khaleda Zia of Bangladesh\". GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg473.",
+    "sourceNote": "Source: Public Papers of the Presidents of the United States: George H.W. Bush, March 19, 1992, \"Statement by Press Secretary Fitzwater on the President's Meeting With Prime Minister Begum Khaleda Zia of Bangladesh\", GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg473.",
     "compilerDisposition": "Review lead",
     "priorityTier": "Medium",
     "reviewLane": "Regional",
     "selectionAction": "Review before promotion.",
-    "selectionRationale": "Catalog match is potentially relevant but needs document-level confirmation."
+    "selectionRationale": "Catalog match is potentially relevant but needs document-level confirmation.",
+    "provenanceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, March 19, 1992, \"Statement by Press Secretary Fitzwater on the President's Meeting With Prime Minister Begum Khaleda Zia of Bangladesh\". GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg473.",
+    "provenanceLinks": [
+      "https://www.govinfo.gov/app/details/PPP-1992-book1/PPP-1992-book1-doc-pg473",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book1/html/PPP-1992-book1-doc-pg473.htm",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book1/pdf/PPP-1992-book1-doc-pg473.pdf",
+      "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
+    ],
+    "compilerRisks": []
   },
   {
     "id": "public-paper-lead-PPP-1992-book1-doc-pg725-2",
@@ -1934,12 +2304,20 @@
       "series": "PPP-1992-book1"
     },
     "rationale": "... Nomination of Teresita Currie Schaffer To Be United States Ambassador to Sri Lanka and Maldives ... the Democratic Socialist Republic of Sri Lanka and to serve concurrently and without additional compensation as Ambassador to the Republic of Maldives . She would succeed Marion V. Creekmore, Jr. Since 1989...",
-    "sourceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, May 7, 1992, \"Nomination of Teresita Currie Schaffer To Be United States Ambassador to Sri Lanka and Maldives\". GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg725-2.",
+    "sourceNote": "Source: Public Papers of the Presidents of the United States: George H.W. Bush, May 7, 1992, \"Nomination of Teresita Currie Schaffer To Be United States Ambassador to Sri Lanka and Maldives\", GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg725-2.",
     "compilerDisposition": "Chronology-only public context",
     "priorityTier": "Low",
     "reviewLane": "Regional",
     "selectionAction": "Keep as context; do not promote unless linked internal policy memoranda are found.",
-    "selectionRationale": "Public Papers item documents public posture or personnel context, not an internal policy decision by itself."
+    "selectionRationale": "Public Papers item documents public posture or personnel context, not an internal policy decision by itself.",
+    "provenanceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, May 7, 1992, \"Nomination of Teresita Currie Schaffer To Be United States Ambassador to Sri Lanka and Maldives\". GovInfo package PPP-1992-book1, granule PPP-1992-book1-doc-pg725-2.",
+    "provenanceLinks": [
+      "https://www.govinfo.gov/app/details/PPP-1992-book1/PPP-1992-book1-doc-pg725-2",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book1/html/PPP-1992-book1-doc-pg725-2.htm",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book1/pdf/PPP-1992-book1-doc-pg725-2.pdf",
+      "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
+    ],
+    "compilerRisks": []
   },
   {
     "id": "public-paper-lead-PPP-1992-book2-doc-pg1740",
@@ -1980,12 +2358,20 @@
       "series": "PPP-1992-book2"
     },
     "rationale": "... East/ South Asia --7,000 Latin America/Caribbean--3,500 Unallocated (funded)--1,000 Utilization of the...",
-    "sourceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, October 2, 1992, \"Presidential Determination No. 93-1--Memorandum on Refugee Admissions\". GovInfo package PPP-1992-book2, granule PPP-1992-book2-doc-pg1740.",
+    "sourceNote": "Source: Public Papers of the Presidents of the United States: George H.W. Bush, October 2, 1992, \"Presidential Determination No. 93-1--Memorandum on Refugee Admissions\", GovInfo package PPP-1992-book2, granule PPP-1992-book2-doc-pg1740.",
     "compilerDisposition": "Locator for internal decision file",
     "priorityTier": "Medium",
     "reviewLane": "Regional",
     "selectionAction": "Use to find clearance, certification, sanctions, aid, trade, or congressional-reporting files; promote only if the public text itself is selected.",
-    "selectionRationale": "Public presidential act with likely internal clearance or decision paperwork."
+    "selectionRationale": "Public presidential act with likely internal clearance or decision paperwork.",
+    "provenanceNote": "Potential public-paper reference. Public Papers of the Presidents of the United States: George H. W. Bush, October 2, 1992, \"Presidential Determination No. 93-1--Memorandum on Refugee Admissions\". GovInfo package PPP-1992-book2, granule PPP-1992-book2-doc-pg1740.",
+    "provenanceLinks": [
+      "https://www.govinfo.gov/app/details/PPP-1992-book2/PPP-1992-book2-doc-pg1740",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book2/html/PPP-1992-book2-doc-pg1740.htm",
+      "https://www.govinfo.gov/content/pkg/PPP-1992-book2/pdf/PPP-1992-book2-doc-pg1740.pdf",
+      "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
+    ],
+    "compilerRisks": []
   },
   {
     "id": "catalog-lead-543965098",
@@ -2032,11 +2418,21 @@
       "fileNaid": ""
     },
     "rationale": "Matched Sri Lanka in a Bush 41-era Catalog search. Has an online digital object. Access status: Unrestricted.",
-    "sourceNote": "Potential document lead from the National Archives Catalog. Records of the White House Photograph Office, George H. W. Bush Presidential Photographs. NAID 543965098. Unrestricted. Digital object: 41-AV-P37850-11021992.jpg. Catalog: https://catalog.archives.gov/id/543965098.",
+    "sourceNote": "Source: George H.W. Bush Library, White House Photograph Office, George H. W. Bush Presidential Photographs, WHPO-P37850. Unrestricted.",
     "compilerDisposition": "Locator/context lead",
     "priorityTier": "Low",
     "reviewLane": "Regional",
     "selectionAction": "Use only to locate event files or related internal memoranda.",
-    "selectionRationale": "Event, speech, personnel, or photograph records are not primary policy documents without companion internal files."
+    "selectionRationale": "Event, speech, personnel, or photograph records are not primary policy documents without companion internal files.",
+    "provenanceNote": "Potential document lead from the National Archives Catalog. Records of the White House Photograph Office, George H. W. Bush Presidential Photographs. NAID 543965098. Unrestricted. Digital object: 41-AV-P37850-11021992.jpg. Catalog: https://catalog.archives.gov/id/543965098.",
+    "provenanceLinks": [
+      "https://catalog.archives.gov/id/543965098",
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whpo/186364/P37850/41-AV-P37850-11021992.jpg",
+      "https://catalog.archives.gov/id/1082"
+    ],
+    "compilerRisks": [
+      "catalog-derived-source-note",
+      "page-count-gap"
+    ]
   }
 ]

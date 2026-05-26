@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-05-26T01:50:58.110Z",
+  "generatedAt": "2026-05-26T02:01:33.176Z",
   "sourceSeries": {
     "title": "Presidential Daily Diary and Presidential Daily Backup Materials",
     "naid": "186322",
     "catalogUrl": "https://catalog.archives.gov/id/186322"
   },
   "presidentialMeetingsAndCallsChecked": 30,
-  "recordsWithDailyDiaryReferences": 26,
-  "referencesAdded": 39,
+  "recordsWithDailyDiaryReferences": 23,
+  "referencesAdded": 35,
   "recordsWithoutMatchedDailyDiaryReferences": [
     {
       "id": "scowcroft-366551670-130-mikhail-gorbachev-memcon",
@@ -21,6 +21,21 @@
         "Union",
         "Afghan",
         "USSR"
+      ]
+    },
+    {
+      "id": "scowcroft-366551660-111-benazir-bhutto-memcon",
+      "date": "1989-02-25",
+      "title": "Welcoming Banquet in Beijing, China",
+      "candidateTerms": [
+        "Benazir",
+        "Bhutto",
+        "Pakistan",
+        "Pakistani",
+        "Welcoming",
+        "Banquet",
+        "Beijing",
+        "China"
       ]
     },
     {
@@ -38,6 +53,21 @@
       ]
     },
     {
+      "id": "scowcroft-366551687-56-benazir-bhutto-telcon",
+      "date": "1989-06-09",
+      "title": "Telephone Conversation with President Mohammad Hosni Mubarak of Egypt (4",
+      "candidateTerms": [
+        "Benazir",
+        "Bhutto",
+        "Pakistan",
+        "Pakistani",
+        "Mohammad",
+        "Hosni",
+        "Mubarak",
+        "Egypt"
+      ]
+    },
+    {
       "id": "bush-library-428079855",
       "date": "1989-02-23",
       "title": "President's Meeting with President Ramaswamy Iyer Venkataraman of India, February 23, 1989",
@@ -50,11 +80,24 @@
       ]
     },
     {
+      "id": "bush-library-428081443",
+      "date": "1991-02-08",
+      "title": "Telcon with Prime Minister Shankar of India on February 8, 1991",
+      "candidateTerms": [
+        "Siddhartha",
+        "Shankar",
+        "Ray",
+        "India",
+        "Indian"
+      ]
+    },
+    {
       "id": "bush-library-428082103",
       "date": "1991-12-15",
       "title": "Telcon with Prime Minister Rao of India on December 15, 1991",
       "candidateTerms": [
         "Narasimha",
+        "Rao",
         "India",
         "Indian"
       ]
@@ -71,6 +114,20 @@
         "Afghanistan",
         "Turkey",
         "Afghan"
+      ],
+      "personTerms": [
+        "Turgut",
+        "Ozal"
+      ],
+      "countryTerms": [
+        "Afghanistan",
+        "Turkey",
+        "Afghan"
+      ],
+      "titleTerms": [
+        "Turgut",
+        "Ozal",
+        "Turkey"
       ],
       "references": [
         {
@@ -94,6 +151,20 @@
         "Saudi",
         "Arabia",
         "Afghan"
+      ],
+      "personTerms": [
+        "Fahd"
+      ],
+      "countryTerms": [
+        "Afghanistan",
+        "Saudi",
+        "Arabia",
+        "Afghan"
+      ],
+      "titleTerms": [
+        "Fahd",
+        "Saudi",
+        "Arabia"
       ],
       "references": [
         {
@@ -129,6 +200,21 @@
         "Great",
         "Britain"
       ],
+      "personTerms": [
+        "Margaret",
+        "Thatcher"
+      ],
+      "countryTerms": [
+        "Afghanistan",
+        "Kingdom",
+        "Afghan"
+      ],
+      "titleTerms": [
+        "Margaret",
+        "Thatcher",
+        "Great",
+        "Britain"
+      ],
       "references": [
         {
           "naid": "415890215",
@@ -154,6 +240,22 @@
         "Interim",
         "Government",
         "Sibgahtullah"
+      ],
+      "personTerms": [
+        "Sibghatullah",
+        "Mojaddedi"
+      ],
+      "countryTerms": [
+        "Afghanistan",
+        "Afghan"
+      ],
+      "titleTerms": [
+        "Visit",
+        "Afghanistan",
+        "Interim",
+        "Government",
+        "Sibgahtullah",
+        "Mojaddedi"
       ],
       "references": [
         {
@@ -183,6 +285,21 @@
         "Afghan",
         "USSR"
       ],
+      "personTerms": [
+        "Mikhail",
+        "Gorbachev"
+      ],
+      "countryTerms": [
+        "Afghanistan",
+        "Soviet",
+        "Union",
+        "Afghan"
+      ],
+      "titleTerms": [
+        "Mikhail",
+        "Gorbachev",
+        "USSR"
+      ],
       "references": []
     },
     {
@@ -194,6 +311,19 @@
         "Bhutto",
         "Pakistan",
         "Pakistani"
+      ],
+      "personTerms": [
+        "Benazir",
+        "Bhutto"
+      ],
+      "countryTerms": [
+        "Pakistan",
+        "Pakistani"
+      ],
+      "titleTerms": [
+        "Benazir",
+        "Bhutto",
+        "Pakistan"
       ],
       "references": [
         {
@@ -217,6 +347,21 @@
         "Khan",
         "Pakistan",
         "Pakistani"
+      ],
+      "personTerms": [
+        "Ghulam",
+        "Ishaq",
+        "Khan"
+      ],
+      "countryTerms": [
+        "Pakistan",
+        "Pakistani"
+      ],
+      "titleTerms": [
+        "Ghulam",
+        "Ishaq",
+        "Khan",
+        "Pakistan"
       ],
       "references": [
         {
@@ -251,6 +396,19 @@
         "Pakistan",
         "Pakistani"
       ],
+      "personTerms": [
+        "Benazir",
+        "Bhutto"
+      ],
+      "countryTerms": [
+        "Pakistan",
+        "Pakistani"
+      ],
+      "titleTerms": [
+        "Benazir",
+        "Bhutto",
+        "Pakistan"
+      ],
       "references": [
         {
           "naid": "415889669",
@@ -278,17 +436,21 @@
         "Beijing",
         "China"
       ],
-      "references": [
-        {
-          "naid": "415889671",
-          "title": "[Presidential Daily Backup] 2/25/1989",
-          "matchedTerms": [
-            "Banquet",
-            "Beijing",
-            "China"
-          ]
-        }
-      ]
+      "personTerms": [
+        "Benazir",
+        "Bhutto"
+      ],
+      "countryTerms": [
+        "Pakistan",
+        "Pakistani"
+      ],
+      "titleTerms": [
+        "Welcoming",
+        "Banquet",
+        "Beijing",
+        "China"
+      ],
+      "references": []
     },
     {
       "id": "bush-library-428080031",
@@ -299,6 +461,18 @@
         "Bhutto",
         "Pakistan",
         "Pakistani"
+      ],
+      "personTerms": [
+        "Benazir",
+        "Bhutto"
+      ],
+      "countryTerms": [
+        "Pakistan",
+        "Pakistani"
+      ],
+      "titleTerms": [
+        "Bhutto",
+        "Pakistan"
       ],
       "references": [
         {
@@ -334,6 +508,19 @@
         "Endara",
         "Panama"
       ],
+      "personTerms": [
+        "Benazir",
+        "Bhutto"
+      ],
+      "countryTerms": [
+        "Pakistan",
+        "Pakistani"
+      ],
+      "titleTerms": [
+        "Guillermo",
+        "Endara",
+        "Panama"
+      ],
       "references": []
     },
     {
@@ -348,6 +535,21 @@
         "Pakistani",
         "West",
         "German"
+      ],
+      "personTerms": [
+        "Helmut",
+        "Kohl"
+      ],
+      "countryTerms": [
+        "Pakistan",
+        "Germany",
+        "Pakistani"
+      ],
+      "titleTerms": [
+        "West",
+        "German",
+        "Helmut",
+        "Kohl"
       ],
       "references": [
         {
@@ -376,17 +578,21 @@
         "Mubarak",
         "Egypt"
       ],
-      "references": [
-        {
-          "naid": "415889878",
-          "title": "[Presidential Daily Diary] 6/9/1989",
-          "matchedTerms": [
-            "Hosni",
-            "Mubarak",
-            "Egypt"
-          ]
-        }
-      ]
+      "personTerms": [
+        "Benazir",
+        "Bhutto"
+      ],
+      "countryTerms": [
+        "Pakistan",
+        "Pakistani"
+      ],
+      "titleTerms": [
+        "Mohammad",
+        "Hosni",
+        "Mubarak",
+        "Egypt"
+      ],
+      "references": []
     },
     {
       "id": "bush-library-428080061",
@@ -397,6 +603,18 @@
         "Bhutto",
         "Pakistan",
         "Pakistani"
+      ],
+      "personTerms": [
+        "Benazir",
+        "Bhutto"
+      ],
+      "countryTerms": [
+        "Pakistan",
+        "Pakistani"
+      ],
+      "titleTerms": [
+        "Bhutto",
+        "Pakistan"
       ],
       "references": [
         {
@@ -426,8 +644,18 @@
         "Benazir",
         "Bhutto",
         "Pakistan",
-        "Pakistani",
-        "Phone"
+        "Pakistani"
+      ],
+      "personTerms": [
+        "Benazir",
+        "Bhutto"
+      ],
+      "countryTerms": [
+        "Pakistan",
+        "Pakistani"
+      ],
+      "titleTerms": [
+        "Pakistani"
       ],
       "references": [
         {
@@ -436,8 +664,7 @@
           "matchedTerms": [
             "Benazir",
             "Bhutto",
-            "Pakistan",
-            "Phone"
+            "Pakistan"
           ]
         },
         {
@@ -461,6 +688,18 @@
         "Pakistan",
         "Pakistani"
       ],
+      "personTerms": [
+        "Benazir",
+        "Bhutto"
+      ],
+      "countryTerms": [
+        "Pakistan",
+        "Pakistani"
+      ],
+      "titleTerms": [
+        "Bhutto",
+        "Pakistan"
+      ],
       "references": [
         {
           "naid": "415890168",
@@ -477,25 +716,43 @@
       "date": "1991-01-21",
       "title": "Meeting with Lee Kuan Yew, Senior Minister, Singapore (U)",
       "candidateTerms": [
+        "Lee",
         "Kuan",
+        "Yew",
         "Pakistan",
         "Singapore",
-        "Pakistani",
-        "Senior"
+        "Pakistani"
+      ],
+      "personTerms": [
+        "Lee",
+        "Kuan",
+        "Yew"
+      ],
+      "countryTerms": [
+        "Pakistan",
+        "Singapore",
+        "Pakistani"
+      ],
+      "titleTerms": [
+        "Kuan",
+        "Singapore"
       ],
       "references": [
         {
           "naid": "415891062",
           "title": "[Presidential Daily Diary] 1/21/1991",
           "matchedTerms": [
-            "Singapore",
-            "Senior"
+            "Lee",
+            "Yew",
+            "Singapore"
           ]
         },
         {
           "naid": "415891063",
           "title": "[Presidential Daily Backup] 1/21/1991",
           "matchedTerms": [
+            "Lee",
+            "Yew",
             "Singapore"
           ]
         }
@@ -510,6 +767,18 @@
         "Sharif",
         "Pakistan",
         "Pakistani"
+      ],
+      "personTerms": [
+        "Nawaz",
+        "Sharif"
+      ],
+      "countryTerms": [
+        "Pakistan",
+        "Pakistani"
+      ],
+      "titleTerms": [
+        "Nawaz",
+        "Pakistan"
       ],
       "references": [
         {
@@ -540,6 +809,19 @@
         "Sharif",
         "Pakistan",
         "Pakistani"
+      ],
+      "personTerms": [
+        "Nawaz",
+        "Sharif"
+      ],
+      "countryTerms": [
+        "Pakistan",
+        "Pakistani"
+      ],
+      "titleTerms": [
+        "Nawaz",
+        "Sharif",
+        "Pakistan"
       ],
       "references": [
         {
@@ -572,6 +854,19 @@
         "Ramaswamy",
         "Iyer"
       ],
+      "personTerms": [
+        "Venkataraman"
+      ],
+      "countryTerms": [
+        "India",
+        "Indian"
+      ],
+      "titleTerms": [
+        "Ramaswamy",
+        "Iyer",
+        "Venkataraman",
+        "India"
+      ],
       "references": []
     },
     {
@@ -584,9 +879,6 @@
         "India",
         "China",
         "Indian",
-        "Bush",
-        "General",
-        "Secretary",
         "Central",
         "Committee",
         "Communist",
@@ -594,14 +886,27 @@
         "People",
         "Republic"
       ],
+      "personTerms": [
+        "Zhao",
+        "Ziyang"
+      ],
+      "countryTerms": [
+        "India",
+        "China",
+        "Indian"
+      ],
+      "titleTerms": [
+        "Central",
+        "Committee",
+        "Communist",
+        "Party",
+        "Zhao",
+        "Ziyang",
+        "People",
+        "Republic",
+        "China"
+      ],
       "references": [
-        {
-          "naid": "415889672",
-          "title": "[Presidential Daily Diary] 2/26/1989 [EMPTY]",
-          "matchedTerms": [
-            "Bush"
-          ]
-        },
         {
           "naid": "415889673",
           "title": "[Presidential Daily Backup] 2/26/1989",
@@ -609,9 +914,6 @@
             "Zhao",
             "Ziyang",
             "China",
-            "Bush",
-            "General",
-            "Secretary",
             "Central",
             "Committee",
             "Communist",
@@ -630,8 +932,18 @@
         "Rajiv",
         "Gandhi",
         "India",
-        "Indian",
-        "Phone"
+        "Indian"
+      ],
+      "personTerms": [
+        "Rajiv",
+        "Gandhi"
+      ],
+      "countryTerms": [
+        "India",
+        "Indian"
+      ],
+      "titleTerms": [
+        "Gandhi"
       ],
       "references": [
         {
@@ -639,8 +951,7 @@
           "title": "[Presidential Daily Diary] 6/8/1989",
           "matchedTerms": [
             "Gandhi",
-            "India",
-            "Phone"
+            "India"
           ]
         }
       ]
@@ -654,6 +965,18 @@
         "Gandhi",
         "India",
         "Indian"
+      ],
+      "personTerms": [
+        "Rajiv",
+        "Gandhi"
+      ],
+      "countryTerms": [
+        "India",
+        "Indian"
+      ],
+      "titleTerms": [
+        "Gandhi",
+        "India"
       ],
       "references": [
         {
@@ -676,6 +999,18 @@
         "India",
         "Indian"
       ],
+      "personTerms": [
+        "Rajiv",
+        "Gandhi"
+      ],
+      "countryTerms": [
+        "India",
+        "Indian"
+      ],
+      "titleTerms": [
+        "Gandhi",
+        "India"
+      ],
       "references": [
         {
           "naid": "415890140",
@@ -695,18 +1030,24 @@
       "candidateTerms": [
         "Siddhartha",
         "Shankar",
+        "Ray",
         "India",
         "Indian"
       ],
-      "references": [
-        {
-          "naid": "415891099",
-          "title": "[Presidential Daily Backup] 2/8/1991",
-          "matchedTerms": [
-            "India"
-          ]
-        }
-      ]
+      "personTerms": [
+        "Siddhartha",
+        "Shankar",
+        "Ray"
+      ],
+      "countryTerms": [
+        "India",
+        "Indian"
+      ],
+      "titleTerms": [
+        "Shankar",
+        "India"
+      ],
+      "references": []
     },
     {
       "id": "bush-library-428082103",
@@ -714,8 +1055,20 @@
       "title": "Telcon with Prime Minister Rao of India on December 15, 1991",
       "candidateTerms": [
         "Narasimha",
+        "Rao",
         "India",
         "Indian"
+      ],
+      "personTerms": [
+        "Narasimha",
+        "Rao"
+      ],
+      "countryTerms": [
+        "India",
+        "Indian"
+      ],
+      "titleTerms": [
+        "India"
       ],
       "references": []
     },
@@ -725,8 +1078,20 @@
       "title": "Meeting with Prime Minister Rao of India, January 31, 1992",
       "candidateTerms": [
         "Narasimha",
+        "Rao",
         "India",
         "Indian"
+      ],
+      "personTerms": [
+        "Narasimha",
+        "Rao"
+      ],
+      "countryTerms": [
+        "India",
+        "Indian"
+      ],
+      "titleTerms": [
+        "India"
       ],
       "references": [
         {
@@ -734,6 +1099,7 @@
           "title": "[Presidential Daily Diary] 1/31/1992",
           "matchedTerms": [
             "Narasimha",
+            "Rao",
             "India",
             "Indian"
           ]
@@ -742,6 +1108,7 @@
           "naid": "415891818",
           "title": "[Presidential Daily Backup] 1/31/1992",
           "matchedTerms": [
+            "Rao",
             "India"
           ]
         }
@@ -753,6 +1120,17 @@
       "title": "Meeting with President Mubarak of Egypt (U)",
       "candidateTerms": [
         "Hosni",
+        "Mubarak",
+        "Egypt"
+      ],
+      "personTerms": [
+        "Hosni",
+        "Mubarak"
+      ],
+      "countryTerms": [
+        "Egypt"
+      ],
+      "titleTerms": [
         "Mubarak",
         "Egypt"
       ],
@@ -788,6 +1166,21 @@
         "Bangladesh",
         "Bangladeshi"
       ],
+      "personTerms": [
+        "Hussain",
+        "Muhammad",
+        "Ershad"
+      ],
+      "countryTerms": [
+        "Bangladesh",
+        "Bangladeshi"
+      ],
+      "titleTerms": [
+        "Hussain",
+        "Muhammad",
+        "Ershad",
+        "Bangladesh"
+      ],
       "references": [
         {
           "naid": "415890836",
@@ -816,9 +1209,23 @@
       "title": "Meeting with Prime Minister Khaleda Begum Zia of Bangladesh, March 19, 1992",
       "candidateTerms": [
         "Khaleda",
+        "Zia",
         "Bangladesh",
         "Bangladeshi",
         "Begum"
+      ],
+      "personTerms": [
+        "Khaleda",
+        "Zia"
+      ],
+      "countryTerms": [
+        "Bangladesh",
+        "Bangladeshi"
+      ],
+      "titleTerms": [
+        "Khaleda",
+        "Begum",
+        "Bangladesh"
       ],
       "references": [
         {
@@ -826,6 +1233,7 @@
           "title": "[Presidential Daily Diary] 3/19/1992",
           "matchedTerms": [
             "Khaleda",
+            "Zia",
             "Bangladesh"
           ]
         },
@@ -833,6 +1241,7 @@
           "naid": "415891915",
           "title": "[Presidential Daily Backup] 3/19/1992",
           "matchedTerms": [
+            "Zia",
             "Bangladesh"
           ]
         }

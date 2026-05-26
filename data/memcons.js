@@ -1058,8 +1058,6 @@ window.MEMCONS = [
       "https://catalog.archives.gov/id/470426381",
       "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/pres_mtg_2554869/41-bpr-nsc-haass_pres_mtg-cf01404-028.pdf",
       "https://catalog.archives.gov/id/2163580",
-      "https://catalog.archives.gov/id/415890220",
-      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-11_27_89-12812-011_415890220.pdf",
       "https://catalog.archives.gov/id/415890221",
       "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-11_27_89-12812-012_415890221.pdf"
     ],
@@ -2004,8 +2002,7 @@ window.MEMCONS = [
       "South Asia",
       "Pakistan",
       "Memcon",
-      "Head of state",
-      "Presidential Daily Diary cross-reference"
+      "Head of state"
     ],
     "pageCount": 2,
     "notes": "Extracted from OCR of the Brent Scowcroft Papers Presidential Correspondence Files. Page range is based on detected memorandum-of-conversation headers.",
@@ -2018,30 +2015,9 @@ window.MEMCONS = [
       "https://catalog.archives.gov/id/366551660",
       "documents/pakistan/1989-02-25-bush-benazir-bhutto-memcon-scowcroft.pdf",
       "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91107-001.pdf",
-      "https://catalog.archives.gov/id/4522156",
-      "https://catalog.archives.gov/id/415889671",
-      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-02_25_89-12791-018_415889671.pdf"
+      "https://catalog.archives.gov/id/4522156"
     ],
-    "compilerRisks": [],
-    "dailyDiaryReferences": [
-      {
-        "sourceType": "Presidential Daily Backup",
-        "title": "[Presidential Daily Backup] 2/25/1989",
-        "naid": "415889671",
-        "localIdentifier": "12791-018",
-        "catalogUrl": "https://catalog.archives.gov/id/415889671",
-        "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-02_25_89-12791-018_415889671.pdf",
-        "objectFilename": "41-bpr-apts_sch-dd-02_25_89-12791-018_415889671.pdf",
-        "seriesTitle": "Presidential Daily Diary and Presidential Daily Backup Materials",
-        "seriesNaid": "186322",
-        "matchedTerms": [
-          "Banquet",
-          "Beijing",
-          "China"
-        ],
-        "note": "Presidential Daily Backup cross-reference; extracted text matches Banquet, Beijing, China."
-      }
-    ]
+    "compilerRisks": []
   },
   {
     "id": "bush-library-428080031",
@@ -2380,8 +2356,7 @@ window.MEMCONS = [
       "South Asia",
       "Pakistan",
       "Telcon",
-      "Head of state",
-      "Presidential Daily Diary cross-reference"
+      "Head of state"
     ],
     "pageCount": 2,
     "notes": "Extracted from OCR of the Brent Scowcroft Papers Presidential Correspondence Files. Page range is based on detected memorandum-of-conversation headers.",
@@ -2394,30 +2369,9 @@ window.MEMCONS = [
       "https://catalog.archives.gov/id/366551687",
       "documents/pakistan/1989-06-09-bush-benazir-bhutto-telcon-scowcroft.pdf",
       "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91111-002.pdf",
-      "https://catalog.archives.gov/id/4522156",
-      "https://catalog.archives.gov/id/415889878",
-      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-06_09_89-12799-001_415889878.pdf"
+      "https://catalog.archives.gov/id/4522156"
     ],
-    "compilerRisks": [],
-    "dailyDiaryReferences": [
-      {
-        "sourceType": "Presidential Daily Diary",
-        "title": "[Presidential Daily Diary] 6/9/1989",
-        "naid": "415889878",
-        "localIdentifier": "12799-001",
-        "catalogUrl": "https://catalog.archives.gov/id/415889878",
-        "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-06_09_89-12799-001_415889878.pdf",
-        "objectFilename": "41-bpr-apts_sch-dd-06_09_89-12799-001_415889878.pdf",
-        "seriesTitle": "Presidential Daily Diary and Presidential Daily Backup Materials",
-        "seriesNaid": "186322",
-        "matchedTerms": [
-          "Hosni",
-          "Mubarak",
-          "Egypt"
-        ],
-        "note": "Presidential Daily Diary cross-reference; extracted text matches Hosni, Mubarak, Egypt."
-      }
-    ]
+    "compilerRisks": []
   },
   {
     "id": "bush-library-428080061",
@@ -2661,10 +2615,9 @@ window.MEMCONS = [
         "matchedTerms": [
           "Benazir",
           "Bhutto",
-          "Pakistan",
-          "Phone"
+          "Pakistan"
         ],
-        "note": "Presidential Daily Diary cross-reference; extracted text matches Benazir, Bhutto, Pakistan, Phone."
+        "note": "Presidential Daily Diary cross-reference; extracted text matches Benazir, Bhutto, Pakistan."
       },
       {
         "sourceType": "Presidential Daily Backup",
@@ -3890,10 +3843,11 @@ window.MEMCONS = [
         "seriesTitle": "Presidential Daily Diary and Presidential Daily Backup Materials",
         "seriesNaid": "186322",
         "matchedTerms": [
-          "Singapore",
-          "Senior"
+          "Lee",
+          "Yew",
+          "Singapore"
         ],
-        "note": "Presidential Daily Diary cross-reference; extracted text matches Singapore, Senior."
+        "note": "Presidential Daily Diary cross-reference; extracted text matches Lee, Yew, Singapore."
       },
       {
         "sourceType": "Presidential Daily Backup",
@@ -3906,9 +3860,11 @@ window.MEMCONS = [
         "seriesTitle": "Presidential Daily Diary and Presidential Daily Backup Materials",
         "seriesNaid": "186322",
         "matchedTerms": [
+          "Lee",
+          "Yew",
           "Singapore"
         ],
-        "note": "Presidential Daily Backup cross-reference; extracted text matches Singapore."
+        "note": "Presidential Daily Backup cross-reference; extracted text matches Lee, Yew, Singapore."
       }
     ]
   },
@@ -4369,28 +4325,11 @@ window.MEMCONS = [
       "documents/india/1989-02-26-bush-zhao-ziyang-memcon-scowcroft.pdf",
       "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91107-002.pdf",
       "https://catalog.archives.gov/id/4522156",
-      "https://catalog.archives.gov/id/415889672",
-      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-02_26_89-12791-019_415889672.pdf",
       "https://catalog.archives.gov/id/415889673",
       "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-02_26_89-12791-020_415889673.pdf"
     ],
     "compilerRisks": [],
     "dailyDiaryReferences": [
-      {
-        "sourceType": "Presidential Daily Diary",
-        "title": "[Presidential Daily Diary] 2/26/1989 [EMPTY]",
-        "naid": "415889672",
-        "localIdentifier": "12791-019",
-        "catalogUrl": "https://catalog.archives.gov/id/415889672",
-        "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-02_26_89-12791-019_415889672.pdf",
-        "objectFilename": "41-bpr-apts_sch-dd-02_26_89-12791-019_415889672.pdf",
-        "seriesTitle": "Presidential Daily Diary and Presidential Daily Backup Materials",
-        "seriesNaid": "186322",
-        "matchedTerms": [
-          "Bush"
-        ],
-        "note": "Presidential Daily Diary cross-reference; extracted text matches Bush."
-      },
       {
         "sourceType": "Presidential Daily Backup",
         "title": "[Presidential Daily Backup] 2/26/1989",
@@ -4405,9 +4344,6 @@ window.MEMCONS = [
           "Zhao",
           "Ziyang",
           "China",
-          "Bush",
-          "General",
-          "Secretary",
           "Central",
           "Committee",
           "Communist",
@@ -4415,7 +4351,7 @@ window.MEMCONS = [
           "People",
           "Republic"
         ],
-        "note": "Presidential Daily Backup cross-reference; extracted text matches Zhao, Ziyang, China, Bush, General, Secretary."
+        "note": "Presidential Daily Backup cross-reference; extracted text matches Zhao, Ziyang, China, Central, Committee, Communist."
       }
     ]
   },
@@ -4569,9 +4505,7 @@ window.MEMCONS = [
       "https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons",
       "https://catalog.archives.gov/id/2163580",
       "https://catalog.archives.gov/id/415889876",
-      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-06_08_89-12798-029_415889876.pdf",
-      "https://catalog.archives.gov/id/415889877",
-      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-06_08_89-12798-030_415889877.pdf"
+      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-06_08_89-12798-029_415889876.pdf"
     ],
     "compilerRisks": [
       "catalog-derived-source-note"
@@ -4589,10 +4523,9 @@ window.MEMCONS = [
         "seriesNaid": "186322",
         "matchedTerms": [
           "Gandhi",
-          "India",
-          "Phone"
+          "India"
         ],
-        "note": "Presidential Daily Diary cross-reference; extracted text matches Gandhi, India, Phone."
+        "note": "Presidential Daily Diary cross-reference; extracted text matches Gandhi, India."
       }
     ]
   },
@@ -4964,8 +4897,7 @@ window.MEMCONS = [
       "India",
       "Telcon",
       "Head of state",
-      "Measured page count",
-      "Presidential Daily Diary cross-reference"
+      "Measured page count"
     ],
     "pageCount": 4,
     "notes": "Integrated from the Bush Library Memcons and Telcons table and enriched from the National Archives Catalog item record. Compiler remediation measured the available online PDF extent; folder-level files still require item-level boundary review before final selection.",
@@ -4980,29 +4912,10 @@ window.MEMCONS = [
       "https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1991-02-08--Shankar.pdf",
       "https://catalog.archives.gov/id/321498139",
       "https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons",
-      "https://catalog.archives.gov/id/2163580",
-      "https://catalog.archives.gov/id/415891099",
-      "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1991/41-bpr-apts_sch-dd-02_08_91-12848-016_415891099.pdf"
+      "https://catalog.archives.gov/id/2163580"
     ],
     "compilerRisks": [
       "catalog-derived-source-note"
-    ],
-    "dailyDiaryReferences": [
-      {
-        "sourceType": "Presidential Daily Backup",
-        "title": "[Presidential Daily Backup] 2/8/1991",
-        "naid": "415891099",
-        "localIdentifier": "12848-016",
-        "catalogUrl": "https://catalog.archives.gov/id/415891099",
-        "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1991/41-bpr-apts_sch-dd-02_08_91-12848-016_415891099.pdf",
-        "objectFilename": "41-bpr-apts_sch-dd-02_08_91-12848-016_415891099.pdf",
-        "seriesTitle": "Presidential Daily Diary and Presidential Daily Backup Materials",
-        "seriesNaid": "186322",
-        "matchedTerms": [
-          "India"
-        ],
-        "note": "Presidential Daily Backup cross-reference; extracted text matches India."
-      }
     ]
   },
   {
@@ -5206,10 +5119,11 @@ window.MEMCONS = [
         "seriesNaid": "186322",
         "matchedTerms": [
           "Narasimha",
+          "Rao",
           "India",
           "Indian"
         ],
-        "note": "Presidential Daily Diary cross-reference; extracted text matches Narasimha, India, Indian."
+        "note": "Presidential Daily Diary cross-reference; extracted text matches Narasimha, Rao, India, Indian."
       },
       {
         "sourceType": "Presidential Daily Backup",
@@ -5222,9 +5136,10 @@ window.MEMCONS = [
         "seriesTitle": "Presidential Daily Diary and Presidential Daily Backup Materials",
         "seriesNaid": "186322",
         "matchedTerms": [
+          "Rao",
           "India"
         ],
-        "note": "Presidential Daily Backup cross-reference; extracted text matches India."
+        "note": "Presidential Daily Backup cross-reference; extracted text matches Rao, India."
       }
     ]
   },
@@ -5796,9 +5711,10 @@ window.MEMCONS = [
         "seriesNaid": "186322",
         "matchedTerms": [
           "Khaleda",
+          "Zia",
           "Bangladesh"
         ],
-        "note": "Presidential Daily Diary cross-reference; extracted text matches Khaleda, Bangladesh."
+        "note": "Presidential Daily Diary cross-reference; extracted text matches Khaleda, Zia, Bangladesh."
       },
       {
         "sourceType": "Presidential Daily Backup",
@@ -5811,9 +5727,10 @@ window.MEMCONS = [
         "seriesTitle": "Presidential Daily Diary and Presidential Daily Backup Materials",
         "seriesNaid": "186322",
         "matchedTerms": [
+          "Zia",
           "Bangladesh"
         ],
-        "note": "Presidential Daily Backup cross-reference; extracted text matches Bangladesh."
+        "note": "Presidential Daily Backup cross-reference; extracted text matches Zia, Bangladesh."
       }
     ]
   }

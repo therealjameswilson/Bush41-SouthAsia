@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Persons | Bush 41 South Asia Files</title>
+    <meta
+      name="description"
+      content="FRUS-style Bush administration persons list for the Bush 41 South Asia files."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html#top" aria-label="Bush 41 South Asia files home">
+        <span class="brand-mark">41</span>
+        <span>South Asia Files</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html#chapters">Chapters</a>
+        <a href="index.html#workbench">Workbench</a>
+        <a href="index.html#potential">Potential</a>
+        <a href="index.html#gaps">Gaps</a>
+        <a aria-current="page" href="persons.html">Persons</a>
+        <a href="index.html#records">Records</a>
+        <a href="index.html#sources">Sources</a>
+      </nav>
+    </header>
+
+    <main id="top" class="persons-page">
+      <section class="section persons-hero" aria-labelledby="persons-title">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">FRUS Reference</p>
+            <h1 id="persons-title">Persons</h1>
+          </div>
+        </div>
+        <p class="lede persons-lede">
+          Bush administration principals and U.S. South Asia-facing officials for
+          the 1989-1992 South Asia record set. Entries are taken from the local
+          Bush comprehensive names authority file and kept in FRUS-style form.
+        </p>
+        <p id="persons-build-note" class="records-intro">
+          Loading persons authority data...
+        </p>
+      </section>
+
+      <section id="persons-stats" class="stats persons-stats" aria-label="Persons list summary">
+        <div>
+          <span>Loading</span>
+          <p>persons included</p>
+        </div>
+      </section>
+
+      <section class="section persons-index" aria-labelledby="persons-index-title">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Reference</p>
+            <h2 id="persons-index-title">Alphabetical List</h2>
+          </div>
+        </div>
+        <div class="records-tools persons-tools" aria-label="Search and filter persons">
+          <label class="search-field">
+            <span>Search persons</span>
+            <input id="person-search" type="search" placeholder="Search names, offices, agencies, or scopes" />
+          </label>
+          <label>
+            <span>Agency</span>
+            <select id="person-agency-filter"></select>
+          </label>
+          <label>
+            <span>Scope</span>
+            <select id="person-category-filter"></select>
+          </label>
+          <button id="clear-person-filters" type="button">Reset</button>
+          <button id="export-persons" type="button">CSV</button>
+          <p id="person-summary" class="records-summary">Loading persons...</p>
+        </div>
+        <div id="persons-alpha" class="persons-alpha" aria-label="Persons alphabet navigation"></div>
+        <div id="persons-root" class="persons-root" aria-live="polite">
+          <p class="loading">Loading persons list...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Persons list built from the Bush comprehensive names authority.</p>
+      <a href="index.html#top">South Asia Files</a>
+    </footer>
+
+    <script src="data/persons.js"></script>
+    <script src="persons.js"></script>
+  </body>
+</html>

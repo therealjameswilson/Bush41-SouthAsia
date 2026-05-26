@@ -1334,33 +1334,6 @@ function renderRecords(records) {
   }
 }
 
-function prioritizeChronologySection() {
-  const hero = document.querySelector(".hero");
-  const recordsSection = document.querySelector("#records");
-  if (hero && recordsSection) hero.after(recordsSection);
-
-  const title = document.querySelector("#records-title");
-  if (title) title.textContent = "Declassified Document Chronology";
-
-  const intro = document.querySelector("#records .records-intro");
-  if (intro) {
-    intro.textContent =
-      "The working chronology now leads the page: released, declassified, and partial-release documents appear first in date order across chapters, followed by restricted or pending-review records.";
-  }
-
-  const primary = document.querySelector(".hero-actions .primary");
-  if (primary) {
-    primary.href = "#records";
-    primary.textContent = "Open Chronology";
-  }
-
-  const secondary = document.querySelector(".hero-actions .secondary");
-  if (secondary) {
-    secondary.href = "#workbench";
-    secondary.textContent = "Compiler Workbench";
-  }
-}
-
 function updateRecordsView() {
   const filtered = filterRecords(allRecords);
   updateSummary(filtered);
@@ -1408,7 +1381,6 @@ async function init() {
     allPotentialDocuments = window.POTENTIAL_DOCUMENTS || (await loadPotentialDocuments());
     allCompilerGaps = window.COMPILER_GAPS || (await loadCompilerGaps());
     allDailyDiaryReferences = window.DAILY_DIARY_REFERENCES || (await loadDailyDiaryReferences());
-    prioritizeChronologySection();
     setChapterCounts(allRecords);
     populateFilters(allRecords);
     renderWorkbench(allRecords, allPotentialDocuments, allCompilerGaps);

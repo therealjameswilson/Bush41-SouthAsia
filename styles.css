@@ -875,6 +875,106 @@ footer {
   font-size: 0.88rem;
 }
 
+.persons-page {
+  padding-top: 24px;
+}
+
+.persons-hero {
+  padding-bottom: 22px;
+}
+
+.persons-lede {
+  margin-bottom: 18px;
+}
+
+.persons-stats {
+  padding-bottom: 26px;
+}
+
+.persons-tools {
+  grid-template-columns: minmax(260px, 1.4fr) repeat(2, minmax(160px, 0.7fr)) auto auto;
+}
+
+.persons-alpha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -8px 0 24px;
+}
+
+.persons-alpha a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  min-height: 34px;
+  color: var(--navy);
+  font-weight: 900;
+  text-decoration: none;
+  background: rgba(255, 253, 248, 0.82);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.persons-alpha a:hover,
+.persons-alpha a:focus-visible {
+  border-color: var(--navy);
+  outline: none;
+}
+
+.persons-root {
+  display: grid;
+  gap: 24px;
+}
+
+.person-letter-section {
+  display: grid;
+  gap: 12px;
+  scroll-margin-top: 88px;
+}
+
+.person-letter-section h2 {
+  margin: 0;
+  color: var(--red);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+}
+
+.frus-persons-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.frus-persons-list li {
+  padding: 16px 18px;
+  background: rgba(255, 253, 248, 0.84);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--green);
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(28, 37, 47, 0.06);
+}
+
+.person-entry,
+.person-meta {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.person-name {
+  color: var(--navy);
+  font-weight: 900;
+}
+
+.person-meta {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
 .compiler-metrics {
   display: grid;
   grid-column: 1 / -1;

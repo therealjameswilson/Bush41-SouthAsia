@@ -64,10 +64,6 @@ function normalizeSeries(value = "") {
   );
 }
 
-function pageWord(count) {
-  return Number(count) === 1 ? "page" : "pages";
-}
-
 function isRestrictedStatus(status = "") {
   return !/unrestricted/i.test(status) && /\brestricted\b|possibly|withheld|denied|excised/i.test(status);
 }
@@ -120,19 +116,6 @@ function isCompactLocator(value = "") {
   return /^[A-Z]{0,4}\d[\w-]*$/i.test(clean(value));
 }
 
-function sourceTitleCandidate(record) {
-  const rawTitle = record.sourceTitle || "";
-  if (!rawTitle) return "";
-
-  const [title, qualifier = ""] = rawTitle.split(/\s*;\s*/);
-  const series = normalizeSeries(record.source?.series || record.source?.fileTitle || "");
-  const normalizedTitle = normalizeSeries(title || "");
-  const qualifierIsLocator = clean(qualifier).toLowerCase() === clean(record.localIdentifier || "").toLowerCase();
-
-  if (normalizedTitle.toLowerCase() === series.toLowerCase() && (!qualifier || qualifierIsLocator)) return "";
-  return titleWithoutSourcePages(rawTitle);
-}
-
 function folderOrDocumentTitle(record) {
   const source = record.source || {};
   const series = normalizeSeries(source.series || source.fileTitle || "");
@@ -167,25 +150,6 @@ function locatorPart(record) {
 function sourcePagesPart(record) {
   const pages = record.source?.sourcePages || "";
   return pages ? `source pages ${pages}` : "";
-}
-
-function duplicateProvenanceSentence(record) {
-  const duplicates = record.source?.duplicateSources || [];
-  if (!duplicates.length) return "";
-
-  const provenance = duplicates
-    .map((duplicate) =>
-      uniqueInOrder([
-        duplicate.sourceName,
-        normalizeSeries(duplicate.series || ""),
-        duplicate.localIdentifier ? `OA/ID ${duplicate.localIdentifier}` : "",
-        duplicate.sourcePages ? `source pages ${duplicate.sourcePages}` : ""
-      ]).join(", ")
-    )
-    .filter(Boolean)
-    .join("; ");
-
-  return provenance ? `Related duplicate provenance: ${provenance}.` : "";
 }
 
 function publicPaperSourceNote(record) {

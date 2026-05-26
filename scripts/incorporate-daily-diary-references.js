@@ -14,6 +14,7 @@ const STOP_WORDS = new Set([
   "about",
   "april",
   "august",
+  "bush",
   "call",
   "chancellor",
   "conversation",
@@ -21,6 +22,7 @@ const STOP_WORDS = new Set([
   "elect",
   "february",
   "from",
+  "general",
   "george",
   "january",
   "july",
@@ -31,12 +33,15 @@ const STOP_WORDS = new Set([
   "minister",
   "november",
   "october",
+  "phone",
   "plenary",
   "president",
   "presidential",
   "prime",
   "queen",
   "september",
+  "senior",
+  "secretary",
   "states",
   "telcon",
   "telephone",
@@ -91,19 +96,28 @@ function isPresidentialMeetingOrCall(record) {
   return /memcon|telcon/i.test(record.type || "") && (record.participants || []).includes("George H. W. Bush");
 }
 
-function candidateTerms(record) {
+function tokenizeTerms(value = "", minLength = 4) {
+  return String(value)
+    .split(/[^A-Za-z]+/)
+    .map((term) => term.trim())
+    .filter((term) => term.length >= minLength)
+    .filter((term) => !STOP_WORDS.has(term.toLowerCase()));
+}
+
+function candidateTermGroups(record) {
   const people = (record.participants || []).filter((participant) => !/George H\.?\s*W\.?\s*Bush/i.test(participant));
   const countries = (record.countries || []).filter((country) => country !== "United States");
   const countryAliases = countries.flatMap((country) => COUNTRY_ALIASES[country] || []);
-  const raw = [...people, ...countries, ...countryAliases, record.title || ""].join(" ");
+  const personTerms = uniqueInOrder(people.flatMap((person) => tokenizeTerms(person, 3)));
+  const countryTerms = uniqueInOrder([...countries, ...countryAliases].flatMap((country) => tokenizeTerms(country, 4)));
+  const titleTerms = uniqueInOrder(tokenizeTerms(record.title || "", 4));
 
-  return uniqueInOrder(
-    raw
-      .split(/[^A-Za-z]+/)
-      .map((term) => term.trim())
-      .filter((term) => term.length > 3)
-      .filter((term) => !STOP_WORDS.has(term.toLowerCase()))
-  );
+  return {
+    terms: uniqueInOrder([...personTerms, ...countryTerms, ...titleTerms]),
+    personTerms,
+    countryTerms,
+    titleTerms
+  };
 }
 
 function termPattern(term) {
@@ -113,6 +127,22 @@ function termPattern(term) {
 
 function matchedTerms(text, terms) {
   return terms.filter((term) => termPattern(term).test(text));
+}
+
+function matchingTerms(matches, candidates) {
+  const candidateKeys = new Set(candidates.map((term) => term.toLowerCase()));
+  return matches.filter((term) => candidateKeys.has(term.toLowerCase()));
+}
+
+function hasStrongMatch(matches, termGroups) {
+  const personMatches = matchingTerms(matches, termGroups.personTerms);
+  const countryMatches = matchingTerms(matches, termGroups.countryTerms);
+  const titleMatches = matchingTerms(matches, termGroups.titleTerms);
+
+  if (personMatches.length >= 2) return true;
+  if (personMatches.length === 1 && (countryMatches.length || titleMatches.length)) return true;
+  if (!personMatches.length && countryMatches.length && titleMatches.length >= 2) return true;
+  return false;
 }
 
 async function fetchCatalog(url) {
@@ -150,13 +180,13 @@ async function dailyDiaryRecordsForDate(date) {
   });
 }
 
-function referenceFromCatalogRecord(record, terms) {
+function referenceFromCatalogRecord(record, termGroups) {
   const digitalObject = (record.digitalObjects || [])[0] || {};
   const extractedText = (record.digitalObjects || [])
     .map((object) => object.extractedText || object.otherExtractedText || "")
     .join("\n");
-  const matches = matchedTerms(extractedText, terms);
-  if (!matches.length) return null;
+  const matches = matchedTerms(extractedText, termGroups.terms);
+  if (!hasStrongMatch(matches, termGroups)) return null;
 
   const sourceType = /Daily Backup/i.test(record.title || "")
     ? "Presidential Daily Backup"
@@ -181,17 +211,45 @@ function appendUnique(existing = [], additions = []) {
   return uniqueInOrder([...existing, ...additions]);
 }
 
-function updateRecord(record, references) {
+function referenceLinks(references = []) {
+  return references.flatMap((reference) => [reference.catalogUrl, reference.pdfUrl]).filter(Boolean);
+}
+
+function catalogRecordLinks(records = []) {
+  return records.flatMap((record) => [
+    catalogUrl(record.naId),
+    ...(record.digitalObjects || []).map((object) => object.objectUrl).filter(Boolean)
+  ]);
+}
+
+function removeValues(values = [], removals = []) {
+  const removalKeys = new Set(removals.filter(Boolean));
+  return values.filter((value) => !removalKeys.has(value));
+}
+
+function removeDailyDiaryTopic(topics = []) {
+  return topics.filter((topic) => topic !== "Presidential Daily Diary cross-reference");
+}
+
+function updateRecord(record, references, catalogRecords) {
+  const staleLinks = [...referenceLinks(record.dailyDiaryReferences), ...catalogRecordLinks(catalogRecords)];
+  const provenanceLinks = removeValues(record.provenanceLinks || [], staleLinks);
+  const topics = removeDailyDiaryTopic(record.topics || []);
+
   if (!references.length) {
     const { dailyDiaryReferences, ...rest } = record;
-    return rest;
+    return {
+      ...rest,
+      provenanceLinks,
+      topics
+    };
   }
 
   return {
     ...record,
     dailyDiaryReferences: references,
-    provenanceLinks: appendUnique(record.provenanceLinks, references.flatMap((reference) => [reference.catalogUrl, reference.pdfUrl])),
-    topics: appendUnique([...(record.topics || []), "Presidential Daily Diary cross-reference"])
+    provenanceLinks: appendUnique(provenanceLinks, referenceLinks(references)),
+    topics: appendUnique([...topics, "Presidential Daily Diary cross-reference"])
   };
 }
 
@@ -217,18 +275,21 @@ async function main() {
       cache.set(record.date, await dailyDiaryRecordsForDate(record.date));
     }
 
-    const terms = candidateTerms(record);
-    const references = cache
-      .get(record.date)
-      .map((catalogRecord) => referenceFromCatalogRecord(catalogRecord, terms))
+    const dailyDiaryRecords = cache.get(record.date);
+    const termGroups = candidateTermGroups(record);
+    const references = dailyDiaryRecords
+      .map((catalogRecord) => referenceFromCatalogRecord(catalogRecord, termGroups))
       .filter(Boolean);
 
-    updatedRecords.push(updateRecord(record, references));
+    updatedRecords.push(updateRecord(record, references, dailyDiaryRecords));
     reportRecords.push({
       id: record.id,
       date: record.date,
       title: record.title,
-      candidateTerms: terms,
+      candidateTerms: termGroups.terms,
+      personTerms: termGroups.personTerms,
+      countryTerms: termGroups.countryTerms,
+      titleTerms: termGroups.titleTerms,
       references: references.map((reference) => ({
         naid: reference.naid,
         title: reference.title,

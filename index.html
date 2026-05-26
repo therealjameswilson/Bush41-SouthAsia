@@ -17,13 +17,14 @@
         <span>South Asia Files</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="#chapters">Chapters</a>
+        <a href="#records">Chronology</a>
         <a href="#workbench">Workbench</a>
-        <a href="#collection">Collection</a>
         <a href="#browse">Browse</a>
+        <a href="#chapters">Chapters</a>
+        <a href="#collection">Collection</a>
         <a href="#potential">Potential</a>
         <a href="#gaps">Gaps</a>
-        <a href="#records">Records</a>
+        <a href="persons.html">Persons</a>
         <a href="#compiler">Compiler</a>
         <a href="#sources">Sources</a>
       </nav>
@@ -37,13 +38,13 @@
           <p class="lede">
             A companion research archive for declassified memoranda, telephone
             conversations, and National Security Council source series relevant to a
-            South Asia volume. The site now works as a compiler desk: chapter
-            placement, release status, source-note coverage, page counts, and
-            direct PDF paths are visible before the record list.
+            South Asia volume. The site now leads with the chronology itself:
+            dated released records first, then compiler controls, gaps, source
+            notes, and the wider documentary trail.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#workbench">Open Workbench</a>
-            <a class="button secondary" href="#records">Browse Records</a>
+            <a class="button primary" href="#records">Open Chronology</a>
+            <a class="button secondary" href="#workbench">Compiler Workbench</a>
           </div>
         </div>
         <aside class="brief visual-brief" aria-label="Archive scope">
@@ -64,7 +65,7 @@
             </div>
             <div>
               <dt>Source Base</dt>
-              <dd>Haass, NSC, Scowcroft</dd>
+              <dd>Haass, NSC, Scowcroft, Daily Diary</dd>
             </div>
             <div>
               <dt>Arrangement</dt>
@@ -72,6 +73,52 @@
             </div>
           </dl>
         </aside>
+      </section>
+
+      <section class="section records-section" id="records" aria-labelledby="records-title">
+        <div class="section-heading">
+          <p class="kicker">Declassified Chronology</p>
+          <h2 id="records-title">Declassified Document Chronology</h2>
+        </div>
+        <p class="records-intro">
+          The working chronology now leads the page: released, declassified, and
+          partial-release documents appear first in date order across chapters,
+          followed by restricted or pending-review records. Each entry keeps its
+          chapter placement, source note, direct PDF/Catalog links, and Daily Diary
+          cross-references where the scheduling record helps establish time,
+          location, attendance, or call status.
+        </p>
+        <div class="records-tools" aria-label="Search and filter records">
+          <label class="search-field">
+            <span>Search chronology</span>
+            <input
+              id="record-search"
+              type="search"
+              placeholder="Search leaders, countries, NAIDs, topics, source notes"
+            />
+          </label>
+          <label>
+            <span>Chapter</span>
+            <select id="chapter-filter"></select>
+          </label>
+          <label>
+            <span>Type</span>
+            <select id="type-filter"></select>
+          </label>
+          <label>
+            <span>Release</span>
+            <select id="release-filter"></select>
+          </label>
+          <label>
+            <span>Compiler queue</span>
+            <select id="compiler-filter"></select>
+          </label>
+          <button id="clear-filters" type="button">Reset</button>
+          <p id="records-summary" class="records-summary">Loading chronology...</p>
+        </div>
+        <div id="records-root" class="records-root" aria-live="polite">
+          <p class="loading">Loading declassified chronology...</p>
+        </div>
       </section>
 
       <section class="stats" aria-label="Archive summary">
@@ -264,7 +311,7 @@
           <div class="browse-note" id="source-records">
             <h3>Chapter-first, source-aware</h3>
             <p>
-              The record list below starts with Haass file units harvested from the
+              The chronology above starts with Haass file units harvested from the
               National Archives Catalog. Presidential meetings, teleconferences, and
               related NSC meeting folders are assigned to Afghanistan, Pakistan,
               India, or Regional for OCR review.
@@ -331,50 +378,6 @@
         </div>
       </section>
 
-      <section class="section records-section" id="records" aria-labelledby="records-title">
-        <div class="section-heading">
-          <p class="kicker">Chronological Files</p>
-          <h2 id="records-title">Chapter Records</h2>
-        </div>
-        <p class="records-intro">
-          Each chapter is ordered by date and uses a FRUS-style structure where
-          available: document title, date line, subject cue, release status, source
-          note, and direct catalog or PDF links. Haass PDFs are scanned folder-level
-          releases, so page-level memcon/telcon boundaries are marked for OCR review.
-        </p>
-        <div class="records-tools" aria-label="Search and filter records">
-          <label class="search-field">
-            <span>Search records</span>
-            <input
-              id="record-search"
-              type="search"
-              placeholder="Search leaders, countries, NAIDs, topics, source notes"
-            />
-          </label>
-          <label>
-            <span>Chapter</span>
-            <select id="chapter-filter"></select>
-          </label>
-          <label>
-            <span>Type</span>
-            <select id="type-filter"></select>
-          </label>
-          <label>
-            <span>Release</span>
-            <select id="release-filter"></select>
-          </label>
-          <label>
-            <span>Compiler queue</span>
-            <select id="compiler-filter"></select>
-          </label>
-          <button id="clear-filters" type="button">Reset</button>
-          <p id="records-summary" class="records-summary">Loading record index...</p>
-        </div>
-        <div id="records-root" class="records-root" aria-live="polite">
-          <p class="loading">Loading South Asia records...</p>
-        </div>
-      </section>
-
       <section class="section source-section" id="sources" aria-labelledby="sources-title">
         <div class="section-heading">
           <p class="kicker">Official Anchors</p>
@@ -410,6 +413,9 @@
           </a>
           <a href="https://catalog.archives.gov/id/321498139" rel="noreferrer">
             Presidential Telcon Files
+          </a>
+          <a href="https://catalog.archives.gov/id/186322" rel="noreferrer">
+            Presidential Daily Diary and Daily Backup Materials
           </a>
           <a href="https://catalog.archives.gov/id/312293887" rel="noreferrer">
             NSC Meeting Files
@@ -484,8 +490,9 @@
       <a href="https://github.com/therealjameswilson/Bush41-SouthAsia">Repository</a>
     </footer>
     <script src="data/memcons.js"></script>
+    <script src="data/daily-diary-references.js"></script>
     <script src="data/potential-documents.js"></script>
     <script src="data/compiler-gaps.js"></script>
-    <script src="app.js?v=a6c878f"></script>
+    <script src="app.js"></script>
   </body>
 </html>

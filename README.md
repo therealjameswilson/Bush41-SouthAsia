@@ -22,8 +22,10 @@ The current data is harvested from three National Archives Catalog source-series
 - NAID 313189297: H-Files - National Security Review (NSR) Files
 - NAID 313189290: H-Files - National Security Directive (NSD) Files
 - NAID 348937136: Institutional Files - Transition Files
+- NAID 186322: Presidential Daily Diary and Presidential Daily Backup Materials
 - Candidate sweeps: broader National Archives Catalog searches across Bush 41-era collections, Richard Cheney Country Files, Haass Working Files, and GovInfo Public Papers references.
 - Compiler gap tracker: `data/compiler-gaps.json` and `reports/compiler-gap-analysis.md`.
+- Persons authority: `persons.html` from `data/persons.json`, scoped to Bush administration principals and South Asia-facing U.S. officials.
 
 Open `index.html` directly, or serve the directory locally:
 
@@ -38,7 +40,9 @@ node scripts/harvest-haass-catalog.js
 node scripts/harvest-scowcroft-heads.js
 node scripts/harvest-bush-library-memcons.js
 node scripts/harvest-nsc-dc-minutes.js
+node scripts/harvest-daily-diary-references.js
 node scripts/harvest-potential-documents.js
+node scripts/incorporate-daily-diary-references.js
 node scripts/remediate-compiler-gaps.js
 node scripts/normalize-source-notes.js
 ```
@@ -46,5 +50,10 @@ node scripts/normalize-source-notes.js
 `remediate-compiler-gaps.js` measures any confirmed zero-page records that have
 online PDFs, refreshes the compiler gap report, and classifies potential leads as
 promotion candidates, internal-file locators, or chronology-only context.
+`incorporate-daily-diary-references.js` adds exact Presidential Daily Diary and
+Daily Backup cross-references to confirmed presidential meetings and calls when
+Catalog extracted text matches person or event/location terms. These references
+support chronology, time, location, attendance, and call-status checks, not
+substantive summaries.
 `normalize-source-notes.js` keeps clean FRUS-style Source Notes separate from
 full catalog URLs and working provenance.

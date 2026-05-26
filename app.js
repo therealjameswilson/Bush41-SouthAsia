@@ -71,6 +71,18 @@ function byChapterThenDate(a, b) {
   );
 }
 
+function byDateThenChapter(a, b) {
+  return (
+    a.sortDate.localeCompare(b.sortDate) ||
+    a.chapter.number - b.chapter.number ||
+    a.title.localeCompare(b.title)
+  );
+}
+
+function isReleasedDocument(record) {
+  return /^(Declassified|Full|Partial|Unrestricted)$/i.test(record.releaseStatus || "");
+}
+
 function uniqueSorted(values) {
   return [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b));
 }
@@ -829,6 +841,7 @@ function createMeta(record) {
 
   for (const value of [
     record.type,
+    record.chapter?.name,
     record.countries?.filter((country) => country !== "United States").join(", "),
     record.pageCount ? `${record.pageCount} pages` : "Pages pending",
     record.localIdentifier,
@@ -1158,7 +1171,7 @@ function updateSummary(records) {
   if (!recordsSummary) return;
   const pages = pageSum(records);
   const queue = compilerFilter?.selectedOptions?.[0]?.textContent || "All compiler queues";
-  recordsSummary.textContent = `Showing ${records.length} of ${allRecords.length} records / ${pages} pages in view / ${queue}`;
+  recordsSummary.textContent = `Showing ${records.length} of ${allRecords.length} chronology records / ${pages} pages in view / ${queue}`;
 }
 
 function createMetric(label, value, detail) {
@@ -1262,9 +1275,10 @@ function renderCompilerDesk(records) {
 }
 
 function renderRecords(records) {
-  const sorted = [...records].sort(byChapterThenDate);
+  const sorted = [...records].sort(byDateThenChapter);
   const selectedChapter = chapterFilter?.value || "";
-  const chaptersToRender = selectedChapter ? [selectedChapter] : CHAPTER_ORDER;
+  const releasedRecords = sorted.filter(isReleasedDocument);
+  const reviewRecords = sorted.filter((record) => !isReleasedDocument(record));
   recordsRoot.replaceChildren();
 
   if (!sorted.length) {
@@ -1275,41 +1289,75 @@ function renderRecords(records) {
     return;
   }
 
-  for (const chapterName of chaptersToRender) {
-    const chapterRecords = sorted.filter((record) => record.chapter.name === chapterName);
-    if (!chapterRecords.length && !selectedChapter) continue;
+  const groups = [
+    {
+      id: selectedChapter ? chapterId(selectedChapter) : "declassified-chronology",
+      heading: selectedChapter
+        ? `${selectedChapter}: Declassified and Released Chronology`
+        : "Declassified and Released Chronology",
+      records: releasedRecords
+    },
+    {
+      id: selectedChapter ? `${chapterId(selectedChapter)}-review` : "restricted-review-chronology",
+      heading: selectedChapter ? `${selectedChapter}: Restricted and Pending Review` : "Restricted and Pending Review",
+      records: reviewRecords
+    }
+  ];
 
+  for (const group of groups) {
+    if (!group.records.length) continue;
     const section = document.createElement("section");
-    section.className = "record-chapter";
-    section.id = chapterId(chapterName);
+    section.className = "record-chapter record-chronology";
+    section.id = group.id;
 
     const header = document.createElement("div");
     header.className = "record-chapter-header";
 
     const heading = document.createElement("h3");
-    heading.textContent = `Chapter ${CHAPTER_ORDER.indexOf(chapterName) + 1}: ${chapterName}`;
+    heading.textContent = group.heading;
 
     const count = document.createElement("p");
     count.className = "record-count";
-    const pageTotal = chapterRecords.reduce((sum, record) => sum + (record.pageCount || 0), 0);
-    count.textContent = `${chapterRecords.length} records / ${pageTotal} pages`;
+    const pageTotal = group.records.reduce((sum, record) => sum + (record.pageCount || 0), 0);
+    const dateSpan = `${formatDate(group.records[0].date)} to ${formatDate(group.records[group.records.length - 1].date)}`;
+    count.textContent = `${group.records.length} records / ${pageTotal} pages / ${dateSpan}`;
     header.append(heading, count);
 
     const list = document.createElement("div");
     list.className = "record-list";
-    if (chapterRecords.length) {
-      for (const record of chapterRecords) {
-        list.append(createRecordRow(record));
-      }
-    } else {
-      const empty = document.createElement("p");
-      empty.className = "empty-chapter";
-      empty.textContent = "No records match the current search or filters in this chapter.";
-      list.append(empty);
+    for (const record of group.records) {
+      list.append(createRecordRow(record));
     }
 
     section.append(header, list);
     recordsRoot.append(section);
+  }
+}
+
+function prioritizeChronologySection() {
+  const hero = document.querySelector(".hero");
+  const recordsSection = document.querySelector("#records");
+  if (hero && recordsSection) hero.after(recordsSection);
+
+  const title = document.querySelector("#records-title");
+  if (title) title.textContent = "Declassified Document Chronology";
+
+  const intro = document.querySelector("#records .records-intro");
+  if (intro) {
+    intro.textContent =
+      "The working chronology now leads the page: released, declassified, and partial-release documents appear first in date order across chapters, followed by restricted or pending-review records.";
+  }
+
+  const primary = document.querySelector(".hero-actions .primary");
+  if (primary) {
+    primary.href = "#records";
+    primary.textContent = "Open Chronology";
+  }
+
+  const secondary = document.querySelector(".hero-actions .secondary");
+  if (secondary) {
+    secondary.href = "#workbench";
+    secondary.textContent = "Compiler Workbench";
   }
 }
 
@@ -1360,6 +1408,7 @@ async function init() {
     allPotentialDocuments = window.POTENTIAL_DOCUMENTS || (await loadPotentialDocuments());
     allCompilerGaps = window.COMPILER_GAPS || (await loadCompilerGaps());
     allDailyDiaryReferences = window.DAILY_DIARY_REFERENCES || (await loadDailyDiaryReferences());
+    prioritizeChronologySection();
     setChapterCounts(allRecords);
     populateFilters(allRecords);
     renderWorkbench(allRecords, allPotentialDocuments, allCompilerGaps);

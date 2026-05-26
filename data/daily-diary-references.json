@@ -1,0 +1,722 @@
+{
+  "generatedAt": "2026-05-26T01:50:42.345Z",
+  "source": {
+    "title": "Presidential Daily Diary and Presidential Daily Backup Materials",
+    "naid": "186322",
+    "catalogUrl": "https://catalog.archives.gov/id/186322",
+    "findingAidUrl": "https://www.bush41library.gov/digital-research-room/finding-aid/white-house-office-appointments-and-scheduling-files",
+    "findingAidPdfUrl": "https://www.bush41library.gov/download/file/5915",
+    "collectionTitle": "White House Office of Appointments and Scheduling Files",
+    "collectionNaid": "1081",
+    "note": "Same-day reference only. The Daily Diary and Daily Backup document chronology, participants, locations, and call status; they do not contain call summaries or meeting minutes."
+  },
+  "dates": {
+    "1989-01-23": {
+      "date": "1989-01-23",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 1/23/1989 [EMPTY]",
+        "naid": "415889604",
+        "localId": "12789-007",
+        "status": "EMPTY",
+        "catalogUrl": "https://catalog.archives.gov/id/415889604"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 1/23/1989",
+        "naid": "415889605",
+        "localId": "12789-008",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889605"
+      },
+      "matchedRecordIds": [
+        "bush-library-428079777"
+      ]
+    },
+    "1989-01-25": {
+      "date": "1989-01-25",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 1/25/1989",
+        "naid": "415889608",
+        "localId": "12789-011",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889608"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 1/25/1989",
+        "naid": "415889609",
+        "localId": "12789-012",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889609"
+      },
+      "matchedRecordIds": [
+        "bush-library-428079809"
+      ]
+    },
+    "1989-02-10": {
+      "date": "1989-02-10",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 2/10/1989",
+        "naid": "415889640",
+        "localId": "12790-015",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889640"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 2/10/1989",
+        "naid": "415889641",
+        "localId": "12790-016",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889641"
+      },
+      "matchedRecordIds": [
+        "nsc-source-470760885"
+      ]
+    },
+    "1989-02-23": {
+      "date": "1989-02-23",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 2/23/1989 [EMPTY]",
+        "naid": "415889666",
+        "localId": "12791-013",
+        "status": "EMPTY",
+        "catalogUrl": "https://catalog.archives.gov/id/415889666"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 2/23/1989",
+        "naid": "415889667",
+        "localId": "12791-014",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889667"
+      },
+      "matchedRecordIds": [
+        "bush-library-428079855"
+      ]
+    },
+    "1989-02-24": {
+      "date": "1989-02-24",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 2/24/1989 [EMPTY]",
+        "naid": "415889668",
+        "localId": "12791-015",
+        "status": "EMPTY",
+        "catalogUrl": "https://catalog.archives.gov/id/415889668"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 2/24/1989",
+        "naid": "415889669",
+        "localId": "12791-016",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889669"
+      },
+      "matchedRecordIds": [
+        "scowcroft-366551660-75-turgut-ozal-memcon",
+        "bush-library-428079859"
+      ]
+    },
+    "1989-02-25": {
+      "date": "1989-02-25",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 2/25/1989 [EMPTY]",
+        "naid": "415889670",
+        "localId": "12791-017",
+        "status": "EMPTY",
+        "catalogUrl": "https://catalog.archives.gov/id/415889670"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 2/25/1989",
+        "naid": "415889671",
+        "localId": "12791-018",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889671"
+      },
+      "matchedRecordIds": [
+        "scowcroft-366551660-111-benazir-bhutto-memcon"
+      ]
+    },
+    "1989-02-26": {
+      "date": "1989-02-26",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 2/26/1989 [EMPTY]",
+        "naid": "415889672",
+        "localId": "12791-019",
+        "status": "EMPTY",
+        "catalogUrl": "https://catalog.archives.gov/id/415889672"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 2/26/1989",
+        "naid": "415889673",
+        "localId": "12791-020",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889673"
+      },
+      "matchedRecordIds": [
+        "scowcroft-366551661-21-zhao-ziyang-memcon"
+      ]
+    },
+    "1989-03-14": {
+      "date": "1989-03-14",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 3/14/1989 [EMPTY]",
+        "naid": "415889704",
+        "localId": "12792-017",
+        "status": "EMPTY",
+        "catalogUrl": "https://catalog.archives.gov/id/415889704"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 3/14/1989",
+        "naid": "415889705",
+        "localId": "12792-018",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889705"
+      },
+      "matchedRecordIds": [
+        "nsc-source-470760888"
+      ]
+    },
+    "1989-04-11": {
+      "date": "1989-04-11",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 4/11/1989",
+        "naid": "415889760",
+        "localId": "12794-017",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889760"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 4/11/1989",
+        "naid": "415889761",
+        "localId": "12794-018",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889761"
+      },
+      "matchedRecordIds": [
+        "scowcroft-366551686-65-king-fahd-telcon"
+      ]
+    },
+    "1989-06-06": {
+      "date": "1989-06-06",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 6/6/1989",
+        "naid": "415889872",
+        "localId": "12798-025",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889872"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 6/6/1989",
+        "naid": "415889873",
+        "localId": "12798-026",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889873"
+      },
+      "matchedRecordIds": [
+        "bush-library-428080031"
+      ]
+    },
+    "1989-06-07": {
+      "date": "1989-06-07",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 6/7/1989",
+        "naid": "415889874",
+        "localId": "12798-027",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889874"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 6/7/1989",
+        "naid": "415889875",
+        "localId": "12798-028",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889875"
+      },
+      "matchedRecordIds": [
+        "scowcroft-366551687-51-benazir-bhutto-telcon",
+        "scowcroft-366551687-49-helmut-kohl-telcon"
+      ]
+    },
+    "1989-06-08": {
+      "date": "1989-06-08",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 6/8/1989",
+        "naid": "415889876",
+        "localId": "12798-029",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889876"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 6/8/1989",
+        "naid": "415889877",
+        "localId": "12798-030",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889877"
+      },
+      "matchedRecordIds": [
+        "bush-library-428080057"
+      ]
+    },
+    "1989-06-09": {
+      "date": "1989-06-09",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 6/9/1989",
+        "naid": "415889878",
+        "localId": "12799-001",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889878"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 6/9/1989",
+        "naid": "415889879",
+        "localId": "12799-002",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889879"
+      },
+      "matchedRecordIds": [
+        "scowcroft-366551687-56-benazir-bhutto-telcon"
+      ]
+    },
+    "1989-06-10": {
+      "date": "1989-06-10",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 6/10/1989",
+        "naid": "415889880",
+        "localId": "12799-003",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889880"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 6/10/1989",
+        "naid": "415889881",
+        "localId": "12799-004",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889881"
+      },
+      "matchedRecordIds": [
+        "bush-library-428080061"
+      ]
+    },
+    "1989-07-04": {
+      "date": "1989-07-04",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 7/4/1989 [EMPTY]",
+        "naid": "415889928",
+        "localId": "12801-009",
+        "status": "EMPTY",
+        "catalogUrl": "https://catalog.archives.gov/id/415889928"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 7/4/1989",
+        "naid": "415889929",
+        "localId": "12801-010",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889929"
+      },
+      "matchedRecordIds": [
+        "bush-library-428080113"
+      ]
+    },
+    "1989-08-05": {
+      "date": "1989-08-05",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 8/5/1989",
+        "naid": "415889992",
+        "localId": "12803-007",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889992"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 8/5/1989",
+        "naid": "415889993",
+        "localId": "12803-008",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415889993"
+      },
+      "matchedRecordIds": [
+        "bush-library-428080169"
+      ]
+    },
+    "1989-10-02": {
+      "date": "1989-10-02",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 10/2/1989",
+        "naid": "415890108",
+        "localId": "12807-007",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415890108"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 10/2/1989",
+        "naid": "415890109",
+        "localId": "12807-008",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415890109"
+      },
+      "matchedRecordIds": [
+        "scowcroft-366551664-118-hosni-mubarak-memcon"
+      ]
+    },
+    "1989-10-18": {
+      "date": "1989-10-18",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 10/18/1989",
+        "naid": "415890140",
+        "localId": "12808-017",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415890140"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 10/18/1989",
+        "naid": "415890141",
+        "localId": "12808-018",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415890141"
+      },
+      "matchedRecordIds": [
+        "bush-library-428080301"
+      ]
+    },
+    "1989-10-23": {
+      "date": "1989-10-23",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 10/23/1989",
+        "naid": "415890150",
+        "localId": "12809-007",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415890150"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 10/23/1989",
+        "naid": "415890151",
+        "localId": "12809-008",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415890151"
+      },
+      "matchedRecordIds": [
+        "470426219-nsc-meeting-october-23-1989-re-afghanistan"
+      ]
+    },
+    "1989-11-01": {
+      "date": "1989-11-01",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 11/1/1989",
+        "naid": "415890168",
+        "localId": "12810-001",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415890168"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 11/1/1989",
+        "naid": "415890169",
+        "localId": "12810-002",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415890169"
+      },
+      "matchedRecordIds": [
+        "bush-library-428080317"
+      ]
+    },
+    "1989-11-24": {
+      "date": "1989-11-24",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 11/24/1989 [EMPTY]",
+        "naid": "415890214",
+        "localId": "12812-005",
+        "status": "EMPTY",
+        "catalogUrl": "https://catalog.archives.gov/id/415890214"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 11/24/1989",
+        "naid": "415890215",
+        "localId": "12812-006",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415890215"
+      },
+      "matchedRecordIds": [
+        "scowcroft-366551665-91-margaret-thatcher-memcon"
+      ]
+    },
+    "1989-11-27": {
+      "date": "1989-11-27",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 11/27/1989 [EMPTY]",
+        "naid": "415890220",
+        "localId": "12812-011",
+        "status": "EMPTY",
+        "catalogUrl": "https://catalog.archives.gov/id/415890220"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 11/27/1989",
+        "naid": "415890221",
+        "localId": "12812-012",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415890221"
+      },
+      "matchedRecordIds": [
+        "470426381-presidential-visit-of-president-of-afghanistan-interim-government-sibgahtullah-mojaddedi-november-27-1989"
+      ]
+    },
+    "1990-09-09": {
+      "date": "1990-09-09",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 9/9/1990 [EMPTY]",
+        "naid": "415890792",
+        "localId": "12835-025",
+        "status": "EMPTY",
+        "catalogUrl": "https://catalog.archives.gov/id/415890792"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 9/9/1990",
+        "naid": "415890793",
+        "localId": "12835-026",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415890793"
+      },
+      "matchedRecordIds": [
+        "scowcroft-366551670-130-mikhail-gorbachev-memcon"
+      ]
+    },
+    "1990-10-01": {
+      "date": "1990-10-01",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 10/01/1990",
+        "naid": "415890836",
+        "localId": "12838-003",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415890836"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 10/01/1990",
+        "naid": "415890837",
+        "localId": "12838-004",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415890837"
+      },
+      "matchedRecordIds": [
+        "bush-library-428081099"
+      ]
+    },
+    "1990-10-09": {
+      "date": "1990-10-09",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 10/9/1990",
+        "naid": "415890852",
+        "localId": "12838-019",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415890852"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 10/9/1990",
+        "naid": "415890853",
+        "localId": "12838-020",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415890853"
+      },
+      "matchedRecordIds": [
+        "nsc-source-470760963",
+        "nsc-source-470760964"
+      ]
+    },
+    "1991-01-21": {
+      "date": "1991-01-21",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 1/21/1991",
+        "naid": "415891062",
+        "localId": "12847-011",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415891062"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 1/21/1991",
+        "naid": "415891063",
+        "localId": "12847-012",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415891063"
+      },
+      "matchedRecordIds": [
+        "scowcroft-366551673-7-lee-kuan-yew-memcon"
+      ]
+    },
+    "1991-02-02": {
+      "date": "1991-02-02",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 2/2/1991",
+        "naid": "415891086",
+        "localId": "12848-003",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415891086"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 2/2/1991",
+        "naid": "415891087",
+        "localId": "12848-004",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415891087"
+      },
+      "matchedRecordIds": [
+        "scowcroft-366551697-12-nawaz-sharif-telcon"
+      ]
+    },
+    "1991-02-08": {
+      "date": "1991-02-08",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 2/8/1991",
+        "naid": "415891098",
+        "localId": "12848-015",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415891098"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 2/8/1991",
+        "naid": "415891099",
+        "localId": "12848-016",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415891099"
+      },
+      "matchedRecordIds": [
+        "bush-library-428081443"
+      ]
+    },
+    "1991-12-15": {
+      "date": "1991-12-15",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 12/15/1991",
+        "naid": "415891722",
+        "localId": "12876-005",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415891722"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 12/15/1991",
+        "naid": "415891723",
+        "localId": "12876-006",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415891723"
+      },
+      "matchedRecordIds": [
+        "bush-library-428082103"
+      ]
+    },
+    "1992-01-31": {
+      "date": "1992-01-31",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 1/31/1992",
+        "naid": "415891817",
+        "localId": "12879-019",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415891817"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 1/31/1992",
+        "naid": "415891818",
+        "localId": "12879-020",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415891818"
+      },
+      "matchedRecordIds": [
+        "bush-library-428082131"
+      ]
+    },
+    "1992-03-19": {
+      "date": "1992-03-19",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 3/19/1992",
+        "naid": "415891914",
+        "localId": "12884-015",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415891914"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 3/19/1992",
+        "naid": "415891915",
+        "localId": "12884-016",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415891915"
+      },
+      "matchedRecordIds": [
+        "bush-library-428082145"
+      ]
+    },
+    "1992-12-03": {
+      "date": "1992-12-03",
+      "diary": {
+        "label": "Daily Diary",
+        "title": "[Presidential Daily Diary] 12/03/1992",
+        "naid": "415892436",
+        "localId": "26863-035",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415892436"
+      },
+      "backup": {
+        "label": "Daily Backup",
+        "title": "[Presidential Daily Backup] 12/03/1992",
+        "naid": "415892437",
+        "localId": "26863-036",
+        "status": "",
+        "catalogUrl": "https://catalog.archives.gov/id/415892437"
+      },
+      "matchedRecordIds": [
+        "bush-library-428082401"
+      ]
+    }
+  }
+}

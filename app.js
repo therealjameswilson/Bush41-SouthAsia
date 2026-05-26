@@ -27,6 +27,7 @@ const workbenchSummary = document.querySelector("#workbench-summary");
 let allRecords = [];
 let allPotentialDocuments = [];
 let allCompilerGaps = [];
+let allDailyDiaryReferences = { dates: {} };
 
 const COMPILER_QUEUE_OPTIONS = [
   ["", "All compiler queues"],
@@ -700,6 +701,7 @@ function normalizeSeriesName(series = "") {
     .replace(/National Security Directive \(NSD\)/i, "NSD")
     .replace(/Intelligence File \(IF\)/i, "Intelligence File")
     .replace(/\s+Files\s+Files$/i, " Files")
+    .replace(/\s+/g, " ")
     .trim();
 }
 
@@ -710,7 +712,7 @@ function cleanFolderTitle(record) {
   const seriesLabels = [source.series, source.fileTitle].map(normalizeSeriesName).filter(Boolean);
   const sourceTitlePieces = (record.sourceTitle || "")
     .split(";")
-    .map((piece) => piece.trim())
+    .map((piece) => piece.replace(/\s+/g, " ").trim())
     .filter(Boolean)
     .filter((piece) => !/\.pdf$/i.test(piece))
     .filter((piece) => !/^source pages?\b/i.test(piece));
@@ -721,7 +723,7 @@ function cleanFolderTitle(record) {
     source.fileTitle,
     record.documentTitle,
     record.title
-  ]);
+  ].map((candidate) => String(candidate || "").replace(/\s+/g, " ").trim()));
 
   return (
     candidates.find((candidate) => {
@@ -806,37 +808,6 @@ function frusReleaseSentence(record) {
   return `${status}.`;
 }
 
-function frusExtentSentence(record) {
-  if (!record.pageCount) return "";
-  const extent = `${record.pageCount} ${record.pageCount === 1 ? "page" : "pages"}`;
-  if (isDeclassificationQueue(record)) return `Approximate extent: ${extent}.`;
-  return `Project PDF extent: ${extent}.`;
-}
-
-function foiaSentence(record) {
-  const foias = uniqueInOrder([...(record.foiaNumbers || []), record.source?.foiaNumber]);
-  return foias.length ? `FOIA: ${foias.join(", ")}.` : "";
-}
-
-function duplicateProvenanceSentence(record) {
-  const duplicates = record.source?.duplicateSources || [];
-  if (!duplicates.length) return "";
-
-  const provenance = duplicates
-    .map((duplicate) =>
-      uniqueInOrder([
-        duplicate.sourceName,
-        duplicate.series,
-        duplicate.localIdentifier ? `OA/ID ${duplicate.localIdentifier}` : "",
-        duplicate.naid ? `NAID ${duplicate.naid}` : ""
-      ]).join(", ")
-    )
-    .filter(Boolean)
-    .join("; ");
-
-  return provenance ? `Deduped related provenance: ${provenance}.` : "";
-}
-
 function generateFrusSourceNote(record) {
   const sourcePath = uniqueInOrder([
     frusRepository(record),
@@ -907,8 +878,67 @@ function createSourceNote(record) {
   note.className = "record-provenance-text";
   note.textContent = record.provenanceNote || record.sourceNote || "Source: Provenance pending.";
 
-  sourceNote.append(summary, frusNote, provenanceLabel, note);
+  const dailyDiaryReference = createDailyDiaryReference(record);
+  sourceNote.append(summary, frusNote);
+  if (dailyDiaryReference) sourceNote.append(dailyDiaryReference);
+  sourceNote.append(provenanceLabel, note);
   return sourceNote;
+}
+
+function createDailyDiaryReference(record) {
+  const exactReferences = record.dailyDiaryReferences || [];
+  if (exactReferences.length) return createExactDailyDiaryReference(exactReferences);
+
+  const reference = allDailyDiaryReferences?.dates?.[record.date];
+  if (!reference) return null;
+
+  const wrapper = document.createElement("div");
+  const label = document.createElement("p");
+  label.className = "record-provenance-label";
+  label.textContent = "Presidential Daily Diary cross-reference";
+
+  const text = document.createElement("p");
+  text.className = "record-provenance-text";
+  text.append("Same-day scheduling reference: ");
+
+  const items = [reference.diary, reference.backup].filter(Boolean);
+  items.forEach((item, index) => {
+    if (index) text.append("; ");
+    const link = document.createElement("a");
+    link.href = item.catalogUrl;
+    link.rel = "noreferrer";
+    link.textContent = `${item.label} ${item.localId}${item.status ? ` (${item.status})` : ""}`;
+    text.append(link);
+  });
+
+  text.append(". Use for chronology, time, location, attendees, and call status; not for substantive summaries.");
+  wrapper.append(label, text);
+  return wrapper;
+}
+
+function createExactDailyDiaryReference(references) {
+  const wrapper = document.createElement("div");
+  const label = document.createElement("p");
+  label.className = "record-provenance-label";
+  label.textContent = "Presidential Daily Diary cross-reference";
+
+  const text = document.createElement("p");
+  text.className = "record-provenance-text";
+  text.append("Matched scheduling reference: ");
+
+  references.forEach((item, index) => {
+    if (index) text.append("; ");
+    const link = document.createElement("a");
+    link.href = item.pdfUrl || item.catalogUrl;
+    link.rel = "noreferrer";
+    link.textContent = `${item.sourceType || "Daily Diary"} ${item.localIdentifier || item.naid}`;
+    text.append(link);
+    if (item.matchedTerms?.length) text.append(` (matches ${item.matchedTerms.slice(0, 6).join(", ")})`);
+  });
+
+  text.append(". Use for chronology, time, location, attendees, and call status; not for substantive summaries.");
+  wrapper.append(label, text);
+  return wrapper;
 }
 
 function createSubject(record) {
@@ -1319,6 +1349,7 @@ async function init() {
     allRecords = assignCompilerNumbers(window.MEMCONS || window.MEMCON_RECORDS || (await loadRecords()));
     allPotentialDocuments = window.POTENTIAL_DOCUMENTS || (await loadPotentialDocuments());
     allCompilerGaps = window.COMPILER_GAPS || (await loadCompilerGaps());
+    allDailyDiaryReferences = window.DAILY_DIARY_REFERENCES || (await loadDailyDiaryReferences());
     setChapterCounts(allRecords);
     populateFilters(allRecords);
     renderWorkbench(allRecords, allPotentialDocuments, allCompilerGaps);
@@ -1352,6 +1383,12 @@ async function loadPotentialDocuments() {
 async function loadCompilerGaps() {
   const response = await fetch("data/compiler-gaps.json");
   if (!response.ok) return [];
+  return response.json();
+}
+
+async function loadDailyDiaryReferences() {
+  const response = await fetch("data/daily-diary-references.json");
+  if (!response.ok) return { dates: {} };
   return response.json();
 }
 

@@ -1,0 +1,842 @@
+{
+  "generatedAt": "2026-05-26T01:50:58.110Z",
+  "sourceSeries": {
+    "title": "Presidential Daily Diary and Presidential Daily Backup Materials",
+    "naid": "186322",
+    "catalogUrl": "https://catalog.archives.gov/id/186322"
+  },
+  "presidentialMeetingsAndCallsChecked": 30,
+  "recordsWithDailyDiaryReferences": 26,
+  "referencesAdded": 39,
+  "recordsWithoutMatchedDailyDiaryReferences": [
+    {
+      "id": "scowcroft-366551670-130-mikhail-gorbachev-memcon",
+      "date": "1990-09-09",
+      "title": "Meeting with President Mikhail Gorbachev of the USSR (U)",
+      "candidateTerms": [
+        "Mikhail",
+        "Gorbachev",
+        "Afghanistan",
+        "Soviet",
+        "Union",
+        "Afghan",
+        "USSR"
+      ]
+    },
+    {
+      "id": "scowcroft-366551687-51-benazir-bhutto-telcon",
+      "date": "1989-06-07",
+      "title": "Telephone Conversation with Guillermo Endara, President-elect of Panama _ (UV)",
+      "candidateTerms": [
+        "Benazir",
+        "Bhutto",
+        "Pakistan",
+        "Pakistani",
+        "Guillermo",
+        "Endara",
+        "Panama"
+      ]
+    },
+    {
+      "id": "bush-library-428079855",
+      "date": "1989-02-23",
+      "title": "President's Meeting with President Ramaswamy Iyer Venkataraman of India, February 23, 1989",
+      "candidateTerms": [
+        "Venkataraman",
+        "India",
+        "Indian",
+        "Ramaswamy",
+        "Iyer"
+      ]
+    },
+    {
+      "id": "bush-library-428082103",
+      "date": "1991-12-15",
+      "title": "Telcon with Prime Minister Rao of India on December 15, 1991",
+      "candidateTerms": [
+        "Narasimha",
+        "India",
+        "Indian"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "id": "scowcroft-366551660-75-turgut-ozal-memcon",
+      "date": "1989-02-24",
+      "title": "President’s Meeting with Prime Minister Turgut Ozal of Turkey (J)",
+      "candidateTerms": [
+        "Turgut",
+        "Ozal",
+        "Afghanistan",
+        "Turkey",
+        "Afghan"
+      ],
+      "references": [
+        {
+          "naid": "415889669",
+          "title": "[Presidential Daily Backup] 2/24/1989",
+          "matchedTerms": [
+            "Turgut",
+            "Ozal",
+            "Turkey"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scowcroft-366551686-65-king-fahd-telcon",
+      "date": "1989-04-11",
+      "title": "Telephone Conversation with King Fahd of Saudi Arabia",
+      "candidateTerms": [
+        "Fahd",
+        "Afghanistan",
+        "Saudi",
+        "Arabia",
+        "Afghan"
+      ],
+      "references": [
+        {
+          "naid": "415889760",
+          "title": "[Presidential Daily Diary] 4/11/1989",
+          "matchedTerms": [
+            "Fahd",
+            "Saudi",
+            "Arabia"
+          ]
+        },
+        {
+          "naid": "415889761",
+          "title": "[Presidential Daily Backup] 4/11/1989",
+          "matchedTerms": [
+            "Fahd",
+            "Saudi",
+            "Arabia"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scowcroft-366551665-91-margaret-thatcher-memcon",
+      "date": "1989-11-24",
+      "title": "Meeting with Prime Minister Margaret Thatcher of Great Britain (§)",
+      "candidateTerms": [
+        "Margaret",
+        "Thatcher",
+        "Afghanistan",
+        "Kingdom",
+        "Afghan",
+        "Great",
+        "Britain"
+      ],
+      "references": [
+        {
+          "naid": "415890215",
+          "title": "[Presidential Daily Backup] 11/24/1989",
+          "matchedTerms": [
+            "Margaret",
+            "Thatcher",
+            "Kingdom"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "470426381-presidential-visit-of-president-of-afghanistan-interim-government-sibgahtullah-mojaddedi-november-27-1989",
+      "date": "1989-11-27",
+      "title": "Presidential Visit of President [of Afghanistan Interim Government Sibgahtullah] Mojaddedi - November 27, 1989",
+      "candidateTerms": [
+        "Sibghatullah",
+        "Mojaddedi",
+        "Afghanistan",
+        "Afghan",
+        "Visit",
+        "Interim",
+        "Government",
+        "Sibgahtullah"
+      ],
+      "references": [
+        {
+          "naid": "415890221",
+          "title": "[Presidential Daily Backup] 11/27/1989",
+          "matchedTerms": [
+            "Sibghatullah",
+            "Mojaddedi",
+            "Afghanistan",
+            "Afghan",
+            "Interim",
+            "Government"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scowcroft-366551670-130-mikhail-gorbachev-memcon",
+      "date": "1990-09-09",
+      "title": "Meeting with President Mikhail Gorbachev of the USSR (U)",
+      "candidateTerms": [
+        "Mikhail",
+        "Gorbachev",
+        "Afghanistan",
+        "Soviet",
+        "Union",
+        "Afghan",
+        "USSR"
+      ],
+      "references": []
+    },
+    {
+      "id": "bush-library-428079777",
+      "date": "1989-01-23",
+      "title": "Telephone Conversation with Prime Minister Benazir Bhutto of Pakistan, January 23, 1989",
+      "candidateTerms": [
+        "Benazir",
+        "Bhutto",
+        "Pakistan",
+        "Pakistani"
+      ],
+      "references": [
+        {
+          "naid": "415889605",
+          "title": "[Presidential Daily Backup] 1/23/1989",
+          "matchedTerms": [
+            "Benazir",
+            "Bhutto",
+            "Pakistan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bush-library-428079809",
+      "date": "1989-01-25",
+      "title": "Telephone Conversation with President Ghulam Ishaq Khan of Pakistan, January 25, 1989",
+      "candidateTerms": [
+        "Ghulam",
+        "Ishaq",
+        "Khan",
+        "Pakistan",
+        "Pakistani"
+      ],
+      "references": [
+        {
+          "naid": "415889608",
+          "title": "[Presidential Daily Diary] 1/25/1989",
+          "matchedTerms": [
+            "Ghulam",
+            "Ishaq",
+            "Khan",
+            "Pakistan"
+          ]
+        },
+        {
+          "naid": "415889609",
+          "title": "[Presidential Daily Backup] 1/25/1989",
+          "matchedTerms": [
+            "Ghulam",
+            "Ishaq",
+            "Khan",
+            "Pakistan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bush-library-428079859",
+      "date": "1989-02-24",
+      "title": "President's Meeting with Prime Minister Benazir Bhutto of Pakistan, February 24, 1989",
+      "candidateTerms": [
+        "Benazir",
+        "Bhutto",
+        "Pakistan",
+        "Pakistani"
+      ],
+      "references": [
+        {
+          "naid": "415889669",
+          "title": "[Presidential Daily Backup] 2/24/1989",
+          "matchedTerms": [
+            "Benazir",
+            "Bhutto",
+            "Pakistan",
+            "Pakistani"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scowcroft-366551660-111-benazir-bhutto-memcon",
+      "date": "1989-02-25",
+      "title": "Welcoming Banquet in Beijing, China",
+      "candidateTerms": [
+        "Benazir",
+        "Bhutto",
+        "Pakistan",
+        "Pakistani",
+        "Welcoming",
+        "Banquet",
+        "Beijing",
+        "China"
+      ],
+      "references": [
+        {
+          "naid": "415889671",
+          "title": "[Presidential Daily Backup] 2/25/1989",
+          "matchedTerms": [
+            "Banquet",
+            "Beijing",
+            "China"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bush-library-428080031",
+      "date": "1989-06-06",
+      "title": "Plenary Meeting with Prime Minister Bhutto of Pakistan, June 6, 1989",
+      "candidateTerms": [
+        "Benazir",
+        "Bhutto",
+        "Pakistan",
+        "Pakistani"
+      ],
+      "references": [
+        {
+          "naid": "415889872",
+          "title": "[Presidential Daily Diary] 6/6/1989",
+          "matchedTerms": [
+            "Benazir",
+            "Bhutto",
+            "Pakistan",
+            "Pakistani"
+          ]
+        },
+        {
+          "naid": "415889873",
+          "title": "[Presidential Daily Backup] 6/6/1989",
+          "matchedTerms": [
+            "Bhutto",
+            "Pakistan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scowcroft-366551687-51-benazir-bhutto-telcon",
+      "date": "1989-06-07",
+      "title": "Telephone Conversation with Guillermo Endara, President-elect of Panama _ (UV)",
+      "candidateTerms": [
+        "Benazir",
+        "Bhutto",
+        "Pakistan",
+        "Pakistani",
+        "Guillermo",
+        "Endara",
+        "Panama"
+      ],
+      "references": []
+    },
+    {
+      "id": "scowcroft-366551687-49-helmut-kohl-telcon",
+      "date": "1989-06-07",
+      "title": "Telephone Conversation with West German Chancellor Helmut Kohl",
+      "candidateTerms": [
+        "Helmut",
+        "Kohl",
+        "Pakistan",
+        "Germany",
+        "Pakistani",
+        "West",
+        "German"
+      ],
+      "references": [
+        {
+          "naid": "415889874",
+          "title": "[Presidential Daily Diary] 6/7/1989",
+          "matchedTerms": [
+            "Helmut",
+            "Kohl",
+            "Germany",
+            "German"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scowcroft-366551687-56-benazir-bhutto-telcon",
+      "date": "1989-06-09",
+      "title": "Telephone Conversation with President Mohammad Hosni Mubarak of Egypt (4",
+      "candidateTerms": [
+        "Benazir",
+        "Bhutto",
+        "Pakistan",
+        "Pakistani",
+        "Mohammad",
+        "Hosni",
+        "Mubarak",
+        "Egypt"
+      ],
+      "references": [
+        {
+          "naid": "415889878",
+          "title": "[Presidential Daily Diary] 6/9/1989",
+          "matchedTerms": [
+            "Hosni",
+            "Mubarak",
+            "Egypt"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bush-library-428080061",
+      "date": "1989-06-10",
+      "title": "TELCON with Prime Minister Bhutto of Pakistan, June 10, 1989",
+      "candidateTerms": [
+        "Benazir",
+        "Bhutto",
+        "Pakistan",
+        "Pakistani"
+      ],
+      "references": [
+        {
+          "naid": "415889880",
+          "title": "[Presidential Daily Diary] 6/10/1989",
+          "matchedTerms": [
+            "Benazir",
+            "Bhutto",
+            "Pakistan"
+          ]
+        },
+        {
+          "naid": "415889881",
+          "title": "[Presidential Daily Backup] 6/10/1989",
+          "matchedTerms": [
+            "Benazir",
+            "Bhutto"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bush-library-428080169",
+      "date": "1989-08-05",
+      "title": "Phone Call to the President from the Pakistani Prime Minister, August 5, 1989",
+      "candidateTerms": [
+        "Benazir",
+        "Bhutto",
+        "Pakistan",
+        "Pakistani",
+        "Phone"
+      ],
+      "references": [
+        {
+          "naid": "415889992",
+          "title": "[Presidential Daily Diary] 8/5/1989",
+          "matchedTerms": [
+            "Benazir",
+            "Bhutto",
+            "Pakistan",
+            "Phone"
+          ]
+        },
+        {
+          "naid": "415889993",
+          "title": "[Presidential Daily Backup] 8/5/1989",
+          "matchedTerms": [
+            "Benazir",
+            "Bhutto",
+            "Pakistan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bush-library-428080317",
+      "date": "1989-11-01",
+      "title": "Telephone Conversation with Prime Minister Bhutto of Pakistan, November 1, 1989",
+      "candidateTerms": [
+        "Benazir",
+        "Bhutto",
+        "Pakistan",
+        "Pakistani"
+      ],
+      "references": [
+        {
+          "naid": "415890168",
+          "title": "[Presidential Daily Diary] 11/1/1989",
+          "matchedTerms": [
+            "Benazir",
+            "Bhutto"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scowcroft-366551673-7-lee-kuan-yew-memcon",
+      "date": "1991-01-21",
+      "title": "Meeting with Lee Kuan Yew, Senior Minister, Singapore (U)",
+      "candidateTerms": [
+        "Kuan",
+        "Pakistan",
+        "Singapore",
+        "Pakistani",
+        "Senior"
+      ],
+      "references": [
+        {
+          "naid": "415891062",
+          "title": "[Presidential Daily Diary] 1/21/1991",
+          "matchedTerms": [
+            "Singapore",
+            "Senior"
+          ]
+        },
+        {
+          "naid": "415891063",
+          "title": "[Presidential Daily Backup] 1/21/1991",
+          "matchedTerms": [
+            "Singapore"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scowcroft-366551697-12-nawaz-sharif-telcon",
+      "date": "1991-02-02",
+      "title": "Presidential Call to Prime Minister Nawaz of Pakistan on February 2, 1991 (U)",
+      "candidateTerms": [
+        "Nawaz",
+        "Sharif",
+        "Pakistan",
+        "Pakistani"
+      ],
+      "references": [
+        {
+          "naid": "415891086",
+          "title": "[Presidential Daily Diary] 2/2/1991",
+          "matchedTerms": [
+            "Sharif",
+            "Pakistan"
+          ]
+        },
+        {
+          "naid": "415891087",
+          "title": "[Presidential Daily Backup] 2/2/1991",
+          "matchedTerms": [
+            "Nawaz",
+            "Sharif",
+            "Pakistan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bush-library-428082401",
+      "date": "1992-12-03",
+      "title": "Telcon with Prime Minister Nawaz Sharif of Pakistan on December 3, 1992",
+      "candidateTerms": [
+        "Nawaz",
+        "Sharif",
+        "Pakistan",
+        "Pakistani"
+      ],
+      "references": [
+        {
+          "naid": "415892436",
+          "title": "[Presidential Daily Diary] 12/03/1992",
+          "matchedTerms": [
+            "Nawaz",
+            "Sharif",
+            "Pakistan"
+          ]
+        },
+        {
+          "naid": "415892437",
+          "title": "[Presidential Daily Backup] 12/03/1992",
+          "matchedTerms": [
+            "Sharif",
+            "Pakistan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bush-library-428079855",
+      "date": "1989-02-23",
+      "title": "President's Meeting with President Ramaswamy Iyer Venkataraman of India, February 23, 1989",
+      "candidateTerms": [
+        "Venkataraman",
+        "India",
+        "Indian",
+        "Ramaswamy",
+        "Iyer"
+      ],
+      "references": []
+    },
+    {
+      "id": "scowcroft-366551661-21-zhao-ziyang-memcon",
+      "date": "1989-02-26",
+      "title": "President Bush’s Meeting with General Secretary of the Central Committee of the Communist Party Zhao Ziyang of the People’s Republic of China",
+      "candidateTerms": [
+        "Zhao",
+        "Ziyang",
+        "India",
+        "China",
+        "Indian",
+        "Bush",
+        "General",
+        "Secretary",
+        "Central",
+        "Committee",
+        "Communist",
+        "Party",
+        "People",
+        "Republic"
+      ],
+      "references": [
+        {
+          "naid": "415889672",
+          "title": "[Presidential Daily Diary] 2/26/1989 [EMPTY]",
+          "matchedTerms": [
+            "Bush"
+          ]
+        },
+        {
+          "naid": "415889673",
+          "title": "[Presidential Daily Backup] 2/26/1989",
+          "matchedTerms": [
+            "Zhao",
+            "Ziyang",
+            "China",
+            "Bush",
+            "General",
+            "Secretary",
+            "Central",
+            "Committee",
+            "Communist",
+            "Party",
+            "People",
+            "Republic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bush-library-428080057",
+      "date": "1989-06-08",
+      "title": "Presidential Phone Call to Prime Minister Gandhi, June 8, 1989",
+      "candidateTerms": [
+        "Rajiv",
+        "Gandhi",
+        "India",
+        "Indian",
+        "Phone"
+      ],
+      "references": [
+        {
+          "naid": "415889876",
+          "title": "[Presidential Daily Diary] 6/8/1989",
+          "matchedTerms": [
+            "Gandhi",
+            "India",
+            "Phone"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bush-library-428080113",
+      "date": "1989-07-04",
+      "title": "Telephone Conversation with Prime Minister Gandhi of India, July 4, 1989",
+      "candidateTerms": [
+        "Rajiv",
+        "Gandhi",
+        "India",
+        "Indian"
+      ],
+      "references": [
+        {
+          "naid": "415889929",
+          "title": "[Presidential Daily Backup] 7/4/1989",
+          "matchedTerms": [
+            "Rajiv",
+            "India"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bush-library-428080301",
+      "date": "1989-10-18",
+      "title": "Telephone Conversation with Prime Minister Gandhi of India, October 18, 1989",
+      "candidateTerms": [
+        "Rajiv",
+        "Gandhi",
+        "India",
+        "Indian"
+      ],
+      "references": [
+        {
+          "naid": "415890140",
+          "title": "[Presidential Daily Diary] 10/18/1989",
+          "matchedTerms": [
+            "Rajiv",
+            "Gandhi",
+            "India"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bush-library-428081443",
+      "date": "1991-02-08",
+      "title": "Telcon with Prime Minister Shankar of India on February 8, 1991",
+      "candidateTerms": [
+        "Siddhartha",
+        "Shankar",
+        "India",
+        "Indian"
+      ],
+      "references": [
+        {
+          "naid": "415891099",
+          "title": "[Presidential Daily Backup] 2/8/1991",
+          "matchedTerms": [
+            "India"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bush-library-428082103",
+      "date": "1991-12-15",
+      "title": "Telcon with Prime Minister Rao of India on December 15, 1991",
+      "candidateTerms": [
+        "Narasimha",
+        "India",
+        "Indian"
+      ],
+      "references": []
+    },
+    {
+      "id": "bush-library-428082131",
+      "date": "1992-01-31",
+      "title": "Meeting with Prime Minister Rao of India, January 31, 1992",
+      "candidateTerms": [
+        "Narasimha",
+        "India",
+        "Indian"
+      ],
+      "references": [
+        {
+          "naid": "415891817",
+          "title": "[Presidential Daily Diary] 1/31/1992",
+          "matchedTerms": [
+            "Narasimha",
+            "India",
+            "Indian"
+          ]
+        },
+        {
+          "naid": "415891818",
+          "title": "[Presidential Daily Backup] 1/31/1992",
+          "matchedTerms": [
+            "India"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scowcroft-366551664-118-hosni-mubarak-memcon",
+      "date": "1989-10-02",
+      "title": "Meeting with President Mubarak of Egypt (U)",
+      "candidateTerms": [
+        "Hosni",
+        "Mubarak",
+        "Egypt"
+      ],
+      "references": [
+        {
+          "naid": "415890108",
+          "title": "[Presidential Daily Diary] 10/2/1989",
+          "matchedTerms": [
+            "Hosni",
+            "Mubarak",
+            "Egypt"
+          ]
+        },
+        {
+          "naid": "415890109",
+          "title": "[Presidential Daily Backup] 10/2/1989",
+          "matchedTerms": [
+            "Hosni",
+            "Mubarak",
+            "Egypt"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bush-library-428081099",
+      "date": "1990-10-01",
+      "title": "Meeting with President Hussain Muhammad Ershad of Bangladesh, October 1, 1990",
+      "candidateTerms": [
+        "Hussain",
+        "Muhammad",
+        "Ershad",
+        "Bangladesh",
+        "Bangladeshi"
+      ],
+      "references": [
+        {
+          "naid": "415890836",
+          "title": "[Presidential Daily Diary] 10/01/1990",
+          "matchedTerms": [
+            "Hussain",
+            "Muhammad",
+            "Ershad",
+            "Bangladesh"
+          ]
+        },
+        {
+          "naid": "415890837",
+          "title": "[Presidential Daily Backup] 10/01/1990",
+          "matchedTerms": [
+            "Ershad",
+            "Bangladesh",
+            "Bangladeshi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bush-library-428082145",
+      "date": "1992-03-19",
+      "title": "Meeting with Prime Minister Khaleda Begum Zia of Bangladesh, March 19, 1992",
+      "candidateTerms": [
+        "Khaleda",
+        "Bangladesh",
+        "Bangladeshi",
+        "Begum"
+      ],
+      "references": [
+        {
+          "naid": "415891914",
+          "title": "[Presidential Daily Diary] 3/19/1992",
+          "matchedTerms": [
+            "Khaleda",
+            "Bangladesh"
+          ]
+        },
+        {
+          "naid": "415891915",
+          "title": "[Presidential Daily Backup] 3/19/1992",
+          "matchedTerms": [
+            "Bangladesh"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -60,13 +60,15 @@ substantive summaries.
 full catalog URLs and working provenance.
 `generate-compiler-worksheet.js` writes the offline compiler packet in
 `reports/compiler-worksheet.md` plus confirmed-record, potential-document,
-gap-queue, decision-log, chapter-matrix, persons-authority, source-note audit,
-and access-review CSV exports,
+gap-queue, decision-log, selection-board, chapter-matrix, persons-authority,
+source-note audit, and access-review CSV exports,
 creates `reports/compiler-source-note-audit.md` for itemized FRUS-style
 source-note review lanes, creates `reports/compiler-access-review.md` for
 access, declassification, excision, and promotion triage, creates
 `reports/compiler-chapter-matrix.md` for chapter-by-theme coverage and
 next-action review lanes, creates
+`reports/compiler-selection-board.md` for suggested triage decisions to prefill
+the decision log, creates
 `reports/compiler-persons-authority.md` for participant-to-Persons authority
 coverage and institutional-body separation, creates
 `reports/compiler-priority-dossiers.md` for the highest-risk first-pass lanes,

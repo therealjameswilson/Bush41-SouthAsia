@@ -73,10 +73,14 @@ const paths = {
   potentialCsv: path.join(reportsDir, "compiler-potential-documents.csv"),
   gapsCsv: path.join(reportsDir, "compiler-gap-queue.csv"),
   decisionLogCsv: path.join(reportsDir, "compiler-decision-log.csv"),
+  selectionBoardCsv: path.join(reportsDir, "compiler-selection-board.csv"),
+  selectionBoard: path.join(reportsDir, "compiler-selection-board.md"),
   sourceNoteAuditCsv: path.join(reportsDir, "compiler-source-note-audit.csv"),
   sourceNoteAudit: path.join(reportsDir, "compiler-source-note-audit.md"),
   accessReviewCsv: path.join(reportsDir, "compiler-access-review.csv"),
   accessReview: path.join(reportsDir, "compiler-access-review.md"),
+  pageBoundaryCsv: path.join(reportsDir, "compiler-page-boundary-queue.csv"),
+  pageBoundary: path.join(reportsDir, "compiler-page-boundary-queue.md"),
   chapterMatrixCsv: path.join(reportsDir, "compiler-chapter-matrix.csv"),
   chapterMatrix: path.join(reportsDir, "compiler-chapter-matrix.md"),
   personsAuthorityCsv: path.join(reportsDir, "compiler-persons-authority.csv"),
@@ -364,6 +368,222 @@ function decisionRows(confirmed, potentialQueue, gapQueue) {
   ];
 }
 
+function selectionSortRank(value) {
+  return {
+    "Access/declassification decision": 0,
+    "Excisions decision": 1,
+    "Page-boundary/source-note decision": 2,
+    "Promotion screening": 3,
+    "Selection review": 4,
+    "Context/locator decision": 5,
+    "Research task": 6
+  }[value] ?? 9;
+}
+
+function confidenceFor(row, lane) {
+  if (lane === "Research task") return row.priority || "Medium";
+  if (lane === "Access/declassification decision" || lane === "Excisions decision") return "High";
+  if (lane === "Selection review" && !(row.compilerRisks || []).length) return "High";
+  if (lane === "Context/locator decision") return /public/i.test(`${row.status} ${row.disposition}`) ? "Medium" : "Low";
+  return "Medium";
+}
+
+function confirmedSelection(row) {
+  const risks = compactList(row.compilerRisks);
+  if (isRestrictedStatus(row.releaseStatus)) {
+    return {
+      suggestedDecision: "Defer or cite only",
+      selectionLane: "Access/declassification decision",
+      rationale: "The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
+    };
+  }
+  if (/partial/i.test(row.releaseStatus || "")) {
+    return {
+      suggestedDecision: "Defer pending excisions review",
+      selectionLane: "Excisions decision",
+      rationale: "The released text is partial; check excisions before treating the document as selectable."
+    };
+  }
+  if (!row.pageCount || risks.includes("page-count-gap") || risks.includes("catalog-derived-source-note")) {
+    return {
+      suggestedDecision: "Review before selection",
+      selectionLane: "Page-boundary/source-note decision",
+      rationale: "The document is available, but source title, source note, or page-boundary evidence still needs compiler review."
+    };
+  }
+  return {
+    suggestedDecision: "Selection candidate",
+    selectionLane: "Selection review",
+    rationale: "The document is released/declassified with measured pages and no blocking compiler risk currently flagged."
+  };
+}
+
+function potentialSelection(row) {
+  const status = `${row.status || ""} ${row.disposition || ""} ${row.sourceNote || ""}`;
+  const highPriority = ["Critical", "High"].includes(row.priorityTier);
+  if (/public presidential statement|public papers|chronology-only public context/i.test(status)) {
+    return {
+      suggestedDecision: "Use as locator/context unless selected",
+      selectionLane: "Context/locator decision",
+      rationale: "Public material should usually locate internal files or support chronology unless it is intentionally selected as public text."
+    };
+  }
+  if (highPriority) {
+    return {
+      suggestedDecision: "Screen for promotion",
+      selectionLane: "Promotion screening",
+      rationale: "The lead is high-priority and may change chapter balance once page boundaries, title, and source note are stable."
+    };
+  }
+  return {
+    suggestedDecision: "Context or later review",
+    selectionLane: "Context/locator decision",
+    rationale: "The lead is lower priority or contextual; keep visible but do not promote without a specific policy-bearing page or file."
+  };
+}
+
+function selectionPriority(row, lane, itemType) {
+  if (itemType === "Compiler gap") return `${row.priority}; gap task`;
+  if (itemType === "Potential lead") {
+    return compactList([row.priorityTier, row.priorityScore ? `score ${row.priorityScore}` : "", lane]).join("; ");
+  }
+  return compactList([row.queue, lane]).join("; ");
+}
+
+function selectionBoardRows(confirmed, potentialQueue, gapQueue) {
+  const confirmedRows = confirmed.map((row) => {
+    const decision = confirmedSelection(row);
+    return {
+      itemType: "Confirmed record",
+      itemId: row.id,
+      compilerNumber: row.compilerNumber,
+      suggestedDecision: decision.suggestedDecision,
+      selectionLane: decision.selectionLane,
+      confidence: confidenceFor(row, decision.selectionLane),
+      priority: selectionPriority(row, decision.selectionLane, "Confirmed record"),
+      chapterOrLane: row.chapter,
+      date: row.date,
+      title: row.title,
+      releaseOrStatus: row.releaseStatus,
+      pages: row.pageCount ? pageLabel(row.pageCount) : "",
+      naidOrTargets: compactList([row.naid, row.localIdentifier]).join("; "),
+      sourceLocator: compactList([row.source, row.sourcePages ? `source pages ${row.sourcePages}` : "", row.objectFilename]).join(" | "),
+      rationale: decision.rationale,
+      nextAction: row.nextAction,
+      sourceNote: row.sourceNote,
+      catalogUrl: row.catalogUrl,
+      pdfUrl: row.pdfUrl
+    };
+  });
+
+  const potentialRowsForBoard = potentialQueue.map((row) => {
+    const decision = potentialSelection(row);
+    return {
+      itemType: "Potential lead",
+      itemId: row.id,
+      compilerNumber: "",
+      suggestedDecision: decision.suggestedDecision,
+      selectionLane: decision.selectionLane,
+      confidence: confidenceFor(row, decision.selectionLane),
+      priority: selectionPriority(row, decision.selectionLane, "Potential lead"),
+      chapterOrLane: row.reviewLane,
+      date: row.date,
+      title: row.title,
+      releaseOrStatus: compactList([row.disposition, row.status]).join("; "),
+      pages: "",
+      naidOrTargets: row.naid || "",
+      sourceLocator: compactList([row.source, row.objectFilename]).join(" | "),
+      rationale: decision.rationale,
+      nextAction: row.action,
+      sourceNote: row.sourceNote,
+      catalogUrl: row.catalogUrl,
+      pdfUrl: row.pdfUrl
+    };
+  });
+
+  const gapRowsForBoard = gapQueue.map((row) => ({
+    itemType: "Compiler gap",
+    itemId: row.id,
+    compilerNumber: "",
+    suggestedDecision: "Resolve research task",
+    selectionLane: "Research task",
+    confidence: confidenceFor(row, "Research task"),
+    priority: selectionPriority(row, "Research task", "Compiler gap"),
+    chapterOrLane: row.lane,
+    date: "",
+    title: row.title,
+    releaseOrStatus: row.status,
+    pages: "",
+    naidOrTargets: compactList(row.targetRecords).join("; "),
+    sourceLocator: compactList(row.sourcePools).join("; "),
+    rationale: row.needed,
+    nextAction: row.firstAction,
+    sourceNote: row.needed,
+    catalogUrl: "",
+    pdfUrl: ""
+  }));
+
+  return [...confirmedRows, ...potentialRowsForBoard, ...gapRowsForBoard].sort((a, b) =>
+    selectionSortRank(a.selectionLane) - selectionSortRank(b.selectionLane) ||
+    priorityRank(String(a.priority).split(";")[0]) - priorityRank(String(b.priority).split(";")[0]) ||
+    String(a.date || "9999").localeCompare(String(b.date || "9999")) ||
+    String(a.title).localeCompare(String(b.title))
+  );
+}
+
+function writeSelectionBoard(rows) {
+  const laneCounts = countBy(rows, (row) => row.selectionLane).map(([lane, count]) => [lane, count]);
+  const decisionCounts = countBy(rows, (row) => row.suggestedDecision).map(([decision, count]) => [decision, count]);
+  const actionRows = rows.filter((row) => !/Selection candidate/i.test(row.suggestedDecision));
+  const firstActions = uniqueInOrder(actionRows.map((row) => row.selectionLane))
+    .sort((a, b) => selectionSortRank(a) - selectionSortRank(b))
+    .flatMap((lane) => actionRows.filter((row) => row.selectionLane === lane).slice(0, 6))
+    .map((row) => [
+      row.itemType === "Confirmed record" ? row.compilerNumber : row.itemType,
+      row.selectionLane,
+      row.suggestedDecision,
+      row.chapterOrLane,
+      row.date || "",
+      mdEscape(row.title),
+      mdEscape(row.nextAction)
+    ]);
+
+  const lines = [
+    "# FRUS South Asia Selection Board",
+    "",
+    `Generated: ${new Date().toISOString()}`,
+    "",
+    "This board pre-fills compiler-facing selection recommendations across confirmed records, potential leads, and open gap tasks. It is not final editorial selection; it is a triage layer to make the blank decision log faster to complete.",
+    "",
+    "## Coverage",
+    "",
+    `- Board rows: ${rows.length}`,
+    `- Confirmed records: ${rows.filter((row) => row.itemType === "Confirmed record").length}`,
+    `- Potential leads: ${rows.filter((row) => row.itemType === "Potential lead").length}`,
+    `- Compiler gap tasks: ${rows.filter((row) => row.itemType === "Compiler gap").length}`,
+    "",
+    "## Selection Lanes",
+    "",
+    markdownTable(["Lane", "Rows"], laneCounts),
+    "",
+    "## Suggested Decisions",
+    "",
+    markdownTable(["Suggested decision", "Rows"], decisionCounts),
+    "",
+    "## First Action Queue",
+    "",
+    firstActions.length
+      ? markdownTable(["Item", "Lane", "Suggested decision", "Chapter/lane", "Date", "Title", "Next action"], firstActions)
+      : "No action rows are queued.",
+    "",
+    "## Working Rule",
+    "",
+    "Use the board to prefill `compiler-decision-log.csv`: Select, Exclude, Defer, Cite only, or Resolved. Do not treat the suggested decision as final until the source note, access status, page boundary, and chapter rationale are checked."
+  ];
+
+  fs.writeFileSync(paths.selectionBoard, `${lines.join("\n").trim()}\n`);
+}
+
 function isRestrictedStatus(status = "") {
   return !/unrestricted/i.test(status) && /\brestricted\b|possibly|withheld|denied|excised/i.test(status);
 }
@@ -616,6 +836,179 @@ function accessReviewRows(confirmed, potentialQueue) {
     String(a.date).localeCompare(String(b.date)) ||
     String(a.title).localeCompare(String(b.title))
   );
+}
+
+function matchedBoundaryGaps(row, gapQueue) {
+  return gapQueue.filter((gap) =>
+    /page|boundar|screen|source extraction|source expansion|policy lane|companion|kashmir|bangladesh/i.test(
+      plainText([gap.id, gap.lane, gap.title, gap.needed, gap.firstAction])
+    ) && (hasTargetRecord(row, gap) || hasTargetTerm(row, gap))
+  );
+}
+
+function boundarySourceFamily(row) {
+  return row.sourceFamily || String(row.source || "").split("|").map((part) => part.trim()).filter(Boolean)[1] || "";
+}
+
+function boundaryReasons(row, itemType, gaps) {
+  const reasons = [];
+  const sourceText = plainText([row.sourceFamily, row.source, row.sourceNote, row.provenanceNote, row.objectFilename]);
+  const actionText = plainText([row.action, row.nextAction, row.disposition]);
+  const pageCount = Number(row.pageCount) || 0;
+
+  if (gaps.some((gap) => gap.priority === "Critical")) reasons.push("critical gap target");
+  if (gaps.some((gap) => gap.priority === "High")) reasons.push("high-priority gap target");
+  if (/screen pdf|promote policy-bearing pages|page boundaries/i.test(actionText)) reasons.push("promotion requires PDF screening");
+  if (/haass|h-files|cheney|gates/i.test(sourceText)) reasons.push("folder or staff-file source pool");
+  if (isRestrictedStatus(row.releaseStatus || row.status || row.accessRestriction || "")) reasons.push("access review affects selection");
+  if (itemType === "Confirmed record" && pageCount >= 20) reasons.push("large PDF extent");
+  if (itemType === "Confirmed record" && !row.sourcePages && /scowcroft|correspondence|haass|h-files/i.test(sourceText)) reasons.push("source page range not fixed");
+  if ((row.compilerRisks || []).includes("catalog-derived-source-note")) reasons.push("catalog-derived title/source note");
+  if ((row.compilerRisks || []).includes("page-count-gap") || (!pageCount && itemType === "Confirmed record")) reasons.push("page count unresolved");
+
+  return uniqueInOrder(reasons);
+}
+
+function boundaryScore(row, itemType, gaps, reasons) {
+  let score = 0;
+  if (gaps.some((gap) => gap.priority === "Critical")) score += 45;
+  if (gaps.some((gap) => gap.priority === "High")) score += 28;
+  if (itemType === "Potential lead" && ["Critical", "High"].includes(row.priorityTier)) score += row.priorityTier === "Critical" ? 30 : 18;
+  if (reasons.includes("promotion requires PDF screening")) score += 20;
+  if (reasons.includes("folder or staff-file source pool")) score += 14;
+  if (reasons.includes("large PDF extent")) score += 8;
+  if (reasons.includes("source page range not fixed")) score += 8;
+  if (reasons.includes("catalog-derived title/source note")) score += 6;
+  if (reasons.includes("access review affects selection")) score += 6;
+  if (reasons.includes("page count unresolved")) score += 10;
+  return score;
+}
+
+function boundaryPriority(score) {
+  if (score >= 75) return "Critical";
+  if (score >= 50) return "High";
+  if (score >= 30) return "Medium";
+  return "Low";
+}
+
+function boundaryQuestion(row, itemType) {
+  if (itemType === "Potential lead") {
+    return "Which pages contain policy-bearing material, and should any part be promoted to the confirmed chronology?";
+  }
+  if (!row.sourcePages && /scowcroft|correspondence/i.test(plainText([row.source, row.sourceNote]))) {
+    return "Are the exact source pages and item title stable enough for final citation?";
+  }
+  return "Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?";
+}
+
+function boundaryNextAction(row, itemType, gaps) {
+  const gapCue = gaps[0]?.firstAction;
+  const base = itemType === "Potential lead"
+    ? "Open the PDF, identify policy-bearing pages, assign page boundaries, and record promote/exclude/cite-only rationale."
+    : "Open the PDF, verify item-level page boundaries and title, then update source note or decision log if the folder contains multiple documents.";
+  return compactList([base, gapCue ? `Gap cue: ${gapCue}` : ""]).join(" ");
+}
+
+function pageBoundaryRows(confirmed, potentialQueue, gapQueue) {
+  const fromRow = (row, itemType) => {
+    const gaps = matchedBoundaryGaps(row, gapQueue);
+    const reasons = boundaryReasons(row, itemType, gaps);
+    const score = boundaryScore(row, itemType, gaps, reasons);
+    return {
+      itemType,
+      reviewOrder: 0,
+      priorityTier: boundaryPriority(score),
+      boundaryScore: score,
+      compilerNumber: row.compilerNumber || "",
+      chapterOrLane: row.chapter || row.reviewLane,
+      date: row.date || "",
+      title: row.title,
+      releaseOrStatus: accessStatusText(row),
+      pages: row.pageCount ? pageLabel(row.pageCount) : "",
+      pageCount: row.pageCount || "",
+      pageBasis: row.pageCount
+        ? "Recorded extent; still verify selected item boundaries before final numbering."
+        : "No stable page count recorded.",
+      naid: row.naid || "",
+      localIdentifier: row.localIdentifier || "",
+      sourceFamily: boundarySourceFamily(row),
+      sourceLocator: compactList([row.source, row.sourcePages ? `source pages ${row.sourcePages}` : "", row.objectFilename]).join(" | "),
+      matchedGaps: gaps.map((gap) => `${gap.priority}: ${gap.title}`),
+      reasons,
+      boundaryQuestion: boundaryQuestion(row, itemType),
+      nextAction: boundaryNextAction(row, itemType, gaps),
+      sourceNote: row.sourceNote,
+      catalogUrl: row.catalogUrl,
+      pdfUrl: row.pdfUrl
+    };
+  };
+
+  const rows = [
+    ...confirmed.map((row) => fromRow(row, "Confirmed record")),
+    ...potentialQueue.map((row) => fromRow(row, "Potential lead"))
+  ].filter((row) => row.pdfUrl && row.boundaryScore >= 30);
+
+  return rows
+    .map((row) => ({
+      ...row,
+      reviewOrder: priorityRank(row.priorityTier) + 1
+    }))
+    .sort((a, b) =>
+      priorityRank(a.priorityTier) - priorityRank(b.priorityTier) ||
+      b.boundaryScore - a.boundaryScore ||
+      (a.itemType === b.itemType ? 0 : a.itemType === "Potential lead" ? -1 : 1) ||
+      String(a.date).localeCompare(String(b.date)) ||
+      String(a.title).localeCompare(String(b.title))
+    );
+}
+
+function writePageBoundaryQueue(rows) {
+  const confirmedRows = rows.filter((row) => row.itemType === "Confirmed record");
+  const potentialRows = rows.filter((row) => row.itemType === "Potential lead");
+  const highRows = rows.filter((row) => ["Critical", "High"].includes(row.priorityTier));
+  const reasonCounts = countBy(rows.flatMap((row) => row.reasons), (reason) => reason).map(([reason, count]) => [reason, count]);
+  const firstQueue = rows.slice(0, 35).map((row) => [
+    row.priorityTier,
+    row.itemType === "Confirmed record" ? row.compilerNumber : "Lead",
+    row.chapterOrLane,
+    row.date,
+    mdEscape(row.title),
+    row.pages || "Pending",
+    row.naid,
+    mdEscape(row.boundaryQuestion),
+    mdEscape(row.nextAction)
+  ]);
+
+  const lines = [
+    "# FRUS South Asia Page-Boundary Queue",
+    "",
+    `Generated: ${new Date().toISOString()}`,
+    "",
+    "This queue isolates PDFs that still need item-level page-boundary or policy-bearing-page review before final FRUS selection. It complements the access ledger: access asks whether a record can be used; this sheet asks exactly what pages and document boundaries the compiler should use.",
+    "",
+    "## Coverage",
+    "",
+    `- Total PDF items queued: ${rows.length}`,
+    `- Confirmed chronology records queued: ${confirmedRows.length}`,
+    `- Potential leads queued for promotion/exclusion screening: ${potentialRows.length}`,
+    `- Critical/high page-boundary items: ${highRows.length}`,
+    "",
+    "## Boundary Reasons",
+    "",
+    markdownTable(["Reason", "Items"], reasonCounts),
+    "",
+    "## First Boundary Pass",
+    "",
+    firstQueue.length
+      ? markdownTable(["Priority", "Item", "Lane", "Date", "Title", "Pages", "NAID", "Boundary question", "Next action"], firstQueue)
+      : "No page-boundary items are currently queued.",
+    "",
+    "## Working Rule",
+    "",
+    "For confirmed records, verify whether the linked PDF is a single selectable document or a folder-level bundle before final numbering. For potential leads, do not promote the item until the policy-bearing pages, exclusion rationale for nonselected pages, title, date line, access posture, and FRUS-style source note are stable."
+  ];
+
+  fs.writeFileSync(paths.pageBoundary, `${lines.join("\n").trim()}\n`);
 }
 
 function writeAccessReview(rows) {
@@ -1470,7 +1863,7 @@ function writePriorityPack(gaps, confirmed, potentialQueue) {
   fs.writeFileSync(paths.priorityPack, `${lines.join("\n").trim()}\n`);
 }
 
-function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, accessReview, chapterMatrix, personsAuthority) {
+function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, accessReview, pageBoundary, chapterMatrix, personsAuthority, selectionBoard) {
   const released = confirmed.filter((row) => row.queue === "Released chronology").length;
   const review = confirmed.length - released;
   const sourceNotes = confirmed.filter((row) => row.sourceNote).length;
@@ -1480,11 +1873,14 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
   const sourceNoteQueue = sourceAudit.filter((row) => row.editorialLane !== "Ready source-note check").length;
   const confirmedAccessReview = accessReview.filter((row) => row.itemType === "Confirmed record").length;
   const potentialAccessReview = accessReview.filter((row) => row.itemType === "Potential lead").length;
+  const pageBoundaryHigh = pageBoundary.filter((row) => ["Critical", "High"].includes(row.priorityTier)).length;
+  const pageBoundaryPotential = pageBoundary.filter((row) => row.itemType === "Potential lead").length;
   const matrixOpenLanes = chapterMatrix.filter((row) => !/^Usable first pass$/i.test(row.coverageStatus)).length;
   const participantRows = personsAuthority.filter((row) => row.rowType === "Chronology participant");
   const matchedParticipants = participantRows.filter((row) => row.authorityStatus === "Matched authority entry").length;
   const institutionalParticipants = personsAuthority.filter((row) => row.rowType === "Institutional participant").length;
   const missingParticipantAuthority = participantRows.filter((row) => row.authorityStatus === "Missing authority entry").length;
+  const selectionActionRows = selectionBoard.filter((row) => !/^Selection candidate$/i.test(row.suggestedDecision)).length;
   const riskCounts = countBy(
     confirmed.flatMap((row) => row.compilerRisks.length ? row.compilerRisks : ["No flagged risk"]),
     (risk) => risk
@@ -1547,6 +1943,19 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     `- Potential leads queued for promotion/access/context decisions: ${potentialAccessReview}`,
     `- Itemized ledger: \`compiler-access-review.md\` and \`compiler-access-review.csv\``,
     "",
+    "## Page-Boundary Queue",
+    "",
+    `- PDF items queued for page-boundary/source-extraction review: ${pageBoundary.length}`,
+    `- Critical/high page-boundary items: ${pageBoundaryHigh}`,
+    `- Potential leads in page-boundary screening: ${pageBoundaryPotential}`,
+    `- Itemized pull sheet: \`compiler-page-boundary-queue.md\` and \`compiler-page-boundary-queue.csv\``,
+    "",
+    "## Selection Board",
+    "",
+    `- Suggested decision rows: ${selectionBoard.length}`,
+    `- Rows requiring action before final selection: ${selectionActionRows}`,
+    `- Itemized board: \`compiler-selection-board.md\` and \`compiler-selection-board.csv\``,
+    "",
     "## Immediate Gap Queue",
     "",
     markdownTable(["Priority", "Gap", "First action"], topGaps),
@@ -1561,6 +1970,8 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     "- `compiler-potential-documents.csv`: source-sweep candidates sorted by priority and promotion value.",
     "- `compiler-gap-queue.csv`: open compiler gaps, pull-list IDs, and first actions.",
     "- `compiler-decision-log.csv`: blank Select / Exclude / Defer / Cite only / Resolved tracker across confirmed records, potential leads, and gap lanes.",
+    "- `compiler-selection-board.md` and `compiler-selection-board.csv`: suggested triage decisions to prefill the decision log.",
+    "- `compiler-page-boundary-queue.md` and `compiler-page-boundary-queue.csv`: PDF page-boundary and policy-bearing-page pull sheet.",
     "- `compiler-chapter-matrix.md` and `compiler-chapter-matrix.csv`: chapter-by-theme research matrix with coverage status, leads, gaps, and next actions.",
     "- `compiler-persons-authority.md` and `compiler-persons-authority.csv`: participant-to-Persons authority crosswalk with institutional labels and context-only entries separated.",
     "- `compiler-source-note-audit.md` and `compiler-source-note-audit.csv`: itemized FRUS-style source-note review lanes.",
@@ -1584,6 +1995,7 @@ function main() {
   const potentialQueue = potentialRows(potential);
   const gapQueue = gapRows(gaps);
   const decisions = decisionRows(confirmed, potentialQueue, gapQueue);
+  const selectionBoard = selectionBoardRows(confirmed, potentialQueue, gapQueue);
   const sourceAudit = sourceNoteAuditRows(confirmed, potentialQueue);
   const accessReview = accessReviewRows(confirmed, potentialQueue);
   const chapterMatrix = chapterMatrixRows(confirmed, potentialQueue, gapQueue);
@@ -1680,6 +2092,28 @@ function main() {
     { key: "pdfUrl", label: "PDF URL" }
   ], decisions);
 
+  writeCsv(paths.selectionBoardCsv, [
+    { key: "itemType", label: "Item type" },
+    { key: "itemId", label: "Item ID" },
+    { key: "compilerNumber", label: "Compiler #" },
+    { key: "suggestedDecision", label: "Suggested decision" },
+    { key: "selectionLane", label: "Selection lane" },
+    { key: "confidence", label: "Confidence" },
+    { key: "priority", label: "Priority" },
+    { key: "chapterOrLane", label: "Chapter or lane" },
+    { key: "date", label: "Date" },
+    { key: "title", label: "Title" },
+    { key: "releaseOrStatus", label: "Release or status" },
+    { key: "pages", label: "Pages" },
+    { key: "naidOrTargets", label: "NAID or target records" },
+    { key: "sourceLocator", label: "Source locator" },
+    { key: "rationale", label: "Suggested-decision rationale" },
+    { key: "nextAction", label: "Next action" },
+    { key: "sourceNote", label: "Source note or need" },
+    { key: "catalogUrl", label: "Catalog URL" },
+    { key: "pdfUrl", label: "PDF URL" }
+  ], selectionBoard);
+
   writeCsv(paths.sourceNoteAuditCsv, [
     { key: "itemType", label: "Item type" },
     { key: "compilerNumber", label: "Compiler #" },
@@ -1763,7 +2197,8 @@ function main() {
     { key: "notes", label: "Notes" }
   ], personsAuthority);
 
-  writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, accessReview, chapterMatrix, personsAuthority);
+  writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, accessReview, chapterMatrix, personsAuthority, selectionBoard);
+  writeSelectionBoard(selectionBoard);
   writeSourceNoteAudit(sourceAudit, confirmed, potentialQueue);
   writeAccessReview(accessReview);
   writeChapterMatrix(chapterMatrix);
@@ -1771,7 +2206,7 @@ function main() {
   writePriorityPack(gaps, confirmed, potentialQueue);
   writeDossiers(confirmed);
 
-  console.log(`Wrote compiler worksheet, CSVs, decision log, source-note audit, access review, chapter matrix, persons authority audit, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
+  console.log(`Wrote compiler worksheet, CSVs, decision log, selection board, source-note audit, access review, chapter matrix, persons authority audit, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
 }
 
 main();

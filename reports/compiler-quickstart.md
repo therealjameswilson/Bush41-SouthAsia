@@ -9,6 +9,8 @@ Generated: 2026-06-01
 - Compiler workbench: https://therealjameswilson.github.io/Bush41-SouthAsia/?v=chronology-first-20260601b#workbench
 - Compiler worksheet: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-worksheet.md?v=compiler-20260601
 - Decision log CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-decision-log.csv?v=compiler-20260601
+- Selection board: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-selection-board.md?v=selection-20260601
+- Selection board CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-selection-board.csv?v=selection-20260601
 - Chapter research matrix: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-chapter-matrix.md?v=matrix-20260601
 - Chapter research matrix CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-chapter-matrix.csv?v=matrix-20260601
 - Persons authority audit: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-persons-authority.md?v=persons-20260601
@@ -38,6 +40,8 @@ Generated: 2026-06-01
 - Personal participant authority coverage: 20/20
 - Foreign-principal participant authority entries: 18
 - Institutional participant/body labels separated from Persons: 2
+- Suggested selection-board rows: 113
+- Rows requiring action before final selection: 101
 - Confirmed records needing access/excision decisions: 39
 - Potential leads queued for promotion/access/context decisions: 40
 

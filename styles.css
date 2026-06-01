@@ -379,7 +379,8 @@ article,
 
 .chapter-docket,
 .priority-list,
-.lane-list {
+.lane-list,
+.export-list {
   display: grid;
   gap: 10px;
 }
@@ -436,6 +437,32 @@ article,
 .priority-list button:hover,
 .priority-list button:focus-visible {
   color: var(--red);
+  outline: none;
+}
+
+.export-list {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.export-list a {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  color: var(--navy);
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+  background: rgba(20, 61, 74, 0.06);
+  border: 1px solid rgba(20, 61, 74, 0.12);
+  border-radius: 8px;
+}
+
+.export-list a:hover,
+.export-list a:focus-visible {
+  color: white;
+  background: var(--navy);
   outline: none;
 }
 
@@ -1502,6 +1529,7 @@ footer a {
   .gap-list,
   .metric-list,
   .lane-list,
+  .export-list,
   .browse-root,
   .brief dl,
   .compiler-queues,

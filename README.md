@@ -45,6 +45,7 @@ node scripts/harvest-potential-documents.js
 node scripts/incorporate-daily-diary-references.js
 node scripts/remediate-compiler-gaps.js
 node scripts/normalize-source-notes.js
+node scripts/generate-compiler-worksheet.js
 ```
 
 `remediate-compiler-gaps.js` measures any confirmed zero-page records that have
@@ -57,3 +58,6 @@ support chronology, time, location, attendance, and call-status checks, not
 substantive summaries.
 `normalize-source-notes.js` keeps clean FRUS-style Source Notes separate from
 full catalog URLs and working provenance.
+`generate-compiler-worksheet.js` writes the offline compiler packet in
+`reports/compiler-worksheet.md` plus confirmed-record, potential-document, and
+gap-queue CSV exports.

@@ -276,6 +276,11 @@ dd {
   border-top: 1px solid var(--line);
 }
 
+.records-section {
+  padding-top: clamp(32px, 5vw, 58px);
+  border-top: 0;
+}
+
 .section-heading {
   display: flex;
   align-items: end;

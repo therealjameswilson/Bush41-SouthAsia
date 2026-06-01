@@ -386,12 +386,31 @@ article,
 
 .priority-list {
   margin: 0;
-  padding-left: 22px;
+  padding: 0;
+  list-style: none;
 }
 
 .priority-list li {
+  display: grid;
+  gap: 6px;
+  padding: 12px;
   color: var(--muted);
   line-height: 1.45;
+  background: rgba(20, 61, 74, 0.045);
+  border: 1px solid rgba(20, 61, 74, 0.1);
+  border-radius: 8px;
+}
+
+.priority-type {
+  width: fit-content;
+  padding: 2px 7px;
+  color: var(--red);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  background: rgba(129, 28, 42, 0.08);
+  border-radius: 999px;
 }
 
 .priority-list button {
@@ -407,6 +426,11 @@ article,
   background: none;
   border: 0;
   cursor: pointer;
+}
+
+.priority-detail {
+  color: var(--muted);
+  font-size: 0.88rem;
 }
 
 .priority-list button:hover,
@@ -762,6 +786,7 @@ footer {
   border-left: 5px solid var(--green);
   border-radius: 8px;
   box-shadow: 0 12px 28px rgba(28, 37, 47, 0.07);
+  scroll-margin-top: 88px;
 }
 
 .potential-card-header {
@@ -818,6 +843,7 @@ footer {
   border-left: 5px solid var(--gold);
   border-radius: 8px;
   box-shadow: 0 12px 28px rgba(28, 37, 47, 0.07);
+  scroll-margin-top: 88px;
 }
 
 .gap-priority-critical,

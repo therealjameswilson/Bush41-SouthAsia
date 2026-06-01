@@ -241,6 +241,26 @@ function scrollToGaps() {
   document.querySelector("#gaps")?.scrollIntoView({ block: "start" });
 }
 
+function domId(prefix, value) {
+  return `${prefix}-${String(value || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "")}`;
+}
+
+function gapCardId(gap) {
+  return domId("gap", gap.id || gap.title);
+}
+
+function potentialCardId(candidate) {
+  return domId("candidate", candidate.id || candidate.naid || candidate.title);
+}
+
+function scrollToElement(id, fallbackSelector) {
+  const target = document.querySelector(`#${id}`) || document.querySelector(fallbackSelector);
+  target?.scrollIntoView({ block: "start" });
+}
+
 function renderBrowseIndex(records) {
   if (!browseRoot) return;
 
@@ -302,6 +322,77 @@ function createDocketButton(chapterName, count, pages, total) {
   return button;
 }
 
+function priorityTierRank(tier) {
+  return { Critical: 0, High: 1, Medium: 2, Low: 3 }[tier] ?? 4;
+}
+
+function compilerPriorityActions(records, potentialDocuments, compilerGaps) {
+  const gapActions = [...compilerGaps]
+    .sort((a, b) => gapPriorityRank(a.priority) - gapPriorityRank(b.priority) || a.title.localeCompare(b.title))
+    .slice(0, 4)
+    .map((gap) => ({
+      rank: gapPriorityRank(gap.priority),
+      type: gap.priority ? `${gap.priority} gap` : "Gap",
+      label: gap.title,
+      detail: gap.nextActions?.[0] || gap.needed || gap.problem || "Review the staged compiler gap.",
+      action: () => scrollToElement(gapCardId(gap), "#gaps")
+    }));
+
+  const potentialActions = [...potentialDocuments]
+    .filter((candidate) => ["Critical", "High"].includes(candidate.priorityTier))
+    .sort(
+      (a, b) =>
+        priorityTierRank(a.priorityTier) - priorityTierRank(b.priorityTier) ||
+        b.priorityScore - a.priorityScore ||
+        (a.sortDate || "").localeCompare(b.sortDate || "") ||
+        a.title.localeCompare(b.title)
+    )
+    .slice(0, 4)
+    .map((candidate) => ({
+      rank: 2 + priorityTierRank(candidate.priorityTier),
+      type: `${candidate.priorityTier} candidate`,
+      label: candidate.title,
+      detail: candidate.selectionAction || candidate.rationale || "Screen this candidate before promotion.",
+      action: () => scrollToElement(potentialCardId(candidate), "#potential")
+    }));
+
+  const recordActions = records
+    .filter(isDeclassificationQueue)
+    .sort(byDateThenChapter)
+    .slice(0, 4)
+    .map((record) => ({
+      rank: 6,
+      type: "Confirmed record",
+      label: `Doc ${record.compilerNumber}: ${record.documentTitle || record.title}`,
+      detail: `${record.releaseStatus}; ${record.pageCount || "?"} pages; ${record.chapter.name}.`,
+      action: () => applyRecordFilters({ query: record.compilerNumber, compilerQueue: "declassification" })
+    }));
+
+  return [...gapActions, ...potentialActions, ...recordActions]
+    .sort((a, b) => a.rank - b.rank || a.label.localeCompare(b.label))
+    .slice(0, 8);
+}
+
+function createPriorityActionItem(action) {
+  const item = document.createElement("li");
+
+  const type = document.createElement("span");
+  type.className = "priority-type";
+  type.textContent = action.type;
+
+  const button = document.createElement("button");
+  button.type = "button";
+  button.textContent = action.label;
+  button.addEventListener("click", action.action);
+
+  const detail = document.createElement("span");
+  detail.className = "priority-detail";
+  detail.textContent = action.detail;
+
+  item.append(type, button, detail);
+  return item;
+}
+
 function renderWorkbench(records, potentialDocuments = allPotentialDocuments, compilerGaps = allCompilerGaps) {
   const review = records.filter(isDeclassificationQueue);
   const pdfs = records.filter((record) => record.pdfUrl).length;
@@ -326,19 +417,8 @@ function renderWorkbench(records, potentialDocuments = allPotentialDocuments, co
   }
 
   if (priorityLeads) {
-    const priorityRecords = review.sort(byChapterThenDate).slice(0, 6);
     priorityLeads.replaceChildren(
-      ...priorityRecords.map((record) => {
-        const item = document.createElement("li");
-        const button = document.createElement("button");
-        button.type = "button";
-        button.textContent = `Doc ${record.compilerNumber}: ${record.documentTitle || record.title}`;
-        button.addEventListener("click", () =>
-          applyRecordFilters({ query: record.compilerNumber, compilerQueue: "declassification" })
-        );
-        item.append(button);
-        return item;
-      })
+      ...compilerPriorityActions(records, potentialDocuments, compilerGaps).map(createPriorityActionItem)
     );
   }
 
@@ -386,6 +466,7 @@ function potentialLink(href, label) {
 function createPotentialCard(candidate) {
   const card = document.createElement("article");
   card.className = "potential-card";
+  card.id = potentialCardId(candidate);
 
   const header = document.createElement("div");
   header.className = "potential-card-header";
@@ -534,6 +615,7 @@ function gapPriorityRank(priority) {
 function createGapCard(gap) {
   const card = document.createElement("article");
   card.className = `gap-card gap-priority-${String(gap.priority || "open").toLowerCase()}`;
+  card.id = gapCardId(gap);
 
   const header = document.createElement("div");
   header.className = "gap-card-header";

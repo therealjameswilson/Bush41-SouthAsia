@@ -17,6 +17,8 @@ const paths = {
   decisionLogCsv: path.join(reportsDir, "compiler-decision-log.csv"),
   sourceNoteAuditCsv: path.join(reportsDir, "compiler-source-note-audit.csv"),
   sourceNoteAudit: path.join(reportsDir, "compiler-source-note-audit.md"),
+  accessReviewCsv: path.join(reportsDir, "compiler-access-review.csv"),
+  accessReview: path.join(reportsDir, "compiler-access-review.md"),
   priorityPack: path.join(reportsDir, "compiler-priority-dossiers.md"),
   dossiersDir: path.join(reportsDir, "compiler-dossiers"),
   dossiersIndex: path.join(reportsDir, "compiler-dossiers", "index.md")
@@ -200,6 +202,8 @@ function potentialRows(candidates) {
       sourceFamily: candidate.sourceFamily,
       source: compactSource(candidate),
       status: candidate.candidateStatus || candidate.accessRestriction,
+      candidateStatus: candidate.candidateStatus,
+      accessRestriction: candidate.accessRestriction,
       matchedQueries: candidate.matchedQueries || [],
       sourceNote: candidate.sourceNote,
       provenanceNote: candidate.provenanceNote,
@@ -474,6 +478,145 @@ function writeSourceNoteAudit(rows, confirmed, potentialQueue) {
   ];
 
   fs.writeFileSync(paths.sourceNoteAudit, `${lines.join("\n").trim()}\n`);
+}
+
+function accessStatusText(row) {
+  const fromNote = String(row.sourceNote || "").match(/Access restriction:\s*([^.;]+(?:\s*-\s*[^.;]+)?)/i)?.[1] || "";
+  return uniqueInOrder([row.releaseStatus, row.accessRestriction, row.status, fromNote]).join("; ");
+}
+
+function accessLane(row, itemType) {
+  const status = accessStatusText(row);
+  if (/partial/i.test(status)) return "Partial/excision check";
+  if (itemType === "Confirmed record" && isRestrictedStatus(status)) return "Confirmed access-status decision";
+  if (itemType === "Potential lead" && /public presidential statement|public papers/i.test(status)) {
+    return "Public/context promotion decision";
+  }
+  if (/restricted\s*-\s*partly/i.test(status)) return "Partly restricted lead screening";
+  if (isRestrictedStatus(status)) return "Restricted lead screening";
+  if (itemType === "Potential lead") return "Unrestricted lead screening";
+  return "Access posture check";
+}
+
+function accessNextAction(row, itemType, lane) {
+  if (lane === "Partial/excision check") {
+    return "Review excisions and decide whether the released text can support selection; record any cite-only rationale.";
+  }
+  if (lane === "Confirmed access-status decision") {
+    return "Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.";
+  }
+  if (itemType === "Potential lead") {
+    return "Screen the online object and promote only after access posture, page boundaries, title, and source note are stable.";
+  }
+  return "Confirm access posture before final numbering.";
+}
+
+function accessReviewRows(confirmed, potentialQueue) {
+  const confirmedRowsForReview = confirmed.filter((row) =>
+    isRestrictedStatus(row.releaseStatus || "") || /partial/i.test(row.releaseStatus || "") || !row.pageCount
+  );
+  const potentialRowsForReview = potentialQueue.filter((row) => isRestrictedStatus(accessStatusText(row)));
+
+  const fromRow = (row, itemType) => {
+    const lane = accessLane(row, itemType);
+    const isPotential = itemType === "Potential lead";
+    const status = accessStatusText(row);
+    const pages = row.pageCount ? pageLabel(row.pageCount) : "";
+
+    return {
+      itemType,
+      compilerNumber: row.compilerNumber || "",
+      reviewLane: lane,
+      priority: isPotential ? compactList([row.priorityTier, row.priorityScore ? `score ${row.priorityScore}` : ""]).join("; ") : row.queue,
+      chapterOrLane: row.chapter || row.reviewLane,
+      date: row.date || "",
+      title: row.title,
+      accessStatus: status,
+      pages,
+      pageCount: row.pageCount || "",
+      pageBasis: row.pageCount ? "Measured or recorded extent; verify item boundaries before final selection." : "Page count not yet measured at item level.",
+      naid: row.naid || "",
+      localIdentifier: row.localIdentifier || "",
+      sourceLocator: compactList([row.source, row.sourcePages ? `source pages ${row.sourcePages}` : "", row.objectFilename]).join(" | "),
+      nextAction: accessNextAction(row, itemType, lane),
+      sourceNote: row.sourceNote,
+      catalogUrl: row.catalogUrl,
+      pdfUrl: row.pdfUrl
+    };
+  };
+
+  return [
+    ...confirmedRowsForReview.map((row) => fromRow(row, "Confirmed record")),
+    ...potentialRowsForReview.map((row) => fromRow(row, "Potential lead"))
+  ].sort((a, b) =>
+    (a.itemType === b.itemType ? 0 : a.itemType === "Confirmed record" ? -1 : 1) ||
+    priorityRank(String(a.priority).split(";")[0]) - priorityRank(String(b.priority).split(";")[0]) ||
+    String(a.date).localeCompare(String(b.date)) ||
+    String(a.title).localeCompare(String(b.title))
+  );
+}
+
+function writeAccessReview(rows) {
+  const confirmedRowsForReview = rows.filter((row) => row.itemType === "Confirmed record");
+  const potentialRowsForReview = rows.filter((row) => row.itemType === "Potential lead");
+  const confirmedPages = confirmedRowsForReview.reduce((sum, row) => sum + (Number(row.pageCount) || 0), 0);
+  const partialRows = confirmedRowsForReview.filter((row) => /partial/i.test(row.accessStatus));
+  const restrictedConfirmed = confirmedRowsForReview.filter((row) => isRestrictedStatus(row.accessStatus) && !/partial/i.test(row.accessStatus));
+  const laneCounts = countBy(rows, (row) => row.reviewLane).map(([lane, count]) => [lane, count]);
+  const confirmedQueue = confirmedRowsForReview.map((row) => [
+    row.compilerNumber,
+    row.chapterOrLane,
+    row.date,
+    mdEscape(row.title),
+    row.accessStatus,
+    row.pages || "Pending",
+    mdEscape(row.nextAction)
+  ]);
+  const potentialQueue = potentialRowsForReview.slice(0, 30).map((row) => [
+    row.priority,
+    row.chapterOrLane,
+    row.date,
+    mdEscape(row.title),
+    row.accessStatus,
+    row.naid,
+    mdEscape(row.nextAction)
+  ]);
+
+  const lines = [
+    "# FRUS South Asia Access and Promotion Ledger",
+    "",
+    `Generated: ${new Date().toISOString()}`,
+    "",
+    "This ledger isolates records whose access posture, partial release, or declassification status can change selection decisions. It keeps the decision question visible beside page counts, NAIDs, source locators, and direct Catalog/PDF links.",
+    "",
+    "## Coverage",
+    "",
+    `- Confirmed records requiring access or excision review: ${confirmedRowsForReview.length}`,
+    `- Confirmed restricted/possibly restricted records: ${restrictedConfirmed.length}`,
+    `- Confirmed partial-release records: ${partialRows.length}`,
+    `- Confirmed pages represented in the access queue: ${confirmedPages}`,
+    `- Restricted or partly restricted potential leads: ${potentialRowsForReview.length}`,
+    "",
+    "## Review Lanes",
+    "",
+    markdownTable(["Lane", "Items"], laneCounts),
+    "",
+    "## Confirmed Record Access Queue",
+    "",
+    markdownTable(["Doc", "Chapter", "Date", "Title", "Access/release status", "Pages", "Next action"], confirmedQueue),
+    "",
+    "## Potential Source Leads",
+    "",
+    potentialQueue.length
+      ? markdownTable(["Priority", "Lane", "Date", "Title", "Access status", "NAID", "Next action"], potentialQueue)
+      : "No potential leads are currently queued.",
+    "",
+    "## Working Rule",
+    "",
+    "For selected documents, resolve the access posture before final numbering. If a record remains unavailable or too heavily excised, preserve it in the decision log as cite-only or excluded context with the page count, NAID, source locator, and rationale. For potential leads, do not promote into confirmed numbering until the page boundary, title, source note, and selection rationale are stable."
+  ];
+
+  fs.writeFileSync(paths.accessReview, `${lines.join("\n").trim()}\n`);
 }
 
 function slug(value) {
@@ -763,7 +906,7 @@ function writePriorityPack(gaps, confirmed, potentialQueue) {
   fs.writeFileSync(paths.priorityPack, `${lines.join("\n").trim()}\n`);
 }
 
-function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit) {
+function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, accessReview) {
   const released = confirmed.filter((row) => row.queue === "Released chronology").length;
   const review = confirmed.length - released;
   const sourceNotes = confirmed.filter((row) => row.sourceNote).length;
@@ -771,6 +914,8 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
   const dailyDiaryLinked = confirmed.filter((row) => row.dailyDiaryRefs.length).length;
   const cleanSourceNotes = sourceAudit.filter((row) => row.auditStatus === "Visible note clean").length;
   const sourceNoteQueue = sourceAudit.filter((row) => row.editorialLane !== "Ready source-note check").length;
+  const confirmedAccessReview = accessReview.filter((row) => row.itemType === "Confirmed record").length;
+  const potentialAccessReview = accessReview.filter((row) => row.itemType === "Potential lead").length;
   const riskCounts = countBy(
     confirmed.flatMap((row) => row.compilerRisks.length ? row.compilerRisks : ["No flagged risk"]),
     (risk) => risk
@@ -814,6 +959,12 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     `- Items in source-note review lanes: ${sourceNoteQueue}`,
     `- Itemized audit: \`compiler-source-note-audit.md\` and \`compiler-source-note-audit.csv\``,
     "",
+    "## Access And Promotion Review",
+    "",
+    `- Confirmed records requiring access/excision decisions: ${confirmedAccessReview}`,
+    `- Restricted or partly restricted potential leads queued: ${potentialAccessReview}`,
+    `- Itemized ledger: \`compiler-access-review.md\` and \`compiler-access-review.csv\``,
+    "",
     "## Immediate Gap Queue",
     "",
     markdownTable(["Priority", "Gap", "First action"], topGaps),
@@ -829,6 +980,7 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     "- `compiler-gap-queue.csv`: open compiler gaps, pull-list IDs, and first actions.",
     "- `compiler-decision-log.csv`: blank Select / Exclude / Defer / Cite only / Resolved tracker across confirmed records, potential leads, and gap lanes.",
     "- `compiler-source-note-audit.md` and `compiler-source-note-audit.csv`: itemized FRUS-style source-note review lanes.",
+    "- `compiler-access-review.md` and `compiler-access-review.csv`: access-status, partial-release, declassification, and potential-lead promotion ledger.",
     "- `compiler-priority-dossiers.md`: compact first-pass dossiers for the highest-priority gap lanes.",
     "- `compiler-dossiers/index.md`: one Markdown dossier per confirmed record, organized by chapter.",
     "",
@@ -848,6 +1000,7 @@ function main() {
   const gapQueue = gapRows(gaps);
   const decisions = decisionRows(confirmed, potentialQueue, gapQueue);
   const sourceAudit = sourceNoteAuditRows(confirmed, potentialQueue);
+  const accessReview = accessReviewRows(confirmed, potentialQueue);
 
   writeCsv(paths.confirmedCsv, [
     { key: "id", label: "Record ID" },
@@ -962,12 +1115,33 @@ function main() {
     { key: "pdfUrl", label: "PDF URL" }
   ], sourceAudit);
 
-  writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit);
+  writeCsv(paths.accessReviewCsv, [
+    { key: "itemType", label: "Item type" },
+    { key: "compilerNumber", label: "Compiler #" },
+    { key: "reviewLane", label: "Review lane" },
+    { key: "priority", label: "Priority or queue" },
+    { key: "chapterOrLane", label: "Chapter or lane" },
+    { key: "date", label: "Date" },
+    { key: "title", label: "Title" },
+    { key: "accessStatus", label: "Access/release status" },
+    { key: "pages", label: "Pages" },
+    { key: "pageBasis", label: "Page basis" },
+    { key: "naid", label: "NAID" },
+    { key: "localIdentifier", label: "Local identifier" },
+    { key: "sourceLocator", label: "Source locator" },
+    { key: "nextAction", label: "Next action" },
+    { key: "sourceNote", label: "Source note" },
+    { key: "catalogUrl", label: "Catalog URL" },
+    { key: "pdfUrl", label: "PDF URL" }
+  ], accessReview);
+
+  writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, accessReview);
   writeSourceNoteAudit(sourceAudit, confirmed, potentialQueue);
+  writeAccessReview(accessReview);
   writePriorityPack(gaps, confirmed, potentialQueue);
   writeDossiers(confirmed);
 
-  console.log(`Wrote compiler worksheet, CSVs, decision log, source-note audit, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
+  console.log(`Wrote compiler worksheet, CSVs, decision log, source-note audit, access review, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
 }
 
 main();

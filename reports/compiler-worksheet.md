@@ -1,6 +1,6 @@
 # FRUS South Asia Compiler Worksheet
 
-Generated: 2026-06-01T15:26:25.708Z
+Generated: 2026-06-01T15:35:11.767Z
 
 ## Working Set
 
@@ -36,6 +36,12 @@ Generated: 2026-06-01T15:26:25.708Z
 - Items in source-note review lanes: 94
 - Itemized audit: `compiler-source-note-audit.md` and `compiler-source-note-audit.csv`
 
+## Access And Promotion Review
+
+- Confirmed records requiring access/excision decisions: 39
+- Restricted or partly restricted potential leads queued: 24
+- Itemized ledger: `compiler-access-review.md` and `compiler-access-review.csv`
+
 ## Immediate Gap Queue
 
 | Priority | Gap | First action |
@@ -66,6 +72,7 @@ Generated: 2026-06-01T15:26:25.708Z
 - `compiler-gap-queue.csv`: open compiler gaps, pull-list IDs, and first actions.
 - `compiler-decision-log.csv`: blank Select / Exclude / Defer / Cite only / Resolved tracker across confirmed records, potential leads, and gap lanes.
 - `compiler-source-note-audit.md` and `compiler-source-note-audit.csv`: itemized FRUS-style source-note review lanes.
+- `compiler-access-review.md` and `compiler-access-review.csv`: access-status, partial-release, declassification, and potential-lead promotion ledger.
 - `compiler-priority-dossiers.md`: compact first-pass dossiers for the highest-priority gap lanes.
 - `compiler-dossiers/index.md`: one Markdown dossier per confirmed record, organized by chapter.
 

@@ -9,6 +9,8 @@ Generated: 2026-06-01
 - Compiler workbench: https://therealjameswilson.github.io/Bush41-SouthAsia/?v=compiler-20260601#workbench
 - Compiler worksheet: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-worksheet.md?v=compiler-20260601
 - Decision log CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-decision-log.csv?v=compiler-20260601
+- Access/promotion review: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-access-review.md?v=access-review-20260601
+- Access/promotion CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-access-review.csv?v=access-review-20260601
 - Source-note audit: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-source-note-audit.md?v=compiler-20260601
 - Source-note audit CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-source-note-audit.csv?v=compiler-20260601
 - Priority dossier pack: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-priority-dossiers.md?v=compiler-20260601
@@ -27,6 +29,8 @@ Generated: 2026-06-01
 - Source-note coverage in the local compiler packet: 66/66
 - Full provenance-note coverage in the local compiler packet: 66/66
 - Daily Diary/Backup cross-references in confirmed records: 23
+- Confirmed records needing access/excision decisions: 39
+- Restricted or partly restricted potential leads: 24
 
 ## Chapter Counts
 

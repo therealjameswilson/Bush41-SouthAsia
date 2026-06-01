@@ -14,6 +14,7 @@ const paths = {
   confirmedCsv: path.join(reportsDir, "compiler-confirmed-records.csv"),
   potentialCsv: path.join(reportsDir, "compiler-potential-documents.csv"),
   gapsCsv: path.join(reportsDir, "compiler-gap-queue.csv"),
+  priorityPack: path.join(reportsDir, "compiler-priority-dossiers.md"),
   dossiersDir: path.join(reportsDir, "compiler-dossiers"),
   dossiersIndex: path.join(reportsDir, "compiler-dossiers", "index.md")
 };
@@ -397,6 +398,145 @@ function writeDossiers(confirmed) {
   fs.writeFileSync(paths.dossiersIndex, `${lines.join("\n").trim()}\n`);
 }
 
+function plainText(value) {
+  return compactList(Array.isArray(value) ? value : [value]).join(" ").toLowerCase();
+}
+
+function hasTargetRecord(row, gap) {
+  const targets = new Set((gap.targetRecords || []).map((target) => String(target).toLowerCase()));
+  return [row.id, row.naid, row.localIdentifier, row.catalogUrl]
+    .filter(Boolean)
+    .some((value) => targets.has(String(value).toLowerCase()) || targets.has(String(value).match(/\d{6,}/)?.[0]));
+}
+
+function hasTargetTerm(row, gap) {
+  const terms = (gap.targetTerms || []).filter((term) => String(term).length > 3);
+  if (!terms.length) return false;
+  const text = plainText([
+    row.chapter,
+    row.title,
+    row.type,
+    row.source,
+    row.sourceNote,
+    row.provenanceNote,
+    row.topics,
+    row.matchedQueries
+  ]);
+  return terms.some((term) => text.includes(String(term).toLowerCase()));
+}
+
+function gapConfirmedRows(confirmed, gap) {
+  const direct = confirmed.filter((row) => hasTargetRecord(row, gap));
+  if (direct.length) return direct;
+  return confirmed.filter((row) => hasTargetTerm(row, gap)).slice(0, 4);
+}
+
+function gapPotentialRows(potentialQueue, gap) {
+  const direct = potentialQueue.filter((row) => hasTargetRecord(row, gap));
+  if (direct.length) return direct;
+  return potentialQueue.filter((row) => hasTargetTerm(row, gap)).slice(0, 6);
+}
+
+function limitRows(rows, limit) {
+  return {
+    shown: rows.slice(0, limit),
+    omitted: rows.slice(limit)
+  };
+}
+
+function compactLinks(row) {
+  return uniqueInOrder([row.catalogUrl, row.pdfUrl, ...(row.provenanceLinks || [])]).slice(0, 6);
+}
+
+function recordBlock(row) {
+  return [
+    `#### Doc ${row.compilerNumber}: ${row.title}`,
+    "",
+    `- Date: ${row.date}`,
+    `- Chapter: ${row.chapter}`,
+    `- Release/access: ${row.releaseStatus}; ${pageLabel(row.pageCount)}`,
+    `- NAID/local ID: ${compactList([row.naid, row.localIdentifier]).join(" / ") || "Not recorded"}`,
+    `- Next action: ${row.nextAction}`,
+    `- Source Note: ${row.sourceNote || "Source note pending."}`,
+    `- Provenance anchors: ${compactList([row.source, row.naid ? `NAID ${row.naid}` : "", row.localIdentifier, row.seriesNaid ? `series NAID ${row.seriesNaid}` : "", row.sourcePages ? `source pages ${row.sourcePages}` : "", row.objectFilename]).join("; ") || "Not recorded."}`,
+    `- Links: ${compactLinks(row).join(" ; ") || "No direct links recorded."}`,
+    ""
+  ].join("\n");
+}
+
+function potentialBlock(row) {
+  return [
+    `#### Lead: ${row.title}`,
+    "",
+    `- Priority: ${row.priorityTier}; score ${row.priorityScore}`,
+    `- Review lane: ${row.reviewLane}`,
+    `- Date: ${row.date || "Undated"}`,
+    `- NAID: ${row.naid || "Not recorded"}`,
+    `- Status: ${row.status || "Not recorded"}`,
+    `- Selection action: ${row.action}`,
+    `- Source Note Draft: ${row.sourceNote || "Source note pending."}`,
+    `- Provenance anchors: ${compactList([row.source, row.naid ? `NAID ${row.naid}` : "", row.objectFilename]).join("; ") || "Not recorded."}`,
+    `- Links: ${compactLinks(row).join(" ; ") || "No direct links recorded."}`,
+    ""
+  ].join("\n");
+}
+
+function writePriorityPack(gaps, confirmed, potentialQueue) {
+  const priorityGaps = gapRows(gaps)
+    .filter((gap) => ["Critical", "High"].includes(gap.priority))
+    .slice(0, 5);
+
+  const lines = [
+    "# FRUS South Asia Priority Dossier Pack",
+    "",
+    `Generated: ${new Date().toISOString()}`,
+    "",
+    "This compact pack is built for the compiler's first pass through the hardest selection and provenance questions. It groups the highest-priority gaps with the confirmed chronology records and potential leads that currently match each lane.",
+    "",
+    "## Source-Note Rule",
+    "",
+    "Keep the visible Source Note as the editorial citation. Keep NAIDs, local identifiers, Catalog URLs, object filenames, PDF URLs, Daily Diary matches, page-count basis, FOIA tracking, and other audit details in the provenance trail. Daily Diary and Daily Backup references support chronology, time, location, attendance, and call status only.",
+    "",
+    "## Highest-Priority Gaps",
+    ""
+  ];
+
+  for (const gap of priorityGaps) {
+    const matchedConfirmed = gapConfirmedRows(confirmed, gap);
+    const matchedPotential = gapPotentialRows(potentialQueue, gap);
+    const confirmedSelection = limitRows(matchedConfirmed, 4);
+    const potentialSelection = limitRows(matchedPotential, 6);
+
+    lines.push(
+      `## ${gap.priority}: ${gap.title}`,
+      "",
+      `- Status: ${gap.status || "Open"}`,
+      `- Lane: ${gap.lane || "Unassigned"}`,
+      `- Needed: ${gap.needed || "Review needed."}`,
+      `- First action: ${gap.firstAction || "Review this gap."}`,
+      `- Target records/leads: ${compactList(gap.targetRecords).join("; ") || "None listed."}`,
+      `- Source pools: ${compactList(gap.sourcePools).join("; ") || "None listed."}`,
+      "",
+      "### Confirmed Records To Check",
+      "",
+      confirmedSelection.shown.length ? confirmedSelection.shown.map(recordBlock).join("\n") : "No confirmed chronology records matched this gap directly.",
+      confirmedSelection.omitted.length
+        ? `Additional matched confirmed records not expanded here: ${confirmedSelection.omitted.map((row) => `Doc ${row.compilerNumber} (${row.naid || row.localIdentifier || row.title})`).join("; ")}.`
+        : "",
+      "",
+      "### Potential Leads To Screen",
+      "",
+      potentialSelection.shown.length ? potentialSelection.shown.map(potentialBlock).join("\n") : "No potential leads matched this gap directly.",
+      potentialSelection.omitted.length
+        ? `Additional matched potential leads not expanded here: ${potentialSelection.omitted.map((row) => `${row.title} (${row.naid || row.catalogUrl || "no id"})`).join("; ")}.`
+        : "",
+      ""
+    );
+  }
+
+  fs.writeFileSync(paths.priorityPack, `${lines.join("\n").trim()}\n`);
+}
+
 function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue) {
   const released = confirmed.filter((row) => row.queue === "Released chronology").length;
   const review = confirmed.length - released;
@@ -453,6 +593,7 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     "- `compiler-confirmed-records.csv`: confirmed chronology with source notes, URLs, Daily Diary references, and next action.",
     "- `compiler-potential-documents.csv`: source-sweep candidates sorted by priority and promotion value.",
     "- `compiler-gap-queue.csv`: open compiler gaps, pull-list IDs, and first actions.",
+    "- `compiler-priority-dossiers.md`: compact first-pass dossiers for the highest-priority gap lanes.",
     "- `compiler-dossiers/index.md`: one Markdown dossier per confirmed record, organized by chapter.",
     "",
     "The confirmed-record CSV deliberately separates the FRUS-style `Source note` from the working `Provenance note`, NAIDs, local identifiers, source pages, object filenames, Daily Diary details, and URLs so final editorial source notes can be checked without losing the audit trail.",
@@ -539,6 +680,7 @@ function main() {
   ], gapQueue);
 
   writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue);
+  writePriorityPack(gaps, confirmed, potentialQueue);
   writeDossiers(confirmed);
 
   console.log(`Wrote compiler worksheet, CSVs, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);

@@ -60,5 +60,6 @@ substantive summaries.
 full catalog URLs and working provenance.
 `generate-compiler-worksheet.js` writes the offline compiler packet in
 `reports/compiler-worksheet.md` plus confirmed-record, potential-document, and
-gap-queue CSV exports, and creates one Markdown dossier per confirmed record
-under `reports/compiler-dossiers/`.
+gap-queue CSV exports, creates `reports/compiler-priority-dossiers.md` for the
+highest-risk first-pass lanes, and creates one Markdown dossier per confirmed
+record under `reports/compiler-dossiers/`.

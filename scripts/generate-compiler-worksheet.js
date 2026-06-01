@@ -15,6 +15,8 @@ const paths = {
   potentialCsv: path.join(reportsDir, "compiler-potential-documents.csv"),
   gapsCsv: path.join(reportsDir, "compiler-gap-queue.csv"),
   decisionLogCsv: path.join(reportsDir, "compiler-decision-log.csv"),
+  sourceNoteAuditCsv: path.join(reportsDir, "compiler-source-note-audit.csv"),
+  sourceNoteAudit: path.join(reportsDir, "compiler-source-note-audit.md"),
   priorityPack: path.join(reportsDir, "compiler-priority-dossiers.md"),
   dossiersDir: path.join(reportsDir, "compiler-dossiers"),
   dossiersIndex: path.join(reportsDir, "compiler-dossiers", "index.md")
@@ -296,6 +298,101 @@ function decisionRows(confirmed, potentialQueue, gapQueue) {
   ];
 }
 
+function isRestrictedStatus(status = "") {
+  return !/unrestricted/i.test(status) && /\brestricted\b|possibly|withheld|denied|excised/i.test(status);
+}
+
+function sourceNoteStyleIssues(row) {
+  const issues = [];
+  const note = row.sourceNote || "";
+  const status = row.releaseStatus || row.status || "";
+
+  if (!note) {
+    issues.push("missing source note");
+    return issues;
+  }
+  if (!/^Source:/i.test(note)) issues.push("does not start with Source:");
+  if (/https?:\/\//i.test(note)) issues.push("contains URL");
+  if (/\bNAID\b/i.test(note)) issues.push("contains NAID");
+  if (/National Archives Catalog|Catalog URL|Catalog:|Digital Research Room|Digital object|object filename|Page count:|Project PDF extent/i.test(note)) {
+    issues.push("contains provenance ledger phrasing");
+  }
+  if (isRestrictedStatus(status) && !/Access restriction:/i.test(note)) {
+    issues.push("missing access restriction sentence");
+  }
+  if (/partial/i.test(status) && !/Partial release/i.test(note)) {
+    issues.push("missing partial release sentence");
+  }
+  if (/full/i.test(status) && !/Full release/i.test(note)) {
+    issues.push("missing full release sentence");
+  }
+  if (/declassified/i.test(status) && !/Declassified/i.test(note)) {
+    issues.push("missing declassified sentence");
+  }
+  if (row.sourcePages && !note.includes(row.sourcePages)) {
+    issues.push("missing source page range");
+  }
+
+  return issues;
+}
+
+function sourceNoteLane(row, issues, itemType) {
+  const status = row.releaseStatus || row.status || "";
+  const risks = compactList(row.compilerRisks);
+
+  if (issues.length) return "Fix visible source note";
+  if (isRestrictedStatus(status)) return "Access-status decision";
+  if (/partial/i.test(status)) return "Excisions check";
+  if (risks.includes("page-count-gap") || (itemType === "Confirmed record" && !row.pageCount)) return "Page-boundary check";
+  if (risks.includes("catalog-derived-source-note")) return "Title/source verification";
+  if (itemType === "Potential lead") return "Promotion source-note draft";
+  return "Ready source-note check";
+}
+
+function sourceNoteNextAction(row, issues, lane) {
+  if (issues.length) return `Edit visible source note: ${issues.join("; ")}.`;
+  if (lane === "Access-status decision") return "Confirm whether this item can be selected or should only be cited as withheld/restricted context.";
+  if (lane === "Excisions check") return "Check excisions before final document selection and source-note wording.";
+  if (lane === "Page-boundary check") return "Confirm item-level page boundaries before final numbering.";
+  if (lane === "Title/source verification") return "Verify the catalog-derived title and source chain against the PDF or folder title page.";
+  if (lane === "Promotion source-note draft") return "Use as a draft only if the lead is promoted into the confirmed chronology.";
+  return "Ready for final editor source-note check.";
+}
+
+function sourceNoteAuditRows(confirmed, potentialQueue) {
+  const fromRow = (row, itemType) => {
+    const issues = sourceNoteStyleIssues(row);
+    const lane = sourceNoteLane(row, issues, itemType);
+
+    return {
+      itemType,
+      compilerNumber: row.compilerNumber || "",
+      auditStatus: issues.length ? "Visible note needs edit" : "Visible note clean",
+      editorialLane: lane,
+      issueCount: issues.length,
+      issues,
+      nextAction: sourceNoteNextAction(row, issues, lane),
+      chapterOrLane: row.chapter || row.reviewLane,
+      date: row.date,
+      title: row.title,
+      releaseOrStatus: row.releaseStatus || row.status,
+      pages: row.pageCount ? pageLabel(row.pageCount) : "",
+      naid: row.naid,
+      localIdentifier: row.localIdentifier,
+      sourceLocator: compactList([row.source, row.sourcePages ? `source pages ${row.sourcePages}` : "", row.objectFilename]).join(" | "),
+      sourceNote: row.sourceNote,
+      provenanceNote: row.provenanceNote,
+      catalogUrl: row.catalogUrl,
+      pdfUrl: row.pdfUrl
+    };
+  };
+
+  return [
+    ...confirmed.map((row) => fromRow(row, "Confirmed record")),
+    ...potentialQueue.map((row) => fromRow(row, "Potential lead"))
+  ];
+}
+
 function countBy(items, getKey) {
   const counts = new Map();
   for (const item of items) {
@@ -322,6 +419,61 @@ function bulletList(values, empty = "None recorded.") {
   const items = compactList(Array.isArray(values) ? values : [values]);
   if (!items.length) return `- ${empty}`;
   return items.map((value) => `- ${value}`).join("\n");
+}
+
+function writeSourceNoteAudit(rows, confirmed, potentialQueue) {
+  const cleanCount = rows.filter((row) => row.auditStatus === "Visible note clean").length;
+  const needsEdit = rows.length - cleanCount;
+  const laneCounts = countBy(rows, (row) => row.editorialLane).map(([lane, count]) => [lane, count]);
+  const issueCounts = countBy(
+    rows.flatMap((row) => row.issues.length ? row.issues : ["No visible-note issue"]),
+    (issue) => issue
+  ).map(([issue, count]) => [issue, count]);
+  const reviewQueue = rows
+    .filter((row) => row.issueCount || row.editorialLane !== "Ready source-note check")
+    .slice(0, 30)
+    .map((row) => [
+      row.itemType === "Confirmed record" ? row.compilerNumber : "Lead",
+      row.editorialLane,
+      row.date || "",
+      mdEscape(row.title),
+      mdEscape(row.nextAction)
+    ]);
+
+  const lines = [
+    "# FRUS South Asia Source-Note Audit",
+    "",
+    `Generated: ${new Date().toISOString()}`,
+    "",
+    "This audit gives the compiler a record-by-record queue for final source-note review. It checks only the visible editorial Source Note. Full Catalog URLs, NAIDs, object filenames, source-page basis, and Daily Diary references remain in the provenance fields, dossiers, and CSV exports.",
+    "",
+    "## Coverage",
+    "",
+    `- Confirmed records checked: ${confirmed.length}`,
+    `- Potential-lead source-note drafts checked: ${potentialQueue.length}`,
+    `- Visible notes with no mechanical style issues: ${cleanCount}/${rows.length}`,
+    `- Visible notes needing mechanical edits: ${needsEdit}`,
+    "",
+    "## Editorial Lanes",
+    "",
+    markdownTable(["Lane", "Items"], laneCounts),
+    "",
+    "## Mechanical Issue Counts",
+    "",
+    markdownTable(["Issue", "Items"], issueCounts),
+    "",
+    "## First Review Queue",
+    "",
+    reviewQueue.length
+      ? markdownTable(["Item", "Lane", "Date", "Title", "Next action"], reviewQueue)
+      : "No source-note review items are currently queued.",
+    "",
+    "## Working Rule",
+    "",
+    "The visible Source Note should read as an editorial citation: repository or collection, office or series, file/folder or item title, compact local locator or source pages when useful, and release/access status. Keep research metadata out of the visible note unless an editor intentionally asks for it."
+  ];
+
+  fs.writeFileSync(paths.sourceNoteAudit, `${lines.join("\n").trim()}\n`);
 }
 
 function slug(value) {
@@ -611,12 +763,14 @@ function writePriorityPack(gaps, confirmed, potentialQueue) {
   fs.writeFileSync(paths.priorityPack, `${lines.join("\n").trim()}\n`);
 }
 
-function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue) {
+function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit) {
   const released = confirmed.filter((row) => row.queue === "Released chronology").length;
   const review = confirmed.length - released;
   const sourceNotes = confirmed.filter((row) => row.sourceNote).length;
   const provenanceNotes = confirmed.filter((row) => row.provenanceNote).length;
   const dailyDiaryLinked = confirmed.filter((row) => row.dailyDiaryRefs.length).length;
+  const cleanSourceNotes = sourceAudit.filter((row) => row.auditStatus === "Visible note clean").length;
+  const sourceNoteQueue = sourceAudit.filter((row) => row.editorialLane !== "Ready source-note check").length;
   const riskCounts = countBy(
     confirmed.flatMap((row) => row.compilerRisks.length ? row.compilerRisks : ["No flagged risk"]),
     (risk) => risk
@@ -654,6 +808,12 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     "",
     markdownTable(["Risk", "Records"], riskCounts),
     "",
+    "## Source-Note QA",
+    "",
+    `- Visible source notes mechanically clean: ${cleanSourceNotes}/${sourceAudit.length}`,
+    `- Items in source-note review lanes: ${sourceNoteQueue}`,
+    `- Itemized audit: \`compiler-source-note-audit.md\` and \`compiler-source-note-audit.csv\``,
+    "",
     "## Immediate Gap Queue",
     "",
     markdownTable(["Priority", "Gap", "First action"], topGaps),
@@ -668,6 +828,7 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     "- `compiler-potential-documents.csv`: source-sweep candidates sorted by priority and promotion value.",
     "- `compiler-gap-queue.csv`: open compiler gaps, pull-list IDs, and first actions.",
     "- `compiler-decision-log.csv`: blank Select / Exclude / Defer / Cite only / Resolved tracker across confirmed records, potential leads, and gap lanes.",
+    "- `compiler-source-note-audit.md` and `compiler-source-note-audit.csv`: itemized FRUS-style source-note review lanes.",
     "- `compiler-priority-dossiers.md`: compact first-pass dossiers for the highest-priority gap lanes.",
     "- `compiler-dossiers/index.md`: one Markdown dossier per confirmed record, organized by chapter.",
     "",
@@ -686,6 +847,7 @@ function main() {
   const potentialQueue = potentialRows(potential);
   const gapQueue = gapRows(gaps);
   const decisions = decisionRows(confirmed, potentialQueue, gapQueue);
+  const sourceAudit = sourceNoteAuditRows(confirmed, potentialQueue);
 
   writeCsv(paths.confirmedCsv, [
     { key: "id", label: "Record ID" },
@@ -778,11 +940,34 @@ function main() {
     { key: "pdfUrl", label: "PDF URL" }
   ], decisions);
 
-  writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue);
+  writeCsv(paths.sourceNoteAuditCsv, [
+    { key: "itemType", label: "Item type" },
+    { key: "compilerNumber", label: "Compiler #" },
+    { key: "auditStatus", label: "Audit status" },
+    { key: "editorialLane", label: "Editorial lane" },
+    { key: "issueCount", label: "Issue count" },
+    { key: "issues", label: "Issues" },
+    { key: "nextAction", label: "Next action" },
+    { key: "chapterOrLane", label: "Chapter or lane" },
+    { key: "date", label: "Date" },
+    { key: "title", label: "Title" },
+    { key: "releaseOrStatus", label: "Release or status" },
+    { key: "pages", label: "Pages" },
+    { key: "naid", label: "NAID" },
+    { key: "localIdentifier", label: "Local identifier" },
+    { key: "sourceLocator", label: "Source locator" },
+    { key: "sourceNote", label: "Source note" },
+    { key: "provenanceNote", label: "Provenance note" },
+    { key: "catalogUrl", label: "Catalog URL" },
+    { key: "pdfUrl", label: "PDF URL" }
+  ], sourceAudit);
+
+  writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit);
+  writeSourceNoteAudit(sourceAudit, confirmed, potentialQueue);
   writePriorityPack(gaps, confirmed, potentialQueue);
   writeDossiers(confirmed);
 
-  console.log(`Wrote compiler worksheet, CSVs, decision log, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
+  console.log(`Wrote compiler worksheet, CSVs, decision log, source-note audit, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
 }
 
 main();

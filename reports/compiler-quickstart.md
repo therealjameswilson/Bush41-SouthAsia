@@ -9,6 +9,8 @@ Generated: 2026-06-01
 - Compiler workbench: https://therealjameswilson.github.io/Bush41-SouthAsia/?v=compiler-20260601#workbench
 - Compiler worksheet: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-worksheet.md?v=compiler-20260601
 - Decision log CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-decision-log.csv?v=compiler-20260601
+- Source-note audit: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-source-note-audit.md?v=compiler-20260601
+- Source-note audit CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-source-note-audit.csv?v=compiler-20260601
 - Priority dossier pack: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-priority-dossiers.md?v=compiler-20260601
 - Dossier index: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-dossiers/index.md?v=compiler-20260601
 - Confirmed-record CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-confirmed-records.csv?v=compiler-20260601

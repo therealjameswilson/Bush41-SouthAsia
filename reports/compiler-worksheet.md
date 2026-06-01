@@ -1,6 +1,6 @@
 # FRUS South Asia Compiler Worksheet
 
-Generated: 2026-06-01T15:20:32.861Z
+Generated: 2026-06-01T15:26:25.708Z
 
 ## Working Set
 
@@ -29,6 +29,12 @@ Generated: 2026-06-01T15:20:32.861Z
 | catalog-derived-source-note | 54 |
 | declassification-review | 37 |
 | No flagged risk | 12 |
+
+## Source-Note QA
+
+- Visible source notes mechanically clean: 106/106
+- Items in source-note review lanes: 94
+- Itemized audit: `compiler-source-note-audit.md` and `compiler-source-note-audit.csv`
 
 ## Immediate Gap Queue
 
@@ -59,6 +65,7 @@ Generated: 2026-06-01T15:20:32.861Z
 - `compiler-potential-documents.csv`: source-sweep candidates sorted by priority and promotion value.
 - `compiler-gap-queue.csv`: open compiler gaps, pull-list IDs, and first actions.
 - `compiler-decision-log.csv`: blank Select / Exclude / Defer / Cite only / Resolved tracker across confirmed records, potential leads, and gap lanes.
+- `compiler-source-note-audit.md` and `compiler-source-note-audit.csv`: itemized FRUS-style source-note review lanes.
 - `compiler-priority-dossiers.md`: compact first-pass dossiers for the highest-priority gap lanes.
 - `compiler-dossiers/index.md`: one Markdown dossier per confirmed record, organized by chapter.
 

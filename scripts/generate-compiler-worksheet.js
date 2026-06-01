@@ -26,6 +26,10 @@ function csvEscape(value) {
   return text;
 }
 
+function compactList(values) {
+  return (values || []).filter(Boolean);
+}
+
 function writeCsv(filePath, columns, rows) {
   const header = columns.map(({ label }) => csvEscape(label)).join(",");
   const body = rows.map((row) => columns.map(({ key }) => csvEscape(row[key])).join(",")).join("\n");
@@ -94,6 +98,27 @@ function compactSource(record) {
   ].filter(Boolean).join(" | ");
 }
 
+function sourceSeriesNaid(record) {
+  return record.source?.seriesNaid || record.source?.fileNaid || record.source?.collectionNaid || "";
+}
+
+function sourcePages(record) {
+  return record.source?.sourcePages || record.sourcePages || "";
+}
+
+function dailyDiaryDetails(record) {
+  return (record.dailyDiaryReferences || []).map((reference) =>
+    [
+      reference.sourceType,
+      reference.title,
+      reference.localIdentifier || (reference.naid ? `NAID ${reference.naid}` : ""),
+      reference.catalogUrl,
+      reference.pdfUrl,
+      (reference.matchedTerms || []).length ? `matched: ${reference.matchedTerms.join("; ")}` : ""
+    ].filter(Boolean).join(" | ")
+  );
+}
+
 function confirmedRows(records) {
   return assignCompilerNumbers(records).sort(byDateThenChapter).map((record) => ({
     compilerNumber: record.compilerNumber,
@@ -106,11 +131,22 @@ function confirmedRows(records) {
     countries: (record.countries || []).filter((country) => country !== "United States"),
     releaseStatus: record.releaseStatus,
     pageCount: record.pageCount || "",
+    naid: record.naid || "",
+    localIdentifier: record.localIdentifier || "",
+    seriesNaid: sourceSeriesNaid(record),
+    sourcePages: sourcePages(record),
+    objectFilename: record.source?.objectFilename || "",
     source: compactSource(record),
     sourceNote: record.sourceNote,
+    provenanceNote: record.provenanceNote,
+    provenanceLinks: compactList(record.provenanceLinks),
     dailyDiaryRefs: (record.dailyDiaryReferences || []).map((reference) =>
       `${reference.sourceType} ${reference.localIdentifier || reference.naid}`
     ),
+    dailyDiaryDetails: dailyDiaryDetails(record),
+    dateLine: record.dateLine,
+    subjectLine: record.subjectLine,
+    topics: compactList([...(record.frusTopics || []), ...(record.topics || [])]),
     compilerRisks: record.compilerRisks || [],
     nextAction: nextRecordAction(record),
     catalogUrl: record.catalogUrl,
@@ -139,10 +175,18 @@ function potentialRows(candidates) {
       title: candidate.documentTitle || candidate.title,
       disposition: candidate.compilerDisposition,
       action: candidate.selectionAction || candidate.selectionRationale || "Review before promotion.",
+      chapter: candidate.chapter?.name,
+      countries: (candidate.countries || []).filter((country) => country !== "United States"),
+      naid: candidate.naid,
+      objectFilename: candidate.objectFilename,
       sourceFamily: candidate.sourceFamily,
       source: compactSource(candidate),
       status: candidate.candidateStatus || candidate.accessRestriction,
       matchedQueries: candidate.matchedQueries || [],
+      sourceNote: candidate.sourceNote,
+      provenanceNote: candidate.provenanceNote,
+      provenanceLinks: compactList(candidate.provenanceLinks),
+      compilerRisks: compactList(candidate.compilerRisks),
       catalogUrl: candidate.catalogUrl,
       pdfUrl: candidate.pdfUrl
     }));
@@ -185,6 +229,13 @@ function markdownTable(headers, rows) {
 function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue) {
   const released = confirmed.filter((row) => row.queue === "Released chronology").length;
   const review = confirmed.length - released;
+  const sourceNotes = confirmed.filter((row) => row.sourceNote).length;
+  const provenanceNotes = confirmed.filter((row) => row.provenanceNote).length;
+  const dailyDiaryLinked = confirmed.filter((row) => row.dailyDiaryRefs.length).length;
+  const riskCounts = countBy(
+    confirmed.flatMap((row) => row.compilerRisks.length ? row.compilerRisks : ["No flagged risk"]),
+    (risk) => risk
+  );
   const chapterCounts = countBy(records, (record) => record.chapter?.name);
   const topGaps = gapQueue.slice(0, 5).map((gap) => [gap.priority, gap.title, gap.firstAction]);
   const topPotential = potentialQueue.slice(0, 8).map((candidate) => [
@@ -206,10 +257,17 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     `- Restricted or pending-review records: ${review}`,
     `- Potential document leads: ${potential.length}`,
     `- Open compiler gaps: ${gaps.length}`,
+    `- Source-note coverage: ${sourceNotes}/${confirmed.length}`,
+    `- Full provenance-note coverage: ${provenanceNotes}/${confirmed.length}`,
+    `- Daily Diary/Backup cross-references: ${dailyDiaryLinked} confirmed records`,
     "",
     "## Chapter Counts",
     "",
     markdownTable(["Chapter", "Records"], chapterCounts),
+    "",
+    "## Source-Note Risk Counts",
+    "",
+    markdownTable(["Risk", "Records"], riskCounts),
     "",
     "## Immediate Gap Queue",
     "",
@@ -224,6 +282,8 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     "- `compiler-confirmed-records.csv`: confirmed chronology with source notes, URLs, Daily Diary references, and next action.",
     "- `compiler-potential-documents.csv`: source-sweep candidates sorted by priority and promotion value.",
     "- `compiler-gap-queue.csv`: open compiler gaps, pull-list IDs, and first actions.",
+    "",
+    "The confirmed-record CSV deliberately separates the FRUS-style `Source note` from the working `Provenance note`, NAIDs, local identifiers, source pages, object filenames, Daily Diary details, and URLs so final editorial source notes can be checked without losing the audit trail.",
     ""
   ];
 
@@ -249,9 +309,20 @@ function main() {
     { key: "countries", label: "Countries" },
     { key: "releaseStatus", label: "Release status" },
     { key: "pageCount", label: "Pages" },
+    { key: "naid", label: "NAID" },
+    { key: "localIdentifier", label: "Local identifier" },
+    { key: "seriesNaid", label: "Series NAID" },
+    { key: "sourcePages", label: "Source pages" },
+    { key: "objectFilename", label: "Object filename" },
     { key: "source", label: "Source locator" },
     { key: "sourceNote", label: "Source note" },
+    { key: "provenanceNote", label: "Provenance note" },
+    { key: "provenanceLinks", label: "Provenance links" },
     { key: "dailyDiaryRefs", label: "Daily Diary refs" },
+    { key: "dailyDiaryDetails", label: "Daily Diary details" },
+    { key: "dateLine", label: "Date line" },
+    { key: "subjectLine", label: "Subject line" },
+    { key: "topics", label: "Topics" },
     { key: "compilerRisks", label: "Compiler risks" },
     { key: "nextAction", label: "Next action" },
     { key: "catalogUrl", label: "Catalog URL" },
@@ -266,10 +337,18 @@ function main() {
     { key: "title", label: "Title" },
     { key: "disposition", label: "Disposition" },
     { key: "action", label: "Selection action" },
+    { key: "chapter", label: "Chapter" },
+    { key: "countries", label: "Countries" },
+    { key: "naid", label: "NAID" },
+    { key: "objectFilename", label: "Object filename" },
     { key: "sourceFamily", label: "Source family" },
     { key: "source", label: "Source locator" },
     { key: "status", label: "Status" },
     { key: "matchedQueries", label: "Matched queries" },
+    { key: "sourceNote", label: "Source note draft" },
+    { key: "provenanceNote", label: "Provenance note" },
+    { key: "provenanceLinks", label: "Provenance links" },
+    { key: "compilerRisks", label: "Compiler risks" },
     { key: "catalogUrl", label: "Catalog URL" },
     { key: "pdfUrl", label: "PDF URL" }
   ], potentialQueue);

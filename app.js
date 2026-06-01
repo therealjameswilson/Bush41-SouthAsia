@@ -1082,18 +1082,78 @@ async function copyText(text) {
   if (!copied) throw new Error("Copy command was rejected.");
 }
 
-function createCopyButton(record) {
+function dailyDiarySummary(record) {
+  const exactReferences = record.dailyDiaryReferences || [];
+  if (exactReferences.length) {
+    return exactReferences
+      .map((reference) => {
+        const label = `${reference.sourceType || "Daily Diary"} ${reference.localIdentifier || reference.naid}`;
+        const matches = reference.matchedTerms?.length ? `; matches ${reference.matchedTerms.join(", ")}` : "";
+        return `${label}${matches}`;
+      })
+      .join("\n");
+  }
+
+  const reference = allDailyDiaryReferences?.dates?.[record.date];
+  if (!reference) return "";
+  return [reference.diary, reference.backup]
+    .filter(Boolean)
+    .map((item) => `${item.label} ${item.localId}${item.status ? ` (${item.status})` : ""}`)
+    .join("\n");
+}
+
+function compilerPacket(record) {
+  const diary = dailyDiarySummary(record);
+  const topics = uniqueInOrder([...(record.frusTopics || []), ...(record.topics || [])]);
+  const lines = [
+    `Doc ${record.compilerNumber || "TBD"}: ${record.documentTitle || record.title}`,
+    `Date: ${record.dateLine || formatDate(record.date)}`,
+    `Chapter: ${record.chapter?.name || "Unassigned"}`,
+    `Type: ${record.type || "Document"}`,
+    `Release: ${record.releaseStatus || "Unknown"}`,
+    `Pages: ${record.pageCount || "Pending"}`,
+    `Participants: ${(record.participants || []).join("; ") || "Not recorded"}`,
+    `Countries: ${(record.countries || []).filter((country) => country !== "United States").join("; ") || "Not recorded"}`,
+    "",
+    generateFrusSourceNote(record),
+    "",
+    `Source detail: ${sourceLabel(record)}`,
+    record.localIdentifier ? `Local ID: ${record.localIdentifier}` : "",
+    record.naid && !record.naid.startsWith("local-") ? `NAID: ${record.naid}` : "",
+    record.catalogUrl ? `Catalog: ${record.catalogUrl}` : "",
+    record.pdfUrl ? `PDF: ${record.pdfUrl}` : "",
+    "",
+    record.subjectLine ? `Subject cue: ${record.subjectLine}` : "",
+    record.provenanceNote || record.sourceNote ? `Provenance: ${record.provenanceNote || record.sourceNote}` : "",
+    (record.compilerRisks || []).length ? `Compiler risks: ${record.compilerRisks.join("; ")}` : "",
+    diary
+      ? `Daily Diary/Backup cross-reference:\n${diary}\nUse only for chronology, time, location, attendees, and call status.`
+      : "",
+    topics.length
+      ? `Topics: ${topics.join("; ")}`
+      : ""
+  ];
+
+  return lines
+    .filter((line) => line !== null && line !== undefined)
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+function createCopyButton(record, options = {}) {
+  const { label = "Copy Note", copiedLabel = "Copied", getText = generateFrusSourceNote, summary = "source note" } = options;
   const button = document.createElement("button");
   button.type = "button";
-  button.textContent = "Copy Note";
+  button.textContent = label;
   button.addEventListener("click", async () => {
     const original = button.textContent;
     try {
-      await copyText(generateFrusSourceNote(record));
-      button.textContent = "Copied";
+      await copyText(getText(record));
+      button.textContent = copiedLabel;
       button.classList.add("is-copied");
       if (recordsSummary) {
-        recordsSummary.textContent = `Copied source note for Doc ${record.compilerNumber}.`;
+        recordsSummary.textContent = `Copied ${summary} for Doc ${record.compilerNumber}.`;
       }
       window.setTimeout(() => {
         button.textContent = original;
@@ -1108,6 +1168,19 @@ function createCopyButton(record) {
     }
   });
   return button;
+}
+
+function createCopyNoteButton(record) {
+  return createCopyButton(record);
+}
+
+function createCopyPacketButton(record) {
+  return createCopyButton(record, {
+    label: "Copy Packet",
+    copiedLabel: "Packet Copied",
+    getText: compilerPacket,
+    summary: "compiler packet"
+  });
 }
 
 function createRecordRow(record) {
@@ -1191,7 +1264,7 @@ function createRecordRow(record) {
   permalink.textContent = "Link";
   links.append(permalink);
 
-  links.append(createCopyButton(record));
+  links.append(createCopyNoteButton(record), createCopyPacketButton(record));
 
   row.append(dateStack, body, links);
   return row;

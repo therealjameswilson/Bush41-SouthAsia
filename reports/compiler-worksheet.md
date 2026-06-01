@@ -1,6 +1,6 @@
 # FRUS South Asia Compiler Worksheet
 
-Generated: 2026-06-01T14:15:53.839Z
+Generated: 2026-06-01T14:18:22.864Z
 
 ## Working Set
 
@@ -9,6 +9,9 @@ Generated: 2026-06-01T14:15:53.839Z
 - Restricted or pending-review records: 37
 - Potential document leads: 40
 - Open compiler gaps: 7
+- Source-note coverage: 66/66
+- Full provenance-note coverage: 66/66
+- Daily Diary/Backup cross-references: 23 confirmed records
 
 ## Chapter Counts
 
@@ -18,6 +21,14 @@ Generated: 2026-06-01T14:15:53.839Z
 | Afghanistan | 21 |
 | India | 10 |
 | Regional | 6 |
+
+## Source-Note Risk Counts
+
+| Risk | Records |
+| --- | --- |
+| catalog-derived-source-note | 54 |
+| declassification-review | 37 |
+| No flagged risk | 12 |
 
 ## Immediate Gap Queue
 
@@ -47,4 +58,6 @@ Generated: 2026-06-01T14:15:53.839Z
 - `compiler-confirmed-records.csv`: confirmed chronology with source notes, URLs, Daily Diary references, and next action.
 - `compiler-potential-documents.csv`: source-sweep candidates sorted by priority and promotion value.
 - `compiler-gap-queue.csv`: open compiler gaps, pull-list IDs, and first actions.
+
+The confirmed-record CSV deliberately separates the FRUS-style `Source note` from the working `Provenance note`, NAIDs, local identifiers, source pages, object filenames, Daily Diary details, and URLs so final editorial source notes can be checked without losing the audit trail.
 

@@ -1068,6 +1068,7 @@ function personsAuthorityRows(confirmed, personsData) {
 
     return {
       rowType: institutionalNote ? "Institutional participant" : "Chronology participant",
+      reviewOrder: institutionalNote ? 2 : 1,
       participant,
       authorityStatus: status,
       authorityName: person?.displayName || "",
@@ -1088,6 +1089,7 @@ function personsAuthorityRows(confirmed, personsData) {
     .filter((person) => !matchedIds.has(person.id))
     .map((person) => ({
       rowType: "Authority context entry",
+      reviewOrder: 3,
       participant: "",
       authorityStatus: "Not named in confirmed participant metadata",
       authorityName: person.displayName,
@@ -1745,6 +1747,7 @@ function main() {
 
   writeCsv(paths.personsAuthorityCsv, [
     { key: "rowType", label: "Row type" },
+    { key: "reviewOrder", label: "Review order" },
     { key: "participant", label: "Participant label" },
     { key: "authorityStatus", label: "Authority status" },
     { key: "authorityName", label: "Authority name" },

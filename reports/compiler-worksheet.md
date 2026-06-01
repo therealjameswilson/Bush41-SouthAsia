@@ -1,6 +1,6 @@
 # FRUS South Asia Compiler Worksheet
 
-Generated: 2026-06-01T15:35:11.767Z
+Generated: 2026-06-01T15:36:56.885Z
 
 ## Working Set
 
@@ -39,7 +39,7 @@ Generated: 2026-06-01T15:35:11.767Z
 ## Access And Promotion Review
 
 - Confirmed records requiring access/excision decisions: 39
-- Restricted or partly restricted potential leads queued: 24
+- Potential leads queued for promotion/access/context decisions: 40
 - Itemized ledger: `compiler-access-review.md` and `compiler-access-review.csv`
 
 ## Immediate Gap Queue

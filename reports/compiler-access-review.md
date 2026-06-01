@@ -1,8 +1,8 @@
 # FRUS South Asia Access and Promotion Ledger
 
-Generated: 2026-06-01T15:35:11.769Z
+Generated: 2026-06-01T15:36:56.886Z
 
-This ledger isolates records whose access posture, partial release, or declassification status can change selection decisions. It keeps the decision question visible beside page counts, NAIDs, source locators, and direct Catalog/PDF links.
+This ledger isolates confirmed records whose access posture, partial release, or declassification status can change selection decisions, then appends every potential lead that still needs promotion, context, or access review. It keeps the decision question visible beside page counts, NAIDs, source locators, and direct Catalog/PDF links.
 
 ## Coverage
 
@@ -10,7 +10,7 @@ This ledger isolates records whose access posture, partial release, or declassif
 - Confirmed restricted/possibly restricted records: 37
 - Confirmed partial-release records: 2
 - Confirmed pages represented in the access queue: 1222
-- Restricted or partly restricted potential leads: 24
+- Potential leads queued for promotion/access/context review: 40
 
 ## Review Lanes
 
@@ -18,8 +18,10 @@ This ledger isolates records whose access posture, partial release, or declassif
 | --- | --- |
 | Confirmed access-status decision | 37 |
 | Partly restricted lead screening | 15 |
+| Public/context promotion decision | 14 |
 | Restricted lead screening | 9 |
 | Partial/excision check | 2 |
+| Unrestricted lead screening | 2 |
 
 ## Confirmed Record Access Queue
 
@@ -74,6 +76,7 @@ This ledger isolates records whose access posture, partial release, or declassif
 | Critical; score 59 | Regional | 1990-03-26 | NSC/DC [Deputies Committee] Teleconference - March 26, 1990 Re: Kashmir | Restricted - Possibly; Online object available | 470426225 | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
 | Critical; score 65 | Regional | 1992-03-19 | President's Meeting with Prime Minister Zia of Bangladesh - March 19, 1992 | Restricted - Possibly; Online object available | 470426266 | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
 | High; score 50 | Afghanistan | 1989-01-01 | Working Files - Afghanistan 1989-1992 [2] | Restricted - Possibly; Online object available | 470426597 | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
+| High; score 50 | Afghanistan | 1989-01-20 | Afghanistan | Unrestricted; Online object available | 645607685 | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
 | High; score 50 | Afghanistan | 1989-01-20 | Afghanistan - Charles | Restricted - Possibly; Online object available | 470426255 | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
 | High; score 50 | Afghanistan | 1989-01-20 | Afghanistan [1] | Restricted - Partly; Online object available | 645607321 | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
 | High; score 50 | Afghanistan | 1989-01-20 | Afghanistan [2] | Restricted - Partly; Online object available | 645607323 | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
@@ -91,8 +94,23 @@ This ledger isolates records whose access posture, partial release, or declassif
 | High; score 47 | Pakistan | 1989-01-20 | Pakistan [B] | Restricted - Partly; Online object available | 645607907 | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
 | High; score 50 | Pakistan | 1989-01-20 | Pakistan-India | Restricted - Possibly; Online object available | 470437053 | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
 | Medium; score 33 | Regional | 1989-01-20 | Milam, William - AMB to Bangladesh | Restricted - Possibly; Online object available | 286185941 | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
+| Medium; score 48 | Afghanistan | 1992-02-28 | Presidential Determination No. 92-18--Memorandum on Certification for Major Narcotics Producing and Transit Countries | Public presidential statement |  | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
+| Medium; score 40 | Regional | 1992-03-19 | Statement by Press Secretary Fitzwater on the President's Meeting With Prime Minister Begum Khaleda Zia of Bangladesh | Public presidential statement |  | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
+| Medium; score 38 | Pakistan | 1992-09-30 | Presidential Determination No. 92-49--Memorandum on Disaster Assistance for Pakistan | Public presidential statement |  | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
+| Medium; score 42 | Regional | 1992-10-02 | Presidential Determination No. 93-1--Memorandum on Refugee Admissions | Public presidential statement |  | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
+| Medium; score 54 | Afghanistan | 1992-10-07 | Presidential Determination No. 93-3--Memorandum on Trade With Afghanistan | Public presidential statement |  | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
+| Medium; score 46 | Pakistan | 1993-01-19 | Letter to Congressional Leaders Reporting on Nuclear Nonproliferation | Public presidential statement |  | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
 | Low; score 33 | Pakistan | 1989-01-20 | Bhutto Departure 6/6/89 | Restricted - Possibly; Online object available | 323150513 | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
 | Low; score 33 | Pakistan | 1989-01-20 | Departure Statement for Prime Minister Bhutto 6/6/89 [OA 6264] | Restricted - Possibly; Online object available | 323152491 | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
+| Low; score 38 | India | 1992-02-24 | Nomination of Thomas R. Pickering To Be United States Ambassador to India | Public presidential statement |  | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
+| Low; score 44 | Afghanistan | 1992-04-10 | The President's News Conference | Public presidential statement |  | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
+| Low; score 40 | Regional | 1992-05-07 | Nomination of Teresita Currie Schaffer To Be United States Ambassador to Sri Lanka and Maldives | Public presidential statement |  | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
+| Low; score 44 | Afghanistan | 1992-05-27 | Remarks at the United States Naval Academy Commencement Ceremony in Annapolis, Maryland | Public presidential statement |  | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
+| Low; score 28 | Afghanistan | 1992-06-16 | Remarks With President Boris Yeltsin of Russia Announcing Strategic Arms Reductions and an Exchange With Reporters | Public presidential statement |  | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
+| Low; score 44 | Afghanistan | 1992-06-17 | The President's News Conference With President Boris Yeltsin of Russia | Public presidential statement |  | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
+| Low; score 38 | Pakistan | 1992-07-14 | Nomination of John Cameron Monjo To Be United States Ambassador to Pakistan | Public presidential statement |  | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
+| Low; score 28 | Afghanistan | 1992-07-21 | Remarks to Religious and Ethnic Groups in Garfield, New Jersey | Public presidential statement |  | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
+| Low; score 33 | Regional | 1992-11-02 | WHPO-P37850 | Unrestricted; Online object available | 543965098 | Screen the online object and promote only after access posture, page boundaries, title, and source note are stable. |
 
 ## Working Rule
 

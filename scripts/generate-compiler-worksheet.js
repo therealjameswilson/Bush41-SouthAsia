@@ -515,7 +515,7 @@ function accessReviewRows(confirmed, potentialQueue) {
   const confirmedRowsForReview = confirmed.filter((row) =>
     isRestrictedStatus(row.releaseStatus || "") || /partial/i.test(row.releaseStatus || "") || !row.pageCount
   );
-  const potentialRowsForReview = potentialQueue.filter((row) => isRestrictedStatus(accessStatusText(row)));
+  const potentialRowsForReview = potentialQueue;
 
   const fromRow = (row, itemType) => {
     const lane = accessLane(row, itemType);
@@ -572,7 +572,7 @@ function writeAccessReview(rows) {
     row.pages || "Pending",
     mdEscape(row.nextAction)
   ]);
-  const potentialQueue = potentialRowsForReview.slice(0, 30).map((row) => [
+  const potentialQueue = potentialRowsForReview.map((row) => [
     row.priority,
     row.chapterOrLane,
     row.date,
@@ -587,7 +587,7 @@ function writeAccessReview(rows) {
     "",
     `Generated: ${new Date().toISOString()}`,
     "",
-    "This ledger isolates records whose access posture, partial release, or declassification status can change selection decisions. It keeps the decision question visible beside page counts, NAIDs, source locators, and direct Catalog/PDF links.",
+    "This ledger isolates confirmed records whose access posture, partial release, or declassification status can change selection decisions, then appends every potential lead that still needs promotion, context, or access review. It keeps the decision question visible beside page counts, NAIDs, source locators, and direct Catalog/PDF links.",
     "",
     "## Coverage",
     "",
@@ -595,7 +595,7 @@ function writeAccessReview(rows) {
     `- Confirmed restricted/possibly restricted records: ${restrictedConfirmed.length}`,
     `- Confirmed partial-release records: ${partialRows.length}`,
     `- Confirmed pages represented in the access queue: ${confirmedPages}`,
-    `- Restricted or partly restricted potential leads: ${potentialRowsForReview.length}`,
+    `- Potential leads queued for promotion/access/context review: ${potentialRowsForReview.length}`,
     "",
     "## Review Lanes",
     "",
@@ -962,7 +962,7 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     "## Access And Promotion Review",
     "",
     `- Confirmed records requiring access/excision decisions: ${confirmedAccessReview}`,
-    `- Restricted or partly restricted potential leads queued: ${potentialAccessReview}`,
+    `- Potential leads queued for promotion/access/context decisions: ${potentialAccessReview}`,
     `- Itemized ledger: \`compiler-access-review.md\` and \`compiler-access-review.csv\``,
     "",
     "## Immediate Gap Queue",

@@ -4,13 +4,13 @@ Generated: 2026-06-01
 
 ## Start Here
 
-- Live chronology-first site: https://therealjameswilson.github.io/Bush41-SouthAsia/?v=compiler-20260601
-- Declassified chronology: https://therealjameswilson.github.io/Bush41-SouthAsia/?v=compiler-20260601#records
-- Compiler workbench: https://therealjameswilson.github.io/Bush41-SouthAsia/?v=compiler-20260601#workbench
+- Live chronology-first site: https://therealjameswilson.github.io/Bush41-SouthAsia/?v=chronology-first-20260601b
+- Declassified chronology: https://therealjameswilson.github.io/Bush41-SouthAsia/?v=chronology-first-20260601b#records
+- Compiler workbench: https://therealjameswilson.github.io/Bush41-SouthAsia/?v=chronology-first-20260601b#workbench
 - Compiler worksheet: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-worksheet.md?v=compiler-20260601
 - Decision log CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-decision-log.csv?v=compiler-20260601
-- Access/promotion review: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-access-review.md?v=access-review-20260601
-- Access/promotion CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-access-review.csv?v=access-review-20260601
+- Access/promotion review: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-access-review.md?v=access-review-20260601b
+- Access/promotion CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-access-review.csv?v=access-review-20260601b
 - Source-note audit: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-source-note-audit.md?v=compiler-20260601
 - Source-note audit CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-source-note-audit.csv?v=compiler-20260601
 - Priority dossier pack: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-priority-dossiers.md?v=compiler-20260601
@@ -30,7 +30,7 @@ Generated: 2026-06-01
 - Full provenance-note coverage in the local compiler packet: 66/66
 - Daily Diary/Backup cross-references in confirmed records: 23
 - Confirmed records needing access/excision decisions: 39
-- Restricted or partly restricted potential leads: 24
+- Potential leads queued for promotion/access/context decisions: 40
 
 ## Chapter Counts
 

@@ -13,7 +13,9 @@ const paths = {
   worksheet: path.join(reportsDir, "compiler-worksheet.md"),
   confirmedCsv: path.join(reportsDir, "compiler-confirmed-records.csv"),
   potentialCsv: path.join(reportsDir, "compiler-potential-documents.csv"),
-  gapsCsv: path.join(reportsDir, "compiler-gap-queue.csv")
+  gapsCsv: path.join(reportsDir, "compiler-gap-queue.csv"),
+  dossiersDir: path.join(reportsDir, "compiler-dossiers"),
+  dossiersIndex: path.join(reportsDir, "compiler-dossiers", "index.md")
 };
 
 function readJson(filePath) {
@@ -28,6 +30,16 @@ function csvEscape(value) {
 
 function compactList(values) {
   return (values || []).filter(Boolean);
+}
+
+function uniqueInOrder(values) {
+  const seen = new Set();
+  return compactList(values).filter((value) => {
+    const key = String(value).toLowerCase();
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 }
 
 function writeCsv(filePath, columns, rows) {
@@ -121,6 +133,7 @@ function dailyDiaryDetails(record) {
 
 function confirmedRows(records) {
   return assignCompilerNumbers(records).sort(byDateThenChapter).map((record) => ({
+    id: record.id,
     compilerNumber: record.compilerNumber,
     queue: releasedStatus(record),
     chapter: record.chapter?.name,
@@ -146,7 +159,7 @@ function confirmedRows(records) {
     dailyDiaryDetails: dailyDiaryDetails(record),
     dateLine: record.dateLine,
     subjectLine: record.subjectLine,
-    topics: compactList([...(record.frusTopics || []), ...(record.topics || [])]),
+    topics: uniqueInOrder([...(record.frusTopics || []), ...(record.topics || [])]),
     compilerRisks: record.compilerRisks || [],
     nextAction: nextRecordAction(record),
     catalogUrl: record.catalogUrl,
@@ -226,6 +239,164 @@ function markdownTable(headers, rows) {
   ].join("\n");
 }
 
+function mdEscape(value) {
+  return String(value ?? "").replaceAll("|", "\\|");
+}
+
+function bulletList(values, empty = "None recorded.") {
+  const items = compactList(Array.isArray(values) ? values : [values]);
+  if (!items.length) return `- ${empty}`;
+  return items.map((value) => `- ${value}`).join("\n");
+}
+
+function slug(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "")
+    .slice(0, 96);
+}
+
+function dossierFilename(row) {
+  return `${slug(`${row.compilerNumber}-${row.date}-${row.title}`)}.md`;
+}
+
+function pageLabel(count) {
+  if (!count) return "? pages";
+  return `${count} ${Number(count) === 1 ? "page" : "pages"}`;
+}
+
+function recordPermalink(row) {
+  return `../../index.html#record-${slug(row.id || row.naid || row.compilerNumber || row.title)}`;
+}
+
+function dossierText(row) {
+  const links = [
+    row.catalogUrl ? `- Catalog: ${row.catalogUrl}` : "",
+    row.pdfUrl ? `- PDF: ${row.pdfUrl}` : "",
+    ...compactList(row.provenanceLinks).map((link) => `- Provenance link: ${link}`)
+  ].filter(Boolean);
+
+  return [
+    `# Doc ${row.compilerNumber}: ${row.title}`,
+    "",
+    "## At a Glance",
+    "",
+    `- Queue: ${row.queue}`,
+    `- Chapter: ${row.chapter}`,
+    `- Date: ${row.date}`,
+    `- Type: ${row.type}`,
+    `- Release status: ${row.releaseStatus}`,
+    `- Pages: ${row.pageCount ? pageLabel(row.pageCount) : "Pending"}`,
+    `- Site link: ${recordPermalink(row)}`,
+    "",
+    "## Selection Work",
+    "",
+    `- Next action: ${row.nextAction}`,
+    `- Compiler risks: ${compactList(row.compilerRisks).join("; ") || "None flagged."}`,
+    "",
+    "Review questions:",
+    "",
+    "- Select, exclude, or cite only as withheld/restricted context?",
+    "- If selected, are title, date line, page boundary, participants, and source note ready?",
+    "- If excluded, what is the concise exclusion rationale?",
+    "",
+    "## People And Places",
+    "",
+    "Participants:",
+    "",
+    bulletList(row.participants),
+    "",
+    "Countries:",
+    "",
+    bulletList(row.countries),
+    "",
+    "## Source Note",
+    "",
+    "```text",
+    row.sourceNote || "Source note pending.",
+    "```",
+    "",
+    "## Provenance",
+    "",
+    `- Source locator: ${row.source || "Not recorded."}`,
+    row.localIdentifier ? `- Local identifier: ${row.localIdentifier}` : "",
+    row.naid ? `- NAID: ${row.naid}` : "",
+    row.seriesNaid ? `- Series NAID: ${row.seriesNaid}` : "",
+    row.sourcePages ? `- Source pages: ${row.sourcePages}` : "",
+    row.objectFilename ? `- Object filename: ${row.objectFilename}` : "",
+    "",
+    "Provenance note:",
+    "",
+    row.provenanceNote || "No separate provenance note recorded.",
+    "",
+    "Links:",
+    "",
+    links.length ? links.join("\n") : "- No direct links recorded.",
+    "",
+    "## Daily Diary / Backup",
+    "",
+    compactList(row.dailyDiaryDetails).length
+      ? bulletList(row.dailyDiaryDetails)
+      : "- No exact Daily Diary/Backup cross-reference attached.",
+    "",
+    "Use Daily Diary/Backup references only for chronology, time, location, attendees, and call status; do not use them as substantive meeting or call summaries.",
+    "",
+    "## Date And Subject Lines",
+    "",
+    row.dateLine ? `- Date line: ${row.dateLine}` : "- Date line: Not recorded.",
+    row.subjectLine ? `- Subject cue: ${row.subjectLine}` : "- Subject cue: Not recorded.",
+    "",
+    "## Topics",
+    "",
+    bulletList(row.topics)
+  ]
+    .filter((line) => line !== null && line !== undefined)
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim() + "\n";
+}
+
+function writeDossiers(confirmed) {
+  fs.rmSync(paths.dossiersDir, { recursive: true, force: true });
+  fs.mkdirSync(paths.dossiersDir, { recursive: true });
+
+  const rowsWithFiles = confirmed.map((row) => ({
+    ...row,
+    filename: dossierFilename(row)
+  }));
+
+  for (const row of rowsWithFiles) {
+    fs.writeFileSync(path.join(paths.dossiersDir, row.filename), dossierText(row));
+  }
+
+  const grouped = CHAPTER_ORDER.map((chapterName) => [
+    chapterName,
+    rowsWithFiles.filter((row) => row.chapter === chapterName)
+  ]).filter(([, rows]) => rows.length);
+
+  const lines = [
+    "# Compiler Dossier Index",
+    "",
+    `Generated: ${new Date().toISOString()}`,
+    "",
+    "One Markdown dossier per confirmed record. Each dossier preserves the clean source note, working provenance, links, Daily Diary/Backup caveat, compiler risks, and selection questions.",
+    "",
+    "## Documents By Chapter",
+    ""
+  ];
+
+  for (const [chapterName, rows] of grouped) {
+    lines.push(`### ${chapterName}`, "");
+    for (const row of rows) {
+      lines.push(`- [Doc ${row.compilerNumber}: ${mdEscape(row.title)}](${row.filename}) - ${row.date}; ${row.releaseStatus}; ${pageLabel(row.pageCount)}`);
+    }
+    lines.push("");
+  }
+
+  fs.writeFileSync(paths.dossiersIndex, `${lines.join("\n").trim()}\n`);
+}
+
 function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue) {
   const released = confirmed.filter((row) => row.queue === "Released chronology").length;
   const review = confirmed.length - released;
@@ -282,6 +453,7 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     "- `compiler-confirmed-records.csv`: confirmed chronology with source notes, URLs, Daily Diary references, and next action.",
     "- `compiler-potential-documents.csv`: source-sweep candidates sorted by priority and promotion value.",
     "- `compiler-gap-queue.csv`: open compiler gaps, pull-list IDs, and first actions.",
+    "- `compiler-dossiers/index.md`: one Markdown dossier per confirmed record, organized by chapter.",
     "",
     "The confirmed-record CSV deliberately separates the FRUS-style `Source note` from the working `Provenance note`, NAIDs, local identifiers, source pages, object filenames, Daily Diary details, and URLs so final editorial source notes can be checked without losing the audit trail.",
     ""
@@ -299,6 +471,7 @@ function main() {
   const gapQueue = gapRows(gaps);
 
   writeCsv(paths.confirmedCsv, [
+    { key: "id", label: "Record ID" },
     { key: "compilerNumber", label: "Compiler #" },
     { key: "queue", label: "Queue" },
     { key: "chapter", label: "Chapter" },
@@ -366,8 +539,9 @@ function main() {
   ], gapQueue);
 
   writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue);
+  writeDossiers(confirmed);
 
-  console.log(`Wrote compiler worksheet and CSVs to ${path.relative(repoRoot, reportsDir)}/`);
+  console.log(`Wrote compiler worksheet, CSVs, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
 }
 
 main();

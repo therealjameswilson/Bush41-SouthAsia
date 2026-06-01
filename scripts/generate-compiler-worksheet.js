@@ -72,6 +72,7 @@ const paths = {
   confirmedCsv: path.join(reportsDir, "compiler-confirmed-records.csv"),
   potentialCsv: path.join(reportsDir, "compiler-potential-documents.csv"),
   gapsCsv: path.join(reportsDir, "compiler-gap-queue.csv"),
+  gapAnalysis: path.join(reportsDir, "compiler-gap-analysis.md"),
   decisionLogCsv: path.join(reportsDir, "compiler-decision-log.csv"),
   selectionBoardCsv: path.join(reportsDir, "compiler-selection-board.csv"),
   selectionBoard: path.join(reportsDir, "compiler-selection-board.md"),
@@ -1014,6 +1015,109 @@ function writePageBoundaryQueue(rows) {
   ];
 
   fs.writeFileSync(paths.pageBoundary, `${lines.join("\n").trim()}\n`);
+}
+
+function writeGapAnalysis(gapQueue, confirmed, potentialQueue, sourceAudit, accessReview, pageBoundary, chapterMatrix, selectionBoard) {
+  const openOrPartly = gapQueue.filter((gap) => /open|partly/i.test(gap.status || ""));
+  const triaged = gapQueue.filter((gap) => /triaged/i.test(gap.status || ""));
+  const criticalHigh = gapQueue.filter((gap) => ["Critical", "High"].includes(gap.priority));
+  const zeroPageConfirmed = confirmed.filter((row) => !Number(row.pageCount));
+  const measuredPageCountRows = confirmed.filter((row) =>
+    Number(row.pageCount) && /measured from available PDF/i.test([row.sourceNote, row.provenanceNote].join(" "))
+  );
+  const pageBoundaryHigh = pageBoundary.filter((row) => ["Critical", "High"].includes(row.priorityTier));
+  const selectionActionRows = selectionBoard.filter((row) => !/^Selection candidate$/i.test(row.suggestedDecision));
+  const sourceNoteQueue = sourceAudit.filter((row) => row.editorialLane !== "Ready source-note check");
+  const titleVerificationRows = sourceAudit.filter((row) => /title|source verification/i.test(row.editorialLane));
+  const chapterProblemRows = chapterMatrix.filter((row) => !/^Usable first pass$/i.test(row.coverageStatus));
+  const matrixStatusRows = countBy(chapterMatrix, (row) => row.coverageStatus).map(([status, count]) => [status, count]);
+  const gapStatusRows = countBy(gapQueue, (gap) => gap.status).map(([status, count]) => [status, count]);
+  const gapPriorityRows = countBy(gapQueue, (gap) => gap.priority).map(([priority, count]) => [priority, count]);
+  const potentialDispositionRows = countBy(potentialQueue, (row) => row.disposition).map(([disposition, count]) => [disposition, count]);
+  const gapTableRows = gapQueue.map((gap) => [
+    gap.priority,
+    gap.status,
+    gap.lane,
+    mdEscape(gap.title),
+    compactList(gap.targetRecords).join("; ") || "No fixed target",
+    mdEscape(gap.firstAction || "")
+  ]);
+  const laneTableRows = chapterProblemRows.map((row) => [
+    row.chapter,
+    row.lane,
+    row.coverageStatus,
+    row.confirmedCount,
+    row.potentialLeadCount,
+    row.relatedGapCount,
+    mdEscape(row.nextAction)
+  ]);
+
+  const lines = [
+    "# FRUS South Asia Gap Analysis",
+    "",
+    `Generated: ${new Date().toISOString()}`,
+    "",
+    "This is the compiler-facing gap dashboard for the South Asia volume. It is generated from the current chronology, potential-lead queue, source-note audit, access ledger, page-boundary queue, chapter matrix, selection board, and `data/compiler-gaps.json`, so the Markdown report and CSV pull sheets stay in sync.",
+    "",
+    "## Current Gap Dashboard",
+    "",
+    `- Confirmed chronology records: ${confirmed.length}`,
+    `- Zero-page confirmed records remaining: ${zeroPageConfirmed.length}`,
+    `- Confirmed records with measured PDF page counts: ${measuredPageCountRows.length}`,
+    `- Potential source-sweep leads: ${potentialQueue.length}`,
+    `- Total compiler gaps: ${gapQueue.length}`,
+    `- Open or partly remediated gaps: ${openOrPartly.length}`,
+    `- Triaged gaps still requiring selection decisions: ${triaged.length}`,
+    `- Critical/high gaps: ${criticalHigh.length}`,
+    `- Chapter research lanes needing decisions: ${chapterProblemRows.length}/${chapterMatrix.length}`,
+    `- Access/promotion ledger rows: ${accessReview.length}`,
+    `- Source-note review rows: ${sourceNoteQueue.length}`,
+    `- Title/source verification rows: ${titleVerificationRows.length}`,
+    `- Page-boundary rows: ${pageBoundary.length}`,
+    `- Critical/high page-boundary rows: ${pageBoundaryHigh.length}`,
+    `- Selection-board rows requiring action: ${selectionActionRows.length}/${selectionBoard.length}`,
+    "",
+    "## Gap Status Counts",
+    "",
+    markdownTable(["Status", "Gaps"], gapStatusRows),
+    "",
+    "## Gap Priority Counts",
+    "",
+    markdownTable(["Priority", "Gaps"], gapPriorityRows),
+    "",
+    "## Chapter Coverage Status Counts",
+    "",
+    markdownTable(["Coverage status", "Lanes"], matrixStatusRows),
+    "",
+    "## Current Gap Cards",
+    "",
+    markdownTable(["Priority", "Status", "Lane", "Gap", "Target records", "First action"], gapTableRows),
+    "",
+    "## Chapter Lanes That Still Need Decisions",
+    "",
+    laneTableRows.length
+      ? markdownTable(["Chapter", "Lane", "Status", "Confirmed", "Leads", "Gaps", "Next action"], laneTableRows)
+      : "All chapter lanes currently show as usable first-pass lanes.",
+    "",
+    "## Potential Lead Dispositions",
+    "",
+    markdownTable(["Disposition", "Leads"], potentialDispositionRows),
+    "",
+    "## Linked Compiler Pull Sheets",
+    "",
+    "- `compiler-gap-queue.csv`: canonical row-level gap queue with target records, search terms, source pools, and first actions.",
+    "- `compiler-chapter-matrix.md`: chapter-by-theme coverage map showing thin, missing, lead-only, access-heavy, and gap-linked lanes.",
+    "- `compiler-page-boundary-queue.md`: PDF pull sheet for item boundaries and policy-bearing pages.",
+    "- `compiler-selection-board.md`: suggested Select, Exclude, Defer, Cite only, or Resolve triage board.",
+    "- `compiler-access-review.md`: confirmed access/excision questions plus potential-lead promotion review.",
+    "- `compiler-source-note-audit.md`: FRUS-style source-note and title/source verification queue.",
+    "",
+    "## Working Rule",
+    "",
+    "Keep a gap open until the relevant page boundary, access posture, source note, title, provenance chain, and selection decision are all stable. A triaged gap is not a closed gap; it means the compiler has a named pull sheet and a first action."
+  ];
+
+  fs.writeFileSync(paths.gapAnalysis, `${lines.join("\n").trim()}\n`);
 }
 
 function writeAccessReview(rows) {
@@ -1974,6 +2078,7 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     "- `compiler-confirmed-records.csv`: confirmed chronology with source notes, URLs, Daily Diary references, and next action.",
     "- `compiler-potential-documents.csv`: source-sweep candidates sorted by priority and promotion value.",
     "- `compiler-gap-queue.csv`: open compiler gaps, pull-list IDs, and first actions.",
+    "- `compiler-gap-analysis.md`: generated gap dashboard tying the gap queue to chapter lanes, access, source-note, page-boundary, and selection-board rows.",
     "- `compiler-decision-log.csv`: blank Select / Exclude / Defer / Cite only / Resolved tracker across confirmed records, potential leads, and gap lanes.",
     "- `compiler-selection-board.md` and `compiler-selection-board.csv`: suggested triage decisions to prefill the decision log.",
     "- `compiler-page-boundary-queue.md` and `compiler-page-boundary-queue.csv`: PDF page-boundary and policy-bearing-page pull sheet.",
@@ -2229,6 +2334,7 @@ function main() {
   ], personsAuthority);
 
   writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, accessReview, pageBoundary, chapterMatrix, personsAuthority, selectionBoard);
+  writeGapAnalysis(gapQueue, confirmed, potentialQueue, sourceAudit, accessReview, pageBoundary, chapterMatrix, selectionBoard);
   writeSelectionBoard(selectionBoard);
   writeSourceNoteAudit(sourceAudit, confirmed, potentialQueue);
   writeAccessReview(accessReview);
@@ -2238,7 +2344,7 @@ function main() {
   writePriorityPack(gaps, confirmed, potentialQueue);
   writeDossiers(confirmed);
 
-  console.log(`Wrote compiler worksheet, CSVs, decision log, selection board, source-note audit, access review, page-boundary queue, chapter matrix, persons authority audit, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
+  console.log(`Wrote compiler worksheet, CSVs, decision log, gap analysis, selection board, source-note audit, access review, page-boundary queue, chapter matrix, persons authority audit, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
 }
 
 main();

@@ -62,6 +62,8 @@ full catalog URLs and working provenance.
 `reports/compiler-worksheet.md` plus confirmed-record, potential-document,
 gap-queue, decision-log, selection-board, page-boundary, chapter-matrix,
 persons-authority, source-note audit, and access-review CSV exports,
+creates `reports/compiler-gap-analysis.md` as the generated current gap
+dashboard tying open/triaged gaps to chapter lanes and pull sheets,
 creates `reports/compiler-source-note-audit.md` for itemized FRUS-style
 source-note review lanes, creates `reports/compiler-access-review.md` for
 access, declassification, excision, and promotion triage, creates

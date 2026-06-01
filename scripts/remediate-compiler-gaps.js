@@ -12,6 +12,7 @@ const gapsPath = path.join(repoRoot, "data", "compiler-gaps.json");
 const gapsScriptPath = path.join(repoRoot, "data", "compiler-gaps.js");
 const reportPath = path.join(repoRoot, "reports", "compiler-gap-remediation.json");
 const reportMdPath = path.join(repoRoot, "reports", "compiler-gap-analysis.md");
+const worksheetGeneratorPath = path.join(repoRoot, "scripts", "generate-compiler-worksheet.js");
 
 function readJson(filePath, fallback = []) {
   return fs.existsSync(filePath) ? JSON.parse(fs.readFileSync(filePath, "utf8")) : fallback;
@@ -159,19 +160,94 @@ function updateGapStatuses(gaps, pageFixCount, potentialCount) {
   });
 }
 
+function countBy(rows, keyFn) {
+  return rows.reduce((memo, row) => {
+    const key = keyFn(row) || "Unspecified";
+    memo[key] = (memo[key] || 0) + 1;
+    return memo;
+  }, {});
+}
+
+function markdownList(counts) {
+  const entries = Object.entries(counts);
+  return entries.length ? entries.map(([label, count]) => `- ${label}: ${count}`).join("\n") : "- None.";
+}
+
+function markdownCell(value) {
+  return String(value || "")
+    .replace(/\|/g, "\\|")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function markdownTable(headers, rows) {
+  return [
+    `| ${headers.map(markdownCell).join(" | ")} |`,
+    `| ${headers.map(() => "---").join(" | ")} |`,
+    ...rows.map((row) => `| ${row.map(markdownCell).join(" | ")} |`)
+  ].join("\n");
+}
+
+function isActiveGap(gap) {
+  return !/resolved|closed/i.test(gap.status || "");
+}
+
+function measuredPageCountRecords(records) {
+  return records.filter((record) => {
+    const basis = [
+      record.pageCountBasis,
+      record.source?.pageCountBasis,
+      record.sourceNote,
+      record.provenanceNote,
+      record.notes
+    ].join(" ");
+    return record.pageCount && /measured from available PDF/i.test(basis);
+  });
+}
+
+function firstAction(gap) {
+  return Array.isArray(gap.nextActions) ? gap.nextActions[0] || "" : "";
+}
+
+function targetSummary(gap) {
+  const targets = (gap.targetRecords || []).filter(Boolean);
+  return targets.length ? targets.join(", ") : "No fixed target IDs yet.";
+}
+
+function mergePageFixHistory(previousFixes, currentFixes) {
+  const fixesByKey = new Map();
+  for (const fix of [...(previousFixes || []), ...(currentFixes || [])]) {
+    const key = fix.id || fix.naid || fix.title;
+    if (!key) continue;
+    fixesByKey.set(key, fix);
+  }
+  return [...fixesByKey.values()];
+}
+
 function buildMarkdown(records, potential, gaps, pageFixes) {
-  const chapterCounts = records.reduce((memo, record) => {
-    const chapter = record.chapter?.name || "Unassigned";
-    memo[chapter] = (memo[chapter] || 0) + 1;
-    return memo;
-  }, {});
-  const potentialCounts = potential.reduce((memo, candidate) => {
-    const disposition = candidate.compilerDisposition || "Untriaged";
-    memo[disposition] = (memo[disposition] || 0) + 1;
-    return memo;
-  }, {});
+  const chapterCounts = countBy(records, (record) => record.chapter?.name || "Unassigned");
+  const potentialCounts = countBy(potential, (candidate) => candidate.compilerDisposition || "Untriaged");
   const zeroPages = records.filter((record) => !record.pageCount);
-  const openGaps = gaps.filter((gap) => /open|partly/i.test(gap.status || ""));
+  const activeGaps = gaps.filter(isActiveGap);
+  const openGaps = activeGaps.filter((gap) => /open|partly/i.test(gap.status || ""));
+  const triagedGaps = activeGaps.filter((gap) => /triaged/i.test(gap.status || ""));
+  const measuredRecords = measuredPageCountRecords(records);
+  const statusCounts = countBy(activeGaps, (gap) => gap.status || "Unspecified");
+  const priorityCounts = countBy(activeGaps, (gap) => gap.priority || "Unspecified");
+  const highPullList = activeGaps.filter((gap) => /critical|high/i.test(gap.priority || ""));
+  const currentGapRows = activeGaps.map((gap) => [
+    gap.priority,
+    gap.lane,
+    gap.status,
+    gap.title,
+    firstAction(gap)
+  ]);
+  const measuredRows = measuredRecords.map((record) => [
+    record.naid || record.id,
+    record.chapter?.name || "Unassigned",
+    record.title,
+    record.pageCount
+  ]);
 
   return `# Compiler Gap Analysis - Bush41 South Asia
 
@@ -182,35 +258,55 @@ Checked: ${new Date().toISOString().slice(0, 10)}
 - Confirmed records: ${records.length}.
 - Potential source-sweep leads: ${potential.length}.
 - Zero-page confirmed records remaining: ${zeroPages.length}.
-- Page-count fixes applied in this pass: ${pageFixes.length}.
-- Open or partly remediated compiler gaps: ${openGaps.length}.
+- New page-count fixes applied in this run: ${pageFixes.length}.
+- Confirmed records with measured PDF page counts: ${measuredRecords.length}.
+- Active compiler gaps: ${activeGaps.length}.
+- Open or partly remediated active gaps: ${openGaps.length}.
+- Triaged but not closed active gaps: ${triagedGaps.length}.
+
+Triaged means the lane has been sorted into a work queue, not that the compiler risk is closed.
+
+## Gap Status Counts
+
+${markdownList(statusCounts)}
+
+## Gap Priority Counts
+
+${markdownList(priorityCounts)}
 
 ## Confirmed Chapter Counts
 
-${Object.entries(chapterCounts)
-  .map(([chapter, count]) => `- ${chapter}: ${count}`)
-  .join("\n")}
+${markdownList(chapterCounts)}
 
 ## Potential Lead Dispositions
 
-${Object.entries(potentialCounts)
-  .map(([disposition, count]) => `- ${disposition}: ${count}`)
+${markdownList(potentialCounts)}
+
+## Current Gap Queue
+
+${markdownTable(["Priority", "Lane", "Status", "Gap", "First action"], currentGapRows)}
+
+## Critical and High Pull List
+
+${highPullList
+  .map((gap) => `- ${gap.priority}: ${gap.title} (${gap.status}). Targets: ${targetSummary(gap)}`)
   .join("\n")}
 
-## Page-Count Remediation
+## Measured Page-Count Coverage
 
 ${
-  pageFixes.length
-    ? pageFixes
-        .map((fix) => `- ${fix.naid}: ${fix.title} - ${fix.pageCount} pages measured from the available PDF.`)
-        .join("\n")
-    : "- No page-count changes were needed."
+  measuredRows.length
+    ? markdownTable(["NAID", "Chapter", "Title", "Pages"], measuredRows)
+    : "- No measured page-count records are currently flagged."
 }
 
 ## Remaining Compiler Risk
 
-${openGaps
-  .map((gap) => `- ${gap.priority}: ${gap.title} (${gap.status}). ${gap.needed}`)
+${activeGaps
+  .map(
+    (gap) =>
+      `- ${gap.priority}: ${gap.title} (${gap.status}; ${gap.lane}). ${gap.needed} First action: ${firstAction(gap)}`
+  )
   .join("\n")}
 
 ## Operational Rule
@@ -254,6 +350,8 @@ async function main() {
     ...dispositionForCandidate(candidate)
   }));
   const updatedGaps = updateGapStatuses(gaps, pageFixes.length, triagedPotential.length);
+  const previousReport = readJson(reportPath, {});
+  const pageFixHistory = mergePageFixHistory(previousReport.pageFixes, pageFixes);
 
   writeJson(dataPath, records);
   writeWindowScript(dataScriptPath, "MEMCONS", records);
@@ -263,7 +361,8 @@ async function main() {
   writeWindowScript(gapsScriptPath, "COMPILER_GAPS", updatedGaps);
   writeJson(reportPath, {
     generatedAt: new Date().toISOString(),
-    pageFixes,
+    pageFixes: pageFixHistory,
+    pageFixesThisRun: pageFixes,
     remainingZeroPageRecords: records
       .filter((record) => !record.pageCount)
       .map((record) => ({ id: record.id, naid: record.naid, title: record.title })),
@@ -279,6 +378,7 @@ async function main() {
     }))
   });
   fs.writeFileSync(reportMdPath, buildMarkdown(records, triagedPotential, updatedGaps, pageFixes));
+  execFileSync(process.execPath, [worksheetGeneratorPath], { stdio: "inherit" });
 
   console.log(
     JSON.stringify(

@@ -1,6 +1,6 @@
 # FRUS South Asia Compiler Worksheet
 
-Generated: 2026-06-01T17:40:12.503Z
+Generated: 2026-06-01T17:41:56.285Z
 
 ## Working Set
 
@@ -55,6 +55,13 @@ Generated: 2026-06-01T17:40:12.503Z
 - Potential leads queued for promotion/access/context decisions: 40
 - Itemized ledger: `compiler-access-review.md` and `compiler-access-review.csv`
 
+## Page-Boundary Queue
+
+- PDF items queued for page-boundary/source-extraction review: 80
+- Critical/high page-boundary items: 58
+- Potential leads in page-boundary screening: 26
+- Itemized pull sheet: `compiler-page-boundary-queue.md` and `compiler-page-boundary-queue.csv`
+
 ## Selection Board
 
 - Suggested decision rows: 113
@@ -91,6 +98,7 @@ Generated: 2026-06-01T17:40:12.503Z
 - `compiler-gap-queue.csv`: open compiler gaps, pull-list IDs, and first actions.
 - `compiler-decision-log.csv`: blank Select / Exclude / Defer / Cite only / Resolved tracker across confirmed records, potential leads, and gap lanes.
 - `compiler-selection-board.md` and `compiler-selection-board.csv`: suggested triage decisions to prefill the decision log.
+- `compiler-page-boundary-queue.md` and `compiler-page-boundary-queue.csv`: PDF page-boundary and policy-bearing-page pull sheet.
 - `compiler-chapter-matrix.md` and `compiler-chapter-matrix.csv`: chapter-by-theme research matrix with coverage status, leads, gaps, and next actions.
 - `compiler-persons-authority.md` and `compiler-persons-authority.csv`: participant-to-Persons authority crosswalk with institutional labels and context-only entries separated.
 - `compiler-source-note-audit.md` and `compiler-source-note-audit.csv`: itemized FRUS-style source-note review lanes.

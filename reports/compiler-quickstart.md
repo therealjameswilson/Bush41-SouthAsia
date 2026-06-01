@@ -11,6 +11,8 @@ Generated: 2026-06-01
 - Decision log CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-decision-log.csv?v=compiler-20260601
 - Selection board: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-selection-board.md?v=selection-20260601
 - Selection board CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-selection-board.csv?v=selection-20260601
+- Page-boundary queue: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-page-boundary-queue.md?v=boundaries-20260601
+- Page-boundary queue CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-page-boundary-queue.csv?v=boundaries-20260601
 - Chapter research matrix: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-chapter-matrix.md?v=matrix-20260601
 - Chapter research matrix CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-chapter-matrix.csv?v=matrix-20260601
 - Persons authority audit: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-persons-authority.md?v=persons-20260601
@@ -42,6 +44,8 @@ Generated: 2026-06-01
 - Institutional participant/body labels separated from Persons: 2
 - Suggested selection-board rows: 113
 - Rows requiring action before final selection: 101
+- PDF items queued for page-boundary/source-extraction review: 80
+- Critical/high page-boundary items: 58
 - Confirmed records needing access/excision decisions: 39
 - Potential leads queued for promotion/access/context decisions: 40
 

@@ -1,6 +1,6 @@
 # FRUS South Asia Selection Board
 
-Generated: 2026-06-01T17:40:12.504Z
+Generated: 2026-06-01T17:41:56.286Z
 
 This board pre-fills compiler-facing selection recommendations across confirmed records, potential leads, and open gap tasks. It is not final editorial selection; it is a triage layer to make the blank decision log faster to complete.
 

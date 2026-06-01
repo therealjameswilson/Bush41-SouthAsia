@@ -839,11 +839,15 @@ function accessReviewRows(confirmed, potentialQueue) {
 }
 
 function matchedBoundaryGaps(row, gapQueue) {
-  return gapQueue.filter((gap) =>
-    /page|boundar|screen|source extraction|source expansion|policy lane|companion|kashmir|bangladesh/i.test(
+  return gapQueue.filter((gap) => {
+    const boundaryRelevant = /page|boundar|screen|source extraction|source expansion|policy lane|companion|kashmir|bangladesh/i.test(
       plainText([gap.id, gap.lane, gap.title, gap.needed, gap.firstAction])
-    ) && (hasTargetRecord(row, gap) || hasTargetTerm(row, gap))
-  );
+    );
+    if (!boundaryRelevant) return false;
+    if (hasTargetRecord(row, gap)) return true;
+    if (gap.priority === "Critical") return false;
+    return hasTargetTerm(row, gap);
+  });
 }
 
 function boundarySourceFamily(row) {
@@ -884,8 +888,9 @@ function boundaryScore(row, itemType, gaps, reasons) {
   return score;
 }
 
-function boundaryPriority(score) {
-  if (score >= 75) return "Critical";
+function boundaryPriority(score, row, itemType, gaps) {
+  const criticalSignal = gaps.some((gap) => gap.priority === "Critical") || (itemType === "Potential lead" && row.priorityTier === "Critical");
+  if (criticalSignal && score >= 75) return "Critical";
   if (score >= 50) return "High";
   if (score >= 30) return "Medium";
   return "Low";
@@ -917,7 +922,7 @@ function pageBoundaryRows(confirmed, potentialQueue, gapQueue) {
     return {
       itemType,
       reviewOrder: 0,
-      priorityTier: boundaryPriority(score),
+      priorityTier: boundaryPriority(score, row, itemType, gaps),
       boundaryScore: score,
       compilerNumber: row.compilerNumber || "",
       chapterOrLane: row.chapter || row.reviewLane,
@@ -949,17 +954,17 @@ function pageBoundaryRows(confirmed, potentialQueue, gapQueue) {
   ].filter((row) => row.pdfUrl && row.boundaryScore >= 30);
 
   return rows
-    .map((row) => ({
-      ...row,
-      reviewOrder: priorityRank(row.priorityTier) + 1
-    }))
     .sort((a, b) =>
       priorityRank(a.priorityTier) - priorityRank(b.priorityTier) ||
       b.boundaryScore - a.boundaryScore ||
       (a.itemType === b.itemType ? 0 : a.itemType === "Potential lead" ? -1 : 1) ||
       String(a.date).localeCompare(String(b.date)) ||
       String(a.title).localeCompare(String(b.title))
-    );
+    )
+    .map((row, index) => ({
+      ...row,
+      reviewOrder: index + 1
+    }));
 }
 
 function writePageBoundaryQueue(rows) {
@@ -1998,6 +2003,7 @@ function main() {
   const selectionBoard = selectionBoardRows(confirmed, potentialQueue, gapQueue);
   const sourceAudit = sourceNoteAuditRows(confirmed, potentialQueue);
   const accessReview = accessReviewRows(confirmed, potentialQueue);
+  const pageBoundary = pageBoundaryRows(confirmed, potentialQueue, gapQueue);
   const chapterMatrix = chapterMatrixRows(confirmed, potentialQueue, gapQueue);
   const personsAuthority = personsAuthorityRows(confirmed, personsData);
 
@@ -2156,6 +2162,31 @@ function main() {
     { key: "pdfUrl", label: "PDF URL" }
   ], accessReview);
 
+  writeCsv(paths.pageBoundaryCsv, [
+    { key: "itemType", label: "Item type" },
+    { key: "reviewOrder", label: "Review order" },
+    { key: "priorityTier", label: "Priority" },
+    { key: "boundaryScore", label: "Boundary score" },
+    { key: "compilerNumber", label: "Compiler #" },
+    { key: "chapterOrLane", label: "Chapter or lane" },
+    { key: "date", label: "Date" },
+    { key: "title", label: "Title" },
+    { key: "releaseOrStatus", label: "Release or status" },
+    { key: "pages", label: "Pages" },
+    { key: "pageBasis", label: "Page basis" },
+    { key: "naid", label: "NAID" },
+    { key: "localIdentifier", label: "Local identifier" },
+    { key: "sourceFamily", label: "Source family" },
+    { key: "sourceLocator", label: "Source locator" },
+    { key: "matchedGaps", label: "Matched gaps" },
+    { key: "reasons", label: "Boundary reasons" },
+    { key: "boundaryQuestion", label: "Boundary question" },
+    { key: "nextAction", label: "Next action" },
+    { key: "sourceNote", label: "Source note" },
+    { key: "catalogUrl", label: "Catalog URL" },
+    { key: "pdfUrl", label: "PDF URL" }
+  ], pageBoundary);
+
   writeCsv(paths.chapterMatrixCsv, [
     { key: "chapter", label: "Chapter" },
     { key: "lane", label: "Research lane" },
@@ -2197,16 +2228,17 @@ function main() {
     { key: "notes", label: "Notes" }
   ], personsAuthority);
 
-  writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, accessReview, chapterMatrix, personsAuthority, selectionBoard);
+  writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, accessReview, pageBoundary, chapterMatrix, personsAuthority, selectionBoard);
   writeSelectionBoard(selectionBoard);
   writeSourceNoteAudit(sourceAudit, confirmed, potentialQueue);
   writeAccessReview(accessReview);
+  writePageBoundaryQueue(pageBoundary);
   writeChapterMatrix(chapterMatrix);
   writePersonsAuthority(personsAuthority, personsData);
   writePriorityPack(gaps, confirmed, potentialQueue);
   writeDossiers(confirmed);
 
-  console.log(`Wrote compiler worksheet, CSVs, decision log, selection board, source-note audit, access review, chapter matrix, persons authority audit, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
+  console.log(`Wrote compiler worksheet, CSVs, decision log, selection board, source-note audit, access review, page-boundary queue, chapter matrix, persons authority audit, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
 }
 
 main();

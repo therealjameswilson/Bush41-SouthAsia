@@ -247,13 +247,7 @@ function decisionRows(confirmed, potentialQueue, gapQueue) {
       status: row.releaseStatus,
       pages: row.pageCount ? pageLabel(row.pageCount) : "",
       naidOrTargets: compactList([row.naid, row.localIdentifier]).join("; "),
-      sourceLocator: compactList([
-        row.source,
-        row.sourcePages ? `source pages ${row.sourcePages}` : "",
-        row.objectFilename
-      ]).join(" | "),
       nextAction: row.nextAction,
-      sourceNote: row.sourceNote,
       catalogUrl: row.catalogUrl,
       pdfUrl: row.pdfUrl
     })),
@@ -269,9 +263,7 @@ function decisionRows(confirmed, potentialQueue, gapQueue) {
       status: compactList([row.disposition, row.status]).join("; "),
       pages: "",
       naidOrTargets: row.naid || "",
-      sourceLocator: compactList([row.source, row.objectFilename]).join(" | "),
       nextAction: row.action,
-      sourceNote: row.sourceNote,
       catalogUrl: row.catalogUrl,
       pdfUrl: row.pdfUrl
     })),
@@ -287,9 +279,7 @@ function decisionRows(confirmed, potentialQueue, gapQueue) {
       status: row.status,
       pages: "",
       naidOrTargets: compactList(row.targetRecords).join("; "),
-      sourceLocator: compactList(row.sourcePools).join("; "),
       nextAction: row.firstAction,
-      sourceNote: row.needed,
       catalogUrl: "",
       pdfUrl: ""
     }))
@@ -667,7 +657,7 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     "- `compiler-confirmed-records.csv`: confirmed chronology with source notes, URLs, Daily Diary references, and next action.",
     "- `compiler-potential-documents.csv`: source-sweep candidates sorted by priority and promotion value.",
     "- `compiler-gap-queue.csv`: open compiler gaps, pull-list IDs, and first actions.",
-    "- `compiler-decision-log.csv`: blank Select / Exclude / Defer / Cite only / Resolved tracker across confirmed records, potential leads, and gap lanes.",
+    "- `compiler-decision-log.csv`: compact Select / Exclude / Defer / Cite only / Resolved tracker across confirmed records, potential leads, and gap lanes; use the confirmed/potential CSVs and dossiers for full source notes and provenance.",
     "- `compiler-priority-dossiers.md`: compact first-pass dossiers for the highest-priority gap lanes.",
     "- `compiler-dossiers/index.md`: one Markdown dossier per confirmed record, organized by chapter.",
     "",
@@ -771,9 +761,7 @@ function main() {
     { key: "status", label: "Status" },
     { key: "pages", label: "Pages" },
     { key: "naidOrTargets", label: "NAID or target records" },
-    { key: "sourceLocator", label: "Source locator" },
     { key: "nextAction", label: "Next action" },
-    { key: "sourceNote", label: "Source note or need" },
     { key: "catalogUrl", label: "Catalog URL" },
     { key: "pdfUrl", label: "PDF URL" }
   ], decisions);

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-23T00:00:00Z",
+  "generatedAt": "2026-06-01T00:00:00Z",
   "source": {
     "title": "Bush Comprehensive Names List.docx",
     "kind": "local authority file",
     "path": "~/Library/Mobile Documents/com~apple~CloudDocs/Bush Comprehensive Names List.docx"
   },
-  "scope": "Bush administration officials and U.S. South Asia-facing personnel relevant to the Bush 41 South Asia record set.",
+  "scope": "Bush administration officials, U.S. South Asia-facing personnel, and foreign principals who appear in the confirmed Bush 41 South Asia chronology.",
   "persons": [
     {
       "id": "atwood-donald-j-jr",
@@ -58,6 +58,7 @@
       "description": "President of the United States from January 20, 1989, until January 20, 1993",
       "entry": "Bush, George Herbert Walker, President of the United States from January 20, 1989, until January 20, 1993",
       "sortKey": "bush george herbert walker",
+      "aliases": ["George H. W. Bush"],
       "agency": "White House",
       "categories": ["Core officials", "Presidential"]
     },
@@ -94,6 +95,7 @@
       "description": "Special Assistant to the President for National Security Affairs and Senior Director for Near East and South Asian Affairs from March 13, 1989, until November 1992",
       "entry": "Haass, Richard N., Special Assistant to the President for National Security Affairs and Senior Director for Near East and South Asian Affairs, from March 13, 1989, until November 1992",
       "sortKey": "haass richard n",
+      "aliases": ["Richard N. Haass"],
       "agency": "NSC",
       "categories": ["South Asia officials", "Policy officials"]
     },
@@ -312,6 +314,361 @@
       "sortKey": "zoellick robert bruce",
       "agency": "State",
       "categories": ["Economic policy", "White House", "Policy officials"]
+    },
+    {
+      "id": "abington-edward-g",
+      "displayName": "Abington, Edward G.",
+      "description": "Political Counselor, U.S. Embassy in Islamabad; Office of Pakistan, Afghanistan, and Bangladesh Affairs, Department of State",
+      "entry": "Abington, Edward G., Political Counselor, U.S. Embassy in Islamabad; Office of Pakistan, Afghanistan, and Bangladesh Affairs, Department of State",
+      "sortKey": "abington edward g",
+      "agency": "State",
+      "categories": ["South Asia posts", "Pakistan", "Afghanistan"]
+    },
+    {
+      "id": "bloch-julia-chang",
+      "displayName": "Bloch, Julia Chang",
+      "description": "Assistant Administrator, Asia and Near East Bureau, Agency for International Development; U.S. Ambassador to Nepal",
+      "entry": "Bloch, Julia Chang, Assistant Administrator, Asia and Near East Bureau, Agency for International Development; U.S. Ambassador to Nepal",
+      "sortKey": "bloch julia chang",
+      "agency": "AID",
+      "categories": ["Economic policy", "South Asia posts", "Nepal"]
+    },
+    {
+      "id": "borg-anna",
+      "displayName": "Borg, Anna",
+      "description": "Deputy Director, Office of Pakistan, Afghanistan, and Bangladesh Affairs, Department of State",
+      "entry": "Borg, Anna, Deputy Director, Office of Pakistan, Afghanistan, and Bangladesh Affairs, Department of State",
+      "sortKey": "borg anna",
+      "agency": "State",
+      "categories": ["South Asia officials", "Pakistan", "Afghanistan", "Bangladesh"]
+    },
+    {
+      "id": "brill-kenneth-c",
+      "displayName": "Brill, Kenneth C.",
+      "description": "Consul General, Calcutta; Deputy Chief of Mission, U.S. Embassy in New Delhi",
+      "entry": "Brill, Kenneth C., Consul General, Calcutta; Deputy Chief of Mission, U.S. Embassy in New Delhi",
+      "sortKey": "brill kenneth c",
+      "agency": "State",
+      "categories": ["South Asia posts", "India"]
+    },
+    {
+      "id": "butcher-w-scott",
+      "displayName": "Butcher, W. Scott",
+      "description": "Director, Office of Bhutan, India, Maldives, Nepal, Sri Lanka Affairs, Department of State",
+      "entry": "Butcher, W. Scott, Director, Office of Bhutan, India, Maldives, Nepal, Sri Lanka Affairs, Department of State",
+      "sortKey": "butcher w scott",
+      "agency": "State",
+      "categories": ["South Asia officials", "India", "Sri Lanka", "Nepal", "Maldives"]
+    },
+    {
+      "id": "carty-liza",
+      "displayName": "Carty, Liza",
+      "description": "Office of Pakistan, Afghanistan, and Bangladesh Affairs, Department of State",
+      "entry": "Carty, Liza, Office of Pakistan, Afghanistan, and Bangladesh Affairs, Department of State",
+      "sortKey": "carty liza",
+      "agency": "State",
+      "categories": ["South Asia officials", "Pakistan", "Afghanistan", "Bangladesh"]
+    },
+    {
+      "id": "charles-sandra",
+      "displayName": "Charles, Sandra",
+      "description": "Director for Near East and South Asian Affairs, National Security Council staff",
+      "entry": "Charles, Sandra, Director for Near East and South Asian Affairs, National Security Council staff",
+      "sortKey": "charles sandra",
+      "agency": "NSC",
+      "categories": ["South Asia officials", "Policy officials", "NSC"]
+    },
+    {
+      "id": "creekmore-marion-v",
+      "displayName": "Creekmore, Marion V.",
+      "description": "Deputy Afghan Coordinator; U.S. Ambassador to Sri Lanka and Maldives",
+      "entry": "Creekmore, Marion V., Deputy Afghan Coordinator; U.S. Ambassador to Sri Lanka and Maldives",
+      "sortKey": "creekmore marion v",
+      "agency": "State",
+      "categories": ["South Asia posts", "Afghanistan", "Sri Lanka", "Maldives"]
+    },
+    {
+      "id": "de-pree-willard-a",
+      "displayName": "De Pree, Willard A.",
+      "description": "U.S. Ambassador to Bangladesh until August 17, 1990",
+      "entry": "De Pree, Willard A., U.S. Ambassador to Bangladesh until August 17, 1990",
+      "sortKey": "de pree willard a",
+      "agency": "State",
+      "categories": ["South Asia posts", "Bangladesh"]
+    },
+    {
+      "id": "ealum-james-m",
+      "displayName": "Ealum, James M.",
+      "description": "Special Adviser for Afghanistan, Department of State",
+      "entry": "Ealum, James M., Special Adviser for Afghanistan, Department of State",
+      "sortKey": "ealum james m",
+      "agency": "State",
+      "categories": ["South Asia officials", "Afghanistan"]
+    },
+    {
+      "id": "feierstein-gerald-m",
+      "displayName": "Feierstein, Gerald M.",
+      "description": "Principal Officer, U.S. Consulate at Peshawar",
+      "entry": "Feierstein, Gerald M., Principal Officer, U.S. Consulate at Peshawar",
+      "sortKey": "feierstein gerald m",
+      "agency": "State",
+      "categories": ["South Asia posts", "Afghanistan", "Pakistan"]
+    },
+    {
+      "id": "flaten-robert-a",
+      "displayName": "Flaten, Robert A.",
+      "description": "Director, Office of Pakistan, Afghanistan, and Bangladesh Affairs, Department of State",
+      "entry": "Flaten, Robert A., Director, Office of Pakistan, Afghanistan, and Bangladesh Affairs, Department of State",
+      "sortKey": "flaten robert a",
+      "agency": "State",
+      "categories": ["South Asia officials", "Pakistan", "Afghanistan", "Bangladesh"]
+    },
+    {
+      "id": "frank-milton",
+      "displayName": "Frank, Milton",
+      "description": "U.S. Ambassador to Nepal until September 16, 1989",
+      "entry": "Frank, Milton, U.S. Ambassador to Nepal until September 16, 1989",
+      "sortKey": "frank milton",
+      "agency": "State",
+      "categories": ["South Asia posts", "Nepal"]
+    },
+    {
+      "id": "greene-earnest-t",
+      "displayName": "Greene, Earnest T.",
+      "description": "Deputy to the Special Envoy to the Afghan Resistance",
+      "entry": "Greene, Earnest T., Deputy to the Special Envoy to the Afghan Resistance",
+      "sortKey": "greene earnest t",
+      "agency": "State",
+      "categories": ["South Asia officials", "Afghanistan"]
+    },
+    {
+      "id": "griffin-george-g-b",
+      "displayName": "Griffin, George G.B.",
+      "description": "Director, Office of Bhutan, India, Maldives, Nepal, Sri Lanka Affairs; Director, Office of India, Nepal, and Sri Lanka Affairs, Department of State",
+      "entry": "Griffin, George G.B., Director, Office of Bhutan, India, Maldives, Nepal, Sri Lanka Affairs; Director, Office of India, Nepal, and Sri Lanka Affairs, Department of State",
+      "sortKey": "griffin george g b",
+      "agency": "State",
+      "categories": ["South Asia officials", "India", "Sri Lanka", "Nepal", "Maldives"]
+    },
+    {
+      "id": "riedel-bruce-o",
+      "displayName": "Riedel, Bruce O.",
+      "description": "Director for Near East and South Asian Affairs, National Security Council staff",
+      "entry": "Riedel, Bruce O., Director for Near East and South Asian Affairs, National Security Council staff",
+      "sortKey": "riedel bruce o",
+      "agency": "NSC",
+      "categories": ["South Asia officials", "Policy officials", "NSC"]
+    },
+    {
+      "id": "tahir-kheli-shirin",
+      "displayName": "Tahir-Kheli, Shirin",
+      "description": "Director for Near East and South Asian Affairs, National Security Council staff",
+      "entry": "Tahir-Kheli, Shirin, Director for Near East and South Asian Affairs, National Security Council staff",
+      "sortKey": "tahir kheli shirin",
+      "agency": "NSC",
+      "categories": ["South Asia officials", "Policy officials", "NSC"]
+    },
+    {
+      "id": "tomsen-peter",
+      "displayName": "Tomsen, Peter",
+      "description": "Special Envoy to the Afghan Resistance",
+      "entry": "Tomsen, Peter, Special Envoy to the Afghan Resistance",
+      "sortKey": "tomsen peter",
+      "agency": "State",
+      "categories": ["South Asia officials", "Afghanistan"]
+    },
+    {
+      "id": "warren-louis-b",
+      "displayName": "Warren, Louis B.",
+      "description": "Deputy Director, Office of India, Nepal, and Sri Lanka Affairs; Economic Counselor, U.S. Embassy in New Delhi",
+      "entry": "Warren, Louis B., Deputy Director, Office of India, Nepal, and Sri Lanka Affairs; Economic Counselor, U.S. Embassy in New Delhi",
+      "sortKey": "warren louis b",
+      "agency": "State",
+      "categories": ["South Asia officials", "Economic policy", "India", "Sri Lanka", "Nepal"]
+    },
+    {
+      "id": "welch-c-david",
+      "displayName": "Welch, C. David",
+      "description": "Director for Near East and South Asian Affairs, National Security Council staff",
+      "entry": "Welch, C. David, Director for Near East and South Asian Affairs, National Security Council staff",
+      "sortKey": "welch c david",
+      "agency": "NSC",
+      "categories": ["South Asia officials", "Policy officials", "NSC"]
+    },
+    {
+      "id": "bhutto-benazir",
+      "displayName": "Bhutto, Benazir",
+      "description": "Prime Minister of Pakistan until August 6, 1990",
+      "entry": "Bhutto, Benazir, Prime Minister of Pakistan until August 6, 1990",
+      "sortKey": "bhutto benazir",
+      "aliases": ["Benazir Bhutto"],
+      "agency": "Foreign government",
+      "categories": ["Foreign principals", "Pakistan"]
+    },
+    {
+      "id": "ershad-hussain-muhammad",
+      "displayName": "Ershad, Hussain Muhammad",
+      "description": "President of Bangladesh until December 6, 1990",
+      "entry": "Ershad, Hussain Muhammad, President of Bangladesh until December 6, 1990",
+      "sortKey": "ershad hussain muhammad",
+      "aliases": ["Hussain Muhammad Ershad"],
+      "agency": "Foreign government",
+      "categories": ["Foreign principals", "Bangladesh"]
+    },
+    {
+      "id": "fahd-bin-abdul-aziz-al-saud",
+      "displayName": "Fahd bin Abdul Aziz Al Saud, King",
+      "description": "King of Saudi Arabia",
+      "entry": "Fahd bin Abdul Aziz Al Saud, King, King of Saudi Arabia",
+      "sortKey": "fahd bin abdul aziz al saud",
+      "aliases": ["King Fahd"],
+      "agency": "Foreign government",
+      "categories": ["Foreign principals", "Afghanistan"]
+    },
+    {
+      "id": "gandhi-rajiv",
+      "displayName": "Gandhi, Rajiv",
+      "description": "Prime Minister of India until December 2, 1989",
+      "entry": "Gandhi, Rajiv, Prime Minister of India until December 2, 1989",
+      "sortKey": "gandhi rajiv",
+      "aliases": ["Rajiv Gandhi"],
+      "agency": "Foreign government",
+      "categories": ["Foreign principals", "India"]
+    },
+    {
+      "id": "ghulam-ishaq-khan",
+      "displayName": "Ghulam Ishaq Khan",
+      "description": "President of Pakistan from August 17, 1988, until July 18, 1993",
+      "entry": "Ghulam Ishaq Khan, President of Pakistan from August 17, 1988, until July 18, 1993",
+      "sortKey": "ghulam ishaq khan",
+      "agency": "Foreign government",
+      "categories": ["Foreign principals", "Pakistan"]
+    },
+    {
+      "id": "gorbachev-mikhail-sergeyevich",
+      "displayName": "Gorbachev, Mikhail Sergeyevich",
+      "description": "General Secretary of the Communist Party of the Soviet Union until August 1991; President of the Soviet Union from March 15, 1990, until December 25, 1991",
+      "entry": "Gorbachev, Mikhail Sergeyevich, General Secretary of the Communist Party of the Soviet Union until August 1991; President of the Soviet Union from March 15, 1990, until December 25, 1991",
+      "sortKey": "gorbachev mikhail sergeyevich",
+      "aliases": ["Mikhail Gorbachev"],
+      "agency": "Foreign government",
+      "categories": ["Foreign principals", "Afghanistan"]
+    },
+    {
+      "id": "khaleda-zia",
+      "displayName": "Khaleda Zia",
+      "description": "Prime Minister of Bangladesh from March 20, 1991",
+      "entry": "Khaleda Zia, Prime Minister of Bangladesh from March 20, 1991",
+      "sortKey": "khaleda zia",
+      "agency": "Foreign government",
+      "categories": ["Foreign principals", "Bangladesh"]
+    },
+    {
+      "id": "kohl-helmut",
+      "displayName": "Kohl, Helmut",
+      "description": "Chancellor of the Federal Republic of Germany",
+      "entry": "Kohl, Helmut, Chancellor of the Federal Republic of Germany",
+      "sortKey": "kohl helmut",
+      "aliases": ["Helmut Kohl"],
+      "agency": "Foreign government",
+      "categories": ["Foreign principals", "Pakistan"]
+    },
+    {
+      "id": "lee-kuan-yew",
+      "displayName": "Lee Kuan Yew",
+      "description": "Prime Minister of Singapore until November 28, 1990; Senior Minister of Singapore from November 28, 1990",
+      "entry": "Lee Kuan Yew, Prime Minister of Singapore until November 28, 1990; Senior Minister of Singapore from November 28, 1990",
+      "sortKey": "lee kuan yew",
+      "agency": "Foreign government",
+      "categories": ["Foreign principals", "Pakistan"]
+    },
+    {
+      "id": "mojaddedi-sibghatullah",
+      "displayName": "Mojaddedi, Sibghatullah",
+      "description": "President of the Afghan Interim Government in 1989; President of Afghanistan from April 1992 until June 1992",
+      "entry": "Mojaddedi, Sibghatullah, President of the Afghan Interim Government in 1989; President of Afghanistan from April 1992 until June 1992",
+      "sortKey": "mojaddedi sibghatullah",
+      "aliases": ["Sibghatullah Mojaddedi"],
+      "agency": "Foreign government",
+      "categories": ["Foreign principals", "Afghanistan"]
+    },
+    {
+      "id": "mubarak-hosni",
+      "displayName": "Mubarak, Hosni",
+      "description": "President of Egypt",
+      "entry": "Mubarak, Hosni, President of Egypt",
+      "sortKey": "mubarak hosni",
+      "aliases": ["Hosni Mubarak"],
+      "agency": "Foreign government",
+      "categories": ["Foreign principals", "Regional"]
+    },
+    {
+      "id": "nawaz-sharif",
+      "displayName": "Nawaz Sharif",
+      "description": "Prime Minister of Pakistan from November 6, 1990, until July 18, 1993",
+      "entry": "Nawaz Sharif, Prime Minister of Pakistan from November 6, 1990, until July 18, 1993",
+      "sortKey": "nawaz sharif",
+      "agency": "Foreign government",
+      "categories": ["Foreign principals", "Pakistan"]
+    },
+    {
+      "id": "ozal-turgut",
+      "displayName": "Ozal, Turgut",
+      "description": "Prime Minister of Turkey until November 9, 1989; President of Turkey from November 9, 1989",
+      "entry": "Ozal, Turgut, Prime Minister of Turkey until November 9, 1989; President of Turkey from November 9, 1989",
+      "sortKey": "ozal turgut",
+      "aliases": ["Turgut Ozal"],
+      "agency": "Foreign government",
+      "categories": ["Foreign principals", "Afghanistan"]
+    },
+    {
+      "id": "rao-p-v-narasimha",
+      "displayName": "Rao, P. V. Narasimha",
+      "description": "Prime Minister of India from June 21, 1991",
+      "entry": "Rao, P. V. Narasimha, Prime Minister of India from June 21, 1991",
+      "sortKey": "rao p v narasimha",
+      "aliases": ["P. V. Narasimha Rao"],
+      "agency": "Foreign government",
+      "categories": ["Foreign principals", "India"]
+    },
+    {
+      "id": "ray-siddhartha-shankar",
+      "displayName": "Ray, Siddhartha Shankar",
+      "description": "Ambassador of India to the United States during the Bush administration",
+      "entry": "Ray, Siddhartha Shankar, Ambassador of India to the United States during the Bush administration",
+      "sortKey": "ray siddhartha shankar",
+      "aliases": ["Siddhartha Shankar Ray"],
+      "agency": "Foreign government",
+      "categories": ["Foreign principals", "India"]
+    },
+    {
+      "id": "thatcher-margaret",
+      "displayName": "Thatcher, Margaret",
+      "description": "Prime Minister of the United Kingdom until November 28, 1990",
+      "entry": "Thatcher, Margaret, Prime Minister of the United Kingdom until November 28, 1990",
+      "sortKey": "thatcher margaret",
+      "aliases": ["Margaret Thatcher"],
+      "agency": "Foreign government",
+      "categories": ["Foreign principals", "Afghanistan"]
+    },
+    {
+      "id": "venkataraman-r",
+      "displayName": "Venkataraman, R.",
+      "description": "President of India until July 25, 1992",
+      "entry": "Venkataraman, R., President of India until July 25, 1992",
+      "sortKey": "venkataraman r",
+      "aliases": ["R. Venkataraman"],
+      "agency": "Foreign government",
+      "categories": ["Foreign principals", "India"]
+    },
+    {
+      "id": "zhao-ziyang",
+      "displayName": "Zhao Ziyang",
+      "description": "General Secretary of the Chinese Communist Party until June 1989",
+      "entry": "Zhao Ziyang, General Secretary of the Chinese Communist Party until June 1989",
+      "sortKey": "zhao ziyang",
+      "agency": "Foreign government",
+      "categories": ["Foreign principals", "India"]
     }
   ]
 }

@@ -67,6 +67,7 @@ const paths = {
   records: path.join(repoRoot, "data", "memcons.json"),
   potential: path.join(repoRoot, "data", "potential-documents.json"),
   gaps: path.join(repoRoot, "data", "compiler-gaps.json"),
+  persons: path.join(repoRoot, "data", "persons.json"),
   worksheet: path.join(reportsDir, "compiler-worksheet.md"),
   confirmedCsv: path.join(reportsDir, "compiler-confirmed-records.csv"),
   potentialCsv: path.join(reportsDir, "compiler-potential-documents.csv"),
@@ -78,6 +79,8 @@ const paths = {
   accessReview: path.join(reportsDir, "compiler-access-review.md"),
   chapterMatrixCsv: path.join(reportsDir, "compiler-chapter-matrix.csv"),
   chapterMatrix: path.join(reportsDir, "compiler-chapter-matrix.md"),
+  personsAuthorityCsv: path.join(reportsDir, "compiler-persons-authority.csv"),
+  personsAuthority: path.join(reportsDir, "compiler-persons-authority.md"),
   priorityPack: path.join(reportsDir, "compiler-priority-dossiers.md"),
   dossiersDir: path.join(reportsDir, "compiler-dossiers"),
   dossiersIndex: path.join(reportsDir, "compiler-dossiers", "index.md")
@@ -702,6 +705,28 @@ function laneMatchesText(lane, text) {
   return lane.terms.some((term) => text.includes(String(term).toLowerCase()));
 }
 
+function laneMatchScore(lane, text, row) {
+  const reviewLane = String(row.reviewLane || "").toLowerCase();
+  const reviewSuffix = reviewLane.includes(":")
+    ? reviewLane.split(":").pop().trim()
+    : reviewLane;
+  const laneText = plainText([lane.lane, lane.terms]);
+  let score = 0;
+
+  lane.terms.forEach((term) => {
+    const normalized = String(term).toLowerCase();
+    if (text.includes(normalized)) score += normalized.length > 7 ? 4 : 2;
+    if (reviewLane.includes(normalized)) score += 6;
+  });
+
+  if (reviewSuffix && laneText.includes(reviewSuffix)) score += 10;
+  if (/regional south asia strategy/i.test(lane.lane) && reviewLane.startsWith("regional:")) {
+    score -= 8;
+  }
+
+  return score;
+}
+
 function fallbackLane(chapter) {
   return {
     chapter,
@@ -714,7 +739,16 @@ function fallbackLane(chapter) {
 function laneForRow(row) {
   const chapter = normalizedChapter(row);
   const text = rowSearchText(row);
-  return CHAPTER_LANES.find((lane) => lane.chapter === chapter && laneMatchesText(lane, text)) || fallbackLane(chapter);
+  const candidates = CHAPTER_LANES
+    .filter((lane) => lane.chapter === chapter && laneMatchesText(lane, text))
+    .map((lane) => ({ lane, score: laneMatchScore(lane, text, row) }))
+    .filter(({ score }) => score > 0)
+    .sort((left, right) => (
+      right.score - left.score ||
+      right.lane.terms.join(" ").length - left.lane.terms.join(" ").length
+    ));
+
+  return candidates[0]?.lane || fallbackLane(chapter);
 }
 
 function laneKey(lane) {
@@ -907,6 +941,238 @@ function writeChapterMatrix(rows) {
   }
 
   fs.writeFileSync(paths.chapterMatrix, `${lines.join("\n").trim()}\n`);
+}
+
+const INSTITUTIONAL_PARTICIPANTS = new Map([
+  ["deputies committee", "Institutional NSC/DC meeting body; keep as a participant/body label, not a Persons entry."],
+  ["national security council", "Institutional NSC meeting body; keep as a participant/body label, not a Persons entry."]
+]);
+
+const PERSONS_EXPANSION_LANES = [
+  {
+    lane: "State desk and post officers",
+    currentSignal: "State desk and South Asia post entries are now present, but most are context entries rather than named participants.",
+    nextAction: "Use the persons authority report to decide which source-context officers need final FRUS Persons entries after document selection."
+  },
+  {
+    lane: "NSC Near East/South Asia staff",
+    currentSignal: "Haass is named in confirmed records; Charles, Tahir-Kheli, Riedel, and Welch are authority/context entries.",
+    nextAction: "Tie NSC staff to promoted Haass/Gates/meeting-file documents when page-level screening identifies authors, attendees, or routing officials."
+  },
+  {
+    lane: "Foreign principals",
+    currentSignal: "All personal foreign-principal participant labels in the confirmed chronology now have authority entries.",
+    nextAction: "Spot-check role/date wording against final selected documents before treating the Persons list as publication-ready."
+  },
+  {
+    lane: "Institutional participants",
+    currentSignal: "Deputies Committee and National Security Council are record participants, not people.",
+    nextAction: "Retain institutional labels in chronology metadata and omit them from the Persons list unless the editor requests a body note."
+  }
+];
+
+function normalizePersonName(value) {
+  return String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/\b(jr|sr|iii|ii|iv)\b/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .replace(/\s+/g, " ");
+}
+
+function withoutInitials(value) {
+  return normalizePersonName(value)
+    .split(" ")
+    .filter((token) => token.length > 1)
+    .join(" ");
+}
+
+function invertDisplayName(value) {
+  const parts = String(value || "").split(",").map((part) => part.trim()).filter(Boolean);
+  if (parts.length < 2) return value;
+  const [family, ...given] = parts;
+  return [...given, family].join(" ");
+}
+
+function personAliases(person) {
+  return uniqueInOrder([
+    person.displayName,
+    invertDisplayName(person.displayName),
+    person.sortKey,
+    ...(person.aliases || [])
+  ]);
+}
+
+function nameTokens(value) {
+  return normalizePersonName(value).split(" ").filter(Boolean);
+}
+
+function namesMatch(participant, alias) {
+  const participantNorm = normalizePersonName(participant);
+  const aliasNorm = normalizePersonName(alias);
+  if (!participantNorm || !aliasNorm) return false;
+  if (participantNorm === aliasNorm) return true;
+  if (withoutInitials(participantNorm) === withoutInitials(aliasNorm)) return true;
+
+  const participantTokens = nameTokens(participantNorm);
+  const aliasTokens = nameTokens(aliasNorm);
+  if (participantTokens.length >= 2 && aliasTokens.length >= 2) {
+    return participantTokens[0] === aliasTokens[0] && participantTokens.at(-1) === aliasTokens.at(-1);
+  }
+  return false;
+}
+
+function matchPerson(participant, persons) {
+  return persons.find((person) => personAliases(person).some((alias) => namesMatch(participant, alias)));
+}
+
+function participantRecords(confirmed, participant) {
+  return confirmed.filter((row) => (row.participants || []).includes(participant));
+}
+
+function personRepresentativeRecords(rows) {
+  return rows
+    .slice(0, 6)
+    .map((row) => `Doc ${row.compilerNumber} (${row.date}, ${row.chapter})`)
+    .join("; ");
+}
+
+function authorityNextAction(status, person) {
+  if (status === "Institutional label") {
+    return "Keep as a record participant/body label; do not add to Persons as an individual.";
+  }
+  if (status === "Matched authority entry" && person?.agency === "Foreign government") {
+    return "Spot-check foreign role/date wording against final selected document text before publication.";
+  }
+  if (status === "Matched authority entry") {
+    return "Check whether the entry should remain in Persons after final document selection and editor scope review.";
+  }
+  return "Add a FRUS-style authority entry or record the scope reason for exclusion.";
+}
+
+function personsAuthorityRows(confirmed, personsData) {
+  const persons = personsData.persons || [];
+  const participants = uniqueInOrder(confirmed.flatMap((row) => row.participants || [])).sort((a, b) => a.localeCompare(b));
+  const matchedIds = new Set();
+
+  const participantRows = participants.map((participant) => {
+    const institutionalNote = INSTITUTIONAL_PARTICIPANTS.get(normalizePersonName(participant));
+    const rows = participantRecords(confirmed, participant).sort(byDateThenChapter);
+    const person = institutionalNote ? null : matchPerson(participant, persons);
+    if (person) matchedIds.add(person.id);
+    const dates = rows.map((row) => row.date).filter(Boolean).sort();
+    const chapters = uniqueInOrder(rows.map((row) => row.chapter)).join("; ");
+    const status = institutionalNote ? "Institutional label" : person ? "Matched authority entry" : "Missing authority entry";
+
+    return {
+      rowType: institutionalNote ? "Institutional participant" : "Chronology participant",
+      participant,
+      authorityStatus: status,
+      authorityName: person?.displayName || "",
+      authorityEntry: person?.entry || "",
+      agency: person?.agency || "",
+      categories: person?.categories || [],
+      recordCount: rows.length,
+      chapters,
+      firstDate: dates[0] || "",
+      lastDate: dates.at(-1) || "",
+      representativeRecords: personRepresentativeRecords(rows),
+      nextAction: authorityNextAction(status, person),
+      notes: institutionalNote || ""
+    };
+  });
+
+  const contextRows = persons
+    .filter((person) => !matchedIds.has(person.id))
+    .map((person) => ({
+      rowType: "Authority context entry",
+      participant: "",
+      authorityStatus: "Not named in confirmed participant metadata",
+      authorityName: person.displayName,
+      authorityEntry: person.entry,
+      agency: person.agency,
+      categories: person.categories || [],
+      recordCount: "",
+      chapters: "",
+      firstDate: "",
+      lastDate: "",
+      representativeRecords: "",
+      nextAction: "Keep as source-context authority until final selected documents confirm whether the person belongs in the published Persons list.",
+      notes: "Present in the local authority list but not named in confirmed record participant metadata."
+    }));
+
+  return [...participantRows, ...contextRows].sort((a, b) =>
+    a.rowType.localeCompare(b.rowType) ||
+    a.authorityStatus.localeCompare(b.authorityStatus) ||
+    String(a.participant || a.authorityName).localeCompare(String(b.participant || b.authorityName))
+  );
+}
+
+function writePersonsAuthority(rows, personsData) {
+  const participantRows = rows.filter((row) => row.rowType === "Chronology participant");
+  const institutionalRows = rows.filter((row) => row.rowType === "Institutional participant");
+  const contextRows = rows.filter((row) => row.rowType === "Authority context entry");
+  const missingRows = participantRows.filter((row) => row.authorityStatus === "Missing authority entry");
+  const matchedRows = participantRows.filter((row) => row.authorityStatus === "Matched authority entry");
+  const foreignMatched = matchedRows.filter((row) => row.agency === "Foreign government");
+  const statusCounts = countBy(rows, (row) => row.authorityStatus).map(([status, count]) => [status, count]);
+  const agencyCounts = countBy(contextRows, (row) => row.agency).map(([agency, count]) => [agency, count]);
+  const participantTable = [...participantRows, ...institutionalRows].map((row) => [
+    row.participant,
+    row.authorityStatus,
+    row.authorityName || "N/A",
+    row.recordCount,
+    row.chapters,
+    row.firstDate === row.lastDate ? row.firstDate : `${row.firstDate} to ${row.lastDate}`,
+    mdEscape(row.nextAction)
+  ]);
+  const expansionRows = PERSONS_EXPANSION_LANES.map((lane) => [
+    lane.lane,
+    lane.currentSignal,
+    lane.nextAction
+  ]);
+
+  const lines = [
+    "# FRUS South Asia Persons Authority Audit",
+    "",
+    `Generated: ${new Date().toISOString()}`,
+    "",
+    "This audit crosswalks confirmed chronology participant labels to the local Persons authority list. It separates personal participants from institutional meeting bodies and keeps context-only authority entries visible for final FRUS Persons-list decisions.",
+    "",
+    "## Coverage",
+    "",
+    `- Local authority entries: ${(personsData.persons || []).length}`,
+    `- Confirmed chronology personal participant labels: ${participantRows.length}`,
+    `- Personal participant labels with authority entries: ${matchedRows.length}/${participantRows.length}`,
+    `- Foreign-principal participant labels with authority entries: ${foreignMatched.length}`,
+    `- Institutional participant/body labels: ${institutionalRows.length}`,
+    `- Missing personal participant authority entries: ${missingRows.length}`,
+    `- Authority/context entries not directly named in participant metadata: ${contextRows.length}`,
+    "",
+    "## Authority Status Counts",
+    "",
+    markdownTable(["Status", "Rows"], statusCounts),
+    "",
+    "## Chronology Participant Crosswalk",
+    "",
+    markdownTable(["Participant label", "Status", "Authority entry", "Records", "Chapters", "Date span", "Next action"], participantTable),
+    "",
+    "## Context Authority Entries By Agency",
+    "",
+    agencyCounts.length ? markdownTable(["Agency", "Entries"], agencyCounts) : "No context-only authority entries.",
+    "",
+    "## Remaining Expansion Lanes",
+    "",
+    markdownTable(["Lane", "Current signal", "Next action"], expansionRows),
+    "",
+    "## Working Rule",
+    "",
+    "Treat this as a names-authority QA sheet. Personal labels in confirmed records should resolve to a Persons entry or a documented scope exclusion. Institutional labels should remain in chronology metadata, not the Persons list. Context-only U.S. officials should be retained until final document selection proves whether they appear in selected text, annotations, source notes, or editorial apparatus."
+  ];
+
+  fs.writeFileSync(paths.personsAuthority, `${lines.join("\n").trim()}\n`);
 }
 
 function slug(value) {
@@ -1196,7 +1462,7 @@ function writePriorityPack(gaps, confirmed, potentialQueue) {
   fs.writeFileSync(paths.priorityPack, `${lines.join("\n").trim()}\n`);
 }
 
-function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, accessReview, chapterMatrix) {
+function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, accessReview, chapterMatrix, personsAuthority) {
   const released = confirmed.filter((row) => row.queue === "Released chronology").length;
   const review = confirmed.length - released;
   const sourceNotes = confirmed.filter((row) => row.sourceNote).length;
@@ -1207,6 +1473,10 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
   const confirmedAccessReview = accessReview.filter((row) => row.itemType === "Confirmed record").length;
   const potentialAccessReview = accessReview.filter((row) => row.itemType === "Potential lead").length;
   const matrixOpenLanes = chapterMatrix.filter((row) => !/^Usable first pass$/i.test(row.coverageStatus)).length;
+  const participantRows = personsAuthority.filter((row) => row.rowType === "Chronology participant");
+  const matchedParticipants = participantRows.filter((row) => row.authorityStatus === "Matched authority entry").length;
+  const institutionalParticipants = personsAuthority.filter((row) => row.rowType === "Institutional participant").length;
+  const missingParticipantAuthority = participantRows.filter((row) => row.authorityStatus === "Missing authority entry").length;
   const riskCounts = countBy(
     confirmed.flatMap((row) => row.compilerRisks.length ? row.compilerRisks : ["No flagged risk"]),
     (risk) => risk
@@ -1246,6 +1516,13 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     `- Lanes needing promotion, access, or source-expansion decisions: ${matrixOpenLanes}`,
     `- Itemized matrix: \`compiler-chapter-matrix.md\` and \`compiler-chapter-matrix.csv\``,
     "",
+    "## Persons Authority",
+    "",
+    `- Personal participant authority coverage: ${matchedParticipants}/${participantRows.length}`,
+    `- Institutional participant/body labels separated: ${institutionalParticipants}`,
+    `- Missing personal participant authority entries: ${missingParticipantAuthority}`,
+    `- Itemized audit: \`compiler-persons-authority.md\` and \`compiler-persons-authority.csv\``,
+    "",
     "## Source-Note Risk Counts",
     "",
     markdownTable(["Risk", "Records"], riskCounts),
@@ -1277,6 +1554,7 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     "- `compiler-gap-queue.csv`: open compiler gaps, pull-list IDs, and first actions.",
     "- `compiler-decision-log.csv`: blank Select / Exclude / Defer / Cite only / Resolved tracker across confirmed records, potential leads, and gap lanes.",
     "- `compiler-chapter-matrix.md` and `compiler-chapter-matrix.csv`: chapter-by-theme research matrix with coverage status, leads, gaps, and next actions.",
+    "- `compiler-persons-authority.md` and `compiler-persons-authority.csv`: participant-to-Persons authority crosswalk with institutional labels and context-only entries separated.",
     "- `compiler-source-note-audit.md` and `compiler-source-note-audit.csv`: itemized FRUS-style source-note review lanes.",
     "- `compiler-access-review.md` and `compiler-access-review.csv`: access-status, partial-release, declassification, and potential-lead promotion ledger.",
     "- `compiler-priority-dossiers.md`: compact first-pass dossiers for the highest-priority gap lanes.",
@@ -1293,6 +1571,7 @@ function main() {
   const records = readJson(paths.records);
   const potential = readJson(paths.potential);
   const gaps = readJson(paths.gaps);
+  const personsData = readJson(paths.persons);
   const confirmed = confirmedRows(records);
   const potentialQueue = potentialRows(potential);
   const gapQueue = gapRows(gaps);
@@ -1300,6 +1579,7 @@ function main() {
   const sourceAudit = sourceNoteAuditRows(confirmed, potentialQueue);
   const accessReview = accessReviewRows(confirmed, potentialQueue);
   const chapterMatrix = chapterMatrixRows(confirmed, potentialQueue, gapQueue);
+  const personsAuthority = personsAuthorityRows(confirmed, personsData);
 
   writeCsv(paths.confirmedCsv, [
     { key: "id", label: "Record ID" },
@@ -1457,14 +1737,32 @@ function main() {
     { key: "nextAction", label: "Next action" }
   ], chapterMatrix);
 
-  writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, accessReview, chapterMatrix);
+  writeCsv(paths.personsAuthorityCsv, [
+    { key: "rowType", label: "Row type" },
+    { key: "participant", label: "Participant label" },
+    { key: "authorityStatus", label: "Authority status" },
+    { key: "authorityName", label: "Authority name" },
+    { key: "authorityEntry", label: "Authority entry" },
+    { key: "agency", label: "Agency" },
+    { key: "categories", label: "Categories" },
+    { key: "recordCount", label: "Record count" },
+    { key: "chapters", label: "Chapters" },
+    { key: "firstDate", label: "First date" },
+    { key: "lastDate", label: "Last date" },
+    { key: "representativeRecords", label: "Representative records" },
+    { key: "nextAction", label: "Next action" },
+    { key: "notes", label: "Notes" }
+  ], personsAuthority);
+
+  writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, accessReview, chapterMatrix, personsAuthority);
   writeSourceNoteAudit(sourceAudit, confirmed, potentialQueue);
   writeAccessReview(accessReview);
   writeChapterMatrix(chapterMatrix);
+  writePersonsAuthority(personsAuthority, personsData);
   writePriorityPack(gaps, confirmed, potentialQueue);
   writeDossiers(confirmed);
 
-  console.log(`Wrote compiler worksheet, CSVs, decision log, source-note audit, access review, chapter matrix, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
+  console.log(`Wrote compiler worksheet, CSVs, decision log, source-note audit, access review, chapter matrix, persons authority audit, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
 }
 
 main();

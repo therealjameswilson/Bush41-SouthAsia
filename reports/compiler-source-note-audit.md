@@ -1,6 +1,6 @@
 # FRUS South Asia Source-Note Audit
 
-Generated: 2026-06-01T15:50:42.484Z
+Generated: 2026-06-01T15:58:07.950Z
 
 This audit gives the compiler a record-by-record queue for final source-note review. It checks only the visible editorial Source Note. Full Catalog URLs, NAIDs, object filenames, source-page basis, and Daily Diary references remain in the provenance fields, dossiers, and CSV exports.
 

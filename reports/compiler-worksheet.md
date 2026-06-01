@@ -1,6 +1,6 @@
 # FRUS South Asia Compiler Worksheet
 
-Generated: 2026-06-01T15:50:42.480Z
+Generated: 2026-06-01T15:58:07.944Z
 
 ## Working Set
 
@@ -27,6 +27,13 @@ Generated: 2026-06-01T15:50:42.480Z
 - Thematic lanes tracked: 9
 - Lanes needing promotion, access, or source-expansion decisions: 9
 - Itemized matrix: `compiler-chapter-matrix.md` and `compiler-chapter-matrix.csv`
+
+## Persons Authority
+
+- Personal participant authority coverage: 20/20
+- Institutional participant/body labels separated: 2
+- Missing personal participant authority entries: 0
+- Itemized audit: `compiler-persons-authority.md` and `compiler-persons-authority.csv`
 
 ## Source-Note Risk Counts
 
@@ -78,6 +85,7 @@ Generated: 2026-06-01T15:50:42.480Z
 - `compiler-gap-queue.csv`: open compiler gaps, pull-list IDs, and first actions.
 - `compiler-decision-log.csv`: blank Select / Exclude / Defer / Cite only / Resolved tracker across confirmed records, potential leads, and gap lanes.
 - `compiler-chapter-matrix.md` and `compiler-chapter-matrix.csv`: chapter-by-theme research matrix with coverage status, leads, gaps, and next actions.
+- `compiler-persons-authority.md` and `compiler-persons-authority.csv`: participant-to-Persons authority crosswalk with institutional labels and context-only entries separated.
 - `compiler-source-note-audit.md` and `compiler-source-note-audit.csv`: itemized FRUS-style source-note review lanes.
 - `compiler-access-review.md` and `compiler-access-review.csv`: access-status, partial-release, declassification, and potential-lead promotion ledger.
 - `compiler-priority-dossiers.md`: compact first-pass dossiers for the highest-priority gap lanes.

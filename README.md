@@ -25,7 +25,7 @@ The current data is harvested from three National Archives Catalog source-series
 - NAID 186322: Presidential Daily Diary and Presidential Daily Backup Materials
 - Candidate sweeps: broader National Archives Catalog searches across Bush 41-era collections, Richard Cheney Country Files, Haass Working Files, and GovInfo Public Papers references.
 - Compiler gap tracker: `data/compiler-gaps.json` and `reports/compiler-gap-analysis.md`.
-- Persons authority: `persons.html` from `data/persons.json`, scoped to Bush administration principals and South Asia-facing U.S. officials.
+- Persons authority: `persons.html` from `data/persons.json`, scoped to Bush administration principals, South Asia-facing U.S. officials, and foreign principals in the confirmed chronology.
 
 Open `index.html` directly, or serve the directory locally:
 
@@ -60,13 +60,15 @@ substantive summaries.
 full catalog URLs and working provenance.
 `generate-compiler-worksheet.js` writes the offline compiler packet in
 `reports/compiler-worksheet.md` plus confirmed-record, potential-document,
-gap-queue, decision-log, chapter-matrix, source-note audit, and access-review
-CSV exports,
+gap-queue, decision-log, chapter-matrix, persons-authority, source-note audit,
+and access-review CSV exports,
 creates `reports/compiler-source-note-audit.md` for itemized FRUS-style
 source-note review lanes, creates `reports/compiler-access-review.md` for
 access, declassification, excision, and promotion triage, creates
 `reports/compiler-chapter-matrix.md` for chapter-by-theme coverage and
 next-action review lanes, creates
+`reports/compiler-persons-authority.md` for participant-to-Persons authority
+coverage and institutional-body separation, creates
 `reports/compiler-priority-dossiers.md` for the highest-risk first-pass lanes,
 and creates one Markdown dossier per confirmed record under
 `reports/compiler-dossiers/`.

@@ -38,6 +38,7 @@ function searchText(person) {
     person.description,
     person.entry,
     person.agency,
+    ...(person.aliases || []),
     ...(person.categories || [])
   ]
     .filter(Boolean)
@@ -62,7 +63,7 @@ function filteredPersons() {
     if (state.agency && person.agency !== state.agency) return false;
     if (state.category && !(person.categories || []).includes(state.category)) return false;
     return true;
-  });
+  }).sort((a, b) => a.sortKey.localeCompare(b.sortKey));
 }
 
 function groupBy(items, getter) {
@@ -112,7 +113,7 @@ function renderStats() {
     statCard(persons.length, "persons included"),
     statCard(agencies.length, "agency groupings"),
     statCard(categories.length, "scope tags"),
-    statCard("1989-1993", "administration span")
+    statCard("1989-1993", "chronology span")
   );
 }
 
@@ -127,8 +128,8 @@ function statCard(value, label) {
 }
 
 function renderPersons() {
-  const visible = filteredPersons().sort((a, b) => a.sortKey.localeCompare(b.sortKey));
-  nodes.summary.textContent = `${plural(visible.length, "person")} visible from ${persons.length} Bush administration entries.`;
+  const visible = filteredPersons();
+  nodes.summary.textContent = `${plural(visible.length, "person")} visible from ${persons.length} authority entries.`;
 
   if (!visible.length) {
     nodes.root.innerHTML = '<p class="empty-chapter">No persons match the current filters.</p>';
@@ -206,6 +207,7 @@ function setupEvents() {
         { label: "Name", value: (person) => person.displayName },
         { label: "Description", value: (person) => person.description },
         { label: "Agency", value: (person) => person.agency },
+        { label: "Aliases", value: (person) => (person.aliases || []).join("; ") },
         { label: "Categories", value: (person) => (person.categories || []).join("; ") },
         { label: "Entry", value: (person) => person.entry }
       ])
@@ -214,7 +216,7 @@ function setupEvents() {
 }
 
 function init() {
-  nodes.buildNote.textContent = `${plural(persons.length, "entry", "entries")} from ${personsData.source?.title || "the local authority list"}, scoped to Bush administration principals and South Asia-facing U.S. officials.`;
+  nodes.buildNote.textContent = `${plural(persons.length, "entry", "entries")} from ${personsData.source?.title || "the local authority list"} and the confirmed chronology participant audit. Scope: ${personsData.scope || "South Asia compiler authority."}`;
   addOptions(nodes.agencyFilter, uniqueSorted(persons.map((person) => person.agency)), "All agencies");
   addOptions(nodes.categoryFilter, uniqueSorted(persons.flatMap((person) => person.categories || [])), "All scopes");
   renderStats();

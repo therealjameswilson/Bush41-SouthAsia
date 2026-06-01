@@ -1103,8 +1103,14 @@ function personsAuthorityRows(confirmed, personsData) {
       notes: "Present in the local authority list but not named in confirmed record participant metadata."
     }));
 
+  const rowTypeRank = {
+    "Chronology participant": 0,
+    "Institutional participant": 1,
+    "Authority context entry": 2
+  };
+
   return [...participantRows, ...contextRows].sort((a, b) =>
-    a.rowType.localeCompare(b.rowType) ||
+    (rowTypeRank[a.rowType] ?? 9) - (rowTypeRank[b.rowType] ?? 9) ||
     a.authorityStatus.localeCompare(b.authorityStatus) ||
     String(a.participant || a.authorityName).localeCompare(String(b.participant || b.authorityName))
   );

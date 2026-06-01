@@ -5,6 +5,13 @@ window.PERSONS_DATA = {
     "kind": "local authority file",
     "path": "~/Library/Mobile Documents/com~apple~CloudDocs/Bush Comprehensive Names List.docx"
   },
+  "additionalSources": [
+    {
+      "title": "Confirmed chronology participant metadata",
+      "kind": "local compiler audit",
+      "path": "data/memcons.json"
+    }
+  ],
   "scope": "Bush administration officials, U.S. South Asia-facing personnel, and foreign principals who appear in the confirmed Bush 41 South Asia chronology.",
   "persons": [
     {

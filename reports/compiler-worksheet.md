@@ -1,6 +1,6 @@
 # FRUS South Asia Compiler Worksheet
 
-Generated: 2026-06-01T15:06:58.441Z
+Generated: 2026-06-01T15:16:25.552Z
 
 ## Working Set
 
@@ -58,6 +58,7 @@ Generated: 2026-06-01T15:06:58.441Z
 - `compiler-confirmed-records.csv`: confirmed chronology with source notes, URLs, Daily Diary references, and next action.
 - `compiler-potential-documents.csv`: source-sweep candidates sorted by priority and promotion value.
 - `compiler-gap-queue.csv`: open compiler gaps, pull-list IDs, and first actions.
+- `compiler-decision-log.csv`: blank Select / Exclude / Defer / Cite only / Resolved tracker across confirmed records, potential leads, and gap lanes.
 - `compiler-priority-dossiers.md`: compact first-pass dossiers for the highest-priority gap lanes.
 - `compiler-dossiers/index.md`: one Markdown dossier per confirmed record, organized by chapter.
 

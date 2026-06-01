@@ -14,6 +14,7 @@ const paths = {
   confirmedCsv: path.join(reportsDir, "compiler-confirmed-records.csv"),
   potentialCsv: path.join(reportsDir, "compiler-potential-documents.csv"),
   gapsCsv: path.join(reportsDir, "compiler-gap-queue.csv"),
+  decisionLogCsv: path.join(reportsDir, "compiler-decision-log.csv"),
   priorityPack: path.join(reportsDir, "compiler-priority-dossiers.md"),
   dossiersDir: path.join(reportsDir, "compiler-dossiers"),
   dossiersIndex: path.join(reportsDir, "compiler-dossiers", "index.md")
@@ -182,6 +183,7 @@ function potentialRows(candidates) {
         String(a.title || "").localeCompare(String(b.title || ""))
     )
     .map((candidate) => ({
+      id: candidate.id,
       priorityTier: candidate.priorityTier,
       priorityScore: candidate.priorityScore,
       reviewLane: candidate.reviewLane || candidate.chapter?.name,
@@ -210,6 +212,7 @@ function gapRows(gaps) {
   return [...gaps]
     .sort((a, b) => priorityRank(a.priority) - priorityRank(b.priority) || String(a.title).localeCompare(String(b.title)))
     .map((gap) => ({
+      id: gap.id,
       priority: gap.priority,
       status: gap.status,
       lane: gap.lane,
@@ -220,6 +223,77 @@ function gapRows(gaps) {
       targetTerms: gap.targetTerms || [],
       sourcePools: gap.sourcePools || []
     }));
+}
+
+function decisionRows(confirmed, potentialQueue, gapQueue) {
+  const emptyDecision = {
+    decision: "",
+    decisionDate: "",
+    owner: "",
+    rationale: "",
+    followUp: ""
+  };
+
+  return [
+    ...confirmed.map((row) => ({
+      ...emptyDecision,
+      itemType: "Confirmed record",
+      itemId: row.id,
+      compilerNumber: row.compilerNumber,
+      priority: row.queue,
+      chapterOrLane: row.chapter,
+      date: row.date,
+      title: row.title,
+      status: row.releaseStatus,
+      pages: row.pageCount ? pageLabel(row.pageCount) : "",
+      naidOrTargets: compactList([row.naid, row.localIdentifier]).join("; "),
+      sourceLocator: compactList([
+        row.source,
+        row.sourcePages ? `source pages ${row.sourcePages}` : "",
+        row.objectFilename
+      ]).join(" | "),
+      nextAction: row.nextAction,
+      sourceNote: row.sourceNote,
+      catalogUrl: row.catalogUrl,
+      pdfUrl: row.pdfUrl
+    })),
+    ...potentialQueue.map((row) => ({
+      ...emptyDecision,
+      itemType: "Potential lead",
+      itemId: row.id,
+      compilerNumber: "",
+      priority: compactList([row.priorityTier, row.priorityScore ? `score ${row.priorityScore}` : ""]).join("; "),
+      chapterOrLane: row.reviewLane,
+      date: row.date,
+      title: row.title,
+      status: compactList([row.disposition, row.status]).join("; "),
+      pages: "",
+      naidOrTargets: row.naid || "",
+      sourceLocator: compactList([row.source, row.objectFilename]).join(" | "),
+      nextAction: row.action,
+      sourceNote: row.sourceNote,
+      catalogUrl: row.catalogUrl,
+      pdfUrl: row.pdfUrl
+    })),
+    ...gapQueue.map((row) => ({
+      ...emptyDecision,
+      itemType: "Compiler gap",
+      itemId: row.id,
+      compilerNumber: "",
+      priority: row.priority,
+      chapterOrLane: row.lane,
+      date: "",
+      title: row.title,
+      status: row.status,
+      pages: "",
+      naidOrTargets: compactList(row.targetRecords).join("; "),
+      sourceLocator: compactList(row.sourcePools).join("; "),
+      nextAction: row.firstAction,
+      sourceNote: row.needed,
+      catalogUrl: "",
+      pdfUrl: ""
+    }))
+  ];
 }
 
 function countBy(items, getKey) {
@@ -593,6 +667,7 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     "- `compiler-confirmed-records.csv`: confirmed chronology with source notes, URLs, Daily Diary references, and next action.",
     "- `compiler-potential-documents.csv`: source-sweep candidates sorted by priority and promotion value.",
     "- `compiler-gap-queue.csv`: open compiler gaps, pull-list IDs, and first actions.",
+    "- `compiler-decision-log.csv`: blank Select / Exclude / Defer / Cite only / Resolved tracker across confirmed records, potential leads, and gap lanes.",
     "- `compiler-priority-dossiers.md`: compact first-pass dossiers for the highest-priority gap lanes.",
     "- `compiler-dossiers/index.md`: one Markdown dossier per confirmed record, organized by chapter.",
     "",
@@ -610,6 +685,7 @@ function main() {
   const confirmed = confirmedRows(records);
   const potentialQueue = potentialRows(potential);
   const gapQueue = gapRows(gaps);
+  const decisions = decisionRows(confirmed, potentialQueue, gapQueue);
 
   writeCsv(paths.confirmedCsv, [
     { key: "id", label: "Record ID" },
@@ -679,11 +755,34 @@ function main() {
     { key: "sourcePools", label: "Source pools" }
   ], gapQueue);
 
+  writeCsv(paths.decisionLogCsv, [
+    { key: "itemType", label: "Item type" },
+    { key: "decision", label: "Decision (Select / Exclude / Defer / Cite only / Resolved)" },
+    { key: "decisionDate", label: "Decision date" },
+    { key: "owner", label: "Owner" },
+    { key: "rationale", label: "Decision rationale" },
+    { key: "followUp", label: "Follow-up" },
+    { key: "itemId", label: "Item ID" },
+    { key: "compilerNumber", label: "Compiler #" },
+    { key: "priority", label: "Priority or queue" },
+    { key: "chapterOrLane", label: "Chapter or lane" },
+    { key: "date", label: "Date" },
+    { key: "title", label: "Title" },
+    { key: "status", label: "Status" },
+    { key: "pages", label: "Pages" },
+    { key: "naidOrTargets", label: "NAID or target records" },
+    { key: "sourceLocator", label: "Source locator" },
+    { key: "nextAction", label: "Next action" },
+    { key: "sourceNote", label: "Source note or need" },
+    { key: "catalogUrl", label: "Catalog URL" },
+    { key: "pdfUrl", label: "PDF URL" }
+  ], decisions);
+
   writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue);
   writePriorityPack(gaps, confirmed, potentialQueue);
   writeDossiers(confirmed);
 
-  console.log(`Wrote compiler worksheet, CSVs, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
+  console.log(`Wrote compiler worksheet, CSVs, decision log, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
 }
 
 main();

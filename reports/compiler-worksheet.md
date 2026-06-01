@@ -1,6 +1,6 @@
 # FRUS South Asia Compiler Worksheet
 
-Generated: 2026-06-01T15:36:56.885Z
+Generated: 2026-06-01T15:50:42.480Z
 
 ## Working Set
 
@@ -21,6 +21,12 @@ Generated: 2026-06-01T15:36:56.885Z
 | Afghanistan | 21 |
 | India | 10 |
 | Regional | 6 |
+
+## Chapter Research Matrix
+
+- Thematic lanes tracked: 9
+- Lanes needing promotion, access, or source-expansion decisions: 9
+- Itemized matrix: `compiler-chapter-matrix.md` and `compiler-chapter-matrix.csv`
 
 ## Source-Note Risk Counts
 
@@ -71,6 +77,7 @@ Generated: 2026-06-01T15:36:56.885Z
 - `compiler-potential-documents.csv`: source-sweep candidates sorted by priority and promotion value.
 - `compiler-gap-queue.csv`: open compiler gaps, pull-list IDs, and first actions.
 - `compiler-decision-log.csv`: blank Select / Exclude / Defer / Cite only / Resolved tracker across confirmed records, potential leads, and gap lanes.
+- `compiler-chapter-matrix.md` and `compiler-chapter-matrix.csv`: chapter-by-theme research matrix with coverage status, leads, gaps, and next actions.
 - `compiler-source-note-audit.md` and `compiler-source-note-audit.csv`: itemized FRUS-style source-note review lanes.
 - `compiler-access-review.md` and `compiler-access-review.csv`: access-status, partial-release, declassification, and potential-lead promotion ledger.
 - `compiler-priority-dossiers.md`: compact first-pass dossiers for the highest-priority gap lanes.

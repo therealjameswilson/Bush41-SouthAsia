@@ -6,6 +6,63 @@ const reportsDir = path.join(repoRoot, "reports");
 
 const CHAPTER_ORDER = ["Afghanistan", "Pakistan", "India", "Regional"];
 
+const CHAPTER_LANES = [
+  {
+    chapter: "Afghanistan",
+    lane: "Afghanistan policy, civil war, and aid",
+    terms: ["afghanistan", "afghan", "mujahideen", "mojaddedi", "non-lethal", "humanitarian", "resistance", "kabul"],
+    nextAction: "Finish page-boundary screening in Haass and Cheney files, then decide which restricted NSC/H-Files records become selected documents or cite-only context."
+  },
+  {
+    chapter: "Pakistan",
+    lane: "Pakistan nuclear, sanctions, and security",
+    terms: ["nuclear", "nonproliferation", "proliferation", "pressler", "f-16", "stinger", "sanctions"],
+    nextAction: "Pair the restricted H-Files nuclear sequence with Gates, Cheney, and Haass companion files before treating the 1990 policy arc as complete."
+  },
+  {
+    chapter: "Pakistan",
+    lane: "Pakistan leadership, aid, and bilateral management",
+    terms: ["pakistan", "bhutto", "nawaz", "sharif", "ghulam", "disaster", "assistance", "aid"],
+    nextAction: "Separate policy-bearing presidential conversations from public/context locators and verify source notes against the PDF or citation sheet."
+  },
+  {
+    chapter: "India",
+    lane: "India Kashmir, nuclear, and regional security",
+    terms: ["kashmir", "nuclear", "nonproliferation", "defense"],
+    nextAction: "Screen Kashmir, Gates, and Haass leads so the India chapter is not limited to leader calls and Cheney country folders."
+  },
+  {
+    chapter: "India",
+    lane: "India leadership and bilateral policy",
+    terms: ["india", "gandhi", "singh", "rao", "venkataraman", "shankar", "pickering", "new delhi"],
+    nextAction: "Build staff-file support for the leadership chronology, especially around the 1991-1992 transition to Rao-era policy."
+  },
+  {
+    chapter: "India",
+    lane: "India economic reform, trade, and embassy files",
+    terms: ["economic reform", "trade", "economic", "embassy", "commerce"],
+    nextAction: "Use this as a search lane for WHORM, State, and embassy files; do not close the India chapter until this lane has been consciously ruled in or out."
+  },
+  {
+    chapter: "Regional",
+    lane: "Kashmir cross-border crisis",
+    terms: ["kashmir"],
+    nextAction: "Screen the Kashmir letters and teleconference leads, then decide whether the material belongs in India, Pakistan, or a regional crisis sub-lane."
+  },
+  {
+    chapter: "Regional",
+    lane: "Bangladesh and smaller South Asia states",
+    terms: ["bangladesh", "zia", "khaleda", "milam", "sri lanka", "maldives"],
+    nextAction: "Resolve the Bangladesh Zia internal/public pair and keep Sri Lanka/Maldives public items contextual until internal files are located."
+  },
+  {
+    chapter: "Regional",
+    lane: "Regional South Asia strategy",
+    terms: ["south asia", "regional", "refugee"],
+    nextAction: "Keep true regionwide strategy files distinct from Kashmir and Bangladesh so selection rationale stays clear."
+  }
+];
+
 const paths = {
   records: path.join(repoRoot, "data", "memcons.json"),
   potential: path.join(repoRoot, "data", "potential-documents.json"),
@@ -19,6 +76,8 @@ const paths = {
   sourceNoteAudit: path.join(reportsDir, "compiler-source-note-audit.md"),
   accessReviewCsv: path.join(reportsDir, "compiler-access-review.csv"),
   accessReview: path.join(reportsDir, "compiler-access-review.md"),
+  chapterMatrixCsv: path.join(reportsDir, "compiler-chapter-matrix.csv"),
+  chapterMatrix: path.join(reportsDir, "compiler-chapter-matrix.md"),
   priorityPack: path.join(reportsDir, "compiler-priority-dossiers.md"),
   dossiersDir: path.join(reportsDir, "compiler-dossiers"),
   dossiersIndex: path.join(reportsDir, "compiler-dossiers", "index.md")
@@ -619,6 +678,237 @@ function writeAccessReview(rows) {
   fs.writeFileSync(paths.accessReview, `${lines.join("\n").trim()}\n`);
 }
 
+function normalizedChapter(row) {
+  const raw = row.chapter || row.reviewLane || row.chapterOrLane || "";
+  const chapter = String(raw).split(":")[0].trim();
+  return CHAPTER_ORDER.includes(chapter) ? chapter : "Regional";
+}
+
+function rowSearchText(row) {
+  return plainText([
+    row.chapter,
+    row.reviewLane,
+    row.title,
+    row.type,
+    row.sourceFamily,
+    row.topics,
+    row.matchedQueries,
+    row.countries,
+    row.participants
+  ]);
+}
+
+function laneMatchesText(lane, text) {
+  return lane.terms.some((term) => text.includes(String(term).toLowerCase()));
+}
+
+function fallbackLane(chapter) {
+  return {
+    chapter,
+    lane: `${chapter} other or unsorted`,
+    terms: [chapter],
+    nextAction: "Review manually and either assign to a thematic lane or record the exclusion rationale."
+  };
+}
+
+function laneForRow(row) {
+  const chapter = normalizedChapter(row);
+  const text = rowSearchText(row);
+  return CHAPTER_LANES.find((lane) => lane.chapter === chapter && laneMatchesText(lane, text)) || fallbackLane(chapter);
+}
+
+function laneKey(lane) {
+  return `${lane.chapter}|||${lane.lane}`;
+}
+
+function dateSpan(rows) {
+  const dates = uniqueInOrder(rows.map((row) => row.date).filter(Boolean)).sort();
+  if (!dates.length) return "";
+  return dates[0] === dates[dates.length - 1] ? dates[0] : `${dates[0]} to ${dates[dates.length - 1]}`;
+}
+
+function relatedGapsForLane(lane, confirmed, potential, gapQueue) {
+  return gapQueue.filter((gap) => {
+    const gapText = plainText([gap.lane, gap.title, gap.needed, gap.firstAction, gap.targetTerms, gap.sourcePools]);
+    return (
+      gap.lane === lane.chapter ||
+      lane.terms.some((term) => gapText.includes(String(term).toLowerCase())) ||
+      confirmed.some((row) => hasTargetRecord(row, gap)) ||
+      potential.some((row) => hasTargetRecord(row, gap))
+    );
+  });
+}
+
+function matrixStatus(bucket) {
+  const confirmedCount = bucket.confirmed.length;
+  const potentialCount = bucket.potential.length;
+  const restrictedCount = bucket.confirmed.filter((row) => isRestrictedStatus(row.releaseStatus)).length;
+  const highPotential = bucket.potential.filter((row) => ["Critical", "High"].includes(row.priorityTier)).length;
+  const openHighGaps = bucket.gaps.filter((gap) => ["Critical", "High"].includes(gap.priority) && !/resolved/i.test(gap.status || "")).length;
+
+  if (!confirmedCount && !potentialCount) return "Missing lane";
+  if (!confirmedCount && potentialCount) return "Lead-only lane";
+  if (confirmedCount < 3 && highPotential) return "Thin; promote or exclude leads";
+  if (restrictedCount && restrictedCount >= Math.ceil(confirmedCount * 0.7)) return "Access-heavy";
+  if (openHighGaps) return "Gap-linked review";
+  return "Usable first pass";
+}
+
+function itemLabel(row) {
+  return compactList([
+    row.compilerNumber ? `Doc ${row.compilerNumber}` : row.priorityTier,
+    row.title,
+    row.naid ? `NAID ${row.naid}` : row.localIdentifier
+  ]).join(": ");
+}
+
+function matrixSourceLabel(row) {
+  if (row.sourceFamily) return row.sourceFamily;
+  const parts = String(row.source || "").split("|").map((part) => part.trim()).filter(Boolean);
+  return parts[1] || parts[0] || "";
+}
+
+function compactItems(rows, limit) {
+  const shown = rows.slice(0, limit).map(itemLabel);
+  if (rows.length > limit) shown.push(`+${rows.length - limit} more`);
+  return shown.join("; ");
+}
+
+function chapterMatrixRows(confirmed, potentialQueue, gapQueue) {
+  const buckets = new Map();
+
+  const ensureBucket = (lane) => {
+    const key = laneKey(lane);
+    if (!buckets.has(key)) {
+      buckets.set(key, {
+        ...lane,
+        confirmed: [],
+        potential: [],
+        gaps: []
+      });
+    }
+    return buckets.get(key);
+  };
+
+  CHAPTER_LANES.forEach(ensureBucket);
+
+  for (const row of confirmed) {
+    ensureBucket(laneForRow(row)).confirmed.push(row);
+  }
+  for (const row of potentialQueue) {
+    ensureBucket(laneForRow(row)).potential.push(row);
+  }
+
+  for (const bucket of buckets.values()) {
+    bucket.confirmed.sort(byDateThenChapter);
+    bucket.potential.sort(
+      (a, b) =>
+        priorityRank(a.priorityTier) - priorityRank(b.priorityTier) ||
+        b.priorityScore - a.priorityScore ||
+        String(a.date || "").localeCompare(String(b.date || ""))
+    );
+    bucket.gaps = relatedGapsForLane(bucket, bucket.confirmed, bucket.potential, gapQueue);
+  }
+
+  return [...buckets.values()]
+    .map((bucket) => {
+      const released = bucket.confirmed.filter((row) => row.queue === "Released chronology").length;
+      const restricted = bucket.confirmed.filter((row) => isRestrictedStatus(row.releaseStatus)).length;
+      const partial = bucket.confirmed.filter((row) => /partial/i.test(row.releaseStatus || "")).length;
+      const pages = bucket.confirmed.reduce((sum, row) => sum + (Number(row.pageCount) || 0), 0);
+      const criticalLeads = bucket.potential.filter((row) => row.priorityTier === "Critical").length;
+      const highLeads = bucket.potential.filter((row) => ["Critical", "High"].includes(row.priorityTier)).length;
+      const publicContextLeads = bucket.potential.filter((row) => /public|context/i.test(`${row.status} ${row.disposition}`)).length;
+      const topGap = bucket.gaps[0];
+
+      return {
+        chapter: bucket.chapter,
+        lane: bucket.lane,
+        coverageStatus: matrixStatus(bucket),
+        confirmedCount: bucket.confirmed.length,
+        releasedCount: released,
+        restrictedCount: restricted,
+        partialCount: partial,
+        confirmedPages: pages ? pageLabel(pages) : "",
+        potentialLeadCount: bucket.potential.length,
+        highPriorityLeadCount: highLeads,
+        criticalLeadCount: criticalLeads,
+        publicContextLeadCount: publicContextLeads,
+        dateSpan: dateSpan([...bucket.confirmed, ...bucket.potential]),
+        relatedGapCount: bucket.gaps.length,
+        relatedGaps: bucket.gaps.map((gap) => `${gap.priority}: ${gap.title}`),
+        searchTerms: bucket.terms.join("; "),
+        sourcePools: uniqueInOrder([
+          ...bucket.confirmed.map(matrixSourceLabel),
+          ...bucket.potential.map(matrixSourceLabel)
+        ]).slice(0, 8),
+        representativeConfirmed: compactItems(bucket.confirmed, 4),
+        priorityLeads: compactItems(bucket.potential, 5),
+        nextAction: compactList([
+          bucket.nextAction,
+          topGap?.firstAction ? `Gap cue: ${topGap.firstAction}` : ""
+        ]).join(" ")
+      };
+    })
+    .sort(
+      (a, b) =>
+        CHAPTER_ORDER.indexOf(a.chapter) - CHAPTER_ORDER.indexOf(b.chapter) ||
+        a.lane.localeCompare(b.lane)
+    );
+}
+
+function writeChapterMatrix(rows) {
+  const statusCounts = countBy(rows, (row) => row.coverageStatus).map(([status, count]) => [status, count]);
+  const summaryRows = rows.map((row) => [
+    row.chapter,
+    row.lane,
+    row.coverageStatus,
+    row.confirmedCount,
+    row.potentialLeadCount,
+    row.relatedGapCount,
+    mdEscape(row.nextAction)
+  ]);
+
+  const lines = [
+    "# FRUS South Asia Chapter Research Matrix",
+    "",
+    `Generated: ${new Date().toISOString()}`,
+    "",
+    "This matrix turns the chronology, potential-source queue, and compiler gaps into chapter-level research lanes. It is a selection aid, not final editorial numbering: use it to see where the chapter is strong, where the source base is access-heavy, and where leads need promotion or exclusion decisions.",
+    "",
+    "## Coverage Status Counts",
+    "",
+    markdownTable(["Status", "Lanes"], statusCounts),
+    "",
+    "## Lane Summary",
+    "",
+    markdownTable(["Chapter", "Lane", "Status", "Confirmed", "Leads", "Gaps", "Next action"], summaryRows),
+    "",
+    "## Lane Details",
+    ""
+  ];
+
+  for (const row of rows) {
+    lines.push(
+      `### ${row.chapter}: ${row.lane}`,
+      "",
+      `- Status: ${row.coverageStatus}`,
+      `- Date span: ${row.dateSpan || "No dated item yet"}`,
+      `- Confirmed chronology: ${row.confirmedCount} records; ${row.releasedCount} released/declassified/partial; ${row.restrictedCount} restricted or possibly restricted; ${row.confirmedPages || "no measured pages"}`,
+      `- Potential queue: ${row.potentialLeadCount} leads; ${row.highPriorityLeadCount} high/critical; ${row.criticalLeadCount} critical; ${row.publicContextLeadCount} public/context`,
+      `- Related gaps: ${row.relatedGaps.length ? row.relatedGaps.join("; ") : "None matched"}`,
+      `- Search terms: ${row.searchTerms}`,
+      `- Source pools: ${row.sourcePools.join("; ") || "None recorded"}`,
+      `- Representative confirmed records: ${row.representativeConfirmed || "None yet"}`,
+      `- Priority leads: ${row.priorityLeads || "None yet"}`,
+      `- Next action: ${row.nextAction}`,
+      ""
+    );
+  }
+
+  fs.writeFileSync(paths.chapterMatrix, `${lines.join("\n").trim()}\n`);
+}
+
 function slug(value) {
   return String(value || "")
     .toLowerCase()
@@ -906,7 +1196,7 @@ function writePriorityPack(gaps, confirmed, potentialQueue) {
   fs.writeFileSync(paths.priorityPack, `${lines.join("\n").trim()}\n`);
 }
 
-function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, accessReview) {
+function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, accessReview, chapterMatrix) {
   const released = confirmed.filter((row) => row.queue === "Released chronology").length;
   const review = confirmed.length - released;
   const sourceNotes = confirmed.filter((row) => row.sourceNote).length;
@@ -916,6 +1206,7 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
   const sourceNoteQueue = sourceAudit.filter((row) => row.editorialLane !== "Ready source-note check").length;
   const confirmedAccessReview = accessReview.filter((row) => row.itemType === "Confirmed record").length;
   const potentialAccessReview = accessReview.filter((row) => row.itemType === "Potential lead").length;
+  const matrixOpenLanes = chapterMatrix.filter((row) => !/^Usable first pass$/i.test(row.coverageStatus)).length;
   const riskCounts = countBy(
     confirmed.flatMap((row) => row.compilerRisks.length ? row.compilerRisks : ["No flagged risk"]),
     (risk) => risk
@@ -949,6 +1240,12 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     "",
     markdownTable(["Chapter", "Records"], chapterCounts),
     "",
+    "## Chapter Research Matrix",
+    "",
+    `- Thematic lanes tracked: ${chapterMatrix.length}`,
+    `- Lanes needing promotion, access, or source-expansion decisions: ${matrixOpenLanes}`,
+    `- Itemized matrix: \`compiler-chapter-matrix.md\` and \`compiler-chapter-matrix.csv\``,
+    "",
     "## Source-Note Risk Counts",
     "",
     markdownTable(["Risk", "Records"], riskCounts),
@@ -979,6 +1276,7 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     "- `compiler-potential-documents.csv`: source-sweep candidates sorted by priority and promotion value.",
     "- `compiler-gap-queue.csv`: open compiler gaps, pull-list IDs, and first actions.",
     "- `compiler-decision-log.csv`: blank Select / Exclude / Defer / Cite only / Resolved tracker across confirmed records, potential leads, and gap lanes.",
+    "- `compiler-chapter-matrix.md` and `compiler-chapter-matrix.csv`: chapter-by-theme research matrix with coverage status, leads, gaps, and next actions.",
     "- `compiler-source-note-audit.md` and `compiler-source-note-audit.csv`: itemized FRUS-style source-note review lanes.",
     "- `compiler-access-review.md` and `compiler-access-review.csv`: access-status, partial-release, declassification, and potential-lead promotion ledger.",
     "- `compiler-priority-dossiers.md`: compact first-pass dossiers for the highest-priority gap lanes.",
@@ -1001,6 +1299,7 @@ function main() {
   const decisions = decisionRows(confirmed, potentialQueue, gapQueue);
   const sourceAudit = sourceNoteAuditRows(confirmed, potentialQueue);
   const accessReview = accessReviewRows(confirmed, potentialQueue);
+  const chapterMatrix = chapterMatrixRows(confirmed, potentialQueue, gapQueue);
 
   writeCsv(paths.confirmedCsv, [
     { key: "id", label: "Record ID" },
@@ -1135,13 +1434,37 @@ function main() {
     { key: "pdfUrl", label: "PDF URL" }
   ], accessReview);
 
-  writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, accessReview);
+  writeCsv(paths.chapterMatrixCsv, [
+    { key: "chapter", label: "Chapter" },
+    { key: "lane", label: "Research lane" },
+    { key: "coverageStatus", label: "Coverage status" },
+    { key: "confirmedCount", label: "Confirmed records" },
+    { key: "releasedCount", label: "Released/declassified/partial records" },
+    { key: "restrictedCount", label: "Restricted/possibly restricted records" },
+    { key: "partialCount", label: "Partial-release records" },
+    { key: "confirmedPages", label: "Confirmed pages" },
+    { key: "potentialLeadCount", label: "Potential leads" },
+    { key: "highPriorityLeadCount", label: "High/critical leads" },
+    { key: "criticalLeadCount", label: "Critical leads" },
+    { key: "publicContextLeadCount", label: "Public/context leads" },
+    { key: "dateSpan", label: "Date span" },
+    { key: "relatedGapCount", label: "Related gap count" },
+    { key: "relatedGaps", label: "Related gaps" },
+    { key: "searchTerms", label: "Search terms" },
+    { key: "sourcePools", label: "Source pools" },
+    { key: "representativeConfirmed", label: "Representative confirmed records" },
+    { key: "priorityLeads", label: "Priority leads" },
+    { key: "nextAction", label: "Next action" }
+  ], chapterMatrix);
+
+  writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, accessReview, chapterMatrix);
   writeSourceNoteAudit(sourceAudit, confirmed, potentialQueue);
   writeAccessReview(accessReview);
+  writeChapterMatrix(chapterMatrix);
   writePriorityPack(gaps, confirmed, potentialQueue);
   writeDossiers(confirmed);
 
-  console.log(`Wrote compiler worksheet, CSVs, decision log, source-note audit, access review, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
+  console.log(`Wrote compiler worksheet, CSVs, decision log, source-note audit, access review, chapter matrix, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
 }
 
 main();

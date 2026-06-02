@@ -192,6 +192,8 @@ async function downloadFile(url, outputPath) {
       "curl",
       [
         "-L",
+        "--silent",
+        "--show-error",
         "--fail",
         "--retry",
         "4",

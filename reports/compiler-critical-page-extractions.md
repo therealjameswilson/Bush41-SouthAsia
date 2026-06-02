@@ -1,33 +1,33 @@
 # FRUS South Asia Critical Page Extraction Notes
 
-Generated: 2026-06-02T10:43:18.702Z
+Generated: 2026-06-02T11:21:24.998Z
 
 Scope: first 11 Critical items from `compiler-page-boundary-queue.csv`. These notes are page-finding aids, not final editorial selections.
 
 ## Coverage
 
 - Critical PDFs processed: 11
-- Automatic OCR page threshold: 65 pages
-- PDFs OCRed in this pass: 8
-- OCRed PDFs yielding released/searchable text: 7
+- Automatic OCR page threshold: 220 pages
+- PDFs OCRed in this pass: 11
+- OCRed PDFs yielding released/searchable text: 10
 - PDFs with withdrawal/redaction sheets but no released searchable text: 1
-- Larger PDFs left for OCR batch work: 3
-- PDFs with released/searchable text layers: 7
-- PDFs with administrative-marker-only text: 1
-- PDFs requiring OCR or manual image review: 4
+- Larger PDFs left for OCR batch work: 0
+- PDFs with released/searchable text layers: 10
+- PDFs with administrative-marker-only text: 0
+- PDFs requiring OCR or manual image review: 1
 - CSV companion: `compiler-critical-page-extractions.csv`
 
 ## First-Pass Pull List
 
 | Order | NAID | Lane | Title | Measured pages | Released/searchable text pages | Withdrawal/redaction pages | Admin-marker pages | OCR attempted | Candidate pages | Recommendation |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 470426597 | Afghanistan | Working Files - Afghanistan 1989-1992 [2] | 89 | 0 | 0 | 0 | No | Manual review | OCR/manual image review required before this PDF can support promotion or final page boundaries. |
+| 1 | 470426597 | Afghanistan | Working Files - Afghanistan 1989-1992 [2] | 89 | 68 | 20 | 0 | Yes | 4, 6, 11, 13, 47, 59 | OCR produced searchable text; screen pages 4, 6, 11, 13, 47, 59 for promotion and record selected/excluded page ranges. |
 | 2 | 470426255 | Afghanistan | Afghanistan - Charles | 47 | 43 | 0 | 1 | Yes | 9, 24, 28, 31, 34, 37 | OCR produced searchable text; screen pages 9, 24, 28, 31, 34, 37 for promotion and record selected/excluded page ranges. |
 | 3 | 470426381 | Afghanistan | Presidential Visit of President [of Afghanistan Interim Government Sibgahtullah] Mojaddedi - November 27, 1989 | 35 | 26 | 8 | 0 | Yes | 2, 8, 15, 17, 24, 27 | OCR produced searchable text; verify pages 1-35 against title, source note, and exclusion rationale. |
 | 4 | 470426231 | Pakistan | NSC/DC Meeting - July 16, 1990 Re: Pakistan Nuclear Program | 29 | 9 | 19 | 0 | Yes | 4-5, 7, 12, 24, 29 | OCR produced searchable text; verify pages 1-29 against title, source note, and exclusion rationale. |
-| 5 | 470426240 | Pakistan | NSC/DC Meeting - October 9, 1990 Re: Pakistan | 81 | 0 | 0 | 0 | No | Manual review | OCR/manual image review required before this PDF can support promotion or final page boundaries. |
+| 5 | 470426240 | Pakistan | NSC/DC Meeting - October 9, 1990 Re: Pakistan | 81 | 60 | 20 | 0 | Yes | 6-8, 24-26 | OCR produced searchable text; verify pages 1-81 against title, source note, and exclusion rationale. |
 | 6 | 645608041 | Regional | Bangladesh | 18 | 10 | 7 | 0 | Yes | 3, 9, 11, 13, 15, 17 | OCR produced searchable text; screen pages 3, 9, 11, 13, 15, 17 for promotion and record selected/excluded page ranges. |
-| 7 | 470426145 | Regional | Letters on Kashmir | 194 | 0 | 0 | 1 | No | Manual review | Only NARA administrative-marker text was extractable; inspect page images or OCR before promotion or final page boundaries. |
+| 7 | 470426145 | Regional | Letters on Kashmir | 194 | 189 | 0 | 1 | Yes | 12, 17, 27, 36, 83, 141 | OCR produced searchable text; screen pages 12, 17, 27, 36, 83, 141 for promotion and record selected/excluded page ranges. |
 | 8 | 470426225 | Regional | NSC/DC [Deputies Committee] Teleconference - March 26, 1990 Re: Kashmir | 9 | 0 | 8 | 0 | Yes | Manual review | OCR found withdrawal/redaction sheets but no released searchable text; use the sheets to document withheld or cite-only context before final selection. |
 | 9 | 470426266 | Regional | President's Meeting with Prime Minister Zia of Bangladesh - March 19, 1992 | 64 | 40 | 23 | 0 | Yes | 5, 9, 34, 36, 48, 53 | OCR produced searchable text; screen pages 5, 9, 34, 36, 48, 53 for promotion and record selected/excluded page ranges. |
 | 10 | 470426238 | Pakistan | NSC/DC [Deputies Committee] Meeting - October 4, 1990 Re: Pakistan | 8 | 1 | 6 | 0 | Yes | 8 | OCR produced searchable text; verify pages 1-8 against title, source note, and exclusion rationale. |
@@ -41,20 +41,25 @@ Scope: first 11 Critical items from `compiler-page-boundary-queue.csv`. These no
 - Lane: Afghanistan
 - Item type: Potential lead
 - Measured pages: 89
-- Released/searchable text pages: 0
-- Withdrawal/redaction pages: 0
+- Released/searchable text pages: 68
+- Withdrawal/redaction pages: 20 (15-20, 23-24, 51, 60-63, 66-68, 82-83, 85-86)
 - Administrative-marker pages: 0
-- OCR attempted: No
+- OCR attempted: Yes
 
-- Extraction status: OCR/manual review needed
-- Candidate pages: Manual review required
-- Recommendation: OCR/manual image review required before this PDF can support promotion or final page boundaries.
+- Extraction status: OCR sidecar extracted
+- Candidate pages: 4, 6, 11, 13, 47, 59
+- Recommendation: OCR produced searchable text; screen pages 4, 6, 11, 13, 47, 59 for promotion and record selected/excluded page ranges.
 - Catalog: https://catalog.archives.gov/id/470426597
 - PDF: https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/working_2554877/41-bpr-nsc-haass_working-cf01304-011.pdf
 
 | Page | Source | Score | Hit terms | Short page cue |
 | --- | --- | ---: | --- | --- |
-| Manual | None | 0 | None extracted | OCR or manual page image review needed. |
+| 4 | OCR sidecar | 87 | Afghanistan; Pakistan; Bangladesh; Sanctions; Security; Policy; Meeting; title:afghanistan | INFORMATION WASHINGTON ce co MEMORANDUM FOR THE PRESIDENT THAT RESGENT HAS SEE FROM: BRENT SCOWCROFT \| SUBJECT: Rethinking U.S. Policy Toward Afghanistan It is  |
+| 6 | OCR sidecar | 70 | Afghanistan; Pakistan; Security; Policy; Meeting; title:afghanistan | Government to install itself in-country and to develop a realistic blueprint for Afghanistan’s future, and resist any political settlement that did not exclude  |
+| 11 | OCR sidecar | 87 | Afghanistan; Pakistan; Bangladesh; Sanctions; Security; Policy; Meeting; title:afghanistan | INFORMATION matey hepa h PER E.O. 13526 MEMORANDUM FOR THE PRESIDENT Perel FROM: BRENT SCOWCROFT SUBJECT: Rethinking U.S. Policy Toward Afghanistan It is now ne |
+| 13 | OCR sidecar | 70 | Afghanistan; Pakistan; Security; Policy; Meeting; title:afghanistan | Government to install itself in-country and to develop a realistic blueprint for Afghanistan’s future, and resist any political settlement that did not exclude  |
+| 47 | OCR sidecar | 77 | Afghanistan; Pakistan; India; Bangladesh; Nuclear; Security; title:afghanistan | time to bring the Afghan resistance along, even with those iaeas that are very much in their interest. Some groups at hone could react badly were it to appear w |
+| 59 | OCR sidecar | 79 | Afghanistan; Pakistan; India; Nuclear; Security; Policy; title:afghanistan | SEGCREF NOFORN NOCONTRACT ORCON SPECAT KHYBER Technocrat Option. In its latest iteration, the technocrat plan would create an ‘interim government composed of re |
 
 ### 2. Afghanistan - Charles
 
@@ -140,20 +145,25 @@ Scope: first 11 Critical items from `compiler-page-boundary-queue.csv`. These no
 - Lane: Pakistan
 - Item type: Confirmed record
 - Measured pages: 81
-- Released/searchable text pages: 0
-- Withdrawal/redaction pages: 0
+- Released/searchable text pages: 60
+- Withdrawal/redaction pages: 20 (2-5, 10-12, 20-23, 33, 37, 46, 52-54, 57, 60, 71)
 - Administrative-marker pages: 0
-- OCR attempted: No
+- OCR attempted: Yes
 
-- Extraction status: OCR/manual review needed
-- Candidate pages: Manual review required
-- Recommendation: OCR/manual image review required before this PDF can support promotion or final page boundaries.
+- Extraction status: OCR sidecar extracted
+- Candidate pages: 6-8, 24-26
+- Recommendation: OCR produced searchable text; verify pages 1-81 against title, source note, and exclusion rationale.
 - Catalog: https://catalog.archives.gov/id/470426240
 - PDF: https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-029.pdf
 
 | Page | Source | Score | Hit terms | Short page cue |
 | --- | --- | ---: | --- | --- |
-| Manual | None | 0 | None extracted | OCR or manual page image review needed. |
+| 6 | OCR sidecar | 103 | Pakistan; India; Kashmir; Nuclear; Sanctions; Security; Policy; Meeting; title:october; title:pakistan | SECRER SS ESDEN Tig, 21126 with TOP—SEEREE/COBEW@SEONAL SECURITY COUNCIL Gs attachment WASHINGTON, D.C. 20606 = = 4 0% DE October 8, 1990 % ee INFORMATION woh W |
+| 7 | OCR sidecar | 97 | Pakistan; India; Nuclear; Sanctions; Security; Policy; Meeting; title:october; title:pakistan | with f6P—SREREE/ACODEWORD of success for a legislative option, to shift our fundamental strategy for dealing with Pakistan’s nuclear program from one of prevent |
+| 8 | OCR sidecar | 105 | Afghanistan; Pakistan; India; Nuclear; Sanctions; Security; Policy; Meeting; title:october; title:pakistan | with POR-SHECRETLEODEWORD cooperation among Pakistan, Iran, China and Saudi Arabia. In short, the potential risks would be considerable unless we remain Our pol |
+| 24 | OCR sidecar | 103 | Pakistan; India; Kashmir; Nuclear; Sanctions; Security; Policy; Meeting; title:october; title:pakistan | with TOP-SEERET/COBEY@RPONAL SECURITY COUNCIL “~ on attachment WASHINGTON, D.C. 20506 == LK ~ Ss October 8, 1990 * <5 es INFORMATION wh Wor MEMORANDUM FOR BRENT |
+| 25 | OCR sidecar | 97 | Pakistan; India; Nuclear; Sanctions; Security; Policy; Meeting; title:october; title:pakistan | with #@R—SHEREEACOBEHORD of success for a legislative option, to shift our fundamental strategy for dealing with Pakistan’s nuclear program from one of preventi |
+| 26 | OCR sidecar | 105 | Afghanistan; Pakistan; India; Nuclear; Sanctions; Security; Policy; Meeting; title:october; title:pakistan | with PQOR—-SHECRET/ACODEWORD— cooperation among Pakistan, Iran, China and Saudi Arabia. In short, the potential risks would be considerable unless we remain Our |
 
 ### 6. Bangladesh
 
@@ -187,20 +197,25 @@ Scope: first 11 Critical items from `compiler-page-boundary-queue.csv`. These no
 - Lane: Regional
 - Item type: Potential lead
 - Measured pages: 194
-- Released/searchable text pages: 0
+- Released/searchable text pages: 189
 - Withdrawal/redaction pages: 0
 - Administrative-marker pages: 1
-- OCR attempted: No
+- OCR attempted: Yes
 
-- Extraction status: Administrative marker only; OCR/manual review needed
-- Candidate pages: Manual review required
-- Recommendation: Only NARA administrative-marker text was extractable; inspect page images or OCR before promotion or final page boundaries.
+- Extraction status: OCR sidecar extracted
+- Candidate pages: 12, 17, 27, 36, 83, 141
+- Recommendation: OCR produced searchable text; screen pages 12, 17, 27, 36, 83, 141 for promotion and record selected/excluded page ranges.
 - Catalog: https://catalog.archives.gov/id/470426145
 - PDF: https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/correspondence_2554865/41-bpr-nsc-haass_correspondence-cf01479-008.pdf
 
 | Page | Source | Score | Hit terms | Short page cue |
 | --- | --- | ---: | --- | --- |
-| Manual | None | 0 | None extracted | OCR or manual page image review needed. |
+| 12 | OCR sidecar | 89 | Afghanistan; Pakistan; India; Kashmir; Security; Policy; Meeting; title:kashmir | May 21,1990 - S F UV Rafique A. Khan (Yor ni yce 1835 Apex Avenue (\ a J Los Angeles CA 90026 ~“ W9 x Honorable Richard Haas National Security Council ' United  |
+| 17 | OCR sidecar | 70 | Afghanistan; India; Kashmir; Security; Policy; title:kashmir | DR. & MRS. BOGDAN KOPANSKI 3013 Harrell #203, Grand Prairie, TX 75051 SENIOR DIRECTOR FOR NEAR EAST & SOUTH ASIA NATIONAL SECURITY COUNCIL may 19,90 I am deeply |
+| 27 | OCR sidecar | 72 | Pakistan; India; Kashmir; Security; Policy; Meeting; title:kashmir | a efoad at at 37 1 COUNCIL OF KHALISTAN "RECOGNIZE YE ALL THE HUMAN RACE AS ONE” Guru Gobind Singh, the tenth Master 2025 Eye Street, N.W. # 901 May 16, 1990 Wa |
+| 36 | OCR sidecar | 76 | Afghanistan; Pakistan; India; Kashmir; Security; Meeting; title:kashmir | Association of California Richard Haas Ref : KSHMR/ 90 Senior Director for Near East and South Asia Date:04/20/90 National Security Council, Executive Building, |
+| 83 | OCR sidecar | 77 | Afghanistan; Pakistan; India; Kashmir; Security; Meeting; title:kashmir | Senior Director for Near East & South Asia National Security Council Executive Building, White House 1600 Pennsylvania Ave., NW Washington DC 20500 I am deeply  |
+| 141 | OCR sidecar | 85 | Afghanistan; Pakistan; India; Kashmir; Security; Policy; Meeting; title:kashmir | Senior Director For Near And South Asia National Security Council Executive Building, White House 1600 Pennsylvania Ave. NW Washington DC 20500 I would to bring |
 
 ### 8. NSC/DC [Deputies Committee] Teleconference - March 26, 1990 Re: Kashmir
 

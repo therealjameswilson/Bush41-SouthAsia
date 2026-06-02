@@ -64,10 +64,10 @@ Version token for live links: `compiler-live-20260602`
 - Critical/high page-boundary items: 58
 - Potential leads in page-boundary screening: 26
 - Critical page-extraction PDFs processed: 11
-- Critical page-extraction PDFs OCRed in local pass: 8
-- Critical page-extraction PDFs with OCR text: 7
-- Critical page-extraction PDFs still requiring OCR or manual review: 4
-- Administrative-marker-only PDFs in critical extraction pass: 1
+- Critical page-extraction PDFs OCRed in local pass: 11
+- Critical page-extraction PDFs with OCR text: 10
+- Critical page-extraction PDFs still requiring OCR or manual review: 1
+- Administrative-marker-only PDFs in critical extraction pass: 0
 - Citation-sheet PDFs processed for source-note targets: 17
 - Citation markers extracted for source-note targets: 15
 - Citation-sheet first-page classifications extracted: 12
@@ -94,6 +94,24 @@ Version token for live links: `compiler-live-20260602`
 | High | Pair the Pakistan nuclear sequence with non-H-Files sources | Prioritize Gates Subject File 470437053 and Pakistan H-Files 470426231, 470426238, and 470426240. |
 | High | Screen Cheney Country Files before closing the source search | Review Afghanistan files 645607685, 645607321, and 645607323. |
 | High | Split the Regional lane into Kashmir, Bangladesh, and other South Asia tracks | Promote Kashmir leads 470426145 and 470426225 into a focused review queue. |
+
+## Critical Page Pulls
+
+Use this as the first manual page-boundary queue; it reflects the latest OCR pass and should be treated as a page-finding aid, not a final selection decision.
+
+| NAID | Lane | Title | Text pages | Candidate pages | Compiler action |
+| --- | --- | --- | --- | --- | --- |
+| 470426597 | Afghanistan | Working Files - Afghanistan 1989-1992 [2] | 68/89 | 4, 6, 11, 13, 47, 59 | OCR produced searchable text; screen pages 4, 6, 11, 13, 47, 59 for promotion and record selected/excluded page ranges. |
+| 470426255 | Afghanistan | Afghanistan - Charles | 43/47 | 9, 24, 28, 31, 34, 37 | OCR produced searchable text; screen pages 9, 24, 28, 31, 34, 37 for promotion and record selected/excluded page ranges. |
+| 470426381 | Afghanistan | Presidential Visit of President [of Afghanistan Interim Government Sibgahtullah] Mojaddedi - November 27, 1989 | 26/35 | 2, 8, 15, 17, 24, 27 | OCR produced searchable text; verify pages 1-35 against title, source note, and exclusion rationale. |
+| 470426231 | Pakistan | NSC/DC Meeting - July 16, 1990 Re: Pakistan Nuclear Program | 9/29 | 4-5, 7, 12, 24, 29 | OCR produced searchable text; verify pages 1-29 against title, source note, and exclusion rationale. |
+| 470426240 | Pakistan | NSC/DC Meeting - October 9, 1990 Re: Pakistan | 60/81 | 6-8, 24-26 | OCR produced searchable text; verify pages 1-81 against title, source note, and exclusion rationale. |
+| 645608041 | Regional | Bangladesh | 10/18 | 3, 9, 11, 13, 15, 17 | OCR produced searchable text; screen pages 3, 9, 11, 13, 15, 17 for promotion and record selected/excluded page ranges. |
+| 470426145 | Regional | Letters on Kashmir | 189/194 | 12, 17, 27, 36, 83, 141 | OCR produced searchable text; screen pages 12, 17, 27, 36, 83, 141 for promotion and record selected/excluded page ranges. |
+| 470426225 | Regional | NSC/DC [Deputies Committee] Teleconference - March 26, 1990 Re: Kashmir | 0/9 | Manual/cite-only review | OCR found withdrawal/redaction sheets but no released searchable text; use the sheets to document withheld or cite-only context before final selection. |
+| 470426266 | Regional | President's Meeting with Prime Minister Zia of Bangladesh - March 19, 1992 | 40/64 | 5, 9, 34, 36, 48, 53 | OCR produced searchable text; screen pages 5, 9, 34, 36, 48, 53 for promotion and record selected/excluded page ranges. |
+| 470426238 | Pakistan | NSC/DC [Deputies Committee] Meeting - October 4, 1990 Re: Pakistan | 1/8 | 8 | OCR produced searchable text; verify pages 1-8 against title, source note, and exclusion rationale. |
+| 428082145 | Regional | Memorandum of Conversation | 5/6 | 1-5 | OCR produced searchable text; verify pages 1-6 against title, source note, and exclusion rationale. |
 
 ## Refresh Commands
 

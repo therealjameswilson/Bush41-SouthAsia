@@ -166,6 +166,17 @@ function main() {
     })
     .slice(0, 5)
     .map((gap) => [gap.priority, gap.title, firstAction(gap)]);
+  const criticalPagePulls = criticalPages
+    .slice()
+    .sort((a, b) => Number(a["Review order"]) - Number(b["Review order"]))
+    .map((row) => [
+      row.NAID,
+      row["Chapter or lane"],
+      row.Title,
+      `${row["Text pages"] || 0}/${row["Measured pages"] || "?"}`,
+      row["Candidate pages"] || "Manual/cite-only review",
+      row.Recommendation
+    ]);
 
   const artifactLinks = [
     ["Live chronology-first site", link()],
@@ -257,6 +268,12 @@ function main() {
     "## Immediate Risk Queue",
     "",
     markdownTable(["Priority", "Gap", "First action"], topGaps),
+    "",
+    "## Critical Page Pulls",
+    "",
+    "Use this as the first manual page-boundary queue; it reflects the latest OCR pass and should be treated as a page-finding aid, not a final selection decision.",
+    "",
+    markdownTable(["NAID", "Lane", "Title", "Text pages", "Candidate pages", "Compiler action"], criticalPagePulls),
     "",
     "## Refresh Commands",
     "",

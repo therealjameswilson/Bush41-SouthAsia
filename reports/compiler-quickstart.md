@@ -12,6 +12,8 @@ Generated: 2026-06-01
 - Gap pull packets: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-gap-packets.md?v=gap-packets-20260602
 - Gap pull packets CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-gap-packets.csv?v=gap-packets-20260602
 - Decision log CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-decision-log.csv?v=compiler-20260601
+- Decision cockpit: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-decision-cockpit.md?v=decision-cockpit-20260602
+- Decision cockpit CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-decision-cockpit.csv?v=decision-cockpit-20260602
 - Selection board: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-selection-board.md?v=selection-20260601
 - Selection board CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-selection-board.csv?v=selection-20260601
 - Page-boundary queue: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-page-boundary-queue.md?v=boundaries-20260601

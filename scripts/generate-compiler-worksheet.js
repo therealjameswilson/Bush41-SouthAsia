@@ -76,6 +76,8 @@ const paths = {
   gapPacketsCsv: path.join(reportsDir, "compiler-gap-packets.csv"),
   gapPackets: path.join(reportsDir, "compiler-gap-packets.md"),
   decisionLogCsv: path.join(reportsDir, "compiler-decision-log.csv"),
+  decisionCockpitCsv: path.join(reportsDir, "compiler-decision-cockpit.csv"),
+  decisionCockpit: path.join(reportsDir, "compiler-decision-cockpit.md"),
   selectionBoardCsv: path.join(reportsDir, "compiler-selection-board.csv"),
   selectionBoard: path.join(reportsDir, "compiler-selection-board.md"),
   sourceNoteAuditCsv: path.join(reportsDir, "compiler-source-note-audit.csv"),
@@ -587,6 +589,283 @@ function writeSelectionBoard(rows) {
   ];
 
   fs.writeFileSync(paths.selectionBoard, `${lines.join("\n").trim()}\n`);
+}
+
+function normalizedKey(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .replace(/\s+/g, " ");
+}
+
+function identifierKeys(row) {
+  const keys = new Set();
+  const add = (prefix, value) => {
+    const normalized = normalizedKey(value);
+    if (normalized) keys.add(`${prefix}:${normalized}`);
+  };
+
+  add("compiler", row.compilerNumber);
+  add("id", row.itemId || row.id);
+  add("naid", row.naid);
+  add("local", row.localIdentifier);
+  add("title", compactList([row.date, row.title]).join(" "));
+
+  const targetText = row.naidOrTargets || row.naidOrTargets === 0 ? String(row.naidOrTargets) : "";
+  for (const match of targetText.match(/\d{6,}/g) || []) add("naid", match);
+  for (const target of targetText.split(/[;,]/).map((value) => value.trim()).filter(Boolean)) add("local", target);
+
+  return [...keys];
+}
+
+function actionIndex(rows) {
+  const index = new Map();
+  for (const row of rows) {
+    for (const key of identifierKeys(row)) {
+      if (!index.has(key)) index.set(key, []);
+      index.get(key).push(row);
+    }
+  }
+  return index;
+}
+
+function firstIndexedMatch(index, row, predicate = () => true) {
+  for (const key of identifierKeys(row)) {
+    const match = (index.get(key) || []).find(predicate);
+    if (match) return match;
+  }
+  return null;
+}
+
+function cockpitPriorityFromScore(score) {
+  if (score >= 110) return "Critical";
+  if (score >= 85) return "High";
+  if (score >= 60) return "Medium";
+  return "Low";
+}
+
+function cockpitScore(selectionRow, accessRow, boundaryRow, sourceRow) {
+  let score = {
+    "Research task": 95,
+    "Access/declassification decision": 88,
+    "Excisions decision": 84,
+    "Page-boundary/source-note decision": 74,
+    "Promotion screening": 70,
+    "Context/locator decision": 45,
+    "Selection review": 35
+  }[selectionRow.selectionLane] || 50;
+
+  if (/Critical/i.test(selectionRow.priority || "")) score += 22;
+  if (/High/i.test(selectionRow.priority || "")) score += 12;
+  if (accessRow?.itemType === "Confirmed record") score += 8;
+  if (/Partial|excision/i.test(accessRow?.reviewLane || "")) score += 7;
+  if (boundaryRow?.priorityTier === "Critical") score += 22;
+  if (boundaryRow?.priorityTier === "High") score += 12;
+  if (sourceRow?.finalizationRank <= 2) score += 10;
+  if (sourceRow?.finalizationRank === 3) score += 6;
+  if (selectionRow.itemType === "Compiler gap") score += 10;
+
+  return score;
+}
+
+function cockpitPhase(selectionRow, accessRow, boundaryRow, sourceRow) {
+  if (selectionRow.itemType === "Compiler gap") return "Close gap";
+  if (/Access/i.test(selectionRow.selectionLane) || /access/i.test(accessRow?.reviewLane || "")) return "Resolve access";
+  if (/Excisions|Partial/i.test(selectionRow.selectionLane) || /excision|partial/i.test(accessRow?.reviewLane || "")) return "Review excisions";
+  if (boundaryRow && ["Critical", "High"].includes(boundaryRow.priorityTier)) return "Fix page boundaries";
+  if (sourceRow && sourceRow.finalizationLane !== "Final editor source-note check") return "Finalize source note";
+  if (/Promotion/i.test(selectionRow.selectionLane)) return "Promote or exclude lead";
+  if (/Context|locator/i.test(selectionRow.selectionLane)) return "Classify context";
+  return "Record selection decision";
+}
+
+function cockpitQuestion(selectionRow, accessRow, boundaryRow, sourceRow) {
+  if (selectionRow.itemType === "Compiler gap") {
+    return packetClosureQuestion({
+      lane: selectionRow.chapterOrLane,
+      title: selectionRow.title,
+      needed: selectionRow.sourceNote,
+      targetTerms: []
+    });
+  }
+  if (/Partial|excision/i.test(accessRow?.reviewLane || "")) {
+    return "Do the released pages support selection, or should the item be deferred/cited only because of excisions?";
+  }
+  if (/access/i.test(accessRow?.reviewLane || "")) {
+    return "Can the item be selected, or should it remain deferred/cite-only because of access status?";
+  }
+  if (boundaryRow) return boundaryRow.boundaryQuestion;
+  if (sourceRow && sourceRow.finalizationLane !== "Final editor source-note check") {
+    return "Can the Source Note be finalized from the PDF citation sheet/title page while keeping provenance metadata out of the visible note?";
+  }
+  return selectionRow.rationale || "Can the compiler record Select, Exclude, Defer, Cite only, or Resolved with a stable rationale?";
+}
+
+function cockpitNextAction(selectionRow, accessRow, boundaryRow, sourceRow) {
+  if (/Partial|excision|access/i.test(accessRow?.reviewLane || "")) return accessRow.nextAction;
+  if (boundaryRow && ["Critical", "High"].includes(boundaryRow.priorityTier)) return boundaryRow.nextAction;
+  if (sourceRow && sourceRow.finalizationLane !== "Final editor source-note check") return sourceRow.citationSheetTask;
+  return selectionRow.nextAction || selectionRow.rationale || "Record the decision and rationale in the decision log.";
+}
+
+function cockpitLinkedSheets(accessRow, boundaryRow, sourceRow, selectionRow) {
+  return compactList([
+    "compiler-decision-log.csv",
+    "compiler-selection-board.md",
+    accessRow ? "compiler-access-review.md" : "",
+    boundaryRow ? "compiler-page-boundary-queue.md" : "",
+    sourceRow ? "compiler-source-note-finalization.md" : "",
+    selectionRow.itemType === "Compiler gap" ? "compiler-gap-packets.md" : ""
+  ]);
+}
+
+function chapterCockpitPriority(row) {
+  if (/Missing lane|Lead-only lane/i.test(row.coverageStatus)) return "High";
+  if (/Access-heavy|Gap-linked/i.test(row.coverageStatus)) return "High";
+  if (/Thin/i.test(row.coverageStatus)) return "Medium";
+  return "Low";
+}
+
+function decisionCockpitRows(selectionBoard, accessReview, pageBoundary, sourceNoteFinalization, chapterMatrix) {
+  const accessIndex = actionIndex(accessReview);
+  const boundaryIndex = actionIndex(pageBoundary);
+  const sourceIndex = actionIndex(sourceNoteFinalization);
+  const selectionActions = selectionBoard.filter((row) => !/^Selection candidate$/i.test(row.suggestedDecision));
+
+  const rows = selectionActions.map((row) => {
+    const isGapRow = row.itemType === "Compiler gap";
+    const accessRow = isGapRow ? null : firstIndexedMatch(accessIndex, row);
+    const boundaryRow = isGapRow ? null : firstIndexedMatch(boundaryIndex, row);
+    const sourceRow = isGapRow ? null : firstIndexedMatch(sourceIndex, row);
+    const urgencyScore = cockpitScore(row, accessRow, boundaryRow, sourceRow);
+    const pendingTasks = compactList([
+      accessRow ? `${accessRow.reviewLane}: ${accessRow.nextAction}` : "",
+      boundaryRow ? `${boundaryRow.priorityTier} boundary #${boundaryRow.reviewOrder}: ${boundaryRow.boundaryQuestion}` : "",
+      sourceRow ? `${sourceRow.finalizationLane}: ${sourceRow.citationSheetTask}` : "",
+      `${row.selectionLane}: ${row.rationale}`
+    ]);
+
+    return {
+      itemType: row.itemType,
+      itemId: row.itemId,
+      compilerNumber: row.compilerNumber,
+      cockpitPriority: cockpitPriorityFromScore(urgencyScore),
+      urgencyScore,
+      phase: cockpitPhase(row, accessRow, boundaryRow, sourceRow),
+      suggestedDecision: row.suggestedDecision,
+      chapterOrLane: row.chapterOrLane,
+      date: row.date,
+      title: row.title,
+      releaseOrStatus: row.releaseOrStatus,
+      pages: row.pages,
+      naidOrTargets: row.naidOrTargets,
+      decisionQuestion: cockpitQuestion(row, accessRow, boundaryRow, sourceRow),
+      nextAction: cockpitNextAction(row, accessRow, boundaryRow, sourceRow),
+      pendingTasks,
+      linkedSheets: cockpitLinkedSheets(accessRow, boundaryRow, sourceRow, row),
+      sourceNote: row.sourceNote,
+      catalogUrl: row.catalogUrl,
+      pdfUrl: row.pdfUrl
+    };
+  });
+
+  const chapterRows = chapterMatrix
+    .filter((row) => !/^Usable first pass$/i.test(row.coverageStatus))
+    .map((row) => {
+      const priority = chapterCockpitPriority(row);
+      const urgencyScore = { High: 88, Medium: 66, Low: 42 }[priority] || 42;
+      return {
+        itemType: "Chapter lane",
+        itemId: `${row.chapter}:${row.lane}`,
+        compilerNumber: "",
+        cockpitPriority: priority,
+        urgencyScore,
+        phase: "Close chapter lane",
+        suggestedDecision: "Resolve lane before volume close",
+        chapterOrLane: row.chapter,
+        date: row.dateSpan,
+        title: row.lane,
+        releaseOrStatus: row.coverageStatus,
+        pages: row.confirmedPages,
+        naidOrTargets: row.relatedGaps,
+        decisionQuestion: "Can this lane be closed as selected, excluded, deferred, cite-only, or consciously out of scope?",
+        nextAction: row.nextAction,
+        pendingTasks: compactList([
+          `Confirmed records: ${row.confirmedCount}`,
+          `Potential leads: ${row.potentialLeadCount}`,
+          `Related gaps: ${row.relatedGapCount}`,
+          `Search terms: ${row.searchTerms}`
+        ]),
+        linkedSheets: ["compiler-chapter-matrix.md", "compiler-gap-analysis.md", "compiler-gap-packets.md"],
+        sourceNote: "",
+        catalogUrl: "",
+        pdfUrl: ""
+      };
+    });
+
+  return [...rows, ...chapterRows].sort((a, b) =>
+    priorityRank(a.cockpitPriority) - priorityRank(b.cockpitPriority) ||
+    b.urgencyScore - a.urgencyScore ||
+    String(a.phase).localeCompare(String(b.phase)) ||
+    String(a.date || "9999").localeCompare(String(b.date || "9999")) ||
+    String(a.title).localeCompare(String(b.title))
+  );
+}
+
+function writeDecisionCockpit(rows) {
+  const phaseCounts = countBy(rows, (row) => row.phase).map(([phase, count]) => [phase, count]);
+  const priorityCounts = countBy(rows, (row) => row.cockpitPriority).map(([priority, count]) => [priority, count]);
+  const typeCounts = countBy(rows, (row) => row.itemType).map(([type, count]) => [type, count]);
+  const firstPass = rows.slice(0, 45).map((row) => [
+    row.cockpitPriority,
+    row.phase,
+    row.compilerNumber || row.itemType,
+    row.chapterOrLane,
+    row.date || "",
+    mdEscape(row.title),
+    mdEscape(row.decisionQuestion),
+    mdEscape(row.nextAction)
+  ]);
+
+  const lines = [
+    "# FRUS South Asia Decision Cockpit",
+    "",
+    `Generated: ${new Date().toISOString()}`,
+    "",
+    "This cockpit collapses the selection board, access ledger, page-boundary queue, source-note finalization packet, chapter matrix, and gap packets into one decision-first worklist. Use it as the first stop after reading the chronology: each row names the decision question, next action, and the pull sheets that contain the evidence.",
+    "",
+    "## Coverage",
+    "",
+    `- Decision cockpit rows: ${rows.length}`,
+    `- Critical/high rows: ${rows.filter((row) => ["Critical", "High"].includes(row.cockpitPriority)).length}`,
+    `- Confirmed-record rows: ${rows.filter((row) => row.itemType === "Confirmed record").length}`,
+    `- Potential-lead rows: ${rows.filter((row) => row.itemType === "Potential lead").length}`,
+    `- Compiler-gap rows: ${rows.filter((row) => row.itemType === "Compiler gap").length}`,
+    `- Chapter-lane rows: ${rows.filter((row) => row.itemType === "Chapter lane").length}`,
+    "",
+    "## Priority Counts",
+    "",
+    markdownTable(["Priority", "Rows"], priorityCounts),
+    "",
+    "## Phase Counts",
+    "",
+    markdownTable(["Phase", "Rows"], phaseCounts),
+    "",
+    "## Item Types",
+    "",
+    markdownTable(["Item type", "Rows"], typeCounts),
+    "",
+    "## First Decision Pass",
+    "",
+    markdownTable(["Priority", "Phase", "Item", "Chapter/lane", "Date", "Title", "Decision question", "Next action"], firstPass),
+    "",
+    "## Working Rule",
+    "",
+    "Start here, then record the final call in `compiler-decision-log.csv`. A row is not closed until access posture, page boundary, Source Note, provenance chain, and chapter/selection rationale all agree."
+  ];
+
+  fs.writeFileSync(paths.decisionCockpit, `${lines.join("\n").trim()}\n`);
 }
 
 function isRestrictedStatus(status = "") {
@@ -1266,6 +1545,7 @@ function writeGapAnalysis(gapQueue, confirmed, potentialQueue, sourceAudit, acce
     "## Linked Compiler Pull Sheets",
     "",
     "- `compiler-gap-queue.csv`: canonical row-level gap queue with target records, search terms, source pools, and first actions.",
+    "- `compiler-decision-cockpit.md`: decision-first cockpit merging selection, access, page-boundary, source-note, chapter-lane, and gap evidence.",
     "- `compiler-gap-packets.md`: gap-by-gap pull packets tying each risk to lanes, confirmed anchors, potential leads, boundary pulls, links, closure questions, and next actions.",
     "- `compiler-chapter-matrix.md`: chapter-by-theme coverage map showing thin, missing, lead-only, access-heavy, and gap-linked lanes.",
     "- `compiler-page-boundary-queue.md`: PDF pull sheet for item boundaries and policy-bearing pages.",
@@ -2363,7 +2643,7 @@ function writePriorityPack(gaps, confirmed, potentialQueue) {
   fs.writeFileSync(paths.priorityPack, `${lines.join("\n").trim()}\n`);
 }
 
-function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, sourceNoteFinalization, accessReview, pageBoundary, chapterMatrix, personsAuthority, selectionBoard) {
+function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, sourceNoteFinalization, accessReview, pageBoundary, chapterMatrix, personsAuthority, selectionBoard, decisionCockpit) {
   const released = confirmed.filter((row) => row.queue === "Released chronology").length;
   const review = confirmed.length - released;
   const sourceNotes = confirmed.filter((row) => row.sourceNote).length;
@@ -2382,6 +2662,7 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
   const institutionalParticipants = personsAuthority.filter((row) => row.rowType === "Institutional participant").length;
   const missingParticipantAuthority = participantRows.filter((row) => row.authorityStatus === "Missing authority entry").length;
   const selectionActionRows = selectionBoard.filter((row) => !/^Selection candidate$/i.test(row.suggestedDecision)).length;
+  const cockpitHighRows = decisionCockpit.filter((row) => ["Critical", "High"].includes(row.cockpitPriority)).length;
   const riskCounts = countBy(
     confirmed.flatMap((row) => row.compilerRisks.length ? row.compilerRisks : ["No flagged risk"]),
     (risk) => risk
@@ -2458,6 +2739,8 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     `- Suggested decision rows: ${selectionBoard.length}`,
     `- Rows requiring action before final selection: ${selectionActionRows}`,
     `- Itemized board: \`compiler-selection-board.md\` and \`compiler-selection-board.csv\``,
+    `- Decision cockpit rows: ${decisionCockpit.length}; critical/high rows: ${cockpitHighRows}`,
+    `- First-stop cockpit: \`compiler-decision-cockpit.md\` and \`compiler-decision-cockpit.csv\``,
     "",
     "## Immediate Gap Queue",
     "",
@@ -2475,6 +2758,7 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     "- `compiler-gap-analysis.md`: generated gap dashboard tying the gap queue to chapter lanes, access, source-note, page-boundary, and selection-board rows.",
     "- `compiler-gap-packets.md` and `compiler-gap-packets.csv`: gap-by-gap pull packets with matched lanes, confirmed anchors, potential leads, page-boundary pulls, closure questions, and links.",
     "- `compiler-decision-log.csv`: blank Select / Exclude / Defer / Cite only / Resolved tracker across confirmed records, potential leads, and gap lanes.",
+    "- `compiler-decision-cockpit.md` and `compiler-decision-cockpit.csv`: decision-first cockpit merging selection, access, page-boundary, source-note, chapter-lane, and gap evidence.",
     "- `compiler-selection-board.md` and `compiler-selection-board.csv`: suggested triage decisions to prefill the decision log.",
     "- `compiler-page-boundary-queue.md` and `compiler-page-boundary-queue.csv`: PDF page-boundary and policy-bearing-page pull sheet.",
     "- `compiler-chapter-matrix.md` and `compiler-chapter-matrix.csv`: chapter-by-theme research matrix with coverage status, leads, gaps, and next actions.",
@@ -2509,6 +2793,7 @@ function main() {
   const chapterMatrix = chapterMatrixRows(confirmed, potentialQueue, gapQueue);
   const gapPackets = gapPacketRows(gapQueue, confirmed, potentialQueue, pageBoundary, chapterMatrix);
   const personsAuthority = personsAuthorityRows(confirmed, personsData);
+  const decisionCockpit = decisionCockpitRows(selectionBoard, accessReview, pageBoundary, sourceNoteFinalization, chapterMatrix);
 
   writeCsv(paths.confirmedCsv, [
     { key: "id", label: "Record ID" },
@@ -2625,6 +2910,29 @@ function main() {
     { key: "catalogUrl", label: "Catalog URL" },
     { key: "pdfUrl", label: "PDF URL" }
   ], decisions);
+
+  writeCsv(paths.decisionCockpitCsv, [
+    { key: "itemType", label: "Item type" },
+    { key: "itemId", label: "Item ID" },
+    { key: "compilerNumber", label: "Compiler #" },
+    { key: "cockpitPriority", label: "Cockpit priority" },
+    { key: "urgencyScore", label: "Urgency score" },
+    { key: "phase", label: "Phase" },
+    { key: "suggestedDecision", label: "Suggested decision" },
+    { key: "chapterOrLane", label: "Chapter or lane" },
+    { key: "date", label: "Date" },
+    { key: "title", label: "Title" },
+    { key: "releaseOrStatus", label: "Release or status" },
+    { key: "pages", label: "Pages" },
+    { key: "naidOrTargets", label: "NAID or targets" },
+    { key: "decisionQuestion", label: "Decision question" },
+    { key: "nextAction", label: "Next action" },
+    { key: "pendingTasks", label: "Pending tasks" },
+    { key: "linkedSheets", label: "Linked sheets" },
+    { key: "sourceNote", label: "Source note or need" },
+    { key: "catalogUrl", label: "Catalog URL" },
+    { key: "pdfUrl", label: "PDF URL" }
+  ], decisionCockpit);
 
   writeCsv(paths.selectionBoardCsv, [
     { key: "itemType", label: "Item type" },
@@ -2781,10 +3089,11 @@ function main() {
     { key: "notes", label: "Notes" }
   ], personsAuthority);
 
-  writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, sourceNoteFinalization, accessReview, pageBoundary, chapterMatrix, personsAuthority, selectionBoard);
+  writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, sourceNoteFinalization, accessReview, pageBoundary, chapterMatrix, personsAuthority, selectionBoard, decisionCockpit);
   writeGapAnalysis(gapQueue, confirmed, potentialQueue, sourceAudit, accessReview, pageBoundary, chapterMatrix, selectionBoard);
   writeGapPackets(gapPackets, gapQueue);
   writeSelectionBoard(selectionBoard);
+  writeDecisionCockpit(decisionCockpit);
   writeSourceNoteAudit(sourceAudit, confirmed, potentialQueue);
   writeSourceNoteFinalization(sourceNoteFinalization);
   writeAccessReview(accessReview);
@@ -2794,7 +3103,7 @@ function main() {
   writePriorityPack(gaps, confirmed, potentialQueue);
   writeDossiers(confirmed);
 
-  console.log(`Wrote compiler worksheet, CSVs, decision log, gap analysis, gap packets, selection board, source-note audit, source-note finalization, access review, page-boundary queue, chapter matrix, persons authority audit, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
+  console.log(`Wrote compiler worksheet, CSVs, decision log, decision cockpit, gap analysis, gap packets, selection board, source-note audit, source-note finalization, access review, page-boundary queue, chapter matrix, persons authority audit, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
 }
 
 main();

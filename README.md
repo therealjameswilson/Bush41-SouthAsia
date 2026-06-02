@@ -64,6 +64,10 @@ gap-queue, decision-log, selection-board, page-boundary, chapter-matrix,
 persons-authority, source-note audit, and access-review CSV exports,
 creates `reports/compiler-gap-analysis.md` as the generated current gap
 dashboard tying open/triaged gaps to chapter lanes and pull sheets,
+creates `reports/compiler-decision-cockpit.md` and
+`reports/compiler-decision-cockpit.csv` as the first-stop decision worklist
+merging selection, access, page-boundary, source-note, chapter-lane, and gap
+evidence,
 creates `reports/compiler-gap-packets.md` and
 `reports/compiler-gap-packets.csv` as gap-by-gap pull packets with matched
 lanes, confirmed anchors, potential leads, page-boundary pulls, closure

@@ -1,6 +1,6 @@
 # FRUS South Asia Compiler Worksheet
 
-Generated: 2026-06-02T01:29:25.055Z
+Generated: 2026-06-02T01:36:23.927Z
 
 ## Working Set
 
@@ -69,6 +69,8 @@ Generated: 2026-06-02T01:29:25.055Z
 - Suggested decision rows: 113
 - Rows requiring action before final selection: 101
 - Itemized board: `compiler-selection-board.md` and `compiler-selection-board.csv`
+- Decision cockpit rows: 110; critical/high rows: 78
+- First-stop cockpit: `compiler-decision-cockpit.md` and `compiler-decision-cockpit.csv`
 
 ## Immediate Gap Queue
 
@@ -101,6 +103,7 @@ Generated: 2026-06-02T01:29:25.055Z
 - `compiler-gap-analysis.md`: generated gap dashboard tying the gap queue to chapter lanes, access, source-note, page-boundary, and selection-board rows.
 - `compiler-gap-packets.md` and `compiler-gap-packets.csv`: gap-by-gap pull packets with matched lanes, confirmed anchors, potential leads, page-boundary pulls, closure questions, and links.
 - `compiler-decision-log.csv`: blank Select / Exclude / Defer / Cite only / Resolved tracker across confirmed records, potential leads, and gap lanes.
+- `compiler-decision-cockpit.md` and `compiler-decision-cockpit.csv`: decision-first cockpit merging selection, access, page-boundary, source-note, chapter-lane, and gap evidence.
 - `compiler-selection-board.md` and `compiler-selection-board.csv`: suggested triage decisions to prefill the decision log.
 - `compiler-page-boundary-queue.md` and `compiler-page-boundary-queue.csv`: PDF page-boundary and policy-bearing-page pull sheet.
 - `compiler-chapter-matrix.md` and `compiler-chapter-matrix.csv`: chapter-by-theme research matrix with coverage status, leads, gaps, and next actions.

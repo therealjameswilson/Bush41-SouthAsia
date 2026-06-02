@@ -1,6 +1,6 @@
 # FRUS South Asia Compiler Worksheet
 
-Generated: 2026-06-01T18:16:53.265Z
+Generated: 2026-06-02T01:18:48.334Z
 
 ## Working Set
 
@@ -97,6 +97,7 @@ Generated: 2026-06-01T18:16:53.265Z
 - `compiler-potential-documents.csv`: source-sweep candidates sorted by priority and promotion value.
 - `compiler-gap-queue.csv`: open compiler gaps, pull-list IDs, and first actions.
 - `compiler-gap-analysis.md`: generated gap dashboard tying the gap queue to chapter lanes, access, source-note, page-boundary, and selection-board rows.
+- `compiler-gap-packets.md` and `compiler-gap-packets.csv`: gap-by-gap pull packets with matched lanes, confirmed anchors, potential leads, page-boundary pulls, closure questions, and links.
 - `compiler-decision-log.csv`: blank Select / Exclude / Defer / Cite only / Resolved tracker across confirmed records, potential leads, and gap lanes.
 - `compiler-selection-board.md` and `compiler-selection-board.csv`: suggested triage decisions to prefill the decision log.
 - `compiler-page-boundary-queue.md` and `compiler-page-boundary-queue.csv`: PDF page-boundary and policy-bearing-page pull sheet.

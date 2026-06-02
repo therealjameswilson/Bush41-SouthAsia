@@ -1,6 +1,6 @@
 # FRUS South Asia Gap Analysis
 
-Generated: 2026-06-01T18:16:53.285Z
+Generated: 2026-06-02T01:18:48.339Z
 
 This is the compiler-facing gap dashboard for the South Asia volume. It is generated from the current chronology, potential-lead queue, source-note audit, access ledger, page-boundary queue, chapter matrix, selection board, and `data/compiler-gaps.json`, so the Markdown report and CSV pull sheets stay in sync.
 
@@ -87,6 +87,7 @@ This is the compiler-facing gap dashboard for the South Asia volume. It is gener
 ## Linked Compiler Pull Sheets
 
 - `compiler-gap-queue.csv`: canonical row-level gap queue with target records, search terms, source pools, and first actions.
+- `compiler-gap-packets.md`: gap-by-gap pull packets tying each risk to lanes, confirmed anchors, potential leads, boundary pulls, links, closure questions, and next actions.
 - `compiler-chapter-matrix.md`: chapter-by-theme coverage map showing thin, missing, lead-only, access-heavy, and gap-linked lanes.
 - `compiler-page-boundary-queue.md`: PDF pull sheet for item boundaries and policy-bearing pages.
 - `compiler-selection-board.md`: suggested Select, Exclude, Defer, Cite only, or Resolve triage board.

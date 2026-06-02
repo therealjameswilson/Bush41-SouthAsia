@@ -9,6 +9,8 @@ Generated: 2026-06-01
 - Compiler workbench: https://therealjameswilson.github.io/Bush41-SouthAsia/?v=chronology-first-20260601b#workbench
 - Compiler worksheet: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-worksheet.md?v=compiler-20260601
 - Gap analysis: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-gap-analysis.md?v=gap-analysis-20260601
+- Gap pull packets: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-gap-packets.md?v=gap-packets-20260602
+- Gap pull packets CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-gap-packets.csv?v=gap-packets-20260602
 - Decision log CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-decision-log.csv?v=compiler-20260601
 - Selection board: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-selection-board.md?v=selection-20260601
 - Selection board CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-selection-board.csv?v=selection-20260601

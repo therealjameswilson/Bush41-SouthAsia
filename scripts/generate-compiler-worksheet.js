@@ -73,6 +73,8 @@ const paths = {
   potentialCsv: path.join(reportsDir, "compiler-potential-documents.csv"),
   gapsCsv: path.join(reportsDir, "compiler-gap-queue.csv"),
   gapAnalysis: path.join(reportsDir, "compiler-gap-analysis.md"),
+  gapPacketsCsv: path.join(reportsDir, "compiler-gap-packets.csv"),
+  gapPackets: path.join(reportsDir, "compiler-gap-packets.md"),
   decisionLogCsv: path.join(reportsDir, "compiler-decision-log.csv"),
   selectionBoardCsv: path.join(reportsDir, "compiler-selection-board.csv"),
   selectionBoard: path.join(reportsDir, "compiler-selection-board.md"),
@@ -1106,6 +1108,7 @@ function writeGapAnalysis(gapQueue, confirmed, potentialQueue, sourceAudit, acce
     "## Linked Compiler Pull Sheets",
     "",
     "- `compiler-gap-queue.csv`: canonical row-level gap queue with target records, search terms, source pools, and first actions.",
+    "- `compiler-gap-packets.md`: gap-by-gap pull packets tying each risk to lanes, confirmed anchors, potential leads, boundary pulls, links, closure questions, and next actions.",
     "- `compiler-chapter-matrix.md`: chapter-by-theme coverage map showing thin, missing, lead-only, access-heavy, and gap-linked lanes.",
     "- `compiler-page-boundary-queue.md`: PDF pull sheet for item boundaries and policy-bearing pages.",
     "- `compiler-selection-board.md`: suggested Select, Exclude, Defer, Cite only, or Resolve triage board.",
@@ -1872,6 +1875,235 @@ function gapPotentialRows(potentialQueue, gap) {
   return potentialQueue.filter((row) => hasTargetTerm(row, gap)).slice(0, 6);
 }
 
+function gapPageBoundaryRows(pageBoundary, gap) {
+  return pageBoundary.filter((row) =>
+    (row.matchedGaps || []).some((matched) => String(matched).includes(gap.title)) ||
+    hasTargetRecord(row, gap) ||
+    hasTargetTerm(row, gap)
+  );
+}
+
+function gapChapterLaneRows(chapterMatrix, gap) {
+  return chapterMatrix.filter((row) => {
+    const related = (row.relatedGaps || []).some((matched) => String(matched).includes(gap.title));
+    if (related) return true;
+
+    const laneText = plainText([row.chapter, row.lane, row.searchTerms, row.sourcePools, row.representativeConfirmed, row.priorityLeads]);
+    const termMatch = (gap.targetTerms || []).some((term) => laneText.includes(String(term).toLowerCase()));
+    if (!termMatch) return false;
+
+    if (CHAPTER_ORDER.includes(gap.lane)) return row.chapter === gap.lane;
+    if (/regional/i.test(gap.lane || "")) return row.chapter === "Regional";
+    return /source extraction|source expansion|metadata quality|public record/i.test(gap.lane || "");
+  });
+}
+
+function packetClosureQuestion(gap) {
+  if (/page|boundar|source extraction/i.test(`${gap.lane} ${gap.title}`)) {
+    return "Have exact item boundaries, title, pages, access posture, and source-note wording been fixed for every selected document?";
+  }
+  if (/india/i.test(`${gap.lane} ${gap.title}`)) {
+    return "Has the India chapter been consciously tested beyond leader calls: Kashmir/security, nuclear/nonproliferation, defense, economic reform, trade, embassy, Haass, Gates, WHORM, and State files?";
+  }
+  if (/pakistan|nuclear|pressler|f-16/i.test(`${gap.lane} ${gap.title} ${gap.targetTerms}`)) {
+    return "Do Gates, Cheney, Haass, and H-Files companion records support or change the Pakistan nuclear/Pressler/F-16 selection arc?";
+  }
+  if (/kashmir|bangladesh|regional/i.test(`${gap.lane} ${gap.title}`)) {
+    return "Can each candidate be assigned to India, Pakistan, Bangladesh, or true regional strategy with an explicit selection or exclusion rationale?";
+  }
+  if (/source note|metadata|title|provenance/i.test(`${gap.lane} ${gap.title}`)) {
+    return "Do title, date, source location, page extent, access language, and provenance agree with the PDF/citation sheet or catalog item?";
+  }
+  return "Can the compiler record Select, Exclude, Defer, Cite only, or Resolved with a stable rationale and source note?";
+}
+
+function gapPacketRow(gap, sectionOrder, section, row, fields = {}) {
+  return {
+    gapId: gap.id,
+    priority: gap.priority,
+    status: gap.status,
+    gapLane: gap.lane,
+    gapTitle: gap.title,
+    sectionOrder,
+    section,
+    itemType: fields.itemType || "",
+    itemId: fields.itemId || row?.id || row?.naid || "",
+    compilerNumber: fields.compilerNumber || row?.compilerNumber || "",
+    chapterOrLane: fields.chapterOrLane || row?.chapter || row?.reviewLane || row?.chapterOrLane || "",
+    date: fields.date || row?.date || "",
+    title: fields.title || row?.title || gap.title,
+    naidOrTargets: fields.naidOrTargets || compactList([row?.naid, row?.localIdentifier]).join("; ") || compactList(gap.targetRecords).join("; "),
+    sourcePool: fields.sourcePool || compactList([row?.sourceFamily, row?.sourceLocator, row?.source]).join(" | ") || compactList(gap.sourcePools).join("; "),
+    pages: fields.pages || row?.pages || (row?.pageCount ? pageLabel(row.pageCount) : ""),
+    accessOrStatus: fields.accessOrStatus || row?.releaseOrStatus || row?.releaseStatus || row?.status || "",
+    issue: fields.issue || gap.needed,
+    closureQuestion: fields.closureQuestion || packetClosureQuestion(gap),
+    nextAction: fields.nextAction || row?.nextAction || row?.action || gap.firstAction || "",
+    catalogUrl: fields.catalogUrl || row?.catalogUrl || "",
+    pdfUrl: fields.pdfUrl || row?.pdfUrl || ""
+  };
+}
+
+function gapPacketRows(gapQueue, confirmed, potentialQueue, pageBoundary, chapterMatrix) {
+  const rows = [];
+
+  for (const gap of gapQueue) {
+    rows.push(gapPacketRow(gap, 0, "Gap brief", null, {
+      itemType: "Gap brief",
+      itemId: gap.id,
+      chapterOrLane: gap.lane,
+      naidOrTargets: compactList(gap.targetRecords).join("; "),
+      sourcePool: compactList(gap.sourcePools).join("; "),
+      accessOrStatus: gap.status,
+      issue: gap.needed,
+      nextAction: gap.firstAction
+    }));
+
+    for (const row of gapChapterLaneRows(chapterMatrix, gap)) {
+      rows.push(gapPacketRow(gap, 1, "Chapter lane", row, {
+        itemType: "Chapter lane",
+        itemId: `${row.chapter}:${row.lane}`,
+        title: row.lane,
+        accessOrStatus: row.coverageStatus,
+        pages: row.confirmedPages,
+        issue: `Confirmed ${row.confirmedCount}; leads ${row.potentialLeadCount}; related gaps ${row.relatedGapCount}.`,
+        nextAction: row.nextAction
+      }));
+    }
+
+    for (const row of gapConfirmedRows(confirmed, gap)) {
+      rows.push(gapPacketRow(gap, 2, "Confirmed chronology anchor", row, {
+        itemType: "Confirmed record",
+        sourcePool: row.source,
+        accessOrStatus: row.releaseStatus,
+        pages: row.pageCount ? pageLabel(row.pageCount) : "",
+        issue: compactList(row.compilerRisks).join("; ") || "Confirmed chronology anchor for this gap."
+      }));
+    }
+
+    for (const row of gapPotentialRows(potentialQueue, gap)) {
+      rows.push(gapPacketRow(gap, 3, "Potential lead to screen", row, {
+        itemType: "Potential lead",
+        itemId: row.id,
+        sourcePool: compactList([row.sourceFamily, row.source]).join(" | "),
+        accessOrStatus: compactList([row.priorityTier, row.disposition, row.status]).join("; "),
+        issue: row.selectionRationale || row.disposition || gap.needed,
+        nextAction: row.action
+      }));
+    }
+
+    for (const row of gapPageBoundaryRows(pageBoundary, gap)) {
+      rows.push(gapPacketRow(gap, 4, "Page-boundary pull", row, {
+        itemType: row.itemType,
+        itemId: row.naid || row.localIdentifier || row.title,
+        compilerNumber: row.compilerNumber,
+        sourcePool: compactList([row.sourceFamily, row.sourceLocator]).join(" | "),
+        issue: compactList(row.reasons).join("; ") || row.boundaryQuestion,
+        nextAction: row.nextAction
+      }));
+    }
+  }
+
+  const seen = new Set();
+  return rows
+    .filter((row) => {
+      const key = [row.gapId, row.section, row.itemType, row.itemId, row.title].join("|||");
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .sort((a, b) =>
+      priorityRank(a.priority) - priorityRank(b.priority) ||
+      String(a.gapTitle).localeCompare(String(b.gapTitle)) ||
+      a.sectionOrder - b.sectionOrder ||
+      String(a.date || "9999").localeCompare(String(b.date || "9999")) ||
+      String(a.title).localeCompare(String(b.title))
+    );
+}
+
+function writeGapPackets(rows, gapQueue) {
+  const sectionCounts = countBy(rows, (row) => row.section).map(([section, count]) => [section, count]);
+  const gapCounts = gapQueue.map((gap) => [
+    gap.priority,
+    gap.status,
+    gap.lane,
+    gap.title,
+    rows.filter((row) => row.gapId === gap.id && row.section === "Confirmed chronology anchor").length,
+    rows.filter((row) => row.gapId === gap.id && row.section === "Potential lead to screen").length,
+    rows.filter((row) => row.gapId === gap.id && row.section === "Page-boundary pull").length,
+    gap.firstAction || ""
+  ]);
+
+  const lines = [
+    "# FRUS South Asia Gap Pull Packets",
+    "",
+    `Generated: ${new Date().toISOString()}`,
+    "",
+    "This pull sheet translates every active compiler gap into operational rows: chapter lanes, confirmed chronology anchors, potential leads, page-boundary items, target identifiers, links, closure questions, and next actions. Use it beside the decision log when resolving source-expansion and selection risks.",
+    "",
+    "## Coverage",
+    "",
+    `- Active gap packets: ${gapQueue.length}`,
+    `- Packet rows: ${rows.length}`,
+    `- Confirmed anchors: ${rows.filter((row) => row.section === "Confirmed chronology anchor").length}`,
+    `- Potential leads to screen: ${rows.filter((row) => row.section === "Potential lead to screen").length}`,
+    `- Page-boundary pulls: ${rows.filter((row) => row.section === "Page-boundary pull").length}`,
+    "",
+    "## Row Types",
+    "",
+    markdownTable(["Section", "Rows"], sectionCounts),
+    "",
+    "## Gap Packet Summary",
+    "",
+    markdownTable(["Priority", "Status", "Lane", "Gap", "Confirmed", "Leads", "Boundary pulls", "First action"], gapCounts),
+    "",
+    "## Packets",
+    ""
+  ];
+
+  for (const gap of gapQueue) {
+    const packetRows = rows.filter((row) => row.gapId === gap.id);
+    const displayRows = packetRows.filter((row) => row.section !== "Gap brief").slice(0, 35);
+    const omittedRows = packetRows.filter((row) => row.section !== "Gap brief").length - displayRows.length;
+    lines.push(
+      `### ${gap.priority}: ${gap.title}`,
+      "",
+      `- Status: ${gap.status}`,
+      `- Lane: ${gap.lane}`,
+      `- Needed: ${gap.needed}`,
+      `- Source pools: ${compactList(gap.sourcePools).join("; ") || "None recorded"}`,
+      `- Target terms: ${compactList(gap.targetTerms).join("; ") || "None recorded"}`,
+      `- Closure question: ${packetClosureQuestion(gap)}`,
+      `- CSV rows for this packet: ${packetRows.length}`,
+      "",
+      markdownTable(
+        ["Section", "Item", "Lane", "Date", "Title", "Status", "Pages", "Next action"],
+        displayRows.map((row) => [
+            row.section,
+            row.compilerNumber || row.itemType,
+            row.chapterOrLane,
+            row.date,
+            mdEscape(row.title),
+            row.accessOrStatus,
+            row.pages,
+            mdEscape(row.nextAction)
+          ])
+      ),
+      omittedRows > 0 ? "" : "",
+      omittedRows > 0 ? `Full CSV includes ${omittedRows} additional rows for this packet.` : "",
+      ""
+    );
+  }
+
+  lines.push(
+    "## Working Rule",
+    "",
+    "Treat these packets as pull instructions, not final editorial selection. A gap closes only when the compiler can cite the exact source, page boundary, access posture, selection rationale, and provenance chain for the records that remain in or out."
+  );
+
+  fs.writeFileSync(paths.gapPackets, `${lines.join("\n").trim()}\n`);
+}
+
 function limitRows(rows, limit) {
   return {
     shown: rows.slice(0, limit),
@@ -2079,6 +2311,7 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     "- `compiler-potential-documents.csv`: source-sweep candidates sorted by priority and promotion value.",
     "- `compiler-gap-queue.csv`: open compiler gaps, pull-list IDs, and first actions.",
     "- `compiler-gap-analysis.md`: generated gap dashboard tying the gap queue to chapter lanes, access, source-note, page-boundary, and selection-board rows.",
+    "- `compiler-gap-packets.md` and `compiler-gap-packets.csv`: gap-by-gap pull packets with matched lanes, confirmed anchors, potential leads, page-boundary pulls, closure questions, and links.",
     "- `compiler-decision-log.csv`: blank Select / Exclude / Defer / Cite only / Resolved tracker across confirmed records, potential leads, and gap lanes.",
     "- `compiler-selection-board.md` and `compiler-selection-board.csv`: suggested triage decisions to prefill the decision log.",
     "- `compiler-page-boundary-queue.md` and `compiler-page-boundary-queue.csv`: PDF page-boundary and policy-bearing-page pull sheet.",
@@ -2110,6 +2343,7 @@ function main() {
   const accessReview = accessReviewRows(confirmed, potentialQueue);
   const pageBoundary = pageBoundaryRows(confirmed, potentialQueue, gapQueue);
   const chapterMatrix = chapterMatrixRows(confirmed, potentialQueue, gapQueue);
+  const gapPackets = gapPacketRows(gapQueue, confirmed, potentialQueue, pageBoundary, chapterMatrix);
   const personsAuthority = personsAuthorityRows(confirmed, personsData);
 
   writeCsv(paths.confirmedCsv, [
@@ -2179,6 +2413,31 @@ function main() {
     { key: "targetTerms", label: "Target terms" },
     { key: "sourcePools", label: "Source pools" }
   ], gapQueue);
+
+  writeCsv(paths.gapPacketsCsv, [
+    { key: "gapId", label: "Gap ID" },
+    { key: "priority", label: "Priority" },
+    { key: "status", label: "Status" },
+    { key: "gapLane", label: "Gap lane" },
+    { key: "gapTitle", label: "Gap title" },
+    { key: "sectionOrder", label: "Section order" },
+    { key: "section", label: "Section" },
+    { key: "itemType", label: "Item type" },
+    { key: "itemId", label: "Item ID" },
+    { key: "compilerNumber", label: "Compiler #" },
+    { key: "chapterOrLane", label: "Chapter or lane" },
+    { key: "date", label: "Date" },
+    { key: "title", label: "Title" },
+    { key: "naidOrTargets", label: "NAID or targets" },
+    { key: "sourcePool", label: "Source pool" },
+    { key: "pages", label: "Pages" },
+    { key: "accessOrStatus", label: "Access or status" },
+    { key: "issue", label: "Issue" },
+    { key: "closureQuestion", label: "Closure question" },
+    { key: "nextAction", label: "Next action" },
+    { key: "catalogUrl", label: "Catalog URL" },
+    { key: "pdfUrl", label: "PDF URL" }
+  ], gapPackets);
 
   writeCsv(paths.decisionLogCsv, [
     { key: "itemType", label: "Item type" },
@@ -2335,6 +2594,7 @@ function main() {
 
   writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, accessReview, pageBoundary, chapterMatrix, personsAuthority, selectionBoard);
   writeGapAnalysis(gapQueue, confirmed, potentialQueue, sourceAudit, accessReview, pageBoundary, chapterMatrix, selectionBoard);
+  writeGapPackets(gapPackets, gapQueue);
   writeSelectionBoard(selectionBoard);
   writeSourceNoteAudit(sourceAudit, confirmed, potentialQueue);
   writeAccessReview(accessReview);
@@ -2344,7 +2604,7 @@ function main() {
   writePriorityPack(gaps, confirmed, potentialQueue);
   writeDossiers(confirmed);
 
-  console.log(`Wrote compiler worksheet, CSVs, decision log, gap analysis, selection board, source-note audit, access review, page-boundary queue, chapter matrix, persons authority audit, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
+  console.log(`Wrote compiler worksheet, CSVs, decision log, gap analysis, gap packets, selection board, source-note audit, access review, page-boundary queue, chapter matrix, persons authority audit, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
 }
 
 main();

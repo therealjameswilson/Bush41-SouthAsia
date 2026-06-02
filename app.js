@@ -11,6 +11,7 @@ const releaseFilter = document.querySelector("#release-filter");
 const compilerFilter = document.querySelector("#compiler-filter");
 const recordsSummary = document.querySelector("#records-summary");
 const clearFilters = document.querySelector("#clear-filters");
+const chronologyLead = document.querySelector("#chronology-lead");
 const compilerRoot = document.querySelector("#compiler-root");
 const browseRoot = document.querySelector("#browse-root");
 const potentialRoot = document.querySelector("#potential-root");
@@ -37,6 +38,7 @@ let allDailyDiaryReferences = { dates: {} };
 
 const COMPILER_QUEUE_OPTIONS = [
   ["", "All compiler queues"],
+  ["released", "Released/declassified first"],
   ["declassification", "Declassification ledger"],
   ["presidential", "Presidential conversations"],
   ["source-note", "Source note gaps"],
@@ -89,6 +91,10 @@ function isReleasedDocument(record) {
   return /^(Declassified|Full|Partial|Unrestricted)$/i.test(record.releaseStatus || "");
 }
 
+function releasePriorityLabel(record) {
+  return isReleasedDocument(record) ? "Released chronology" : "Restricted review ledger";
+}
+
 function uniqueSorted(values) {
   return [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b));
 }
@@ -120,6 +126,10 @@ function recordUrl(record) {
 
 function releasedRecordCount(records) {
   return records.filter((record) => /full|declassified|partial/i.test(record.releaseStatus || "")).length;
+}
+
+function releasedChronology(records) {
+  return [...records].filter(isReleasedDocument).sort(byDateThenChapter);
 }
 
 function sourceLabel(record) {
@@ -237,6 +247,78 @@ function createBrowsePanel(title, detail, entries, actionForEntry) {
 
   panel.append(heading, copy, chips);
   return panel;
+}
+
+function createLeadStat(label, value, detail) {
+  const card = document.createElement("article");
+  card.className = "chronology-stat";
+
+  const valueNode = document.createElement("strong");
+  valueNode.textContent = value;
+
+  const labelNode = document.createElement("span");
+  labelNode.textContent = label;
+
+  const detailNode = document.createElement("p");
+  detailNode.textContent = detail;
+
+  card.append(valueNode, labelNode, detailNode);
+  return card;
+}
+
+function chronologySpanLabel(records) {
+  if (!records.length) return "No dated released records";
+  return `${formatDate(records[0].date)} to ${formatDate(records[records.length - 1].date)}`;
+}
+
+function renderChronologyLead(records, filteredRecords = records) {
+  if (!chronologyLead) return;
+
+  const released = releasedChronology(records);
+  const filteredReleased = releasedChronology(filteredRecords);
+  const review = records.filter(isDeclassificationQueue).sort(byDateThenChapter);
+  const releasedPages = pageSum(released);
+  const statusCounts = countBy(released, (record) => record.releaseStatus);
+  const chapterCounts = CHAPTER_ORDER.map((chapterName) => [
+    chapterName,
+    released.filter((record) => record.chapter?.name === chapterName).length
+  ]);
+
+  const heading = document.createElement("div");
+  heading.className = "chronology-lead-heading";
+  const title = document.createElement("h2");
+  title.textContent = "Start with the released chronology";
+  const detail = document.createElement("p");
+  detail.textContent =
+    "These declassified, full-release, and partial-release records are the first working sequence for selection, numbering, and source-note review. Restricted or possibly withheld material remains below as a separate review ledger.";
+  heading.append(title, detail);
+
+  const metrics = document.createElement("div");
+  metrics.className = "chronology-stats";
+  metrics.append(
+    createLeadStat("Released chronology", released.length.toString(), `${releasedPages} pages available for reading.`),
+    createLeadStat("Visible released set", filteredReleased.length.toString(), "Updates with search and filters."),
+    createLeadStat("Date span", chronologySpanLabel(released), "Sorted by meeting or document date across chapters."),
+    createLeadStat("Declassification ledger", review.length.toString(), "Restricted, possibly withheld, or partial-release records.")
+  );
+
+  const actions = document.createElement("div");
+  actions.className = "chronology-actions";
+  actions.append(
+    createDataChip("Released only", released.length, () => applyRecordFilters({ compilerQueue: "released" })),
+    ...statusCounts.map(([status, count]) =>
+      createDataChip(status, count, () => applyRecordFilters({ release: status }))
+    ),
+    createDataChip("Declassification ledger", review.length, () => applyRecordFilters({ compilerQueue: "declassification" }))
+  );
+
+  const chapters = document.createElement("p");
+  chapters.className = "chronology-chapters";
+  chapters.textContent = `Released chapter split: ${chapterCounts
+    .map(([chapterName, count]) => `${chapterName} ${count}`)
+    .join(" / ")}`;
+
+  chronologyLead.replaceChildren(heading, metrics, actions, chapters);
 }
 
 function scrollToPotential() {
@@ -837,6 +919,7 @@ function isPresidentialConversation(record) {
 
 function matchesCompilerQueue(record, queue) {
   if (!queue) return true;
+  if (queue === "released") return isReleasedDocument(record);
   if (queue === "declassification") return isDeclassificationQueue(record);
   if (queue === "presidential") return isPresidentialConversation(record);
   if (queue === "source-note") return !hasSourceNote(record);
@@ -1504,7 +1587,8 @@ function createCompilerActionPanel(record) {
 
 function createRecordRow(record) {
   const row = document.createElement("article");
-  row.className = "record-row";
+  row.className = `record-row ${isReleasedDocument(record) ? "record-row-released" : "record-row-review"}`;
+  row.dataset.releasePriority = releasePriorityLabel(record);
   row.id = recordAnchorId(record);
 
   const dateStack = document.createElement("div");
@@ -1814,6 +1898,7 @@ function renderRecords(records) {
 function updateRecordsView() {
   const filtered = filterRecords(allRecords);
   updateSummary(filtered);
+  renderChronologyLead(allRecords, filtered);
   renderRecords(filtered);
   renderCompilerDesk(allRecords);
 }

@@ -787,6 +787,87 @@ footer {
   line-height: 1.6;
 }
 
+.chronology-lead {
+  display: grid;
+  gap: 14px;
+  margin: 0 0 24px;
+}
+
+.chronology-lead-heading {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.56fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: end;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--navy);
+}
+
+.chronology-lead-heading h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3.8vw, 3rem);
+}
+
+.chronology-lead-heading p,
+.chronology-chapters {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.chronology-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.chronology-stat {
+  min-height: auto;
+  padding: 15px;
+  background: rgba(255, 253, 248, 0.82);
+  border-left: 5px solid var(--green);
+  box-shadow: none;
+}
+
+.chronology-stat strong {
+  display: block;
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.2rem, 2.4vw, 1.8rem);
+  line-height: 1.08;
+}
+
+.chronology-stat span {
+  display: block;
+  margin-top: 8px;
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.chronology-stat p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.chronology-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chronology-actions .data-chip {
+  min-height: 36px;
+  background: rgba(255, 253, 248, 0.78);
+}
+
+.chronology-chapters {
+  font-size: 0.92rem;
+  font-weight: 900;
+}
+
 .records-tools {
   display: grid;
   grid-template-columns: minmax(260px, 1.3fr) repeat(4, minmax(140px, 0.7fr)) auto;
@@ -1238,6 +1319,14 @@ footer {
     box-shadow 160ms ease;
 }
 
+.record-row-released {
+  border-left: 5px solid var(--green);
+}
+
+.record-row-review {
+  border-left: 5px solid var(--gold);
+}
+
 .record-row:hover {
   border-color: rgba(20, 61, 74, 0.34);
   box-shadow: 0 16px 32px rgba(28, 37, 47, 0.1);
@@ -1655,6 +1744,7 @@ footer a {
   .chapter-grid,
   .source-list,
   .compiler-metrics,
+  .chronology-stats,
   .potential-metrics,
   .gap-metrics,
   .potential-list,
@@ -1688,9 +1778,15 @@ footer a {
 @media (max-width: 880px) {
   .site-header,
   footer,
+  .chronology-lead-heading,
   .section-heading {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .chronology-lead-heading {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   .hero {
@@ -1732,6 +1828,7 @@ footer a {
   .browse-root,
   .brief dl,
   .compiler-queues,
+  .chronology-stats,
   .timeline li {
     grid-template-columns: 1fr;
   }

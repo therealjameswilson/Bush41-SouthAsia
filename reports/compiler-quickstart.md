@@ -1,6 +1,6 @@
 # FRUS South Asia Compiler Quickstart
 
-Generated: 2026-06-01
+Generated: 2026-06-02
 
 ## Start Here
 
@@ -18,6 +18,8 @@ Generated: 2026-06-01
 - Selection board CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-selection-board.csv?v=selection-20260601
 - Page-boundary queue: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-page-boundary-queue.md?v=boundaries-20260601
 - Page-boundary queue CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-page-boundary-queue.csv?v=boundaries-20260601
+- Critical page extraction notes: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-critical-page-extractions.md?v=critical-pages-20260602
+- Critical page extraction CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-critical-page-extractions.csv?v=critical-pages-20260602
 - Chapter research matrix: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-chapter-matrix.md?v=matrix-20260601
 - Chapter research matrix CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-chapter-matrix.csv?v=matrix-20260601
 - Persons authority audit: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-persons-authority.md?v=persons-20260601
@@ -53,6 +55,9 @@ Generated: 2026-06-01
 - Rows requiring action before final selection: 101
 - PDF items queued for page-boundary/source-extraction review: 80
 - Critical/high page-boundary items: 58
+- Critical page-extraction PDFs processed: 11
+- Critical page-extraction PDFs requiring OCR or manual review: 11
+- Administrative-marker-only PDFs in critical extraction pass: 3
 - Confirmed records needing access/excision decisions: 39
 - Potential leads queued for promotion/access/context decisions: 40
 

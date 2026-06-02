@@ -46,6 +46,7 @@ node scripts/incorporate-daily-diary-references.js
 node scripts/remediate-compiler-gaps.js
 node scripts/normalize-source-notes.js
 node scripts/generate-compiler-worksheet.js
+node scripts/extract-critical-page-boundaries.js
 ```
 
 `remediate-compiler-gaps.js` measures any confirmed zero-page records that have
@@ -83,9 +84,24 @@ next-action review lanes, creates
 `reports/compiler-selection-board.md` for suggested triage decisions to prefill
 the decision log, creates
 `reports/compiler-page-boundary-queue.md` for PDF boundary and policy-bearing
-page review, creates
+page review, while `scripts/extract-critical-page-boundaries.js` creates
+`reports/compiler-critical-page-extractions.md` and
+`reports/compiler-critical-page-extractions.csv` as a first-pass page-finding
+aid for Critical boundary rows, creates
 `reports/compiler-persons-authority.md` for participant-to-Persons authority
 coverage and institutional-body separation, creates
 `reports/compiler-priority-dossiers.md` for the highest-risk first-pass lanes,
 and creates one Markdown dossier per confirmed record under
 `reports/compiler-dossiers/`.
+
+To refresh only the Critical page extraction aid:
+
+```sh
+node scripts/extract-critical-page-boundaries.js
+```
+`extract-critical-page-boundaries.js` runs the first Critical page-boundary rows
+through `pdfinfo` and `pdftotext`, then writes
+`reports/compiler-critical-page-extractions.md` and
+`reports/compiler-critical-page-extractions.csv` with measured page counts,
+substantive text-layer status, administrative-marker-only flags, and OCR/manual
+review recommendations.

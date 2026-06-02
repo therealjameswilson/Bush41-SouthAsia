@@ -4,7 +4,7 @@ Generated: 2026-06-02
 
 This is the short first pass through the South Asia decision cockpit. It deliberately limits the 110-row cockpit to a phase-balanced action list a compiler can work in one sitting.
 
-Use the CSV companion as the marking sheet. Close a row only when the decision question has an answer, the `Done when` condition is met, and the decision is copied into `compiler-decision-log.csv` or the equivalent compiler notes.
+Use `reports/compiler-first-day-decision-log.csv` as the fillable marking sheet. Close a row only when the decision question has an answer, the `Done when` condition is met, and the decision is copied into `compiler-decision-log.csv` or the equivalent compiler notes.
 
 ## Scope
 
@@ -12,6 +12,7 @@ Use the CSV companion as the marking sheet. Close a row only when the decision q
 - Critical/high cockpit rows: 78
 - First-day actions: 26
 - CSV companion: `reports/compiler-first-day-actions.csv`
+- Fillable decision-log starter: `reports/compiler-first-day-decision-log.csv`
 
 ## Phase Counts In Full Cockpit
 

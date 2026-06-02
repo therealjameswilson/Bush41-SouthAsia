@@ -186,6 +186,7 @@ function main() {
     ["Declassified chronology", link("", "#records")],
     ["First-day compiler action packet", reportLink("compiler-first-day-actions.md")],
     ["First-day compiler action CSV", reportLink("compiler-first-day-actions.csv")],
+    ["First-day fillable decision log", reportLink("compiler-first-day-decision-log.csv")],
     ["Released/declassified chronology packet", reportLink("compiler-declassified-chronology.md")],
     ["Released/declassified chronology CSV", reportLink("compiler-declassified-chronology.csv")],
     ["Compiler workbench", link("", "#workbench")],

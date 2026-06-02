@@ -10,6 +10,7 @@ Version token for live links: `compiler-live-20260602`
 - Declassified chronology: https://therealjameswilson.github.io/Bush41-SouthAsia/?v=compiler-live-20260602#records
 - First-day compiler action packet: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-first-day-actions.md?v=compiler-live-20260602
 - First-day compiler action CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-first-day-actions.csv?v=compiler-live-20260602
+- First-day fillable decision log: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-first-day-decision-log.csv?v=compiler-live-20260602
 - Released/declassified chronology packet: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-declassified-chronology.md?v=compiler-live-20260602
 - Released/declassified chronology CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-declassified-chronology.csv?v=compiler-live-20260602
 - Compiler workbench: https://therealjameswilson.github.io/Bush41-SouthAsia/?v=compiler-live-20260602#workbench

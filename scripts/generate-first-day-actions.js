@@ -8,7 +8,8 @@ const dataDir = path.join(repoRoot, "data");
 const paths = {
   cockpit: path.join(dataDir, "compiler-decision-cockpit.json"),
   outputMarkdown: path.join(reportsDir, "compiler-first-day-actions.md"),
-  outputCsv: path.join(reportsDir, "compiler-first-day-actions.csv")
+  outputCsv: path.join(reportsDir, "compiler-first-day-actions.csv"),
+  outputDecisionLogCsv: path.join(reportsDir, "compiler-first-day-decision-log.csv")
 };
 
 const PRIORITY_RANK = { Critical: 0, High: 1, Medium: 2, Low: 3 };
@@ -167,6 +168,42 @@ function normalizeAction(row, index) {
   };
 }
 
+function decisionLogRows(firstDayRows) {
+  return firstDayRows.map((row) => ({
+    actionNumber: row.actionNumber,
+    decision: "",
+    decisionStatus: "Open",
+    decisionDate: "",
+    owner: "",
+    decisionRationale: "",
+    followUp: "",
+    evidenceChecked: "",
+    sourceNoteChecked: "",
+    pageBoundaryChecked: "",
+    accessOrExcisionsChecked: "",
+    doneWhen: row.doneWhen,
+    suggestedDecision: row.suggestedDecision,
+    priority: row.priority,
+    phase: row.phase,
+    item: row.item,
+    itemType: row.itemType,
+    chapterOrLane: row.chapterOrLane,
+    date: row.date,
+    title: row.title,
+    releaseOrStatus: row.releaseOrStatus,
+    pages: row.pages,
+    naidOrTargets: row.naidOrTargets,
+    decisionQuestion: row.decisionQuestion,
+    nextAction: row.nextAction,
+    whyThisMatters: row.whyThisMatters,
+    linkedSheets: row.linkedSheets,
+    sourceNote: row.sourceNote,
+    catalogUrl: row.catalogUrl,
+    pdfUrl: row.pdfUrl,
+    openLink: row.openLink
+  }));
+}
+
 function main() {
   fs.mkdirSync(reportsDir, { recursive: true });
   const cockpit = readJson(paths.cockpit);
@@ -199,6 +236,41 @@ function main() {
   ];
   writeCsv(paths.outputCsv, columns, firstDay);
 
+  const decisionColumns = [
+    { key: "actionNumber", label: "Action #" },
+    { key: "decision", label: "Decision (Select / Exclude / Defer / Cite only / Resolved)" },
+    { key: "decisionStatus", label: "Decision status" },
+    { key: "decisionDate", label: "Decision date" },
+    { key: "owner", label: "Owner" },
+    { key: "decisionRationale", label: "Decision rationale" },
+    { key: "followUp", label: "Follow-up" },
+    { key: "evidenceChecked", label: "Evidence checked (Y/N)" },
+    { key: "sourceNoteChecked", label: "Source note checked (Y/N)" },
+    { key: "pageBoundaryChecked", label: "Page boundary checked (Y/N)" },
+    { key: "accessOrExcisionsChecked", label: "Access/excisions checked (Y/N)" },
+    { key: "doneWhen", label: "Done when" },
+    { key: "suggestedDecision", label: "Suggested decision" },
+    { key: "priority", label: "Priority" },
+    { key: "phase", label: "Phase" },
+    { key: "item", label: "Item" },
+    { key: "itemType", label: "Item type" },
+    { key: "chapterOrLane", label: "Chapter/lane" },
+    { key: "date", label: "Date" },
+    { key: "title", label: "Title" },
+    { key: "releaseOrStatus", label: "Release/status" },
+    { key: "pages", label: "Pages" },
+    { key: "naidOrTargets", label: "NAID/targets" },
+    { key: "decisionQuestion", label: "Decision question" },
+    { key: "nextAction", label: "Next action" },
+    { key: "whyThisMatters", label: "Why this matters" },
+    { key: "linkedSheets", label: "Linked sheets" },
+    { key: "sourceNote", label: "Source note/source cue" },
+    { key: "catalogUrl", label: "Catalog URL" },
+    { key: "pdfUrl", label: "PDF URL" },
+    { key: "openLink", label: "Open link" }
+  ];
+  writeCsv(paths.outputDecisionLogCsv, decisionColumns, decisionLogRows(firstDay));
+
   const lines = [
     "# First-Day Compiler Action Packet",
     "",
@@ -206,7 +278,7 @@ function main() {
     "",
     "This is the short first pass through the South Asia decision cockpit. It deliberately limits the 110-row cockpit to a phase-balanced action list a compiler can work in one sitting.",
     "",
-    "Use the CSV companion as the marking sheet. Close a row only when the decision question has an answer, the `Done when` condition is met, and the decision is copied into `compiler-decision-log.csv` or the equivalent compiler notes.",
+    "Use `reports/compiler-first-day-decision-log.csv` as the fillable marking sheet. Close a row only when the decision question has an answer, the `Done when` condition is met, and the decision is copied into `compiler-decision-log.csv` or the equivalent compiler notes.",
     "",
     "## Scope",
     "",
@@ -214,6 +286,7 @@ function main() {
     `- Critical/high cockpit rows: ${criticalHigh.length}`,
     `- First-day actions: ${firstDay.length}`,
     `- CSV companion: \`reports/compiler-first-day-actions.csv\``,
+    `- Fillable decision-log starter: \`reports/compiler-first-day-decision-log.csv\``,
     "",
     "## Phase Counts In Full Cockpit",
     "",
@@ -262,6 +335,7 @@ function main() {
   fs.writeFileSync(paths.outputMarkdown, `${lines.join("\n").trim()}\n`);
   console.log(`Wrote ${path.relative(repoRoot, paths.outputMarkdown)}`);
   console.log(`Wrote ${path.relative(repoRoot, paths.outputCsv)}`);
+  console.log(`Wrote ${path.relative(repoRoot, paths.outputDecisionLogCsv)}`);
 }
 
 main();

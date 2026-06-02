@@ -129,10 +129,12 @@ declassified, and partial-release chronology with source-note candidates,
 full provenance trails, direct Catalog/PDF links, and Daily Diary/Backup
 cross-references.
 `generate-first-day-actions.js` writes
-`reports/compiler-first-day-actions.md` and
-`reports/compiler-first-day-actions.csv` as a short phase-balanced action queue
-distilled from the 110-row decision cockpit, with decision questions, next
-actions, done-when criteria, evidence sheets, and Catalog/PDF links.
+`reports/compiler-first-day-actions.md`,
+`reports/compiler-first-day-actions.csv`, and
+`reports/compiler-first-day-decision-log.csv` as a short phase-balanced action
+queue distilled from the 110-row decision cockpit, with a fillable first-day
+decision log, decision questions, next actions, done-when criteria, evidence
+sheets, and Catalog/PDF links.
 `generate-compiler-quickstart.js` writes `reports/compiler-quickstart.md` from
 the current JSON/CSV artifacts so the compiler handoff links and counts can be
 refreshed without hand-editing cache-busters.

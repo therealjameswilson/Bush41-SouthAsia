@@ -1,6 +1,6 @@
 # FRUS South Asia Priority Dossier Pack
 
-Generated: 2026-06-02T01:52:27.757Z
+Generated: 2026-06-02T10:02:08.126Z
 
 This compact pack is built for the compiler's first pass through the hardest selection and provenance questions. It groups the highest-priority gaps with the confirmed chronology records and potential leads that currently match each lane.
 

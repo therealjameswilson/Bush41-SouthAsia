@@ -1,6 +1,6 @@
 # FRUS South Asia Source-Note Finalization Packet
 
-Generated: 2026-06-02T01:52:27.755Z
+Generated: 2026-06-02T10:02:08.123Z
 
 This packet turns the mechanically clean source-note audit into a citation-sheet finalization queue. It tells the compiler what to open, what to extract from the linked PDF or citation sheet/title page, what to keep in provenance, and what editorial source-note decision remains before final numbering.
 

@@ -31,6 +31,7 @@ let allCompilerGaps = [];
 let allDecisionCockpit = [];
 let allSelectionBoard = [];
 let allSourceNoteFinalization = [];
+let allPageBoundaryQueue = [];
 let allDailyDiaryReferences = { dates: {} };
 
 const COMPILER_QUEUE_OPTIONS = [
@@ -1157,6 +1158,21 @@ function sourceFinalizationRowForRecord(record) {
   return allSourceNoteFinalization.find((row) => rowMatchesRecord(row, record));
 }
 
+function pageBoundaryRowForRecord(record) {
+  return allPageBoundaryQueue.find((row) => rowMatchesRecord(row, record));
+}
+
+function boundaryActionText(boundary) {
+  const action = boundary?.nextAction || "";
+  if (["Critical", "High"].includes(boundary?.priorityTier)) return action;
+  return action.replace(/\s+Gap cue:.*$/i, "");
+}
+
+function boundaryMatchedGapsText(boundary) {
+  if (!["Critical", "High"].includes(boundary?.priorityTier)) return "";
+  return boundary.matchedGaps?.length ? boundary.matchedGaps.join("; ") : "";
+}
+
 function showCopyFallback(text) {
   document.querySelector(".copy-fallback")?.remove();
 
@@ -1230,6 +1246,7 @@ function dailyDiarySummary(record) {
 function compilerActionSummary(record) {
   const selection = selectionRowForRecord(record);
   const source = sourceFinalizationRowForRecord(record);
+  const boundary = pageBoundaryRowForRecord(record);
   const lines = [];
 
   if (selection) {
@@ -1238,6 +1255,17 @@ function compilerActionSummary(record) {
       selection.selectionLane ? `Selection lane: ${selection.selectionLane}` : "",
       selection.nextAction ? `Selection next action: ${selection.nextAction}` : "",
       selection.rationale ? `Selection rationale: ${selection.rationale}` : ""
+    );
+  }
+
+  if (boundary) {
+    lines.push(
+      `Page-boundary priority: ${boundary.priorityTier || "Review"}`,
+      boundary.reviewOrder ? `Page-boundary review order: ${boundary.reviewOrder}` : "",
+      boundary.boundaryQuestion ? `Boundary question: ${boundary.boundaryQuestion}` : "",
+      boundaryActionText(boundary) ? `Boundary next action: ${boundaryActionText(boundary)}` : "",
+      boundary.pageBasis ? `Page basis: ${boundary.pageBasis}` : "",
+      boundaryMatchedGapsText(boundary) ? `Matched gaps: ${boundaryMatchedGapsText(boundary)}` : ""
     );
   }
 
@@ -1342,7 +1370,8 @@ function createCopyPacketButton(record) {
 function createCompilerActionPanel(record) {
   const selection = selectionRowForRecord(record);
   const source = sourceFinalizationRowForRecord(record);
-  if (!selection && !source) return null;
+  const boundary = pageBoundaryRowForRecord(record);
+  if (!selection && !source && !boundary) return null;
 
   const panel = document.createElement("div");
   panel.className = "record-compiler-action";
@@ -1367,6 +1396,29 @@ function createCompilerActionPanel(record) {
     panel.append(decision, detail);
   }
 
+  if (boundary) {
+    const boundaryLine = document.createElement("p");
+    boundaryLine.className = "record-compiler-decision";
+    const label = document.createElement("span");
+    label.textContent = "Page boundary";
+    const value = document.createElement("strong");
+    value.textContent = [boundary.priorityTier, boundary.reviewOrder ? `#${boundary.reviewOrder}` : ""]
+      .filter(Boolean)
+      .join(" ");
+    boundaryLine.append(label, value);
+
+    const detail = document.createElement("p");
+    detail.className = "record-compiler-detail";
+    detail.textContent = boundary.boundaryQuestion || boundary.nextAction || "Verify page boundaries before final numbering.";
+
+    const action = document.createElement("p");
+    action.className = "record-compiler-detail";
+    action.textContent = boundaryActionText(boundary) || boundary.pageBasis || "";
+
+    panel.append(boundaryLine, detail);
+    if (action.textContent) panel.append(action);
+  }
+
   if (source) {
     const finalization = document.createElement("p");
     finalization.className = "record-compiler-decision";
@@ -1386,6 +1438,7 @@ function createCompilerActionPanel(record) {
   links.className = "record-compiler-action-links";
   for (const [href, label] of [
     ["reports/compiler-selection-board.md?v=compiler-actions-20260602b", "Selection Board"],
+    ["reports/compiler-page-boundary-queue.md?v=compiler-boundaries-20260602", "Page Boundaries"],
     ["reports/compiler-source-note-finalization.md?v=compiler-actions-20260602b", "Source Finalization"]
   ]) {
     const link = document.createElement("a");
@@ -1764,6 +1817,7 @@ async function init() {
     allDecisionCockpit = window.COMPILER_DECISION_COCKPIT || (await loadDecisionCockpit());
     allSelectionBoard = window.COMPILER_SELECTION_BOARD || (await loadSelectionBoard());
     allSourceNoteFinalization = window.COMPILER_SOURCE_NOTE_FINALIZATION || (await loadSourceNoteFinalization());
+    allPageBoundaryQueue = window.COMPILER_PAGE_BOUNDARY_QUEUE || (await loadPageBoundaryQueue());
     allDailyDiaryReferences = window.DAILY_DIARY_REFERENCES || (await loadDailyDiaryReferences());
     setChapterCounts(allRecords);
     populateFilters(allRecords);
@@ -1815,6 +1869,12 @@ async function loadSelectionBoard() {
 
 async function loadSourceNoteFinalization() {
   const response = await fetch("data/compiler-source-note-finalization.json");
+  if (!response.ok) return [];
+  return response.json();
+}
+
+async function loadPageBoundaryQueue() {
+  const response = await fetch("data/compiler-page-boundary-queue.json");
   if (!response.ok) return [];
   return response.json();
 }

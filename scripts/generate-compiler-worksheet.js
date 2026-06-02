@@ -95,6 +95,8 @@ const paths = {
   accessReview: path.join(reportsDir, "compiler-access-review.md"),
   pageBoundaryCsv: path.join(reportsDir, "compiler-page-boundary-queue.csv"),
   pageBoundary: path.join(reportsDir, "compiler-page-boundary-queue.md"),
+  pageBoundaryJson: path.join(dataDir, "compiler-page-boundary-queue.json"),
+  pageBoundaryScript: path.join(dataDir, "compiler-page-boundary-queue.js"),
   chapterMatrixCsv: path.join(reportsDir, "compiler-chapter-matrix.csv"),
   chapterMatrix: path.join(reportsDir, "compiler-chapter-matrix.md"),
   personsAuthorityCsv: path.join(reportsDir, "compiler-persons-authority.csv"),
@@ -3123,6 +3125,7 @@ function main() {
   writeSourceNoteFinalization(sourceNoteFinalization);
   writeAccessReview(accessReview);
   writePageBoundaryQueue(pageBoundary);
+  writeBrowserData(paths.pageBoundaryJson, paths.pageBoundaryScript, "COMPILER_PAGE_BOUNDARY_QUEUE", pageBoundary);
   writeChapterMatrix(chapterMatrix);
   writePersonsAuthority(personsAuthority, personsData);
   writePriorityPack(gaps, confirmed, potentialQueue);

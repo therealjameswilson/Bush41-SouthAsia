@@ -1,6 +1,6 @@
 # Compiler Dossier Index
 
-Generated: 2026-06-02T01:52:27.787Z
+Generated: 2026-06-02T10:02:08.171Z
 
 One Markdown dossier per confirmed record. Each dossier preserves the clean source note, working provenance, links, Daily Diary/Backup caveat, compiler risks, and selection questions.
 

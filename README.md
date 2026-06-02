@@ -135,6 +135,11 @@ cross-references.
 queue distilled from the 110-row decision cockpit, with a fillable first-day
 decision log, decision questions, next actions, done-when criteria, evidence
 sheets, Catalog/PDF links, and browser data for the workbench action panel.
+The homepage workbench also exposes a Source-Note Finalization Desk backed by
+`data/compiler-source-note-finalization.json` and
+`data/compiler-citation-sheet-extractions.json`, with lane counts, citation
+marker status, target FRUS-style Source Notes, provenance copy controls, and
+links to the full finalization and citation-sheet packets.
 `generate-compiler-quickstart.js` writes `reports/compiler-quickstart.md` from
 the current JSON/CSV artifacts so the compiler handoff links and counts can be
 refreshed without hand-editing cache-busters.

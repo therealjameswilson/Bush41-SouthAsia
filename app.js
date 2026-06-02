@@ -20,6 +20,7 @@ const chapterDocket = document.querySelector("#chapter-docket");
 const priorityLeads = document.querySelector("#priority-leads");
 const decisionCockpitRoot = document.querySelector("#decision-cockpit");
 const firstDayActionsRoot = document.querySelector("#first-day-actions");
+const sourceNoteFinalizationRoot = document.querySelector("#source-note-finalization");
 const researchLanes = document.querySelector("#research-lanes");
 const workbenchDateSpan = document.querySelector("#workbench-date-span");
 const workbenchReleasedCount = document.querySelector("#workbench-released-count");
@@ -38,6 +39,7 @@ let allPageBoundaryQueue = [];
 let allFirstDayActions = [];
 let allDailyDiaryReferences = { dates: {} };
 let selectedFirstDayPhase = "";
+let selectedSourceNoteLane = "";
 
 const FIRST_DAY_PHASE_ORDER = [
   "Close gap",
@@ -46,6 +48,15 @@ const FIRST_DAY_PHASE_ORDER = [
   "Review excisions",
   "Finalize source note",
   "Close chapter lane"
+];
+
+const SOURCE_NOTE_LANE_ORDER = [
+  "Citation sheet/title-page verification",
+  "Partial-release/excision wording",
+  "Access/source-note wording decision",
+  "Page-boundary citation verification",
+  "Promotion citation draft",
+  "Final editor source-note check"
 ];
 
 const COMPILER_QUEUE_OPTIONS = [
@@ -656,6 +667,178 @@ function renderFirstDayActions(actions) {
   firstDayActionsRoot.append(metrics, filters, list);
 }
 
+function sourceNoteLaneCounts(rows) {
+  const counts = new Map(rows.map((row) => [row.finalizationLane, 0]));
+  for (const row of rows) {
+    counts.set(row.finalizationLane, (counts.get(row.finalizationLane) || 0) + 1);
+  }
+  const ordered = SOURCE_NOTE_LANE_ORDER
+    .filter((lane) => counts.has(lane))
+    .map((lane) => [lane, counts.get(lane)]);
+  const remaining = [...counts.entries()]
+    .filter(([lane]) => !SOURCE_NOTE_LANE_ORDER.includes(lane))
+    .sort((a, b) => a[0].localeCompare(b[0]));
+  return [...ordered, ...remaining];
+}
+
+function sourceNoteRowSort(a, b) {
+  return (
+    (a.finalizationRank || 99) - (b.finalizationRank || 99) ||
+    String(a.date || "9999").localeCompare(String(b.date || "9999")) ||
+    String(a.compilerNumber || "").localeCompare(String(b.compilerNumber || "")) ||
+    String(a.title || "").localeCompare(String(b.title || ""))
+  );
+}
+
+function sourceNoteNeedsDecision(row) {
+  return !/^Final editor source-note check$/i.test(row.finalizationLane || "");
+}
+
+function sourceNoteOpenLink(row) {
+  return row.pdfUrl || row.catalogUrl || "";
+}
+
+function citationExtractionForSourceRow(row) {
+  return allCitationSheetExtractions.find((extraction) =>
+    (row.compilerNumber && extraction.compilerNumber === row.compilerNumber) ||
+    (row.naid && String(extraction.naid) === String(row.naid))
+  );
+}
+
+function updateCopyButton(button, copied) {
+  const original = button.dataset.label || button.textContent;
+  button.dataset.label = original;
+  button.textContent = copied ? "Copied" : "Copy failed";
+  button.dataset.copied = copied ? "true" : "false";
+  window.setTimeout(() => {
+    button.textContent = original;
+    button.removeAttribute("data-copied");
+  }, 1600);
+}
+
+function createSourceNoteCopyButton(label, text) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "source-note-copy";
+  button.textContent = label;
+  button.disabled = !text;
+  button.addEventListener("click", async () => {
+    const copied = await copyText(text || "");
+    updateCopyButton(button, copied);
+  });
+  return button;
+}
+
+function createSourceNoteFinalizationItem(row) {
+  const item = document.createElement("li");
+  item.className = "source-note-item";
+
+  const meta = document.createElement("span");
+  meta.className = "source-note-meta";
+  meta.textContent = [
+    row.compilerNumber ? `Doc ${row.compilerNumber}` : row.itemType,
+    row.chapterOrLane,
+    row.date ? shortDate(row.date) : "",
+    row.releaseOrStatus,
+    row.finalizationLane
+  ].filter(Boolean).join(" / ");
+
+  const title = document.createElement(sourceNoteOpenLink(row) ? "a" : "strong");
+  title.className = "source-note-title";
+  if (sourceNoteOpenLink(row)) {
+    title.href = sourceNoteOpenLink(row);
+    title.rel = "noreferrer";
+  }
+  title.textContent = row.title || "Untitled source-note row";
+
+  const task = document.createElement("p");
+  task.className = "source-note-task";
+  task.textContent = row.citationSheetTask || row.evidenceBasis || "Confirm source-note wording against the source item.";
+
+  const target = document.createElement("p");
+  target.className = "source-note-target";
+  const targetLabel = document.createElement("span");
+  targetLabel.textContent = "Target Source Note:";
+  target.append(targetLabel, document.createTextNode(` ${row.frusStyleTarget || row.currentSourceNote || "No target note staged."}`));
+
+  const extraction = citationExtractionForSourceRow(row);
+  if (extraction) {
+    const marker = document.createElement("p");
+    marker.className = "source-note-marker";
+    marker.textContent = [
+      extraction.citationMarkerFound ? `Citation marker: ${extraction.citationMarkerFound}` : "",
+      extraction.classification ? `Classification: ${extraction.classification}` : "",
+      extraction.folderIdNumber ? `OA/ID ${extraction.folderIdNumber}` : extraction.oaIdNumber ? `OA/ID ${extraction.oaIdNumber}` : ""
+    ].filter(Boolean).join(" / ");
+    item.append(meta, title, task, target, marker);
+  } else {
+    item.append(meta, title, task, target);
+  }
+
+  const actions = document.createElement("div");
+  actions.className = "source-note-actions";
+  actions.append(
+    createSourceNoteCopyButton("Copy Source Note", row.frusStyleTarget || row.currentSourceNote || ""),
+    createSourceNoteCopyButton("Copy Provenance", row.provenanceNote || "")
+  );
+  item.append(actions);
+
+  return item;
+}
+
+function setSourceNoteLane(lane = "") {
+  selectedSourceNoteLane = lane;
+  renderSourceNoteFinalization(allSourceNoteFinalization);
+}
+
+function renderSourceNoteFinalization(rows) {
+  if (!sourceNoteFinalizationRoot) return;
+  sourceNoteFinalizationRoot.replaceChildren();
+
+  if (!rows.length) {
+    const empty = document.createElement("p");
+    empty.className = "empty-chapter";
+    empty.textContent = "No source-note finalization rows are currently staged.";
+    sourceNoteFinalizationRoot.append(empty);
+    return;
+  }
+
+  const sortedRows = [...rows].sort(sourceNoteRowSort);
+  const laneCounts = sourceNoteLaneCounts(rows);
+  const markerRows = allCitationSheetExtractions.filter((row) => row.markerFound || row.citationMarkerFound === "Yes");
+  const activeRows = selectedSourceNoteLane
+    ? sortedRows.filter((row) => row.finalizationLane === selectedSourceNoteLane)
+    : sortedRows.slice(0, 8);
+
+  const metrics = document.createElement("div");
+  metrics.className = "source-note-metrics";
+  metrics.append(
+    createMetric("Finalization rows", rows.length.toString(), "Confirmed records and potential leads with staged source-note tasks."),
+    createMetric("Need decisions", rows.filter(sourceNoteNeedsDecision).length.toString(), "Rows still requiring access, citation-sheet, page-boundary, promotion, or excision choices."),
+    createMetric("Citation PDFs", allCitationSheetExtractions.length.toString(), "Released Memcon/Telcon PDFs processed for citation-marker pages."),
+    createMetric("Markers found", markerRows.length.toString(), "Rows with mechanically extracted citation-sheet markers.")
+  );
+
+  const filters = document.createElement("div");
+  filters.className = "source-note-lanes";
+  const allButton = createDataChip("First 8", rows.length, () => setSourceNoteLane(""));
+  if (!selectedSourceNoteLane) allButton.classList.add("is-active");
+  filters.append(allButton);
+  for (const [lane, count] of laneCounts) {
+    const button = createDataChip(lane, count, () => setSourceNoteLane(lane));
+    if (selectedSourceNoteLane === lane) button.classList.add("is-active");
+    filters.append(button);
+  }
+
+  const list = document.createElement("ol");
+  list.className = "source-note-list";
+  for (const row of activeRows) {
+    list.append(createSourceNoteFinalizationItem(row));
+  }
+
+  sourceNoteFinalizationRoot.append(metrics, filters, list);
+}
+
 function renderWorkbench(
   records,
   potentialDocuments = allPotentialDocuments,
@@ -693,6 +876,7 @@ function renderWorkbench(
 
   renderDecisionCockpit(decisionCockpit);
   renderFirstDayActions(firstDayActions);
+  renderSourceNoteFinalization(allSourceNoteFinalization);
 
   if (researchLanes) {
     const presidential = records.filter(isPresidentialConversation);

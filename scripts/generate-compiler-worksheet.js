@@ -80,6 +80,8 @@ const paths = {
   selectionBoard: path.join(reportsDir, "compiler-selection-board.md"),
   sourceNoteAuditCsv: path.join(reportsDir, "compiler-source-note-audit.csv"),
   sourceNoteAudit: path.join(reportsDir, "compiler-source-note-audit.md"),
+  sourceNoteFinalizationCsv: path.join(reportsDir, "compiler-source-note-finalization.csv"),
+  sourceNoteFinalization: path.join(reportsDir, "compiler-source-note-finalization.md"),
   accessReviewCsv: path.join(reportsDir, "compiler-access-review.csv"),
   accessReview: path.join(reportsDir, "compiler-access-review.md"),
   pageBoundaryCsv: path.join(reportsDir, "compiler-page-boundary-queue.csv"),
@@ -763,6 +765,174 @@ function writeSourceNoteAudit(rows, confirmed, potentialQueue) {
   ];
 
   fs.writeFileSync(paths.sourceNoteAudit, `${lines.join("\n").trim()}\n`);
+}
+
+function sourceNoteFinalizationRank(row) {
+  const lane = row.editorialLane || "";
+  if (/Title\/source verification/i.test(lane)) return 1;
+  if (/Excisions check/i.test(lane)) return 2;
+  if (/Access-status decision/i.test(lane)) return 3;
+  if (/Page-boundary check/i.test(lane)) return 4;
+  if (/Promotion source-note draft/i.test(lane)) return 5;
+  return 6;
+}
+
+function sourceNoteFinalizationLane(row) {
+  const lane = row.editorialLane || "";
+  if (/Title\/source verification/i.test(lane)) return "Citation sheet/title-page verification";
+  if (/Excisions check/i.test(lane)) return "Partial-release/excision wording";
+  if (/Access-status decision/i.test(lane)) return "Access/source-note wording decision";
+  if (/Page-boundary check/i.test(lane)) return "Page-boundary citation verification";
+  if (/Promotion source-note draft/i.test(lane)) return "Promotion citation draft";
+  return "Final editor source-note check";
+}
+
+function sourceNoteEvidenceBasis(row) {
+  const text = plainText([row.sourceLocator, row.sourceNote, row.provenanceNote]);
+  if (/public papers|govinfo/i.test(text)) {
+    return "GovInfo/Public Papers text; use as selected public text only if editorially selected, otherwise keep as locator/context.";
+  }
+  if (/digital research room|memcons and telcons|presidential memcon|presidential telcon/i.test(text)) {
+    return "Bush Library Digital Research Room row plus NARA Catalog item/PDF; spot-check the PDF or citation sheet before final numbering.";
+  }
+  if (/h-files|national security review|national security directive|nsc\/dc|nsc meetings/i.test(text)) {
+    return "NARA Catalog H-Files metadata plus linked PDF; verify folder/item title, local identifier, access status, and any citation sheet/title page.";
+  }
+  if (/haass|gates|cheney|country files|working files|meeting files|subject files/i.test(text)) {
+    return "Staff-file Catalog metadata plus linked PDF; extract the final folder/item title and source location from the PDF/title page before promotion.";
+  }
+  return "Project provenance and Catalog link; verify against the linked source before final selection.";
+}
+
+function sourceNoteCitationTask(row) {
+  const finalLane = sourceNoteFinalizationLane(row);
+  if (finalLane === "Citation sheet/title-page verification") {
+    return "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.";
+  }
+  if (finalLane === "Partial-release/excision wording") {
+    return "Inspect the released PDF for excisions, then decide whether the visible Source Note should state partial release or whether the record is cite-only/deferred.";
+  }
+  if (finalLane === "Access/source-note wording decision") {
+    return "Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.";
+  }
+  if (finalLane === "Page-boundary citation verification") {
+    return "Confirm the exact selected page boundary and title before final numbering; do not rely on a folder-level title if only part of the PDF is selected.";
+  }
+  if (finalLane === "Promotion citation draft") {
+    return "If promoted, extract a publication-ready Source Note from the PDF/title page and move Catalog metadata, URLs, NAIDs, object filenames, and page-count basis to provenance.";
+  }
+  return "Final editor check: confirm the Source Note matches the selected text and that provenance retains all working identifiers.";
+}
+
+function sourceNoteStyleTarget(row) {
+  const status = row.releaseOrStatus || "";
+  const accessSentence = /partial/i.test(status)
+    ? "Partial release."
+    : isRestrictedStatus(status)
+      ? `Access restriction: ${status}.`
+      : /full|unrestricted|declassified/i.test(status)
+        ? status.match(/full/i) ? "Full release." : status.match(/declassified/i) ? "Declassified." : "Unrestricted."
+        : "State release or access posture only after verification.";
+
+  return compactList([
+    "Source: George H.W. Bush Library",
+    row.sourceLocator || "collection/series/file title pending",
+    accessSentence
+  ]).join(", ").replace(/,\s+(Full release\.|Partial release\.|Declassified\.|Unrestricted\.|Access restriction:)/, ". $1");
+}
+
+function sourceNoteKeepOut(row) {
+  return "Keep NAIDs, Catalog URLs, PDF URLs, object IDs, object filenames, FOIA tracking, page-count basis, Daily Diary/Backup refs, deduped provenance, and search notes out of the visible Source Note unless an editor asks for them.";
+}
+
+function sourceNoteFinalizationRows(sourceAudit) {
+  return [...sourceAudit]
+    .map((row) => ({
+      itemType: row.itemType,
+      compilerNumber: row.compilerNumber,
+      finalizationRank: sourceNoteFinalizationRank(row),
+      finalizationLane: sourceNoteFinalizationLane(row),
+      auditStatus: row.auditStatus,
+      editorialLane: row.editorialLane,
+      chapterOrLane: row.chapterOrLane,
+      date: row.date,
+      title: row.title,
+      releaseOrStatus: row.releaseOrStatus,
+      pages: row.pages,
+      naid: row.naid,
+      localIdentifier: row.localIdentifier,
+      sourceLocator: row.sourceLocator,
+      evidenceBasis: sourceNoteEvidenceBasis(row),
+      citationSheetTask: sourceNoteCitationTask(row),
+      frusStyleTarget: sourceNoteStyleTarget(row),
+      keepOutOfSourceNote: sourceNoteKeepOut(row),
+      currentSourceNote: row.sourceNote,
+      provenanceNote: row.provenanceNote,
+      catalogUrl: row.catalogUrl,
+      pdfUrl: row.pdfUrl
+    }))
+    .sort((a, b) =>
+      a.finalizationRank - b.finalizationRank ||
+      (a.itemType === b.itemType ? 0 : a.itemType === "Confirmed record" ? -1 : 1) ||
+      String(a.date || "9999").localeCompare(String(b.date || "9999")) ||
+      String(a.title).localeCompare(String(b.title))
+    );
+}
+
+function writeSourceNoteFinalization(rows) {
+  const laneCounts = countBy(rows, (row) => row.finalizationLane).map(([lane, count]) => [lane, count]);
+  const itemCounts = countBy(rows, (row) => row.itemType).map(([type, count]) => [type, count]);
+  const sourceBasisCounts = countBy(rows, (row) => row.evidenceBasis).map(([basis, count]) => [basis, count]);
+  const firstQueue = rows.slice(0, 45).map((row) => [
+    row.itemType === "Confirmed record" ? row.compilerNumber : "Lead",
+    row.finalizationLane,
+    row.chapterOrLane,
+    row.date,
+    mdEscape(row.title),
+    row.releaseOrStatus,
+    mdEscape(row.citationSheetTask)
+  ]);
+
+  const lines = [
+    "# FRUS South Asia Source-Note Finalization Packet",
+    "",
+    `Generated: ${new Date().toISOString()}`,
+    "",
+    "This packet turns the mechanically clean source-note audit into a citation-sheet finalization queue. It tells the compiler what to open, what to extract from the linked PDF or citation sheet/title page, what to keep in provenance, and what editorial source-note decision remains before final numbering.",
+    "",
+    "## Coverage",
+    "",
+    `- Source-note finalization rows: ${rows.length}`,
+    `- Confirmed records: ${rows.filter((row) => row.itemType === "Confirmed record").length}`,
+    `- Potential leads with source-note drafts: ${rows.filter((row) => row.itemType === "Potential lead").length}`,
+    `- Rows requiring citation-sheet/title-page, access, excision, page-boundary, or promotion decisions: ${rows.filter((row) => row.finalizationLane !== "Final editor source-note check").length}`,
+    "",
+    "## Finalization Lanes",
+    "",
+    markdownTable(["Lane", "Rows"], laneCounts),
+    "",
+    "## Item Types",
+    "",
+    markdownTable(["Item type", "Rows"], itemCounts),
+    "",
+    "## Evidence Basis",
+    "",
+    markdownTable(["Evidence basis", "Rows"], sourceBasisCounts),
+    "",
+    "## First Citation-Sheet Pass",
+    "",
+    markdownTable(["Item", "Lane", "Chapter/lane", "Date", "Title", "Release/status", "Citation-sheet task"], firstQueue),
+    "",
+    "## Source-Note Rule",
+    "",
+    "For the visible Source Note, use compact FRUS-style citation language: repository or library, collection/office, series, file unit or item title, local identifier or selected source pages when useful, and release/access sentence. Keep NAIDs, Catalog URLs, PDF URLs, object IDs, object filenames, FOIA tracking, page-count basis, Daily Diary/Backup refs, and deduped provenance in the provenance columns, not in the published Source Note.",
+    "",
+    "## Working Rule",
+    "",
+    "Do not treat a mechanically clean Source Note as final until the PDF/citation sheet or title page confirms the title, source location, page boundary, access posture, and selected-text rationale."
+  ];
+
+  fs.writeFileSync(paths.sourceNoteFinalization, `${lines.join("\n").trim()}\n`);
 }
 
 function accessStatusText(row) {

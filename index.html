@@ -8,7 +8,7 @@
       name="description"
       content="A public research archive for declassified memoranda, telephone conversations, and source series relevant to Foreign Relations of the United States, 1989-1992, South Asia."
     />
-    <link rel="stylesheet" href="styles.css?v=chronology-first-20260601" />
+    <link rel="stylesheet" href="styles.css?v=decision-cockpit-20260602" />
     <style id="compiler-network-style">
       .compiler-network {
         border-bottom: 1px solid rgba(31, 41, 51, 0.14);
@@ -282,6 +282,13 @@
           <article class="workbench-panel">
             <h3>Next Review Queue</h3>
             <ol id="priority-leads" class="priority-list" aria-live="polite"></ol>
+          </article>
+          <article class="workbench-panel workbench-panel-wide decision-cockpit-panel">
+            <div class="panel-title-row">
+              <h3>Decision Cockpit</h3>
+              <a href="reports/compiler-decision-cockpit.md?v=decision-cockpit-20260602">Full Cockpit</a>
+            </div>
+            <ol id="decision-cockpit" class="decision-cockpit-list" aria-live="polite"></ol>
           </article>
           <article class="workbench-panel workbench-panel-wide">
             <h3>Research Lanes</h3>
@@ -620,7 +627,8 @@
     <script src="data/daily-diary-references.js"></script>
     <script src="data/potential-documents.js"></script>
     <script src="data/compiler-gaps.js"></script>
-    <script src="app.js?v=compiler-packet-20260601"></script>
+    <script src="data/compiler-decision-cockpit.js"></script>
+    <script src="app.js?v=decision-cockpit-20260602"></script>
     <script id="compiler-network-script">
       (() => {
         const button = document.querySelector("[data-compiler-handoff]");

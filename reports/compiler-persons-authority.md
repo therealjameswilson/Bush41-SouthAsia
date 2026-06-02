@@ -1,6 +1,6 @@
 # FRUS South Asia Persons Authority Audit
 
-Generated: 2026-06-02T01:36:23.934Z
+Generated: 2026-06-02T01:41:56.523Z
 
 This audit crosswalks confirmed chronology participant labels to the local Persons authority list. It separates personal participants from institutional meeting bodies and keeps context-only authority entries visible for final FRUS Persons-list decisions.
 

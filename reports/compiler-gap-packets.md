@@ -1,6 +1,6 @@
 # FRUS South Asia Gap Pull Packets
 
-Generated: 2026-06-02T01:36:23.931Z
+Generated: 2026-06-02T01:41:56.510Z
 
 This pull sheet translates every active compiler gap into operational rows: chapter lanes, confirmed chronology anchors, potential leads, page-boundary items, target identifiers, links, closure questions, and next actions. Use it beside the decision log when resolving source-expansion and selection risks.
 

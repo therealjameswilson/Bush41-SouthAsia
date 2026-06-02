@@ -382,15 +382,36 @@ article,
   line-height: 1.6;
 }
 
+.panel-title-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.panel-title-row h3 {
+  margin: 0;
+}
+
+.panel-title-row a {
+  color: var(--red);
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
 .chapter-docket,
 .priority-list,
+.decision-cockpit-list,
 .lane-list,
 .export-list {
   display: grid;
   gap: 10px;
 }
 
-.priority-list {
+.priority-list,
+.decision-cockpit-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -439,8 +460,63 @@ article,
   font-size: 0.88rem;
 }
 
+.decision-cockpit-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.decision-cockpit-item {
+  display: grid;
+  gap: 8px;
+  min-height: 176px;
+  padding: 14px;
+  background: rgba(20, 61, 74, 0.045);
+  border: 1px solid rgba(20, 61, 74, 0.11);
+  border-left: 4px solid var(--navy);
+  border-radius: 8px;
+}
+
+.decision-cockpit-item.priority-critical {
+  border-left-color: var(--red);
+}
+
+.decision-cockpit-item.priority-high {
+  border-left-color: #7d5f16;
+}
+
+.decision-cockpit-meta {
+  color: var(--red);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.decision-cockpit-item button {
+  padding: 0;
+  color: var(--navy);
+  font: inherit;
+  font-weight: 900;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.decision-cockpit-item p,
+.decision-cockpit-action {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.decision-cockpit-action {
+  display: block;
+}
+
 .priority-list button:hover,
-.priority-list button:focus-visible {
+.priority-list button:focus-visible,
+.decision-cockpit-item button:hover,
+.decision-cockpit-item button:focus-visible {
   color: var(--red);
   outline: none;
 }
@@ -1469,6 +1545,7 @@ footer a {
   .gap-list,
   .metric-list,
   .lane-list,
+  .decision-cockpit-list,
   .stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1534,6 +1611,7 @@ footer a {
   .gap-list,
   .metric-list,
   .lane-list,
+  .decision-cockpit-list,
   .export-list,
   .browse-root,
   .brief dl,

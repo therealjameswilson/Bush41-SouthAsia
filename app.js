@@ -17,6 +17,7 @@ const potentialRoot = document.querySelector("#potential-root");
 const gapsRoot = document.querySelector("#gaps-root");
 const chapterDocket = document.querySelector("#chapter-docket");
 const priorityLeads = document.querySelector("#priority-leads");
+const decisionCockpitRoot = document.querySelector("#decision-cockpit");
 const researchLanes = document.querySelector("#research-lanes");
 const workbenchDateSpan = document.querySelector("#workbench-date-span");
 const workbenchReleasedCount = document.querySelector("#workbench-released-count");
@@ -27,6 +28,7 @@ const workbenchSummary = document.querySelector("#workbench-summary");
 let allRecords = [];
 let allPotentialDocuments = [];
 let allCompilerGaps = [];
+let allDecisionCockpit = [];
 let allDailyDiaryReferences = { dates: {} };
 
 const COMPILER_QUEUE_OPTIONS = [
@@ -393,7 +395,69 @@ function createPriorityActionItem(action) {
   return item;
 }
 
-function renderWorkbench(records, potentialDocuments = allPotentialDocuments, compilerGaps = allCompilerGaps) {
+function cockpitAction(row) {
+  if (row.itemType === "Confirmed record" && row.compilerNumber) {
+    return () => applyRecordFilters({ query: row.compilerNumber });
+  }
+  if (row.itemType === "Potential lead") {
+    return () => scrollToElement(potentialCardId({ id: row.itemId, naid: row.naidOrTargets, title: row.title }), "#potential");
+  }
+  if (row.itemType === "Compiler gap") {
+    return () => scrollToElement(gapCardId({ id: row.itemId, title: row.title }), "#gaps");
+  }
+  if (row.itemType === "Chapter lane" && CHAPTER_ORDER.includes(row.chapterOrLane)) {
+    return () => applyRecordFilters({ chapter: row.chapterOrLane });
+  }
+  return () => window.open("reports/compiler-decision-cockpit.md?v=decision-cockpit-20260602", "_self");
+}
+
+function createCockpitItem(row) {
+  const item = document.createElement("li");
+  item.className = `decision-cockpit-item priority-${String(row.cockpitPriority || "low").toLowerCase()}`;
+
+  const meta = document.createElement("span");
+  meta.className = "decision-cockpit-meta";
+  meta.textContent = [row.cockpitPriority, row.phase, row.compilerNumber || row.itemType].filter(Boolean).join(" / ");
+
+  const button = document.createElement("button");
+  button.type = "button";
+  button.textContent = row.title;
+  button.addEventListener("click", cockpitAction(row));
+
+  const question = document.createElement("p");
+  question.textContent = row.decisionQuestion || row.nextAction || "Record the next compiler decision.";
+
+  const action = document.createElement("span");
+  action.className = "decision-cockpit-action";
+  action.textContent = row.nextAction || "Open the full cockpit row.";
+
+  item.append(meta, button, question, action);
+  return item;
+}
+
+function renderDecisionCockpit(rows) {
+  if (!decisionCockpitRoot) return;
+  const firstRows = [...rows]
+    .sort((a, b) =>
+      priorityTierRank(a.cockpitPriority) - priorityTierRank(b.cockpitPriority) ||
+      (b.urgencyScore || 0) - (a.urgencyScore || 0) ||
+      String(a.date || "9999").localeCompare(String(b.date || "9999")) ||
+      String(a.title || "").localeCompare(String(b.title || ""))
+    )
+    .slice(0, 8);
+
+  if (!firstRows.length) {
+    const item = document.createElement("li");
+    item.className = "decision-cockpit-item";
+    item.textContent = "No decision cockpit rows are currently staged.";
+    decisionCockpitRoot.replaceChildren(item);
+    return;
+  }
+
+  decisionCockpitRoot.replaceChildren(...firstRows.map(createCockpitItem));
+}
+
+function renderWorkbench(records, potentialDocuments = allPotentialDocuments, compilerGaps = allCompilerGaps, decisionCockpit = allDecisionCockpit) {
   const review = records.filter(isDeclassificationQueue);
   const pdfs = records.filter((record) => record.pdfUrl).length;
   const sources = countBy(records, sourceLabel).length;
@@ -421,6 +485,8 @@ function renderWorkbench(records, potentialDocuments = allPotentialDocuments, co
       ...compilerPriorityActions(records, potentialDocuments, compilerGaps).map(createPriorityActionItem)
     );
   }
+
+  renderDecisionCockpit(decisionCockpit);
 
   if (researchLanes) {
     const presidential = records.filter(isPresidentialConversation);
@@ -1535,10 +1601,11 @@ async function init() {
     allRecords = assignCompilerNumbers(window.MEMCONS || window.MEMCON_RECORDS || (await loadRecords()));
     allPotentialDocuments = window.POTENTIAL_DOCUMENTS || (await loadPotentialDocuments());
     allCompilerGaps = window.COMPILER_GAPS || (await loadCompilerGaps());
+    allDecisionCockpit = window.COMPILER_DECISION_COCKPIT || (await loadDecisionCockpit());
     allDailyDiaryReferences = window.DAILY_DIARY_REFERENCES || (await loadDailyDiaryReferences());
     setChapterCounts(allRecords);
     populateFilters(allRecords);
-    renderWorkbench(allRecords, allPotentialDocuments, allCompilerGaps);
+    renderWorkbench(allRecords, allPotentialDocuments, allCompilerGaps, allDecisionCockpit);
     renderBrowseIndex(allRecords);
     renderPotentialDocuments(allPotentialDocuments);
     renderCompilerGaps(allCompilerGaps, allRecords, allPotentialDocuments);
@@ -1568,6 +1635,12 @@ async function loadPotentialDocuments() {
 
 async function loadCompilerGaps() {
   const response = await fetch("data/compiler-gaps.json");
+  if (!response.ok) return [];
+  return response.json();
+}
+
+async function loadDecisionCockpit() {
+  const response = await fetch("data/compiler-decision-cockpit.json");
   if (!response.ok) return [];
   return response.json();
 }

@@ -3,6 +3,7 @@ const path = require("path");
 
 const repoRoot = path.resolve(__dirname, "..");
 const reportsDir = path.join(repoRoot, "reports");
+const dataDir = path.join(repoRoot, "data");
 
 const CHAPTER_ORDER = ["Afghanistan", "Pakistan", "India", "Regional"];
 
@@ -78,6 +79,8 @@ const paths = {
   decisionLogCsv: path.join(reportsDir, "compiler-decision-log.csv"),
   decisionCockpitCsv: path.join(reportsDir, "compiler-decision-cockpit.csv"),
   decisionCockpit: path.join(reportsDir, "compiler-decision-cockpit.md"),
+  decisionCockpitJson: path.join(dataDir, "compiler-decision-cockpit.json"),
+  decisionCockpitScript: path.join(dataDir, "compiler-decision-cockpit.js"),
   selectionBoardCsv: path.join(reportsDir, "compiler-selection-board.csv"),
   selectionBoard: path.join(reportsDir, "compiler-selection-board.md"),
   sourceNoteAuditCsv: path.join(reportsDir, "compiler-source-note-audit.csv"),
@@ -866,6 +869,12 @@ function writeDecisionCockpit(rows) {
   ];
 
   fs.writeFileSync(paths.decisionCockpit, `${lines.join("\n").trim()}\n`);
+}
+
+function writeDecisionCockpitData(rows) {
+  const json = JSON.stringify(rows, null, 2);
+  fs.writeFileSync(paths.decisionCockpitJson, `${json}\n`);
+  fs.writeFileSync(paths.decisionCockpitScript, `window.COMPILER_DECISION_COCKPIT = ${json};\n`);
 }
 
 function isRestrictedStatus(status = "") {
@@ -3094,6 +3103,7 @@ function main() {
   writeGapPackets(gapPackets, gapQueue);
   writeSelectionBoard(selectionBoard);
   writeDecisionCockpit(decisionCockpit);
+  writeDecisionCockpitData(decisionCockpit);
   writeSourceNoteAudit(sourceAudit, confirmed, potentialQueue);
   writeSourceNoteFinalization(sourceNoteFinalization);
   writeAccessReview(accessReview);

@@ -47,6 +47,7 @@ node scripts/remediate-compiler-gaps.js
 node scripts/normalize-source-notes.js
 node scripts/generate-compiler-worksheet.js
 node scripts/extract-critical-page-boundaries.js
+node scripts/generate-compiler-quickstart.js
 ```
 
 `remediate-compiler-gaps.js` measures any confirmed zero-page records that have
@@ -103,5 +104,8 @@ node scripts/extract-critical-page-boundaries.js
 through `pdfinfo` and `pdftotext`, then writes
 `reports/compiler-critical-page-extractions.md` and
 `reports/compiler-critical-page-extractions.csv` with measured page counts,
-substantive text-layer status, administrative-marker-only flags, and OCR/manual
+released/searchable text status, administrative-marker-only flags, and OCR/manual
 review recommendations.
+`generate-compiler-quickstart.js` writes `reports/compiler-quickstart.md` from
+the current JSON/CSV artifacts so the compiler handoff links and counts can be
+refreshed without hand-editing cache-busters.

@@ -2,39 +2,42 @@
 
 Generated: 2026-06-02
 
+Version token for live links: `compiler-live-20260602`
+
 ## Start Here
 
-- Live chronology-first site: https://therealjameswilson.github.io/Bush41-SouthAsia/?v=chronology-first-20260601b
-- Declassified chronology: https://therealjameswilson.github.io/Bush41-SouthAsia/?v=chronology-first-20260601b#records
-- Compiler workbench: https://therealjameswilson.github.io/Bush41-SouthAsia/?v=chronology-first-20260601b#workbench
-- Compiler worksheet: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-worksheet.md?v=compiler-20260601
-- Gap analysis: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-gap-analysis.md?v=gap-analysis-20260601
-- Gap pull packets: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-gap-packets.md?v=gap-packets-20260602
-- Gap pull packets CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-gap-packets.csv?v=gap-packets-20260602
-- Decision log CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-decision-log.csv?v=compiler-20260601
-- Decision cockpit: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-decision-cockpit.md?v=decision-cockpit-20260602
-- Decision cockpit CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-decision-cockpit.csv?v=decision-cockpit-20260602
-- Selection board: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-selection-board.md?v=selection-20260601
-- Selection board CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-selection-board.csv?v=selection-20260601
-- Page-boundary queue: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-page-boundary-queue.md?v=boundaries-20260601
-- Page-boundary queue CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-page-boundary-queue.csv?v=boundaries-20260601
-- Critical page extraction notes: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-critical-page-extractions.md?v=critical-pages-20260602
-- Critical page extraction CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-critical-page-extractions.csv?v=critical-pages-20260602
-- Chapter research matrix: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-chapter-matrix.md?v=matrix-20260601
-- Chapter research matrix CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-chapter-matrix.csv?v=matrix-20260601
-- Persons authority audit: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-persons-authority.md?v=persons-20260601
-- Persons authority CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-persons-authority.csv?v=persons-20260601
-- Access/promotion review: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-access-review.md?v=access-review-20260601b
-- Access/promotion CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-access-review.csv?v=access-review-20260601b
-- Source-note audit: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-source-note-audit.md?v=compiler-20260601
-- Source-note audit CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-source-note-audit.csv?v=compiler-20260601
-- Source-note finalization: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-source-note-finalization.md?v=source-final-20260602
-- Source-note finalization CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-source-note-finalization.csv?v=source-final-20260602
-- Priority dossier pack: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-priority-dossiers.md?v=compiler-20260601
-- Dossier index: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-dossiers/index.md?v=compiler-20260601
-- Confirmed-record CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-confirmed-records.csv?v=compiler-20260601
-- Potential-leads CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-potential-documents.csv?v=compiler-20260601
-- Gap queue CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-gap-queue.csv?v=compiler-20260601
+- Live chronology-first site: https://therealjameswilson.github.io/Bush41-SouthAsia/?v=compiler-live-20260602
+- Declassified chronology: https://therealjameswilson.github.io/Bush41-SouthAsia/?v=compiler-live-20260602#records
+- Compiler workbench: https://therealjameswilson.github.io/Bush41-SouthAsia/?v=compiler-live-20260602#workbench
+- Compiler quickstart: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-quickstart.md?v=compiler-live-20260602
+- Compiler worksheet: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-worksheet.md?v=compiler-live-20260602
+- Gap analysis: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-gap-analysis.md?v=compiler-live-20260602
+- Gap pull packets: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-gap-packets.md?v=compiler-live-20260602
+- Gap pull packets CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-gap-packets.csv?v=compiler-live-20260602
+- Decision log CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-decision-log.csv?v=compiler-live-20260602
+- Decision cockpit: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-decision-cockpit.md?v=compiler-live-20260602
+- Decision cockpit CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-decision-cockpit.csv?v=compiler-live-20260602
+- Selection board: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-selection-board.md?v=compiler-live-20260602
+- Selection board CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-selection-board.csv?v=compiler-live-20260602
+- Page-boundary queue: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-page-boundary-queue.md?v=compiler-live-20260602
+- Page-boundary queue CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-page-boundary-queue.csv?v=compiler-live-20260602
+- Critical page extraction notes: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-critical-page-extractions.md?v=compiler-live-20260602
+- Critical page extraction CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-critical-page-extractions.csv?v=compiler-live-20260602
+- Chapter research matrix: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-chapter-matrix.md?v=compiler-live-20260602
+- Chapter research matrix CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-chapter-matrix.csv?v=compiler-live-20260602
+- Persons authority audit: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-persons-authority.md?v=compiler-live-20260602
+- Persons authority CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-persons-authority.csv?v=compiler-live-20260602
+- Access/promotion review: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-access-review.md?v=compiler-live-20260602
+- Access/promotion CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-access-review.csv?v=compiler-live-20260602
+- Source-note audit: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-source-note-audit.md?v=compiler-live-20260602
+- Source-note audit CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-source-note-audit.csv?v=compiler-live-20260602
+- Source-note finalization: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-source-note-finalization.md?v=compiler-live-20260602
+- Source-note finalization CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-source-note-finalization.csv?v=compiler-live-20260602
+- Priority dossier pack: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-priority-dossiers.md?v=compiler-live-20260602
+- Dossier index: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-dossiers/index.md?v=compiler-live-20260602
+- Confirmed-record CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-confirmed-records.csv?v=compiler-live-20260602
+- Potential-leads CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-potential-documents.csv?v=compiler-live-20260602
+- Gap queue CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-gap-queue.csv?v=compiler-live-20260602
 
 ## Working Set
 
@@ -53,20 +56,26 @@ Generated: 2026-06-02
 - Institutional participant/body labels separated from Persons: 2
 - Suggested selection-board rows: 113
 - Rows requiring action before final selection: 101
+- Decision cockpit rows: 110
+- Critical/high cockpit rows: 78
 - PDF items queued for page-boundary/source-extraction review: 80
 - Critical/high page-boundary items: 58
+- Potential leads in page-boundary screening: 26
 - Critical page-extraction PDFs processed: 11
-- Critical page-extraction PDFs requiring OCR or manual review: 11
-- Administrative-marker-only PDFs in critical extraction pass: 3
+- Critical page-extraction PDFs OCRed in local pass: 3
+- Critical page-extraction PDFs with OCR text: 2
+- Critical page-extraction PDFs still requiring OCR or manual review: 9
+- Administrative-marker-only PDFs in critical extraction pass: 2
 - Confirmed records needing access/excision decisions: 39
 - Potential leads queued for promotion/access/context decisions: 40
+- Persons authority entries available: 72
 
 ## Chapter Counts
 
 | Chapter | Records |
-| --- | ---: |
-| Afghanistan | 21 |
+| --- | --- |
 | Pakistan | 29 |
+| Afghanistan | 21 |
 | India | 10 |
 | Regional | 6 |
 
@@ -80,6 +89,27 @@ Generated: 2026-06-02
 | High | Screen Cheney Country Files before closing the source search | Review Afghanistan files 645607685, 645607321, and 645607323. |
 | High | Split the Regional lane into Kashmir, Bangladesh, and other South Asia tracks | Promote Kashmir leads 470426145 and 470426225 into a focused review queue. |
 
+## Refresh Commands
+
+```sh
+node scripts/harvest-haass-catalog.js
+node scripts/harvest-scowcroft-heads.js
+node scripts/harvest-bush-library-memcons.js
+node scripts/harvest-nsc-dc-minutes.js
+node scripts/harvest-daily-diary-references.js
+node scripts/harvest-potential-documents.js
+node scripts/incorporate-daily-diary-references.js
+node scripts/remediate-compiler-gaps.js
+node scripts/normalize-source-notes.js
+node scripts/generate-compiler-worksheet.js
+node scripts/extract-critical-page-boundaries.js
+node scripts/generate-compiler-quickstart.js
+```
+
 ## Source-Note Rule
 
 Treat the visible Source Note as the editorial FRUS-style citation. Keep NAIDs, local identifiers, catalog URLs, object filenames, PDF URLs, Daily Diary matches, page-count basis, FOIA tracking, and other audit details in the provenance trail. Daily Diary and Daily Backup references should support chronology, time, location, attendance, and call-status checks, not substantive meeting or call summaries.
+
+## Working Rule
+
+Start with the chronology cards, use the Compiler Action strip to copy the current selection/source-note/page-boundary task, and close a row only when access posture, page boundary, visible Source Note, provenance trail, and selection rationale agree.

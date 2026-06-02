@@ -1157,11 +1157,37 @@ function sourceFinalizationRowForRecord(record) {
   return allSourceNoteFinalization.find((row) => rowMatchesRecord(row, record));
 }
 
+function showCopyFallback(text) {
+  document.querySelector(".copy-fallback")?.remove();
+
+  const panel = document.createElement("div");
+  panel.className = "copy-fallback";
+  panel.setAttribute("role", "dialog");
+  panel.setAttribute("aria-label", "Copy buffer");
+
+  const label = document.createElement("p");
+  label.textContent = "Copy buffer";
+
+  const area = document.createElement("textarea");
+  area.value = text;
+  area.setAttribute("readonly", "");
+
+  const close = document.createElement("button");
+  close.type = "button";
+  close.textContent = "Close";
+  close.addEventListener("click", () => panel.remove());
+
+  panel.append(label, area, close);
+  document.body.append(panel);
+  area.focus();
+  area.select();
+}
+
 async function copyText(text) {
   if (navigator.clipboard?.writeText) {
     try {
       await navigator.clipboard.writeText(text);
-      return;
+      return true;
     } catch (error) {
       // Fall through to the textarea path when browser permissions block the async API.
     }
@@ -1176,7 +1202,9 @@ async function copyText(text) {
   textArea.select();
   const copied = document.execCommand("copy");
   textArea.remove();
-  if (!copied) throw new Error("Copy command was rejected.");
+  if (copied) return true;
+  showCopyFallback(text);
+  return false;
 }
 
 function dailyDiarySummary(record) {
@@ -1275,11 +1303,13 @@ function createCopyButton(record, options = {}) {
   button.addEventListener("click", async () => {
     const original = button.textContent;
     try {
-      await copyText(getText(record));
-      button.textContent = copiedLabel;
+      const copied = await copyText(getText(record));
+      button.textContent = copied ? copiedLabel : "Ready to Copy";
       button.classList.add("is-copied");
       if (recordsSummary) {
-        recordsSummary.textContent = `Copied ${summary} for Doc ${record.compilerNumber}.`;
+        recordsSummary.textContent = copied
+          ? `Copied ${summary} for Doc ${record.compilerNumber}.`
+          : `Prepared ${summary} for Doc ${record.compilerNumber}.`;
       }
       window.setTimeout(() => {
         button.textContent = original;
@@ -1355,8 +1385,8 @@ function createCompilerActionPanel(record) {
   const links = document.createElement("div");
   links.className = "record-compiler-action-links";
   for (const [href, label] of [
-    ["reports/compiler-selection-board.md?v=compiler-actions-20260602", "Selection Board"],
-    ["reports/compiler-source-note-finalization.md?v=compiler-actions-20260602", "Source Finalization"]
+    ["reports/compiler-selection-board.md?v=compiler-actions-20260602b", "Selection Board"],
+    ["reports/compiler-source-note-finalization.md?v=compiler-actions-20260602b", "Source Finalization"]
   ]) {
     const link = document.createElement("a");
     link.href = href;

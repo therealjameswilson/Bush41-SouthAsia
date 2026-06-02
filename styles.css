@@ -1464,6 +1464,56 @@ footer {
   font-family: inherit;
 }
 
+.copy-fallback {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 20;
+  display: grid;
+  gap: 8px;
+  width: min(480px, calc(100vw - 36px));
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(24, 59, 91, 0.2);
+  border-left: 4px solid var(--red);
+  border-radius: 7px;
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.2);
+}
+
+.copy-fallback p {
+  margin: 0;
+  color: var(--red);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.copy-fallback textarea {
+  width: 100%;
+  min-height: 140px;
+  resize: vertical;
+  color: var(--ink);
+  font: 0.8rem/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  border: 1px solid rgba(24, 59, 91, 0.2);
+  border-radius: 6px;
+  padding: 9px;
+}
+
+.copy-fallback button {
+  justify-self: end;
+  min-height: 30px;
+  padding: 0 10px;
+  color: #ffffff;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 900;
+  background: var(--navy);
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 .record-meta span,
 .record-links a,
 .record-links button {

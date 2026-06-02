@@ -62,10 +62,10 @@ Version token for live links: `compiler-live-20260602`
 - Critical/high page-boundary items: 58
 - Potential leads in page-boundary screening: 26
 - Critical page-extraction PDFs processed: 11
-- Critical page-extraction PDFs OCRed in local pass: 3
-- Critical page-extraction PDFs with OCR text: 2
-- Critical page-extraction PDFs still requiring OCR or manual review: 9
-- Administrative-marker-only PDFs in critical extraction pass: 2
+- Critical page-extraction PDFs OCRed in local pass: 8
+- Critical page-extraction PDFs with OCR text: 7
+- Critical page-extraction PDFs still requiring OCR or manual review: 4
+- Administrative-marker-only PDFs in critical extraction pass: 1
 - Confirmed records needing access/excision decisions: 39
 - Potential leads queued for promotion/access/context decisions: 40
 - Persons authority entries available: 72

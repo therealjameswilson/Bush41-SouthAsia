@@ -10,7 +10,7 @@ const outputMdPath = path.join(reportsDir, "compiler-critical-page-extractions.m
 const outputCsvPath = path.join(reportsDir, "compiler-critical-page-extractions.csv");
 
 const LIMIT = Number(process.env.PAGE_EXTRACTION_LIMIT || 11);
-const OCR_MAX_PAGES = Number(process.env.OCR_MAX_PAGES || 10);
+const OCR_MAX_PAGES = Number(process.env.OCR_MAX_PAGES || 65);
 const MIN_TEXT_CHARS = 80;
 
 const KEYWORDS = [

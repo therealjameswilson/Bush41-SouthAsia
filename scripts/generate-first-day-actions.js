@@ -9,7 +9,9 @@ const paths = {
   cockpit: path.join(dataDir, "compiler-decision-cockpit.json"),
   outputMarkdown: path.join(reportsDir, "compiler-first-day-actions.md"),
   outputCsv: path.join(reportsDir, "compiler-first-day-actions.csv"),
-  outputDecisionLogCsv: path.join(reportsDir, "compiler-first-day-decision-log.csv")
+  outputDecisionLogCsv: path.join(reportsDir, "compiler-first-day-decision-log.csv"),
+  outputJson: path.join(dataDir, "compiler-first-day-actions.json"),
+  outputScript: path.join(dataDir, "compiler-first-day-actions.js")
 };
 
 const PRIORITY_RANK = { Critical: 0, High: 1, Medium: 2, Low: 3 };
@@ -270,6 +272,8 @@ function main() {
     { key: "openLink", label: "Open link" }
   ];
   writeCsv(paths.outputDecisionLogCsv, decisionColumns, decisionLogRows(firstDay));
+  fs.writeFileSync(paths.outputJson, `${JSON.stringify(firstDay, null, 2)}\n`);
+  fs.writeFileSync(paths.outputScript, `window.COMPILER_FIRST_DAY_ACTIONS = ${JSON.stringify(firstDay, null, 2)};\n`);
 
   const lines = [
     "# First-Day Compiler Action Packet",
@@ -336,6 +340,8 @@ function main() {
   console.log(`Wrote ${path.relative(repoRoot, paths.outputMarkdown)}`);
   console.log(`Wrote ${path.relative(repoRoot, paths.outputCsv)}`);
   console.log(`Wrote ${path.relative(repoRoot, paths.outputDecisionLogCsv)}`);
+  console.log(`Wrote ${path.relative(repoRoot, paths.outputJson)}`);
+  console.log(`Wrote ${path.relative(repoRoot, paths.outputScript)}`);
 }
 
 main();

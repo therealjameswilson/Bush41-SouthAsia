@@ -401,6 +401,13 @@ article,
   text-decoration: none;
 }
 
+.panel-link-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
 .chapter-docket,
 .priority-list,
 .decision-cockpit-list,
@@ -519,6 +526,100 @@ article,
 .decision-cockpit-item button:focus-visible {
   color: var(--red);
   outline: none;
+}
+
+.first-day-actions {
+  display: grid;
+  gap: 14px;
+}
+
+.first-day-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.first-day-metrics .compiler-card {
+  min-height: auto;
+  padding: 14px;
+}
+
+.first-day-phases {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.first-day-phases .data-chip.is-active {
+  color: white;
+  background: var(--navy);
+}
+
+.first-day-phases .data-chip.is-active .chip-count {
+  color: white;
+}
+
+.first-day-action-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.first-day-action {
+  display: grid;
+  gap: 7px;
+  min-height: auto;
+  padding: 14px;
+  background: rgba(20, 61, 74, 0.045);
+  border: 1px solid rgba(20, 61, 74, 0.11);
+  border-left: 4px solid var(--navy);
+  border-radius: 8px;
+}
+
+.first-day-action.priority-critical {
+  border-left-color: var(--red);
+}
+
+.first-day-action.priority-high {
+  border-left-color: #7d5f16;
+}
+
+.first-day-action-meta {
+  color: var(--red);
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.first-day-action-title {
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.first-day-action-title:hover,
+.first-day-action-title:focus-visible {
+  color: var(--red);
+  outline: none;
+}
+
+.first-day-action p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.first-day-action-done {
+  color: var(--ink);
+  font-size: 0.82rem;
+  line-height: 1.4;
 }
 
 .export-list {
@@ -1752,6 +1853,8 @@ footer a {
   .metric-list,
   .lane-list,
   .decision-cockpit-list,
+  .first-day-action-list,
+  .first-day-metrics,
   .stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1824,6 +1927,8 @@ footer a {
   .metric-list,
   .lane-list,
   .decision-cockpit-list,
+  .first-day-action-list,
+  .first-day-metrics,
   .export-list,
   .browse-root,
   .brief dl,

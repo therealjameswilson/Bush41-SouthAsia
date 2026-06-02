@@ -286,6 +286,18 @@
             <h3>Next Review Queue</h3>
             <ol id="priority-leads" class="priority-list" aria-live="polite"></ol>
           </article>
+          <article class="workbench-panel workbench-panel-wide first-day-panel">
+            <div class="panel-title-row">
+              <h3>First-Day Action Queue</h3>
+              <div class="panel-link-group">
+                <a href="reports/compiler-first-day-actions.md?v=compiler-live-20260602">Packet</a>
+                <a href="reports/compiler-first-day-decision-log.csv?v=compiler-live-20260602">Fillable Log</a>
+              </div>
+            </div>
+            <div id="first-day-actions" class="first-day-actions" aria-live="polite">
+              <p class="loading">Loading first-day actions...</p>
+            </div>
+          </article>
           <article class="workbench-panel workbench-panel-wide decision-cockpit-panel">
             <div class="panel-title-row">
               <h3>Decision Cockpit</h3>
@@ -645,7 +657,8 @@
     <script src="data/compiler-source-note-finalization.js?v=compiler-live-20260602"></script>
     <script src="data/compiler-citation-sheet-extractions.js?v=compiler-live-20260602"></script>
     <script src="data/compiler-page-boundary-queue.js?v=compiler-live-20260602"></script>
-    <script src="app.js?v=chronology-first-20260602"></script>
+    <script src="data/compiler-first-day-actions.js?v=compiler-live-20260602"></script>
+    <script src="app.js?v=first-day-workbench-20260602"></script>
     <script id="compiler-network-script">
       (() => {
         const button = document.querySelector("[data-compiler-handoff]");

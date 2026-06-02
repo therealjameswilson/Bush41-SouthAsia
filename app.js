@@ -19,6 +19,7 @@ const gapsRoot = document.querySelector("#gaps-root");
 const chapterDocket = document.querySelector("#chapter-docket");
 const priorityLeads = document.querySelector("#priority-leads");
 const decisionCockpitRoot = document.querySelector("#decision-cockpit");
+const firstDayActionsRoot = document.querySelector("#first-day-actions");
 const researchLanes = document.querySelector("#research-lanes");
 const workbenchDateSpan = document.querySelector("#workbench-date-span");
 const workbenchReleasedCount = document.querySelector("#workbench-released-count");
@@ -34,7 +35,18 @@ let allSelectionBoard = [];
 let allSourceNoteFinalization = [];
 let allCitationSheetExtractions = [];
 let allPageBoundaryQueue = [];
+let allFirstDayActions = [];
 let allDailyDiaryReferences = { dates: {} };
+let selectedFirstDayPhase = "";
+
+const FIRST_DAY_PHASE_ORDER = [
+  "Close gap",
+  "Fix page boundaries",
+  "Resolve access",
+  "Review excisions",
+  "Finalize source note",
+  "Close chapter lane"
+];
 
 const COMPILER_QUEUE_OPTIONS = [
   ["", "All compiler queues"],
@@ -543,7 +555,114 @@ function renderDecisionCockpit(rows) {
   decisionCockpitRoot.replaceChildren(...firstRows.map(createCockpitItem));
 }
 
-function renderWorkbench(records, potentialDocuments = allPotentialDocuments, compilerGaps = allCompilerGaps, decisionCockpit = allDecisionCockpit) {
+function firstDayPhaseCounts(actions) {
+  const counts = new Map(actions.map((action) => [action.phase, 0]));
+  for (const action of actions) {
+    counts.set(action.phase, (counts.get(action.phase) || 0) + 1);
+  }
+  return FIRST_DAY_PHASE_ORDER
+    .filter((phase) => counts.has(phase))
+    .map((phase) => [phase, counts.get(phase)]);
+}
+
+function firstDayActionLink(action) {
+  return action.openLink || action.catalogUrl || action.pdfUrl || "";
+}
+
+function createFirstDayActionItem(action) {
+  const item = document.createElement("li");
+  item.className = `first-day-action priority-${String(action.priority || "low").toLowerCase()}`;
+
+  const meta = document.createElement("span");
+  meta.className = "first-day-action-meta";
+  meta.textContent = [
+    `#${action.actionNumber}`,
+    action.priority,
+    action.phase,
+    action.item && action.item !== action.itemType ? action.item : action.itemType
+  ].filter(Boolean).join(" / ");
+
+  const title = document.createElement(firstDayActionLink(action) ? "a" : "strong");
+  title.className = "first-day-action-title";
+  if (firstDayActionLink(action)) {
+    title.href = firstDayActionLink(action);
+    title.rel = "noreferrer";
+  }
+  title.textContent = action.title;
+
+  const next = document.createElement("p");
+  next.textContent = action.nextAction || action.decisionQuestion || "Record the next compiler decision.";
+
+  const done = document.createElement("span");
+  done.className = "first-day-action-done";
+  done.textContent = `Done when: ${action.doneWhen || "Decision question answered."}`;
+
+  item.append(meta, title, next, done);
+  return item;
+}
+
+function setFirstDayPhase(phase = "") {
+  selectedFirstDayPhase = phase;
+  renderFirstDayActions(allFirstDayActions);
+}
+
+function renderFirstDayActions(actions) {
+  if (!firstDayActionsRoot) return;
+  firstDayActionsRoot.replaceChildren();
+
+  if (!actions.length) {
+    const empty = document.createElement("p");
+    empty.className = "empty-chapter";
+    empty.textContent = "No first-day actions are currently staged.";
+    firstDayActionsRoot.append(empty);
+    return;
+  }
+
+  const phaseCounts = firstDayPhaseCounts(actions);
+  const activeActions = selectedFirstDayPhase
+    ? actions.filter((action) => action.phase === selectedFirstDayPhase)
+    : actions.slice(0, 10);
+
+  const metrics = document.createElement("div");
+  metrics.className = "first-day-metrics";
+  metrics.append(
+    createMetric("First-day actions", actions.length.toString(), "Balanced from the 110-row decision cockpit."),
+    createMetric("Phases", phaseCounts.length.toString(), "Gap, boundary, access, excision, source-note, and lane work."),
+    createMetric(
+      "Fillable rows",
+      actions.length.toString(),
+      "Mirrors the first-day decision-log starter."
+    )
+  );
+
+  const filters = document.createElement("div");
+  filters.className = "first-day-phases";
+
+  const allButton = createDataChip("All first 10", actions.length, () => setFirstDayPhase(""));
+  if (!selectedFirstDayPhase) allButton.classList.add("is-active");
+  filters.append(allButton);
+  for (const [phase, count] of phaseCounts) {
+    const button = createDataChip(phase, count, () => setFirstDayPhase(phase));
+    if (selectedFirstDayPhase === phase) button.classList.add("is-active");
+    filters.append(button);
+  }
+
+  const list = document.createElement("ol");
+  list.className = "first-day-action-list";
+  for (const action of activeActions) {
+    list.append(createFirstDayActionItem(action));
+  }
+
+  firstDayActionsRoot.append(metrics, filters, list);
+}
+
+function renderWorkbench(
+  records,
+  potentialDocuments = allPotentialDocuments,
+  compilerGaps = allCompilerGaps,
+  decisionCockpit = allDecisionCockpit,
+  firstDayActions = allFirstDayActions
+) {
   const review = records.filter(isDeclassificationQueue);
   const pdfs = records.filter((record) => record.pdfUrl).length;
   const sources = countBy(records, sourceLabel).length;
@@ -573,6 +692,7 @@ function renderWorkbench(records, potentialDocuments = allPotentialDocuments, co
   }
 
   renderDecisionCockpit(decisionCockpit);
+  renderFirstDayActions(firstDayActions);
 
   if (researchLanes) {
     const presidential = records.filter(isPresidentialConversation);
@@ -1947,10 +2067,11 @@ async function init() {
     allSourceNoteFinalization = window.COMPILER_SOURCE_NOTE_FINALIZATION || (await loadSourceNoteFinalization());
     allCitationSheetExtractions = window.COMPILER_CITATION_SHEET_EXTRACTIONS || (await loadCitationSheetExtractions());
     allPageBoundaryQueue = window.COMPILER_PAGE_BOUNDARY_QUEUE || (await loadPageBoundaryQueue());
+    allFirstDayActions = window.COMPILER_FIRST_DAY_ACTIONS || (await loadFirstDayActions());
     allDailyDiaryReferences = window.DAILY_DIARY_REFERENCES || (await loadDailyDiaryReferences());
     setChapterCounts(allRecords);
     populateFilters(allRecords);
-    renderWorkbench(allRecords, allPotentialDocuments, allCompilerGaps, allDecisionCockpit);
+    renderWorkbench(allRecords, allPotentialDocuments, allCompilerGaps, allDecisionCockpit, allFirstDayActions);
     renderBrowseIndex(allRecords);
     renderPotentialDocuments(allPotentialDocuments);
     renderCompilerGaps(allCompilerGaps, allRecords, allPotentialDocuments);
@@ -2010,6 +2131,12 @@ async function loadCitationSheetExtractions() {
 
 async function loadPageBoundaryQueue() {
   const response = await fetch("data/compiler-page-boundary-queue.json");
+  if (!response.ok) return [];
+  return response.json();
+}
+
+async function loadFirstDayActions() {
+  const response = await fetch("data/compiler-first-day-actions.json");
   if (!response.ok) return [];
   return response.json();
 }

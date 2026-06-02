@@ -83,10 +83,14 @@ const paths = {
   decisionCockpitScript: path.join(dataDir, "compiler-decision-cockpit.js"),
   selectionBoardCsv: path.join(reportsDir, "compiler-selection-board.csv"),
   selectionBoard: path.join(reportsDir, "compiler-selection-board.md"),
+  selectionBoardJson: path.join(dataDir, "compiler-selection-board.json"),
+  selectionBoardScript: path.join(dataDir, "compiler-selection-board.js"),
   sourceNoteAuditCsv: path.join(reportsDir, "compiler-source-note-audit.csv"),
   sourceNoteAudit: path.join(reportsDir, "compiler-source-note-audit.md"),
   sourceNoteFinalizationCsv: path.join(reportsDir, "compiler-source-note-finalization.csv"),
   sourceNoteFinalization: path.join(reportsDir, "compiler-source-note-finalization.md"),
+  sourceNoteFinalizationJson: path.join(dataDir, "compiler-source-note-finalization.json"),
+  sourceNoteFinalizationScript: path.join(dataDir, "compiler-source-note-finalization.js"),
   accessReviewCsv: path.join(reportsDir, "compiler-access-review.csv"),
   accessReview: path.join(reportsDir, "compiler-access-review.md"),
   pageBoundaryCsv: path.join(reportsDir, "compiler-page-boundary-queue.csv"),
@@ -872,9 +876,13 @@ function writeDecisionCockpit(rows) {
 }
 
 function writeDecisionCockpitData(rows) {
+  writeBrowserData(paths.decisionCockpitJson, paths.decisionCockpitScript, "COMPILER_DECISION_COCKPIT", rows);
+}
+
+function writeBrowserData(jsonPath, scriptPath, globalName, rows) {
   const json = JSON.stringify(rows, null, 2);
-  fs.writeFileSync(paths.decisionCockpitJson, `${json}\n`);
-  fs.writeFileSync(paths.decisionCockpitScript, `window.COMPILER_DECISION_COCKPIT = ${json};\n`);
+  fs.writeFileSync(jsonPath, `${json}\n`);
+  fs.writeFileSync(scriptPath, `window.${globalName} = ${json};\n`);
 }
 
 function isRestrictedStatus(status = "") {
@@ -3104,6 +3112,13 @@ function main() {
   writeSelectionBoard(selectionBoard);
   writeDecisionCockpit(decisionCockpit);
   writeDecisionCockpitData(decisionCockpit);
+  writeBrowserData(paths.selectionBoardJson, paths.selectionBoardScript, "COMPILER_SELECTION_BOARD", selectionBoard);
+  writeBrowserData(
+    paths.sourceNoteFinalizationJson,
+    paths.sourceNoteFinalizationScript,
+    "COMPILER_SOURCE_NOTE_FINALIZATION",
+    sourceNoteFinalization
+  );
   writeSourceNoteAudit(sourceAudit, confirmed, potentialQueue);
   writeSourceNoteFinalization(sourceNoteFinalization);
   writeAccessReview(accessReview);

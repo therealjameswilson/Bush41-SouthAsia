@@ -29,6 +29,8 @@ let allRecords = [];
 let allPotentialDocuments = [];
 let allCompilerGaps = [];
 let allDecisionCockpit = [];
+let allSelectionBoard = [];
+let allSourceNoteFinalization = [];
 let allDailyDiaryReferences = { dates: {} };
 
 const COMPILER_QUEUE_OPTIONS = [
@@ -1126,6 +1128,35 @@ function recordAnchorId(record) {
     .replace(/^-|-$/g, "")}`;
 }
 
+function targetParts(value = "") {
+  return String(value || "")
+    .split(";")
+    .map((part) => part.trim())
+    .filter(Boolean);
+}
+
+function rowMatchesRecord(row, record) {
+  if (!row || row.itemType !== "Confirmed record") return false;
+  if (row.compilerNumber && row.compilerNumber === record.compilerNumber) return true;
+  if (row.itemId && row.itemId === record.id) return true;
+  if (row.naid && row.naid === record.naid) return true;
+
+  const targets = targetParts(row.naidOrTargets);
+  return Boolean(
+    (record.naid && targets.includes(record.naid)) ||
+      (record.localIdentifier && targets.includes(record.localIdentifier)) ||
+      (row.catalogUrl && row.catalogUrl === record.catalogUrl)
+  );
+}
+
+function selectionRowForRecord(record) {
+  return allSelectionBoard.find((row) => rowMatchesRecord(row, record));
+}
+
+function sourceFinalizationRowForRecord(record) {
+  return allSourceNoteFinalization.find((row) => rowMatchesRecord(row, record));
+}
+
 async function copyText(text) {
   if (navigator.clipboard?.writeText) {
     try {
@@ -1168,8 +1199,36 @@ function dailyDiarySummary(record) {
     .join("\n");
 }
 
+function compilerActionSummary(record) {
+  const selection = selectionRowForRecord(record);
+  const source = sourceFinalizationRowForRecord(record);
+  const lines = [];
+
+  if (selection) {
+    lines.push(
+      `Suggested decision: ${selection.suggestedDecision || "Review"}`,
+      selection.selectionLane ? `Selection lane: ${selection.selectionLane}` : "",
+      selection.nextAction ? `Selection next action: ${selection.nextAction}` : "",
+      selection.rationale ? `Selection rationale: ${selection.rationale}` : ""
+    );
+  }
+
+  if (source) {
+    lines.push(
+      source.finalizationLane ? `Source-note finalization lane: ${source.finalizationLane}` : "",
+      source.citationSheetTask ? `Citation-sheet task: ${source.citationSheetTask}` : "",
+      source.evidenceBasis ? `Evidence basis: ${source.evidenceBasis}` : "",
+      source.frusStyleTarget ? `FRUS-style target: ${source.frusStyleTarget}` : "",
+      source.keepOutOfSourceNote ? `Keep out of visible Source Note: ${source.keepOutOfSourceNote}` : ""
+    );
+  }
+
+  return lines.filter(Boolean).join("\n");
+}
+
 function compilerPacket(record) {
   const diary = dailyDiarySummary(record);
+  const actionSummary = compilerActionSummary(record);
   const topics = uniqueInOrder([...(record.frusTopics || []), ...(record.topics || [])]);
   const lines = [
     `Doc ${record.compilerNumber || "TBD"}: ${record.documentTitle || record.title}`,
@@ -1190,6 +1249,7 @@ function compilerPacket(record) {
     record.pdfUrl ? `PDF: ${record.pdfUrl}` : "",
     "",
     record.subjectLine ? `Subject cue: ${record.subjectLine}` : "",
+    actionSummary ? `Compiler action:\n${actionSummary}` : "",
     record.provenanceNote || record.sourceNote ? `Provenance: ${record.provenanceNote || record.sourceNote}` : "",
     (record.compilerRisks || []).length ? `Compiler risks: ${record.compilerRisks.join("; ")}` : "",
     diary
@@ -1249,6 +1309,73 @@ function createCopyPacketButton(record) {
   });
 }
 
+function createCompilerActionPanel(record) {
+  const selection = selectionRowForRecord(record);
+  const source = sourceFinalizationRowForRecord(record);
+  if (!selection && !source) return null;
+
+  const panel = document.createElement("div");
+  panel.className = "record-compiler-action";
+
+  const title = document.createElement("span");
+  title.className = "record-compiler-action-label";
+  title.textContent = "Compiler Action";
+  panel.append(title);
+
+  if (selection) {
+    const decision = document.createElement("p");
+    decision.className = "record-compiler-decision";
+    const label = document.createElement("span");
+    label.textContent = "Selection";
+    const value = document.createElement("strong");
+    value.textContent = selection.suggestedDecision || "Review";
+    decision.append(label, value);
+
+    const detail = document.createElement("p");
+    detail.className = "record-compiler-detail";
+    detail.textContent = selection.nextAction || selection.rationale || "Record the selection decision and rationale.";
+    panel.append(decision, detail);
+  }
+
+  if (source) {
+    const finalization = document.createElement("p");
+    finalization.className = "record-compiler-decision";
+    const label = document.createElement("span");
+    label.textContent = "Source note";
+    const value = document.createElement("strong");
+    value.textContent = source.finalizationLane || "Final check";
+    finalization.append(label, value);
+
+    const task = document.createElement("p");
+    task.className = "record-compiler-detail";
+    task.textContent = source.citationSheetTask || "Confirm the Source Note against the selected text.";
+    panel.append(finalization, task);
+  }
+
+  const links = document.createElement("div");
+  links.className = "record-compiler-action-links";
+  for (const [href, label] of [
+    ["reports/compiler-selection-board.md?v=compiler-actions-20260602", "Selection Board"],
+    ["reports/compiler-source-note-finalization.md?v=compiler-actions-20260602", "Source Finalization"]
+  ]) {
+    const link = document.createElement("a");
+    link.href = href;
+    link.textContent = label;
+    links.append(link);
+  }
+  links.append(
+    createCopyButton(record, {
+      label: "Copy Action",
+      copiedLabel: "Action Copied",
+      getText: compilerActionSummary,
+      summary: "compiler action"
+    })
+  );
+  panel.append(links);
+
+  return panel;
+}
+
 function createRecordRow(record) {
   const row = document.createElement("article");
   row.className = "record-row";
@@ -1298,6 +1425,8 @@ function createRecordRow(record) {
     flags,
     createSourceNote(record)
   );
+  const compilerActionPanel = createCompilerActionPanel(record);
+  if (compilerActionPanel) body.append(compilerActionPanel);
 
   const links = document.createElement("div");
   links.className = "record-links";
@@ -1351,6 +1480,7 @@ function getSearchText(record) {
     record.sourceNote,
     record.provenanceNote,
     generateFrusSourceNote(record),
+    compilerActionSummary(record),
     record.source?.series,
     record.source?.name,
     ...(record.dailyDiaryReferences || []).flatMap((reference) => [
@@ -1602,6 +1732,8 @@ async function init() {
     allPotentialDocuments = window.POTENTIAL_DOCUMENTS || (await loadPotentialDocuments());
     allCompilerGaps = window.COMPILER_GAPS || (await loadCompilerGaps());
     allDecisionCockpit = window.COMPILER_DECISION_COCKPIT || (await loadDecisionCockpit());
+    allSelectionBoard = window.COMPILER_SELECTION_BOARD || (await loadSelectionBoard());
+    allSourceNoteFinalization = window.COMPILER_SOURCE_NOTE_FINALIZATION || (await loadSourceNoteFinalization());
     allDailyDiaryReferences = window.DAILY_DIARY_REFERENCES || (await loadDailyDiaryReferences());
     setChapterCounts(allRecords);
     populateFilters(allRecords);
@@ -1641,6 +1773,18 @@ async function loadCompilerGaps() {
 
 async function loadDecisionCockpit() {
   const response = await fetch("data/compiler-decision-cockpit.json");
+  if (!response.ok) return [];
+  return response.json();
+}
+
+async function loadSelectionBoard() {
+  const response = await fetch("data/compiler-selection-board.json");
+  if (!response.ok) return [];
+  return response.json();
+}
+
+async function loadSourceNoteFinalization() {
+  const response = await fetch("data/compiler-source-note-finalization.json");
   if (!response.ok) return [];
   return response.json();
 }

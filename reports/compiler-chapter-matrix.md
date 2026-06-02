@@ -1,6 +1,6 @@
 # FRUS South Asia Chapter Research Matrix
 
-Generated: 2026-06-02T01:41:56.522Z
+Generated: 2026-06-02T01:52:27.756Z
 
 This matrix turns the chronology, potential-source queue, and compiler gaps into chapter-level research lanes. It is a selection aid, not final editorial numbering: use it to see where the chapter is strong, where the source base is access-heavy, and where leads need promotion or exclusion decisions.
 

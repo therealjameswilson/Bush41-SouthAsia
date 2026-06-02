@@ -1398,6 +1398,72 @@ footer {
   color: var(--muted);
 }
 
+.record-compiler-action {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: rgba(9, 52, 83, 0.04);
+  border: 1px solid rgba(24, 59, 91, 0.14);
+  border-left: 4px solid var(--red);
+  border-radius: 6px;
+}
+
+.record-compiler-action-label {
+  display: block;
+  color: var(--red);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.record-compiler-decision {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 0.83rem;
+  line-height: 1.35;
+}
+
+.record-compiler-decision span {
+  font-weight: 900;
+}
+
+.record-compiler-decision strong {
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.record-compiler-detail {
+  margin: 3px 0 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.record-compiler-action-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 9px;
+}
+
+.record-compiler-action-links a,
+.record-compiler-action-links button {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  padding: 0 9px;
+  color: var(--navy);
+  font-size: 0.76rem;
+  font-weight: 900;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(24, 59, 91, 0.14);
+  border-radius: 6px;
+  font-family: inherit;
+}
+
 .record-meta span,
 .record-links a,
 .record-links button {

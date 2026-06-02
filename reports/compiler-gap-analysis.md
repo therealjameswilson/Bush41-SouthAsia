@@ -1,6 +1,6 @@
 # FRUS South Asia Gap Analysis
 
-Generated: 2026-06-02T01:41:56.507Z
+Generated: 2026-06-02T01:52:27.750Z
 
 This is the compiler-facing gap dashboard for the South Asia volume. It is generated from the current chronology, potential-lead queue, source-note audit, access ledger, page-boundary queue, chapter matrix, selection board, and `data/compiler-gaps.json`, so the Markdown report and CSV pull sheets stay in sync.
 

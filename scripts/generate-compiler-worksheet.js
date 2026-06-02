@@ -2374,7 +2374,7 @@ function writePriorityPack(gaps, confirmed, potentialQueue) {
   fs.writeFileSync(paths.priorityPack, `${lines.join("\n").trim()}\n`);
 }
 
-function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, accessReview, pageBoundary, chapterMatrix, personsAuthority, selectionBoard) {
+function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, sourceNoteFinalization, accessReview, pageBoundary, chapterMatrix, personsAuthority, selectionBoard) {
   const released = confirmed.filter((row) => row.queue === "Released chronology").length;
   const review = confirmed.length - released;
   const sourceNotes = confirmed.filter((row) => row.sourceNote).length;
@@ -2382,6 +2382,7 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
   const dailyDiaryLinked = confirmed.filter((row) => row.dailyDiaryRefs.length).length;
   const cleanSourceNotes = sourceAudit.filter((row) => row.auditStatus === "Visible note clean").length;
   const sourceNoteQueue = sourceAudit.filter((row) => row.editorialLane !== "Ready source-note check").length;
+  const sourceNoteFinalizationQueue = sourceNoteFinalization.filter((row) => row.finalizationLane !== "Final editor source-note check").length;
   const confirmedAccessReview = accessReview.filter((row) => row.itemType === "Confirmed record").length;
   const potentialAccessReview = accessReview.filter((row) => row.itemType === "Potential lead").length;
   const pageBoundaryHigh = pageBoundary.filter((row) => ["Critical", "High"].includes(row.priorityTier)).length;
@@ -2446,7 +2447,9 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     "",
     `- Visible source notes mechanically clean: ${cleanSourceNotes}/${sourceAudit.length}`,
     `- Items in source-note review lanes: ${sourceNoteQueue}`,
+    `- Citation-sheet/source-note finalization rows: ${sourceNoteFinalizationQueue}/${sourceNoteFinalization.length}`,
     `- Itemized audit: \`compiler-source-note-audit.md\` and \`compiler-source-note-audit.csv\``,
+    `- Finalization packet: \`compiler-source-note-finalization.md\` and \`compiler-source-note-finalization.csv\``,
     "",
     "## Access And Promotion Review",
     "",
@@ -2488,6 +2491,7 @@ function writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gap
     "- `compiler-chapter-matrix.md` and `compiler-chapter-matrix.csv`: chapter-by-theme research matrix with coverage status, leads, gaps, and next actions.",
     "- `compiler-persons-authority.md` and `compiler-persons-authority.csv`: participant-to-Persons authority crosswalk with institutional labels and context-only entries separated.",
     "- `compiler-source-note-audit.md` and `compiler-source-note-audit.csv`: itemized FRUS-style source-note review lanes.",
+    "- `compiler-source-note-finalization.md` and `compiler-source-note-finalization.csv`: citation-sheet/source-note finalization queue with extraction tasks, FRUS-style targets, and provenance separation.",
     "- `compiler-access-review.md` and `compiler-access-review.csv`: access-status, partial-release, declassification, and potential-lead promotion ledger.",
     "- `compiler-priority-dossiers.md`: compact first-pass dossiers for the highest-priority gap lanes.",
     "- `compiler-dossiers/index.md`: one Markdown dossier per confirmed record, organized by chapter.",
@@ -2510,6 +2514,7 @@ function main() {
   const decisions = decisionRows(confirmed, potentialQueue, gapQueue);
   const selectionBoard = selectionBoardRows(confirmed, potentialQueue, gapQueue);
   const sourceAudit = sourceNoteAuditRows(confirmed, potentialQueue);
+  const sourceNoteFinalization = sourceNoteFinalizationRows(sourceAudit);
   const accessReview = accessReviewRows(confirmed, potentialQueue);
   const pageBoundary = pageBoundaryRows(confirmed, potentialQueue, gapQueue);
   const chapterMatrix = chapterMatrixRows(confirmed, potentialQueue, gapQueue);
@@ -2676,6 +2681,31 @@ function main() {
     { key: "pdfUrl", label: "PDF URL" }
   ], sourceAudit);
 
+  writeCsv(paths.sourceNoteFinalizationCsv, [
+    { key: "itemType", label: "Item type" },
+    { key: "compilerNumber", label: "Compiler #" },
+    { key: "finalizationRank", label: "Finalization rank" },
+    { key: "finalizationLane", label: "Finalization lane" },
+    { key: "auditStatus", label: "Audit status" },
+    { key: "editorialLane", label: "Source-note audit lane" },
+    { key: "chapterOrLane", label: "Chapter or lane" },
+    { key: "date", label: "Date" },
+    { key: "title", label: "Title" },
+    { key: "releaseOrStatus", label: "Release or status" },
+    { key: "pages", label: "Pages" },
+    { key: "naid", label: "NAID" },
+    { key: "localIdentifier", label: "Local identifier" },
+    { key: "sourceLocator", label: "Source locator" },
+    { key: "evidenceBasis", label: "Evidence basis" },
+    { key: "citationSheetTask", label: "Citation-sheet task" },
+    { key: "frusStyleTarget", label: "FRUS-style target" },
+    { key: "keepOutOfSourceNote", label: "Keep out of visible Source Note" },
+    { key: "currentSourceNote", label: "Current Source Note" },
+    { key: "provenanceNote", label: "Provenance note" },
+    { key: "catalogUrl", label: "Catalog URL" },
+    { key: "pdfUrl", label: "PDF URL" }
+  ], sourceNoteFinalization);
+
   writeCsv(paths.accessReviewCsv, [
     { key: "itemType", label: "Item type" },
     { key: "compilerNumber", label: "Compiler #" },
@@ -2762,11 +2792,12 @@ function main() {
     { key: "notes", label: "Notes" }
   ], personsAuthority);
 
-  writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, accessReview, pageBoundary, chapterMatrix, personsAuthority, selectionBoard);
+  writeWorksheet(records, potential, gaps, confirmed, potentialQueue, gapQueue, sourceAudit, sourceNoteFinalization, accessReview, pageBoundary, chapterMatrix, personsAuthority, selectionBoard);
   writeGapAnalysis(gapQueue, confirmed, potentialQueue, sourceAudit, accessReview, pageBoundary, chapterMatrix, selectionBoard);
   writeGapPackets(gapPackets, gapQueue);
   writeSelectionBoard(selectionBoard);
   writeSourceNoteAudit(sourceAudit, confirmed, potentialQueue);
+  writeSourceNoteFinalization(sourceNoteFinalization);
   writeAccessReview(accessReview);
   writePageBoundaryQueue(pageBoundary);
   writeChapterMatrix(chapterMatrix);
@@ -2774,7 +2805,7 @@ function main() {
   writePriorityPack(gaps, confirmed, potentialQueue);
   writeDossiers(confirmed);
 
-  console.log(`Wrote compiler worksheet, CSVs, decision log, gap analysis, gap packets, selection board, source-note audit, access review, page-boundary queue, chapter matrix, persons authority audit, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
+  console.log(`Wrote compiler worksheet, CSVs, decision log, gap analysis, gap packets, selection board, source-note audit, source-note finalization, access review, page-boundary queue, chapter matrix, persons authority audit, and dossiers to ${path.relative(repoRoot, reportsDir)}/`);
 }
 
 main();

@@ -1,6 +1,6 @@
 # FRUS South Asia Page-Boundary Queue
 
-Generated: 2026-06-02T01:18:48.341Z
+Generated: 2026-06-02T01:26:12.986Z
 
 This queue isolates PDFs that still need item-level page-boundary or policy-bearing-page review before final FRUS selection. It complements the access ledger: access asks whether a record can be used; this sheet asks exactly what pages and document boundaries the compiler should use.
 

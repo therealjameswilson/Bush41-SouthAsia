@@ -1,6 +1,6 @@
 # FRUS South Asia Compiler Worksheet
 
-Generated: 2026-06-02T01:18:48.334Z
+Generated: 2026-06-02T01:26:12.966Z
 
 ## Working Set
 
@@ -47,7 +47,9 @@ Generated: 2026-06-02T01:18:48.334Z
 
 - Visible source notes mechanically clean: 106/106
 - Items in source-note review lanes: 94
+- Citation-sheet/source-note finalization rows: 94/106
 - Itemized audit: `compiler-source-note-audit.md` and `compiler-source-note-audit.csv`
+- Finalization packet: `compiler-source-note-finalization.md` and `compiler-source-note-finalization.csv`
 
 ## Access And Promotion Review
 
@@ -104,6 +106,7 @@ Generated: 2026-06-02T01:18:48.334Z
 - `compiler-chapter-matrix.md` and `compiler-chapter-matrix.csv`: chapter-by-theme research matrix with coverage status, leads, gaps, and next actions.
 - `compiler-persons-authority.md` and `compiler-persons-authority.csv`: participant-to-Persons authority crosswalk with institutional labels and context-only entries separated.
 - `compiler-source-note-audit.md` and `compiler-source-note-audit.csv`: itemized FRUS-style source-note review lanes.
+- `compiler-source-note-finalization.md` and `compiler-source-note-finalization.csv`: citation-sheet/source-note finalization queue with extraction tasks, FRUS-style targets, and provenance separation.
 - `compiler-access-review.md` and `compiler-access-review.csv`: access-status, partial-release, declassification, and potential-lead promotion ledger.
 - `compiler-priority-dossiers.md`: compact first-pass dossiers for the highest-priority gap lanes.
 - `compiler-dossiers/index.md`: one Markdown dossier per confirmed record, organized by chapter.

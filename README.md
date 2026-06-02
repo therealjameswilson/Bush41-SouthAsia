@@ -69,8 +69,11 @@ creates `reports/compiler-gap-packets.md` and
 lanes, confirmed anchors, potential leads, page-boundary pulls, closure
 questions, and links,
 creates `reports/compiler-source-note-audit.md` for itemized FRUS-style
-source-note review lanes, creates `reports/compiler-access-review.md` for
-access, declassification, excision, and promotion triage, creates
+source-note review lanes, creates
+`reports/compiler-source-note-finalization.md` and
+`reports/compiler-source-note-finalization.csv` for citation-sheet/source-note
+finalization tasks, creates `reports/compiler-access-review.md` for access,
+declassification, excision, and promotion triage, creates
 `reports/compiler-chapter-matrix.md` for chapter-by-theme coverage and
 next-action review lanes, creates
 `reports/compiler-selection-board.md` for suggested triage decisions to prefill

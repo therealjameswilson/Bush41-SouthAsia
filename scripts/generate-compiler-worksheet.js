@@ -825,20 +825,8 @@ function sourceNoteCitationTask(row) {
 }
 
 function sourceNoteStyleTarget(row) {
-  const status = row.releaseOrStatus || "";
-  const accessSentence = /partial/i.test(status)
-    ? "Partial release."
-    : isRestrictedStatus(status)
-      ? `Access restriction: ${status}.`
-      : /full|unrestricted|declassified/i.test(status)
-        ? status.match(/full/i) ? "Full release." : status.match(/declassified/i) ? "Declassified." : "Unrestricted."
-        : "State release or access posture only after verification.";
-
-  return compactList([
-    "Source: George H.W. Bush Library",
-    row.sourceLocator || "collection/series/file title pending",
-    accessSentence
-  ]).join(", ").replace(/,\s+(Full release\.|Partial release\.|Declassified\.|Unrestricted\.|Access restriction:)/, ". $1");
+  if (row.sourceNote) return row.sourceNote;
+  return "Draft after citation-sheet review: Source: George H.W. Bush Library, [collection or office], [series], [file unit or item title], [local identifier or source pages if needed]. [Release or access sentence].";
 }
 
 function sourceNoteKeepOut(row) {
@@ -1284,6 +1272,7 @@ function writeGapAnalysis(gapQueue, confirmed, potentialQueue, sourceAudit, acce
     "- `compiler-selection-board.md`: suggested Select, Exclude, Defer, Cite only, or Resolve triage board.",
     "- `compiler-access-review.md`: confirmed access/excision questions plus potential-lead promotion review.",
     "- `compiler-source-note-audit.md`: FRUS-style source-note and title/source verification queue.",
+    "- `compiler-source-note-finalization.md`: citation-sheet/source-note finalization queue separating visible Source Notes from provenance metadata.",
     "",
     "## Working Rule",
     "",

@@ -20,7 +20,8 @@ const paths = {
   personsAuthorityCsv: path.join(reportsDir, "compiler-persons-authority.csv"),
   accessCsv: path.join(reportsDir, "compiler-access-review.csv"),
   chapterMatrixCsv: path.join(reportsDir, "compiler-chapter-matrix.csv"),
-  criticalCsv: path.join(reportsDir, "compiler-critical-page-extractions.csv")
+  criticalCsv: path.join(reportsDir, "compiler-critical-page-extractions.csv"),
+  citationSheetsCsv: path.join(reportsDir, "compiler-citation-sheet-extractions.csv")
 };
 
 function readJson(filePath, fallback = []) {
@@ -129,6 +130,7 @@ function main() {
   const accessReview = readCsv(paths.accessCsv);
   const chapterMatrix = readCsv(paths.chapterMatrixCsv);
   const criticalPages = readCsv(paths.criticalCsv);
+  const citationSheets = readCsv(paths.citationSheetsCsv);
 
   const released = records.filter(releasedRecord);
   const dailyDiaryRefs = records.filter((record) => (record.dailyDiaryReferences || []).length);
@@ -152,6 +154,9 @@ function main() {
     /^Yes$/i.test(row["OCR attempted"] || "") && Number(row["Text pages"] || 0) > 0
   );
   const criticalAdmin = criticalPages.filter((row) => /Administrative marker only/i.test(row["Extraction status"] || ""));
+  const citationMarkerRows = citationSheets.filter((row) => /^Yes$/i.test(row["Citation marker found"] || ""));
+  const citationClassificationRows = citationSheets.filter((row) => row.Classification);
+  const citationPartialRows = citationSheets.filter((row) => /partial/i.test(row["Release/status"] || ""));
   const sourceQueue = sourceFinalization.filter((row) => row.finalizationLane !== "Final editor source-note check");
   const topGaps = gaps
     .filter(openGap)
@@ -190,6 +195,8 @@ function main() {
     ["Source-note audit CSV", reportLink("compiler-source-note-audit.csv")],
     ["Source-note finalization", reportLink("compiler-source-note-finalization.md")],
     ["Source-note finalization CSV", reportLink("compiler-source-note-finalization.csv")],
+    ["Citation-sheet source-note extractions", reportLink("compiler-citation-sheet-extractions.md")],
+    ["Citation-sheet extraction CSV", reportLink("compiler-citation-sheet-extractions.csv")],
     ["Priority dossier pack", reportLink("compiler-priority-dossiers.md")],
     ["Dossier index", reportLink("compiler-dossiers/index.md")],
     ["Confirmed-record CSV", reportLink("compiler-confirmed-records.csv")],
@@ -235,6 +242,10 @@ function main() {
     `- Critical page-extraction PDFs with OCR text: ${criticalOcrText.length}`,
     `- Critical page-extraction PDFs still requiring OCR or manual review: ${criticalNeedsReview.length}`,
     `- Administrative-marker-only PDFs in critical extraction pass: ${criticalAdmin.length}`,
+    `- Citation-sheet PDFs processed for source-note targets: ${citationSheets.length}`,
+    `- Citation markers extracted for source-note targets: ${citationMarkerRows.length}`,
+    `- Citation-sheet first-page classifications extracted: ${citationClassificationRows.length}`,
+    `- Citation-sheet partial-release rows still requiring excision review: ${citationPartialRows.length}`,
     `- Confirmed records needing access/excision decisions: ${confirmedAccess.length}`,
     `- Potential leads queued for promotion/access/context decisions: ${potentialAccess.length}`,
     `- Persons authority entries available: ${persons.persons?.length || 0}`,
@@ -261,12 +272,13 @@ function main() {
     "node scripts/normalize-source-notes.js",
     "node scripts/generate-compiler-worksheet.js",
     "node scripts/extract-critical-page-boundaries.js",
+    "node scripts/extract-citation-sheet-source-notes.js",
     "node scripts/generate-compiler-quickstart.js",
     "```",
     "",
     "## Source-Note Rule",
     "",
-    "Treat the visible Source Note as the editorial FRUS-style citation. Keep NAIDs, local identifiers, catalog URLs, object filenames, PDF URLs, Daily Diary matches, page-count basis, FOIA tracking, and other audit details in the provenance trail. Daily Diary and Daily Backup references should support chronology, time, location, attendance, and call-status checks, not substantive meeting or call summaries.",
+    "Treat the visible Source Note as the editorial FRUS-style citation. For extracted citation-marker rows, prefer the compact Bush Library path, OA/ID folder identifier, folder title, and original classification. Keep NAIDs, local identifiers beyond the OA/ID source locator, catalog URLs, object filenames, PDF URLs, Daily Diary matches, page-count basis, FOIA tracking, OCR status, and other audit details in the provenance trail. Daily Diary and Daily Backup references should support chronology, time, location, attendance, and call-status checks, not substantive meeting or call summaries.",
     "",
     "## Working Rule",
     "",

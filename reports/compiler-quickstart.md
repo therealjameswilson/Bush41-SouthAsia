@@ -33,6 +33,8 @@ Version token for live links: `compiler-live-20260602`
 - Source-note audit CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-source-note-audit.csv?v=compiler-live-20260602
 - Source-note finalization: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-source-note-finalization.md?v=compiler-live-20260602
 - Source-note finalization CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-source-note-finalization.csv?v=compiler-live-20260602
+- Citation-sheet source-note extractions: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-citation-sheet-extractions.md?v=compiler-live-20260602
+- Citation-sheet extraction CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-citation-sheet-extractions.csv?v=compiler-live-20260602
 - Priority dossier pack: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-priority-dossiers.md?v=compiler-live-20260602
 - Dossier index: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-dossiers/index.md?v=compiler-live-20260602
 - Confirmed-record CSV: https://therealjameswilson.github.io/Bush41-SouthAsia/reports/compiler-confirmed-records.csv?v=compiler-live-20260602
@@ -66,6 +68,10 @@ Version token for live links: `compiler-live-20260602`
 - Critical page-extraction PDFs with OCR text: 7
 - Critical page-extraction PDFs still requiring OCR or manual review: 4
 - Administrative-marker-only PDFs in critical extraction pass: 1
+- Citation-sheet PDFs processed for source-note targets: 17
+- Citation markers extracted for source-note targets: 15
+- Citation-sheet first-page classifications extracted: 12
+- Citation-sheet partial-release rows still requiring excision review: 2
 - Confirmed records needing access/excision decisions: 39
 - Potential leads queued for promotion/access/context decisions: 40
 - Persons authority entries available: 72
@@ -103,12 +109,13 @@ node scripts/remediate-compiler-gaps.js
 node scripts/normalize-source-notes.js
 node scripts/generate-compiler-worksheet.js
 node scripts/extract-critical-page-boundaries.js
+node scripts/extract-citation-sheet-source-notes.js
 node scripts/generate-compiler-quickstart.js
 ```
 
 ## Source-Note Rule
 
-Treat the visible Source Note as the editorial FRUS-style citation. Keep NAIDs, local identifiers, catalog URLs, object filenames, PDF URLs, Daily Diary matches, page-count basis, FOIA tracking, and other audit details in the provenance trail. Daily Diary and Daily Backup references should support chronology, time, location, attendance, and call-status checks, not substantive meeting or call summaries.
+Treat the visible Source Note as the editorial FRUS-style citation. For extracted citation-marker rows, prefer the compact Bush Library path, OA/ID folder identifier, folder title, and original classification. Keep NAIDs, local identifiers beyond the OA/ID source locator, catalog URLs, object filenames, PDF URLs, Daily Diary matches, page-count basis, FOIA tracking, OCR status, and other audit details in the provenance trail. Daily Diary and Daily Backup references should support chronology, time, location, attendance, and call-status checks, not substantive meeting or call summaries.
 
 ## Working Rule
 

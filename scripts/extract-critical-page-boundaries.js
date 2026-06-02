@@ -10,8 +10,9 @@ const outputMdPath = path.join(reportsDir, "compiler-critical-page-extractions.m
 const outputCsvPath = path.join(reportsDir, "compiler-critical-page-extractions.csv");
 
 const LIMIT = Number(process.env.PAGE_EXTRACTION_LIMIT || 11);
-const OCR_MAX_PAGES = Number(process.env.OCR_MAX_PAGES || 65);
+const OCR_MAX_PAGES = Number(process.env.OCR_MAX_PAGES || 220);
 const MIN_TEXT_CHARS = 80;
+const DOWNLOAD_TIMEOUT_MS = Number(process.env.DOWNLOAD_TIMEOUT_MS || 300_000);
 
 const KEYWORDS = [
   ["Afghanistan", /\bafghan|afghanistan|kabul|mujahid|mujahideen|najib|mojaddedi|soviet/i],
@@ -186,26 +187,21 @@ function recommendation(row, pageCount, textPageCount, candidatePages, markerPag
 }
 
 async function downloadFile(url, outputPath) {
-  try {
-    const response = await fetch(url, { headers: { "User-Agent": "Bush41-SouthAsia-page-extractor/1.0" } });
-    if (!response.ok) throw new Error(`HTTP ${response.status} for ${url}`);
-    fs.writeFileSync(outputPath, Buffer.from(await response.arrayBuffer()));
-    return;
-  } catch (error) {
-    if (!commandExists("curl")) throw error;
+  if (commandExists("curl")) {
     execFileSync(
       "curl",
       [
         "-L",
         "--fail",
         "--retry",
-        "3",
+        "4",
+        "--retry-all-errors",
         "--retry-delay",
         "2",
         "--connect-timeout",
         "20",
         "--max-time",
-        "300",
+        String(Math.ceil(DOWNLOAD_TIMEOUT_MS / 1000)),
         "-A",
         "Bush41-SouthAsia-page-extractor/1.0",
         "-o",
@@ -214,6 +210,22 @@ async function downloadFile(url, outputPath) {
       ],
       { encoding: "utf8", maxBuffer: 20_000_000 }
     );
+    return;
+  }
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), DOWNLOAD_TIMEOUT_MS);
+  try {
+    const response = await fetch(url, {
+      headers: { "User-Agent": "Bush41-SouthAsia-page-extractor/1.0" },
+      signal: controller.signal
+    });
+    if (!response.ok) throw new Error(`HTTP ${response.status} for ${url}`);
+    fs.writeFileSync(outputPath, Buffer.from(await response.arrayBuffer()));
+  } catch (error) {
+    throw new Error(error.name === "AbortError" ? `Download timed out after ${DOWNLOAD_TIMEOUT_MS} ms: ${url}` : error.message);
+  } finally {
+    clearTimeout(timeout);
   }
 }
 
@@ -507,8 +519,12 @@ async function main() {
   try {
     for (const row of criticalRows) {
       try {
-        results.push(await extractRow(row, tempDir));
+        console.log(`[${row["Review order"]}/${criticalRows.length}] ${row.NAID} ${row.Title}`);
+        const result = await extractRow(row, tempDir);
+        results.push(result);
+        console.log(`  ${result.extractionStatus}; ${result.textPageCount} text pages; candidates: ${pageRanges(result.candidatePages) || "manual review"}`);
       } catch (error) {
+        console.log(`  Extraction failed: ${error.message}`);
         results.push({
           row,
           pageCount: 0,

@@ -47,6 +47,7 @@ node scripts/remediate-compiler-gaps.js
 node scripts/normalize-source-notes.js
 node scripts/generate-compiler-worksheet.js
 node scripts/extract-critical-page-boundaries.js
+node scripts/extract-citation-sheet-source-notes.js
 node scripts/generate-compiler-quickstart.js
 ```
 
@@ -89,6 +90,9 @@ page review, while `scripts/extract-critical-page-boundaries.js` creates
 `reports/compiler-critical-page-extractions.md` and
 `reports/compiler-critical-page-extractions.csv` as a first-pass page-finding
 aid for Critical boundary rows, creates
+`reports/compiler-citation-sheet-extractions.md` and
+`reports/compiler-citation-sheet-extractions.csv` from released Memcon/Telcon
+PDF citation-marker pages for FRUS-style source-note targets,
 `reports/compiler-persons-authority.md` for participant-to-Persons authority
 coverage and institutional-body separation, creates
 `reports/compiler-priority-dossiers.md` for the highest-risk first-pass lanes,
@@ -106,6 +110,16 @@ through `pdfinfo` and `pdftotext`, then writes
 `reports/compiler-critical-page-extractions.csv` with measured page counts,
 released/searchable text status, administrative-marker-only flags, and OCR/manual
 review recommendations.
+To refresh only the citation-marker source-note extraction packet:
+
+```sh
+node scripts/extract-citation-sheet-source-notes.js
+```
+`extract-citation-sheet-source-notes.js` processes the source-note
+finalization rows that have released item PDFs, extracts Bush Library citation
+marker fields, OA/ID folder identifiers, folder titles, and mechanically
+detectable first-page classifications, then writes the source-note target report
+and CSV while leaving downloaded PDFs in `.cache/`.
 `generate-compiler-quickstart.js` writes `reports/compiler-quickstart.md` from
 the current JSON/CSV artifacts so the compiler handoff links and counts can be
 refreshed without hand-editing cache-busters.

@@ -31,6 +31,7 @@ let allCompilerGaps = [];
 let allDecisionCockpit = [];
 let allSelectionBoard = [];
 let allSourceNoteFinalization = [];
+let allCitationSheetExtractions = [];
 let allPageBoundaryQueue = [];
 let allDailyDiaryReferences = { dates: {} };
 
@@ -972,6 +973,11 @@ function frusReleaseSentence(record) {
 }
 
 function generateFrusSourceNote(record) {
+  const citation = citationSheetExtractionForRecord(record);
+  if (citation?.markerFound && citation.frusStyleSourceNoteTarget) {
+    return citation.frusStyleSourceNoteTarget;
+  }
+
   const sourcePath = uniqueInOrder([
     frusRepository(record),
     ...frusSeriesParts(record),
@@ -1158,6 +1164,10 @@ function sourceFinalizationRowForRecord(record) {
   return allSourceNoteFinalization.find((row) => rowMatchesRecord(row, record));
 }
 
+function citationSheetExtractionForRecord(record) {
+  return allCitationSheetExtractions.find((row) => rowMatchesRecord(row, record));
+}
+
 function pageBoundaryRowForRecord(record) {
   return allPageBoundaryQueue.find((row) => rowMatchesRecord(row, record));
 }
@@ -1246,6 +1256,7 @@ function dailyDiarySummary(record) {
 function compilerActionSummary(record) {
   const selection = selectionRowForRecord(record);
   const source = sourceFinalizationRowForRecord(record);
+  const citation = citationSheetExtractionForRecord(record);
   const boundary = pageBoundaryRowForRecord(record);
   const lines = [];
 
@@ -1276,6 +1287,15 @@ function compilerActionSummary(record) {
       source.evidenceBasis ? `Evidence basis: ${source.evidenceBasis}` : "",
       source.frusStyleTarget ? `FRUS-style target: ${source.frusStyleTarget}` : "",
       source.keepOutOfSourceNote ? `Keep out of visible Source Note: ${source.keepOutOfSourceNote}` : ""
+    );
+  }
+
+  if (citation) {
+    lines.push(
+      citation.citationMarkerFound ? `Citation marker extracted: ${citation.citationMarkerFound}` : "",
+      citation.classification ? `Extracted classification: ${citation.classification}` : "Extracted classification: visual check needed",
+      citation.frusStyleSourceNoteTarget ? `Citation-marker source-note target: ${citation.frusStyleSourceNoteTarget}` : "",
+      citation.reviewNote ? `Citation-marker review note: ${citation.reviewNote}` : ""
     );
   }
 
@@ -1370,8 +1390,9 @@ function createCopyPacketButton(record) {
 function createCompilerActionPanel(record) {
   const selection = selectionRowForRecord(record);
   const source = sourceFinalizationRowForRecord(record);
+  const citation = citationSheetExtractionForRecord(record);
   const boundary = pageBoundaryRowForRecord(record);
-  if (!selection && !source && !boundary) return null;
+  if (!selection && !source && !citation && !boundary) return null;
 
   const panel = document.createElement("div");
   panel.className = "record-compiler-action";
@@ -1434,12 +1455,34 @@ function createCompilerActionPanel(record) {
     panel.append(finalization, task);
   }
 
+  if (citation) {
+    const citationLine = document.createElement("p");
+    citationLine.className = "record-compiler-decision";
+    const label = document.createElement("span");
+    label.textContent = "Citation marker";
+    const value = document.createElement("strong");
+    value.textContent = citation.markerFound ? "Extracted" : "Manual check";
+    citationLine.append(label, value);
+
+    const detail = document.createElement("p");
+    detail.className = "record-compiler-detail";
+    detail.textContent = [
+      citation.classification ? `Classification: ${citation.classification}.` : "Classification needs visual check.",
+      citation.reviewNote || ""
+    ]
+      .filter(Boolean)
+      .join(" ");
+
+    panel.append(citationLine, detail);
+  }
+
   const links = document.createElement("div");
   links.className = "record-compiler-action-links";
   for (const [href, label] of [
-    ["reports/compiler-selection-board.md?v=compiler-actions-20260602b", "Selection Board"],
-    ["reports/compiler-page-boundary-queue.md?v=compiler-boundaries-20260602", "Page Boundaries"],
-    ["reports/compiler-source-note-finalization.md?v=compiler-actions-20260602b", "Source Finalization"]
+    ["reports/compiler-selection-board.md?v=compiler-live-20260602", "Selection Board"],
+    ["reports/compiler-page-boundary-queue.md?v=compiler-live-20260602", "Page Boundaries"],
+    ["reports/compiler-source-note-finalization.md?v=compiler-live-20260602", "Source Finalization"],
+    ["reports/compiler-citation-sheet-extractions.md?v=compiler-live-20260602", "Citation Sheets"]
   ]) {
     const link = document.createElement("a");
     link.href = href;
@@ -1817,6 +1860,7 @@ async function init() {
     allDecisionCockpit = window.COMPILER_DECISION_COCKPIT || (await loadDecisionCockpit());
     allSelectionBoard = window.COMPILER_SELECTION_BOARD || (await loadSelectionBoard());
     allSourceNoteFinalization = window.COMPILER_SOURCE_NOTE_FINALIZATION || (await loadSourceNoteFinalization());
+    allCitationSheetExtractions = window.COMPILER_CITATION_SHEET_EXTRACTIONS || (await loadCitationSheetExtractions());
     allPageBoundaryQueue = window.COMPILER_PAGE_BOUNDARY_QUEUE || (await loadPageBoundaryQueue());
     allDailyDiaryReferences = window.DAILY_DIARY_REFERENCES || (await loadDailyDiaryReferences());
     setChapterCounts(allRecords);
@@ -1869,6 +1913,12 @@ async function loadSelectionBoard() {
 
 async function loadSourceNoteFinalization() {
   const response = await fetch("data/compiler-source-note-finalization.json");
+  if (!response.ok) return [];
+  return response.json();
+}
+
+async function loadCitationSheetExtractions() {
+  const response = await fetch("data/compiler-citation-sheet-extractions.json");
   if (!response.ok) return [];
   return response.json();
 }

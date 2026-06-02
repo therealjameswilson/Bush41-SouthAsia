@@ -1,6 +1,6 @@
 # FRUS South Asia Access and Promotion Ledger
 
-Generated: 2026-06-02T10:02:08.124Z
+Generated: 2026-06-02T10:06:10.406Z
 
 This ledger isolates confirmed records whose access posture, partial release, or declassification status can change selection decisions, then appends every potential lead that still needs promotion, context, or access review. It keeps the decision question visible beside page counts, NAIDs, source locators, and direct Catalog/PDF links.
 

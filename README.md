@@ -48,6 +48,7 @@ node scripts/normalize-source-notes.js
 node scripts/generate-compiler-worksheet.js
 node scripts/extract-critical-page-boundaries.js
 node scripts/extract-citation-sheet-source-notes.js
+node scripts/generate-declassified-chronology.js
 node scripts/generate-compiler-quickstart.js
 ```
 
@@ -120,6 +121,12 @@ finalization rows that have released item PDFs, extracts Bush Library citation
 marker fields, OA/ID folder identifiers, folder titles, and mechanically
 detectable first-page classifications, then writes the source-note target report
 and CSV while leaving downloaded PDFs in `.cache/`.
+`generate-declassified-chronology.js` writes
+`reports/compiler-declassified-chronology.md` and
+`reports/compiler-declassified-chronology.csv` as the paste-ready released,
+declassified, and partial-release chronology with source-note candidates,
+full provenance trails, direct Catalog/PDF links, and Daily Diary/Backup
+cross-references.
 `generate-compiler-quickstart.js` writes `reports/compiler-quickstart.md` from
 the current JSON/CSV artifacts so the compiler handoff links and counts can be
 refreshed without hand-editing cache-busters.

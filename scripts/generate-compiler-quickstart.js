@@ -184,6 +184,8 @@ function main() {
   const artifactLinks = [
     ["Live chronology-first site", link()],
     ["Declassified chronology", link("", "#records")],
+    ["First-day compiler action packet", reportLink("compiler-first-day-actions.md")],
+    ["First-day compiler action CSV", reportLink("compiler-first-day-actions.csv")],
     ["Released/declassified chronology packet", reportLink("compiler-declassified-chronology.md")],
     ["Released/declassified chronology CSV", reportLink("compiler-declassified-chronology.csv")],
     ["Compiler workbench", link("", "#workbench")],
@@ -297,6 +299,7 @@ function main() {
     "node scripts/extract-critical-page-boundaries.js",
     "node scripts/extract-citation-sheet-source-notes.js",
     "node scripts/generate-declassified-chronology.js",
+    "node scripts/generate-first-day-actions.js",
     "node scripts/generate-compiler-quickstart.js",
     "```",
     "",

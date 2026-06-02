@@ -49,6 +49,7 @@ node scripts/generate-compiler-worksheet.js
 node scripts/extract-critical-page-boundaries.js
 node scripts/extract-citation-sheet-source-notes.js
 node scripts/generate-declassified-chronology.js
+node scripts/generate-first-day-actions.js
 node scripts/generate-compiler-quickstart.js
 ```
 
@@ -127,6 +128,11 @@ and CSV while leaving downloaded PDFs in `.cache/`.
 declassified, and partial-release chronology with source-note candidates,
 full provenance trails, direct Catalog/PDF links, and Daily Diary/Backup
 cross-references.
+`generate-first-day-actions.js` writes
+`reports/compiler-first-day-actions.md` and
+`reports/compiler-first-day-actions.csv` as a short phase-balanced action queue
+distilled from the 110-row decision cockpit, with decision questions, next
+actions, done-when criteria, evidence sheets, and Catalog/PDF links.
 `generate-compiler-quickstart.js` writes `reports/compiler-quickstart.md` from
 the current JSON/CSV artifacts so the compiler handoff links and counts can be
 refreshed without hand-editing cache-busters.

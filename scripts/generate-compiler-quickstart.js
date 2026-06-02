@@ -156,6 +156,9 @@ function main() {
   const criticalAdmin = criticalPages.filter((row) => /Administrative marker only/i.test(row["Extraction status"] || ""));
   const citationMarkerRows = citationSheets.filter((row) => /^Yes$/i.test(row["Citation marker found"] || ""));
   const citationClassificationRows = citationSheets.filter((row) => row.Classification);
+  const citationNoVisibleMarkingRows = citationSheets.filter((row) =>
+    /no classification marking/i.test(row["Classification review status"] || "")
+  );
   const citationPartialRows = citationSheets.filter((row) => /partial/i.test(row["Release/status"] || ""));
   const sourceQueue = sourceFinalization.filter((row) => row.finalizationLane !== "Final editor source-note check");
   const topGaps = gaps
@@ -255,7 +258,8 @@ function main() {
     `- Administrative-marker-only PDFs in critical extraction pass: ${criticalAdmin.length}`,
     `- Citation-sheet PDFs processed for source-note targets: ${citationSheets.length}`,
     `- Citation markers extracted for source-note targets: ${citationMarkerRows.length}`,
-    `- Citation-sheet first-page classifications extracted: ${citationClassificationRows.length}`,
+    `- Citation-sheet first-page classifications extracted or visually verified: ${citationClassificationRows.length}`,
+    `- Citation-sheet first pages visually checked with no classification marking: ${citationNoVisibleMarkingRows.length}`,
     `- Citation-sheet partial-release rows still requiring excision review: ${citationPartialRows.length}`,
     `- Confirmed records needing access/excision decisions: ${confirmedAccess.length}`,
     `- Potential leads queued for promotion/access/context decisions: ${potentialAccess.length}`,

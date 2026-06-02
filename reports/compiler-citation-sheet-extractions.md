@@ -1,6 +1,6 @@
 # FRUS South Asia Citation-Sheet Source-Note Extractions
 
-Generated: 2026-06-02T11:04:36.064Z
+Generated: 2026-06-02T17:54:00.353Z
 
 This report extracts the Bush Library citation-marker page from released Presidential Memcon and Telcon item PDFs in the source-note finalization queue. It is intended to give the compiler a FRUS-style source-note target while keeping Catalog URLs, NAIDs, object filenames, PDF URLs, and extraction details in the provenance columns.
 
@@ -8,7 +8,8 @@ This report extracts the Bush Library citation-marker page from released Preside
 
 - PDFs processed: 17
 - Citation markers extracted: 15/17
-- First-page classifications mechanically extracted: 12/17
+- First-page classifications mechanically extracted or visually verified: 14/17
+- First pages visually checked with no classification marking: 3
 - Partial-release rows still requiring excision review: 2
 - OCR sidecars attempted: 4
 
@@ -21,20 +22,20 @@ For citation-marker rows, use the visible Source Note as a compact archival path
 | Item | Date | Lane | Pages | Marker | Classification | FRUS-style source-note target | Review note |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2.001 | 1989-01-23 | Citation sheet/title-page verification | 2 | Yes | Confidential | Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-001, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989. Confidential. | Citation marker and classification extracted; compiler should still visually spot-check before final numbering. |
-| 2.002 | 1989-01-25 | Citation sheet/title-page verification | 2 | Yes | Review visually | Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-001, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989. | Classification not mechanically extracted; inspect first page visually. |
+| 2.002 | 1989-01-25 | Citation sheet/title-page verification | 2 | Yes | No visible marking | Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-001, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989. | Visual first-page inspection found no classification marking; source-note target omits classification pending final editorial choice. |
 | 3.001 | 1989-02-23 | Citation sheet/title-page verification | 4 | Yes | Confidential | Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Memcon Files, OA/ID CF01729-002, [Memorandum of Conversations (Memcons) - January 1989-May 1989]: February 1989. Confidential. | Citation marker and classification extracted; compiler should still visually spot-check before final numbering. |
 | 2.003 | 1989-02-24 | Citation sheet/title-page verification | 6 | Yes | Secret | Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Memcon Files, OA/ID CF01729-002, [Memorandum of Conversations (Memcons) - January 1989-May 1989]: February 1989. Secret. | Citation marker and classification extracted; compiler should still visually spot-check before final numbering. |
 | 2.005 | 1989-06-06 | Citation sheet/title-page verification | 4 | Yes | Secret | Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Memcon Files, OA/ID CF01729-006, [Memorandum of Conversations (Memcons) - June 1989-December 1989]: June 1989. Secret. | Citation marker and classification extracted; compiler should still visually spot-check before final numbering. |
 | 3.004 | 1989-06-08 | Citation sheet/title-page verification | 4 | Yes | Secret | Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-006, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: June 1989. Secret. | Citation marker and classification extracted; compiler should still visually spot-check before final numbering. |
-| 2.009 | 1989-06-10 | Citation sheet/title-page verification | 2 | Yes | Review visually | Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-006, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: June 1989. | Classification not mechanically extracted; inspect first page visually. |
+| 2.009 | 1989-06-10 | Citation sheet/title-page verification | 2 | Yes | No visible marking | Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-006, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: June 1989. | Visual first-page inspection found no classification marking; source-note target omits classification pending final editorial choice. |
 | 3.005 | 1989-07-04 | Citation sheet/title-page verification | 3 | Yes | Confidential | Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-007, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: July 1989. Confidential. | Citation marker and classification extracted; compiler should still visually spot-check before final numbering. |
 | 2.010 | 1989-08-05 | Citation sheet/title-page verification | 3 | Yes | Secret | Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-008, [Memorandum of Telephone Conversations (Telcons) - August 1989-December 1989]: August 1989. Secret. | Citation marker and classification extracted; compiler should still visually spot-check before final numbering. |
-| 3.006 | 1989-10-18 | Citation sheet/title-page verification | 2 | Yes | Review visually | Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-010, [Memorandum of Telephone Conversations (Telcons) - August 1989-December 1989]: October 1989. | Classification not mechanically extracted; inspect first page visually. |
+| 3.006 | 1989-10-18 | Citation sheet/title-page verification | 2 | Yes | No visible marking | Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-010, [Memorandum of Telephone Conversations (Telcons) - August 1989-December 1989]: October 1989. | Visual first-page inspection found no classification marking; source-note target omits classification pending final editorial choice. |
 | 2.011 | 1989-11-01 | Citation sheet/title-page verification | 3 | Yes | Confidential | Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-011, [Memorandum of Telephone Conversations (Telcons) - August 1989-December 1989]: November 1989. Confidential. | Citation marker and classification extracted; compiler should still visually spot-check before final numbering. |
-| 4.005 | 1990-10-01 | Citation sheet/title-page verification | 6 | Yes | Review visually | Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Memcon Files, OA/ID CF01728-004, [Memorandum of Conversations (Memcons) - July 1990-December 1990]: October 1990. | Classification not mechanically extracted; inspect first page visually. |
+| 4.005 | 1990-10-01 | Citation sheet/title-page verification | 6 | Yes | Secret | Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Memcon Files, OA/ID CF01728-004, [Memorandum of Conversations (Memcons) - July 1990-December 1990]: October 1990. Secret. | Citation marker and classification extracted; compiler should still visually spot-check before final numbering. |
 | 3.008 | 1991-02-08 | Citation sheet/title-page verification | 4 | Yes | Confidential | Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01730-002, [Memorandum of Telephone Conversations (Telcons) - January 1991-April 1991]: February 1991 [1]. Confidential. | Citation marker and classification extracted; compiler should still visually spot-check before final numbering. |
 | 3.009 | 1991-12-15 | Citation sheet/title-page verification | 2 | Yes | Confidential | Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01730-013, [Memorandum of Telephone Conversations (Telcons) - May 1991-December 1991]: December 1991. Confidential. | Citation marker and classification extracted; compiler should still visually spot-check before final numbering. |
-| 4.006 | 1992-03-19 | Citation sheet/title-page verification | 6 | Yes | Review visually | Source: George H.W. Bush Library, Bush Presidential Records, Scowcroft, Brent, Collection, Presidential Correspondence Files, Presidential Memcons Files, OA/ID 91109-007, Presidential Meetings - Memorandum of Conversations 3/3/92 - 4/28/92. | Classification not mechanically extracted; inspect first page visually. |
+| 4.006 | 1992-03-19 | Citation sheet/title-page verification | 6 | Yes | Confidential | Source: George H.W. Bush Library, Bush Presidential Records, Scowcroft, Brent, Collection, Presidential Correspondence Files, Presidential Memcons Files, OA/ID 91109-007, Presidential Meetings - Memorandum of Conversations 3/3/92 - 4/28/92. Confidential. | Citation marker and classification extracted; compiler should still visually spot-check before final numbering. |
 | 3.010 | 1992-01-31 | Partial-release/excision wording | 4 | No | Confidential | Source: George H.W. Bush Library. Confidential. | Citation marker not found; verify source location manually. Partial release row: inspect excisions before final selection and annotation. |
 | 2.029 | 1992-12-03 | Partial-release/excision wording | 3 | No | Confidential | Source: George H.W. Bush Library, Rostow, Nicholas, Files, Subject Files. Confidential. | Citation marker not found; verify source location manually. Partial release row: inspect excisions before final selection and annotation. |
 
@@ -67,7 +68,8 @@ For citation-marker rows, use the visible Source Note as a compact archival path
 - Release/status: Full
 - PDF pages: 2
 - Citation marker found: Yes
-- Classification: Not mechanically extracted (Not mechanically extracted)
+- Classification: No visible marking (Visual first-page image inspection)
+- Classification review: Visual first-page inspection found no classification marking; source-note target omits classification pending final editorial choice.
 - Record group/collection: George H.W. Bush Presidential Records
 - Collection/office of origin: National Security Council
 - Series: Presidential Telcon Files
@@ -79,8 +81,8 @@ For citation-marker rows, use the visible Source Note as a compact archival path
 - Current site source note: Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989. Full release.
 - Catalog URL: https://catalog.archives.gov/id/428079809
 - PDF URL: https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-01-25--Khan.pdf
-- Extraction status: Citation marker extracted; classification needs visual check
-- Review note: Classification not mechanically extracted; inspect first page visually.
+- Extraction status: Citation marker extracted; no visible first-page classification marking
+- Review note: Visual first-page inspection found no classification marking; source-note target omits classification pending final editorial choice.
 
 ### 3.001 - 1989-02-23 - Memorandum of Conversation
 
@@ -172,7 +174,8 @@ For citation-marker rows, use the visible Source Note as a compact archival path
 - Release/status: Full
 - PDF pages: 2
 - Citation marker found: Yes
-- Classification: Not mechanically extracted (Not mechanically extracted)
+- Classification: No visible marking (Visual first-page image inspection)
+- Classification review: Visual first-page inspection found no classification marking; source-note target omits classification pending final editorial choice.
 - Record group/collection: George H.W. Bush Presidential Records
 - Collection/office of origin: National Security Council
 - Series: Presidential Telcon Files
@@ -184,8 +187,8 @@ For citation-marker rows, use the visible Source Note as a compact archival path
 - Current site source note: Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: June 1989. Full release.
 - Catalog URL: https://catalog.archives.gov/id/428080061
 - PDF URL: https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-06-10--Bhutto.pdf
-- Extraction status: Citation marker extracted; classification needs visual check
-- Review note: Classification not mechanically extracted; inspect first page visually.
+- Extraction status: Citation marker extracted; no visible first-page classification marking
+- Review note: Visual first-page inspection found no classification marking; source-note target omits classification pending final editorial choice.
 
 ### 3.005 - 1989-07-04 - Memorandum of Telephone Conversation
 
@@ -235,7 +238,8 @@ For citation-marker rows, use the visible Source Note as a compact archival path
 - Release/status: Full
 - PDF pages: 2
 - Citation marker found: Yes
-- Classification: Not mechanically extracted (Not mechanically extracted)
+- Classification: No visible marking (Visual first-page image inspection)
+- Classification review: Visual first-page inspection found no classification marking; source-note target omits classification pending final editorial choice.
 - Record group/collection: George H.W. Bush Presidential Records
 - Collection/office of origin: National Security Council
 - Series: Presidential Telcon Files
@@ -247,8 +251,8 @@ For citation-marker rows, use the visible Source Note as a compact archival path
 - Current site source note: Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - August 1989-December 1989]: October 1989. Full release.
 - Catalog URL: https://catalog.archives.gov/id/428080301
 - PDF URL: https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-10-18--Gandhi.pdf
-- Extraction status: Citation marker extracted; classification needs visual check
-- Review note: Classification not mechanically extracted; inspect first page visually.
+- Extraction status: Citation marker extracted; no visible first-page classification marking
+- Review note: Visual first-page inspection found no classification marking; source-note target omits classification pending final editorial choice.
 
 ### 2.011 - 1989-11-01 - Memorandum of Telephone Conversation
 
@@ -277,7 +281,8 @@ For citation-marker rows, use the visible Source Note as a compact archival path
 - Release/status: Full
 - PDF pages: 6
 - Citation marker found: Yes
-- Classification: Not mechanically extracted (Not mechanically extracted)
+- Classification: Secret (Visual first-page image inspection)
+- Classification review: Rendered first page visibly carries Secret markings at top, left margin, and bottom.
 - Record group/collection: George H.W. Bush Presidential Records
 - Collection/office of origin: National Security Council
 - Series: Presidential Memcon Files
@@ -285,12 +290,12 @@ For citation-marker rows, use the visible Source Note as a compact archival path
 - Folder ID number: CF01728-004
 - Folder title: [Memorandum of Conversations (Memcons) - July 1990-December 1990]: October 1990
 - FOIA case(s): Not extracted
-- FRUS-style source-note target: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Memcon Files, OA/ID CF01728-004, [Memorandum of Conversations (Memcons) - July 1990-December 1990]: October 1990.
+- FRUS-style source-note target: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Memcon Files, OA/ID CF01728-004, [Memorandum of Conversations (Memcons) - July 1990-December 1990]: October 1990. Secret.
 - Current site source note: Source: George H.W. Bush Library, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons)-July 1990-December 1990]: October 1990. Full release.
 - Catalog URL: https://catalog.archives.gov/id/428081099
 - PDF URL: https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498039/1990-10-01--Ershad.pdf
-- Extraction status: Citation marker extracted; classification needs visual check
-- Review note: Classification not mechanically extracted; inspect first page visually.
+- Extraction status: Citation marker extracted
+- Review note: Citation marker and classification extracted; compiler should still visually spot-check before final numbering.
 
 ### 3.008 - 1991-02-08 - Memorandum of Telephone Conversation
 
@@ -340,7 +345,8 @@ For citation-marker rows, use the visible Source Note as a compact archival path
 - Release/status: Full
 - PDF pages: 6
 - Citation marker found: Yes
-- Classification: Not mechanically extracted (Not mechanically extracted)
+- Classification: Confidential (Visual first-page image inspection)
+- Classification review: Rendered first page visibly carries Confidential markings at top left and bottom.
 - Record group/collection: George H.W. Bush Presidential Records
 - Collection/office of origin: Scowcroft, Brent, Collection
 - Series: Presidential Correspondence Files
@@ -348,12 +354,12 @@ For citation-marker rows, use the visible Source Note as a compact archival path
 - Folder ID number: 91109-007
 - Folder title: Presidential Meetings - Memorandum of Conversations 3/3/92 - 4/28/92
 - FOIA case(s): Not extracted
-- FRUS-style source-note target: Source: George H.W. Bush Library, Bush Presidential Records, Scowcroft, Brent, Collection, Presidential Correspondence Files, Presidential Memcons Files, OA/ID 91109-007, Presidential Meetings - Memorandum of Conversations 3/3/92 - 4/28/92.
+- FRUS-style source-note target: Source: George H.W. Bush Library, Bush Presidential Records, Scowcroft, Brent, Collection, Presidential Correspondence Files, Presidential Memcons Files, OA/ID 91109-007, Presidential Meetings - Memorandum of Conversations 3/3/92 - 4/28/92. Confidential.
 - Current site source note: Source: George H.W. Bush Library, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons)-January 1992-June 1992]: March 1992. Full release.
 - Catalog URL: https://catalog.archives.gov/id/428082145
 - PDF URL: https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498039/1992-03-19--Zia.pdf
-- Extraction status: Citation marker extracted; classification needs visual check
-- Review note: Classification not mechanically extracted; inspect first page visually.
+- Extraction status: Citation marker extracted after OCR
+- Review note: Citation marker and classification extracted; compiler should still visually spot-check before final numbering.
 
 ### 3.010 - 1992-01-31 - Memorandum of Conversation
 

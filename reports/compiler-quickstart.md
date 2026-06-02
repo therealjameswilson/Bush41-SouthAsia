@@ -70,7 +70,8 @@ Version token for live links: `compiler-live-20260602`
 - Administrative-marker-only PDFs in critical extraction pass: 0
 - Citation-sheet PDFs processed for source-note targets: 17
 - Citation markers extracted for source-note targets: 15
-- Citation-sheet first-page classifications extracted: 12
+- Citation-sheet first-page classifications extracted or visually verified: 14
+- Citation-sheet first pages visually checked with no classification marking: 3
 - Citation-sheet partial-release rows still requiring excision review: 2
 - Confirmed records needing access/excision decisions: 39
 - Potential leads queued for promotion/access/context decisions: 40

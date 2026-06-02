@@ -32,6 +32,34 @@ const FIELD_LABELS = [
   "Folder Title"
 ];
 
+const VISUAL_CLASSIFICATION_REVIEWS = {
+  "2.002": {
+    classification: "",
+    basis: "Visual first-page image inspection",
+    review: "Visual first-page inspection found no classification marking; source-note target omits classification pending final editorial choice."
+  },
+  "2.009": {
+    classification: "",
+    basis: "Visual first-page image inspection",
+    review: "Visual first-page inspection found no classification marking; source-note target omits classification pending final editorial choice."
+  },
+  "3.006": {
+    classification: "",
+    basis: "Visual first-page image inspection",
+    review: "Visual first-page inspection found no classification marking; source-note target omits classification pending final editorial choice."
+  },
+  "4.005": {
+    classification: "Secret",
+    basis: "Visual first-page image inspection",
+    review: "Rendered first page visibly carries Secret markings at top, left margin, and bottom."
+  },
+  "4.006": {
+    classification: "Confidential",
+    basis: "Visual first-page image inspection",
+    review: "Rendered first page visibly carries Confidential markings at top left and bottom."
+  }
+};
+
 function ensureDirs() {
   fs.mkdirSync(cacheDir, { recursive: true });
   fs.mkdirSync(ocrDir, { recursive: true });
@@ -299,7 +327,11 @@ function sourceNoteTarget(fields, classification) {
 function reviewNote(row, extraction) {
   const notes = [];
   if (!extraction.markerFound) notes.push("Citation marker not found; verify source location manually.");
-  if (!extraction.classification) notes.push("Classification not mechanically extracted; inspect first page visually.");
+  if (!extraction.classification && extraction.classificationReviewStatus) {
+    notes.push(extraction.classificationReviewStatus);
+  } else if (!extraction.classification) {
+    notes.push("Classification not mechanically extracted; inspect first page visually.");
+  }
   if (/partial/i.test(row.releaseOrStatus || row.finalizationLane || "")) {
     notes.push("Partial release row: inspect excisions before final selection and annotation.");
   }
@@ -312,12 +344,21 @@ function reviewNote(row, extraction) {
 
 function extractionStatus(row, marker, classification, ocr) {
   if (!marker) return "Citation marker not found";
+  if (!classification && VISUAL_CLASSIFICATION_REVIEWS[row.compilerNumber]) {
+    return "Citation marker extracted; no visible first-page classification marking";
+  }
   if (!classification) return "Citation marker extracted; classification needs visual check";
   if (/partial/i.test(row.releaseOrStatus || row.finalizationLane || "")) {
     return "Citation marker extracted; partial-release excisions need review";
   }
   if (ocr.ocrAttempted) return "Citation marker extracted after OCR";
   return "Citation marker extracted";
+}
+
+function classificationDisplay(row) {
+  if (row.classification) return row.classification;
+  if (/no classification marking/i.test(row.classificationReviewStatus || "")) return "No visible marking";
+  return "Review visually";
 }
 
 function processRow(row) {
@@ -327,8 +368,15 @@ function processRow(row) {
   const ocr = maybeOcr(pdfPath, info, initialText);
   const fields = extractCitationFields(ocr.text);
   const classification = extractClassification(ocr.text);
+  const visualReview = VISUAL_CLASSIFICATION_REVIEWS[row.compilerNumber];
+  const finalClassification = visualReview
+    ? visualReview.classification
+    : classification.classification;
+  const finalClassificationBasis = visualReview
+    ? visualReview.basis
+    : classification.basis;
   const found = markerFound(ocr.text);
-  const target = sourceNoteTarget(fields, classification.classification);
+  const target = sourceNoteTarget(fields, finalClassification);
 
   const extraction = {
     itemType: row.itemType,
@@ -342,8 +390,9 @@ function processRow(row) {
     pdfPages: info.pages,
     citationMarkerFound: found ? "Yes" : "No",
     markerFound: found,
-    classification: classification.classification,
-    classificationBasis: classification.basis,
+    classification: finalClassification,
+    classificationBasis: finalClassificationBasis,
+    classificationReviewStatus: visualReview?.review || "",
     ...fields,
     frusStyleSourceNoteTarget: target,
     currentSourceNote: row.currentSourceNote,
@@ -352,7 +401,7 @@ function processRow(row) {
     localPdfCache: path.relative(repoRoot, pdfPath),
     ocrAttempted: ocr.ocrAttempted ? "Yes" : "No",
     ocrStatus: ocr.ocrStatus,
-    extractionStatus: extractionStatus(row, found, classification.classification, ocr)
+    extractionStatus: extractionStatus(row, found, finalClassification, ocr)
   };
 
   extraction.reviewNote = reviewNote(row, extraction);
@@ -368,6 +417,7 @@ function writeMarkdown(rows) {
   const today = new Date().toISOString();
   const markerCount = rows.filter((row) => row.markerFound).length;
   const classificationCount = rows.filter((row) => row.classification).length;
+  const visualNoMarkingCount = rows.filter((row) => /no classification marking/i.test(row.classificationReviewStatus || "")).length;
   const partialCount = rows.filter((row) => /partial/i.test(row.releaseOrStatus || "")).length;
   const ocrCount = rows.filter((row) => row.ocrAttempted === "Yes").length;
 
@@ -382,7 +432,8 @@ function writeMarkdown(rows) {
     "",
     `- PDFs processed: ${rows.length}`,
     `- Citation markers extracted: ${markerCount}/${rows.length}`,
-    `- First-page classifications mechanically extracted: ${classificationCount}/${rows.length}`,
+    `- First-page classifications mechanically extracted or visually verified: ${classificationCount}/${rows.length}`,
+    `- First pages visually checked with no classification marking: ${visualNoMarkingCount}`,
     `- Partial-release rows still requiring excision review: ${partialCount}`,
     `- OCR sidecars attempted: ${ocrCount}`,
     "",
@@ -400,7 +451,7 @@ function writeMarkdown(rows) {
         row.finalizationLane,
         row.pdfPages,
         row.citationMarkerFound,
-        row.classification || "Review visually",
+        classificationDisplay(row),
         row.frusStyleSourceNoteTarget,
         row.reviewNote
       ])
@@ -418,7 +469,8 @@ function writeMarkdown(rows) {
       `- Release/status: ${row.releaseOrStatus || "Not recorded"}`,
       `- PDF pages: ${row.pdfPages || "Not measured"}`,
       `- Citation marker found: ${row.citationMarkerFound}`,
-      `- Classification: ${row.classification || "Not mechanically extracted"} (${row.classificationBasis})`,
+      `- Classification: ${classificationDisplay(row)} (${row.classificationBasis})`,
+      ...(row.classificationReviewStatus ? [`- Classification review: ${row.classificationReviewStatus}`] : []),
       `- Record group/collection: ${row.recordGroupCollection || "Not extracted"}`,
       `- Collection/office of origin: ${row.officeOfOrigin || "Not extracted"}`,
       `- Series: ${row.series || "Not extracted"}`,
@@ -460,6 +512,7 @@ function main() {
         markerFound: false,
         classification: "",
         classificationBasis: "Not extracted",
+        classificationReviewStatus: "",
         recordGroupCollection: "",
         officeOfOrigin: "",
         series: "",
@@ -493,6 +546,7 @@ function main() {
     { key: "citationMarkerFound", label: "Citation marker found" },
     { key: "classification", label: "Classification" },
     { key: "classificationBasis", label: "Classification basis" },
+    { key: "classificationReviewStatus", label: "Classification review status" },
     { key: "recordGroupCollection", label: "Record group/collection" },
     { key: "officeOfOrigin", label: "Collection/office of origin" },
     { key: "series", label: "Series" },

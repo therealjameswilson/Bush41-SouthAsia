@@ -34,7 +34,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 005 - March 08, 1989 - NSC/DC Meeting on Non-Lethal Finding and Transfer of Funds re: Afghanistan, Keywords: Afghanistan, 90009-005. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 005 - March 08, 1989 - NSC/DC Meeting on Non-Lethal Finding and Transfer of Funds re: Afghanistan, Keywords: Afghanistan, OA/ID 90009-005.
 ```
 
 ## Provenance

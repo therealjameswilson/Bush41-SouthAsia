@@ -306,7 +306,7 @@ function main() {
     "",
     "## Source-Note Rule",
     "",
-    "Treat the visible Source Note as the editorial FRUS-style citation. For extracted citation-marker rows, prefer the compact Bush Library path, OA/ID folder identifier, folder title, and original classification. Keep NAIDs, local identifiers beyond the OA/ID source locator, catalog URLs, object filenames, PDF URLs, Daily Diary matches, page-count basis, FOIA tracking, OCR status, and other audit details in the provenance trail. Daily Diary and Daily Backup references should support chronology, time, location, attendance, and call-status checks, not substantive meeting or call summaries.",
+    "Treat the visible Source Note as the editorial FRUS-style citation. For extracted citation-marker rows, prefer the compact Bush Library path, Bush Presidential Records records group where applicable, office/series, OA/ID folder identifier, folder title, and original classification. Keep release/access status, NAIDs, local identifiers beyond the OA/ID source locator, catalog URLs, object filenames, PDF URLs, Daily Diary matches, page-count basis, FOIA tracking, OCR status, and other audit details in the provenance trail. Daily Diary and Daily Backup references should support chronology, time, location, attendees, and call status, not substantive meeting or call summaries.",
     "",
     "## Working Rule",
     "",

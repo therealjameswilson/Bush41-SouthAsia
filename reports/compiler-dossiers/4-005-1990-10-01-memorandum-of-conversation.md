@@ -35,7 +35,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons)-July 1990-December 1990]: October 1990. Full release.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Memcon Files, OA/ID CF01728-004, [Memorandum of Conversations (Memcons) - July 1990-December 1990]: October 1990. Secret.
 ```
 
 ## Provenance
@@ -60,10 +60,6 @@ Links:
 - Provenance link: https://catalog.archives.gov/id/321498039
 - Provenance link: https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons
 - Provenance link: https://catalog.archives.gov/id/2163580
-- Provenance link: https://catalog.archives.gov/id/415890836
-- Provenance link: https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1990/41-bpr-apts_sch-dd-10_01_90-12838-003_415890836.pdf
-- Provenance link: https://catalog.archives.gov/id/415890837
-- Provenance link: https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1990/41-bpr-apts_sch-dd-10_01_90-12838-004_415890837.pdf
 
 ## Daily Diary / Backup
 

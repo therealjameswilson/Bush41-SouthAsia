@@ -34,7 +34,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 147 - June 28, 1990 - NSC/DC Meeting on Pakistan's Nuclear Program, Keywords: Pakistan, Nuclear Matters, 90015-005. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 147 - June 28, 1990 - NSC/DC Meeting on Pakistan's Nuclear Program, Keywords: Pakistan, Nuclear Matters, OA/ID 90015-005.
 ```
 
 ## Provenance

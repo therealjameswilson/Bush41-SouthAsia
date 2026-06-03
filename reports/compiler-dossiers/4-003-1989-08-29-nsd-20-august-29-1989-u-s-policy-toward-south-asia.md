@@ -34,7 +34,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, H-Files, NSD Files, NSD-20 - August 29, 1989 - U.S. Policy toward South Asia, 90003-027. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSD Files, NSD-20 - August 29, 1989 - U.S. Policy toward South Asia, OA/ID 90003-027.
 ```
 
 ## Provenance

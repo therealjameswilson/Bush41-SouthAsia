@@ -34,7 +34,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, H-Files, NSC Meetings Files, NSC0056 - October 09, 1990 - Nuclear Matters, Middle East and Gulf, Proliferation [2], 90002-026. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC Meetings Files, NSC0056 - October 09, 1990 - Nuclear Matters, Middle East and Gulf, Proliferation [2], OA/ID 90002-026.
 ```
 
 ## Provenance

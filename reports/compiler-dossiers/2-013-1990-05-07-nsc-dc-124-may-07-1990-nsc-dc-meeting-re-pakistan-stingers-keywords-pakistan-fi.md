@@ -34,7 +34,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 124 - May 07, 1990 - NSC/DC Meeting re: Pakistan Stingers, Keywords: Pakistan (File located @ LM), 90014-013. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 124 - May 07, 1990 - NSC/DC Meeting re: Pakistan Stingers, Keywords: Pakistan (File located @ LM), OA/ID 90014-013.
 ```
 
 ## Provenance

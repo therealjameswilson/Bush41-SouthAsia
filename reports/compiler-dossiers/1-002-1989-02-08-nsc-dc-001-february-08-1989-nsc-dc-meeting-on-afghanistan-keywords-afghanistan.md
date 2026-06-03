@@ -34,7 +34,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 001 - February 08, 1989 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan, 90009-001. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 001 - February 08, 1989 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan, OA/ID 90009-001.
 ```
 
 ## Provenance

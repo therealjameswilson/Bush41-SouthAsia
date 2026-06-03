@@ -35,7 +35,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 5/10/89-7/27/89, 91111-002, source pages 56-57. Declassified.
+Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 5/10/89-7/27/89, OA/ID 91111-002, source pages 56-57.
 ```
 
 ## Provenance

@@ -108,13 +108,16 @@ function citationForRecord(citationRows, record) {
 }
 
 function sourceNoteCandidate(record, citation) {
-  return citation?.frusStyleSourceNoteTarget || record.sourceNote || "Source: Provenance pending.";
+  if (citation?.citationMarkerFound === "Yes" && citation.frusStyleSourceNoteTarget) {
+    return citation.frusStyleSourceNoteTarget;
+  }
+  return record.sourceNote || "Source: Provenance pending.";
 }
 
 function citationBasis(citation) {
   if (!citation) return "Catalog/source-note metadata; citation-sheet extraction not staged.";
   return [
-    citation.citationMarkerFound === "Yes" || citation.markerFound ? "Citation marker extracted" : "Citation marker not found",
+    citation.citationMarkerFound === "Yes" ? "Citation marker extracted" : "Citation marker not found",
     citation.classification ? `classification ${citation.classification}` : "classification not visible/extracted",
     citation.classificationBasis || "",
     citation.reviewNote || ""

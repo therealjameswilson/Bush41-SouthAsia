@@ -8,6 +8,7 @@ const potentialPath = path.join(repoRoot, "data", "potential-documents.json");
 const potentialScriptPath = path.join(repoRoot, "data", "potential-documents.js");
 const gapsPath = path.join(repoRoot, "data", "compiler-gaps.json");
 const gapsScriptPath = path.join(repoRoot, "data", "compiler-gaps.js");
+const citationSheetsPath = path.join(repoRoot, "data", "compiler-citation-sheet-extractions.json");
 const reportPath = path.join(repoRoot, "reports", "source-note-normalization.json");
 
 const STYLE_PATTERNS = [
@@ -18,7 +19,7 @@ const STYLE_PATTERNS = [
   { key: "digital object ledger", pattern: /Digital object|Digital copy|object ID/i },
   { key: "page-count ledger", pattern: /Page count:|approximate extent|Project PDF extent/i },
   { key: "duplicate provenance", pattern: /Related duplicate provenance|Deduped related provenance/i },
-  { key: "working locator label", pattern: /\bOA\/ID\b/i }
+  { key: "release/access status", pattern: /\bFull release\b|\bPartial release\b|\bDeclassified\b|Access restriction:/i }
 ];
 
 function clean(value = "") {
@@ -69,28 +70,19 @@ function isRestrictedStatus(status = "") {
 }
 
 function releaseSentence(record) {
-  const status = record.releaseStatus || record.accessRestriction || "";
-  if (!status) return "";
-
-  if (/unrestricted/i.test(status)) return "Unrestricted.";
-  if (isRestrictedStatus(status)) return `Access restriction: ${status}.`;
-
-  if (/partial/i.test(status)) return "Partial release.";
-  if (/full/i.test(status)) return "Full release.";
-  if (/declassified/i.test(status)) return "Declassified.";
-  return sentence(status);
+  return "";
 }
 
 function repositoryPart(record) {
   const sourceName = record.source?.name || record.source?.collection || "";
-  if (/Brent Scowcroft/i.test(sourceName)) return "George H.W. Bush Library, Brent Scowcroft Papers";
+  if (/Brent Scowcroft/i.test(sourceName)) return "George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection";
   if (/Richard Cheney/i.test(sourceName)) return "George H.W. Bush Library, Richard Cheney Collection";
   if (/White House Photograph Office/i.test(sourceName)) return "George H.W. Bush Library, White House Photograph Office";
   if (/White House Office/i.test(sourceName)) {
     return `George H.W. Bush Library, ${withoutParentheticalAdministration(sourceName).replace(/^Records of the\s+/i, "")}`;
   }
   if (/National Security Council/i.test(sourceName) || /NSC files/i.test(record.sourceFamily || "")) {
-    return "George H.W. Bush Library, National Security Council";
+    return "George H.W. Bush Library, Bush Presidential Records, National Security Council";
   }
   return sourceName ? `George H.W. Bush Library, ${withoutParentheticalAdministration(sourceName)}` : "George H.W. Bush Library";
 }
@@ -144,7 +136,7 @@ function folderOrDocumentTitle(record) {
 
 function locatorPart(record) {
   const localIdentifier = record.localIdentifier || record.source?.localIdentifier || "";
-  return isCompactLocator(localIdentifier) ? localIdentifier : "";
+  return isCompactLocator(localIdentifier) ? `OA/ID ${localIdentifier}` : "";
 }
 
 function sourcePagesPart(record) {
@@ -197,6 +189,52 @@ function normalizeSourceNote(record) {
   return publicPaperSourceNote(record) || archivalSourceNote(record);
 }
 
+function citationEvidenceBasis(row, classification) {
+  if (row.citationMarkerFound === "Yes") {
+    if (/No classification marking/i.test(classification)) {
+      return "Bush Library citation-marker extraction; no classification marking on first page.";
+    }
+    if (classification) return `Bush Library citation-marker extraction; original classification ${classification}.`;
+    return "Bush Library citation-marker extraction; no visible first-page classification marking recorded.";
+  }
+  if (classification && !/No classification marking/i.test(classification)) {
+    return `Bush Library first-page classification extraction; original classification ${classification}; source location generated from local metadata because citation marker was not found.`;
+  }
+  if (/No classification marking/i.test(classification)) {
+    return "Bush Library first-page review recorded no classification marking; source location generated from local metadata because citation marker was not found.";
+  }
+  return "";
+}
+
+function loadCitationSheetTargets() {
+  if (!fs.existsSync(citationSheetsPath)) return new Map();
+  const targets = new Map();
+  for (const row of JSON.parse(fs.readFileSync(citationSheetsPath, "utf8"))) {
+    const target = clean(row.frusStyleSourceNoteTarget || "");
+    const classification = clean(row.classification || "");
+    const note = target && /^Source:/i.test(target) && row.citationMarkerFound === "Yes" ? target : "";
+    const basis = citationEvidenceBasis(row, classification);
+    if (!note && !basis) continue;
+    for (const key of [row.naid, row.compilerNumber, row.pdfUrl].filter(Boolean)) {
+      targets.set(String(key), { note, classification, basis });
+    }
+  }
+  return targets;
+}
+
+function citationSheetTargetFor(record, targets) {
+  return targets.get(String(record.naid || "")) ||
+    targets.get(String(record.compilerNumber || "")) ||
+    targets.get(String(record.pdfUrl || ""));
+}
+
+function appendClassification(note, classification = "") {
+  const normalized = clean(classification);
+  if (!normalized || /No classification marking/i.test(normalized)) return note;
+  if (/Confidential|Secret|Top Secret|No classification marking/i.test(note)) return note;
+  return `${note.replace(/\s*\.$/, "")}. ${normalized}.`;
+}
+
 function provenanceLinks(record) {
   return uniqueInOrder([
     record.catalogUrl,
@@ -238,12 +276,15 @@ function updateGaps(gaps, catalogDerivedCount, visibleStyleIssueCount) {
   });
 }
 
-function normalizeMemcons(records) {
+function normalizeMemcons(records, citationTargets) {
   return records.map((record) => {
     const provenanceNote = record.provenanceNote || record.sourceNote || "";
+    const citationTarget = citationSheetTargetFor(record, citationTargets);
+    const sourceNote = citationTarget?.note || appendClassification(normalizeSourceNote(record), citationTarget?.classification);
     return {
       ...record,
-      sourceNote: normalizeSourceNote(record),
+      sourceNote,
+      sourceNoteBasis: citationTarget?.basis || "FRUS-style archival chain generated from local source metadata; verify against PDF or title page before final selection.",
       provenanceNote,
       provenanceLinks: provenanceLinks(record),
       compilerRisks: risks(record, provenanceNote)
@@ -257,6 +298,7 @@ function normalizePotentialDocuments(records) {
     return {
       ...record,
       sourceNote: normalizeSourceNote(record),
+      sourceNoteBasis: "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion.",
       provenanceNote,
       provenanceLinks: provenanceLinks(record),
       compilerRisks: risks(record, provenanceNote)
@@ -271,7 +313,8 @@ function writeJsonAndScript(jsonPath, scriptPath, globalName, records) {
 }
 
 function main() {
-  const memcons = normalizeMemcons(JSON.parse(fs.readFileSync(dataPath, "utf8")));
+  const citationTargets = loadCitationSheetTargets();
+  const memcons = normalizeMemcons(JSON.parse(fs.readFileSync(dataPath, "utf8")), citationTargets);
   const potentialDocuments = fs.existsSync(potentialPath)
     ? normalizePotentialDocuments(JSON.parse(fs.readFileSync(potentialPath, "utf8")))
     : [];
@@ -295,9 +338,10 @@ function main() {
       {
         generatedAt: new Date().toISOString(),
         basis:
-          "Visible Source Notes follow the published FRUS pattern: repository/collection/series/file or folder locator, followed by release/access facts when known. Catalog URLs, NAIDs, object filenames, page-count ledgers, and table-row research metadata remain in provenanceNote/provenanceLinks.",
+          "Visible Source Notes follow the published FRUS pattern: repository, records group or collection, office, series, OA/ID or selected source pages, folder/file title, and original classification when extracted. Catalog URLs, NAIDs, object filenames, page-count ledgers, release/access status, and table-row research metadata remain in provenanceNote/provenanceLinks and review packets.",
         memconRecords: memcons.length,
         potentialDocumentLeads: potentialDocuments.length,
+        citationMarkerTargetsApplied: memcons.filter((record) => /citation-marker extraction/i.test(record.sourceNoteBasis || "")).length,
         visibleSourceNotesWithStyleIssues: visibleStyleIssues.length,
         visibleStyleIssuesByType: visibleStyleIssues.reduce((counts, issue) => {
           counts[issue] = (counts[issue] || 0) + 1;

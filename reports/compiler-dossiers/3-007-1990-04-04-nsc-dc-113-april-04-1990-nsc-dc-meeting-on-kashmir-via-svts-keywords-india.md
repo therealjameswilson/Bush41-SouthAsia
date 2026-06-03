@@ -34,7 +34,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 113 - April 04, 1990 - NSC/DC Meeting on Kashmir via SVTS, Keywords: India, 90013-026. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 113 - April 04, 1990 - NSC/DC Meeting on Kashmir via SVTS, Keywords: India, OA/ID 90013-026.
 ```
 
 ## Provenance

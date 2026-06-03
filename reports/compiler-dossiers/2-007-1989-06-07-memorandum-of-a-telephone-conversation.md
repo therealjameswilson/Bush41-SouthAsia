@@ -36,7 +36,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 5/10/89-7/27/89, 91111-002, source pages 49-50. Declassified.
+Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 5/10/89-7/27/89, OA/ID 91111-002, source pages 49-50.
 ```
 
 ## Provenance
@@ -60,8 +60,6 @@ Links:
 - Provenance link: documents/pakistan/1989-06-07-bush-helmut-kohl-telcon-scowcroft.pdf
 - Provenance link: https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91111-002.pdf
 - Provenance link: https://catalog.archives.gov/id/4522156
-- Provenance link: https://catalog.archives.gov/id/415889874
-- Provenance link: https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-06_07_89-12798-027_415889874.pdf
 
 ## Daily Diary / Backup
 

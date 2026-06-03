@@ -1,6 +1,6 @@
 # FRUS South Asia Decision Cockpit
 
-Generated: 2026-06-02T10:06:10.397Z
+Generated: 2026-06-03T02:23:22.567Z
 
 This cockpit collapses the selection board, access ledger, page-boundary queue, source-note finalization packet, chapter matrix, and gap packets into one decision-first worklist. Use it as the first stop after reading the chronology: each row names the decision question, next action, and the pull sheets that contain the evidence.
 

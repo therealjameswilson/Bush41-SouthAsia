@@ -81,9 +81,9 @@ Use this packet as a working chronology and source-note review aid, not as final
 - Release status: Full; 1 page
 - Participants: George H. W. Bush; Ghulam Ishaq Khan
 - Countries: Pakistan
-- Source-note candidate: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-001, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989.
-- Citation/source-note basis: Citation marker extracted; classification not visible/extracted; Visual first-page image inspection; Visual first-page inspection found no classification marking; source-note target omits classification pending final editorial choice.
-- Compiler action: Keep classification wording under final editor review. Resolve compiler risks: catalog-derived-source-note. Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
+- Source-note candidate: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-001, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989. No classification marking.
+- Citation/source-note basis: Citation marker extracted; classification No classification marking; Visual first-page image inspection; Citation marker and classification extracted; compiler should still visually spot-check before final numbering.
+- Compiler action: Resolve compiler risks: catalog-derived-source-note. Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
 - Daily Diary/Backup reference: Presidential Daily Diary | 12789-011 | [Presidential Daily Diary] 1/25/1989 | https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-01_25_89-12789-011_415889608.pdf | matches Ghulam; Ishaq; Khan; Pakistan / Presidential Daily Backup | 12789-012 | [Presidential Daily Backup] 1/25/1989 | https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-01_25_89-12789-012_415889609.pdf | matches Ghulam; Ishaq; Khan; Pakistan
 - Full provenance trail: Source: George H.W. Bush Presidential Library and Museum, Digital Research Room, "Memcons and Telcons" table (https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons), row: Date 1/25/1989; Type Telcon; Participants Khan, Ghulam Ishaq; Country Pakistan; Release Status Full; NAID 428079809. National Archives Catalog item: Telephone Conversation with President Ghulam Ishaq Khan of Pakistan, January 25, 1989, NAID 428079809. Collection: Records of the National Security Council (George H. W. Bush Administration), NAID 2163580. Series: Presidential Telcon Files, NAID 321498139. File unit: [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989, NAID 322361434. Digital object: 1989-01-25--Khan.pdf, object ID 428079810, URL https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-01-25--Khan.pdf. Access restriction: Unrestricted. Deduped local provenance: Brent Scowcroft Papers, Presidential Correspondence Files, NAID 366551686, 91111-001, source pages 34-34.
 - Links: [Catalog](https://catalog.archives.gov/id/428079809) / [PDF](https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-01-25--Khan.pdf)
@@ -102,7 +102,7 @@ Use this packet as a working chronology and source-note review aid, not as final
 - Release status: Declassified; 4 pages
 - Participants: George H. W. Bush; Turgut Ozal
 - Countries: Afghanistan; Turkey
-- Source-note candidate: Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 1/24/89-2/25/89, 91107-001, source pages 75-78. Declassified.
+- Source-note candidate: Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 1/24/89-2/25/89, OA/ID 91107-001, source pages 75-78.
 - Citation/source-note basis: Catalog/source-note metadata; citation-sheet extraction not staged.
 - Compiler action: Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
 - Daily Diary/Backup reference: Presidential Daily Backup | 12791-016 | [Presidential Daily Backup] 2/24/1989 | https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-02_24_89-12791-016_415889669.pdf | matches Turgut; Ozal; Turkey
@@ -124,7 +124,7 @@ Use this packet as a working chronology and source-note review aid, not as final
 - Release status: Declassified; 2 pages
 - Participants: George H. W. Bush; Benazir Bhutto
 - Countries: Pakistan
-- Source-note candidate: Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 1/24/89-2/25/89, 91107-001, source pages 111-112. Declassified.
+- Source-note candidate: Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 1/24/89-2/25/89, OA/ID 91107-001, source pages 111-112.
 - Citation/source-note basis: Catalog/source-note metadata; citation-sheet extraction not staged.
 - Compiler action: Ready for source-note and selection review.
 - Full provenance trail: Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 1/24/89-2/25/89, 91107-001, NAID 366551660, source pages 111-112.
@@ -134,7 +134,7 @@ Use this packet as a working chronology and source-note review aid, not as final
 - Release status: Declassified; 12 pages
 - Participants: George H. W. Bush; Zhao Ziyang
 - Countries: India; China
-- Source-note candidate: Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 2/26/89-4/19/89, 91107-002, source pages 21-32. Declassified.
+- Source-note candidate: Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 2/26/89-4/19/89, OA/ID 91107-002, source pages 21-32.
 - Citation/source-note basis: Catalog/source-note metadata; citation-sheet extraction not staged.
 - Compiler action: Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
 - Daily Diary/Backup reference: Presidential Daily Backup | 12791-020 | [Presidential Daily Backup] 2/26/1989 | https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-02_26_89-12791-020_415889673.pdf | matches Zhao; Ziyang; China; Central; Committee; Communist; Party; People; Republic
@@ -145,7 +145,7 @@ Use this packet as a working chronology and source-note review aid, not as final
 - Release status: Declassified; 2 pages
 - Participants: George H. W. Bush; King Fahd
 - Countries: Afghanistan; Saudi Arabia
-- Source-note candidate: Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 1/23/89-5/10/89, 91111-001, source pages 65-66. Declassified.
+- Source-note candidate: Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 1/23/89-5/10/89, OA/ID 91111-001, source pages 65-66.
 - Citation/source-note basis: Catalog/source-note metadata; citation-sheet extraction not staged.
 - Compiler action: Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
 - Daily Diary/Backup reference: Presidential Daily Diary | 12794-017 | [Presidential Daily Diary] 4/11/1989 | https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-04_11_89-12794-017_415889760.pdf | matches Fahd; Saudi; Arabia / Presidential Daily Backup | 12794-018 | [Presidential Daily Backup] 4/11/1989 | https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-04_11_89-12794-018_415889761.pdf | matches Fahd; Saudi; Arabia
@@ -167,7 +167,7 @@ Use this packet as a working chronology and source-note review aid, not as final
 - Release status: Declassified; 5 pages
 - Participants: George H. W. Bush; Benazir Bhutto
 - Countries: Pakistan
-- Source-note candidate: Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 5/10/89-7/27/89, 91111-002, source pages 51-55. Declassified.
+- Source-note candidate: Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 5/10/89-7/27/89, OA/ID 91111-002, source pages 51-55.
 - Citation/source-note basis: Catalog/source-note metadata; citation-sheet extraction not staged.
 - Compiler action: Ready for source-note and selection review.
 - Full provenance trail: Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 5/10/89-7/27/89, 91111-002, NAID 366551687, source pages 51-55.
@@ -177,7 +177,7 @@ Use this packet as a working chronology and source-note review aid, not as final
 - Release status: Declassified; 2 pages
 - Participants: George H. W. Bush; Helmut Kohl
 - Countries: Pakistan; Germany
-- Source-note candidate: Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 5/10/89-7/27/89, 91111-002, source pages 49-50. Declassified.
+- Source-note candidate: Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 5/10/89-7/27/89, OA/ID 91111-002, source pages 49-50.
 - Citation/source-note basis: Catalog/source-note metadata; citation-sheet extraction not staged.
 - Compiler action: Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
 - Daily Diary/Backup reference: Presidential Daily Diary | 12798-027 | [Presidential Daily Diary] 6/7/1989 | https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-06_07_89-12798-027_415889874.pdf | matches Helmut; Kohl; Germany; German
@@ -199,7 +199,7 @@ Use this packet as a working chronology and source-note review aid, not as final
 - Release status: Declassified; 2 pages
 - Participants: George H. W. Bush; Benazir Bhutto
 - Countries: Pakistan
-- Source-note candidate: Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 5/10/89-7/27/89, 91111-002, source pages 56-57. Declassified.
+- Source-note candidate: Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 5/10/89-7/27/89, OA/ID 91111-002, source pages 56-57.
 - Citation/source-note basis: Catalog/source-note metadata; citation-sheet extraction not staged.
 - Compiler action: Ready for source-note and selection review.
 - Full provenance trail: Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 5/10/89-7/27/89, 91111-002, NAID 366551687, source pages 56-57.
@@ -209,9 +209,9 @@ Use this packet as a working chronology and source-note review aid, not as final
 - Release status: Full; 1 page
 - Participants: George H. W. Bush; Benazir Bhutto
 - Countries: Pakistan
-- Source-note candidate: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-006, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: June 1989.
-- Citation/source-note basis: Citation marker extracted; classification not visible/extracted; Visual first-page image inspection; Visual first-page inspection found no classification marking; source-note target omits classification pending final editorial choice.
-- Compiler action: Keep classification wording under final editor review. Resolve compiler risks: catalog-derived-source-note. Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
+- Source-note candidate: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-006, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: June 1989. No classification marking.
+- Citation/source-note basis: Citation marker extracted; classification No classification marking; Visual first-page image inspection; Citation marker and classification extracted; compiler should still visually spot-check before final numbering.
+- Compiler action: Resolve compiler risks: catalog-derived-source-note. Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
 - Daily Diary/Backup reference: Presidential Daily Diary | 12799-003 | [Presidential Daily Diary] 6/10/1989 | https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-06_10_89-12799-003_415889880.pdf | matches Benazir; Bhutto; Pakistan / Presidential Daily Backup | 12799-004 | [Presidential Daily Backup] 6/10/1989 | https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-06_10_89-12799-004_415889881.pdf | matches Benazir; Bhutto
 - Full provenance trail: Source: George H.W. Bush Presidential Library and Museum, Digital Research Room, "Memcons and Telcons" table (https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons), row: Date 6/10/1989; Type Telcon; Participants Bhutto, Benazir; Country Pakistan; Release Status Full; NAID 428080061. National Archives Catalog item: TELCON with Prime Minister Bhutto of Pakistan, June 10, 1989, NAID 428080061. Collection: Records of the National Security Council (George H. W. Bush Administration), NAID 2163580. Series: Presidential Telcon Files, NAID 321498139. File unit: [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: June 1989, NAID 325592633. Digital object: 1989-06-10--Bhutto.pdf, object ID 428080062, URL https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-06-10--Bhutto.pdf. Access restriction: Unrestricted. Deduped local provenance: Brent Scowcroft Papers, Presidential Correspondence Files, NAID 366551687, 91111-002, source pages 58-58.
 - Links: [Catalog](https://catalog.archives.gov/id/428080061) / [PDF](https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-06-10--Bhutto.pdf)
@@ -242,7 +242,7 @@ Use this packet as a working chronology and source-note review aid, not as final
 - Release status: Declassified; 5 pages
 - Participants: George H. W. Bush; Hosni Mubarak
 - Countries: Egypt
-- Source-note candidate: Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 7/14/89-10/2/89, 91107-005, source pages 118-122. Declassified.
+- Source-note candidate: Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 7/14/89-10/2/89, OA/ID 91107-005, source pages 118-122.
 - Citation/source-note basis: Catalog/source-note metadata; citation-sheet extraction not staged.
 - Compiler action: Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
 - Daily Diary/Backup reference: Presidential Daily Diary | 12807-007 | [Presidential Daily Diary] 10/2/1989 | https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-10_02_89-12807-007_415890108.pdf | matches Hosni; Mubarak; Egypt / Presidential Daily Backup | 12807-008 | [Presidential Daily Backup] 10/2/1989 | https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-10_02_89-12807-008_415890109.pdf | matches Hosni; Mubarak; Egypt
@@ -253,9 +253,9 @@ Use this packet as a working chronology and source-note review aid, not as final
 - Release status: Full; 1 page
 - Participants: George H. W. Bush; Rajiv Gandhi
 - Countries: India
-- Source-note candidate: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-010, [Memorandum of Telephone Conversations (Telcons) - August 1989-December 1989]: October 1989.
-- Citation/source-note basis: Citation marker extracted; classification not visible/extracted; Visual first-page image inspection; Visual first-page inspection found no classification marking; source-note target omits classification pending final editorial choice.
-- Compiler action: Keep classification wording under final editor review. Resolve compiler risks: catalog-derived-source-note. Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
+- Source-note candidate: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-010, [Memorandum of Telephone Conversations (Telcons) - August 1989-December 1989]: October 1989. No classification marking.
+- Citation/source-note basis: Citation marker extracted; classification No classification marking; Visual first-page image inspection; Citation marker and classification extracted; compiler should still visually spot-check before final numbering.
+- Compiler action: Resolve compiler risks: catalog-derived-source-note. Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
 - Daily Diary/Backup reference: Presidential Daily Diary | 12808-017 | [Presidential Daily Diary] 10/18/1989 | https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-10_18_89-12808-017_415890140.pdf | matches Rajiv; Gandhi; India
 - Full provenance trail: Source: George H.W. Bush Presidential Library and Museum, Digital Research Room, "Memcons and Telcons" table (https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons), row: Date 10/18/1989; Type Telcon; Participants Gandhi, Rajiv; Country India; Release Status Full; NAID 428080301. National Archives Catalog item: Telephone Conversation with Prime Minister Gandhi of India, October 18, 1989, NAID 428080301. Collection: Records of the National Security Council (George H. W. Bush Administration), NAID 2163580. Series: Presidential Telcon Files, NAID 321498139. File unit: [Memorandum of Telephone Conversations (Telcons) - August 1989-December 1989]: October 1989, NAID 325592637. Digital object: 1989-10-18--Gandhi.pdf, object ID 428080302, URL https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-10-18--Gandhi.pdf. Access restriction: Unrestricted. Deduped local provenance: Brent Scowcroft Papers, Presidential Correspondence Files, NAID 366551688, 91111-003, source pages 86-86.
 - Links: [Catalog](https://catalog.archives.gov/id/428080301) / [PDF](https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-10-18--Gandhi.pdf)
@@ -275,7 +275,7 @@ Use this packet as a working chronology and source-note review aid, not as final
 - Release status: Declassified; 10 pages
 - Participants: George H. W. Bush; Margaret Thatcher
 - Countries: Afghanistan; United Kingdom
-- Source-note candidate: Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 10/3/89-12/16/89, 91107-006, source pages 91-100. Declassified.
+- Source-note candidate: Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 10/3/89-12/16/89, OA/ID 91107-006, source pages 91-100.
 - Citation/source-note basis: Catalog/source-note metadata; citation-sheet extraction not staged.
 - Compiler action: Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
 - Daily Diary/Backup reference: Presidential Daily Backup | 12812-006 | [Presidential Daily Backup] 11/24/1989 | https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-11_24_89-12812-006_415890215.pdf | matches Margaret; Thatcher; Kingdom
@@ -286,7 +286,7 @@ Use this packet as a working chronology and source-note review aid, not as final
 - Release status: Declassified; 9 pages
 - Participants: George H. W. Bush; Mikhail Gorbachev
 - Countries: Afghanistan; Soviet Union
-- Source-note candidate: Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 7/5/90-9/24/90, 91108-001, source pages 130-138. Declassified.
+- Source-note candidate: Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 7/5/90-9/24/90, OA/ID 91108-001, source pages 130-138.
 - Citation/source-note basis: Catalog/source-note metadata; citation-sheet extraction not staged.
 - Compiler action: Ready for source-note and selection review.
 - Full provenance trail: Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 7/5/90-9/24/90, 91108-001, NAID 366551670, source pages 130-138.
@@ -307,7 +307,7 @@ Use this packet as a working chronology and source-note review aid, not as final
 - Release status: Declassified; 9 pages
 - Participants: George H. W. Bush; Lee Kuan Yew
 - Countries: Pakistan; Singapore
-- Source-note candidate: Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 1/14/91-3/8/91, 91108-004, source pages 7-15. Declassified.
+- Source-note candidate: Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 1/14/91-3/8/91, OA/ID 91108-004, source pages 7-15.
 - Citation/source-note basis: Catalog/source-note metadata; citation-sheet extraction not staged.
 - Compiler action: Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
 - Daily Diary/Backup reference: Presidential Daily Diary | 12847-011 | [Presidential Daily Diary] 1/21/1991 | https://s3.amazonaws.com/NARAprodstorage/opastorage/live/27/1863/186327/content/arcmedia/media/images/40/19/40-1899a.gif | matches Lee; Yew; Singapore / Presidential Daily Backup | 12847-012 | [Presidential Daily Backup] 1/21/1991 | https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1991/41-bpr-apts_sch-dd-01_21_91-12847-012_415891063.pdf | matches Lee; Yew; Singapore
@@ -318,7 +318,7 @@ Use this packet as a working chronology and source-note review aid, not as final
 - Release status: Declassified; 4 pages
 - Participants: George H. W. Bush; Nawaz Sharif
 - Countries: Pakistan
-- Source-note candidate: Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 1/30/91-2/22/91, 91112-005, source pages 12-15. Declassified.
+- Source-note candidate: Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 1/30/91-2/22/91, OA/ID 91112-005, source pages 12-15.
 - Citation/source-note basis: Catalog/source-note metadata; citation-sheet extraction not staged.
 - Compiler action: Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
 - Daily Diary/Backup reference: Presidential Daily Diary | 12848-003 | [Presidential Daily Diary] 2/2/1991 | https://s3.amazonaws.com/NARAprodstorage/opastorage/live/39/1863/186339/content/arcmedia/media/images/40/21/40-2032a.gif | matches Sharif; Pakistan / Presidential Daily Backup | 12848-004 | [Presidential Daily Backup] 2/2/1991 | https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1991/41-bpr-apts_sch-dd-02_02_91-12848-004_415891087.pdf | matches Nawaz; Sharif; Pakistan
@@ -349,7 +349,7 @@ Use this packet as a working chronology and source-note review aid, not as final
 - Release status: Partial; 3 pages
 - Participants: George H. W. Bush; P. V. Narasimha Rao
 - Countries: India
-- Source-note candidate: Source: George H.W. Bush Library. Confidential.
+- Source-note candidate: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons)-January 1992-June 1992]: January 1992. Confidential.
 - Citation/source-note basis: Citation marker not found; classification Confidential; Exact first-page text match; Citation marker not found; verify source location manually. Partial release row: inspect excisions before final selection and annotation.
 - Compiler action: Check excisions before final selection and source-note wording. Resolve compiler risks: catalog-derived-source-note. Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
 - Daily Diary/Backup reference: Presidential Daily Diary | 12879-019 | [Presidential Daily Diary] 1/31/1992 | https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1992/41-bpr-apts_sch-dd-01_31_92-12879-019_415891817.pdf | matches Narasimha; Rao; India; Indian / Presidential Daily Backup | 12879-020 | [Presidential Daily Backup] 1/31/1992 | https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1992/41-bpr-apts_sch-dd-01_31_92-12879-020_415891818.pdf | matches Rao; India
@@ -371,7 +371,7 @@ Use this packet as a working chronology and source-note review aid, not as final
 - Release status: Partial; 2 pages
 - Participants: George H. W. Bush; Nawaz Sharif
 - Countries: Pakistan
-- Source-note candidate: Source: George H.W. Bush Library, Rostow, Nicholas, Files, Subject Files. Confidential.
+- Source-note candidate: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - July 1992-January 1993]: December 1992. Confidential.
 - Citation/source-note basis: Citation marker not found; classification Confidential; Exact first-page text match; Citation marker not found; verify source location manually. Partial release row: inspect excisions before final selection and annotation.
 - Compiler action: Check excisions before final selection and source-note wording. Resolve compiler risks: catalog-derived-source-note. Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
 - Daily Diary/Backup reference: Presidential Daily Diary | 26863-035 | [Presidential Daily Diary] 12/03/1992 | https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1992/41-bpr-apts_sch-dd-12_03_92-26863-035_415892436.pdf | matches Nawaz; Sharif; Pakistan / Presidential Daily Backup | 26863-036 | [Presidential Daily Backup] 12/03/1992 | https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1992/41-bpr-apts_sch-dd-12_03_92-26863-036_415892437.pdf | matches Sharif; Pakistan

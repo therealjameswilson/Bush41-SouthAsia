@@ -35,7 +35,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Presidential Meeting Files, Presidential Visit of President [of Afghanistan Interim Government Sibgahtullah] Mojaddedi - November 27, 1989, CF01404-028. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Presidential Meeting Files, Presidential Visit of President [of Afghanistan Interim Government Sibgahtullah] Mojaddedi - November 27, 1989, OA/ID CF01404-028.
 ```
 
 ## Provenance
@@ -58,8 +58,6 @@ Links:
 - Provenance link: https://catalog.archives.gov/id/470426381
 - Provenance link: https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/pres_mtg_2554869/41-bpr-nsc-haass_pres_mtg-cf01404-028.pdf
 - Provenance link: https://catalog.archives.gov/id/2163580
-- Provenance link: https://catalog.archives.gov/id/415890221
-- Provenance link: https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-11_27_89-12812-012_415890221.pdf
 
 ## Daily Diary / Backup
 

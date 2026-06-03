@@ -34,7 +34,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 260 - March 05, 1991 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan (File located @ LM), 90019-003. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 260 - March 05, 1991 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan (File located @ LM), OA/ID 90019-003.
 ```
 
 ## Provenance

@@ -36,7 +36,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 1/24/89-2/25/89, 91107-001, source pages 75-78. Declassified.
+Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 1/24/89-2/25/89, OA/ID 91107-001, source pages 75-78.
 ```
 
 ## Provenance
@@ -60,8 +60,6 @@ Links:
 - Provenance link: documents/afghanistan/1989-02-24-bush-turgut-ozal-memcon-scowcroft.pdf
 - Provenance link: https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91107-001.pdf
 - Provenance link: https://catalog.archives.gov/id/4522156
-- Provenance link: https://catalog.archives.gov/id/415889669
-- Provenance link: https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-02_24_89-12791-016_415889669.pdf
 
 ## Daily Diary / Backup
 

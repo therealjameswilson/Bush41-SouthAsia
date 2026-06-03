@@ -36,7 +36,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 7/5/90-9/24/90, 91108-001, source pages 130-138. Declassified.
+Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 7/5/90-9/24/90, OA/ID 91108-001, source pages 130-138.
 ```
 
 ## Provenance

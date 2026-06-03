@@ -34,19 +34,19 @@ const FIELD_LABELS = [
 
 const VISUAL_CLASSIFICATION_REVIEWS = {
   "2.002": {
-    classification: "",
+    classification: "No classification marking",
     basis: "Visual first-page image inspection",
-    review: "Visual first-page inspection found no classification marking; source-note target omits classification pending final editorial choice."
+    review: "Visual first-page inspection found no classification marking; source-note target uses published FRUS no-marking language."
   },
   "2.009": {
-    classification: "",
+    classification: "No classification marking",
     basis: "Visual first-page image inspection",
-    review: "Visual first-page inspection found no classification marking; source-note target omits classification pending final editorial choice."
+    review: "Visual first-page inspection found no classification marking; source-note target uses published FRUS no-marking language."
   },
   "3.006": {
-    classification: "",
+    classification: "No classification marking",
     basis: "Visual first-page image inspection",
-    review: "Visual first-page inspection found no classification marking; source-note target omits classification pending final editorial choice."
+    review: "Visual first-page inspection found no classification marking; source-note target uses published FRUS no-marking language."
   },
   "4.005": {
     classification: "Secret",
@@ -263,6 +263,7 @@ function extractCitationFields(text = "") {
 }
 
 function titleCaseClassification(value) {
+  if (/no classification marking/i.test(value)) return "No classification marking";
   if (/top secret/i.test(value)) return "Top Secret";
   if (/secret/i.test(value)) return "Secret";
   if (/confidential/i.test(value)) return "Confidential";
@@ -361,6 +362,10 @@ function classificationDisplay(row) {
   return "Review visually";
 }
 
+function sourceNoteTargetDisplay(row) {
+  return row.frusStyleSourceNoteTarget || "Not generated; citation marker not found.";
+}
+
 function processRow(row) {
   const pdfPath = downloadPdf(row);
   const info = pdfInfo(pdfPath);
@@ -376,7 +381,7 @@ function processRow(row) {
     ? visualReview.basis
     : classification.basis;
   const found = markerFound(ocr.text);
-  const target = sourceNoteTarget(fields, finalClassification);
+  const target = found ? sourceNoteTarget(fields, finalClassification) : "";
 
   const extraction = {
     itemType: row.itemType,
@@ -439,7 +444,7 @@ function writeMarkdown(rows) {
     "",
     "## Source-Note Model",
     "",
-    "For citation-marker rows, use the visible Source Note as a compact archival path: George H.W. Bush Library, Bush Presidential Records, office of origin, series, OA/ID folder identifier, folder title, and original classification. Keep full NAIDs, Catalog/PDF URLs, object IDs, FOIA tracking, OCR status, and duplicate provenance outside the visible Source Note.",
+    "For citation-marker rows, use the visible Source Note as a compact archival path: George H.W. Bush Library, Bush Presidential Records, office of origin, series, OA/ID folder identifier, folder title, and original classification or no-marking language. Keep release/access status, full NAIDs, Catalog/PDF URLs, object IDs, FOIA tracking, OCR status, and duplicate provenance outside the visible Source Note.",
     "",
     "## Extracted Source-Note Targets",
     "",
@@ -452,7 +457,7 @@ function writeMarkdown(rows) {
         row.pdfPages,
         row.citationMarkerFound,
         classificationDisplay(row),
-        row.frusStyleSourceNoteTarget,
+        sourceNoteTargetDisplay(row),
         row.reviewNote
       ])
     ),
@@ -478,7 +483,7 @@ function writeMarkdown(rows) {
       `- Folder ID number: ${row.folderIdNumber || "Not extracted"}`,
       `- Folder title: ${row.folderTitle || "Not extracted"}`,
       `- FOIA case(s): ${row.foiaCases || "Not extracted"}`,
-      `- FRUS-style source-note target: ${row.frusStyleSourceNoteTarget}`,
+      `- FRUS-style source-note target: ${sourceNoteTargetDisplay(row)}`,
       `- Current site source note: ${row.currentSourceNote || "Not recorded"}`,
       `- Catalog URL: ${row.catalogUrl || "Not recorded"}`,
       `- PDF URL: ${row.pdfUrl || "Not recorded"}`,
@@ -521,7 +526,7 @@ function main() {
         folderIdNumber: "",
         folderTitle: "",
         foiaCases: "",
-        frusStyleSourceNoteTarget: row.currentSourceNote || "",
+        frusStyleSourceNoteTarget: "",
         currentSourceNote: row.currentSourceNote,
         catalogUrl: row.catalogUrl,
         pdfUrl: row.pdfUrl,

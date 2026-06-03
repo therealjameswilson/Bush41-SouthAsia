@@ -35,7 +35,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - January 1991-April 1991]: February 1991 [1]. Full release.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01730-002, [Memorandum of Telephone Conversations (Telcons) - January 1991-April 1991]: February 1991 [1]. Confidential.
 ```
 
 ## Provenance

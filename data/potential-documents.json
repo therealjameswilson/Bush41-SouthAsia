@@ -44,7 +44,7 @@
       "fileNaid": "2554877"
     },
     "rationale": "Matched Afghan policy in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Possibly.",
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Working Files, Working Files - Afghanistan 1989-1992 [2]. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Working Files, Working Files - Afghanistan 1989-1992 [2].",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Afghanistan",
@@ -60,7 +60,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-645607685",
@@ -109,7 +110,7 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched Afghanistan, Afghan policy in a Bush 41-era Catalog search. Has an online digital object. Access status: Unrestricted.",
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan. Unrestricted.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Afghanistan",
@@ -124,7 +125,8 @@
     "compilerRisks": [
       "catalog-derived-source-note",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-470426255",
@@ -173,7 +175,7 @@
       "fileNaid": "2554866"
     },
     "rationale": "Matched Afghanistan, Afghan policy in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Possibly.",
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, Afghanistan - Charles. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, Afghanistan - Charles.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Afghanistan",
@@ -189,7 +191,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-645607321",
@@ -238,7 +241,7 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched Afghanistan, Afghan policy in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan [1]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan [1].",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Afghanistan",
@@ -254,7 +257,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-645607323",
@@ -303,7 +307,7 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched Afghanistan, Afghan policy in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan [2]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan [2].",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Afghanistan",
@@ -319,7 +323,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "public-paper-lead-PPP-1992-book1-doc-pg351",
@@ -375,7 +380,8 @@
       "https://www.govinfo.gov/content/pkg/PPP-1992-book1/pdf/PPP-1992-book1-doc-pg351.pdf",
       "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
     ],
-    "compilerRisks": []
+    "compilerRisks": [],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "public-paper-lead-PPP-1992-book1-doc-pg579",
@@ -429,7 +435,8 @@
       "https://www.govinfo.gov/content/pkg/PPP-1992-book1/pdf/PPP-1992-book1-doc-pg579.pdf",
       "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
     ],
-    "compilerRisks": []
+    "compilerRisks": [],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "public-paper-lead-PPP-1992-book1-doc-pg820-2",
@@ -483,7 +490,8 @@
       "https://www.govinfo.gov/content/pkg/PPP-1992-book1/pdf/PPP-1992-book1-doc-pg820-2.pdf",
       "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
     ],
-    "compilerRisks": []
+    "compilerRisks": [],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "public-paper-lead-PPP-1992-book1-doc-pg944",
@@ -537,7 +545,8 @@
       "https://www.govinfo.gov/content/pkg/PPP-1992-book1/pdf/PPP-1992-book1-doc-pg944.pdf",
       "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
     ],
-    "compilerRisks": []
+    "compilerRisks": [],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "public-paper-lead-PPP-1992-book1-doc-pg953",
@@ -591,7 +600,8 @@
       "https://www.govinfo.gov/content/pkg/PPP-1992-book1/pdf/PPP-1992-book1-doc-pg953.pdf",
       "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
     ],
-    "compilerRisks": []
+    "compilerRisks": [],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "public-paper-lead-PPP-1992-book1-doc-pg1150",
@@ -645,7 +655,8 @@
       "https://www.govinfo.gov/content/pkg/PPP-1992-book1/pdf/PPP-1992-book1-doc-pg1150.pdf",
       "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
     ],
-    "compilerRisks": []
+    "compilerRisks": [],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "public-paper-lead-PPP-1992-book2-doc-pg1772",
@@ -699,7 +710,8 @@
       "https://www.govinfo.gov/content/pkg/PPP-1992-book2/pdf/PPP-1992-book2-doc-pg1772.pdf",
       "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
     ],
-    "compilerRisks": []
+    "compilerRisks": [],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-470437053",
@@ -747,7 +759,7 @@
       "fileNaid": "2554843"
     },
     "rationale": "Matched India in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Possibly.",
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Robert M. Gates' Subject Files, Pakistan-India. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Robert M. Gates' Subject Files, Pakistan-India.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Pakistan",
@@ -763,7 +775,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-645608235",
@@ -810,7 +823,7 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched Pakistan nuclear in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Pakistan",
@@ -826,7 +839,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-645607905",
@@ -879,7 +893,7 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched Pakistan, India, Kashmir, South Asia in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [A]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [A].",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Pakistan",
@@ -895,7 +909,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-645607531",
@@ -946,7 +961,7 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched Pakistan, Pakistan nuclear, Kashmir in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [A]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [A].",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Pakistan",
@@ -962,7 +977,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-645607533",
@@ -1013,7 +1029,7 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched Afghanistan, Pakistan, Pakistan nuclear in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [B]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [B].",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Pakistan",
@@ -1029,7 +1045,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-645607907",
@@ -1084,7 +1101,7 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched Afghanistan, Pakistan, Pakistan nuclear, India, Kashmir in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [B]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [B].",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "Pakistan",
@@ -1100,7 +1117,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-323150513",
@@ -1149,7 +1167,7 @@
       "fileNaid": "578973"
     },
     "rationale": "Matched Pakistan nuclear, South Asia in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Possibly.",
-    "sourceNote": "Source: George H.W. Bush Library, White House Office of Speechwriting, Speech Draft Files, Bhutto Departure 6/6/89. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, White House Office of Speechwriting, Speech Draft Files, Bhutto Departure 6/6/89.",
     "compilerDisposition": "Locator/context lead",
     "priorityTier": "Low",
     "reviewLane": "Pakistan",
@@ -1165,7 +1183,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-323152491",
@@ -1214,7 +1233,7 @@
       "fileNaid": "579003"
     },
     "rationale": "Matched Pakistan nuclear, South Asia in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Possibly.",
-    "sourceNote": "Source: George H.W. Bush Library, White House Office of Speechwriting, Speech Backup Chronological Files, Departure Statement for Prime Minister Bhutto 6/6/89 [OA 6264]. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, White House Office of Speechwriting, Speech Backup Chronological Files, Departure Statement for Prime Minister Bhutto 6/6/89 [OA 6264].",
     "compilerDisposition": "Locator/context lead",
     "priorityTier": "Low",
     "reviewLane": "Pakistan",
@@ -1230,7 +1249,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "public-paper-lead-PPP-1992-book1-doc-pg1118",
@@ -1284,7 +1304,8 @@
       "https://www.govinfo.gov/content/pkg/PPP-1992-book1/pdf/PPP-1992-book1-doc-pg1118.pdf",
       "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
     ],
-    "compilerRisks": []
+    "compilerRisks": [],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "public-paper-lead-PPP-1992-book2-doc-pg1729",
@@ -1338,7 +1359,8 @@
       "https://www.govinfo.gov/content/pkg/PPP-1992-book2/pdf/PPP-1992-book2-doc-pg1729.pdf",
       "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
     ],
-    "compilerRisks": []
+    "compilerRisks": [],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "public-paper-lead-PPP-1992-book2-doc-pg2264",
@@ -1394,7 +1416,8 @@
       "https://www.govinfo.gov/content/pkg/PPP-1992-book2/pdf/PPP-1992-book2-doc-pg2264.pdf",
       "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
     ],
-    "compilerRisks": []
+    "compilerRisks": [],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-645607415",
@@ -1443,7 +1466,7 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched India, Kashmir in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "India",
@@ -1459,7 +1482,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-645608141",
@@ -1506,7 +1530,7 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched South Asia in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [1]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [1].",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "India",
@@ -1522,7 +1546,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-645607135",
@@ -1569,7 +1594,7 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched South Asia in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [1]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [1].",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "India",
@@ -1585,7 +1610,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-645608143",
@@ -1634,7 +1660,7 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched India, South Asia in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [2]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [2].",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "India",
@@ -1650,7 +1676,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-645607137",
@@ -1697,7 +1724,7 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched South Asia in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [2]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [2].",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "India",
@@ -1713,7 +1740,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-645607805",
@@ -1760,7 +1788,7 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched India in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [A]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [A].",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "India",
@@ -1776,7 +1804,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-645607807",
@@ -1823,7 +1852,7 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched India in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [B]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [B].",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "High",
     "reviewLane": "India",
@@ -1839,7 +1868,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "public-paper-lead-PPP-1992-book1-doc-pg302",
@@ -1893,7 +1923,8 @@
       "https://www.govinfo.gov/content/pkg/PPP-1992-book1/pdf/PPP-1992-book1-doc-pg302.pdf",
       "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
     ],
-    "compilerRisks": []
+    "compilerRisks": [],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-470426145",
@@ -1940,7 +1971,7 @@
       "fileNaid": "2554865"
     },
     "rationale": "Matched Kashmir in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Possibly.",
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Correspondence Files, Letters on Kashmir. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Correspondence Files, Letters on Kashmir.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "Critical",
     "reviewLane": "Regional: Kashmir",
@@ -1956,7 +1987,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-645608041",
@@ -2003,7 +2035,7 @@
       "fileNaid": "470572294"
     },
     "rationale": "Matched Bangladesh in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Partly.",
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Bangladesh. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Bangladesh.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "Critical",
     "reviewLane": "Regional: Bangladesh",
@@ -2019,7 +2051,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-286185941",
@@ -2066,7 +2099,7 @@
       "fileNaid": "2108210"
     },
     "rationale": "Matched Bangladesh in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Possibly.",
-    "sourceNote": "Source: George H.W. Bush Library, White House Office of Presidential Personnel, Katja Bullock Appointment Files, Milam, William - AMB to Bangladesh. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, White House Office of Presidential Personnel, Katja Bullock Appointment Files, Milam, William - AMB to Bangladesh.",
     "compilerDisposition": "Review lead",
     "priorityTier": "Medium",
     "reviewLane": "Regional",
@@ -2082,7 +2115,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-470426225",
@@ -2129,7 +2163,7 @@
       "fileNaid": "2554866"
     },
     "rationale": "Matched Kashmir in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Possibly.",
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Teleconference - March 26, 1990 Re: Kashmir. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Teleconference - March 26, 1990 Re: Kashmir.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "Critical",
     "reviewLane": "Regional: Kashmir",
@@ -2145,7 +2179,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-470426266",
@@ -2192,7 +2227,7 @@
       "fileNaid": "2554866"
     },
     "rationale": "Matched Bangladesh in a Bush 41-era Catalog search. Has an online digital object. Access status: Restricted - Possibly.",
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, President's Meeting with Prime Minister Zia of Bangladesh - March 19, 1992. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, President's Meeting with Prime Minister Zia of Bangladesh - March 19, 1992.",
     "compilerDisposition": "High-priority source review lead",
     "priorityTier": "Critical",
     "reviewLane": "Regional: Bangladesh",
@@ -2208,7 +2243,8 @@
       "catalog-derived-source-note",
       "declassification-review",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "public-paper-lead-PPP-1992-book1-doc-pg473",
@@ -2262,7 +2298,8 @@
       "https://www.govinfo.gov/content/pkg/PPP-1992-book1/pdf/PPP-1992-book1-doc-pg473.pdf",
       "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
     ],
-    "compilerRisks": []
+    "compilerRisks": [],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "public-paper-lead-PPP-1992-book1-doc-pg725-2",
@@ -2317,7 +2354,8 @@
       "https://www.govinfo.gov/content/pkg/PPP-1992-book1/pdf/PPP-1992-book1-doc-pg725-2.pdf",
       "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
     ],
-    "compilerRisks": []
+    "compilerRisks": [],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "public-paper-lead-PPP-1992-book2-doc-pg1740",
@@ -2371,7 +2409,8 @@
       "https://www.govinfo.gov/content/pkg/PPP-1992-book2/pdf/PPP-1992-book2-doc-pg1740.pdf",
       "https://www.govinfo.gov/app/collection/ppp/president-41_Bush,%20George%20H.%20W."
     ],
-    "compilerRisks": []
+    "compilerRisks": [],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   },
   {
     "id": "catalog-lead-543965098",
@@ -2418,7 +2457,7 @@
       "fileNaid": ""
     },
     "rationale": "Matched Sri Lanka in a Bush 41-era Catalog search. Has an online digital object. Access status: Unrestricted.",
-    "sourceNote": "Source: George H.W. Bush Library, White House Photograph Office, George H. W. Bush Presidential Photographs, WHPO-P37850. Unrestricted.",
+    "sourceNote": "Source: George H.W. Bush Library, White House Photograph Office, George H. W. Bush Presidential Photographs, WHPO-P37850.",
     "compilerDisposition": "Locator/context lead",
     "priorityTier": "Low",
     "reviewLane": "Regional",
@@ -2433,6 +2472,7 @@
     "compilerRisks": [
       "catalog-derived-source-note",
       "page-count-gap"
-    ]
+    ],
+    "sourceNoteBasis": "FRUS-style archival chain generated from potential-lead metadata; verify against PDF or title page before promotion."
   }
 ]

@@ -36,7 +36,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 1/23/89-5/10/89, 91111-001, source pages 65-66. Declassified.
+Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 1/23/89-5/10/89, OA/ID 91111-001, source pages 65-66.
 ```
 
 ## Provenance
@@ -60,10 +60,6 @@ Links:
 - Provenance link: documents/afghanistan/1989-04-11-bush-king-fahd-telcon-scowcroft.pdf
 - Provenance link: https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91111-001.pdf
 - Provenance link: https://catalog.archives.gov/id/4522156
-- Provenance link: https://catalog.archives.gov/id/415889760
-- Provenance link: https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-04_11_89-12794-017_415889760.pdf
-- Provenance link: https://catalog.archives.gov/id/415889761
-- Provenance link: https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-04_11_89-12794-018_415889761.pdf
 
 ## Daily Diary / Backup
 

@@ -34,7 +34,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 282 - May 17, 1991 - NSC/DC Meeting on Angola and Afghanistan, Keywords: Angola, Afghanistan (File located @ NLMS), 90020-001. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 282 - May 17, 1991 - NSC/DC Meeting on Angola and Afghanistan, Keywords: Angola, Afghanistan (File located @ NLMS), OA/ID 90020-001.
 ```
 
 ## Provenance

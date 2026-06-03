@@ -91,6 +91,7 @@ const paths = {
   sourceNoteFinalization: path.join(reportsDir, "compiler-source-note-finalization.md"),
   sourceNoteFinalizationJson: path.join(dataDir, "compiler-source-note-finalization.json"),
   sourceNoteFinalizationScript: path.join(dataDir, "compiler-source-note-finalization.js"),
+  citationSheetExtractionsJson: path.join(dataDir, "compiler-citation-sheet-extractions.json"),
   accessReviewCsv: path.join(reportsDir, "compiler-access-review.csv"),
   accessReview: path.join(reportsDir, "compiler-access-review.md"),
   pageBoundaryCsv: path.join(reportsDir, "compiler-page-boundary-queue.csv"),
@@ -239,6 +240,7 @@ function confirmedRows(records) {
     objectFilename: record.source?.objectFilename || "",
     source: compactSource(record),
     sourceNote: record.sourceNote,
+    sourceNoteBasis: record.sourceNoteBasis || "",
     provenanceNote: record.provenanceNote,
     provenanceLinks: compactList(record.provenanceLinks),
     dailyDiaryRefs: (record.dailyDiaryReferences || []).map((reference) =>
@@ -288,6 +290,7 @@ function potentialRows(candidates) {
       accessRestriction: candidate.accessRestriction,
       matchedQueries: candidate.matchedQueries || [],
       sourceNote: candidate.sourceNote,
+      sourceNoteBasis: candidate.sourceNoteBasis || "",
       provenanceNote: candidate.provenanceNote,
       provenanceLinks: compactList(candidate.provenanceLinks),
       compilerRisks: compactList(candidate.compilerRisks),
@@ -894,7 +897,6 @@ function isRestrictedStatus(status = "") {
 function sourceNoteStyleIssues(row) {
   const issues = [];
   const note = row.sourceNote || "";
-  const status = row.releaseStatus || row.status || "";
 
   if (!note) {
     issues.push("missing source note");
@@ -906,23 +908,51 @@ function sourceNoteStyleIssues(row) {
   if (/National Archives Catalog|Catalog URL|Catalog:|Digital Research Room|Digital object|object filename|Page count:|Project PDF extent/i.test(note)) {
     issues.push("contains provenance ledger phrasing");
   }
-  if (isRestrictedStatus(status) && !/Access restriction:/i.test(note)) {
-    issues.push("missing access restriction sentence");
+  if (/\bFull release\b|\bPartial release\b|\bDeclassified\b|Access restriction:/i.test(note)) {
+    issues.push("contains release/access status better kept in provenance or access review");
   }
-  if (/partial/i.test(status) && !/Partial release/i.test(note)) {
-    issues.push("missing partial release sentence");
-  }
-  if (/full/i.test(status) && !/Full release/i.test(note)) {
-    issues.push("missing full release sentence");
-  }
-  if (/declassified/i.test(status) && !/Declassified/i.test(note)) {
-    issues.push("missing declassified sentence");
+  if (/George H\.W\. Bush Library/i.test(note) && /National Security Council|Brent Scowcroft/i.test(note) && !/Bush Presidential Records/i.test(note)) {
+    issues.push("missing Bush Presidential Records records group");
   }
   if (row.sourcePages && !note.includes(row.sourcePages)) {
     issues.push("missing source page range");
   }
 
   return issues;
+}
+
+function sourceNoteHasWorkingMetadata(note = "") {
+  return /https?:\/\//i.test(note) ||
+    /\bNAID\b/i.test(note) ||
+    /National Archives Catalog|Catalog URL|Catalog:|Digital Research Room|Digital object|object filename|Page count:|Project PDF extent/i.test(note) ||
+    /\bFull release\b|\bPartial release\b|\bDeclassified\b|Access restriction:/i.test(note);
+}
+
+function publishedFrusStatus(row) {
+  const note = row.sourceNote || "";
+  const basis = row.sourceNoteBasis || "";
+  if (/citation-marker extraction/i.test(basis)) return "Citation-marker target applied";
+  if (/first-page classification extraction/i.test(basis)) return "Metadata source chain with extracted classification";
+  if (/Public Papers|GovInfo/i.test(note)) return "Published/public source citation";
+  if (row.itemType === "Potential lead") return "Metadata-derived draft; verify before promotion";
+  return "Metadata-derived draft; verify against PDF/title page";
+}
+
+function sourceNoteStandardChecklist(row) {
+  const note = row.sourceNote || "";
+  if (!note) return "Missing visible Source Note";
+
+  const checks = [];
+  checks.push(/^Source:/i.test(note) ? "starts with Source:" : "missing Source:");
+  checks.push(sourceNoteHasWorkingMetadata(note) ? "working metadata visible" : "no URL/NAID/catalog/release ledger in visible note");
+  if (/George H\.W\. Bush Library/i.test(note) && /National Security Council|Brent Scowcroft/i.test(note)) {
+    checks.push(/Bush Presidential Records/i.test(note) ? "Bush Presidential Records present" : "Bush Presidential Records missing");
+  }
+  if (row.localIdentifier || row.sourcePages) {
+    checks.push(/OA\/ID|source pages/i.test(note) ? "OA/ID or selected pages present" : "locator/page range pending");
+  }
+  checks.push(/Confidential|Secret|Top Secret|No classification marking/i.test(note) ? "classification/no-marking captured" : "classification pending unless not visible");
+  return checks.join("; ");
 }
 
 function sourceNoteLane(row, issues, itemType) {
@@ -969,6 +999,9 @@ function sourceNoteAuditRows(confirmed, potentialQueue) {
       naid: row.naid,
       localIdentifier: row.localIdentifier,
       sourceLocator: compactList([row.source, row.sourcePages ? `source pages ${row.sourcePages}` : "", row.objectFilename]).join(" | "),
+      sourceNoteBasis: row.sourceNoteBasis || "",
+      publishedFrusStatus: publishedFrusStatus({ ...row, itemType }),
+      frusStandardChecklist: sourceNoteStandardChecklist(row),
       sourceNote: row.sourceNote,
       provenanceNote: row.provenanceNote,
       catalogUrl: row.catalogUrl,
@@ -1013,7 +1046,15 @@ function bulletList(values, empty = "None recorded.") {
 function writeSourceNoteAudit(rows, confirmed, potentialQueue) {
   const cleanCount = rows.filter((row) => row.auditStatus === "Visible note clean").length;
   const needsEdit = rows.length - cleanCount;
+  const citationBacked = rows.filter((row) => row.publishedFrusStatus === "Citation-marker target applied").length;
+  const metadataClean = rows.filter((row) => !sourceNoteHasWorkingMetadata(row.sourceNote || "")).length;
+  const recordsGroupReady = rows.filter((row) =>
+    /George H\.W\. Bush Library/i.test(row.sourceNote || "") &&
+    /National Security Council|Brent Scowcroft/i.test(row.sourceNote || "") &&
+    /Bush Presidential Records/i.test(row.sourceNote || "")
+  ).length;
   const laneCounts = countBy(rows, (row) => row.editorialLane).map(([lane, count]) => [lane, count]);
+  const frusStatusCounts = countBy(rows, (row) => row.publishedFrusStatus).map(([status, count]) => [status, count]);
   const issueCounts = countBy(
     rows.flatMap((row) => row.issues.length ? row.issues : ["No visible-note issue"]),
     (issue) => issue
@@ -1036,12 +1077,28 @@ function writeSourceNoteAudit(rows, confirmed, potentialQueue) {
     "",
     "This audit gives the compiler a record-by-record queue for final source-note review. It checks only the visible editorial Source Note. Full Catalog URLs, NAIDs, object filenames, source-page basis, and Daily Diary references remain in the provenance fields, dossiers, and CSV exports.",
     "",
+    "## Published FRUS Standard",
+    "",
+    "Office of the Historian front matter for the published START I volume explains that the first footnote gives the document source and original classification, with distribution, drafting, background, and read/seen markings when available. Published Bush-era examples then use compact archival chains such as Bush Library or George H.W. Bush Library, Bush Presidential Records, office or collection, series, OA/ID, folder or item title, followed by classification and any document-specific notations. This audit therefore treats catalog URLs, NARA catalog NAIDs, object filenames, release/access workflow status, and page-count ledgers as provenance/review metadata rather than visible Source Note text.",
+    "",
+    "- Volume XXXI methodology: https://history.state.gov/historicaldocuments/frus1989-92v31/abouttheseries",
+    "- Bush Presidential Records example: https://history.state.gov/historicaldocuments/frus1989-92v31/d134",
+    "- No-classification-marking example: https://history.state.gov/historicaldocuments/frus1989-92v31/d73",
+    "- Missing-minutes/editing example: https://history.state.gov/historicaldocuments/frus1989-92v31/d21",
+    "",
     "## Coverage",
     "",
     `- Confirmed records checked: ${confirmed.length}`,
     `- Potential-lead source-note drafts checked: ${potentialQueue.length}`,
     `- Visible notes with no mechanical style issues: ${cleanCount}/${rows.length}`,
     `- Visible notes needing mechanical edits: ${needsEdit}`,
+    `- Citation-marker targets applied to visible notes: ${citationBacked}`,
+    `- Visible notes without catalog/release-status ledger metadata: ${metadataClean}/${rows.length}`,
+    `- Bush Library NSC/Scowcroft notes with Bush Presidential Records present: ${recordsGroupReady}`,
+    "",
+    "## FRUS Basis",
+    "",
+    markdownTable(["Status", "Rows"], frusStatusCounts),
     "",
     "## Editorial Lanes",
     "",
@@ -1059,7 +1116,7 @@ function writeSourceNoteAudit(rows, confirmed, potentialQueue) {
     "",
     "## Working Rule",
     "",
-    "The visible Source Note should read as an editorial citation: repository or collection, office or series, file/folder or item title, compact local locator or source pages when useful, and release/access status. Keep research metadata out of the visible note unless an editor intentionally asks for it."
+    "The visible Source Note should read as an editorial citation: repository, records group or collection, office, series, OA/ID or selected source pages, file/folder title, and original classification when visible. Keep research metadata, release/access status, and URLs out of the visible note unless an editor intentionally asks for them."
   ];
 
   fs.writeFileSync(paths.sourceNoteAudit, `${lines.join("\n").trim()}\n`);
@@ -1086,6 +1143,7 @@ function sourceNoteFinalizationLane(row) {
 }
 
 function sourceNoteEvidenceBasis(row) {
+  if (row.sourceNoteBasis) return row.sourceNoteBasis;
   const text = plainText([row.sourceLocator, row.sourceNote, row.provenanceNote]);
   if (/public papers|govinfo/i.test(text)) {
     return "GovInfo/Public Papers text; use as selected public text only if editorially selected, otherwise keep as locator/context.";
@@ -1105,13 +1163,13 @@ function sourceNoteEvidenceBasis(row) {
 function sourceNoteCitationTask(row) {
   const finalLane = sourceNoteFinalizationLane(row);
   if (finalLane === "Citation sheet/title-page verification") {
-    return "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.";
+    return "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page.";
   }
   if (finalLane === "Partial-release/excision wording") {
-    return "Inspect the released PDF for excisions, then decide whether the visible Source Note should state partial release or whether the record is cite-only/deferred.";
+    return "Inspect the released PDF for excisions, then decide whether the record is selectable, cite-only, or deferred; keep release-status details in provenance unless an editor requests visible wording.";
   }
   if (finalLane === "Access/source-note wording decision") {
-    return "Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.";
+    return "Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.";
   }
   if (finalLane === "Page-boundary citation verification") {
     return "Confirm the exact selected page boundary and title before final numbering; do not rely on a folder-level title if only part of the PDF is selected.";
@@ -1124,11 +1182,11 @@ function sourceNoteCitationTask(row) {
 
 function sourceNoteStyleTarget(row) {
   if (row.sourceNote) return row.sourceNote;
-  return "Draft after citation-sheet review: Source: George H.W. Bush Library, [collection or office], [series], [file unit or item title], [local identifier or source pages if needed]. [Release or access sentence].";
+  return "Draft after citation-sheet review: Source: George H.W. Bush Library, [records group or collection], [office], [series], [OA/ID or selected source pages], [file unit or item title]. [Original classification if visible].";
 }
 
 function sourceNoteKeepOut(row) {
-  return "Keep NAIDs, Catalog URLs, PDF URLs, object IDs, object filenames, FOIA tracking, page-count basis, Daily Diary/Backup refs, deduped provenance, and search notes out of the visible Source Note unless an editor asks for them.";
+  return "Keep NAIDs, Catalog URLs, PDF URLs, object IDs, object filenames, FOIA tracking, page-count basis, release/access status, Daily Diary/Backup refs, deduped provenance, and search notes out of the visible Source Note unless an editor asks for them.";
 }
 
 function sourceNoteFinalizationRows(sourceAudit) {
@@ -1148,6 +1206,9 @@ function sourceNoteFinalizationRows(sourceAudit) {
       naid: row.naid,
       localIdentifier: row.localIdentifier,
       sourceLocator: row.sourceLocator,
+      sourceNoteBasis: row.sourceNoteBasis,
+      publishedFrusStatus: row.publishedFrusStatus,
+      frusStandardChecklist: row.frusStandardChecklist,
       evidenceBasis: sourceNoteEvidenceBasis(row),
       citationSheetTask: sourceNoteCitationTask(row),
       frusStyleTarget: sourceNoteStyleTarget(row),
@@ -1165,9 +1226,47 @@ function sourceNoteFinalizationRows(sourceAudit) {
     );
 }
 
+function overlayCitationSheetTargets(sourceNoteFinalization, citationSheetExtractions) {
+  if (!citationSheetExtractions.length) return sourceNoteFinalization;
+  const byCompilerNumber = new Map(
+    citationSheetExtractions
+      .filter((row) => row.compilerNumber && row.citationMarkerFound === "Yes" && row.frusStyleSourceNoteTarget)
+      .map((row) => [row.compilerNumber, row])
+  );
+
+  return sourceNoteFinalization.map((row) => {
+    const citation = byCompilerNumber.get(row.compilerNumber);
+    if (!citation) return row;
+    const classification = citation.classification || "";
+    const classificationCue = /No classification marking/i.test(classification)
+      ? " Citation-sheet extraction records no classification marking."
+      : classification
+      ? ` Citation-sheet extraction supplies original classification: ${classification}.`
+      : citation.classificationReviewStatus
+        ? ` ${citation.classificationReviewStatus}`
+        : "";
+    const sourceNoteBasis = /No classification marking/i.test(classification)
+      ? "Bush Library citation-marker extraction; no classification marking on first page."
+      : classification
+        ? `Bush Library citation-marker extraction; original classification ${classification}.`
+        : "Bush Library citation-marker extraction; no visible first-page classification marking recorded.";
+    return {
+      ...row,
+      frusStyleTarget: citation.frusStyleSourceNoteTarget,
+      sourceNoteBasis,
+      publishedFrusStatus: "Citation-marker target applied",
+      evidenceBasis: /citation-marker extraction/i.test(row.evidenceBasis)
+        ? row.evidenceBasis
+        : `${row.evidenceBasis} Citation-marker extraction is available for this row.`,
+      citationSheetTask: `${row.citationSheetTask}${classificationCue}`.trim()
+    };
+  });
+}
+
 function writeSourceNoteFinalization(rows) {
   const laneCounts = countBy(rows, (row) => row.finalizationLane).map(([lane, count]) => [lane, count]);
   const itemCounts = countBy(rows, (row) => row.itemType).map(([type, count]) => [type, count]);
+  const frusStatusCounts = countBy(rows, (row) => row.publishedFrusStatus).map(([status, count]) => [status, count]);
   const sourceBasisCounts = countBy(rows, (row) => row.evidenceBasis).map(([basis, count]) => [basis, count]);
   const firstQueue = rows.slice(0, 45).map((row) => [
     row.itemType === "Confirmed record" ? row.compilerNumber : "Lead",
@@ -1193,6 +1292,15 @@ function writeSourceNoteFinalization(rows) {
     `- Potential leads with source-note drafts: ${rows.filter((row) => row.itemType === "Potential lead").length}`,
     `- Rows requiring citation-sheet/title-page, access, excision, page-boundary, or promotion decisions: ${rows.filter((row) => row.finalizationLane !== "Final editor source-note check").length}`,
     "",
+    "## Published FRUS Standard",
+    "",
+    "Use the same separation visible in published FRUS, especially Volume XXXI: the Source Note gives the archival chain and document-facing facts such as original classification, distribution, drafting, sent-for-action/information, and seen/noted markings when visible; Catalog URLs, NARA catalog NAIDs, release workflow, object filenames, and page-count provenance stay in the working columns.",
+    "",
+    "- Volume XXXI methodology: https://history.state.gov/historicaldocuments/frus1989-92v31/abouttheseries",
+    "- Examples: https://history.state.gov/historicaldocuments/frus1989-92v31/d134, https://history.state.gov/historicaldocuments/frus1989-92v31/d73, https://history.state.gov/historicaldocuments/frus1989-92v31/d21",
+    "",
+    markdownTable(["Status", "Rows"], frusStatusCounts),
+    "",
     "## Finalization Lanes",
     "",
     markdownTable(["Lane", "Rows"], laneCounts),
@@ -1211,7 +1319,7 @@ function writeSourceNoteFinalization(rows) {
     "",
     "## Source-Note Rule",
     "",
-    "For the visible Source Note, use compact FRUS-style citation language: repository or library, collection/office, series, file unit or item title, local identifier or selected source pages when useful, and release/access sentence. Keep NAIDs, Catalog URLs, PDF URLs, object IDs, object filenames, FOIA tracking, page-count basis, Daily Diary/Backup refs, and deduped provenance in the provenance columns, not in the published Source Note.",
+    "For the visible Source Note, use compact FRUS-style citation language: repository or library, records group/collection, office, series, OA/ID or selected source pages, file unit or item title, and original classification when visible. Keep NAIDs, Catalog URLs, PDF URLs, object IDs, object filenames, FOIA tracking, page-count basis, release/access status, Daily Diary/Backup refs, and deduped provenance in the provenance columns, not in the published Source Note.",
     "",
     "## Working Rule",
     "",
@@ -2808,7 +2916,13 @@ function main() {
   const decisions = decisionRows(confirmed, potentialQueue, gapQueue);
   const selectionBoard = selectionBoardRows(confirmed, potentialQueue, gapQueue);
   const sourceAudit = sourceNoteAuditRows(confirmed, potentialQueue);
-  const sourceNoteFinalization = sourceNoteFinalizationRows(sourceAudit);
+  const citationSheetExtractions = fs.existsSync(paths.citationSheetExtractionsJson)
+    ? readJson(paths.citationSheetExtractionsJson)
+    : [];
+  const sourceNoteFinalization = overlayCitationSheetTargets(
+    sourceNoteFinalizationRows(sourceAudit),
+    citationSheetExtractions
+  );
   const accessReview = accessReviewRows(confirmed, potentialQueue);
   const pageBoundary = pageBoundaryRows(confirmed, potentialQueue, gapQueue);
   const chapterMatrix = chapterMatrixRows(confirmed, potentialQueue, gapQueue);
@@ -2993,6 +3107,9 @@ function main() {
     { key: "naid", label: "NAID" },
     { key: "localIdentifier", label: "Local identifier" },
     { key: "sourceLocator", label: "Source locator" },
+    { key: "sourceNoteBasis", label: "Source-note basis" },
+    { key: "publishedFrusStatus", label: "Published FRUS status" },
+    { key: "frusStandardChecklist", label: "FRUS standard checklist" },
     { key: "sourceNote", label: "Source note" },
     { key: "provenanceNote", label: "Provenance note" },
     { key: "catalogUrl", label: "Catalog URL" },
@@ -3014,6 +3131,9 @@ function main() {
     { key: "naid", label: "NAID" },
     { key: "localIdentifier", label: "Local identifier" },
     { key: "sourceLocator", label: "Source locator" },
+    { key: "sourceNoteBasis", label: "Source-note basis" },
+    { key: "publishedFrusStatus", label: "Published FRUS status" },
+    { key: "frusStandardChecklist", label: "FRUS standard checklist" },
     { key: "evidenceBasis", label: "Evidence basis" },
     { key: "citationSheetTask", label: "Citation-sheet task" },
     { key: "frusStyleTarget", label: "FRUS-style target" },

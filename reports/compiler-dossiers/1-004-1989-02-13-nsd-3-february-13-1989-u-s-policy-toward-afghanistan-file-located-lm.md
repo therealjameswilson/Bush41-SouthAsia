@@ -34,7 +34,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, H-Files, NSD Files, NSD-3 - February 13, 1989 - U.S. Policy toward Afghanistan (File located @ LM), 90003-004. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSD Files, NSD-3 - February 13, 1989 - U.S. Policy toward Afghanistan (File located @ LM), OA/ID 90003-004.
 ```
 
 ## Provenance

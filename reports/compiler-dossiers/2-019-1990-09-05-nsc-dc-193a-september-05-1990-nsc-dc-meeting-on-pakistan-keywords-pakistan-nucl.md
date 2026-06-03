@@ -34,7 +34,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 193A - September 05, 1990 - NSC/DC Meeting on Pakistan, Keywords: Pakistan, Nuclear Matters, 90016-023. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 193A - September 05, 1990 - NSC/DC Meeting on Pakistan, Keywords: Pakistan, Nuclear Matters, OA/ID 90016-023.
 ```
 
 ## Provenance

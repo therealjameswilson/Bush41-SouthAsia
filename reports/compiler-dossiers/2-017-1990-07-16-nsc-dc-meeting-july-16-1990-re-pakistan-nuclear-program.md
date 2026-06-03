@@ -34,7 +34,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC Meeting - July 16, 1990 Re: Pakistan Nuclear Program, CF01625-020. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC/DC Meeting - July 16, 1990 Re: Pakistan Nuclear Program, OA/ID CF01625-020.
 ```
 
 ## Provenance

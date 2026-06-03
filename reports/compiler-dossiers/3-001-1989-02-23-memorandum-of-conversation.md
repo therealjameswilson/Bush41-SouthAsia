@@ -35,7 +35,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons)-January 1989-May 1989]: February 1989. Full release.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Memcon Files, OA/ID CF01729-002, [Memorandum of Conversations (Memcons) - January 1989-May 1989]: February 1989. Confidential.
 ```
 
 ## Provenance

@@ -1,6 +1,6 @@
 # First-Day Compiler Action Packet
 
-Generated: 2026-06-02
+Generated: 2026-06-03
 
 This is the short first pass through the South Asia decision cockpit. It deliberately limits the 110-row cockpit to a phase-balanced action list a compiler can work in one sitting.
 
@@ -47,10 +47,10 @@ Use `reports/compiler-first-day-decision-log.csv` as the fillable marking sheet.
 | 16 | Critical | Resolve access | 1.002 | Afghanistan | 1989-02-08 | NSC/DC 001 - February 08, 1989 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan | Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context. | Compiler has recorded select/defer/cite-only access posture and visible Source Note/provenance wording agree. |
 | 17 | High | Review excisions | 3.010 | India | 1992-01-31 | Memorandum of Conversation | Review excisions and decide whether the released text can support selection; record any cite-only rationale. | Excised text has been reviewed and the row is marked select, defer, or cite-only with an explicit rationale. |
 | 18 | High | Review excisions | 2.029 | Pakistan | 1992-12-03 | Memorandum of Telephone Conversation | Review excisions and decide whether the released text can support selection; record any cite-only rationale. | Excised text has been reviewed and the row is marked select, defer, or cite-only with an explicit rationale. |
-| 19 | Medium | Finalize source note | 2.001 | Pakistan | 1989-01-23 | Memorandum of Telephone Conversation | Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page. | Title, date, series, OA/ID or source pages, classification/release language, and provenance have been checked against PDF or citation sheet. |
-| 20 | Medium | Finalize source note | 2.002 | Pakistan | 1989-01-25 | Memorandum of Telephone Conversation | Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page. | Title, date, series, OA/ID or source pages, classification/release language, and provenance have been checked against PDF or citation sheet. |
-| 21 | Medium | Finalize source note | 3.001 | India | 1989-02-23 | Memorandum of Conversation | Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page. | Title, date, series, OA/ID or source pages, classification/release language, and provenance have been checked against PDF or citation sheet. |
-| 22 | Medium | Finalize source note | 2.003 | Pakistan | 1989-02-24 | Memorandum of Conversation | Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page. | Title, date, series, OA/ID or source pages, classification/release language, and provenance have been checked against PDF or citation sheet. |
+| 19 | Medium | Finalize source note | 2.001 | Pakistan | 1989-01-23 | Memorandum of Telephone Conversation | Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Confidential. | Title, date, series, OA/ID or source pages, original classification, and provenance have been checked against PDF or citation sheet; release/access status remains in provenance or review notes. |
+| 20 | Medium | Finalize source note | 2.002 | Pakistan | 1989-01-25 | Memorandum of Telephone Conversation | Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction records no classification marking. | Title, date, series, OA/ID or source pages, original classification, and provenance have been checked against PDF or citation sheet; release/access status remains in provenance or review notes. |
+| 21 | Medium | Finalize source note | 3.001 | India | 1989-02-23 | Memorandum of Conversation | Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Confidential. | Title, date, series, OA/ID or source pages, original classification, and provenance have been checked against PDF or citation sheet; release/access status remains in provenance or review notes. |
+| 22 | Medium | Finalize source note | 2.003 | Pakistan | 1989-02-24 | Memorandum of Conversation | Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Secret. | Title, date, series, OA/ID or source pages, original classification, and provenance have been checked against PDF or citation sheet; release/access status remains in provenance or review notes. |
 | 23 | High | Close chapter lane | Chapter lane | Afghanistan | 1989-01-01 to 1992-10-07 | Afghanistan policy, civil war, and aid | Finish page-boundary screening in Haass and Cheney files, then decide which restricted NSC/H-Files records become selected documents or cite-only context. Gap cue: Prioritize Haass Working Files 470426597, Haass Meeting File 470426255, Mojaddedi 470426381, Bangladesh Zia 428082145, and Pakistan nuclear meeting files 470426231, 470426238, and 470426240. | Chapter lane has a conscious coverage decision and any remaining source gap is named rather than implicit. |
 | 24 | High | Close chapter lane | Chapter lane | Regional | 1989-01-20 to 1990-03-26 | Kashmir cross-border crisis | Screen the Kashmir letters and teleconference leads, then decide whether the material belongs in India, Pakistan, or a regional crisis sub-lane. Gap cue: Search India with Rao, Venkataraman, Gandhi, Shankar, Kashmir, nuclear, nonproliferation, economic reform, trade, and defense terms. | Chapter lane has a conscious coverage decision and any remaining source gap is named rather than implicit. |
 | 25 | High | Close chapter lane | Chapter lane | India | 1989-01-20 to 1992-02-24 | India leadership and bilateral policy | Build staff-file support for the leadership chronology, especially around the 1991-1992 transition to Rao-era policy. Gap cue: Search India with Rao, Venkataraman, Gandhi, Shankar, Kashmir, nuclear, nonproliferation, economic reform, trade, and defense terms. | Chapter lane has a conscious coverage decision and any remaining source gap is named rather than implicit. |
@@ -122,7 +122,7 @@ Use `reports/compiler-first-day-decision-log.csv` as the fillable marking sheet.
 - Done when: Policy-bearing pages are identified, page range is recorded, and promote/exclude/cite-only rationale is stable.
 - Why this matters: Partly restricted lead screening: Screen the online object and promote only after access posture, page boundaries, title, and source note are stable.
 - NAID/targets: 645608041
-- Source cue: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Bangladesh. Access restriction: Restricted - Partly.
+- Source cue: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Bangladesh.
 - Evidence sheets: compiler-decision-log.csv; compiler-selection-board.md; compiler-access-review.md; compiler-page-boundary-queue.md; compiler-source-note-finalization.md
 - Open: https://catalog.archives.gov/id/645608041
 ### 7. Fix page boundaries: Potential lead Letters on Kashmir
@@ -134,7 +134,7 @@ Use `reports/compiler-first-day-decision-log.csv` as the fillable marking sheet.
 - Done when: Policy-bearing pages are identified, page range is recorded, and promote/exclude/cite-only rationale is stable.
 - Why this matters: Restricted lead screening: Screen the online object and promote only after access posture, page boundaries, title, and source note are stable.
 - NAID/targets: 470426145
-- Source cue: Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Correspondence Files, Letters on Kashmir. Access restriction: Restricted - Possibly.
+- Source cue: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Correspondence Files, Letters on Kashmir.
 - Evidence sheets: compiler-decision-log.csv; compiler-selection-board.md; compiler-access-review.md; compiler-page-boundary-queue.md; compiler-source-note-finalization.md
 - Open: https://catalog.archives.gov/id/470426145
 ### 8. Fix page boundaries: Potential lead NSC/DC [Deputies Committee] Teleconference - March 26, 1990 Re: Kashmir
@@ -146,7 +146,7 @@ Use `reports/compiler-first-day-decision-log.csv` as the fillable marking sheet.
 - Done when: Policy-bearing pages are identified, page range is recorded, and promote/exclude/cite-only rationale is stable.
 - Why this matters: Restricted lead screening: Screen the online object and promote only after access posture, page boundaries, title, and source note are stable.
 - NAID/targets: 470426225
-- Source cue: Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Teleconference - March 26, 1990 Re: Kashmir. Access restriction: Restricted - Possibly.
+- Source cue: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Teleconference - March 26, 1990 Re: Kashmir.
 - Evidence sheets: compiler-decision-log.csv; compiler-selection-board.md; compiler-access-review.md; compiler-page-boundary-queue.md; compiler-source-note-finalization.md
 - Open: https://catalog.archives.gov/id/470426225
 ### 9. Fix page boundaries: Potential lead President's Meeting with Prime Minister Zia of Bangladesh - March 19, 1992
@@ -158,19 +158,19 @@ Use `reports/compiler-first-day-decision-log.csv` as the fillable marking sheet.
 - Done when: Policy-bearing pages are identified, page range is recorded, and promote/exclude/cite-only rationale is stable.
 - Why this matters: Restricted lead screening: Screen the online object and promote only after access posture, page boundaries, title, and source note are stable.
 - NAID/targets: 470426266
-- Source cue: Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, President's Meeting with Prime Minister Zia of Bangladesh - March 19, 1992. Access restriction: Restricted - Possibly.
+- Source cue: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, President's Meeting with Prime Minister Zia of Bangladesh - March 19, 1992.
 - Evidence sheets: compiler-decision-log.csv; compiler-selection-board.md; compiler-access-review.md; compiler-page-boundary-queue.md; compiler-source-note-finalization.md
 - Open: https://catalog.archives.gov/id/470426266
 ### 10. Fix page boundaries: 4.006 Memorandum of Conversation
 - Priority: High; suggested decision: Review before selection
 - Chapter/lane: Regional; date: 1992-03-19
 - Release/status: Full; pages: 6 pages
-- Decision question: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?
+- Decision question: Are the exact source pages and item title stable enough for final citation?
 - Next action: Open the PDF, verify item-level page boundaries and title, then update source note or decision log if the folder contains multiple documents. Gap cue: Prioritize Haass Working Files 470426597, Haass Meeting File 470426255, Mojaddedi 470426381, Bangladesh Zia 428082145, and Pakistan nuclear meeting files 470426231, 470426238, and 470426240.
 - Done when: Policy-bearing pages are identified, page range is recorded, and promote/exclude/cite-only rationale is stable.
-- Why this matters: Critical boundary #11: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?
+- Why this matters: Critical boundary #11: Are the exact source pages and item title stable enough for final citation?
 - NAID/targets: 428082145; [Memorandum of Conversations (Memcons)-January 1992-June 1992]: March 1992
-- Source cue: Source: George H.W. Bush Library, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons)-January 1992-June 1992]: March 1992. Full release.
+- Source cue: Source: George H.W. Bush Library, Bush Presidential Records, Scowcroft, Brent, Collection, Presidential Correspondence Files, Presidential Memcons Files, OA/ID 91109-007, Presidential Meetings - Memorandum of Conversations 3/3/92 - 4/28/92. Confidential.
 - Evidence sheets: compiler-decision-log.csv; compiler-selection-board.md; compiler-page-boundary-queue.md; compiler-source-note-finalization.md
 - Open: https://catalog.archives.gov/id/428082145
 ### 11. Resolve access: 1.014 Presidential Visit of President [of Afghanistan Interim Government Sibgahtullah] Mojaddedi - November 27, 1989
@@ -182,7 +182,7 @@ Use `reports/compiler-first-day-decision-log.csv` as the fillable marking sheet.
 - Done when: Compiler has recorded select/defer/cite-only access posture and visible Source Note/provenance wording agree.
 - Why this matters: Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.
 - NAID/targets: 470426381; CF01404-028
-- Source cue: Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Presidential Meeting Files, Presidential Visit of President [of Afghanistan Interim Government Sibgahtullah] Mojaddedi - November 27, 1989, CF01404-028. Access restriction: Restricted - Possibly.
+- Source cue: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Presidential Meeting Files, Presidential Visit of President [of Afghanistan Interim Government Sibgahtullah] Mojaddedi - November 27, 1989, OA/ID CF01404-028.
 - Evidence sheets: compiler-decision-log.csv; compiler-selection-board.md; compiler-access-review.md; compiler-page-boundary-queue.md; compiler-source-note-finalization.md
 - Open: https://catalog.archives.gov/id/470426381
 ### 12. Resolve access: 2.017 NSC/DC Meeting - July 16, 1990 Re: Pakistan Nuclear Program
@@ -194,7 +194,7 @@ Use `reports/compiler-first-day-decision-log.csv` as the fillable marking sheet.
 - Done when: Compiler has recorded select/defer/cite-only access posture and visible Source Note/provenance wording agree.
 - Why this matters: Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.
 - NAID/targets: 470426231; CF01625-020
-- Source cue: Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC Meeting - July 16, 1990 Re: Pakistan Nuclear Program, CF01625-020. Access restriction: Restricted - Possibly.
+- Source cue: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC/DC Meeting - July 16, 1990 Re: Pakistan Nuclear Program, OA/ID CF01625-020.
 - Evidence sheets: compiler-decision-log.csv; compiler-selection-board.md; compiler-access-review.md; compiler-page-boundary-queue.md; compiler-source-note-finalization.md
 - Open: https://catalog.archives.gov/id/470426231
 ### 13. Resolve access: 2.021 NSC/DC [Deputies Committee] Meeting - October 4, 1990 Re: Pakistan
@@ -206,7 +206,7 @@ Use `reports/compiler-first-day-decision-log.csv` as the fillable marking sheet.
 - Done when: Compiler has recorded select/defer/cite-only access posture and visible Source Note/provenance wording agree.
 - Why this matters: Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.
 - NAID/targets: 470426238; CF01625-027
-- Source cue: Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Meeting - October 4, 1990 Re: Pakistan, CF01625-027. Access restriction: Restricted - Possibly.
+- Source cue: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Meeting - October 4, 1990 Re: Pakistan, OA/ID CF01625-027.
 - Evidence sheets: compiler-decision-log.csv; compiler-selection-board.md; compiler-access-review.md; compiler-page-boundary-queue.md; compiler-source-note-finalization.md
 - Open: https://catalog.archives.gov/id/470426238
 ### 14. Resolve access: 2.023 NSC/DC Meeting - October 9, 1990 Re: Pakistan
@@ -218,7 +218,7 @@ Use `reports/compiler-first-day-decision-log.csv` as the fillable marking sheet.
 - Done when: Compiler has recorded select/defer/cite-only access posture and visible Source Note/provenance wording agree.
 - Why this matters: Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.
 - NAID/targets: 470426240; CF01625-029
-- Source cue: Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC Meeting - October 9, 1990 Re: Pakistan, CF01625-029. Access restriction: Restricted - Possibly.
+- Source cue: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC/DC Meeting - October 9, 1990 Re: Pakistan, OA/ID CF01625-029.
 - Evidence sheets: compiler-decision-log.csv; compiler-selection-board.md; compiler-access-review.md; compiler-page-boundary-queue.md; compiler-source-note-finalization.md
 - Open: https://catalog.archives.gov/id/470426240
 ### 15. Resolve access: 1.001 NSR-1 - February 07, 1989 - Afghanistan
@@ -230,7 +230,7 @@ Use `reports/compiler-first-day-decision-log.csv` as the fillable marking sheet.
 - Done when: Compiler has recorded select/defer/cite-only access posture and visible Source Note/provenance wording agree.
 - Why this matters: Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.
 - NAID/targets: 446394923; 90006-001
-- Source cue: Source: George H.W. Bush Library, National Security Council, H-Files, NSR Files, NSR-1 - February 07, 1989 - Afghanistan, 90006-001. Access restriction: Restricted - Possibly.
+- Source cue: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSR Files, NSR-1 - February 07, 1989 - Afghanistan, OA/ID 90006-001.
 - Evidence sheets: compiler-decision-log.csv; compiler-selection-board.md; compiler-access-review.md; compiler-page-boundary-queue.md; compiler-source-note-finalization.md
 - Open: https://catalog.archives.gov/id/446394923
 ### 16. Resolve access: 1.002 NSC/DC 001 - February 08, 1989 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan
@@ -242,7 +242,7 @@ Use `reports/compiler-first-day-decision-log.csv` as the fillable marking sheet.
 - Done when: Compiler has recorded select/defer/cite-only access posture and visible Source Note/provenance wording agree.
 - Why this matters: Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.
 - NAID/targets: 470760975; 90009-001
-- Source cue: Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 001 - February 08, 1989 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan, 90009-001. Access restriction: Restricted - Possibly.
+- Source cue: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 001 - February 08, 1989 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan, OA/ID 90009-001.
 - Evidence sheets: compiler-decision-log.csv; compiler-selection-board.md; compiler-access-review.md; compiler-page-boundary-queue.md; compiler-source-note-finalization.md
 - Open: https://catalog.archives.gov/id/470760975
 ### 17. Review excisions: 3.010 Memorandum of Conversation
@@ -254,7 +254,7 @@ Use `reports/compiler-first-day-decision-log.csv` as the fillable marking sheet.
 - Done when: Excised text has been reviewed and the row is marked select, defer, or cite-only with an explicit rationale.
 - Why this matters: Partial/excision check: Review excisions and decide whether the released text can support selection; record any cite-only rationale.
 - NAID/targets: 428082131; [Memorandum of Conversations (Memcons)-January 1992-June 1992]: January 1992
-- Source cue: Source: George H.W. Bush Library, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons)-January 1992-June 1992]: January 1992. Partial release.
+- Source cue: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons)-January 1992-June 1992]: January 1992. Confidential.
 - Evidence sheets: compiler-decision-log.csv; compiler-selection-board.md; compiler-access-review.md; compiler-page-boundary-queue.md; compiler-source-note-finalization.md
 - Open: https://catalog.archives.gov/id/428082131
 ### 18. Review excisions: 2.029 Memorandum of Telephone Conversation
@@ -266,7 +266,7 @@ Use `reports/compiler-first-day-decision-log.csv` as the fillable marking sheet.
 - Done when: Excised text has been reviewed and the row is marked select, defer, or cite-only with an explicit rationale.
 - Why this matters: Partial/excision check: Review excisions and decide whether the released text can support selection; record any cite-only rationale.
 - NAID/targets: 428082401; [Memorandum of Telephone Conversations (Telcons) - July 1992-January 1993]:  December 1992
-- Source cue: Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - July 1992-January 1993]: December 1992. Partial release.
+- Source cue: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - July 1992-January 1993]: December 1992. Confidential.
 - Evidence sheets: compiler-decision-log.csv; compiler-selection-board.md; compiler-access-review.md; compiler-page-boundary-queue.md; compiler-source-note-finalization.md
 - Open: https://catalog.archives.gov/id/428082401
 ### 19. Finalize source note: 2.001 Memorandum of Telephone Conversation
@@ -274,11 +274,11 @@ Use `reports/compiler-first-day-decision-log.csv` as the fillable marking sheet.
 - Chapter/lane: Pakistan; date: 1989-01-23
 - Release/status: Full; pages: 1 page
 - Decision question: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?
-- Next action: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.
-- Done when: Title, date, series, OA/ID or source pages, classification/release language, and provenance have been checked against PDF or citation sheet.
+- Next action: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Confidential.
+- Done when: Title, date, series, OA/ID or source pages, original classification, and provenance have been checked against PDF or citation sheet; release/access status remains in provenance or review notes.
 - Why this matters: Medium boundary #63: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?
 - NAID/targets: 428079777; [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989
-- Source cue: Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989. Full release.
+- Source cue: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-001, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989. Confidential.
 - Evidence sheets: compiler-decision-log.csv; compiler-selection-board.md; compiler-page-boundary-queue.md; compiler-source-note-finalization.md
 - Open: https://catalog.archives.gov/id/428079777
 ### 20. Finalize source note: 2.002 Memorandum of Telephone Conversation
@@ -286,11 +286,11 @@ Use `reports/compiler-first-day-decision-log.csv` as the fillable marking sheet.
 - Chapter/lane: Pakistan; date: 1989-01-25
 - Release/status: Full; pages: 1 page
 - Decision question: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?
-- Next action: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.
-- Done when: Title, date, series, OA/ID or source pages, classification/release language, and provenance have been checked against PDF or citation sheet.
+- Next action: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction records no classification marking.
+- Done when: Title, date, series, OA/ID or source pages, original classification, and provenance have been checked against PDF or citation sheet; release/access status remains in provenance or review notes.
 - Why this matters: Medium boundary #64: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?
 - NAID/targets: 428079809; [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989
-- Source cue: Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989. Full release.
+- Source cue: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-001, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989. No classification marking.
 - Evidence sheets: compiler-decision-log.csv; compiler-selection-board.md; compiler-page-boundary-queue.md; compiler-source-note-finalization.md
 - Open: https://catalog.archives.gov/id/428079809
 ### 21. Finalize source note: 3.001 Memorandum of Conversation
@@ -298,11 +298,11 @@ Use `reports/compiler-first-day-decision-log.csv` as the fillable marking sheet.
 - Chapter/lane: India; date: 1989-02-23
 - Release/status: Full; pages: 9 pages
 - Decision question: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?
-- Next action: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.
-- Done when: Title, date, series, OA/ID or source pages, classification/release language, and provenance have been checked against PDF or citation sheet.
+- Next action: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Confidential.
+- Done when: Title, date, series, OA/ID or source pages, original classification, and provenance have been checked against PDF or citation sheet; release/access status remains in provenance or review notes.
 - Why this matters: Medium boundary #66: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?
 - NAID/targets: 428079855; [Memorandum of Conversations (Memcons)-January 1989-May 1989]: February 1989
-- Source cue: Source: George H.W. Bush Library, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons)-January 1989-May 1989]: February 1989. Full release.
+- Source cue: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Memcon Files, OA/ID CF01729-002, [Memorandum of Conversations (Memcons) - January 1989-May 1989]: February 1989. Confidential.
 - Evidence sheets: compiler-decision-log.csv; compiler-selection-board.md; compiler-page-boundary-queue.md; compiler-source-note-finalization.md
 - Open: https://catalog.archives.gov/id/428079855
 ### 22. Finalize source note: 2.003 Memorandum of Conversation
@@ -310,11 +310,11 @@ Use `reports/compiler-first-day-decision-log.csv` as the fillable marking sheet.
 - Chapter/lane: Pakistan; date: 1989-02-24
 - Release/status: Full; pages: 7 pages
 - Decision question: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?
-- Next action: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.
-- Done when: Title, date, series, OA/ID or source pages, classification/release language, and provenance have been checked against PDF or citation sheet.
+- Next action: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Secret.
+- Done when: Title, date, series, OA/ID or source pages, original classification, and provenance have been checked against PDF or citation sheet; release/access status remains in provenance or review notes.
 - Why this matters: Medium boundary #67: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?
 - NAID/targets: 428079859; [Memorandum of Conversations (Memcons)-January 1989-May 1989]: February 1989
-- Source cue: Source: George H.W. Bush Library, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons)-January 1989-May 1989]: February 1989. Full release.
+- Source cue: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Memcon Files, OA/ID CF01729-002, [Memorandum of Conversations (Memcons) - January 1989-May 1989]: February 1989. Secret.
 - Evidence sheets: compiler-decision-log.csv; compiler-selection-board.md; compiler-page-boundary-queue.md; compiler-source-note-finalization.md
 - Open: https://catalog.archives.gov/id/428079859
 ### 23. Close chapter lane: Chapter lane Afghanistan policy, civil war, and aid

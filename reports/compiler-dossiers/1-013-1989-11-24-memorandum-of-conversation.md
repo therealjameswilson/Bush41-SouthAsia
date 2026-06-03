@@ -36,7 +36,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 10/3/89-12/16/89, 91107-006, source pages 91-100. Declassified.
+Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 10/3/89-12/16/89, OA/ID 91107-006, source pages 91-100.
 ```
 
 ## Provenance
@@ -60,8 +60,6 @@ Links:
 - Provenance link: documents/afghanistan/1989-11-24-bush-margaret-thatcher-memcon-scowcroft.pdf
 - Provenance link: https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91107-006.pdf
 - Provenance link: https://catalog.archives.gov/id/4522156
-- Provenance link: https://catalog.archives.gov/id/415890215
-- Provenance link: https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-11_24_89-12812-006_415890215.pdf
 
 ## Daily Diary / Backup
 

@@ -34,7 +34,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, H-Files, NSC Meetings Files, NSC0004 - March 14, 1989 - Panama, Nicaragua, Afghanistan (File located @ LM), 90000-004. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC Meetings Files, NSC0004 - March 14, 1989 - Panama, Nicaragua, Afghanistan (File located @ LM), OA/ID 90000-004.
 ```
 
 ## Provenance

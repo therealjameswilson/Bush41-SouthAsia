@@ -98,7 +98,7 @@ function phaseDoneWhen(phase) {
     return "Excised text has been reviewed and the row is marked select, defer, or cite-only with an explicit rationale.";
   }
   if (phase === "Finalize source note") {
-    return "Title, date, series, OA/ID or source pages, classification/release language, and provenance have been checked against PDF or citation sheet.";
+    return "Title, date, series, OA/ID or source pages, original classification, and provenance have been checked against PDF or citation sheet; release/access status remains in provenance or review notes.";
   }
   if (phase === "Close chapter lane") {
     return "Chapter lane has a conscious coverage decision and any remaining source gap is named rather than implicit.";

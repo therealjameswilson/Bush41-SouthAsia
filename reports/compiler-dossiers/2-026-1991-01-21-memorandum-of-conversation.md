@@ -36,7 +36,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 1/14/91-3/8/91, 91108-004, source pages 7-15. Declassified.
+Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 1/14/91-3/8/91, OA/ID 91108-004, source pages 7-15.
 ```
 
 ## Provenance
@@ -60,10 +60,6 @@ Links:
 - Provenance link: documents/pakistan/1991-01-21-bush-lee-kuan-yew-memcon-scowcroft.pdf
 - Provenance link: https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91108-004.pdf
 - Provenance link: https://catalog.archives.gov/id/4522156
-- Provenance link: https://catalog.archives.gov/id/415891062
-- Provenance link: https://s3.amazonaws.com/NARAprodstorage/opastorage/live/27/1863/186327/content/arcmedia/media/images/40/19/40-1899a.gif
-- Provenance link: https://catalog.archives.gov/id/415891063
-- Provenance link: https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1991/41-bpr-apts_sch-dd-01_21_91-12847-012_415891063.pdf
 
 ## Daily Diary / Backup
 

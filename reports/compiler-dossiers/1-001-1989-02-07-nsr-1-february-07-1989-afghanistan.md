@@ -34,7 +34,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, H-Files, NSR Files, NSR-1 - February 07, 1989 - Afghanistan, 90006-001. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSR Files, NSR-1 - February 07, 1989 - Afghanistan, OA/ID 90006-001.
 ```
 
 ## Provenance

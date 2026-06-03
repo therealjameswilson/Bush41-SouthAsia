@@ -34,7 +34,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, H-Files, NSD Files, NSD-70 - July 10, 1992 - U.S. Nonproliferation Policy, 90005-020. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSD Files, NSD-70 - July 10, 1992 - U.S. Nonproliferation Policy, OA/ID 90005-020.
 ```
 
 ## Provenance

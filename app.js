@@ -1322,10 +1322,10 @@ function isCompactLocator(value = "") {
 function frusRepository(record) {
   const sourceText = `${record.source?.name || ""} ${record.source?.series || ""} ${record.sourceNote || ""}`;
   if (/Brent Scowcroft|Scowcroft/i.test(sourceText)) {
-    return "George H.W. Bush Library, Brent Scowcroft Papers";
+    return "George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection";
   }
   if (/National Security Council|H-Files|NSC/i.test(sourceText)) {
-    return "George H.W. Bush Library, National Security Council";
+    return "George H.W. Bush Library, Bush Presidential Records, National Security Council";
   }
   return record.source?.referenceUnit || record.source?.name || "Repository not yet identified";
 }
@@ -1343,26 +1343,18 @@ function frusLocatorParts(record) {
   const pages = sourcePageRange(record);
 
   if (folderTitle) locator.push(folderTitle);
-  if (isCompactLocator(identifier)) locator.push(identifier);
+  if (isCompactLocator(identifier)) locator.push(`OA/ID ${identifier}`);
   if (pages) locator.push(`source pages ${pages}`);
   return locator;
 }
 
-function frusReleaseSentence(record) {
-  const status = record.releaseStatus || "Release status not yet recorded";
-  if (/declassified/i.test(status)) return "Declassified.";
-  if (/unrestricted/i.test(status)) return "Unrestricted.";
-  if (/full/i.test(status)) return "Full release.";
-  if (/partial/i.test(status)) return "Partial release.";
-  if (/restricted|withheld|denied|possibly|excised/i.test(status)) return `Access restriction: ${status}.`;
-  if (/unknown/i.test(status)) return "Release status not determined.";
-  return `${status}.`;
-}
-
 function generateFrusSourceNote(record) {
   const citation = citationSheetExtractionForRecord(record);
-  if (citation?.markerFound && citation.frusStyleSourceNoteTarget) {
+  if (citation?.citationMarkerFound === "Yes" && citation.frusStyleSourceNoteTarget) {
     return citation.frusStyleSourceNoteTarget;
+  }
+  if (record.sourceNote) {
+    return record.sourceNote;
   }
 
   const sourcePath = uniqueInOrder([
@@ -1371,12 +1363,7 @@ function generateFrusSourceNote(record) {
     ...frusLocatorParts(record)
   ]).join(", ");
 
-  return [
-    `Source: ${sourcePath || "Provenance pending"}.`,
-    frusReleaseSentence(record)
-  ]
-    .filter(Boolean)
-    .join(" ");
+  return `Source: ${sourcePath || "Provenance pending"}.`;
 }
 
 function createMeta(record) {

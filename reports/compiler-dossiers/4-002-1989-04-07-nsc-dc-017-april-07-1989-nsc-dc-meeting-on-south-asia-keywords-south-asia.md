@@ -34,7 +34,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 017 - April 07, 1989 - NSC/DC Meeting on South Asia, Keywords: South Asia, 90009-017. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 017 - April 07, 1989 - NSC/DC Meeting on South Asia, Keywords: South Asia, OA/ID 90009-017.
 ```
 
 ## Provenance

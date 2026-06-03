@@ -34,7 +34,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 331 - January 03, 1992 - NSC/DC Meeting re: Afghanistan, Keywords: Afghanistan, 90021-019. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 331 - January 03, 1992 - NSC/DC Meeting re: Afghanistan, Keywords: Afghanistan, OA/ID 90021-019.
 ```
 
 ## Provenance

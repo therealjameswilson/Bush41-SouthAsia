@@ -34,7 +34,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Meeting - October 16, 1989 re: Afghanistan, CF01625-007. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Meeting - October 16, 1989 re: Afghanistan, OA/ID CF01625-007.
 ```
 
 ## Provenance

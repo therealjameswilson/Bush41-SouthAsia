@@ -35,7 +35,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons) - June 1989-December 1989]: June 1989. Full release.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Memcon Files, OA/ID CF01729-006, [Memorandum of Conversations (Memcons) - June 1989-December 1989]: June 1989. Secret.
 ```
 
 ## Provenance
@@ -60,10 +60,6 @@ Links:
 - Provenance link: https://catalog.archives.gov/id/321498039
 - Provenance link: https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons
 - Provenance link: https://catalog.archives.gov/id/2163580
-- Provenance link: https://catalog.archives.gov/id/415889872
-- Provenance link: https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-06_06_89-12798-025_415889872.pdf
-- Provenance link: https://catalog.archives.gov/id/415889873
-- Provenance link: https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-06_06_89-12798-026_415889873.pdf
 
 ## Daily Diary / Backup
 

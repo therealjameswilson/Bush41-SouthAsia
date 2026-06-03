@@ -1,6 +1,6 @@
 # FRUS South Asia Priority Dossier Pack
 
-Generated: 2026-06-02T10:06:10.418Z
+Generated: 2026-06-03T02:23:22.577Z
 
 This compact pack is built for the compiler's first pass through the hardest selection and provenance questions. It groups the highest-priority gaps with the confirmed chronology records and potential leads that currently match each lane.
 
@@ -28,9 +28,9 @@ Keep the visible Source Note as the editorial citation. Keep NAIDs, local identi
 - Release/access: Restricted - Possibly; 35 pages
 - NAID/local ID: 470426381 / CF01404-028
 - Next action: Review access status and confirm whether the item can be selected or only cited as withheld/restricted context. Resolve compiler risk: catalog-derived-source-note; declassification-review. Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
-- Source Note: Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Presidential Meeting Files, Presidential Visit of President [of Afghanistan Interim Government Sibgahtullah] Mojaddedi - November 27, 1989, CF01404-028. Access restriction: Restricted - Possibly.
+- Source Note: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Presidential Meeting Files, Presidential Visit of President [of Afghanistan Interim Government Sibgahtullah] Mojaddedi - November 27, 1989, OA/ID CF01404-028.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | Richard N. Haass' Presidential Meeting Files | CF01404-028; NAID 470426381; CF01404-028; series NAID 2554869; 41-bpr-nsc-haass_pres_mtg-cf01404-028.pdf
-- Links: https://catalog.archives.gov/id/470426381 ; https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/pres_mtg_2554869/41-bpr-nsc-haass_pres_mtg-cf01404-028.pdf ; https://catalog.archives.gov/id/2163580 ; https://catalog.archives.gov/id/415890221 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-11_27_89-12812-012_415890221.pdf
+- Links: https://catalog.archives.gov/id/470426381 ; https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/pres_mtg_2554869/41-bpr-nsc-haass_pres_mtg-cf01404-028.pdf ; https://catalog.archives.gov/id/2163580
 
 #### Doc 2.017: NSC/DC Meeting - July 16, 1990 Re: Pakistan Nuclear Program
 
@@ -39,7 +39,7 @@ Keep the visible Source Note as the editorial citation. Keep NAIDs, local identi
 - Release/access: Restricted - Possibly; 29 pages
 - NAID/local ID: 470426231 / CF01625-020
 - Next action: Review access status and confirm whether the item can be selected or only cited as withheld/restricted context. Resolve compiler risk: catalog-derived-source-note; declassification-review.
-- Source Note: Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC Meeting - July 16, 1990 Re: Pakistan Nuclear Program, CF01625-020. Access restriction: Restricted - Possibly.
+- Source Note: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC/DC Meeting - July 16, 1990 Re: Pakistan Nuclear Program, OA/ID CF01625-020.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | Richard N. Haass' Meeting Files | CF01625-020; NAID 470426231; CF01625-020; series NAID 2554866; 41-bpr-nsc-haass_meeting-cf01625-020.pdf
 - Links: https://catalog.archives.gov/id/470426231 ; https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-020.pdf ; https://catalog.archives.gov/id/2163580
 
@@ -50,7 +50,7 @@ Keep the visible Source Note as the editorial citation. Keep NAIDs, local identi
 - Release/access: Restricted - Possibly; 8 pages
 - NAID/local ID: 470426238 / CF01625-027
 - Next action: Review access status and confirm whether the item can be selected or only cited as withheld/restricted context. Resolve compiler risk: catalog-derived-source-note; declassification-review.
-- Source Note: Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Meeting - October 4, 1990 Re: Pakistan, CF01625-027. Access restriction: Restricted - Possibly.
+- Source Note: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Meeting - October 4, 1990 Re: Pakistan, OA/ID CF01625-027.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | Richard N. Haass' Meeting Files | CF01625-027; NAID 470426238; CF01625-027; series NAID 2554866; 41-bpr-nsc-haass_meeting-cf01625-027.pdf
 - Links: https://catalog.archives.gov/id/470426238 ; https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-027.pdf ; https://catalog.archives.gov/id/2163580
 
@@ -61,7 +61,7 @@ Keep the visible Source Note as the editorial citation. Keep NAIDs, local identi
 - Release/access: Restricted - Possibly; 81 pages
 - NAID/local ID: 470426240 / CF01625-029
 - Next action: Review access status and confirm whether the item can be selected or only cited as withheld/restricted context. Resolve compiler risk: catalog-derived-source-note; declassification-review.
-- Source Note: Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC Meeting - October 9, 1990 Re: Pakistan, CF01625-029. Access restriction: Restricted - Possibly.
+- Source Note: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC/DC Meeting - October 9, 1990 Re: Pakistan, OA/ID CF01625-029.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | Richard N. Haass' Meeting Files | CF01625-029; NAID 470426240; CF01625-029; series NAID 2554866; 41-bpr-nsc-haass_meeting-cf01625-029.pdf
 - Links: https://catalog.archives.gov/id/470426240 ; https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-029.pdf ; https://catalog.archives.gov/id/2163580
 
@@ -77,7 +77,7 @@ Additional matched confirmed records not expanded here: Doc 4.006 (428082145).
 - NAID: 470426597
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Working Files, Working Files - Afghanistan 1989-1992 [2]. Access restriction: Restricted - Possibly.
+- Source Note Draft: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Working Files, Working Files - Afghanistan 1989-1992 [2].
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | Richard N. Haass' Working Files | Richard N. Haass' Working Files | NAID 470426597; NAID 470426597; 41-bpr-nsc-haass_working-cf01304-011.pdf
 - Links: https://catalog.archives.gov/id/470426597 ; https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/working_2554877/41-bpr-nsc-haass_working-cf01304-011.pdf ; https://catalog.archives.gov/id/2163580
 
@@ -89,7 +89,7 @@ Additional matched confirmed records not expanded here: Doc 4.006 (428082145).
 - NAID: 470426255
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, Afghanistan - Charles. Access restriction: Restricted - Possibly.
+- Source Note Draft: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, Afghanistan - Charles.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | Richard N. Haass' Meeting Files | Richard N. Haass' Meeting Files | NAID 470426255; NAID 470426255; 41-bpr-nsc-haass_meeting-cf01447-013.pdf
 - Links: https://catalog.archives.gov/id/470426255 ; https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01447-013.pdf ; https://catalog.archives.gov/id/2163580
 
@@ -113,7 +113,7 @@ Additional matched confirmed records not expanded here: Doc 4.006 (428082145).
 - Release/access: Full; 9 pages
 - NAID/local ID: 428079855 / [Memorandum of Conversations (Memcons)-January 1989-May 1989]: February 1989
 - Next action: Resolve compiler risk: catalog-derived-source-note.
-- Source Note: Source: George H.W. Bush Library, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons)-January 1989-May 1989]: February 1989. Full release.
+- Source Note: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Memcon Files, OA/ID CF01729-002, [Memorandum of Conversations (Memcons) - January 1989-May 1989]: February 1989. Confidential.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | Presidential Memcon Files | [Memorandum of Conversations (Memcons)-January 1989-May 1989]: February 1989; NAID 428079855; [Memorandum of Conversations (Memcons)-January 1989-May 1989]: February 1989; series NAID 321498039; 1989-02-23--Venkataraman.pdf
 - Links: https://catalog.archives.gov/id/428079855 ; https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498039/1989-02-23--Venkataraman.pdf ; https://catalog.archives.gov/id/321498039 ; https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons ; https://catalog.archives.gov/id/2163580
 
@@ -124,9 +124,9 @@ Additional matched confirmed records not expanded here: Doc 4.006 (428082145).
 - Release/access: Declassified; 12 pages
 - NAID/local ID: 366551661 / 91107-002
 - Next action: Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
-- Source Note: Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 2/26/89-4/19/89, 91107-002, source pages 21-32. Declassified.
+- Source Note: Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Meetings--Memorandum of Conversations 2/26/89-4/19/89, OA/ID 91107-002, source pages 21-32.
 - Provenance anchors: Brent Scowcroft Papers | Presidential Correspondence Files | 91107-002; NAID 366551661; 91107-002; series NAID 4545941; source pages 21-32; 41-bpr-scow-pcor-memcon-91107-002.pdf
-- Links: https://catalog.archives.gov/id/366551661 ; documents/india/1989-02-26-bush-zhao-ziyang-memcon-scowcroft.pdf ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91107-002.pdf ; https://catalog.archives.gov/id/4522156 ; https://catalog.archives.gov/id/415889673 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-02_26_89-12791-020_415889673.pdf
+- Links: https://catalog.archives.gov/id/366551661 ; documents/india/1989-02-26-bush-zhao-ziyang-memcon-scowcroft.pdf ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-memcon-91107-002.pdf ; https://catalog.archives.gov/id/4522156
 
 #### Doc 3.003: NSC/DC 022 - May 04, 1989 - NSC/DC Meeting on South Asia, Keywords: South Asia, India (File located @ LM)
 
@@ -135,7 +135,7 @@ Additional matched confirmed records not expanded here: Doc 4.006 (428082145).
 - Release/access: Restricted - Possibly; 45 pages
 - NAID/local ID: 470760996 / 90010-001
 - Next action: Review access status and confirm whether the item can be selected or only cited as withheld/restricted context. Resolve compiler risk: catalog-derived-source-note; declassification-review.
-- Source Note: Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 022 - May 04, 1989 - NSC/DC Meeting on South Asia, Keywords: South Asia, India (File located @ LM), 90010-001. Access restriction: Restricted - Possibly.
+- Source Note: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 022 - May 04, 1989 - NSC/DC Meeting on South Asia, Keywords: South Asia, India (File located @ LM), OA/ID 90010-001.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files | 90010-001; NAID 470760996; 90010-001; series NAID 312294079; 41-bpr-nsc-hfiles-dc_mtgs-22-90010-001.pdf
 - Links: https://catalog.archives.gov/id/470760996 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-22-90010-001.pdf ; https://catalog.archives.gov/id/312294079 ; https://catalog.archives.gov/id/2163580
 
@@ -146,9 +146,9 @@ Additional matched confirmed records not expanded here: Doc 4.006 (428082145).
 - Release/access: Full; 4 pages
 - NAID/local ID: 428080057 / [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: June 1989
 - Next action: Resolve compiler risk: catalog-derived-source-note. Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
-- Source Note: Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: June 1989. Full release.
+- Source Note: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-006, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: June 1989. Secret.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | Presidential Telcon Files | [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: June 1989; NAID 428080057; [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: June 1989; series NAID 321498139; 1989-06-08--Gandhi.pdf
-- Links: https://catalog.archives.gov/id/428080057 ; https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-06-08--Gandhi.pdf ; https://catalog.archives.gov/id/321498139 ; https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons ; https://catalog.archives.gov/id/2163580 ; https://catalog.archives.gov/id/415889876
+- Links: https://catalog.archives.gov/id/428080057 ; https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-06-08--Gandhi.pdf ; https://catalog.archives.gov/id/321498139 ; https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons ; https://catalog.archives.gov/id/2163580
 
 
 
@@ -162,7 +162,7 @@ Additional matched confirmed records not expanded here: Doc 4.006 (428082145).
 - NAID: 470437053
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, National Security Council, Robert M. Gates' Subject Files, Pakistan-India. Access restriction: Restricted - Possibly.
+- Source Note Draft: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Robert M. Gates' Subject Files, Pakistan-India.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | Robert M. Gates' Subject Files | Robert M. Gates' Subject Files | NAID 470437053; NAID 470437053; 41-bpr-nsc-gates-subj-cf00946-012.pdf
 - Links: https://catalog.archives.gov/id/470437053 ; https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/gates/subject_2554843/41-bpr-nsc-gates-subj-cf00946-012.pdf ; https://catalog.archives.gov/id/2163580
 
@@ -174,7 +174,7 @@ Additional matched confirmed records not expanded here: Doc 4.006 (428082145).
 - NAID: 645607415
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India. Access restriction: Restricted - Partly.
+- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India.
 - Provenance anchors: Richard Cheney Collection | Country Files | Country Files | NAID 645607415; NAID 645607415; 41-bpr-dhm-cheney-country-31815-004.pdf
 - Links: https://catalog.archives.gov/id/645607415 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31815-004.pdf ; https://catalog.archives.gov/id/284825748
 
@@ -186,7 +186,7 @@ Additional matched confirmed records not expanded here: Doc 4.006 (428082145).
 - NAID: 645608141
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [1]. Access restriction: Restricted - Partly.
+- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [1].
 - Provenance anchors: Richard Cheney Collection | Country Files | Country Files | NAID 645608141; NAID 645608141; 41-bpr-dhm-cheney-country-31847-001.pdf
 - Links: https://catalog.archives.gov/id/645608141 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31847-001.pdf ; https://catalog.archives.gov/id/284825748
 
@@ -198,7 +198,7 @@ Additional matched confirmed records not expanded here: Doc 4.006 (428082145).
 - NAID: 645607135
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [1]. Access restriction: Restricted - Partly.
+- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [1].
 - Provenance anchors: Richard Cheney Collection | Country Files | Country Files | NAID 645607135; NAID 645607135; 41-bpr-dhm-cheney-country-31802-007.pdf
 - Links: https://catalog.archives.gov/id/645607135 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31802-007.pdf ; https://catalog.archives.gov/id/284825748
 
@@ -210,7 +210,7 @@ Additional matched confirmed records not expanded here: Doc 4.006 (428082145).
 - NAID: 645608143
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [2]. Access restriction: Restricted - Partly.
+- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [2].
 - Provenance anchors: Richard Cheney Collection | Country Files | Country Files | NAID 645608143; NAID 645608143; 41-bpr-dhm-cheney-country-31847-002.pdf
 - Links: https://catalog.archives.gov/id/645608143 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31847-002.pdf ; https://catalog.archives.gov/id/284825748
 
@@ -222,7 +222,7 @@ Additional matched confirmed records not expanded here: Doc 4.006 (428082145).
 - NAID: 645607137
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [2]. Access restriction: Restricted - Partly.
+- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [2].
 - Provenance anchors: Richard Cheney Collection | Country Files | Country Files | NAID 645607137; NAID 645607137; 41-bpr-dhm-cheney-country-31802-008.pdf
 - Links: https://catalog.archives.gov/id/645607137 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31802-008.pdf ; https://catalog.archives.gov/id/284825748
 
@@ -246,7 +246,7 @@ Additional matched potential leads not expanded here: India [A] (645607805); Ind
 - Release/access: Restricted - Possibly; 29 pages
 - NAID/local ID: 470426231 / CF01625-020
 - Next action: Review access status and confirm whether the item can be selected or only cited as withheld/restricted context. Resolve compiler risk: catalog-derived-source-note; declassification-review.
-- Source Note: Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC Meeting - July 16, 1990 Re: Pakistan Nuclear Program, CF01625-020. Access restriction: Restricted - Possibly.
+- Source Note: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC/DC Meeting - July 16, 1990 Re: Pakistan Nuclear Program, OA/ID CF01625-020.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | Richard N. Haass' Meeting Files | CF01625-020; NAID 470426231; CF01625-020; series NAID 2554866; 41-bpr-nsc-haass_meeting-cf01625-020.pdf
 - Links: https://catalog.archives.gov/id/470426231 ; https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-020.pdf ; https://catalog.archives.gov/id/2163580
 
@@ -257,7 +257,7 @@ Additional matched potential leads not expanded here: India [A] (645607805); Ind
 - Release/access: Restricted - Possibly; 8 pages
 - NAID/local ID: 470426238 / CF01625-027
 - Next action: Review access status and confirm whether the item can be selected or only cited as withheld/restricted context. Resolve compiler risk: catalog-derived-source-note; declassification-review.
-- Source Note: Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Meeting - October 4, 1990 Re: Pakistan, CF01625-027. Access restriction: Restricted - Possibly.
+- Source Note: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Meeting - October 4, 1990 Re: Pakistan, OA/ID CF01625-027.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | Richard N. Haass' Meeting Files | CF01625-027; NAID 470426238; CF01625-027; series NAID 2554866; 41-bpr-nsc-haass_meeting-cf01625-027.pdf
 - Links: https://catalog.archives.gov/id/470426238 ; https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-027.pdf ; https://catalog.archives.gov/id/2163580
 
@@ -268,7 +268,7 @@ Additional matched potential leads not expanded here: India [A] (645607805); Ind
 - Release/access: Restricted - Possibly; 81 pages
 - NAID/local ID: 470426240 / CF01625-029
 - Next action: Review access status and confirm whether the item can be selected or only cited as withheld/restricted context. Resolve compiler risk: catalog-derived-source-note; declassification-review.
-- Source Note: Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC Meeting - October 9, 1990 Re: Pakistan, CF01625-029. Access restriction: Restricted - Possibly.
+- Source Note: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC/DC Meeting - October 9, 1990 Re: Pakistan, OA/ID CF01625-029.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | Richard N. Haass' Meeting Files | CF01625-029; NAID 470426240; CF01625-029; series NAID 2554866; 41-bpr-nsc-haass_meeting-cf01625-029.pdf
 - Links: https://catalog.archives.gov/id/470426240 ; https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-029.pdf ; https://catalog.archives.gov/id/2163580
 
@@ -284,7 +284,7 @@ Additional matched potential leads not expanded here: India [A] (645607805); Ind
 - NAID: 470437053
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, National Security Council, Robert M. Gates' Subject Files, Pakistan-India. Access restriction: Restricted - Possibly.
+- Source Note Draft: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Robert M. Gates' Subject Files, Pakistan-India.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | Robert M. Gates' Subject Files | Robert M. Gates' Subject Files | NAID 470437053; NAID 470437053; 41-bpr-nsc-gates-subj-cf00946-012.pdf
 - Links: https://catalog.archives.gov/id/470437053 ; https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/gates/subject_2554843/41-bpr-nsc-gates-subj-cf00946-012.pdf ; https://catalog.archives.gov/id/2163580
 
@@ -296,7 +296,7 @@ Additional matched potential leads not expanded here: India [A] (645607805); Ind
 - NAID: 645608235
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan. Access restriction: Restricted - Partly.
+- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan.
 - Provenance anchors: Richard Cheney Collection | Country Files | Country Files | NAID 645608235; NAID 645608235; 41-bpr-dhm-cheney-country-31850-010.pdf
 - Links: https://catalog.archives.gov/id/645608235 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31850-010.pdf ; https://catalog.archives.gov/id/284825748
 
@@ -308,7 +308,7 @@ Additional matched potential leads not expanded here: India [A] (645607805); Ind
 - NAID: 645607905
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [A]. Access restriction: Restricted - Partly.
+- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [A].
 - Provenance anchors: Richard Cheney Collection | Country Files | Country Files | NAID 645607905; NAID 645607905; 41-bpr-dhm-cheney-country-31836-005.pdf
 - Links: https://catalog.archives.gov/id/645607905 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31836-005.pdf ; https://catalog.archives.gov/id/284825748
 
@@ -320,7 +320,7 @@ Additional matched potential leads not expanded here: India [A] (645607805); Ind
 - NAID: 645607531
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [A]. Access restriction: Restricted - Partly.
+- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [A].
 - Provenance anchors: Richard Cheney Collection | Country Files | Country Files | NAID 645607531; NAID 645607531; 41-bpr-dhm-cheney-country-31820-001.pdf
 - Links: https://catalog.archives.gov/id/645607531 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31820-001.pdf ; https://catalog.archives.gov/id/284825748
 
@@ -332,7 +332,7 @@ Additional matched potential leads not expanded here: India [A] (645607805); Ind
 - NAID: 645607533
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [B]. Access restriction: Restricted - Partly.
+- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [B].
 - Provenance anchors: Richard Cheney Collection | Country Files | Country Files | NAID 645607533; NAID 645607533; 41-bpr-dhm-cheney-country-31820-002.pdf
 - Links: https://catalog.archives.gov/id/645607533 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31820-002.pdf ; https://catalog.archives.gov/id/284825748
 
@@ -344,7 +344,7 @@ Additional matched potential leads not expanded here: India [A] (645607805); Ind
 - NAID: 645607907
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [B]. Access restriction: Restricted - Partly.
+- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [B].
 - Provenance anchors: Richard Cheney Collection | Country Files | Country Files | NAID 645607907; NAID 645607907; 41-bpr-dhm-cheney-country-31836-006.pdf
 - Links: https://catalog.archives.gov/id/645607907 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31836-006.pdf ; https://catalog.archives.gov/id/284825748
 
@@ -368,9 +368,9 @@ Additional matched potential leads not expanded here: Bhutto Departure 6/6/89 (3
 - Release/access: Full; 1 page
 - NAID/local ID: 428079777 / [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989
 - Next action: Resolve compiler risk: catalog-derived-source-note. Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
-- Source Note: Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989. Full release.
+- Source Note: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-001, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989. Confidential.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | Presidential Telcon Files | [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989; NAID 428079777; [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989; series NAID 321498139; 1989-01-23--Bhutto.pdf
-- Links: https://catalog.archives.gov/id/428079777 ; https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-01-23--Bhutto.pdf ; https://catalog.archives.gov/id/321498139 ; https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons ; https://catalog.archives.gov/id/2163580 ; https://catalog.archives.gov/id/415889605
+- Links: https://catalog.archives.gov/id/428079777 ; https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-01-23--Bhutto.pdf ; https://catalog.archives.gov/id/321498139 ; https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons ; https://catalog.archives.gov/id/2163580
 
 #### Doc 2.002: Memorandum of Telephone Conversation
 
@@ -379,9 +379,9 @@ Additional matched potential leads not expanded here: Bhutto Departure 6/6/89 (3
 - Release/access: Full; 1 page
 - NAID/local ID: 428079809 / [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989
 - Next action: Resolve compiler risk: catalog-derived-source-note. Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
-- Source Note: Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989. Full release.
+- Source Note: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-001, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989. No classification marking.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | Presidential Telcon Files | [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989; NAID 428079809; [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989; series NAID 321498139; 1989-01-25--Khan.pdf
-- Links: https://catalog.archives.gov/id/428079809 ; https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-01-25--Khan.pdf ; https://catalog.archives.gov/id/321498139 ; https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons ; https://catalog.archives.gov/id/2163580 ; https://catalog.archives.gov/id/415889608
+- Links: https://catalog.archives.gov/id/428079809 ; https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-01-25--Khan.pdf ; https://catalog.archives.gov/id/321498139 ; https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons ; https://catalog.archives.gov/id/2163580
 
 #### Doc 1.001: NSR-1 - February 07, 1989 - Afghanistan
 
@@ -390,7 +390,7 @@ Additional matched potential leads not expanded here: Bhutto Departure 6/6/89 (3
 - Release/access: Restricted - Possibly; 30 pages
 - NAID/local ID: 446394923 / 90006-001
 - Next action: Review access status and confirm whether the item can be selected or only cited as withheld/restricted context. Resolve compiler risk: catalog-derived-source-note; declassification-review.
-- Source Note: Source: George H.W. Bush Library, National Security Council, H-Files, NSR Files, NSR-1 - February 07, 1989 - Afghanistan, 90006-001. Access restriction: Restricted - Possibly.
+- Source Note: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSR Files, NSR-1 - February 07, 1989 - Afghanistan, OA/ID 90006-001.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | H-Files - National Security Review (NSR) Files | 90006-001; NAID 446394923; 90006-001; series NAID 313189297; 41-bpr-nsc-hfiles-nsr-1-90006-001.pdf
 - Links: https://catalog.archives.gov/id/446394923 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSRs_313189297/41-bpr-nsc-hfiles-nsr-1-90006-001.pdf ; https://catalog.archives.gov/id/313189297 ; https://catalog.archives.gov/id/2163580
 
@@ -401,7 +401,7 @@ Additional matched potential leads not expanded here: Bhutto Departure 6/6/89 (3
 - Release/access: Restricted - Possibly; 52 pages
 - NAID/local ID: 470760975 / 90009-001
 - Next action: Review access status and confirm whether the item can be selected or only cited as withheld/restricted context. Resolve compiler risk: catalog-derived-source-note; declassification-review.
-- Source Note: Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 001 - February 08, 1989 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan, 90009-001. Access restriction: Restricted - Possibly.
+- Source Note: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 001 - February 08, 1989 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan, OA/ID 90009-001.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | H-Files - National Security Council (NSC)/Deputies Committee (DC) Meetings Files | 90009-001; NAID 470760975; 90009-001; series NAID 312294079; 41-bpr-nsc-hfiles-dc_mtgs-1-90009-001.pdf
 - Links: https://catalog.archives.gov/id/470760975 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-1-90009-001.pdf ; https://catalog.archives.gov/id/312294079 ; https://catalog.archives.gov/id/2163580
 
@@ -417,7 +417,7 @@ Additional matched potential leads not expanded here: Bhutto Departure 6/6/89 (3
 - NAID: 645608041
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Bangladesh. Access restriction: Restricted - Partly.
+- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Bangladesh.
 - Provenance anchors: Richard Cheney Collection | Country Files | Country Files | NAID 645608041; NAID 645608041; 41-bpr-dhm-cheney-country-31842-009.pdf
 - Links: https://catalog.archives.gov/id/645608041 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31842-009.pdf ; https://catalog.archives.gov/id/284825748
 
@@ -429,7 +429,7 @@ Additional matched potential leads not expanded here: Bhutto Departure 6/6/89 (3
 - NAID: 645607685
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan. Unrestricted.
+- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan.
 - Provenance anchors: Richard Cheney Collection | Country Files | Country Files | NAID 645607685; NAID 645607685; 41-bpr-dhm-cheney-country-31827-001.pdf
 - Links: https://catalog.archives.gov/id/645607685 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31827-001.pdf ; https://catalog.archives.gov/id/284825748
 
@@ -441,7 +441,7 @@ Additional matched potential leads not expanded here: Bhutto Departure 6/6/89 (3
 - NAID: 645607321
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan [1]. Access restriction: Restricted - Partly.
+- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan [1].
 - Provenance anchors: Richard Cheney Collection | Country Files | Country Files | NAID 645607321; NAID 645607321; 41-bpr-dhm-cheney-country-31812-001.pdf
 - Links: https://catalog.archives.gov/id/645607321 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31812-001.pdf ; https://catalog.archives.gov/id/284825748
 
@@ -453,7 +453,7 @@ Additional matched potential leads not expanded here: Bhutto Departure 6/6/89 (3
 - NAID: 645607323
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan [2]. Access restriction: Restricted - Partly.
+- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan [2].
 - Provenance anchors: Richard Cheney Collection | Country Files | Country Files | NAID 645607323; NAID 645607323; 41-bpr-dhm-cheney-country-31812-002.pdf
 - Links: https://catalog.archives.gov/id/645607323 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31812-002.pdf ; https://catalog.archives.gov/id/284825748
 
@@ -465,7 +465,7 @@ Additional matched potential leads not expanded here: Bhutto Departure 6/6/89 (3
 - NAID: 645607415
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India. Access restriction: Restricted - Partly.
+- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India.
 - Provenance anchors: Richard Cheney Collection | Country Files | Country Files | NAID 645607415; NAID 645607415; 41-bpr-dhm-cheney-country-31815-004.pdf
 - Links: https://catalog.archives.gov/id/645607415 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31815-004.pdf ; https://catalog.archives.gov/id/284825748
 
@@ -477,7 +477,7 @@ Additional matched potential leads not expanded here: Bhutto Departure 6/6/89 (3
 - NAID: 645608141
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [1]. Access restriction: Restricted - Partly.
+- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [1].
 - Provenance anchors: Richard Cheney Collection | Country Files | Country Files | NAID 645608141; NAID 645608141; 41-bpr-dhm-cheney-country-31847-001.pdf
 - Links: https://catalog.archives.gov/id/645608141 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31847-001.pdf ; https://catalog.archives.gov/id/284825748
 
@@ -501,9 +501,9 @@ Additional matched potential leads not expanded here: India [1] (645607135); Ind
 - Release/access: Full; 6 pages
 - NAID/local ID: 428082145 / [Memorandum of Conversations (Memcons)-January 1992-June 1992]: March 1992
 - Next action: Resolve compiler risk: catalog-derived-source-note. Use Daily Diary/Backup only for chronology, time, location, attendees, and call status.
-- Source Note: Source: George H.W. Bush Library, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons)-January 1992-June 1992]: March 1992. Full release.
+- Source Note: Source: George H.W. Bush Library, Bush Presidential Records, Scowcroft, Brent, Collection, Presidential Correspondence Files, Presidential Memcons Files, OA/ID 91109-007, Presidential Meetings - Memorandum of Conversations 3/3/92 - 4/28/92. Confidential.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | Presidential Memcon Files | [Memorandum of Conversations (Memcons)-January 1992-June 1992]: March 1992; NAID 428082145; [Memorandum of Conversations (Memcons)-January 1992-June 1992]: March 1992; series NAID 321498039; 1992-03-19--Zia.pdf
-- Links: https://catalog.archives.gov/id/428082145 ; https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498039/1992-03-19--Zia.pdf ; https://catalog.archives.gov/id/321498039 ; https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons ; https://catalog.archives.gov/id/2163580 ; https://catalog.archives.gov/id/415891914
+- Links: https://catalog.archives.gov/id/428082145 ; https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498039/1992-03-19--Zia.pdf ; https://catalog.archives.gov/id/321498039 ; https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons ; https://catalog.archives.gov/id/2163580
 
 
 
@@ -517,7 +517,7 @@ Additional matched potential leads not expanded here: India [1] (645607135); Ind
 - NAID: 470426266
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, President's Meeting with Prime Minister Zia of Bangladesh - March 19, 1992. Access restriction: Restricted - Possibly.
+- Source Note Draft: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, President's Meeting with Prime Minister Zia of Bangladesh - March 19, 1992.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | Richard N. Haass' Meeting Files | Richard N. Haass' Meeting Files | NAID 470426266; NAID 470426266; 41-bpr-nsc-haass_meeting-cf01447-024.pdf
 - Links: https://catalog.archives.gov/id/470426266 ; https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01447-024.pdf ; https://catalog.archives.gov/id/2163580
 
@@ -529,7 +529,7 @@ Additional matched potential leads not expanded here: India [1] (645607135); Ind
 - NAID: 470426145
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Correspondence Files, Letters on Kashmir. Access restriction: Restricted - Possibly.
+- Source Note Draft: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Correspondence Files, Letters on Kashmir.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | Richard N. Haass' Correspondence Files | Richard N. Haass' Correspondence Files | NAID 470426145; NAID 470426145; 41-bpr-nsc-haass_correspondence-cf01479-008.pdf
 - Links: https://catalog.archives.gov/id/470426145 ; https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/correspondence_2554865/41-bpr-nsc-haass_correspondence-cf01479-008.pdf ; https://catalog.archives.gov/id/2163580
 
@@ -541,7 +541,7 @@ Additional matched potential leads not expanded here: India [1] (645607135); Ind
 - NAID: 470426225
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Teleconference - March 26, 1990 Re: Kashmir. Access restriction: Restricted - Possibly.
+- Source Note Draft: Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Teleconference - March 26, 1990 Re: Kashmir.
 - Provenance anchors: Records of the National Security Council (George H. W. Bush Administration) | Richard N. Haass' Meeting Files | Richard N. Haass' Meeting Files | NAID 470426225; NAID 470426225; 41-bpr-nsc-haass_meeting-cf01625-014.pdf
 - Links: https://catalog.archives.gov/id/470426225 ; https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-014.pdf ; https://catalog.archives.gov/id/2163580
 
@@ -553,7 +553,7 @@ Additional matched potential leads not expanded here: India [1] (645607135); Ind
 - NAID: 645608041
 - Status: Online object available
 - Selection action: Screen PDF text and promote policy-bearing pages with page boundaries, source note, and exclusion rationale for nonselected pages.
-- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Bangladesh. Access restriction: Restricted - Partly.
+- Source Note Draft: Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Bangladesh.
 - Provenance anchors: Richard Cheney Collection | Country Files | Country Files | NAID 645608041; NAID 645608041; 41-bpr-dhm-cheney-country-31842-009.pdf
 - Links: https://catalog.archives.gov/id/645608041 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31842-009.pdf ; https://catalog.archives.gov/id/284825748
 
@@ -565,7 +565,7 @@ Additional matched potential leads not expanded here: India [1] (645607135); Ind
 - NAID: 286185941
 - Status: Online object available
 - Selection action: Review before promotion.
-- Source Note Draft: Source: George H.W. Bush Library, White House Office of Presidential Personnel, Katja Bullock Appointment Files, Milam, William - AMB to Bangladesh. Access restriction: Restricted - Possibly.
+- Source Note Draft: Source: George H.W. Bush Library, White House Office of Presidential Personnel, Katja Bullock Appointment Files, Milam, William - AMB to Bangladesh.
 - Provenance anchors: Records of the White House Office of Presidential Personnel (George H. W. Bush Administration) | Katja Bullock Appointment Files | Katja Bullock Appointment Files | NAID 286185941; NAID 286185941; 41-bpr-pers-bullock-appt-07091-008.pdf
 - Links: https://catalog.archives.gov/id/286185941 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/foia/2000/Batch0001/41-bpr-pers-bullock-appt-07091-008.pdf ; https://catalog.archives.gov/id/650839
 
@@ -577,6 +577,6 @@ Additional matched potential leads not expanded here: India [1] (645607135); Ind
 - NAID: 543965098
 - Status: Online object available
 - Selection action: Use only to locate event files or related internal memoranda.
-- Source Note Draft: Source: George H.W. Bush Library, White House Photograph Office, George H. W. Bush Presidential Photographs, WHPO-P37850. Unrestricted.
+- Source Note Draft: Source: George H.W. Bush Library, White House Photograph Office, George H. W. Bush Presidential Photographs, WHPO-P37850.
 - Provenance anchors: Records of the White House Photograph Office | George H. W. Bush Presidential Photographs | NAID 543965098; NAID 543965098; 41-AV-P37850-11021992.jpg
 - Links: https://catalog.archives.gov/id/543965098 ; https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whpo/186364/P37850/41-AV-P37850-11021992.jpg ; https://catalog.archives.gov/id/1082

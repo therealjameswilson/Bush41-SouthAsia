@@ -35,7 +35,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, Brent Scowcroft Papers, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 1/30/91-2/22/91, 91112-005, source pages 12-15. Declassified.
+Source: George H.W. Bush Library, Bush Presidential Records, Brent Scowcroft Collection, Presidential Correspondence Files, Presidential Telephone Calls--Memorandum of Conversations 1/30/91-2/22/91, OA/ID 91112-005, source pages 12-15.
 ```
 
 ## Provenance
@@ -59,10 +59,6 @@ Links:
 - Provenance link: documents/pakistan/1991-02-02-bush-nawaz-sharif-telcon-scowcroft.pdf
 - Provenance link: https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-gbs/4545941/41-bpr-scow-pcor-telcon-91112-005.pdf
 - Provenance link: https://catalog.archives.gov/id/4522156
-- Provenance link: https://catalog.archives.gov/id/415891086
-- Provenance link: https://s3.amazonaws.com/NARAprodstorage/opastorage/live/39/1863/186339/content/arcmedia/media/images/40/21/40-2032a.gif
-- Provenance link: https://catalog.archives.gov/id/415891087
-- Provenance link: https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1991/41-bpr-apts_sch-dd-02_02_91-12848-004_415891087.pdf
 
 ## Daily Diary / Backup
 

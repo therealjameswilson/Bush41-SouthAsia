@@ -1,8 +1,17 @@
 # FRUS South Asia Source-Note Audit
 
-Generated: 2026-06-02T10:06:10.403Z
+Generated: 2026-06-03T02:23:22.572Z
 
 This audit gives the compiler a record-by-record queue for final source-note review. It checks only the visible editorial Source Note. Full Catalog URLs, NAIDs, object filenames, source-page basis, and Daily Diary references remain in the provenance fields, dossiers, and CSV exports.
+
+## Published FRUS Standard
+
+Office of the Historian front matter for the published START I volume explains that the first footnote gives the document source and original classification, with distribution, drafting, background, and read/seen markings when available. Published Bush-era examples then use compact archival chains such as Bush Library or George H.W. Bush Library, Bush Presidential Records, office or collection, series, OA/ID, folder or item title, followed by classification and any document-specific notations. This audit therefore treats catalog URLs, NARA catalog NAIDs, object filenames, release/access workflow status, and page-count ledgers as provenance/review metadata rather than visible Source Note text.
+
+- Volume XXXI methodology: https://history.state.gov/historicaldocuments/frus1989-92v31/abouttheseries
+- Bush Presidential Records example: https://history.state.gov/historicaldocuments/frus1989-92v31/d134
+- No-classification-marking example: https://history.state.gov/historicaldocuments/frus1989-92v31/d73
+- Missing-minutes/editing example: https://history.state.gov/historicaldocuments/frus1989-92v31/d21
 
 ## Coverage
 
@@ -10,6 +19,19 @@ This audit gives the compiler a record-by-record queue for final source-note rev
 - Potential-lead source-note drafts checked: 40
 - Visible notes with no mechanical style issues: 106/106
 - Visible notes needing mechanical edits: 0
+- Citation-marker targets applied to visible notes: 15
+- Visible notes without catalog/release-status ledger metadata: 106/106
+- Bush Library NSC/Scowcroft notes with Bush Presidential Records present: 71
+
+## FRUS Basis
+
+| Status | Rows |
+| --- | --- |
+| Metadata-derived draft; verify against PDF/title page | 49 |
+| Metadata-derived draft; verify before promotion | 26 |
+| Citation-marker target applied | 15 |
+| Published/public source citation | 14 |
+| Metadata source chain with extracted classification | 2 |
 
 ## Editorial Lanes
 
@@ -65,4 +87,4 @@ This audit gives the compiler a record-by-record queue for final source-note rev
 
 ## Working Rule
 
-The visible Source Note should read as an editorial citation: repository or collection, office or series, file/folder or item title, compact local locator or source pages when useful, and release/access status. Keep research metadata out of the visible note unless an editor intentionally asks for it.
+The visible Source Note should read as an editorial citation: repository, records group or collection, office, series, OA/ID or selected source pages, file/folder title, and original classification when visible. Keep research metadata, release/access status, and URLs out of the visible note unless an editor intentionally asks for them.

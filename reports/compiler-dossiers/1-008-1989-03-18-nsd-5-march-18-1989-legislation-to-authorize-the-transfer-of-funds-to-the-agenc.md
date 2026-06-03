@@ -34,7 +34,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, H-Files, NSD Files, NSD-5 - March 18, 1989 - Legislation to Authorize the Transfer of Funds to the Agency for International Development (AID) for Humanitarian Assistance to Afghanistan (File located @ LM), 90003-006. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSD Files, NSD-5 - March 18, 1989 - Legislation to Authorize the Transfer of Funds to the Agency for International Development (AID) for Humanitarian Assistance to Afghanistan (File located @ LM), OA/ID 90003-006.
 ```
 
 ## Provenance

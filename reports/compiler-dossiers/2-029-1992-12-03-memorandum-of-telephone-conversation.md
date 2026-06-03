@@ -35,7 +35,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - July 1992-January 1993]: December 1992. Partial release.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - July 1992-January 1993]: December 1992. Confidential.
 ```
 
 ## Provenance
@@ -60,10 +60,6 @@ Links:
 - Provenance link: https://catalog.archives.gov/id/321498139
 - Provenance link: https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons
 - Provenance link: https://catalog.archives.gov/id/2163580
-- Provenance link: https://catalog.archives.gov/id/415892436
-- Provenance link: https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1992/41-bpr-apts_sch-dd-12_03_92-26863-035_415892436.pdf
-- Provenance link: https://catalog.archives.gov/id/415892437
-- Provenance link: https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1992/41-bpr-apts_sch-dd-12_03_92-26863-036_415892437.pdf
 
 ## Daily Diary / Backup
 

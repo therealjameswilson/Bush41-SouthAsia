@@ -35,7 +35,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons)-January 1992-June 1992]: March 1992. Full release.
+Source: George H.W. Bush Library, Bush Presidential Records, Scowcroft, Brent, Collection, Presidential Correspondence Files, Presidential Memcons Files, OA/ID 91109-007, Presidential Meetings - Memorandum of Conversations 3/3/92 - 4/28/92. Confidential.
 ```
 
 ## Provenance
@@ -60,10 +60,6 @@ Links:
 - Provenance link: https://catalog.archives.gov/id/321498039
 - Provenance link: https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons
 - Provenance link: https://catalog.archives.gov/id/2163580
-- Provenance link: https://catalog.archives.gov/id/415891914
-- Provenance link: https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1992/41-bpr-apts_sch-dd-03_19_92-12884-015_415891914.pdf
-- Provenance link: https://catalog.archives.gov/id/415891915
-- Provenance link: https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1992/41-bpr-apts_sch-dd-03_19_92-12884-016_415891915.pdf
 
 ## Daily Diary / Backup
 

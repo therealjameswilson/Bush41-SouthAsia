@@ -46,7 +46,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "Critical boundary #3: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -56,7 +56,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Presidential Meeting Files, Presidential Visit of President [of Afghanistan Interim Government Sibgahtullah] Mojaddedi - November 27, 1989, CF01404-028. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Presidential Meeting Files, Presidential Visit of President [of Afghanistan Interim Government Sibgahtullah] Mojaddedi - November 27, 1989, OA/ID CF01404-028.",
     "catalogUrl": "https://catalog.archives.gov/id/470426381",
     "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/pres_mtg_2554869/41-bpr-nsc-haass_pres_mtg-cf01404-028.pdf"
   },
@@ -79,7 +79,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "Critical boundary #4: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -89,7 +89,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC Meeting - July 16, 1990 Re: Pakistan Nuclear Program, CF01625-020. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC/DC Meeting - July 16, 1990 Re: Pakistan Nuclear Program, OA/ID CF01625-020.",
     "catalogUrl": "https://catalog.archives.gov/id/470426231",
     "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-020.pdf"
   },
@@ -112,7 +112,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "Critical boundary #10: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -122,7 +122,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Meeting - October 4, 1990 Re: Pakistan, CF01625-027. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Meeting - October 4, 1990 Re: Pakistan, OA/ID CF01625-027.",
     "catalogUrl": "https://catalog.archives.gov/id/470426238",
     "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-027.pdf"
   },
@@ -145,7 +145,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "Critical boundary #5: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -155,7 +155,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC Meeting - October 9, 1990 Re: Pakistan, CF01625-029. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC/DC Meeting - October 9, 1990 Re: Pakistan, OA/ID CF01625-029.",
     "catalogUrl": "https://catalog.archives.gov/id/470426240",
     "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-029.pdf"
   },
@@ -300,7 +300,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Bangladesh. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Bangladesh.",
     "catalogUrl": "https://catalog.archives.gov/id/645608041",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31842-009.pdf"
   },
@@ -333,7 +333,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Correspondence Files, Letters on Kashmir. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Correspondence Files, Letters on Kashmir.",
     "catalogUrl": "https://catalog.archives.gov/id/470426145",
     "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/correspondence_2554865/41-bpr-nsc-haass_correspondence-cf01479-008.pdf"
   },
@@ -366,7 +366,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Teleconference - March 26, 1990 Re: Kashmir. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Teleconference - March 26, 1990 Re: Kashmir.",
     "catalogUrl": "https://catalog.archives.gov/id/470426225",
     "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-014.pdf"
   },
@@ -399,7 +399,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, President's Meeting with Prime Minister Zia of Bangladesh - March 19, 1992. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, President's Meeting with Prime Minister Zia of Bangladesh - March 19, 1992.",
     "catalogUrl": "https://catalog.archives.gov/id/470426266",
     "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01447-024.pdf"
   },
@@ -422,7 +422,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #28: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -432,7 +432,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSR Files, NSR-1 - February 07, 1989 - Afghanistan, 90006-001. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSR Files, NSR-1 - February 07, 1989 - Afghanistan, OA/ID 90006-001.",
     "catalogUrl": "https://catalog.archives.gov/id/446394923",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSRs_313189297/41-bpr-nsc-hfiles-nsr-1-90006-001.pdf"
   },
@@ -455,7 +455,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #29: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -465,7 +465,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 001 - February 08, 1989 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan, 90009-001. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 001 - February 08, 1989 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan, OA/ID 90009-001.",
     "catalogUrl": "https://catalog.archives.gov/id/470760975",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-1-90009-001.pdf"
   },
@@ -488,7 +488,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #30: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -498,7 +498,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC Meetings Files, NSC0001 - February 10, 1989 - Afghanistan, 90000-001. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC Meetings Files, NSC0001 - February 10, 1989 - Afghanistan, OA/ID 90000-001.",
     "catalogUrl": "https://catalog.archives.gov/id/470760885",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-1-90000-001.pdf"
   },
@@ -521,7 +521,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #31: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -531,7 +531,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSD Files, NSD-3 - February 13, 1989 - U.S. Policy toward Afghanistan (File located @ LM), 90003-004. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSD Files, NSD-3 - February 13, 1989 - U.S. Policy toward Afghanistan (File located @ LM), OA/ID 90003-004.",
     "catalogUrl": "https://catalog.archives.gov/id/446396813",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-3-90003-004.pdf"
   },
@@ -554,7 +554,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #45: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -564,7 +564,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 005 - March 08, 1989 - NSC/DC Meeting on Non-Lethal Finding and Transfer of Funds re: Afghanistan, Keywords: Afghanistan, 90009-005. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 005 - March 08, 1989 - NSC/DC Meeting on Non-Lethal Finding and Transfer of Funds re: Afghanistan, Keywords: Afghanistan, OA/ID 90009-005.",
     "catalogUrl": "https://catalog.archives.gov/id/470760979",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-5-90009-005.pdf"
   },
@@ -587,7 +587,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #46: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -597,7 +597,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC Meetings Files, NSC0004 - March 14, 1989 - Panama, Nicaragua, Afghanistan (File located @ LM), 90000-004. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC Meetings Files, NSC0004 - March 14, 1989 - Panama, Nicaragua, Afghanistan (File located @ LM), OA/ID 90000-004.",
     "catalogUrl": "https://catalog.archives.gov/id/470760888",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-4-90000-004.pdf"
   },
@@ -620,7 +620,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #32: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -630,7 +630,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSD Files, NSD-5 - March 18, 1989 - Legislation to Authorize the Transfer of Funds to the Agency for International Development (AID) for Humanitarian Assistance to Afghanistan (File located @ LM), 90003-006. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSD Files, NSD-5 - March 18, 1989 - Legislation to Authorize the Transfer of Funds to the Agency for International Development (AID) for Humanitarian Assistance to Afghanistan (File located @ LM), OA/ID 90003-006.",
     "catalogUrl": "https://catalog.archives.gov/id/446396815",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-5-90003-006.pdf"
   },
@@ -653,7 +653,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #33: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -663,7 +663,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 022 - May 04, 1989 - NSC/DC Meeting on South Asia, Keywords: South Asia, India (File located @ LM), 90010-001. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 022 - May 04, 1989 - NSC/DC Meeting on South Asia, Keywords: South Asia, India (File located @ LM), OA/ID 90010-001.",
     "catalogUrl": "https://catalog.archives.gov/id/470760996",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-22-90010-001.pdf"
   },
@@ -686,7 +686,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #47: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -696,7 +696,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Meeting - October 16, 1989 re: Afghanistan, CF01625-007. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Meeting - October 16, 1989 re: Afghanistan, OA/ID CF01625-007.",
     "catalogUrl": "https://catalog.archives.gov/id/470426218",
     "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-007.pdf"
   },
@@ -719,7 +719,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #48: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -729,7 +729,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 065A - October 18, 1989 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan (File located @ LM), 90011-020. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 065A - October 18, 1989 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan (File located @ LM), OA/ID 90011-020.",
     "catalogUrl": "https://catalog.archives.gov/id/470761041",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-65a-90011-020.pdf"
   },
@@ -752,7 +752,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #34: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -762,7 +762,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC Meeting - October 23, 1989 re: Afghanistan, CF01625-008. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC Meeting - October 23, 1989 re: Afghanistan, OA/ID CF01625-008.",
     "catalogUrl": "https://catalog.archives.gov/id/470426219",
     "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-008.pdf"
   },
@@ -785,7 +785,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #49: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -795,7 +795,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 112 - March 26, 1990 - NSC/DC Meeting on Kashmir, Keywords: Pakistan, 90013-024. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 112 - March 26, 1990 - NSC/DC Meeting on Kashmir, Keywords: Pakistan, OA/ID 90013-024.",
     "catalogUrl": "https://catalog.archives.gov/id/470761101",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-112-90013-024.pdf"
   },
@@ -818,7 +818,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #35: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -828,7 +828,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 113 - April 04, 1990 - NSC/DC Meeting on Kashmir via SVTS, Keywords: India, 90013-026. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 113 - April 04, 1990 - NSC/DC Meeting on Kashmir via SVTS, Keywords: India, OA/ID 90013-026.",
     "catalogUrl": "https://catalog.archives.gov/id/470761103",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-113-90013-026.pdf"
   },
@@ -851,7 +851,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #36: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -861,7 +861,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 124 - May 07, 1990 - NSC/DC Meeting re: Pakistan Stingers, Keywords: Pakistan (File located @ LM), 90014-013. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 124 - May 07, 1990 - NSC/DC Meeting re: Pakistan Stingers, Keywords: Pakistan (File located @ LM), OA/ID 90014-013.",
     "catalogUrl": "https://catalog.archives.gov/id/470761116",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-124-90014-013.pdf"
   },
@@ -884,7 +884,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #37: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -894,7 +894,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 147 - June 28, 1990 - NSC/DC Meeting on Pakistan's Nuclear Program, Keywords: Pakistan, Nuclear Matters, 90015-005. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 147 - June 28, 1990 - NSC/DC Meeting on Pakistan's Nuclear Program, Keywords: Pakistan, Nuclear Matters, OA/ID 90015-005.",
     "catalogUrl": "https://catalog.archives.gov/id/470761140",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-147-90015-005.pdf"
   },
@@ -917,7 +917,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #50: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -927,7 +927,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Meeting - June 30, 1990 Re: Pakistan, CF01625-018. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, NSC/DC [Deputies Committee] Meeting - June 30, 1990 Re: Pakistan, OA/ID CF01625-018.",
     "catalogUrl": "https://catalog.archives.gov/id/470426229",
     "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-018.pdf"
   },
@@ -950,7 +950,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #51: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -960,7 +960,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 154 - July 09, 1990 - NSC/DC Meeting on Pakistan Nuclear Program, Keywords: Pakistan, Nuclear Matters, 90015-012. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 154 - July 09, 1990 - NSC/DC Meeting on Pakistan Nuclear Program, Keywords: Pakistan, Nuclear Matters, OA/ID 90015-012.",
     "catalogUrl": "https://catalog.archives.gov/id/470761146",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-154-90015-012.pdf"
   },
@@ -983,7 +983,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #38: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -993,7 +993,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 190 - August 31, 1990 - NSC/DC Meeting on Pakistan Nuclear Program, Keywords: Pakistan, Nuclear Matters, 90016-018. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 190 - August 31, 1990 - NSC/DC Meeting on Pakistan Nuclear Program, Keywords: Pakistan, Nuclear Matters, OA/ID 90016-018.",
     "catalogUrl": "https://catalog.archives.gov/id/470761184",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-190-90016-018.pdf"
   },
@@ -1016,7 +1016,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #52: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -1026,7 +1026,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 193A - September 05, 1990 - NSC/DC Meeting on Pakistan, Keywords: Pakistan, Nuclear Matters, 90016-023. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 193A - September 05, 1990 - NSC/DC Meeting on Pakistan, Keywords: Pakistan, Nuclear Matters, OA/ID 90016-023.",
     "catalogUrl": "https://catalog.archives.gov/id/470761189",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-193a-90016-023.pdf"
   },
@@ -1049,7 +1049,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #39: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -1059,7 +1059,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 205 - October 02, 1990 - NSC/DC Meeting on Pakistan Nuclear Program via SVTS, Keywords: Pakistan, Nuclear Matters, 90016-038. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 205 - October 02, 1990 - NSC/DC Meeting on Pakistan Nuclear Program via SVTS, Keywords: Pakistan, Nuclear Matters, OA/ID 90016-038.",
     "catalogUrl": "https://catalog.archives.gov/id/470761204",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-205-90016-038.pdf"
   },
@@ -1082,7 +1082,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #53: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -1092,7 +1092,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, DC [Deputies Committee] Meeting - October 4, 1990 re: Afghanistan, CF01625-024. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, DC [Deputies Committee] Meeting - October 4, 1990 re: Afghanistan, OA/ID CF01625-024.",
     "catalogUrl": "https://catalog.archives.gov/id/470426235",
     "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01625-024.pdf"
   },
@@ -1115,7 +1115,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #40: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -1125,7 +1125,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 207 - October 05, 1990 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan, 90016-040. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 207 - October 05, 1990 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan, OA/ID 90016-040.",
     "catalogUrl": "https://catalog.archives.gov/id/470761206",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-207-90016-040.pdf"
   },
@@ -1148,7 +1148,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #54: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -1158,7 +1158,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 208 - October 05, 1990 - NSC/DC Meeting on Pakistan via SVTS, Keywords: Pakistan, 90017-001. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 208 - October 05, 1990 - NSC/DC Meeting on Pakistan via SVTS, Keywords: Pakistan, OA/ID 90017-001.",
     "catalogUrl": "https://catalog.archives.gov/id/470761207",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-208-90017-001.pdf"
   },
@@ -1181,7 +1181,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #41: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -1191,7 +1191,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC Meetings Files, NSC0056 - October 09, 1990 - Nuclear Matters, Middle East and Gulf, Proliferation [1], 90002-025. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC Meetings Files, NSC0056 - October 09, 1990 - Nuclear Matters, Middle East and Gulf, Proliferation [1], OA/ID 90002-025.",
     "catalogUrl": "https://catalog.archives.gov/id/470760963",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-56_1-90002-025.pdf"
   },
@@ -1214,7 +1214,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #42: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -1224,7 +1224,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC Meetings Files, NSC0056 - October 09, 1990 - Nuclear Matters, Middle East and Gulf, Proliferation [2], 90002-026. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC Meetings Files, NSC0056 - October 09, 1990 - Nuclear Matters, Middle East and Gulf, Proliferation [2], OA/ID 90002-026.",
     "catalogUrl": "https://catalog.archives.gov/id/470760964",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC_Mtgs_312293887/41-bpr-nsc-hfiles-nsc_mtgs-56_2-90002-026.pdf"
   },
@@ -1247,7 +1247,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #55: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -1257,7 +1257,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 260 - March 05, 1991 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan (File located @ LM), 90019-003. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 260 - March 05, 1991 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan (File located @ LM), OA/ID 90019-003.",
     "catalogUrl": "https://catalog.archives.gov/id/470761272",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-260-90019-003.pdf"
   },
@@ -1280,7 +1280,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #56: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -1290,7 +1290,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 271 - April 12, 1991 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan (File located @ LM), 90019-020. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 271 - April 12, 1991 - NSC/DC Meeting on Afghanistan, Keywords: Afghanistan (File located @ LM), OA/ID 90019-020.",
     "catalogUrl": "https://catalog.archives.gov/id/470761289",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-271-90019-020.pdf"
   },
@@ -1313,7 +1313,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #57: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -1323,7 +1323,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 282 - May 17, 1991 - NSC/DC Meeting on Angola and Afghanistan, Keywords: Angola, Afghanistan (File located @ NLMS), 90020-001. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 282 - May 17, 1991 - NSC/DC Meeting on Angola and Afghanistan, Keywords: Angola, Afghanistan (File located @ NLMS), OA/ID 90020-001.",
     "catalogUrl": "https://catalog.archives.gov/id/470761301",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-282-90020-001.pdf"
   },
@@ -1346,7 +1346,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #43: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -1356,7 +1356,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 331 - January 03, 1992 - NSC/DC Meeting re: Afghanistan, Keywords: Afghanistan, 90021-019. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 331 - January 03, 1992 - NSC/DC Meeting re: Afghanistan, Keywords: Afghanistan, OA/ID 90021-019.",
     "catalogUrl": "https://catalog.archives.gov/id/470761354",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-331-90021-019.pdf"
   },
@@ -1379,7 +1379,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "High boundary #44: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -1389,7 +1389,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSD Files, NSD-70 - July 10, 1992 - U.S. Nonproliferation Policy, 90005-020. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSD Files, NSD-70 - July 10, 1992 - U.S. Nonproliferation Policy, OA/ID 90005-020.",
     "catalogUrl": "https://catalog.archives.gov/id/446396904",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-70-90005-020.pdf"
   },
@@ -1412,7 +1412,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Partial/excision check: Review excisions and decide whether the released text can support selection; record any cite-only rationale.",
       "Medium boundary #76: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Partial-release/excision wording: Inspect the released PDF for excisions, then decide whether the visible Source Note should state partial release or whether the record is cite-only/deferred.",
+      "Partial-release/excision wording: Inspect the released PDF for excisions, then decide whether the record is selectable, cite-only, or deferred; keep release-status details in provenance unless an editor requests visible wording.",
       "Excisions decision: The released text is partial; check excisions before treating the document as selectable."
     ],
     "linkedSheets": [
@@ -1422,7 +1422,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons)-January 1992-June 1992]: January 1992. Partial release.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons)-January 1992-June 1992]: January 1992. Confidential.",
     "catalogUrl": "https://catalog.archives.gov/id/428082131",
     "pdfUrl": "https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498039/1992-01-31--Rao.pdf"
   },
@@ -1445,7 +1445,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Partial/excision check: Review excisions and decide whether the released text can support selection; record any cite-only rationale.",
       "Medium boundary #77: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Partial-release/excision wording: Inspect the released PDF for excisions, then decide whether the visible Source Note should state partial release or whether the record is cite-only/deferred.",
+      "Partial-release/excision wording: Inspect the released PDF for excisions, then decide whether the record is selectable, cite-only, or deferred; keep release-status details in provenance unless an editor requests visible wording.",
       "Excisions decision: The released text is partial; check excisions before treating the document as selectable."
     ],
     "linkedSheets": [
@@ -1455,7 +1455,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - July 1992-January 1993]: December 1992. Partial release.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - July 1992-January 1993]: December 1992. Confidential.",
     "catalogUrl": "https://catalog.archives.gov/id/428082401",
     "pdfUrl": "https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1992-12-03--Sharif.pdf"
   },
@@ -1473,11 +1473,11 @@ window.COMPILER_DECISION_COCKPIT = [
     "releaseOrStatus": "Full",
     "pages": "6 pages",
     "naidOrTargets": "428082145; [Memorandum of Conversations (Memcons)-January 1992-June 1992]: March 1992",
-    "decisionQuestion": "Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
+    "decisionQuestion": "Are the exact source pages and item title stable enough for final citation?",
     "nextAction": "Open the PDF, verify item-level page boundaries and title, then update source note or decision log if the folder contains multiple documents. Gap cue: Prioritize Haass Working Files 470426597, Haass Meeting File 470426255, Mojaddedi 470426381, Bangladesh Zia 428082145, and Pakistan nuclear meeting files 470426231, 470426238, and 470426240.",
     "pendingTasks": [
-      "Critical boundary #11: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+      "Critical boundary #11: Are the exact source pages and item title stable enough for final citation?",
+      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Confidential.",
       "Page-boundary/source-note decision: The document is available, but source title, source note, or page-boundary evidence still needs compiler review."
     ],
     "linkedSheets": [
@@ -1486,7 +1486,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons)-January 1992-June 1992]: March 1992. Full release.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, Scowcroft, Brent, Collection, Presidential Correspondence Files, Presidential Memcons Files, OA/ID 91109-007, Presidential Meetings - Memorandum of Conversations 3/3/92 - 4/28/92. Confidential.",
     "catalogUrl": "https://catalog.archives.gov/id/428082145",
     "pdfUrl": "https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498039/1992-03-19--Zia.pdf"
   },
@@ -1575,7 +1575,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Working Files, Working Files - Afghanistan 1989-1992 [2]. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Working Files, Working Files - Afghanistan 1989-1992 [2].",
     "catalogUrl": "https://catalog.archives.gov/id/470426597",
     "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/working_2554877/41-bpr-nsc-haass_working-cf01304-011.pdf"
   },
@@ -1608,7 +1608,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Richard N. Haass' Meeting Files, Afghanistan - Charles. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Richard N. Haass' Meeting Files, Afghanistan - Charles.",
     "catalogUrl": "https://catalog.archives.gov/id/470426255",
     "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/haass/meeting_2554866/41-bpr-nsc-haass_meeting-cf01447-013.pdf"
   },
@@ -1631,7 +1631,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "Medium boundary #65: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -1641,7 +1641,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSR Files, NSR-8 - February 22, 1989 - U.S. Policy Toward South Asia, 90006-011. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSR Files, NSR-8 - February 22, 1989 - U.S. Policy Toward South Asia, OA/ID 90006-011.",
     "catalogUrl": "https://catalog.archives.gov/id/446394933",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSRs_313189297/41-bpr-nsc-hfiles-nsr-8-90006-011.pdf"
   },
@@ -1664,7 +1664,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "Medium boundary #68: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -1674,7 +1674,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 017 - April 07, 1989 - NSC/DC Meeting on South Asia, Keywords: South Asia, 90009-017. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 017 - April 07, 1989 - NSC/DC Meeting on South Asia, Keywords: South Asia, OA/ID 90009-017.",
     "catalogUrl": "https://catalog.archives.gov/id/470760991",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSC-DC_Mtgs_312294079/41-bpr-nsc-hfiles-dc_mtgs-17-90009-017.pdf"
   },
@@ -1697,7 +1697,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "pendingTasks": [
       "Confirmed access-status decision: Confirm whether the item can be selected, needs access review, or should be cited only as withheld/restricted context.",
       "Medium boundary #72: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred, then keep access language concise in the Source Note and full restriction details in provenance.",
+      "Access/source-note wording decision: Resolve whether the restricted item is selectable, cite-only, or deferred; keep access details in provenance and use a compact FRUS-style archival Source Note.",
       "Access/declassification decision: The record is restricted or possibly restricted; selection depends on access status or a cite-only/withheld rationale."
     ],
     "linkedSheets": [
@@ -1707,7 +1707,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, H-Files, NSD Files, NSD-20 - August 29, 1989 - U.S. Policy toward South Asia, 90003-027. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSD Files, NSD-20 - August 29, 1989 - U.S. Policy toward South Asia, OA/ID 90003-027.",
     "catalogUrl": "https://catalog.archives.gov/id/446396836",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/H-Files/NSDs_313189290/41-bpr-nsc-hfiles-nsd-20-90003-027.pdf"
   },
@@ -1729,7 +1729,7 @@ window.COMPILER_DECISION_COCKPIT = [
     "nextAction": "Open the PDF, verify item-level page boundaries and title, then update source note or decision log if the folder contains multiple documents. Gap cue: Prioritize Gates Subject File 470437053 and Pakistan H-Files 470426231, 470426238, and 470426240.",
     "pendingTasks": [
       "High boundary #58: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Secret.",
       "Page-boundary/source-note decision: The document is available, but source title, source note, or page-boundary evidence still needs compiler review."
     ],
     "linkedSheets": [
@@ -1738,7 +1738,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons) - June 1989-December 1989]: June 1989. Full release.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Memcon Files, OA/ID CF01729-006, [Memorandum of Conversations (Memcons) - June 1989-December 1989]: June 1989. Secret.",
     "catalogUrl": "https://catalog.archives.gov/id/428080031",
     "pdfUrl": "https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498039/1989-06-06--Bhutto.pdf"
   },
@@ -1771,7 +1771,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan. Unrestricted.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan.",
     "catalogUrl": "https://catalog.archives.gov/id/645607685",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31827-001.pdf"
   },
@@ -1804,7 +1804,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan [1]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan [1].",
     "catalogUrl": "https://catalog.archives.gov/id/645607321",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31812-001.pdf"
   },
@@ -1837,7 +1837,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan [2]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Afghanistan [2].",
     "catalogUrl": "https://catalog.archives.gov/id/645607323",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31812-002.pdf"
   },
@@ -1870,7 +1870,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India.",
     "catalogUrl": "https://catalog.archives.gov/id/645607415",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31815-004.pdf"
   },
@@ -1903,7 +1903,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [1]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [1].",
     "catalogUrl": "https://catalog.archives.gov/id/645608141",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31847-001.pdf"
   },
@@ -1936,7 +1936,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [1]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [1].",
     "catalogUrl": "https://catalog.archives.gov/id/645607135",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31802-007.pdf"
   },
@@ -1969,7 +1969,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [2]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [2].",
     "catalogUrl": "https://catalog.archives.gov/id/645608143",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31847-002.pdf"
   },
@@ -2002,7 +2002,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [2]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [2].",
     "catalogUrl": "https://catalog.archives.gov/id/645607137",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31802-008.pdf"
   },
@@ -2035,7 +2035,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [A]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [A].",
     "catalogUrl": "https://catalog.archives.gov/id/645607805",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31832-001.pdf"
   },
@@ -2068,7 +2068,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [B]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, India [B].",
     "catalogUrl": "https://catalog.archives.gov/id/645607807",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31832-002.pdf"
   },
@@ -2101,7 +2101,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan.",
     "catalogUrl": "https://catalog.archives.gov/id/645608235",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31850-010.pdf"
   },
@@ -2134,7 +2134,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [A]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [A].",
     "catalogUrl": "https://catalog.archives.gov/id/645607905",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31836-005.pdf"
   },
@@ -2167,7 +2167,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [A]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [A].",
     "catalogUrl": "https://catalog.archives.gov/id/645607531",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31820-001.pdf"
   },
@@ -2200,7 +2200,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [B]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [B].",
     "catalogUrl": "https://catalog.archives.gov/id/645607533",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31820-002.pdf"
   },
@@ -2233,7 +2233,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [B]. Access restriction: Restricted - Partly.",
+    "sourceNote": "Source: George H.W. Bush Library, Richard Cheney Collection, Country Files, Pakistan [B].",
     "catalogUrl": "https://catalog.archives.gov/id/645607907",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-rbc/country_470572294/41-bpr-dhm-cheney-country-31836-006.pdf"
   },
@@ -2266,7 +2266,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Robert M. Gates' Subject Files, Pakistan-India. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Robert M. Gates' Subject Files, Pakistan-India.",
     "catalogUrl": "https://catalog.archives.gov/id/470437053",
     "pdfUrl": "https://s3.dualstack.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/gates/subject_2554843/41-bpr-nsc-gates-subj-cf00946-012.pdf"
   },
@@ -2567,10 +2567,10 @@ window.COMPILER_DECISION_COCKPIT = [
     "pages": "1 page",
     "naidOrTargets": "428079777; [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989",
     "decisionQuestion": "Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Confidential.",
     "pendingTasks": [
       "Medium boundary #63: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Confidential.",
       "Page-boundary/source-note decision: The document is available, but source title, source note, or page-boundary evidence still needs compiler review."
     ],
     "linkedSheets": [
@@ -2579,7 +2579,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989. Full release.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-001, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989. Confidential.",
     "catalogUrl": "https://catalog.archives.gov/id/428079777",
     "pdfUrl": "https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-01-23--Bhutto.pdf"
   },
@@ -2598,10 +2598,10 @@ window.COMPILER_DECISION_COCKPIT = [
     "pages": "1 page",
     "naidOrTargets": "428079809; [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989",
     "decisionQuestion": "Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction records no classification marking.",
     "pendingTasks": [
       "Medium boundary #64: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction records no classification marking.",
       "Page-boundary/source-note decision: The document is available, but source title, source note, or page-boundary evidence still needs compiler review."
     ],
     "linkedSheets": [
@@ -2610,7 +2610,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989. Full release.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-001, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989. No classification marking.",
     "catalogUrl": "https://catalog.archives.gov/id/428079809",
     "pdfUrl": "https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-01-25--Khan.pdf"
   },
@@ -2629,10 +2629,10 @@ window.COMPILER_DECISION_COCKPIT = [
     "pages": "9 pages",
     "naidOrTargets": "428079855; [Memorandum of Conversations (Memcons)-January 1989-May 1989]: February 1989",
     "decisionQuestion": "Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Confidential.",
     "pendingTasks": [
       "Medium boundary #66: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Confidential.",
       "Page-boundary/source-note decision: The document is available, but source title, source note, or page-boundary evidence still needs compiler review."
     ],
     "linkedSheets": [
@@ -2641,7 +2641,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons)-January 1989-May 1989]: February 1989. Full release.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Memcon Files, OA/ID CF01729-002, [Memorandum of Conversations (Memcons) - January 1989-May 1989]: February 1989. Confidential.",
     "catalogUrl": "https://catalog.archives.gov/id/428079855",
     "pdfUrl": "https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498039/1989-02-23--Venkataraman.pdf"
   },
@@ -2660,10 +2660,10 @@ window.COMPILER_DECISION_COCKPIT = [
     "pages": "7 pages",
     "naidOrTargets": "428079859; [Memorandum of Conversations (Memcons)-January 1989-May 1989]: February 1989",
     "decisionQuestion": "Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Secret.",
     "pendingTasks": [
       "Medium boundary #67: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Secret.",
       "Page-boundary/source-note decision: The document is available, but source title, source note, or page-boundary evidence still needs compiler review."
     ],
     "linkedSheets": [
@@ -2672,7 +2672,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons)-January 1989-May 1989]: February 1989. Full release.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Memcon Files, OA/ID CF01729-002, [Memorandum of Conversations (Memcons) - January 1989-May 1989]: February 1989. Secret.",
     "catalogUrl": "https://catalog.archives.gov/id/428079859",
     "pdfUrl": "https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498039/1989-02-24--Bhutto.pdf"
   },
@@ -2691,10 +2691,10 @@ window.COMPILER_DECISION_COCKPIT = [
     "pages": "4 pages",
     "naidOrTargets": "428080057; [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: June 1989",
     "decisionQuestion": "Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Secret.",
     "pendingTasks": [
       "Medium boundary #78: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Secret.",
       "Page-boundary/source-note decision: The document is available, but source title, source note, or page-boundary evidence still needs compiler review."
     ],
     "linkedSheets": [
@@ -2703,7 +2703,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: June 1989. Full release.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-006, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: June 1989. Secret.",
     "catalogUrl": "https://catalog.archives.gov/id/428080057",
     "pdfUrl": "https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-06-08--Gandhi.pdf"
   },
@@ -2722,10 +2722,10 @@ window.COMPILER_DECISION_COCKPIT = [
     "pages": "1 page",
     "naidOrTargets": "428080061; [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: June 1989",
     "decisionQuestion": "Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction records no classification marking.",
     "pendingTasks": [
       "Medium boundary #69: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction records no classification marking.",
       "Page-boundary/source-note decision: The document is available, but source title, source note, or page-boundary evidence still needs compiler review."
     ],
     "linkedSheets": [
@@ -2734,7 +2734,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: June 1989. Full release.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-006, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: June 1989. No classification marking.",
     "catalogUrl": "https://catalog.archives.gov/id/428080061",
     "pdfUrl": "https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-06-10--Bhutto.pdf"
   },
@@ -2753,10 +2753,10 @@ window.COMPILER_DECISION_COCKPIT = [
     "pages": "2 pages",
     "naidOrTargets": "428080113; [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: July 1989",
     "decisionQuestion": "Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Confidential.",
     "pendingTasks": [
       "Medium boundary #70: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Confidential.",
       "Page-boundary/source-note decision: The document is available, but source title, source note, or page-boundary evidence still needs compiler review."
     ],
     "linkedSheets": [
@@ -2765,7 +2765,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: July 1989. Full release.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-007, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: July 1989. Confidential.",
     "catalogUrl": "https://catalog.archives.gov/id/428080113",
     "pdfUrl": "https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-07-04--Gandhi.pdf"
   },
@@ -2784,10 +2784,10 @@ window.COMPILER_DECISION_COCKPIT = [
     "pages": "2 pages",
     "naidOrTargets": "428080169; [Memorandum of Telephone Conversations (Telcons) - August 1989-December 1989]: August 1989",
     "decisionQuestion": "Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Secret.",
     "pendingTasks": [
       "Medium boundary #71: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Secret.",
       "Page-boundary/source-note decision: The document is available, but source title, source note, or page-boundary evidence still needs compiler review."
     ],
     "linkedSheets": [
@@ -2796,7 +2796,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - August 1989-December 1989]: August 1989. Full release.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-008, [Memorandum of Telephone Conversations (Telcons) - August 1989-December 1989]: August 1989. Secret.",
     "catalogUrl": "https://catalog.archives.gov/id/428080169",
     "pdfUrl": "https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-08-05--Bhutto.pdf"
   },
@@ -2815,10 +2815,10 @@ window.COMPILER_DECISION_COCKPIT = [
     "pages": "1 page",
     "naidOrTargets": "428080301; [Memorandum of Telephone Conversations (Telcons) - August 1989-December 1989]: October 1989",
     "decisionQuestion": "Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction records no classification marking.",
     "pendingTasks": [
       "Medium boundary #73: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction records no classification marking.",
       "Page-boundary/source-note decision: The document is available, but source title, source note, or page-boundary evidence still needs compiler review."
     ],
     "linkedSheets": [
@@ -2827,7 +2827,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - August 1989-December 1989]: October 1989. Full release.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-010, [Memorandum of Telephone Conversations (Telcons) - August 1989-December 1989]: October 1989. No classification marking.",
     "catalogUrl": "https://catalog.archives.gov/id/428080301",
     "pdfUrl": "https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-10-18--Gandhi.pdf"
   },
@@ -2846,10 +2846,10 @@ window.COMPILER_DECISION_COCKPIT = [
     "pages": "3 pages",
     "naidOrTargets": "428080317; [Memorandum of Telephone Conversations (Telcons) - August 1989-December 1989]: November 1989",
     "decisionQuestion": "Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Confidential.",
     "pendingTasks": [
       "Medium boundary #79: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Confidential.",
       "Page-boundary/source-note decision: The document is available, but source title, source note, or page-boundary evidence still needs compiler review."
     ],
     "linkedSheets": [
@@ -2858,7 +2858,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - August 1989-December 1989]: November 1989. Full release.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-011, [Memorandum of Telephone Conversations (Telcons) - August 1989-December 1989]: November 1989. Confidential.",
     "catalogUrl": "https://catalog.archives.gov/id/428080317",
     "pdfUrl": "https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1989-11-01--Bhutto.pdf"
   },
@@ -2877,10 +2877,10 @@ window.COMPILER_DECISION_COCKPIT = [
     "pages": "5 pages",
     "naidOrTargets": "428081099; [Memorandum of Conversations (Memcons)-July 1990-December 1990]: October 1990",
     "decisionQuestion": "Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Secret.",
     "pendingTasks": [
       "Medium boundary #74: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Secret.",
       "Page-boundary/source-note decision: The document is available, but source title, source note, or page-boundary evidence still needs compiler review."
     ],
     "linkedSheets": [
@@ -2889,7 +2889,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Presidential Memcon Files, [Memorandum of Conversations (Memcons)-July 1990-December 1990]: October 1990. Full release.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Memcon Files, OA/ID CF01728-004, [Memorandum of Conversations (Memcons) - July 1990-December 1990]: October 1990. Secret.",
     "catalogUrl": "https://catalog.archives.gov/id/428081099",
     "pdfUrl": "https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498039/1990-10-01--Ershad.pdf"
   },
@@ -2908,10 +2908,10 @@ window.COMPILER_DECISION_COCKPIT = [
     "pages": "4 pages",
     "naidOrTargets": "428081443; [Memorandum of Telephone Conversations (Telcons) - January 1991-April 1991]:  February 1991 [1]",
     "decisionQuestion": "Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Confidential.",
     "pendingTasks": [
       "Medium boundary #80: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Confidential.",
       "Page-boundary/source-note decision: The document is available, but source title, source note, or page-boundary evidence still needs compiler review."
     ],
     "linkedSheets": [
@@ -2920,7 +2920,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - January 1991-April 1991]: February 1991 [1]. Full release.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01730-002, [Memorandum of Telephone Conversations (Telcons) - January 1991-April 1991]: February 1991 [1]. Confidential.",
     "catalogUrl": "https://catalog.archives.gov/id/428081443",
     "pdfUrl": "https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1991-02-08--Shankar.pdf"
   },
@@ -2939,10 +2939,10 @@ window.COMPILER_DECISION_COCKPIT = [
     "pages": "1 page",
     "naidOrTargets": "428082103; [Memorandum of Telephone Conversations (Telcons) - May 1991-December 1991]:  December 1991",
     "decisionQuestion": "Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+    "nextAction": "Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Confidential.",
     "pendingTasks": [
       "Medium boundary #75: Does the PDF represent one selectable document, a folder-level bundle, or cite-only restricted context?",
-      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, local identifier or source pages, and release language against the citation sheet or title page.",
+      "Citation sheet/title-page verification: Open the linked PDF and Catalog item, then confirm title, date, file unit, series, OA/ID or selected source pages, and original classification against the citation sheet or title page. Citation-sheet extraction supplies original classification: Confidential.",
       "Page-boundary/source-note decision: The document is available, but source title, source note, or page-boundary evidence still needs compiler review."
     ],
     "linkedSheets": [
@@ -2951,7 +2951,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - May 1991-December 1991]: December 1991. Full release.",
+    "sourceNote": "Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01730-013, [Memorandum of Telephone Conversations (Telcons) - May 1991-December 1991]: December 1991. Confidential.",
     "catalogUrl": "https://catalog.archives.gov/id/428082103",
     "pdfUrl": "https://s3.us-east-1.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-nsc/321498139/1991-12-15--Rao.pdf"
   },
@@ -3020,7 +3020,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, White House Office of Speechwriting, Speech Draft Files, Bhutto Departure 6/6/89. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, White House Office of Speechwriting, Speech Draft Files, Bhutto Departure 6/6/89.",
     "catalogUrl": "https://catalog.archives.gov/id/323150513",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-spe/speechwriting_draft_chron_578973/41-bpr-speech-draft-chron-13490-003_323150513.pdf"
   },
@@ -3053,7 +3053,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, White House Office of Speechwriting, Speech Backup Chronological Files, Departure Statement for Prime Minister Bhutto 6/6/89 [OA 6264]. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, White House Office of Speechwriting, Speech Backup Chronological Files, Departure Statement for Prime Minister Bhutto 6/6/89 [OA 6264].",
     "catalogUrl": "https://catalog.archives.gov/id/323152491",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-spe/speechwriting_backup_chron_579003/41-bpr-speech-backup-chron-13671-005_323152491.pdf"
   },
@@ -3086,7 +3086,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, White House Office of Presidential Personnel, Katja Bullock Appointment Files, Milam, William - AMB to Bangladesh. Access restriction: Restricted - Possibly.",
+    "sourceNote": "Source: George H.W. Bush Library, White House Office of Presidential Personnel, Katja Bullock Appointment Files, Milam, William - AMB to Bangladesh.",
     "catalogUrl": "https://catalog.archives.gov/id/286185941",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/foia/2000/Batch0001/41-bpr-pers-bullock-appt-07091-008.pdf"
   },
@@ -3522,7 +3522,7 @@ window.COMPILER_DECISION_COCKPIT = [
       "compiler-page-boundary-queue.md",
       "compiler-source-note-finalization.md"
     ],
-    "sourceNote": "Source: George H.W. Bush Library, White House Photograph Office, George H. W. Bush Presidential Photographs, WHPO-P37850. Unrestricted.",
+    "sourceNote": "Source: George H.W. Bush Library, White House Photograph Office, George H. W. Bush Presidential Photographs, WHPO-P37850.",
     "catalogUrl": "https://catalog.archives.gov/id/543965098",
     "pdfUrl": "https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whpo/186364/P37850/41-AV-P37850-11021992.jpg"
   },

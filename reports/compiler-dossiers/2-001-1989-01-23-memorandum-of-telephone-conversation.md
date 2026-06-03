@@ -35,7 +35,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, Presidential Telcon Files, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989. Full release.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, Presidential Telcon Files, OA/ID CF01731-001, [Memorandum of Telephone Conversations (Telcons) - January 1989-July 1989]: January 1989. Confidential.
 ```
 
 ## Provenance
@@ -60,8 +60,6 @@ Links:
 - Provenance link: https://catalog.archives.gov/id/321498139
 - Provenance link: https://www.bush41library.gov/digital-research-room/about-textual-collections/memcons-and-telcons
 - Provenance link: https://catalog.archives.gov/id/2163580
-- Provenance link: https://catalog.archives.gov/id/415889605
-- Provenance link: https://s3.amazonaws.com/NARAprodstorage/lz/presidential-libraries/bush/gb-whasf/Presidential_Daily_Diary_186322/1989/41-bpr-apts_sch-dd-01_23_89-12789-008_415889605.pdf
 
 ## Daily Diary / Backup
 

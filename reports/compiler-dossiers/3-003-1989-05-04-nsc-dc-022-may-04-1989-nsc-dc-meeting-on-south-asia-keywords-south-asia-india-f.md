@@ -34,7 +34,7 @@ Countries:
 ## Source Note
 
 ```text
-Source: George H.W. Bush Library, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 022 - May 04, 1989 - NSC/DC Meeting on South Asia, Keywords: South Asia, India (File located @ LM), 90010-001. Access restriction: Restricted - Possibly.
+Source: George H.W. Bush Library, Bush Presidential Records, National Security Council, H-Files, NSC/DC Meetings Files, NSC/DC 022 - May 04, 1989 - NSC/DC Meeting on South Asia, Keywords: South Asia, India (File located @ LM), OA/ID 90010-001.
 ```
 
 ## Provenance

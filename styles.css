@@ -1036,6 +1036,47 @@ footer {
   line-height: 1.6;
 }
 
+.method-note {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 24px;
+  padding: 16px 18px;
+  background: rgba(255, 253, 248, 0.68);
+  border: 1px solid rgba(20, 61, 74, 0.12);
+  border-left: 4px solid var(--green);
+  border-radius: 8px;
+}
+
+.method-note-eyebrow {
+  margin: 0;
+  color: var(--green);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.method-note-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.method-note-grid div {
+  display: grid;
+  gap: 5px;
+}
+
+.method-note-grid strong {
+  color: var(--ink);
+  font-size: 0.94rem;
+}
+
+.method-note-grid span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.48;
+}
+
 .chronology-lead {
   display: grid;
   gap: 14px;
@@ -2005,6 +2046,7 @@ footer a {
   .first-day-metrics,
   .source-note-list,
   .source-note-metrics,
+  .method-note-grid,
   .stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2081,6 +2123,7 @@ footer a {
   .first-day-metrics,
   .source-note-list,
   .source-note-metrics,
+  .method-note-grid,
   .export-list,
   .browse-root,
   .brief dl,

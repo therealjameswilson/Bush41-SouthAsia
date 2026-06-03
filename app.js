@@ -1835,7 +1835,7 @@ function createCompilerActionPanel(record) {
     const label = document.createElement("span");
     label.textContent = "Citation marker";
     const value = document.createElement("strong");
-    value.textContent = citation.markerFound ? "Extracted" : "Manual check";
+    value.textContent = citation.citationMarkerFound === "Yes" ? "Extracted" : "Manual check";
     citationLine.append(label, value);
 
     const detail = document.createElement("p");
